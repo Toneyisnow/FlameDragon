@@ -1,0 +1,64 @@
+/* 
+   Creature.strings
+   FlameDragon
+
+   Created by sui toney on 11-12-8.
+   Copyright 2011 ms. All rights reserved.
+ */
+
+"Confirm-01" = "要结束本回合的行动吗？";
+"Confirm-02" = "发现宝箱，要打开吗？";
+"Confirm-03" = "发现宝藏，要挖掘吗？";
+"Confirm-04" = "要读取战况吗？";
+"Confirm-05" = "要存储战况吗？";
+"Confirm-06" = "要离开战场吗？";
+"Confirm-07" = "身上的物品满了，要交换吗？";
+"Confirm-08" = "确定要进入战场吗？";
+
+"Message-01" = "好的。#就结束本回合的行动吧！";
+"Message-02" = "是吗？那么就不要了。";
+"Message-03" = "打开宝箱，发现%@！";
+"Message-04" = "发掘宝藏，发现%@！";
+"Message-05" = "获得经验值%d点！";
+"Message-06" = "得到%@，将%@放了回去！";
+"Message-07" = "那么就放回去吧！";
+"Message-08" = "那么请休息吧！";
+"Message-09" = "战况已经保存成功！";
+
+"Message-11" = "等级上升了！";
+"Message-12" = "#生命值提升%d！";
+"Message-13" = "#魔法值提升%d！";
+"Message-14" = "#力量提升%d！";
+"Message-15" = "#耐力提升%d！";
+"Message-16" = "#速度提升%d！";
+"Message-17" = "#学会了%@！";
+
+"Message-51" = "呃，买东西吗？";
+"Message-52" = "还要什么吗？";
+"Message-53" = "欢迎光临，需要什么吗？";
+"Message-54" = "还需要什么吗？";
+"Message-55" = "有什么事吗？";
+"Message-56" = "还有事吗？";
+"Message-57" = "记录存储完毕！";
+"Message-58" = "谁的东西呢？";
+"Message-59" = "要给谁呢？";
+"Message-60" = "队员中没有需要复活的！";
+"Message-61" = "队员中没有可以转职的！";
+"Message-62" = "%d的物品栏已经满了！";
+"Message-63" = "钱不够！";
+"Message-70" = "转职成";
+
+"Confirm-51" = "确定要保存游戏吗？";
+"Confirm-52" = "确定要读取游戏吗？";
+"Confirm-53" = "要离开战场吗？";
+"Confirm-54" = "这个%@，#%d元，要不要啊？";
+"Confirm-55" = "这个%@，#%d元，卖不卖啊？";
+"Confirm-56" = "要装备上去吗？";
+"Confirm-57" = "复活%@，#需要%d元，确定要复活吗？";
+"Confirm-58" = "%@转职为%@，#需要%d元，确定要转职吗？";
+
+
+"Message-50001" = "敌全灭";
+"Message-60001" = "索尔死亡";
+
+

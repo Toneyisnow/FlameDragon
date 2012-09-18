@@ -1,0 +1,61 @@
+//
+//  FDAnimation.m
+//  FlameDragon
+//
+//  Created by sui toney on 11-11-3.
+//  Copyright 2011 ms. All rights reserved.
+//
+
+#import "FDAnimation.h"
+#import "Constants.h"
+
+@implementation FDAnimation
+
+-(id) init
+{
+	self = [super init];
+	
+	[self reset];
+	
+	return self;
+}
+
+-(id) initWithDefinition:(AnimationDefinition *)def Sprite:(FDSprite *)c
+{
+	if (def == nil) {
+		return nil;
+	}
+	
+	self = [super init];
+	
+	definition = [def retain];
+	sprite = c;
+	finished = FALSE;
+	
+	[self reset];
+	
+	return self;
+}
+
+-(void) takeTick:(int)synchronizeTick
+{
+}
+
+-(BOOL) hasFinished
+{
+	return finished;
+}
+
+-(void) reset
+{
+}
+
+-(void) dealloc
+{
+	[definition release];
+	
+	[super dealloc];
+}
+
+
+@end

@@ -1,0 +1,75 @@
+//
+//  Shopping2HomeDialog.h
+//  FlameDragon
+//
+//  Created by sui toney on 12-5-11.
+//  Copyright 2012 ms. All rights reserved.
+//
+
+#import "cocos2d.h"
+#import "Shopping2Dialog.h"
+#import "ShoppingButton.h"
+
+#import "DataDepot.h"
+#import "FDLocalString.h"
+#import "GameRecord.h"
+
+@interface Shopping2HomeDialog : Shopping2Dialog {
+	
+	NSMutableArray *buttonArray;
+
+	int lastSelectedItemIndex;
+	int lastSelectedCreatureIndex;
+	
+}
+
+-(void) initButtons;
+-(void) generateButtonArray;
+
+-(ShoppingButton *) button_BuyAmor;
+-(ShoppingButton *) button_BuyItem;
+-(ShoppingButton *) button_Sell;
+-(ShoppingButton *) button_GiveItem;
+-(ShoppingButton *) button_Equip;
+-(ShoppingButton *) button_Info;
+-(ShoppingButton *) button_Save;
+-(ShoppingButton *) button_Load;
+-(ShoppingButton *) button_Revive;
+-(ShoppingButton *) button_Transfer;
+-(ShoppingButton *) button_Exit;
+
+-(void) showDialog:(Shopping2Dialog *)dia Callback:(SEL)callback;
+
+-(void) onBuyAmor;
+
+-(void) onBuyItem;
+
+-(void) onSell;
+-(void) onSell_SelectedFriend:(NSNumber *)num;
+-(void) onSell_SelectedItem:(NSNumber *)num;
+-(void) onSell_Confirm:(NSNumber *)num;
+
+-(void) onGiveItem;
+-(void) onGiveItem_Start:(NSNumber *)num;
+-(void) onGiveItem_SelectedWhose:(NSNumber *)num;
+-(void) onGiveItem_SelectedItem:(NSNumber *)num;
+-(void) onGiveItem_ToWhom:(NSNumber *)num;
+-(void) onGiveItem_ToTargetSelected:(NSNumber *)num;
+
+-(void) onInfo;
+
+-(void) onSaveGame;
+
+-(void) onLoadGame;
+
+-(void) onExitGame;
+
+-(void) onEquip;
+-(void) onEquip_SelectedFriend:(NSNumber *)num;
+
+-(void) onRevive;
+
+-(void) onTransfer;
+
+@end
+

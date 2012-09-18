@@ -1,0 +1,14 @@
+/* 
+   Race.strings
+   FlameDragon
+
+   Created by sui toney on 11-12-27.
+   Copyright 2011 ms. All rights reserved.
+ */
+"001" = "人类";
+"002" = "精灵";
+"003" = "兽人";
+"004" = "豹人";
+"005" = "龙人";
+"006" = "魔族";
+"007" = "机械";
