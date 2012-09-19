@@ -8,19 +8,16 @@
 
 #import "AIDelegate.h"
 #import "FDCreature.h"
-#import "DistanceResolver.h"
 
 @interface AIAggressiveDelegate : AIDelegate {
 
-	DistanceResolver *disResolver;
 }
 
--(CGPoint) generatePos;
+// -(CGPoint) generatePos;
 
 -(FDCreature *) findTarget;
 -(BOOL) foundInArray:(NSMutableArray *)scopeArray Pos:(CGPoint)targetpos;
 
--(void) initDistanceResolver;
 
 
 @end

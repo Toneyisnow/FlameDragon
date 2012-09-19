@@ -7,8 +7,10 @@
 }
 
 -(id) initX:(int)x Y:(int)y;
-
 +(id) positionX:(int)x Y:(int)y;
+
+-(id) initWithPosition:(CGPoint)pos;
++(id) position:(CGPoint)pos;
 
 -(int) x;
 -(int) y;

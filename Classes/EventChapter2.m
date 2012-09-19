@@ -157,6 +157,19 @@
 	[field addNpc:[[[FDNpc alloc] initWithDefinition:719 Id:91] autorelease] Position:CGPointMake(17, 13)];
 	[field addNpc:[[[FDNpc alloc] initWithDefinition:750 Id:92] autorelease] Position:CGPointMake(16, 13)];
 	
+	[field addNpc:[[[FDNpc alloc] initWithDefinition:750 Id:93] autorelease] Position:CGPointMake(8, 8)];
+	[field addNpc:[[[FDNpc alloc] initWithDefinition:750 Id:94] autorelease] Position:CGPointMake(24, 7)];
+	[field addNpc:[[[FDNpc alloc] initWithDefinition:719 Id:95] autorelease] Position:CGPointMake(7, 11)];
+	[field addNpc:[[[FDNpc alloc] initWithDefinition:719 Id:96] autorelease] Position:CGPointMake(10, 13)];
+	
+	[self setAiOfId:91 EscapeTo:CGPointMake(20, 2)];
+	[self setAiOfId:92 EscapeTo:CGPointMake(20, 2)];
+	[self setAiOfId:93 EscapeTo:CGPointMake(20, 2)];
+	[self setAiOfId:94 EscapeTo:CGPointMake(20, 2)];
+	[self setAiOfId:95 EscapeTo:CGPointMake(20, 2)];
+	[self setAiOfId:96 EscapeTo:CGPointMake(20, 2)];
+	
+	
 	[layers moveCreatureId:91 To:CGPointMake(17, 15) showMenu:FALSE];
 	
 	[layers appendToCurrentActivity:[[[FDDurationActivity alloc] initWithDuration:0.5] autorelease]];
@@ -187,6 +200,11 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:25] autorelease] Position:CGPointMake(10, 21)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:26] autorelease] Position:CGPointMake(10, 21)];
 	
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:27] autorelease] Position:CGPointMake(3, 9)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:27] autorelease] Position:CGPointMake(4, 10)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:27] autorelease] Position:CGPointMake(3, 11)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:27] autorelease] Position:CGPointMake(2, 12)];
+	
 	[layers moveCreatureId:21 To:CGPointMake(10, 18) showMenu:FALSE];
 	
 	[layers appendToCurrentActivity:[[[FDDurationActivity alloc] initWithDuration:0.5] autorelease]];
@@ -211,9 +229,16 @@
 	[layers appendNewActivity:[[[FDEmptyActivity alloc] init] autorelease]];
 	[layers moveCreatureId:26 To:CGPointMake(10, 20) showMenu:FALSE];
 	
-	
-	
-	
 }
+
+-(void) setAiOfId:(int)creatureId EscapeTo:(CGPoint)pos
+{
+	BattleField *field = [[layers getFieldLayer] getField];
+	
+	FDCreature *creature = [field getCreatureById:creatureId];
+	creature.data.aiType = AIType_Escape;
+	creature.data.aiParam = [[[FDPosition alloc] initX:pos.x Y:pos.y] autorelease];
+}
+
 
 @end

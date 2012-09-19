@@ -53,6 +53,7 @@ typedef enum AIType {
 	BodyStatus bodyStatus;
 	
 	AIType aiType;
+	id aiParam;
 	
 	int attackItemIndex;
 	int defendItemIndex;
@@ -79,6 +80,8 @@ typedef enum AIType {
 @property (nonatomic) int defendItemIndex;
 
 @property (nonatomic) AIType aiType;
+@property (retain, nonatomic) id aiParam;
+
 @property (nonatomic) BodyStatus bodyStatus;
 
 @end

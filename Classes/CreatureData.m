@@ -7,7 +7,7 @@
 //
 
 #import "CreatureData.h"
-
+#import "FDPosition.h"
 
 @implementation CreatureData
 
@@ -16,6 +16,7 @@
 @synthesize level,ap,dp,dx,hpCurrent,mpCurrent,hpMax,mpMax,mv,ex;
 @synthesize attackItemIndex, defendItemIndex;
 @synthesize aiType;
+@synthesize aiParam;
 @synthesize bodyStatus;
 
 -(id) init
@@ -51,6 +52,7 @@
 
 	another.bodyStatus = bodyStatus;
 	another.aiType = aiType;
+	another.aiParam = aiParam;
 	
 	return [another autorelease];
 }
@@ -70,6 +72,7 @@
 	[coder encodeObject:magicList forKey:@"magicList"];
 	[coder encodeInt:bodyStatus forKey:@"bodyStatus"];
 	[coder encodeInt:aiType forKey:@"aiType"];
+	[coder encodeCGPoint:[(FDPosition *)aiParam posValue] forKey:@"aiParam"];
 	
 	NSLog(@"Encoded CreatureData");
 
@@ -91,6 +94,7 @@
 	mpMax = [coder decodeIntForKey:@"mpMax"];
     bodyStatus = [coder decodeIntForKey:@"bodyStatus"];
     aiType = [coder decodeIntForKey:@"aiType"];
+	self.aiParam = [FDPosition position:[coder decodeCGPointForKey:@"aiParam"]];
 	itemList = [[coder decodeObjectForKey:@"itemList"] retain];
 	magicList = [[coder decodeObjectForKey:@"magicList"] retain];
 	

@@ -79,6 +79,7 @@
 			break;
 		case AIType_Escape:
 			delegate = [[AIEscapeDelegate alloc] initWithCreature:creature Layers:layers];
+			[delegate setParameter:creature.data.aiParam];
 			break;
 		default:
 			break;

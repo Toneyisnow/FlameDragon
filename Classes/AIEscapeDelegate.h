@@ -7,10 +7,16 @@
 //
 
 #import "AIDelegate.h"
-
+#import "FDPosition.h"
 
 @interface AIEscapeDelegate : AIDelegate {
 
+	FDPosition *escapePosition;
 }
+
+// -(void) setEscapePosition:(FDPosition *)pos;
+
+
+@property (retain, nonatomic) FDPosition *escapePosition;
 
 @end

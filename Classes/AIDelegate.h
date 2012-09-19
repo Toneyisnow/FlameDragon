@@ -9,14 +9,20 @@
 #import "cocos2d.h"
 #import "FDCreature.h"
 #import "ActionLayers.h"
+#import "DistanceResolver.h"
 
 @interface AIDelegate : NSObject {
+
+	DistanceResolver *disResolver;
 
 	FDCreature *creature;
 	ActionLayers *layers;
 }
 
 -(id) initWithCreature:(FDCreature *)c Layers:(ActionLayers *)layers;
+-(void) initDistanceResolver;
+-(CGPoint) generatePos:(CGPoint)targetPos;
+-(void) setParameter:(id)param;
 
 -(void) takeAction;
 

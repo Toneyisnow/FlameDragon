@@ -18,5 +18,6 @@
 -(void) round1_2;
 -(void) round1_3;
 
+-(void) setAiOfId:(int)creatureId EscapeTo:(CGPoint)pos;
 
 @end
