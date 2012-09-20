@@ -796,7 +796,7 @@
 	
 	[info setFriendCount:[[field getFriendList] count] EnemyCount:[[field getEnemyList] count] NpcCount:[[field getNpcList] count]];
 	[info setChapterNo:chapterId TurnNo:turnNo];
-	[info setConditionWin:50001 Lose:60001];
+	[info setCondition:chapterId];
 	[info setMoney:money];
 	
 	[info show:messageLayer];

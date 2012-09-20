@@ -32,6 +32,16 @@
 	return self;
 }
 
++(int) ITEM_MAX
+{
+	return 8;
+}
+
++(int) MAGIC_MAX
+{
+	return 12;
+}
+
 -(CreatureData *) clone
 {
 	CreatureData *another = [[CreatureData alloc] init];

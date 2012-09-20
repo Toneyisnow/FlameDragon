@@ -29,5 +29,6 @@
 
 -(void) showTalkMessage:(int)charId conversation:(int)converId sequence:(int)sequenceId;
 
+-(void) gameOver;
 
 @end

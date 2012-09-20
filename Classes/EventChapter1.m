@@ -441,11 +441,6 @@
 	// Nothing to do
 }
 
--(void) gameOver
-{
-	[layers gameOver];
-}
-
 -(void) enemyClear
 {
 	for (int i = 1; i <= 13; i++) {

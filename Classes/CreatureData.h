@@ -61,6 +61,10 @@ typedef enum AIType {
 
 -(CreatureData *) clone;
 
++(int) ITEM_MAX;
++(int) MAGIC_MAX;
+
+
 @property (nonatomic,retain) NSMutableArray *magicList;
 @property (nonatomic,retain) NSMutableArray *itemList;
 

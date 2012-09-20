@@ -30,7 +30,7 @@
 -(void) round5_Boss;
 -(void) round6_Npc;
 
--(void) gameOver;
+// -(void) gameOver;
 // -(void) finishChapter;
 
 

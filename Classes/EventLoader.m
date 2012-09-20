@@ -106,6 +106,11 @@
 	
 }
 
+-(void) gameOver
+{
+	[layers gameOver];
+}
+
 
 
 @end

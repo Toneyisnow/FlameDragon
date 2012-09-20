@@ -20,6 +20,13 @@
 	return NSLocalizedStringFromTable(idStr, fileName, @"comment");
 }
 
++(NSString *) chapter:(int)charId conversation:(int)converId sequence:(int)sequenceId choice:(char)choice
+{
+	NSString *idStr = [NSString stringWithFormat:@"%02d-%02d-%03d-%c", charId, converId, sequenceId, choice];
+	NSString *fileName = [NSString stringWithFormat:@"Chapter-%02d", charId];
+	return NSLocalizedStringFromTable(idStr, fileName, @"comment");
+}
+
 +(NSString *) chapterCreature:(int)charId conversation:(int)converId sequence:(int)sequenceId
 {
 	NSString *idStr = [NSString stringWithFormat:@"%02d-%02d-%03d-Id", charId, converId, sequenceId];
@@ -47,10 +54,23 @@
 	return NSLocalizedStringFromTable(idStr, @"Creature", @"comment");
 }
 
-+(NSString *) chapter:(int)charId
++(NSString *) chapterTitle:(int)charId
 {
 	NSString *idStr = [NSString stringWithFormat:@"Title-%02d", charId];
-	return NSLocalizedStringFromTable(idStr, @"Chapter", @"comment");
+	NSString *fileName = [NSString stringWithFormat:@"Chapter-%02d", charId];
+	return NSLocalizedStringFromTable(idStr, fileName, @"comment");	
+}
+
++(NSString *) chapterConditionWin:(int)charId
+{
+	NSString *fileName = [NSString stringWithFormat:@"Chapter-%02d", charId];
+	return NSLocalizedStringFromTable(@"Condition-Win", fileName, @"comment");
+}
+
++(NSString *) chapterConditionLose:(int)charId
+{
+	NSString *fileName = [NSString stringWithFormat:@"Chapter-%02d", charId];
+	return NSLocalizedStringFromTable(@"Condition-Lose", fileName, @"comment");	
 }
 
 +(NSString *) confirm:(int)confirmId

@@ -18,7 +18,7 @@
 
 -(void) setChapterNo:(int)chapterNo TurnNo:(int)turnNo;
 -(void) setFriendCount:(int)fCount EnemyCount:(int)eCount NpcCount:(int)nCount;
--(void) setConditionWin:(int)winId Lose:(int)loseId;
+-(void) setCondition:(int)chapterId;
 -(void) setMoney:(int)quantity;
 //-(void) show:(CCLayer *)l;
 

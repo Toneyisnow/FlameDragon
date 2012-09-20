@@ -8,6 +8,7 @@
 
 #import "EventChapter2.h"
 #import "FDEnemy.h"
+#import "FDRandom.h"
 #import "FDTalkActivity.h"
 #import "BattleField.h"
 #import "FDEmptyActivity.h"
@@ -25,16 +26,21 @@
 -(void) loadEvents
 {
 	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(round1)];
-	NSLog(@"Chapter2 events loaded.");
-}
+	[self loadTurnEvent:TurnType_Friend Turn:3 Action:@selector(round3)];
 
--(void) loadTurnEvent:(TurnType) turnType Turn:(int)turnNum Action:(SEL)action
-{
-	TurnCondition *condition = [[TurnCondition alloc] initWithTurnType:turnType Number:turnNum];
-	FDEvent *event = [[FDEvent alloc] initWithCondition:condition Delegate:self Method:action];
-	[eventHandler addEvent:event];
-	[condition release];
-	[event release];
+	[self loadDieEvent:1 Action:@selector(gameOver)];
+
+	[self loadDyingEvent:91 Action:@selector(showNpcDyingMessage)];
+	[self loadDyingEvent:92 Action:@selector(showNpcDyingMessage)];
+	[self loadDyingEvent:93 Action:@selector(showNpcDyingMessage)];
+	[self loadDyingEvent:94 Action:@selector(showNpcDyingMessage)];
+	[self loadDyingEvent:95 Action:@selector(showNpcDyingMessage)];
+	[self loadDyingEvent:96 Action:@selector(showNpcDyingMessage)];
+
+	[self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
+	[self loadTeamEvent:CreatureType_Npc Action:@selector(gameOver)];
+
+	NSLog(@"Chapter2 events loaded.");
 }
 
 -(void) round1_test
@@ -201,9 +207,9 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:26] autorelease] Position:CGPointMake(10, 21)];
 	
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:27] autorelease] Position:CGPointMake(3, 9)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:27] autorelease] Position:CGPointMake(4, 10)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:27] autorelease] Position:CGPointMake(3, 11)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:27] autorelease] Position:CGPointMake(2, 12)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:28] autorelease] Position:CGPointMake(4, 10)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:29] autorelease] Position:CGPointMake(3, 11)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:30] autorelease] Position:CGPointMake(2, 12)];
 	
 	[layers moveCreatureId:21 To:CGPointMake(10, 18) showMenu:FALSE];
 	
@@ -229,6 +235,123 @@
 	[layers appendNewActivity:[[[FDEmptyActivity alloc] init] autorelease]];
 	[layers moveCreatureId:26 To:CGPointMake(10, 20) showMenu:FALSE];
 	
+}
+
+-(void) round3
+{
+	BattleField *field = [[layers getFieldLayer] getField];
+	
+	[layers appendToCurrentActivityMethod:@selector(setCursorObjTo:) Param1:[FDPosition positionX:16 Y:1] Param2:nil Obj:field];
+	
+	// Enemy
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:31] autorelease] Position:CGPointMake(16, 1)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:32] autorelease] Position:CGPointMake(16, 1)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:33] autorelease] Position:CGPointMake(16, 1)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:34] autorelease] Position:CGPointMake(16, 1)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:35] autorelease] Position:CGPointMake(16, 1)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:36] autorelease] Position:CGPointMake(16, 1)];
+	
+	
+	[layers moveCreatureId:31 To:CGPointMake(16, 4) showMenu:FALSE];
+	
+	[layers appendToCurrentActivity:[[[FDDurationActivity alloc] initWithDuration:0.5] autorelease]];
+	
+	for (int i = 1; i <= 6; i++) {
+		[self showTalkMessage:2 conversation:2 sequence:i];
+	}
+	
+	// Add branch activities	
+	[layers appendNewActivity:[[[FDEmptyActivity alloc] init] autorelease]];
+	[layers moveCreatureId:32 To:CGPointMake(15, 3) showMenu:FALSE];
+	
+	[layers appendNewActivity:[[[FDEmptyActivity alloc] init] autorelease]];
+	[layers moveCreatureId:33 To:CGPointMake(17, 3) showMenu:FALSE];
+	
+	[layers appendNewActivity:[[[FDEmptyActivity alloc] init] autorelease]];
+	[layers moveCreatureId:34 To:CGPointMake(14, 2) showMenu:FALSE];
+	
+	[layers appendNewActivity:[[[FDEmptyActivity alloc] init] autorelease]];
+	[layers moveCreatureId:35 To:CGPointMake(18, 2) showMenu:FALSE];
+	
+	[layers appendNewActivity:[[[FDEmptyActivity alloc] init] autorelease]];
+	[layers moveCreatureId:36 To:CGPointMake(16, 2) showMenu:FALSE];
+	
+}
+
+-(void) enemyClear
+{
+	BattleField *field = [[layers getFieldLayer] getField];
+	
+	// Select one of the messages
+	if ([[field getNpcList] count] == 6) {
+		isAllNpcSaved = TRUE;
+	} else {
+		isAllNpcSaved = FALSE;
+	}
+	
+	NSString *talkMessage = [FDLocalString chapter:2 conversation:3 sequence:1 choice:(isAllNpcSaved ? 'B' : 'A')];
+	FDCreature *creature = [field getCreatureById:92];
+	if (creature == nil) {
+		creature = [field getDeadCreatureById:92];
+	}
+	
+	FDTalkActivity *talk = [[FDTalkActivity alloc] initWithCreature:creature Message:talkMessage Layer:[layers getMessageLayer]];
+	[layers appendToCurrentActivity:talk];
+	
+	[layers appendToCurrentActivityMethod:@selector(enemyClear_2) Param1:nil Param2:nil Obj:self];
+	
+	// Save some data into Record
+}
+
+-(void) enemyClear_2
+{
+	BattleField *field = [[layers getFieldLayer] getField];
+
+	// Xiliya appears
+	FDFriend *friend6 = [[FDFriend alloc] initWithDefinition:6 Id:6];
+	[field addFriend:friend6 Position:CGPointMake(23, 5)];
+	[friend6 release];
+	
+	[layers moveCreatureId:6 To:CGPointMake(23, 7) showMenu:FALSE];
+
+	for (int i = 2; i <= 24; i++) {
+		[self showTalkMessage:2 conversation:3 sequence:i];
+	}
+	
+	[layers appendToCurrentActivityMethod:@selector(adjustFriends) Param1:nil Param2:nil Obj:self];
+	
+	// Save some data into Record
+	//ChapterRecord *record = [layers composeChapterRecord];
+	//[layers appendToCurrentActivityMethod:@selector(gameWin:) Param1:record Param2:nil];
+	
+	// Save data into BattleField data, and then converted to saved data
+	
+}
+
+-(void) adjustFriends
+{
+	BattleField *field = [[layers getFieldLayer] getField];
+	
+	// Add Power Medician to Creature 1
+	if (isAllNpcSaved) {
+		
+		for (int i = 1; i <= 6; i++) {
+			FDCreature *creature = [field getCreatureById:i];
+			if ([creature.data.itemList count] < [CreatureData ITEM_MAX]) {
+				// Add item
+				
+				break;
+			}
+		}	
+	}
+	
+	[layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];
+}
+
+-(void) showNpcDyingMessage
+{
+	int messageId = [FDRandom from:91 to:96];
+	[self showTalkMessage:2 conversation:messageId sequence:1];
 }
 
 -(void) setAiOfId:(int)creatureId EscapeTo:(CGPoint)pos

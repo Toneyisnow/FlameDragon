@@ -22,7 +22,7 @@
 	GameRecord *record = [GameRecord readFromSavedFile];
 	for (int index = 0; index < 4; index ++) {
 		ChapterRecord *cRecord = [record getChapterRecord:index];
-		NSString *chapterName = [FDLocalString chapter:[cRecord chapterId]];
+		NSString *chapterName = [FDLocalString chapterTitle:[cRecord chapterId]];
 		[self addLabel:chapterName Location:[FDWindow chapterRecordShowLocation:index]];
 	}
 	

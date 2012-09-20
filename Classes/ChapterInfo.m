@@ -17,6 +17,8 @@
 {
 	self = [super init];		
 	baseSprite = [[[FDSpriteStore instance] sprite:@"ChapterInfo.png"] retain];
+	[baseSprite setScaleX:1.5 Y:1.5];
+	
 	return self;
 }
 
@@ -32,10 +34,10 @@
 	[baseSprite addSprite:turnSprite zOrder:1];
 }
 
--(void) setConditionWin:(int)winId Lose:(int)loseId
-{
-	NSString *winConditionStr = [FDLocalString message:winId];
-	NSString *loseConditionStr = [FDLocalString message:loseId];
+-(void) setCondition:(int)chapterId
+{	
+	NSString *winConditionStr = [FDLocalString chapterConditionWin:chapterId];
+	NSString *loseConditionStr = [FDLocalString chapterConditionLose:chapterId];
 	
 	FDSprite *winCondition = [[FDSprite alloc] initWithString:winConditionStr Size:14];
 	FDSprite *loseCondition = [[FDSprite alloc] initWithString:loseConditionStr Size:14];

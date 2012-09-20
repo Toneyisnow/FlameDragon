@@ -12,11 +12,13 @@
 
 @interface EventChapter2 : EventLoader {
 
+	BOOL isAllNpcSaved;
 }
 
 -(void) round1;
 -(void) round1_2;
 -(void) round1_3;
+-(void) round3;
 
 -(void) setAiOfId:(int)creatureId EscapeTo:(CGPoint)pos;
 

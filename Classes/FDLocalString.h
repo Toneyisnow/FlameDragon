@@ -14,13 +14,16 @@
 }
 
 +(NSString *) chapter:(int)charId conversation:(int)converId sequence:(int)sequenceId;
++(NSString *) chapter:(int)charId conversation:(int)converId sequence:(int)sequenceId choice:(char)choice;
 +(NSString *) chapterCreature:(int)charId conversation:(int)converId sequence:(int)sequenceId;
 
 +(NSString *) race:(int)raceId;
 +(NSString *) occupation:(int)occupationId;
 +(NSString *) creature:(int)creatureDefId;
 
-+(NSString *) chapter:(int)charId;
++(NSString *) chapterTitle:(int)charId;
++(NSString *) chapterConditionWin:(int)charId;
++(NSString *) chapterConditionLose:(int)charId;
 
 +(NSString *) confirm:(int)confirmId;
 +(NSString *) message:(int)msgId;
