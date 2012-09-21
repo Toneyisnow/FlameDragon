@@ -57,6 +57,8 @@
 -(void) onGiveItem_ToTargetSelected:(NSNumber *)num;
 
 -(void) onInfo;
+-(void) onInfo_ShowItems:(NSNumber *)num;
+-(void) onInfo_ShowMagics:(NSNumber *)num;
 
 -(void) onSaveGame;
 
@@ -70,6 +72,8 @@
 -(void) onRevive;
 
 -(void) onTransfer;
+
+-(void) closeCurrentBox;
 
 @end
 

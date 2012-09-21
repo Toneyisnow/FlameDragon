@@ -137,7 +137,7 @@
 
 +(CGPoint) chapterRecordShowLocation:(int)recordIndex
 {
-	return CGPointMake([self winSize].width / 4, 70 - recordIndex * 18);
+	return CGPointMake([self winSize].width * 0.22, 62 - recordIndex * 18);
 }
 
 +(CGPoint) showShoppingDialogPosition

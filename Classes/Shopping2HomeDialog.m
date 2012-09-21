@@ -22,6 +22,7 @@
 
 #import "CreatureRecord.h"
 #import "ItemBox.h"
+#import "MagicBox.h"
 #import "Shopping2Layer.h"
 #import "FDFriend.h"
 
@@ -388,6 +389,62 @@
 
 -(void) onInfo
 {
+	NSLog(@"onInfo");
+	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] init];
+	[self showDialog:dialog Callback:@selector(onInfo_ShowItems:)];
+	[dialog release];
+	
+}
+
+-(void) onInfo_ShowItems:(NSNumber *)num
+{
+	// First close that ibox
+	[self closeCurrentBox]; 
+	
+	int selectedNum = [num intValue];
+	
+	if (selectedNum < 0) {
+		// Cancel
+		
+		return;
+	}
+	
+	lastSelectedCreatureIndex = selectedNum;
+	
+	Shopping2Layer *layer = (Shopping2Layer *)parentLayer;
+	CreatureRecord *record = [[chapterRecord friendRecords] objectAtIndex:selectedNum];	
+	FDFriend *creature = [[FDFriend alloc] initWithDefinition:record.definitionId Id:record.creatureId Data:record.data];
+	
+	ItemBox *ibox = [[ItemBox alloc] initWithCreature:creature Type:ItemOperatingType_ShowOnly];
+	
+	if ([creature.data.magicList count] > 0) {
+		[ibox setCallback:self Method:@selector(onInfo_ShowMagics:)];
+	} else {
+		[ibox setCallback:self Method:@selector(closeCurrentBox)];
+	}
+	
+	[ibox show:layer];
+	[layer setMessageBox:ibox];
+	[ibox autorelease];
+}
+
+-(void) onInfo_ShowMagics:(NSNumber *)num
+{
+	Shopping2Layer *layer = (Shopping2Layer *)parentLayer;
+	CreatureRecord *record = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];	
+	FDFriend *creature = [[FDFriend alloc] initWithDefinition:record.definitionId Id:record.creatureId Data:record.data];
+	
+	MagicBox *mbox = [[MagicBox alloc] initWithCreature:creature Type:MagicOperatingType_ShowOnly];
+	[mbox setCallback:self Method:@selector(closeCurrentBox)];
+	[mbox show:layer];
+	[layer setMessageBox:mbox];
+	[mbox autorelease];
+}
+
+-(void) closeCurrentBox
+{
+	Shopping2Layer *layer = (Shopping2Layer *)parentLayer;
+	[layer setMessageBox:nil]; 
 }
 
 -(void) onSaveGame

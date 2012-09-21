@@ -819,15 +819,15 @@
 	//ChapterRecord *record = [ChapterRecord sampleRecord];
 	ChapterRecord *record = [self composeChapterRecord];
 	
-	VillageScene *scene = [VillageScene node];
-	[scene loadWithRecord:record];
-	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.5 scene:scene]];	
-
+	if (chapterId < 2) {
+		VillageScene *scene = [VillageScene node];
+		[scene loadWithRecord:record];
+		[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.5 scene:scene]];	
+	} else {
+		GameWinScene *scene = [GameWinScene node];
+		[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.5 scene:scene]];	
+	}
 	
-	/*
-	GameWinScene *scene = [GameWinScene node];
-	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.5 scene:scene]];	
-	 */
 }
 
 -(void) gameQuit

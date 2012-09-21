@@ -23,7 +23,9 @@
 	for (int index = 0; index < 4; index ++) {
 		ChapterRecord *cRecord = [record getChapterRecord:index];
 		NSString *chapterName = [FDLocalString chapterTitle:[cRecord chapterId]];
-		[self addLabel:chapterName Location:[FDWindow chapterRecordShowLocation:index]];
+		
+		CGPoint pos = [FDWindow chapterRecordShowLocation:index];
+		[self addLabel:chapterName Location:CGPointMake(pos.x, pos.y)];
 	}
 	
 	return self;
