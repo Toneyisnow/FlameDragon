@@ -927,9 +927,9 @@
 	};
 	023D34A9152834A3002D3EFD /* EventChapter2.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {915, 5408}}";
-			sepNavSelRange = "{514, 0}";
-			sepNavVisRange = "{12631, 829}";
+			sepNavIntBoundsRect = "{{0, 0}, {915, 5525}}";
+			sepNavSelRange = "{13793, 0}";
+			sepNavVisRange = "{13023, 774}";
 		};
 	};
 	023D34DB152839C7002D3EFD /* PBXTextBookmark */ = {
@@ -1222,9 +1222,9 @@
 	};
 	02733365149785A900D0812F /* AIEscapeDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {747, 611}}";
-			sepNavSelRange = "{339, 0}";
-			sepNavVisRange = "{26, 832}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 624}}";
+			sepNavSelRange = "{368, 0}";
+			sepNavVisRange = "{26, 859}";
 		};
 	};
 	0273338B1497939200D0812F /* PBXTextBookmark */ = {
@@ -2335,9 +2335,9 @@
 	};
 	027D54191462BBB8002C310F /* BattleField.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {779, 13910}}";
-			sepNavSelRange = "{14947, 0}";
-			sepNavVisRange = "{14634, 606}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 14001}}";
+			sepNavSelRange = "{14505, 0}";
+			sepNavVisRange = "{14122, 687}";
 		};
 	};
 	027D541B1462BC7B002C310F /* GroundBlock.h */ = {
@@ -2652,9 +2652,9 @@
 	};
 	027D5847146A9C04002C310F /* FDPosition.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 1118}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 1066}}";
 			sepNavSelRange = "{328, 0}";
-			sepNavVisRange = "{0, 465}";
+			sepNavVisRange = "{507, 563}";
 		};
 	};
 	027D5848146A9C04002C310F /* PathResolver.h */ = {
@@ -2877,7 +2877,7 @@
 		fRef = 02733365149785A900D0812F /* AIEscapeDelegate.m */;
 		name = "AIEscapeDelegate.m: 29";
 		rLen = 0;
-		rLoc = 633;
+		rLoc = 645;
 		rType = 0;
 		vrLen = 907;
 		vrLoc = 162;
@@ -3831,7 +3831,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {789, 832}}";
 			sepNavSelRange = "{197, 0}";
-			sepNavVisRange = "{179, 326}";
+			sepNavVisRange = "{339, 806}";
 		};
 	};
 	0297DC09148B09C5007F3E12 /* PBXBookmark */ = {
@@ -5874,9 +5874,9 @@
 	};
 	02D30A5F1600C9D000CA1799 /* Shopping2ConfirmDialog.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {915, 1131}}";
-			sepNavSelRange = "{218, 0}";
-			sepNavVisRange = "{0, 952}";
+			sepNavIntBoundsRect = "{{0, 0}, {915, 1170}}";
+			sepNavSelRange = "{1369, 0}";
+			sepNavVisRange = "{301, 1104}";
 		};
 	};
 	02D30A611600CD0000CA1799 /* Shopping2SelectAmorTargetDialog.h */ = {

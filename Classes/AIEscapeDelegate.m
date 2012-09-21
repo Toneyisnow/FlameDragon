@@ -27,10 +27,10 @@
 -(void) takeAction
 {
 	NSLog(@"AIEscapeDelegate take action on creature %d", [creature getIdentifier]);
-	NSLog(@"Escape to point :(%d, %d)", self.escapePosition.x, self.escapePosition.y);
+	NSLog(@"Escape to point :(%f, %f)", [escapePosition posValue].x, [escapePosition posValue].y);
 	
 	BattleField *field = [[layers getFieldLayer] getField];
-	CGPoint targetPos = [self generatePos:CGPointMake(self.escapePosition.x, self.escapePosition.y)];
+	CGPoint targetPos = [self generatePos:[escapePosition posValue]];
 	
 	[field setCursorTo:targetPos];
 	[layers moveCreature:creature To:targetPos showMenu:FALSE];

@@ -45,10 +45,20 @@
 -(void) onClicked:(CGPoint)location
 {
 	CGPoint innerLoc = [super getInnerLocation:location];
-	if ([self hasClickedOnYes:innerLoc]) {
+	
+	// Bug: This seems a bug of getInnerLocation, that the scale is not correct, but since the 
+	//      Battle scene is already using it, I will temporarily modify the location here.
+	CGPoint adjustedInnerLoc = CGPointMake(innerLoc.x * [baseSprite getScale].x, innerLoc.y * [baseSprite getScale].y);
+	
+	//NSLog(@"Clicked innter location: %f, %f", innerLoc.x, innerLoc.y);
+	//NSLog(@"Yes Button location: %f, %f", [self buttonYesLocation].x, [self buttonYesLocation].y);
+	
+	if ([self hasClickedOnYes:adjustedInnerLoc]) {
+		NSLog(@"clicked Yes.");
 		[self onExit:[NSNumber numberWithInt:1]];
 	}
-	else if ([self hasClickedOnNo:innerLoc]) {
+	else if ([self hasClickedOnNo:adjustedInnerLoc]) {
+		NSLog(@"clicked No.");
 		[self onExit:[NSNumber numberWithInt:0]];
 	}
 }
@@ -79,7 +89,7 @@
 
 -(CGPoint) buttonYesLocation
 {
-	return CGPointMake([baseSprite size].width/2, 20);
+	return CGPointMake([baseSprite size].width / 2, 20);
 }
 
 -(CGPoint) buttonNoLocation
