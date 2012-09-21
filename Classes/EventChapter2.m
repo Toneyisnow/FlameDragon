@@ -30,12 +30,12 @@
 
 	[self loadDieEvent:1 Action:@selector(gameOver)];
 
-	[self loadDyingEvent:91 Action:@selector(showNpcDyingMessage)];
-	[self loadDyingEvent:92 Action:@selector(showNpcDyingMessage)];
-	[self loadDyingEvent:93 Action:@selector(showNpcDyingMessage)];
-	[self loadDyingEvent:94 Action:@selector(showNpcDyingMessage)];
-	[self loadDyingEvent:95 Action:@selector(showNpcDyingMessage)];
-	[self loadDyingEvent:96 Action:@selector(showNpcDyingMessage)];
+	[self loadDyingEvent:91 Action:@selector(showNpcDyingMessage91)];
+	[self loadDyingEvent:92 Action:@selector(showNpcDyingMessage92)];
+	[self loadDyingEvent:93 Action:@selector(showNpcDyingMessage93)];
+	[self loadDyingEvent:94 Action:@selector(showNpcDyingMessage94)];
+	[self loadDyingEvent:95 Action:@selector(showNpcDyingMessage95)];
+	[self loadDyingEvent:96 Action:@selector(showNpcDyingMessage96)];
 
 	[self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
 	[self loadTeamEvent:CreatureType_Npc Action:@selector(gameOver)];
@@ -276,6 +276,12 @@
 	[layers appendNewActivity:[[[FDEmptyActivity alloc] init] autorelease]];
 	[layers moveCreatureId:36 To:CGPointMake(16, 2) showMenu:FALSE];
 	
+	[self setAiOfId:91 EscapeTo:CGPointMake(26, 20)];
+	[self setAiOfId:92 EscapeTo:CGPointMake(26, 20)];
+	[self setAiOfId:93 EscapeTo:CGPointMake(26, 20)];
+	[self setAiOfId:94 EscapeTo:CGPointMake(26, 20)];
+	[self setAiOfId:95 EscapeTo:CGPointMake(26, 20)];
+	[self setAiOfId:96 EscapeTo:CGPointMake(26, 20)];
 }
 
 -(void) enemyClear
@@ -348,10 +354,29 @@
 	[layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];
 }
 
--(void) showNpcDyingMessage
+-(void) showNpcDyingMessage91
 {
-	int messageId = [FDRandom from:91 to:96];
-	[self showTalkMessage:2 conversation:messageId sequence:1];
+	[self showTalkMessage:2 conversation:91 sequence:1];
+}
+-(void) showNpcDyingMessage92
+{
+	[self showTalkMessage:2 conversation:92 sequence:1];
+}
+-(void) showNpcDyingMessage93
+{
+	[self showTalkMessage:2 conversation:93 sequence:1];
+}
+-(void) showNpcDyingMessage94
+{
+	[self showTalkMessage:2 conversation:94 sequence:1];
+}
+-(void) showNpcDyingMessage95
+{
+	[self showTalkMessage:2 conversation:95 sequence:1];
+}
+-(void) showNpcDyingMessage96
+{
+	[self showTalkMessage:2 conversation:96 sequence:1];
 }
 
 -(void) setAiOfId:(int)creatureId EscapeTo:(CGPoint)pos
@@ -359,8 +384,11 @@
 	BattleField *field = [[layers getFieldLayer] getField];
 	
 	FDCreature *creature = [field getCreatureById:creatureId];
-	creature.data.aiType = AIType_Escape;
-	creature.data.aiParam = [[[FDPosition alloc] initX:pos.x Y:pos.y] autorelease];
+	
+	if (creature != nil) {
+		creature.data.aiType = AIType_Escape;
+		creature.data.aiParam = [[[FDPosition alloc] initX:pos.x Y:pos.y] autorelease];
+	}
 }
 
 

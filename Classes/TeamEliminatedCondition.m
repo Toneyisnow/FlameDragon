@@ -39,8 +39,9 @@
 			break;
 	}
 	
-	if (teamCount > 0) {
+	if (previousCount == 0) {
 		previousCount = teamCount;
+		return FALSE;
 	}
 	
 	if (previousCount > 0 && teamCount == 0) {

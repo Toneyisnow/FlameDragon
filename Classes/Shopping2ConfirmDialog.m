@@ -8,6 +8,7 @@
 
 #import "Shopping2ConfirmDialog.h"
 #import "FDWindow.h"
+#import "FDSpriteStore.h"
 
 @implementation Shopping2ConfirmDialog
 
@@ -29,14 +30,63 @@
 		[self addLabel:message Location:[FDWindow shoppingMessageLocation]];
 	}
 	
+	// Button
+	FDSprite *buttonYes = [[FDSpriteStore instance] sprite:@"ConfirmButtonYes.png"];
+	[buttonYes setLocation:[self buttonYesLocation]];
+	[baseSprite addSprite:buttonYes zOrder:1];
+	
+	FDSprite *buttonNo = [[FDSpriteStore instance] sprite:@"ConfirmButtonNo.png"];
+	[buttonNo setLocation:[self buttonNoLocation]];
+	[baseSprite addSprite:buttonNo zOrder:1];
+	
 	return self;
 }
 
 -(void) onClicked:(CGPoint)location
 {
-	int returnValue = 1;
-	
-	[self onExit:[NSNumber numberWithInt:returnValue]];
+	CGPoint innerLoc = [super getInnerLocation:location];
+	if ([self hasClickedOnYes:innerLoc]) {
+		[self onExit:[NSNumber numberWithInt:1]];
+	}
+	else if ([self hasClickedOnNo:innerLoc]) {
+		[self onExit:[NSNumber numberWithInt:0]];
+	}
 }
+
+-(BOOL) hasClickedOnYes:(CGPoint)location
+{
+	// Hard coded
+	CGPoint yesPos = [self buttonYesLocation];
+	if ((location.x > yesPos.x - 30 && location.x < yesPos.x + 30)
+		&& (location.y > yesPos.y - 20 && location.y < yesPos.y + 20)) {
+		return TRUE;
+	}
+	else {
+		return FALSE;
+	}
+}
+
+-(BOOL) hasClickedOnNo:(CGPoint)location
+{
+	// Hard coded
+	CGPoint noPos = [self buttonNoLocation];
+	if (location.x > noPos.x - 30 && location.x < noPos.x + 30
+		&& location.y > noPos.y - 20 && location.y < noPos.y + 20) {
+		return TRUE;
+	}
+	return FALSE;
+}
+
+-(CGPoint) buttonYesLocation
+{
+	return CGPointMake([baseSprite size].width/2, 20);
+}
+
+-(CGPoint) buttonNoLocation
+{
+	return CGPointMake([baseSprite size].width * 0.8, 20);
+}
+
+
 
 @end

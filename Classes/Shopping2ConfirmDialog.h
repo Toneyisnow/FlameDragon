@@ -15,5 +15,11 @@
 
 -(id) initWithMessage:(NSString *)message;
 
+-(BOOL) hasClickedOnYes:(CGPoint)location;
+-(BOOL) hasClickedOnNo:(CGPoint)location;
+
+-(CGPoint) buttonYesLocation;
+-(CGPoint) buttonNoLocation;
+
 @end
 
