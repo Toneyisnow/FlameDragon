@@ -1222,9 +1222,9 @@
 	};
 	02733365149785A900D0812F /* AIEscapeDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 624}}";
-			sepNavSelRange = "{368, 0}";
-			sepNavVisRange = "{26, 859}";
+			sepNavIntBoundsRect = "{{0, 0}, {747, 650}}";
+			sepNavSelRange = "{639, 0}";
+			sepNavVisRange = "{289, 869}";
 		};
 	};
 	0273338B1497939200D0812F /* PBXTextBookmark */ = {
@@ -3831,7 +3831,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {789, 832}}";
 			sepNavSelRange = "{197, 0}";
-			sepNavVisRange = "{339, 806}";
+			sepNavVisRange = "{378, 775}";
 		};
 	};
 	0297DC09148B09C5007F3E12 /* PBXBookmark */ = {
@@ -5874,9 +5874,9 @@
 	};
 	02D30A5F1600C9D000CA1799 /* Shopping2ConfirmDialog.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {915, 1170}}";
-			sepNavSelRange = "{1369, 0}";
-			sepNavVisRange = "{301, 1104}";
+			sepNavIntBoundsRect = "{{0, 0}, {915, 1222}}";
+			sepNavSelRange = "{1606, 0}";
+			sepNavVisRange = "{1047, 1173}";
 		};
 	};
 	02D30A611600CD0000CA1799 /* Shopping2SelectAmorTargetDialog.h */ = {
