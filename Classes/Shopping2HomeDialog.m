@@ -173,7 +173,7 @@
 {
 	NSLog(@"onSell");
 	
-	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] init];
+	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords]];
 	[self showDialog:dialog Callback:@selector(onSell_SelectedFriend:)];
 	[dialog release];
 }
@@ -189,7 +189,6 @@
 	}
 	
 	lastSelectedCreatureIndex = selectedNum;
-	
 	CreatureRecord *friend = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];
 	
 	Shopping2ShowItemsDialog *dialog = [[Shopping2ShowItemsDialog alloc] initWithItemList:friend.data.itemList];
@@ -250,7 +249,7 @@
 
 -(void) onGiveItem_Start:(NSNumber *)num
 {
-	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] init];
+	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords]];
 	[self showDialog:dialog Callback:@selector(onGiveItem_SelectedWhose:)];
 	[dialog release];	
 }
@@ -294,7 +293,7 @@
 
 -(void) onGiveItem_ToWhom:(NSNumber *)num
 {	
-	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] init];
+	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords]];
 	[self showDialog:dialog Callback:@selector(onGiveItem_ToTargetSelected:)];
 	[dialog release];	
 }
@@ -338,7 +337,8 @@
 -(void) onEquip
 {
 	NSLog(@"onEquip");
-	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] init];
+	
+	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords]];
 	[self showDialog:dialog Callback:@selector(onEquip_SelectedFriend:)];
 	[dialog release];
 }

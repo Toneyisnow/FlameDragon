@@ -14,4 +14,6 @@
 	
 }
 
+-(id) initWithFriends:(NSMutableArray *)list;
+
 @end

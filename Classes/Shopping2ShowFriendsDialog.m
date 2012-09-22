@@ -9,51 +9,91 @@
 #import "Shopping2ShowFriendsDialog.h"
 #import "DataDepot.h"
 #import "SWScrollView.h"
+#import "CreatureRecord.h"
+#import "FDLocalString.h"
 
 @implementation Shopping2ShowFriendsDialog
 
-
--(id) init
+-(id) initWithFriends:(NSMutableArray *)list
 {
 	self = [super init];
 	
 	//[self addLabel:@"List All Friends ..." Location:[FDWindow shoppingMessageLocation]];
+	int screenHeight = 120;
+	int intervalX = 120;
+	int intervalY = 30;
+	int viewLength = [list count] > 6 ? ([list count] + 1)/2 * intervalY : screenHeight;
+	int startX = 10;
+	int startY = viewLength - 2 * intervalY + 5;
 	
-	SWScrollView *view = [SWScrollView viewWithViewSize: CGSizeMake(300, 120)];
+	
+	SWScrollView *view = [SWScrollView viewWithViewSize: CGSizeMake(400, screenHeight)];
 	view.position = ccp(10, 20);
-	view.contentOffset = ccp(0, 0);
+	view.contentOffset = ccp(0, screenHeight - viewLength - intervalY);
 	view.direction = SWScrollViewDirectionVertical;
 	view.clipsToBounds = YES;
+	//[view setClickedCallback:(id)obj Method:@selector(clickedViewOn:)];
 	
+	for (int i = 0; i < [list count]; i++)
+	{
+		CreatureRecord *record = [list objectAtIndex:i];
+		int definitionId = record.definitionId;
+		
+		//CCSprite *icon = [CCSprite spriteWithFile:[NSString stringWithFormat:@"Icon-%03d-02.png", definitionId]];
+		NSString *creatureName = [FDLocalString creature:definitionId];
+		
+		FDSprite *nameSprite = [[FDSprite alloc] initWithString:creatureName Size:14];
+				
+		CCMenuItem *iconMenuItem = [CCMenuItemImage 
+									itemFromNormalImage:[NSString stringWithFormat:@"Icon-%03d-02.png", definitionId] selectedImage:NULL
+									target:self selector:@selector(clickedViewOn:)];
+		iconMenuItem.position = ccp(startX + intervalX * (i % 2), startY - intervalY * (i / 2));
+		iconMenuItem.tag = definitionId;
+		iconMenuItem.anchorPoint = ccp(0, 0);		
+		
+		CCMenuItemSprite* nameMenuItem = [CCMenuItemSprite itemFromNormalSprite:[nameSprite getSprite] selectedSprite:NULL target:self selector:@selector(clickedViewOn:)];
+		
+		nameMenuItem.position = ccp(startX + intervalX * (i % 2) + 25, startY - intervalY * (i / 2));
+		nameMenuItem.tag = i;
+		nameMenuItem.anchorPoint = ccp(0, 0);
+		
+		CCMenu *menu = [CCMenu menuWithItems:iconMenuItem, nameMenuItem, nil];
+		menu.position = CGPointZero;
+		[view addChild:menu];
+
+		[nameSprite release];
+	}
 	
-	CCSprite *sprite1 = [CCSprite spriteWithFile:@"Icon-001-02.png"];
-	CCSprite *sprite2 = [CCSprite spriteWithFile:@"Icon-002-02.png"];
-	CCSprite *sprite3 = [CCSprite spriteWithFile:@"Icon-003-02.png"];
-	CCSprite *sprite4 = [CCSprite spriteWithFile:@"Icon-004-02.png"];
+	view.contentSize = CGSizeMake(400, viewLength + intervalY);
 	
-	view.contentSize = CGSizeMake(300, 350);
-	
-	sprite1.position = ccp(10, 0);
-	sprite2.position = ccp(10, 30);
-	sprite3.position = ccp(10, 60);
-	sprite4.position = ccp(10, 90);
-	
-	[view addChild:sprite1];
-	[view addChild:sprite2];
-	[view addChild:sprite3];
-	[view addChild:sprite4];
 	[[baseSprite getSprite] addChild:view];
 	
 	return self;
 }
 
+-(void) clickedViewOn:(id)sender
+{
+	NSLog(@"Clicked from sender : %@", sender);
+	
+	CCMenuItem *menu = (CCMenuItem *)sender;
+	
+	if (menu != NULL && menu.tag > 0) {
+		[self onExit:[NSNumber numberWithInt:menu.tag]];
+	}
+}
+
 -(void) onClicked:(CGPoint)location
 {
+	/*
+	 Do nothing
+	 
 	int selected = 0;
 	
 	NSLog(@"Select Friend Index %d", selected);	
 	id returnedObject = [NSNumber numberWithInt:selected];
 	[self onExit:returnedObject];
+	 
+	 */
 }
 
 
