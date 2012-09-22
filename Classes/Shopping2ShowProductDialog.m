@@ -58,10 +58,18 @@
 		[baseSprite addSprite:nameSprite zOrder:3];
 		
 		// Attribute
-		FDSprite *attSprite = [[FDSprite alloc] initWithString:[item getAttributeString] Size:12];	
+		FDSprite *attSprite = [[FDSprite alloc] initWithString:[item getAttributeString] Size:9];	
 		[attSprite setAnchorPoint:CGPointMake(0, 0)];
-		[attSprite setLocation:CGPointMake(nowX + 80, nowY)];
+		[attSprite setLocation:CGPointMake(nowX + 80, nowY + 10)];
 		[baseSprite addSprite:attSprite zOrder:3];
+		
+		// Money
+		NSString *moneyStr = [NSString stringWithFormat:@"$ %05d", item.price];
+		FDSprite *moneySprite = [[FDSprite alloc] initWithString:moneyStr Size:9];	
+		[moneySprite setAnchorPoint:CGPointMake(0, 0)];
+		[moneySprite setLocation:CGPointMake(nowX + 80, nowY)];
+		[baseSprite addSprite:moneySprite zOrder:3];
+		
 	}
 	
 	return self;

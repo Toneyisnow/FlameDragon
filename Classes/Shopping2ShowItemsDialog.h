@@ -7,13 +7,18 @@
 //
 
 #import "cocos2d.h"
-#import "Shopping2Dialog.h"
+#import "Shopping2PagedDialog.h"
 
-@interface Shopping2ShowItemsDialog : Shopping2Dialog {
+@interface Shopping2ShowItemsDialog : Shopping2PagedDialog {
+		
+	int startX;
+	int startY;
+	int intervalX;
+	int intervalY;
 	
 }
 
 
--(id) initWithItemList:(NSMutableArray *)itemList;
+-(id) initWithItemList:(NSMutableArray *)itemList pageIndex:(int)pageIndex;
 
 @end

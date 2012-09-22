@@ -12,6 +12,7 @@
 #import "Shopping2SelectAmorTargetDialog.h"
 #import "Shopping2ConfirmDialog.h"
 #import "Shopping2MessageDialog.h"
+#import "Shopping2ShowItemsDialog.h"
 
 @implementation Shopping2AmorDialog
 
@@ -33,12 +34,11 @@
 	// NSMutableArray *list = [self getProductList:chapterRecord.chapterId Type:DataDepotShopType_AmorShop];
 	ShopDefinition *shop = [[DataDepot depot] getShopDefinition:chapterRecord.chapterId Type:DataDepotShopType_AmorShop];
 	
-	Shopping2ShowProductDialog *dialog = [[Shopping2ShowProductDialog alloc] initWithList:shop.itemList];
+	// Shopping2ShowProductDialog *dialog = [[Shopping2ShowProductDialog alloc] initWithList:shop.itemList];
+	Shopping2ShowItemsDialog *dialog = [[Shopping2ShowItemsDialog alloc] initWithItemList:shop.itemList pageIndex:0];
+	
 	[self showDialog:dialog Callback:@selector(onBuyAmor_SelectedAmor:)];
 	[dialog release];
-	
-	//NSString *msg = [NSString stringWithFormat:@"Friend Count: %d", [[chapterRecord friendRecords] count]];
-	NSLog(@"Friend Count: %d", [[chapterRecord friendRecords] count]);
 }
 
 -(void) onBuyAmor_SelectedAmor:(NSNumber *)num
@@ -46,8 +46,25 @@
 	int selectedNum = [num intValue];
 	
 	if (selectedNum < 0) {
-		// Cancelled
+		switch (selectedNum) {
+			case -1:
+				// Cancel
+				return;
+			case -2:
+				// Go Up Page
+				lastPageIndex --; break;
+			case -3:
+				// Go Down Page
+				lastPageIndex ++; break;
+			default:
+				break;
+		}
 		
+		ShopDefinition *shop = [[DataDepot depot] getShopDefinition:chapterRecord.chapterId Type:DataDepotShopType_AmorShop];
+		
+		Shopping2ShowItemsDialog *dialog = [[Shopping2ShowItemsDialog alloc] initWithItemList:shop.itemList pageIndex:lastPageIndex];
+		[self showDialog:dialog Callback:@selector(onBuyAmor_SelectedAmor:)];
+		[dialog release];
 		
 		return;
 	} 
@@ -65,7 +82,6 @@
 	Shopping2ConfirmDialog *dialog = [[Shopping2ConfirmDialog alloc] initWithMessage:message];
 	[self showDialog:dialog Callback:@selector(onBuyAmor_ConfirmedAmor:)];
 	[dialog release];
-	
 }
 
 -(void) onBuyAmor_ConfirmedAmor:(NSNumber *)num

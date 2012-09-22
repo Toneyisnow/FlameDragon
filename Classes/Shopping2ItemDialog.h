@@ -16,4 +16,6 @@
 -(void) onBuyItem_ConfirmedItem:(NSNumber *)num;
 -(void) onBuyItem_Done:(NSNumber *)num;
 
+-(void) doBuyItem;
+
 @end

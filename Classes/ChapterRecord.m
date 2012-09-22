@@ -58,12 +58,18 @@
 	CreatureRecord *creature3 = [CreatureRecord friendSampleRecord:3];
 	CreatureRecord *creature4 = [CreatureRecord friendSampleRecord:4];
 	CreatureRecord *creature5 = [CreatureRecord friendSampleRecord:5];
+	CreatureRecord *creature6 = [CreatureRecord friendSampleRecord:2];
+	CreatureRecord *creature7 = [CreatureRecord friendSampleRecord:4];
+	CreatureRecord *creature8 = [CreatureRecord friendSampleRecord:3];
 	
 	[[record friendRecords] addObject:creature1];
 	[[record friendRecords] addObject:creature2];
 	[[record friendRecords] addObject:creature3];
 	[[record friendRecords] addObject:creature4];
 	[[record friendRecords] addObject:creature5];
+	[[record friendRecords] addObject:creature6];
+	[[record friendRecords] addObject:creature7];
+	[[record friendRecords] addObject:creature8];
 	
 	return [record autorelease];
 

@@ -518,6 +518,7 @@
 		02BA723814CA31AF0028C9E7 /* IconFull.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA723414CA31AF0028C9E7 /* IconFull.png */; };
 		02BB38A0160CCB03006BEE76 /* Chapter-00.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02BB389F160CCB03006BEE76 /* Chapter-00.strings */; };
 		02BB3915160D6801006BEE76 /* SWButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BB3914160D6801006BEE76 /* SWButton.m */; };
+		02BB39E0160DCA24006BEE76 /* Shopping2PagedDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BB39DF160DCA24006BEE76 /* Shopping2PagedDialog.m */; };
 		02BD5A7F1477A93900828EDA /* Menu-020-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BD5A731477A93900828EDA /* Menu-020-1.png */; };
 		02BD5A801477A93900828EDA /* Menu-020-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BD5A741477A93900828EDA /* Menu-020-2.png */; };
 		02BD5A811477A93900828EDA /* Menu-020-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BD5A751477A93900828EDA /* Menu-020-3.png */; };
@@ -1505,6 +1506,8 @@
 		02BB389F160CCB03006BEE76 /* Chapter-00.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = "Chapter-00.strings"; sourceTree = "<group>"; };
 		02BB3913160D6801006BEE76 /* SWButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWButton.h; sourceTree = "<group>"; };
 		02BB3914160D6801006BEE76 /* SWButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWButton.m; sourceTree = "<group>"; };
+		02BB39DE160DCA24006BEE76 /* Shopping2PagedDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shopping2PagedDialog.h; sourceTree = "<group>"; };
+		02BB39DF160DCA24006BEE76 /* Shopping2PagedDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shopping2PagedDialog.m; sourceTree = "<group>"; };
 		02BD5A731477A93900828EDA /* Menu-020-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Menu-020-1.png"; path = "Menu/Menu-020-1.png"; sourceTree = "<group>"; };
 		02BD5A741477A93900828EDA /* Menu-020-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Menu-020-2.png"; path = "Menu/Menu-020-2.png"; sourceTree = "<group>"; };
 		02BD5A751477A93900828EDA /* Menu-020-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Menu-020-3.png"; path = "Menu/Menu-020-3.png"; sourceTree = "<group>"; };
@@ -2965,6 +2968,8 @@
 				02D30C041602202B00CA1799 /* Shopping2ShowTransferDialog.m */,
 				02D30D8E1605D53F00CA1799 /* Shopping2ScrollDialog.h */,
 				02D30D8F1605D53F00CA1799 /* Shopping2ScrollDialog.m */,
+				02BB39DE160DCA24006BEE76 /* Shopping2PagedDialog.h */,
+				02BB39DF160DCA24006BEE76 /* Shopping2PagedDialog.m */,
 			);
 			name = Shopping2;
 			sourceTree = "<group>";
@@ -4215,6 +4220,7 @@
 				02D30C051602202B00CA1799 /* Shopping2ShowTransferDialog.m in Sources */,
 				02D30D901605D53F00CA1799 /* Shopping2ScrollDialog.m in Sources */,
 				02BB3915160D6801006BEE76 /* SWButton.m in Sources */,
+				02BB39E0160DCA24006BEE76 /* Shopping2PagedDialog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

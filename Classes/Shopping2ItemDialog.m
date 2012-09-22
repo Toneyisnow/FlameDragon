@@ -8,7 +8,7 @@
 
 #import "Shopping2ItemDialog.h"
 
-#import "Shopping2ShowProductDialog.h"
+#import "Shopping2ShowItemsDialog.h"
 #import "Shopping2ConfirmDialog.h"
 #import "Shopping2MessageDialog.h"
 #import "Shopping2ShowFriendsDialog.h"
@@ -31,7 +31,8 @@
 	
 	ShopDefinition *shop = [[DataDepot depot] getShopDefinition:chapterRecord.chapterId Type:DataDepotShopType_ItemShop];
 	
-	Shopping2ShowProductDialog *dialog = [[Shopping2ShowProductDialog alloc] initWithList:shop.itemList];
+	lastPageIndex = 0;
+	Shopping2ShowItemsDialog *dialog = [[Shopping2ShowItemsDialog alloc] initWithItemList:shop.itemList pageIndex:0];
 	[self showDialog:dialog Callback:@selector(onBuyItem_SelectedItem:)];
 	[dialog release];
 	
@@ -42,8 +43,26 @@
 	int selectedNum = [num intValue];
 	
 	if (selectedNum < 0) {
+		switch (selectedNum) {
+			case -1:
+				// Cancel
+				return;
+			case -2:
+				// Go Up Page
+				lastPageIndex --; break;
+			case -3:
+				// Go Down Page
+				lastPageIndex ++; break;
+			default:
+				break;
+		}
 		
-		// Cancelled
+		ShopDefinition *shop = [[DataDepot depot] getShopDefinition:chapterRecord.chapterId Type:DataDepotShopType_ItemShop];
+		
+		Shopping2ShowItemsDialog *dialog = [[Shopping2ShowItemsDialog alloc] initWithItemList:shop.itemList pageIndex:lastPageIndex];
+		[self showDialog:dialog Callback:@selector(onBuyItem_SelectedItem:)];
+		[dialog release];
+		
 		return;
 	} 
 	
@@ -85,7 +104,9 @@
 		[dialog release];
 	}
 	else {
-		Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] init];
+		
+		lastPageIndex = 0;
+		Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:0];
 		[self showDialog:dialog Callback:@selector(onBuyItem_Done:)];
 		[dialog release];
 	}
@@ -96,7 +117,23 @@
 	int selectedNum = [num intValue];
 	
 	if (selectedNum < 0) {
-		// Cancelled
+		switch (selectedNum) {
+			case -1:
+				// Cancel
+				return;
+			case -2:
+				// Go Up Page
+				lastPageIndex --; break;
+			case -3:
+				// Go Down Page
+				lastPageIndex ++; break;
+			default:
+				break;
+		}
+		
+		Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:lastPageIndex];
+		[self showDialog:dialog Callback:@selector(onBuyItem_Done:)];
+		[dialog release];
 		
 		return;
 	} 
@@ -117,7 +154,18 @@
 	} else {
 		
 		// Buy the item
+		[self doBuyItem];
 	}
+}
+
+-(void) doBuyItem
+{
+	ItemDefinition *item = [self getItemDefinition:chapterRecord.chapterId Type:DataDepotShopType_ItemShop Index:lastSelectedItemIndex];
+	chapterRecord.money -= item.price;
+	
+	
+	CreatureRecord *friend = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];
+	[friend.data.itemList addObject:[NSNumber numberWithInt:item.identifier]];
 }
 
 

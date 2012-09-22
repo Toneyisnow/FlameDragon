@@ -173,7 +173,8 @@
 {
 	NSLog(@"onSell");
 	
-	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords]];
+	lastPageIndex = 0;
+	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:0];
 	[self showDialog:dialog Callback:@selector(onSell_SelectedFriend:)];
 	[dialog release];
 }
@@ -183,7 +184,13 @@
 	int selectedNum = [num intValue];
 	
 	if (selectedNum < 0) {
-		// Cancel
+		
+		if (selectedNum == -1) return;
+		lastPageIndex = (selectedNum == -2) ? lastPageIndex-- : (selectedNum == -3) ? lastPageIndex ++ : 0;
+		
+		Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:lastPageIndex];
+		[self showDialog:dialog Callback:@selector(onSell_SelectedFriend:)];
+		[dialog release];
 		
 		return;
 	}
@@ -191,7 +198,8 @@
 	lastSelectedCreatureIndex = selectedNum;
 	CreatureRecord *friend = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];
 	
-	Shopping2ShowItemsDialog *dialog = [[Shopping2ShowItemsDialog alloc] initWithItemList:friend.data.itemList];
+	lastPageIndex = 0;
+	Shopping2ShowItemsDialog *dialog = [[Shopping2ShowItemsDialog alloc] initWithItemList:friend.data.itemList pageIndex:0];
 	[self showDialog:dialog Callback:@selector(onSell_SelectedItem:)];
 	[dialog release];
 }
@@ -202,8 +210,13 @@
 	
 	if (selectedNum < 0) {
 		
-		// Cancel
-		[self onSell];
+		if (selectedNum == -1) { [self onSell]; return; }
+		lastPageIndex = (selectedNum == -2) ? lastPageIndex-- : (selectedNum == -3) ? lastPageIndex ++ : 0;
+		
+		CreatureRecord *friend = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];
+		Shopping2ShowItemsDialog *dialog = [[Shopping2ShowItemsDialog alloc] initWithItemList:friend.data.itemList pageIndex:lastPageIndex];
+		[self showDialog:dialog Callback:@selector(onSell_SelectedItem:)];
+		[dialog release];
 		return;
 	}
 	
@@ -233,8 +246,21 @@
 	}
 	
 	// Sell the item
+	[self doSellItem];
+	
 	NSLog(@"Item Sold");
 	
+}
+
+-(void) doSellItem
+{
+	CreatureRecord *friend = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];
+	int itemId = [[friend.data.itemList objectAtIndex:lastSelectedItemIndex] intValue];
+	ItemDefinition *item = [[DataDepot depot] getItemDefinition:itemId];
+	
+	chapterRecord.money += item.sellprice;
+	
+	[friend.data.itemList removeObjectAtIndex:lastSelectedItemIndex];
 }
 
 -(void) onGiveItem
@@ -249,7 +275,8 @@
 
 -(void) onGiveItem_Start:(NSNumber *)num
 {
-	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords]];
+	lastPageIndex = 0;
+	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:0];
 	[self showDialog:dialog Callback:@selector(onGiveItem_SelectedWhose:)];
 	[dialog release];	
 }
@@ -259,8 +286,12 @@
 	int selectedNum = [num intValue];
 	
 	if (selectedNum < 0) {
-		// Cancel
+		if (selectedNum == -1) return;
+		lastPageIndex = (selectedNum == -2) ? lastPageIndex-- : (selectedNum == -3) ? lastPageIndex ++ : 0;
 		
+		Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:lastPageIndex];
+		[self showDialog:dialog Callback:@selector(onGiveItem_SelectedWhose:)];
+		[dialog release];
 		return;
 	}
 	
@@ -268,9 +299,19 @@
 	
 	CreatureRecord *friend = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];
 	
-	Shopping2ShowItemsDialog *dialog = [[Shopping2ShowItemsDialog alloc] initWithItemList:friend.data.itemList];
-	[self showDialog:dialog Callback:@selector(onGiveItem_SelectedItem:)];
-	[dialog release];
+	if ([friend.data.itemList count] == 0) {
+		
+		NSString *message = [FDLocalString message:64];
+		Shopping2MessageDialog *dialog = [[Shopping2MessageDialog alloc] initWithMessage:message];
+		[self showDialog:dialog Callback:@selector(onGiveItem_Start:)];
+		[dialog release];
+		
+	} else {
+		lastPageIndex = 0;
+		Shopping2ShowItemsDialog *dialog = [[Shopping2ShowItemsDialog alloc] initWithItemList:friend.data.itemList pageIndex:0];
+		[self showDialog:dialog Callback:@selector(onGiveItem_SelectedItem:)];
+		[dialog release];
+	}
 }
 
 -(void) onGiveItem_SelectedItem:(NSNumber *)num
@@ -278,7 +319,17 @@
 	int selectedNum = [num intValue];
 	
 	if (selectedNum < 0) {
-		// Cancel
+		if (selectedNum == -1) {
+			[self onGiveItem_Start:[NSNumber numberWithInt:0]];
+			return;
+		}
+		
+		lastPageIndex = (selectedNum == -2) ? lastPageIndex-- : (selectedNum == -3) ? lastPageIndex ++ : 0;
+		
+		CreatureRecord *friend = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];
+		Shopping2ShowItemsDialog *dialog = [[Shopping2ShowItemsDialog alloc] initWithItemList:friend.data.itemList pageIndex:lastPageIndex];
+		[self showDialog:dialog Callback:@selector(onGiveItem_SelectedItem:)];
+		[dialog release];
 		
 		return;
 	}
@@ -293,7 +344,8 @@
 
 -(void) onGiveItem_ToWhom:(NSNumber *)num
 {	
-	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords]];
+	lastPageIndex = 0;
+	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:0];
 	[self showDialog:dialog Callback:@selector(onGiveItem_ToTargetSelected:)];
 	[dialog release];	
 }
@@ -303,13 +355,21 @@
 	int selectedNum = [num intValue];
 	
 	if (selectedNum < 0) {
-		// Cancel
+		
+		if (selectedNum == -1) {
+			[self onGiveItem_Start:[NSNumber numberWithInt:0]];
+			return;
+		}
+		lastPageIndex = (selectedNum == -2) ? lastPageIndex-- : (selectedNum == -3) ? lastPageIndex ++ : 0;
+		
+		Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:lastPageIndex];
+		[self showDialog:dialog Callback:@selector(onGiveItem_ToTargetSelected:)];
+		[dialog release];	
 		
 		return;
 	}
 	
 	CreatureRecord *targetFriend = [[chapterRecord friendRecords] objectAtIndex:selectedNum];
-	CreatureRecord *originFriend = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];
 	
 	// Check if the item list is full
 	if (selectedNum != lastSelectedCreatureIndex && [targetFriend.data.itemList count] >= 8) {
@@ -322,23 +382,32 @@
 		return;
 	}
 	
+	// Item Given.
+	[self doGiveItem:selectedNum];
+	NSLog(@"Item is given");
+	
+	[self onGiveItem];
+}
+
+-(void) doGiveItem:(int)creatureIndex
+{
+	CreatureRecord *targetFriend = [[chapterRecord friendRecords] objectAtIndex:creatureIndex];
+	CreatureRecord *originFriend = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];
+	
 	// Item move to target
 	NSNumber *itemId = [originFriend.data.itemList objectAtIndex:lastSelectedItemIndex];
 	
 	[targetFriend.data.itemList addObject:itemId];
 	[originFriend.data.itemList removeObjectAtIndex:lastSelectedItemIndex];
 	
-	// Item Given.
-	NSLog(@"Item is given");
-	
-	[self onGiveItem];
 }
 
 -(void) onEquip
 {
 	NSLog(@"onEquip");
 	
-	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords]];
+	lastPageIndex = 0;
+	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:0];
 	[self showDialog:dialog Callback:@selector(onEquip_SelectedFriend:)];
 	[dialog release];
 }

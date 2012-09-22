@@ -20,7 +20,7 @@
 
 	int lastSelectedItemIndex;
 	int lastSelectedCreatureIndex;
-	
+	int lastPageIndex;
 }
 
 -(void) initButtons;
@@ -48,6 +48,7 @@
 -(void) onSell_SelectedFriend:(NSNumber *)num;
 -(void) onSell_SelectedItem:(NSNumber *)num;
 -(void) onSell_Confirm:(NSNumber *)num;
+-(void) doSellItem;
 
 -(void) onGiveItem;
 -(void) onGiveItem_Start:(NSNumber *)num;
@@ -55,6 +56,7 @@
 -(void) onGiveItem_SelectedItem:(NSNumber *)num;
 -(void) onGiveItem_ToWhom:(NSNumber *)num;
 -(void) onGiveItem_ToTargetSelected:(NSNumber *)num;
+-(void) doGiveItem:(int)creatureIndex;
 
 -(void) onInfo;
 -(void) onInfo_ShowItems:(NSNumber *)num;

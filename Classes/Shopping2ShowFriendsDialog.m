@@ -14,6 +14,8 @@
 
 @implementation Shopping2ShowFriendsDialog
 
+
+// Deprecated Function
 -(id) initWithFriends:(NSMutableArray *)list
 {
 	self = [super init];
@@ -71,13 +73,66 @@
 	return self;
 }
 
+-(id) initWithFriends:(NSMutableArray *)list pageIndex:(int)pIndex
+{
+	self = [super initWithList:list pageIndex:pIndex];
+	
+	return self;
+}
+
+-(void) initComponents
+{
+	int startX = 10;
+	int startY = 50;
+	int intervalX = 100;
+	int intervalY = 28;
+	
+	int max_item_count = [self getMaxItemCount];
+	int startIndex = pageIndex * max_item_count;
+	
+	for (int i = 0; i + startIndex < [itemList count] && i < max_item_count; i++)
+	{
+		CreatureRecord *record = [itemList objectAtIndex:(i + startIndex)];
+		
+		//CCSprite *icon = [CCSprite spriteWithFile:[NSString stringWithFormat:@"Icon-%03d-02.png", definitionId]];
+		NSString *creatureName = [FDLocalString creature:record.definitionId];
+		
+		FDSprite *nameSprite = [[FDSprite alloc] initWithString:creatureName Size:14];
+		
+		CCMenuItem *iconMenuItem = [CCMenuItemImage 
+									itemFromNormalImage:[NSString stringWithFormat:@"Icon-%03d-02.png", record.definitionId] selectedImage:NULL
+									target:self selector:@selector(clickedViewOn:)];
+		iconMenuItem.position = ccp(startX + intervalX * (i % 3), startY - intervalY * (i / 3));
+		iconMenuItem.tag = record.definitionId;
+		iconMenuItem.anchorPoint = ccp(0, 0);		
+		
+		CCMenuItemSprite* nameMenuItem = [CCMenuItemSprite itemFromNormalSprite:[nameSprite getSprite] selectedSprite:NULL target:self selector:@selector(clickedViewOn:)];
+		
+		nameMenuItem.position = ccp(startX + intervalX * (i % 3) + 25, startY - intervalY * (i / 3));
+		nameMenuItem.tag = i;
+		nameMenuItem.anchorPoint = ccp(0, 0);
+		
+		CCMenu *menu = [CCMenu menuWithItems:iconMenuItem, nameMenuItem, nil];
+		menu.position = CGPointZero;
+		[[baseSprite getSprite] addChild:menu];
+		
+		[nameSprite release];
+	}
+	
+}
+
+-(int) getMaxItemCount
+{
+	return 6;
+}
+
 -(void) clickedViewOn:(id)sender
 {
 	NSLog(@"Clicked from sender : %@", sender);
 	
 	CCMenuItem *menu = (CCMenuItem *)sender;
 	
-	if (menu != NULL && menu.tag > 0) {
+	if (menu != NULL && menu.tag >= 0) {
 		[self onExit:[NSNumber numberWithInt:menu.tag]];
 	}
 }
