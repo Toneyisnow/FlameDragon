@@ -12,6 +12,7 @@
 #import "Shopping2ShowTransferDialog.h"
 #import "Shopping2ConfirmDialog.h"
 #import "Shopping2MessageDialog.h"
+#import "Shopping2Layer.h"
 
 @implementation Shopping2ChurchDialog
 
@@ -88,11 +89,19 @@
 		return;
 	}
 	
+	[self doRevive];
+}
+
+-(void) doRevive
+{
 	// Revive
 	CreatureRecord *friend = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];
 	friend.data.hpCurrent = friend.data.hpMax;
 	
 	chapterRecord.money -= 100;
+
+	[(Shopping2Layer *)parentLayer updateMoneyBar];
+
 }
 
 -(void) onTransfer
@@ -146,8 +155,14 @@
 	}
 	
 	// Transfer the career of the friend
+	[self doTransfer];
 	
+}
+
+-(void) doTransfer
+{
 	
+	[(Shopping2Layer *)parentLayer updateMoneyBar];
 }
 
 @end

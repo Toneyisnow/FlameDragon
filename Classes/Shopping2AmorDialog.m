@@ -13,6 +13,7 @@
 #import "Shopping2ConfirmDialog.h"
 #import "Shopping2MessageDialog.h"
 #import "Shopping2ShowItemsDialog.h"
+#import "Shopping2Layer.h"
 
 @implementation Shopping2AmorDialog
 
@@ -150,17 +151,29 @@
 {
 	int selectedNum = [num intValue];
 	
-	NSLog(@"Amor Bought");
+	// Buy that amor
+	[self doBuyAmor:(selectedNum == 1)];
 	
+	NSLog(@"Amor Bought");
+}
+
+-(void) doBuyAmor:(BOOL)equip
+{
 	// Buy that amor
 	ItemDefinition *item = [self getItemDefinition:chapterRecord.chapterId Type:DataDepotShopType_AmorShop Index:lastSelectedItemIndex];
 	chapterRecord.money -= item.price;
 	
-	if (selectedNum == 1) {
+	CreatureRecord *friend = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];
+	[friend.data.itemList addObject:[NSNumber numberWithInt:item.identifier]];
+
+	if (equip) {
 		// Equip this item
 		
 		
 	}
+	
+	[(Shopping2Layer *)parentLayer updateMoneyBar];
 }
+
 
 @end

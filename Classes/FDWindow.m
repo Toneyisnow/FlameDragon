@@ -137,7 +137,7 @@
 
 +(CGPoint) chapterRecordShowLocation:(int)recordIndex
 {
-	return CGPointMake([self winSize].width * 0.22, 62 - recordIndex * 18);
+	return CGPointMake([self winSize].width * 0.3, 62 - recordIndex * 18);
 }
 
 +(CGPoint) showShoppingDialogPosition
@@ -164,6 +164,11 @@
 +(CGRect) rightWindow
 {
 	return CGRectMake([self winSize].width / 2, 0, [self winSize].width, [self winSize].height);
+}
+
++(CGPoint) moneyBarLocation
+{
+	return CGPointMake(10, 140);
 }
 
 @end

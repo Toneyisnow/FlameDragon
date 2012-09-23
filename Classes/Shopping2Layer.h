@@ -12,6 +12,7 @@
 #import "FDSprite.h"
 #import "Shopping2HomeDialog.h"
 #import "FDLayer.h"
+#import "Shopping2MoneyBar.h"
 
 typedef enum Shopping2Type
 {
@@ -33,7 +34,7 @@ typedef enum Shopping2Type
 	Shopping2Type shoppingType;
 	
 	Shopping2HomeDialog *rootDialog;
-	
+	Shopping2MoneyBar *moneyBar;
 	//int villagePos;
 	
 	
@@ -47,6 +48,9 @@ typedef enum Shopping2Type
 	BOOL touchHandled;
 	
 	int touchCount;
+	
+	BOOL isBusy;
+	
 }
 
 @property (retain) ChapterRecord *chapterRecord;
@@ -71,6 +75,10 @@ typedef enum Shopping2Type
 -(void) setMessageBox:(IMessage *)msgBox;
 
 -(void) setScrollEnabled:(BOOL)val;
+
+-(void) updateMoneyBar;
+-(void) updateMoneyBarCompleted;
+
 
 -(void) exitShop;
 

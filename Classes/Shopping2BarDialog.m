@@ -23,7 +23,6 @@
 	[buttonArray addObject:[self button_Save]];
 	[buttonArray addObject:[self button_Load]];
 	[buttonArray addObject:[self button_Exit]];
-	
 }
 
 -(void) onSaveGame

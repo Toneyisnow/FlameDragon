@@ -8,7 +8,7 @@
 
 #import "cocos2d.h"
 #import "Shopping2PagedDialog.h"
-
+#import	"ItemDefinition.h"
 @interface Shopping2ShowItemsDialog : Shopping2PagedDialog {
 		
 	int startX;
@@ -20,5 +20,7 @@
 
 
 -(id) initWithItemList:(NSMutableArray *)itemList pageIndex:(int)pageIndex;
+
+-(int) getPrice:(ItemDefinition *)item;
 
 @end

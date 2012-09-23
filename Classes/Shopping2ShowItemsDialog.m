@@ -69,7 +69,7 @@
 		[baseSprite addSprite:attSprite zOrder:3];
 		
 		// Money
-		NSString *moneyStr = [NSString stringWithFormat:@"$ %05d", item.price];
+		NSString *moneyStr = [NSString stringWithFormat:@"$ %05d", [self getPrice:item]];
 		FDSprite *moneySprite = [[FDSprite alloc] initWithString:moneyStr Size:9];	
 		[moneySprite setAnchorPoint:CGPointMake(0, 0)];
 		[moneySprite setLocation:CGPointMake(nowX + 80, nowY)];
@@ -80,6 +80,11 @@
 -(int) getMaxItemCount
 {
 	return 6;
+}
+
+-(int) getPrice:(ItemDefinition *)item
+{
+	return item.price;
 }
 
 -(void) onClicked:(CGPoint)location

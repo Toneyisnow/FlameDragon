@@ -16,6 +16,9 @@
 
 -(void) show:(CCLayer *)layer;
 -(void) close;
+-(void) hide;
+-(void) appear;
+
 -(void) takeTick:(int)synchronizedTick;
 
 -(BOOL) isClicked:(CGPoint)loc;

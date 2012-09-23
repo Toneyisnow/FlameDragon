@@ -13,6 +13,8 @@
 
 -(id) initWithList:(NSMutableArray *)iList pageIndex:(int)pIndex
 {
+	NSLog(@"Paged Dialog inited. %d, %d", [iList count], pIndex);
+	
 	self = [super init];
 	
 	pageIndex = pIndex;

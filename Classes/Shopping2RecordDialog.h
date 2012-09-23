@@ -13,5 +13,6 @@
 	
 }
 
+-(void) clickedRecordOn:(id)sender;
 
 @end

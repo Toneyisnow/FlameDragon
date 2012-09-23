@@ -19,6 +19,7 @@
 #import "Shopping2SelectAmorTargetDialog.h"
 #import "Shopping2ShowFriendsDialog.h"
 #import "Shopping2ShowItemsDialog.h"
+#import "Shopping2ShowSellItemsDialog.h"
 
 #import "CreatureRecord.h"
 #import "ItemBox.h"
@@ -51,7 +52,8 @@
 		[button setLocation:CGPointMake(posX, posY)];
 		
 		posX += 30;
-	}	
+	}
+	
 }
 
 -(void) clickedOn:(CGPoint)location
@@ -75,74 +77,74 @@
 
 -(ShoppingButton *) button_BuyAmor
 {
-	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"ItemAttackIcon_0.png"]];
+	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"Shop_Buy_0.png"]];
 	[button setCallback:self Method:@selector(onBuyAmor)];
 	return [button autorelease];
 }
 
 -(ShoppingButton *) button_BuyItem
 {
-	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"ItemAttackIcon_0.png"]];
+	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"Shop_Buy_0.png"]];
 	[button setCallback:self Method:@selector(onBuyItem)];
 	return [button autorelease];	
 }
 
 -(ShoppingButton *) button_Sell
 {
-	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"ItemAttackIcon_0.png"]];
+	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"Shop_Sell_0.png"]];
 	[button setCallback:self Method:@selector(onSell)];
 	return [button autorelease];	
 }
 
 -(ShoppingButton *) button_GiveItem
 {
-	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"ItemAttackIcon_0.png"]];
+	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"Shop_Give_0.png"]];
 	[button setCallback:self Method:@selector(onGiveItem)];
 	return [button autorelease];	
 }
 
 -(ShoppingButton *) button_Equip
 {
-	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"ItemAttackIcon_0.png"]];
+	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"Shop_Equip_0.png"]];
 	[button setCallback:self Method:@selector(onEquip)];
 	return [button autorelease];	
 }
 
 -(ShoppingButton *) button_Info
 {
-	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"ItemAttackIcon_0.png"]];
+	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"Shop_Info_0.png"]];
 	[button setCallback:self Method:@selector(onInfo)];
 	return [button autorelease];
 }
 
 -(ShoppingButton *) button_Save
 {
-	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"ItemAttackIcon_0.png"]];
+	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"Shop_Save_0.png"]];
 	[button setCallback:self Method:@selector(onSaveGame)];
 	return [button autorelease];	
 }
 
 -(ShoppingButton *) button_Load
 {
-	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"ItemAttackIcon_0.png"]];
+	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"Shop_Load_0.png"]];
 	[button setCallback:self Method:@selector(onLoadGame)];
 	return [button autorelease];	
 }
 -(ShoppingButton *) button_Revive
 {
-	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"ItemAttackIcon_0.png"]];
+	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"Shop_Revive_0.png"]];
 	[button setCallback:self Method:@selector(onRevive)];
 	return [button autorelease];	
 }
 -(ShoppingButton *) button_Transfer
 {
-	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"ItemAttackIcon_0.png"]];
+	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"Shop_Trans_0.png"]];
 	[button setCallback:self Method:@selector(onTransfer)];
 	return [button autorelease];	
 }
 -(ShoppingButton *) button_Exit
 {
-	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"ItemAttackIcon_0.png"]];
+	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"Shop_Exit_0.png"]];
 	[button setCallback:self Method:@selector(onExitGame)];
 	return [button autorelease];	
 }
@@ -186,7 +188,7 @@
 	if (selectedNum < 0) {
 		
 		if (selectedNum == -1) return;
-		lastPageIndex = (selectedNum == -2) ? lastPageIndex-- : (selectedNum == -3) ? lastPageIndex ++ : 0;
+		lastPageIndex = (selectedNum == -2) ? lastPageIndex - 1 : ((selectedNum == -3) ? lastPageIndex + 1 : 0);
 		
 		Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:lastPageIndex];
 		[self showDialog:dialog Callback:@selector(onSell_SelectedFriend:)];
@@ -198,10 +200,19 @@
 	lastSelectedCreatureIndex = selectedNum;
 	CreatureRecord *friend = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];
 	
-	lastPageIndex = 0;
-	Shopping2ShowItemsDialog *dialog = [[Shopping2ShowItemsDialog alloc] initWithItemList:friend.data.itemList pageIndex:0];
-	[self showDialog:dialog Callback:@selector(onSell_SelectedItem:)];
-	[dialog release];
+	if ([friend.data.itemList count] == 0) {
+		
+		NSString *message = [FDLocalString message:64];
+		Shopping2MessageDialog *dialog = [[Shopping2MessageDialog alloc] initWithMessage:message];
+		[self showDialog:dialog Callback:@selector(onSell)];
+		[dialog release];
+		
+	} else {
+		lastPageIndex = 0;
+		Shopping2ShowSellItemsDialog *dialog = [[Shopping2ShowSellItemsDialog alloc] initWithItemList:friend.data.itemList pageIndex:0];
+		[self showDialog:dialog Callback:@selector(onSell_SelectedItem:)];
+		[dialog release];
+	}
 }
 
 -(void) onSell_SelectedItem:(NSNumber *)num
@@ -211,10 +222,10 @@
 	if (selectedNum < 0) {
 		
 		if (selectedNum == -1) { [self onSell]; return; }
-		lastPageIndex = (selectedNum == -2) ? lastPageIndex-- : (selectedNum == -3) ? lastPageIndex ++ : 0;
+		lastPageIndex = (selectedNum == -2) ? lastPageIndex - 1 : ((selectedNum == -3) ? lastPageIndex + 1 : 0);
 		
 		CreatureRecord *friend = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];
-		Shopping2ShowItemsDialog *dialog = [[Shopping2ShowItemsDialog alloc] initWithItemList:friend.data.itemList pageIndex:lastPageIndex];
+		Shopping2ShowSellItemsDialog *dialog = [[Shopping2ShowSellItemsDialog alloc] initWithItemList:friend.data.itemList pageIndex:lastPageIndex];
 		[self showDialog:dialog Callback:@selector(onSell_SelectedItem:)];
 		[dialog release];
 		return;
@@ -228,7 +239,7 @@
 	
 	// int itemIndex = selectedNum;
 	
-	NSString *message = [NSString stringWithFormat:[FDLocalString confirm:55], item.name, item.price];
+	NSString *message = [NSString stringWithFormat:[FDLocalString confirm:55], item.name, item.sellprice];
 	Shopping2ConfirmDialog *dialog = [[Shopping2ConfirmDialog alloc] initWithMessage:message];
 	[self showDialog:dialog Callback:@selector(onSell_Confirm:)];
 	[dialog release];
@@ -261,6 +272,8 @@
 	chapterRecord.money += item.sellprice;
 	
 	[friend.data.itemList removeObjectAtIndex:lastSelectedItemIndex];
+	
+	[(Shopping2Layer *)parentLayer updateMoneyBar];
 }
 
 -(void) onGiveItem
@@ -287,7 +300,7 @@
 	
 	if (selectedNum < 0) {
 		if (selectedNum == -1) return;
-		lastPageIndex = (selectedNum == -2) ? lastPageIndex-- : (selectedNum == -3) ? lastPageIndex ++ : 0;
+		lastPageIndex = (selectedNum == -2) ? lastPageIndex - 1 : ((selectedNum == -3) ? lastPageIndex + 1 : 0);
 		
 		Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:lastPageIndex];
 		[self showDialog:dialog Callback:@selector(onGiveItem_SelectedWhose:)];
@@ -324,7 +337,7 @@
 			return;
 		}
 		
-		lastPageIndex = (selectedNum == -2) ? lastPageIndex-- : (selectedNum == -3) ? lastPageIndex ++ : 0;
+		lastPageIndex = (selectedNum == -2) ? lastPageIndex - 1 : ((selectedNum == -3) ? lastPageIndex + 1 : 0);
 		
 		CreatureRecord *friend = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];
 		Shopping2ShowItemsDialog *dialog = [[Shopping2ShowItemsDialog alloc] initWithItemList:friend.data.itemList pageIndex:lastPageIndex];
@@ -360,7 +373,7 @@
 			[self onGiveItem_Start:[NSNumber numberWithInt:0]];
 			return;
 		}
-		lastPageIndex = (selectedNum == -2) ? lastPageIndex-- : (selectedNum == -3) ? lastPageIndex ++ : 0;
+		lastPageIndex = (selectedNum == -2) ? lastPageIndex - 1 : ((selectedNum == -3) ? lastPageIndex + 1 : 0);
 		
 		Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:lastPageIndex];
 		[self showDialog:dialog Callback:@selector(onGiveItem_ToTargetSelected:)];
@@ -417,9 +430,16 @@
 	int selectedNum = [num intValue];
 	
 	if (selectedNum < 0) {
-		// Cancel
+		if (selectedNum == -1) {
+			return;
+		}
+		lastPageIndex = (selectedNum == -2) ? lastPageIndex - 1 : ((selectedNum == -3) ? lastPageIndex + 1 : 0);
 		
-		return;
+		Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:lastPageIndex];
+		[self showDialog:dialog Callback:@selector(onEquip_SelectedFriend:)];
+		[dialog release];	
+		
+		return;		
 	}
 	
 	lastSelectedCreatureIndex = selectedNum;
@@ -449,33 +469,62 @@
 		return;
 	}
 	
-	//Equip that item
+	lastSelectedItemIndex = selectedNum;
 	
+	//Equip that item
+	[self doEquip];
 	
 	
 	[self onEquip_SelectedFriend:[NSNumber numberWithInt:lastSelectedCreatureIndex]];
 }
 
+-(void) doEquip
+{
+	NSLog(@"do Equip for user %d item %d", lastSelectedCreatureIndex, lastSelectedItemIndex);
+	
+	CreatureRecord *record = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];	
+	NSNumber *itemId = [record.data.itemList objectAtIndex:lastSelectedItemIndex];
+	ItemDefinition *item = [[DataDepot depot] getItemDefinition:[itemId intValue]];
+	
+	if ([item isAttackItem]) {
+		record.data.attackItemIndex = lastSelectedItemIndex;
+	}
+	else if ([item isDefendItem]) {
+		record.data.defendItemIndex = lastSelectedItemIndex;
+	}
+	
+}
+
 -(void) onInfo
 {
 	NSLog(@"onInfo");
-	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] init];
+	
+	lastPageIndex = 0;
+	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:0];
 	[self showDialog:dialog Callback:@selector(onInfo_ShowItems:)];
 	[dialog release];
-	
 }
 
 -(void) onInfo_ShowItems:(NSNumber *)num
 {
 	// First close that ibox
-	[self closeCurrentBox]; 
+	//[self closeCurrentBox]; 
+	
+	NSLog(@"onInfo_ShowItems:%d", [num intValue]);
 	
 	int selectedNum = [num intValue];
 	
 	if (selectedNum < 0) {
-		// Cancel
+		if (selectedNum == -1) {
+			return;
+		}
+		lastPageIndex = (selectedNum == -2) ? lastPageIndex - 1 : ((selectedNum == -3) ? lastPageIndex + 1 : 0);
 		
-		return;
+		Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:lastPageIndex];
+		[self showDialog:dialog Callback:@selector(onInfo_ShowItems:)];
+		[dialog release];	
+		
+		return;		
 	}
 	
 	lastSelectedCreatureIndex = selectedNum;

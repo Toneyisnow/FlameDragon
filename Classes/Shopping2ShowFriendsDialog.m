@@ -50,7 +50,7 @@
 									itemFromNormalImage:[NSString stringWithFormat:@"Icon-%03d-02.png", definitionId] selectedImage:NULL
 									target:self selector:@selector(clickedViewOn:)];
 		iconMenuItem.position = ccp(startX + intervalX * (i % 2), startY - intervalY * (i / 2));
-		iconMenuItem.tag = definitionId;
+		iconMenuItem.tag = i;
 		iconMenuItem.anchorPoint = ccp(0, 0);		
 		
 		CCMenuItemSprite* nameMenuItem = [CCMenuItemSprite itemFromNormalSprite:[nameSprite getSprite] selectedSprite:NULL target:self selector:@selector(clickedViewOn:)];
@@ -103,13 +103,13 @@
 									itemFromNormalImage:[NSString stringWithFormat:@"Icon-%03d-02.png", record.definitionId] selectedImage:NULL
 									target:self selector:@selector(clickedViewOn:)];
 		iconMenuItem.position = ccp(startX + intervalX * (i % 3), startY - intervalY * (i / 3));
-		iconMenuItem.tag = record.definitionId;
+		iconMenuItem.tag = i + startIndex;
 		iconMenuItem.anchorPoint = ccp(0, 0);		
 		
 		CCMenuItemSprite* nameMenuItem = [CCMenuItemSprite itemFromNormalSprite:[nameSprite getSprite] selectedSprite:NULL target:self selector:@selector(clickedViewOn:)];
 		
 		nameMenuItem.position = ccp(startX + intervalX * (i % 3) + 25, startY - intervalY * (i / 3));
-		nameMenuItem.tag = i;
+		nameMenuItem.tag = i + startIndex;
 		nameMenuItem.anchorPoint = ccp(0, 0);
 		
 		CCMenu *menu = [CCMenu menuWithItems:iconMenuItem, nameMenuItem, nil];
@@ -118,7 +118,6 @@
 		
 		[nameSprite release];
 	}
-	
 }
 
 -(int) getMaxItemCount

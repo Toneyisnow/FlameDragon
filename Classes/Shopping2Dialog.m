@@ -47,7 +47,6 @@
 	if (selectedCallback != nil) {
 		[selectedCallback performSelector:selectedMethod withObject:returnedObject];
 	}
-	
 }
 
 -(void) setRecord:(ChapterRecord *)r

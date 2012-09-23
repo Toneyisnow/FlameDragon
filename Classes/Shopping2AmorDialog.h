@@ -18,5 +18,6 @@
 -(void) onBuyAmor_ConfirmedAmor:(NSNumber *)num;
 -(void) onBuyAmor_SelectedTarget:(NSNumber *)num;
 -(void) onBuyAmor_Done:(NSNumber *)num;
+-(void) doBuyAmor:(BOOL)equip;
 
 @end

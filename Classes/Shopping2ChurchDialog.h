@@ -16,8 +16,11 @@
 
 -(void) onRevive_SelectedFriend:(NSNumber *)num;
 -(void) onRevive_Confirmed:(NSNumber *)num;
+-(void) doRevive;
 
 -(void) onTransfer_SelectedFriend:(NSNumber *)num;
 -(void) onTransfer_Confirm:(NSNumber *)num;
+-(void) doTransfer;
+
 
 @end

@@ -70,6 +70,7 @@
 
 -(void) onEquip;
 -(void) onEquip_SelectedFriend:(NSNumber *)num;
+-(void) doEquip;
 
 -(void) onRevive;
 

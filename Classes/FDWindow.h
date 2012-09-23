@@ -42,5 +42,6 @@
 +(CGRect) leftWindow;
 +(CGRect) rightWindow;
 
++(CGPoint) moneyBarLocation;
 
 @end

@@ -12,6 +12,7 @@
 #import "Shopping2ConfirmDialog.h"
 #import "Shopping2MessageDialog.h"
 #import "Shopping2ShowFriendsDialog.h"
+#import "Shopping2Layer.h"
 
 @implementation Shopping2ItemDialog
 
@@ -166,6 +167,8 @@
 	
 	CreatureRecord *friend = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];
 	[friend.data.itemList addObject:[NSNumber numberWithInt:item.identifier]];
+	
+	[(Shopping2Layer *)parentLayer updateMoneyBar];
 }
 
 

@@ -22,6 +22,17 @@
 	[baseSprite removeFromLayer];
 }
 
+-(void) hide
+{
+	[baseSprite getSprite].visible = FALSE;
+}
+
+-(void) appear
+{
+	[baseSprite getSprite].visible = TRUE;
+}
+
+
 -(void) takeTick:(int)synchronizedTick
 {
 }

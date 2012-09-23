@@ -17,7 +17,7 @@
 #import "Shopping2BarDialog.h"
 #import "Shopping2ChurchDialog.h"
 #import "SWScrollView.h"
-
+#import "Shopping2MoneyBar.h"
 
 
 @implementation Shopping2Layer
@@ -35,6 +35,8 @@
 	scrollEnabled = FALSE;
 	touchHandled = FALSE;
 	touchCount = 0;
+	
+	isBusy = FALSE;
 	
 	return self;
 }
@@ -59,18 +61,22 @@
 	
 	[self addChild:[bg getSprite]];
 	
+	moneyBar = NULL;
 	switch (shoppingType) {
 		case Shopping2Type_Amor:
 			rootDialog = [[Shopping2AmorDialog alloc] init];
+			moneyBar = [[Shopping2MoneyBar alloc] initWithRecord:chapterRecord];
 			break;
 		case Shopping2Type_Item:
 			rootDialog = [[Shopping2ItemDialog alloc] init];
+			moneyBar = [[Shopping2MoneyBar alloc] initWithRecord:chapterRecord];
 			break;
 		case Shopping2Type_Bar:
 			rootDialog = [[Shopping2BarDialog alloc] init];
 			break;
 		case Shopping2Type_Church:
 			rootDialog = [[Shopping2ChurchDialog alloc] init];
+			moneyBar = [[Shopping2MoneyBar alloc] initWithRecord:chapterRecord];
 			break;
 		default:
 			break;
@@ -79,38 +85,11 @@
 	[rootDialog initButtons];
 	[rootDialog setRecord:chapterRecord];
 	[rootDialog show:self];
-	
-	
-	/*
-	SWScrollView *view = [SWScrollView viewWithViewSize: CGSizeMake(300, 100)];
-	view.position = ccp(0, 0);
-	view.contentOffset = ccp(0, 0);
-	view.direction = SWScrollViewDirectionVertical;
-	view.clipsToBounds = YES;
-	
-	
-	CCSprite *sprite1 = [CCSprite spriteWithFile:@"Icon-001-01.png"];
-	CCSprite *sprite2 = [CCSprite spriteWithFile:@"Icon-002-01.png"];
-	CCSprite *sprite3 = [CCSprite spriteWithFile:@"Icon-003-01.png"];
-	CCSprite *sprite4 = [CCSprite spriteWithFile:@"Icon-004-01.png"];
-	
-	view.contentSize = CGSizeMake(300, 350);
-	
-	sprite1.position = ccp(100, 0);
-	sprite1.scaleX = 1.5; sprite1.scaleY = 1.5;
-	sprite2.position = ccp(100, 100);
-	sprite2.scaleX = 1.5; sprite2.scaleY = 1.5;
-	sprite3.position = ccp(100, 200);
-	sprite3.scaleX = 1.5; sprite3.scaleY = 1.5;
-	sprite4.position = ccp(100, 300);
-	sprite4.scaleX = 1.5; sprite4.scaleY = 1.5;
-	
-	[view addChild:sprite1];
-	[view addChild:sprite2];
-	[view addChild:sprite3];
-	[view addChild:sprite4];
-	[self addChild:view];
-	*/
+		
+	// Init the money bar
+	if (moneyBar != NULL) {
+		[moneyBar show:self];
+	}
 }
 
 -(void) takeTick
@@ -221,8 +200,32 @@
 {
 }
 
+-(void) updateMoneyBar
+{
+	if (moneyBar == NULL) {
+		return;
+	}
+	
+	[moneyBar updateAmount];
+	
+	[rootDialog hide];
+	isBusy = TRUE;
+}
+
+-(void) updateMoneyBarCompleted
+{
+	isBusy = FALSE;
+	[rootDialog appear];
+}
+
 -(void) exitShop
 {
+	[rootDialog close];
+	
+	if (moneyBar != NULL) {
+		[moneyBar close];
+	}
+	
 	touchCount = 0;
 	touchHandled = FALSE;
 	

@@ -23,18 +23,45 @@
 	for (int index = 0; index < 4; index ++) {
 		ChapterRecord *cRecord = [record getChapterRecord:index];
 		NSString *chapterName = [FDLocalString chapterTitle:[cRecord chapterId]];
-		
 		CGPoint pos = [FDWindow chapterRecordShowLocation:index];
-		[self addLabel:chapterName Location:CGPointMake(pos.x, pos.y)];
+		
+		FDSprite *recordSprite = [[FDSprite alloc] initWithString:chapterName Size:14];
+		
+		CCMenuItemSprite* menuItem = [CCMenuItemSprite itemFromNormalSprite:[recordSprite getSprite] selectedSprite:NULL target:self selector:@selector(clickedRecordOn:)];
+		
+		menuItem.position = pos;
+		menuItem.tag = index;
+		menuItem.anchorPoint = ccp(0.5, 0);
+		
+		CCMenu *menu = [CCMenu menuWithItems:menuItem, nil];
+		menu.position = CGPointZero;
+		[[baseSprite getSprite] addChild:menu];
+		
+		[recordSprite release];
+		
+		// [self addLabel:chapterName Location:CGPointMake(pos.x, pos.y)];
 	}
 	
 	return self;
 }
 
+-(void) clickedRecordOn:(id)sender
+{
+	CCMenuItem *menu = (CCMenuItem *)sender;
+	
+	if (menu != NULL && menu.tag >= 0) {
+		[self onExit:[NSNumber numberWithInt:menu.tag]];
+	}
+}
+
 -(void) onClicked:(CGPoint)location
 {
+	// Do nothing
+	
+	/*
 	id returnedObject = [NSNumber numberWithInt:1];
 	[self onExit:returnedObject];
+	 */
 }
 
 
