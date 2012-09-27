@@ -39,7 +39,8 @@
 	}
 	
 	if (hasDeadFriend) {
-		Shopping2ShowDeadFriendsDialog *dialog = [[Shopping2ShowDeadFriendsDialog alloc] init];
+		lastPageIndex = 0;
+		Shopping2ShowDeadFriendsDialog *dialog = [[Shopping2ShowDeadFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:0];
 		[self showDialog:dialog Callback:@selector(onRevive_SelectedFriend:)];
 		[dialog release];
 	}
@@ -56,7 +57,12 @@
 {
 	int selectedNum = [num intValue];
 	if (selectedNum < 0) {
-		// Cancel
+		if (selectedNum == -1) return;
+		lastPageIndex = (selectedNum == -2) ? lastPageIndex - 1 : ((selectedNum == -3) ? lastPageIndex + 1 : 0);
+		Shopping2ShowDeadFriendsDialog *dialog = [[Shopping2ShowDeadFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:lastPageIndex];
+		[self showDialog:dialog Callback:@selector(onRevive_SelectedFriend:)];
+		[dialog release];
+		
 		return;
 	}
 	

@@ -60,7 +60,7 @@
 	CreatureRecord *creature5 = [CreatureRecord friendSampleRecord:5];
 	CreatureRecord *creature6 = [CreatureRecord friendSampleRecord:2];
 	CreatureRecord *creature7 = [CreatureRecord friendSampleRecord:4];
-	CreatureRecord *creature8 = [CreatureRecord friendSampleRecord:3];
+	CreatureRecord *creature8 = [CreatureRecord friendSampleRecord:2];
 	
 	[[record friendRecords] addObject:creature1];
 	[[record friendRecords] addObject:creature2];

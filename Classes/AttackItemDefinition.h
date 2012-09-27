@@ -12,7 +12,8 @@
 @interface AttackItemDefinition : ItemDefinition {
 
 	// For Equip item
-	int race;
+	int itemCategory;	// For Attack Item: 1：剑 2：斧 3：矛 4：弓 5：爪 6：机械
+	// int race;
 	
 	int ap;
 	int hit;
@@ -21,7 +22,7 @@
 	
 }
 
-@property (nonatomic) int race;
+@property (nonatomic) int itemCategory;
 @property (nonatomic) int ap;
 @property (nonatomic) int hit;
 @property (nonatomic) int ev;

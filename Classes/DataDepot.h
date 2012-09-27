@@ -13,6 +13,7 @@
 #import "AnimationDefinition.h"
 #import "LevelUpDefinition.h"
 #import "ShopDefinition.h"
+#import "OccupationDefinition.h"
 
 @interface DataDepot : NSObject {
 
@@ -22,7 +23,7 @@
 	NSMutableDictionary *animationDictionary;
 	NSMutableDictionary *levelUpDictionary;
 	NSMutableDictionary *shopDictionary;
-	
+	NSMutableDictionary *occupationDictionary;
 }
 
 +(DataDepot *) depot;
@@ -34,6 +35,7 @@
 -(void) loadAnimationDictionary;
 -(void) loadLevelUpDictionary;
 -(void) loadShopDictionary;
+-(void) loadOccupationDictionary;
 
 -(ItemDefinition *) getItemDefinition:(int)itemId;
 -(MagicDefinition *) getMagicDefinition:(int)magicId;
@@ -41,5 +43,6 @@
 -(AnimationDefinition *) getAnimationDefinition:(AnimationType)type Id:(int)aniId;
 -(LevelUpDefinition *) getLevelUpDefinition:(int)creatureDefId;
 -(ShopDefinition *) getShopDefinition:(int)chapterId Type:(DataDepotShopType)shopType;
+-(OccupationDefinition *) getOccupationDefinition:(int)occupationId;
 
 @end

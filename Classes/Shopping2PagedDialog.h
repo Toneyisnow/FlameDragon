@@ -17,10 +17,12 @@
 
 }
 
--(id) initWithList:(NSMutableArray *)list pageIndex:(int)pIndex;
+-(void) initializeWithList:(NSMutableArray *)iList pageIndex:(int)pIndex;
 
 -(void) initComponents;
 -(int) getMaxItemCount;
+
+-(NSMutableArray *) getShownList;
 
 -(void) clickedUp;
 -(void) clickedDown;

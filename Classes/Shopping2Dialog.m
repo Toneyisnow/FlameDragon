@@ -62,11 +62,16 @@
 
 -(void) addLabel:(NSString *)str Location:(CGPoint)location
 {
+	return [self addLabel:str Location:location Size:16];
+}
+
+-(void) addLabel:(NSString *)str Location:(CGPoint)location Size:(int)size
+{
 	if (str == nil) {
 		return;
 	}
 	
-	FDSprite *label = [[FDSprite alloc] initWithString:str Size:16];
+	FDSprite *label = [[FDSprite alloc] initWithString:str Size:size];
 	[label setLocation:location];
 	[label setAnchorPoint:CGPointMake(0, 0)];
 	[baseSprite addSprite:label zOrder:1];
@@ -82,6 +87,17 @@
 	
 	// Fixed: every click should go to onClicked method, to let the child class decide which to return
 	//[self onClicked];
+}
+
+-(void) clickedViewOn:(id)sender
+{
+	NSLog(@"Clicked from sender : %@", sender);
+	
+	CCMenuItem *menu = (CCMenuItem *)sender;
+	
+	if (menu != NULL && menu.tag >= 0) {
+		[self onExit:[NSNumber numberWithInt:menu.tag]];
+	}
 }
 
 -(BOOL) isClicked:(CGPoint)loc

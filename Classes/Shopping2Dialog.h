@@ -28,6 +28,7 @@
 -(void) clickedOn:(CGPoint)location;
 
 -(void) addLabel:(NSString *)str Location:(CGPoint)location;
+-(void) addLabel:(NSString *)str Location:(CGPoint)location Size:(int)size;
 
 -(BOOL) isClicked:(CGPoint)loc;
 

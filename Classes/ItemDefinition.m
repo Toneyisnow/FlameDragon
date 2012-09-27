@@ -12,7 +12,7 @@
 @implementation ItemDefinition
 
 @synthesize name;
-@synthesize identifier, price, sellprice;
+@synthesize identifier, price, sellprice, category;
 
 +(id) readFromFile:(FDFileStream *)stream
 {

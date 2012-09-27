@@ -15,8 +15,8 @@
 
 -(id) initWithItemList:(NSMutableArray *)iList pageIndex:(int)pIndex
 {
-	self = [super initWithList:iList pageIndex:pIndex];
-	
+	self = [super init];
+	[super initializeWithList:iList pageIndex:pIndex];
 	return self;
 }
 
@@ -37,7 +37,6 @@
 		//CGPoint itemLocation = CGPointMake(nowX, nowY);
 		
 		int itemId = [[itemList objectAtIndex:(i+startIndex)] intValue];
-		
 		ItemDefinition *item = [[DataDepot depot] getItemDefinition:itemId];
 		
 		NSString *iconFile = nil;
@@ -51,17 +50,27 @@
 			iconFile = @"ItemUsableIcon_0.png";
 		}
 		
-		FDSprite *icon = [[FDSpriteStore instance] sprite:iconFile];
-		[icon setAnchorPoint:CGPointMake(0, 0)];
-		[icon setLocation:CGPointMake(nowX - 20, nowY)];
-		[baseSprite addSprite:icon zOrder:3];
+		// Icon
+		CCMenuItem *iconMenuItem = [CCMenuItemImage 
+									itemFromNormalImage:iconFile selectedImage:NULL
+									target:self selector:@selector(clickedViewOn:)];
+		iconMenuItem.position = ccp(nowX - 20, nowY);
+		iconMenuItem.tag = i + startIndex;
+		iconMenuItem.anchorPoint = ccp(0, 0);		
 		
 		// Name
 		FDSprite *nameSprite = [[FDSprite alloc] initWithString:item.name Size:16];	
-		[nameSprite setAnchorPoint:CGPointMake(0, 0)];
-		[nameSprite setLocation:CGPointMake(nowX + 10, nowY)];
-		[baseSprite addSprite:nameSprite zOrder:3];
+		CCMenuItemSprite* nameMenuItem = [CCMenuItemSprite itemFromNormalSprite:[nameSprite getSprite] selectedSprite:NULL target:self selector:@selector(clickedViewOn:)];
+		nameMenuItem.position = ccp(nowX + 10, nowY);
+		nameMenuItem.tag = i + startIndex;
+		nameMenuItem.anchorPoint = ccp(0, 0);
 		
+		CCMenu *menu = [CCMenu menuWithItems:iconMenuItem, nameMenuItem, nil];
+		menu.position = CGPointZero;
+		[[baseSprite getSprite] addChild:menu];
+		
+		[nameSprite release];
+
 		// Attribute
 		FDSprite *attSprite = [[FDSprite alloc] initWithString:[item getAttributeString] Size:9];	
 		[attSprite setAnchorPoint:CGPointMake(0, 0)];
@@ -89,6 +98,8 @@
 
 -(void) onClicked:(CGPoint)location
 {
+	// Do nothing
+	/*
 	CGPoint innnerLocation = [self getInnerLocation:location];
 
 	int max_item_count = [self getMaxItemCount];
@@ -108,6 +119,7 @@
 			return;
 		}
 	}
+	 */
 }
 
 @end

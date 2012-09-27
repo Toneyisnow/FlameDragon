@@ -75,7 +75,8 @@
 	ShopDefinition *shop = [[DataDepot depot] getShopDefinition:chapterRecord.chapterId Type:DataDepotShopType_AmorShop];
 	NSNumber *itemId  = [shop.itemList objectAtIndex:selectedNum];
 	
-	ItemDefinition *item = [[DataDepot depot] getItemDefinition:[itemId intValue]];
+	lastSelectedItemIndex = [itemId intValue];
+	ItemDefinition *item = [[DataDepot depot] getItemDefinition:lastSelectedItemIndex];
 	
 	// Confirm Message
 	NSString *message = [NSString stringWithFormat:[FDLocalString confirm:54], item.name, item.price];
@@ -96,9 +97,8 @@
 		return;
 	}
 	
-	lastSelectedItemIndex = selectedNum;
+	ItemDefinition *item = [[DataDepot depot] getItemDefinition:lastSelectedItemIndex];
 	
-	ItemDefinition *item = [self getItemDefinition:chapterRecord.chapterId Type:DataDepotShopType_AmorShop Index:lastSelectedItemIndex];
 	if (chapterRecord.money < item.price) {
 		
 		// If not enough money
@@ -108,7 +108,8 @@
 		[dialog release];
 	}
 	else {
-		Shopping2SelectAmorTargetDialog *dialog = [[Shopping2SelectAmorTargetDialog alloc] init];
+		lastPageIndex = 0;
+		Shopping2SelectAmorTargetDialog *dialog = [[Shopping2SelectAmorTargetDialog alloc] initWithFriends:[chapterRecord friendRecords] itemId:item.identifier pageIndex:0];
 		[self showDialog:dialog Callback:@selector(onBuyAmor_SelectedTarget:)];
 		[dialog release];
 	}
@@ -119,7 +120,13 @@
 	int selectedNum = [num intValue];
 	
 	if (selectedNum < 0) {
-		// Cancelled
+		
+		if (selectedNum == -1) return;
+		lastPageIndex = (selectedNum == -2) ? lastPageIndex - 1 : ((selectedNum == -3) ? lastPageIndex + 1 : 0);
+		
+		Shopping2SelectAmorTargetDialog *dialog = [[Shopping2SelectAmorTargetDialog alloc] initWithFriends:[chapterRecord friendRecords] itemId:lastSelectedItemIndex pageIndex:lastPageIndex];
+		[self showDialog:dialog Callback:@selector(onBuyAmor_SelectedTarget:)];
+		[dialog release];
 		
 		return;
 	} 
@@ -160,11 +167,11 @@
 -(void) doBuyAmor:(BOOL)equip
 {
 	// Buy that amor
-	ItemDefinition *item = [self getItemDefinition:chapterRecord.chapterId Type:DataDepotShopType_AmorShop Index:lastSelectedItemIndex];
+	ItemDefinition *item = [[DataDepot depot] getItemDefinition:lastSelectedItemIndex];
 	chapterRecord.money -= item.price;
 	
 	CreatureRecord *friend = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];
-	[friend.data.itemList addObject:[NSNumber numberWithInt:item.identifier]];
+	[friend.data.itemList addObject:[NSNumber numberWithInt:lastSelectedItemIndex]];
 
 	if (equip) {
 		// Equip this item

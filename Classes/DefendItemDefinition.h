@@ -11,14 +11,17 @@
 
 @interface DefendItemDefinition : ItemDefinition {
 
-	// For Equip item
+	// For Defend Item: 1：皮甲 2：锁甲 3：铠甲 4：袍 5：斗服 6：装甲
+	int itemCategory;
+	
 	int race;
+	
 	int dp;
 	int ev;
 	
 }
 
-@property (nonatomic) int race;
+@property (nonatomic) int itemCategory;
 @property (nonatomic) int dp;
 @property (nonatomic) int ev;
 

@@ -39,6 +39,7 @@ static DataDepot *instance = nil;
 	[self loadAnimationDictionary];
 	[self loadLevelUpDictionary];
 	[self loadShopDictionary];
+	[self loadOccupationDictionary];
 }
 
 -(void) loadItemDictionary
@@ -141,6 +142,32 @@ static DataDepot *instance = nil;
 	NSLog(@"Loaded Creature Dictionary.");
 	
 }
+
+-(void) loadOccupationDictionary
+{
+	NSLog(@"Loading Occupation Dictionary.");
+	
+	if (occupationDictionary != nil) {
+		[occupationDictionary release];
+		occupationDictionary = nil;
+	}
+	
+	occupationDictionary = [[NSMutableDictionary alloc] init];
+	FDFileStream *file = [[FDFileStream alloc] initWithDataFile:@"Occupation" Ext:@"dat"];
+	[file open];
+	
+	int occupationCount = [file readInt];
+	for (int m = 0; m < occupationCount; m++) {
+		
+		OccupationDefinition *def = [OccupationDefinition readFromFile:file];
+		[occupationDictionary setObject:def forKey:[NSNumber numberWithInt:def.occupationId]];
+	}
+	
+	[file close];
+	
+	NSLog(@"Loaded Occupation Dictionary.");
+}
+
 
 -(void) loadLevelUpDictionary
 {
@@ -266,6 +293,11 @@ static DataDepot *instance = nil;
 	int key = chapterId * 10 + shopType;
 	
 	return [shopDictionary objectForKey:[NSNumber numberWithInt:key]];
+}
+
+-(OccupationDefinition *) getOccupationDefinition:(int)occupationId
+{
+	return [occupationDictionary objectForKey:[NSNumber numberWithInt:occupationId]];
 }
 
 -(AnimationDefinition *) getAnimationDefinition:(AnimationType)type Id:(int)aniId

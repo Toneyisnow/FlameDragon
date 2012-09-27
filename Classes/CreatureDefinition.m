@@ -8,6 +8,9 @@
 
 #import "CreatureDefinition.h"
 #import "FDLocalString.h"
+#import "DataDepot.h"
+#import "AttackItemDefinition.h"
+#import "DefendItemDefinition.h"
 
 @implementation CreatureDefinition
 
@@ -34,7 +37,6 @@
 	
 	def.race = [stream readInt];
 	def.occupation = [stream readInt];
-	
 	def.data.level = [stream readInt];
 	def.data.ap = [stream readInt];
 	def.data.dp = [stream readInt];
@@ -110,6 +112,15 @@
 		return 1;
 	}
 
+}
+
+-(BOOL) canEquip:(int)itemId
+{
+	ItemDefinition *item = [[DataDepot depot] getItemDefinition:itemId];
+	OccupationDefinition *occu = [[DataDepot depot] getOccupationDefinition:occupation];
+	
+	return (([item isAttackItem] && [occu canUseAttackItem:((AttackItemDefinition *)item).itemCategory])
+		 || ([item isDefendItem] && [occu canUseDefendItem:((DefendItemDefinition *)item).itemCategory]));
 }
 
 -(void) dealloc

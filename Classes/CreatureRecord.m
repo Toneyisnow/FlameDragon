@@ -58,7 +58,11 @@
 	record.data.level = 3;
 	record.data.hpMax = 100;
 	record.data.mpMax = 0;
+	
 	record.data.hpCurrent = 100;
+	if (friendId == 3) {
+		record.data.hpCurrent = 0;
+	}
 	record.data.mpCurrent = 0;
 	record.data.ap = 10;
 	record.data.dp = 5;
@@ -68,7 +72,7 @@
 	record.data.bodyStatus = BodyStatus_Normal;
 	
 	[record.data.itemList addObject:[NSNumber numberWithInt:221]];
-	[record.data.itemList addObject:[NSNumber numberWithInt:311]];
+	[record.data.itemList addObject:[NSNumber numberWithInt:302]];
 	
 	record.data.attackItemIndex = 0;
 	record.data.defendItemIndex = 1;

@@ -75,8 +75,8 @@
 
 -(id) initWithFriends:(NSMutableArray *)list pageIndex:(int)pIndex
 {
-	self = [super initWithList:list pageIndex:pIndex];
-	
+	self = [super init];	
+	[super initializeWithList:list pageIndex:pIndex];
 	return self;
 }
 
@@ -94,10 +94,8 @@
 	{
 		CreatureRecord *record = [itemList objectAtIndex:(i + startIndex)];
 		
-		//CCSprite *icon = [CCSprite spriteWithFile:[NSString stringWithFormat:@"Icon-%03d-02.png", definitionId]];
-		NSString *creatureName = [FDLocalString creature:record.definitionId];
-		
-		FDSprite *nameSprite = [[FDSprite alloc] initWithString:creatureName Size:14];
+		NSString *creatureName = [FDLocalString creature:record.definitionId];		
+		FDSprite *nameSprite = [[FDSprite alloc] initWithString:creatureName Size:16];
 		
 		CCMenuItem *iconMenuItem = [CCMenuItemImage 
 									itemFromNormalImage:[NSString stringWithFormat:@"Icon-%03d-02.png", record.definitionId] selectedImage:NULL
@@ -123,17 +121,6 @@
 -(int) getMaxItemCount
 {
 	return 6;
-}
-
--(void) clickedViewOn:(id)sender
-{
-	NSLog(@"Clicked from sender : %@", sender);
-	
-	CCMenuItem *menu = (CCMenuItem *)sender;
-	
-	if (menu != NULL && menu.tag >= 0) {
-		[self onExit:[NSNumber numberWithInt:menu.tag]];
-	}
 }
 
 -(void) onClicked:(CGPoint)location

@@ -180,6 +180,8 @@
 		021BA1C81477789B00102DCE /* ActionLayers.m in Sources */ = {isa = PBXBuildFile; fileRef = 021BA1C71477789B00102DCE /* ActionLayers.m */; };
 		021BA226147782FE00102DCE /* MessageBox.png in Resources */ = {isa = PBXBuildFile; fileRef = 021BA225147782FE00102DCE /* MessageBox.png */; };
 		021BA2291477854E00102DCE /* FDTreasure.m in Sources */ = {isa = PBXBuildFile; fileRef = 021BA2281477854E00102DCE /* FDTreasure.m */; };
+		022D368B161484780020F816 /* Occupation.dat in Resources */ = {isa = PBXBuildFile; fileRef = 022D368A161484780020F816 /* Occupation.dat */; };
+		022D368E161487130020F816 /* OccupationDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 022D368D161487130020F816 /* OccupationDefinition.m */; };
 		023D07BE15CF82E700AD6FA6 /* SWScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D07B415CF82E700AD6FA6 /* SWScrollView.m */; };
 		023D34AA152834A3002D3EFD /* EventChapter2.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D34A9152834A3002D3EFD /* EventChapter2.m */; };
 		02542C4E155D4C5B0050FEC8 /* ShoppingItemDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02542C4D155D4C5B0050FEC8 /* ShoppingItemDialog.m */; };
@@ -1080,6 +1082,9 @@
 		021BA225147782FE00102DCE /* MessageBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MessageBox.png; path = Others/MessageBox.png; sourceTree = "<group>"; };
 		021BA2271477854E00102DCE /* FDTreasure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDTreasure.h; sourceTree = "<group>"; };
 		021BA2281477854E00102DCE /* FDTreasure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDTreasure.m; sourceTree = "<group>"; };
+		022D368A161484780020F816 /* Occupation.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Occupation.dat; path = Data/Occupation.dat; sourceTree = "<group>"; };
+		022D368C161487130020F816 /* OccupationDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OccupationDefinition.h; sourceTree = "<group>"; };
+		022D368D161487130020F816 /* OccupationDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OccupationDefinition.m; sourceTree = "<group>"; };
 		023D07B315CF82E700AD6FA6 /* SWScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWScrollView.h; path = tableView/SWScrollView.h; sourceTree = "<group>"; };
 		023D07B415CF82E700AD6FA6 /* SWScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWScrollView.m; path = tableView/SWScrollView.m; sourceTree = "<group>"; };
 		023D34A8152834A3002D3EFD /* EventChapter2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter2.h; sourceTree = "<group>"; };
@@ -2652,6 +2657,8 @@
 				02BA6EBB14C7F35E0028C9E7 /* LevelUpDefinition.m */,
 				02D3095B15FACCAC00CA1799 /* ShopDefinition.h */,
 				02D3095C15FACCAC00CA1799 /* ShopDefinition.m */,
+				022D368C161487130020F816 /* OccupationDefinition.h */,
+				022D368D161487130020F816 /* OccupationDefinition.m */,
 				0297D821147F1132007F3E12 /* AnimationDefinition.h */,
 				0297D822147F1132007F3E12 /* AnimationDefinition.m */,
 				027D54281462C64F002C310F /* FDFrameDefinition.h */,
@@ -2830,6 +2837,7 @@
 		0297D95714815BD8007F3E12 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				022D368A161484780020F816 /* Occupation.dat */,
 				02D3095E15FAD46300CA1799 /* Shop.dat */,
 				02BA6EB814C7F2F70028C9E7 /* Levelup.dat */,
 				02F8403914B8167F00665511 /* Magic.dat */,
@@ -4092,6 +4100,7 @@
 				02E4231A160F388A0071FA29 /* Shop_Save_0.png in Resources */,
 				02E42322160F397D0071FA29 /* Shop_Exit_0.png in Resources */,
 				02E4232A160F3B3F0071FA29 /* Shop_MoneyBar.png in Resources */,
+				022D368B161484780020F816 /* Occupation.dat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4277,6 +4286,7 @@
 				02BB39E0160DCA24006BEE76 /* Shopping2PagedDialog.m in Sources */,
 				02E422DC160E257E0071FA29 /* Shopping2ShowSellItemsDialog.m in Sources */,
 				02E4232D160F3B920071FA29 /* Shopping2MoneyBar.m in Sources */,
+				022D368E161487130020F816 /* OccupationDefinition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

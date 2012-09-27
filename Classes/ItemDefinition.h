@@ -24,6 +24,9 @@ typedef enum ItemType
 	ItemType type;	// It's not used yet, just the class can differenciate them
 	int price;
 	int sellprice;
+	
+	int category;	// For Attack Item: 1：剑 2：斧 3：矛 4：弓 5：爪 6：机械
+					// For Defend Item: 1：皮甲 2：锁甲 3：铠甲 4：袍 5：斗服 6：装甲
 }
 
 +(id) readFromFile:(FDFileStream *)stream;
@@ -37,6 +40,7 @@ typedef enum ItemType
 @property (nonatomic,retain) NSString *name;
 @property (nonatomic) int price;
 @property (nonatomic) int sellprice;
+@property (nonatomic) int category;
 
 @end
 

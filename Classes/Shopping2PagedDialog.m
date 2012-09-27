@@ -11,11 +11,11 @@
 
 @implementation Shopping2PagedDialog
 
--(id) initWithList:(NSMutableArray *)iList pageIndex:(int)pIndex
+
+
+-(void) initializeWithList:(NSMutableArray *)iList pageIndex:(int)pIndex
 {
 	NSLog(@"Paged Dialog inited. %d, %d", [iList count], pIndex);
-	
-	self = [super init];
 	
 	pageIndex = pIndex;
 	itemList = [iList retain];
@@ -41,7 +41,7 @@
 		[[baseSprite getSprite] addChild:menu];
 	}
 	
-	if (startIndex + max_item_count < [itemList count] ) {
+	if (startIndex + max_item_count < [[self getShownList] count] ) {
 		
 		FDSprite *downSprite = [[FDSprite alloc] initWithString:@"V" Size:14];
 		CCMenuItemSprite* downMenu = [CCMenuItemSprite itemFromNormalSprite:[downSprite getSprite] selectedSprite:NULL target:self selector:@selector(clickedDown)];
@@ -53,12 +53,15 @@
 		menu.position = CGPointZero;
 		[[baseSprite getSprite] addChild:menu];
 	}
-	
-	return self;
 }
 
 -(void) initComponents
 {
+}
+
+-(NSMutableArray *) getShownList
+{
+	return itemList;
 }
 
 -(int) getMaxItemCount

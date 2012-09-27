@@ -11,7 +11,7 @@
 
 @implementation AttackItemDefinition
 
-@synthesize race,ap,hit,ev,attackScope;
+@synthesize itemCategory,ap,hit,ev,attackScope;
 
 
 +(id) readFromFile:(FDFileStream *)stream
@@ -24,7 +24,7 @@
 	def.name = NSLocalizedStringFromTable (idStr, @"Item", @"comment");
 	
 	//def.name = [stream readString];
-	def.race = [stream readInt];
+	def.itemCategory = [stream readInt];
 	
 	def.price = [stream readInt];
 	def.sellprice = [stream readInt];

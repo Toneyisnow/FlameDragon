@@ -38,4 +38,11 @@
 }
 
 
+-(void) dealloc
+{
+	[itemList release];
+	
+	[super dealloc];
+}
+
 @end

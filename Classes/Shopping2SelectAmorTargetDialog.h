@@ -7,10 +7,16 @@
 //
 
 #import "cocos2d.h"
-#import "Shopping2ScrollDialog.h"
+#import "Shopping2PagedDialog.h"
 
-@interface Shopping2SelectAmorTargetDialog : Shopping2ScrollDialog {
+@interface Shopping2SelectAmorTargetDialog : Shopping2PagedDialog {
+	
+	int itemId;
+	NSMutableArray *suitableFriends;
 	
 }
+
+-(id) initWithFriends:(NSMutableArray *)list itemId:(int)iId pageIndex:(int)pIndex;
+
 
 @end

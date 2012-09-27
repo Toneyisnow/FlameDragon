@@ -18,6 +18,9 @@
 	int race;
 	int occupation;
 	
+	int attackItemCategoryPool;
+	int defendItemCategoryPool;
+	
 	CreatureData *data;
 	
 	/*
@@ -54,6 +57,7 @@
 -(NSString *) getRaceString;
 -(NSString *) getOccupationString;
 
+-(BOOL) canEquip:(int)itemCategory;
 
 @property (nonatomic) int identifier;
 @property (nonatomic, retain) NSString *name;

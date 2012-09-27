@@ -27,7 +27,7 @@
 		
 		FDSprite *recordSprite = [[FDSprite alloc] initWithString:chapterName Size:14];
 		
-		CCMenuItemSprite* menuItem = [CCMenuItemSprite itemFromNormalSprite:[recordSprite getSprite] selectedSprite:NULL target:self selector:@selector(clickedRecordOn:)];
+		CCMenuItemSprite* menuItem = [CCMenuItemSprite itemFromNormalSprite:[recordSprite getSprite] selectedSprite:NULL target:self selector:@selector(clickedViewOn:)];
 		
 		menuItem.position = pos;
 		menuItem.tag = index;
@@ -43,15 +43,6 @@
 	}
 	
 	return self;
-}
-
--(void) clickedRecordOn:(id)sender
-{
-	CCMenuItem *menu = (CCMenuItem *)sender;
-	
-	if (menu != NULL && menu.tag >= 0) {
-		[self onExit:[NSNumber numberWithInt:menu.tag]];
-	}
 }
 
 -(void) onClicked:(CGPoint)location
