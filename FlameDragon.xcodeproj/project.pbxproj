@@ -182,6 +182,10 @@
 		021BA2291477854E00102DCE /* FDTreasure.m in Sources */ = {isa = PBXBuildFile; fileRef = 021BA2281477854E00102DCE /* FDTreasure.m */; };
 		022D368B161484780020F816 /* Occupation.dat in Resources */ = {isa = PBXBuildFile; fileRef = 022D368A161484780020F816 /* Occupation.dat */; };
 		022D368E161487130020F816 /* OccupationDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 022D368D161487130020F816 /* OccupationDefinition.m */; };
+		022D37A51615DB0E0020F816 /* VillageShop-01-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 022D37A41615DB0D0020F816 /* VillageShop-01-5.png */; };
+		022D37A81615DBC70020F816 /* Shopping2SecretDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 022D37A71615DBC70020F816 /* Shopping2SecretDialog.m */; };
+		022D37AB1615E3120020F816 /* SecretSequenceDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 022D37AA1615E3120020F816 /* SecretSequenceDefinition.m */; };
+		022D37AD1615E8110020F816 /* SecretSequence.dat in Resources */ = {isa = PBXBuildFile; fileRef = 022D37AC1615E8110020F816 /* SecretSequence.dat */; };
 		023D07BE15CF82E700AD6FA6 /* SWScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D07B415CF82E700AD6FA6 /* SWScrollView.m */; };
 		023D34AA152834A3002D3EFD /* EventChapter2.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D34A9152834A3002D3EFD /* EventChapter2.m */; };
 		02542C4E155D4C5B0050FEC8 /* ShoppingItemDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02542C4D155D4C5B0050FEC8 /* ShoppingItemDialog.m */; };
@@ -1085,6 +1089,12 @@
 		022D368A161484780020F816 /* Occupation.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Occupation.dat; path = Data/Occupation.dat; sourceTree = "<group>"; };
 		022D368C161487130020F816 /* OccupationDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OccupationDefinition.h; sourceTree = "<group>"; };
 		022D368D161487130020F816 /* OccupationDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OccupationDefinition.m; sourceTree = "<group>"; };
+		022D37A41615DB0D0020F816 /* VillageShop-01-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "VillageShop-01-5.png"; path = "Village/VillageShop-01-5.png"; sourceTree = "<group>"; };
+		022D37A61615DBC70020F816 /* Shopping2SecretDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shopping2SecretDialog.h; sourceTree = "<group>"; };
+		022D37A71615DBC70020F816 /* Shopping2SecretDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shopping2SecretDialog.m; sourceTree = "<group>"; };
+		022D37A91615E3120020F816 /* SecretSequenceDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretSequenceDefinition.h; sourceTree = "<group>"; };
+		022D37AA1615E3120020F816 /* SecretSequenceDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretSequenceDefinition.m; sourceTree = "<group>"; };
+		022D37AC1615E8110020F816 /* SecretSequence.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SecretSequence.dat; path = Data/SecretSequence.dat; sourceTree = "<group>"; };
 		023D07B315CF82E700AD6FA6 /* SWScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWScrollView.h; path = tableView/SWScrollView.h; sourceTree = "<group>"; };
 		023D07B415CF82E700AD6FA6 /* SWScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWScrollView.m; path = tableView/SWScrollView.m; sourceTree = "<group>"; };
 		023D34A8152834A3002D3EFD /* EventChapter2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter2.h; sourceTree = "<group>"; };
@@ -2259,6 +2269,7 @@
 				02759D46154A72C300853895 /* VillageShop-01-2.png */,
 				02759D45154A72C300853895 /* VillageShop-01-3.png */,
 				02759D43154A72C300853895 /* VillageShop-01-4.png */,
+				022D37A41615DB0D0020F816 /* VillageShop-01-5.png */,
 			);
 			name = Village;
 			sourceTree = "<group>";
@@ -2659,6 +2670,8 @@
 				02D3095C15FACCAC00CA1799 /* ShopDefinition.m */,
 				022D368C161487130020F816 /* OccupationDefinition.h */,
 				022D368D161487130020F816 /* OccupationDefinition.m */,
+				022D37A91615E3120020F816 /* SecretSequenceDefinition.h */,
+				022D37AA1615E3120020F816 /* SecretSequenceDefinition.m */,
 				0297D821147F1132007F3E12 /* AnimationDefinition.h */,
 				0297D822147F1132007F3E12 /* AnimationDefinition.m */,
 				027D54281462C64F002C310F /* FDFrameDefinition.h */,
@@ -2837,12 +2850,13 @@
 		0297D95714815BD8007F3E12 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				022D368A161484780020F816 /* Occupation.dat */,
 				02D3095E15FAD46300CA1799 /* Shop.dat */,
 				02BA6EB814C7F2F70028C9E7 /* Levelup.dat */,
 				02F8403914B8167F00665511 /* Magic.dat */,
 				027334C2149A3B1A00D0812F /* Item.dat */,
 				0297D98E1481D281007F3E12 /* Creature.dat */,
+				022D368A161484780020F816 /* Occupation.dat */,
+				022D37AC1615E8110020F816 /* SecretSequence.dat */,
 				0297D98C1481D26C007F3E12 /* Animation.dat */,
 				0297D95814815BE1007F3E12 /* Maps */,
 			);
@@ -2995,6 +3009,8 @@
 				02D30A5315FF7E8E00CA1799 /* Shopping2BarDialog.m */,
 				02D30A5515FF7F0500CA1799 /* Shopping2ChurchDialog.h */,
 				02D30A5615FF7F0500CA1799 /* Shopping2ChurchDialog.m */,
+				022D37A61615DBC70020F816 /* Shopping2SecretDialog.h */,
+				022D37A71615DBC70020F816 /* Shopping2SecretDialog.m */,
 				02D30A5815FF81B900CA1799 /* Shopping2ShowProductDialog.h */,
 				02D30A5915FF81B900CA1799 /* Shopping2ShowProductDialog.m */,
 				02D30A5B1600C8A800CA1799 /* Shopping2MessageDialog.h */,
@@ -4101,6 +4117,8 @@
 				02E42322160F397D0071FA29 /* Shop_Exit_0.png in Resources */,
 				02E4232A160F3B3F0071FA29 /* Shop_MoneyBar.png in Resources */,
 				022D368B161484780020F816 /* Occupation.dat in Resources */,
+				022D37A51615DB0E0020F816 /* VillageShop-01-5.png in Resources */,
+				022D37AD1615E8110020F816 /* SecretSequence.dat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4287,6 +4305,8 @@
 				02E422DC160E257E0071FA29 /* Shopping2ShowSellItemsDialog.m in Sources */,
 				02E4232D160F3B920071FA29 /* Shopping2MoneyBar.m in Sources */,
 				022D368E161487130020F816 /* OccupationDefinition.m in Sources */,
+				022D37A81615DBC70020F816 /* Shopping2SecretDialog.m in Sources */,
+				022D37AB1615E3120020F816 /* SecretSequenceDefinition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@
 #import "FDSprite.h"
 #import "ConfirmMessage.h"
 #import "FDLayer.h"
+#import "SecretSequenceDefinition.h"
 
 @interface VillageLayer : FDLayer {
 
@@ -23,6 +24,10 @@
 	int currentPosition;	// 0:Amor 1:Item 2:Church 3:Bar 4:Exit
 	
 	ConfirmMessage *confirmExit;
+	
+	int secretIndex;
+	SecretSequenceDefinition *secretSequence;
+
 }
 
 @property (retain) ChapterRecord *chapterRecord;

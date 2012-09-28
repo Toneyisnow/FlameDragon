@@ -28,6 +28,7 @@
 	return self;
 }
 
+// Deprecated Method
 -(void) setChapter:(int)chapter
 {
 	NSString *bgFileName = nil;
@@ -77,6 +78,8 @@
 	[cursor retain];
 	[self addChild:[cursor getSprite]];
 
+	secretIndex = 0;
+	secretSequence = [[DataDepot depot] getSecretSequenceDefinition:record.chapterId];
 }
 
 -(void) takeTick
@@ -98,7 +101,7 @@
 		return;
 	}
 	
-	for (int pos = 0; pos < 5; pos++) {
+	for (int pos = 0; pos < 6; pos++) {
 		if ([self clickedOnButton:[FDWindow villageLocation:pos villageId:[self getVillageId]] At:clickedLoc])
 		{
 			if (pos != currentPosition) {
@@ -139,20 +142,41 @@
 
 -(void) setPosition:(int)pos
 {
+	NSLog(@"Set Position : %d", pos);
+	
 	currentPosition = pos;
 	[cursor setLocation:[FDWindow villageLocation:currentPosition villageId:[self getVillageId]]];	
+	
+	
+	// For any set position, check the secret index
+	if (secretIndex >= [secretSequence totalLength]) {
+		secretIndex = 0;
+		return;
+	}
+	
+	if (pos == [secretSequence sequenceAtIndex:secretIndex]) {
+		secretIndex ++;
+	} else {
+		secretIndex = 0;
+	}
+	NSLog(@"Secret Index: %d.", secretIndex);
+	
+	if (secretIndex >= [secretSequence totalLength]) {
+		currentPosition = 5;		
+		[cursor setLocation:[FDWindow villageLocation:5 villageId:[self getVillageId]]];	
+	}
 }
 
 -(void) clickEnter
 {
 	NSLog(@"Click Enter");
+	secretIndex = 0;
 	
 	if (currentPosition == 0) {
 		[self promptExit];
 	} else {
 		[self enterShop];
 	}
-
 }
 
 -(void) clickLeft
@@ -198,11 +222,14 @@
 	ShoppingScene *scene = [ShoppingScene node];
 	[scene loadWithRecord:chapterRecord Type:type];	
 	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];
-
+	
+	secretIndex = 0;
 }
 
 -(void) promptExit
 {
+	secretIndex = 0;
+	
 	confirmExit = [[ConfirmMessage alloc] initWithType:ConfirmMessageType_LeaveVillage CreatureAniDefId:0];
 	[confirmExit setCallback:self Method:@selector(doExit:)];
 	[confirmExit show:self];

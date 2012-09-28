@@ -12,6 +12,8 @@
 
 }
 
+-(DataDepotShopType) getShopType;
+
 -(void) onBuyItem_SelectedItem:(NSNumber *)num;
 -(void) onBuyItem_ConfirmedItem:(NSNumber *)num;
 -(void) onBuyItem_Done:(NSNumber *)num;

@@ -40,6 +40,7 @@ static DataDepot *instance = nil;
 	[self loadLevelUpDictionary];
 	[self loadShopDictionary];
 	[self loadOccupationDictionary];
+	[self loadSecretSequenceDictionary];
 }
 
 -(void) loadItemDictionary
@@ -168,7 +169,6 @@ static DataDepot *instance = nil;
 	NSLog(@"Loaded Occupation Dictionary.");
 }
 
-
 -(void) loadLevelUpDictionary
 {
 	NSLog(@"Loading LevelUp Dictionary.");
@@ -198,7 +198,6 @@ static DataDepot *instance = nil;
 {
 	NSLog(@"Loading Shop Dictionary.");
 
-	
 	if (shopDictionary != nil) {
 		[shopDictionary release];
 		shopDictionary = nil;
@@ -222,6 +221,32 @@ static DataDepot *instance = nil;
 	[file close];
 	
 	NSLog(@"Loaded Shop Dictionary.");	
+}
+
+-(void) loadSecretSequenceDictionary
+{
+	NSLog(@"Loading SecretSequence Dictionary.");
+	
+	if (secretSequenceDictionary != nil) {
+		[secretSequenceDictionary release];
+		secretSequenceDictionary = nil;
+	}
+	
+	secretSequenceDictionary = [[NSMutableDictionary alloc] init];
+	FDFileStream *file = [[FDFileStream alloc] initWithDataFile:@"SecretSequence" Ext:@"dat"];
+	[file open];
+	
+	int chapterCount = [file readInt];
+	for (int m = 0; m < chapterCount; m++) {
+		
+		int chapter = [file readInt];
+		SecretSequenceDefinition *def = [SecretSequenceDefinition readFromFile:file];
+		[secretSequenceDictionary setObject:def forKey:[NSNumber numberWithInt:chapter]];
+	}
+	
+	[file close];
+	
+	NSLog(@"Loaded SecretSequence Dictionary.");
 }
 
 -(void) loadAnimationDictionary
@@ -298,6 +323,11 @@ static DataDepot *instance = nil;
 -(OccupationDefinition *) getOccupationDefinition:(int)occupationId
 {
 	return [occupationDictionary objectForKey:[NSNumber numberWithInt:occupationId]];
+}
+
+-(SecretSequenceDefinition *) getSecretSequenceDefinition:(int)chapterId
+{
+	return [secretSequenceDictionary objectForKey:[NSNumber numberWithInt:chapterId]];
 }
 
 -(AnimationDefinition *) getAnimationDefinition:(AnimationType)type Id:(int)aniId

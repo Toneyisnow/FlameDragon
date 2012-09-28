@@ -13,7 +13,7 @@ typedef enum DataDepotShopType
 {
 	DataDepotShopType_AmorShop = 1,
 	DataDepotShopType_ItemShop = 2,
-	DataDepotShopType_HiddenShop = 3
+	DataDepotShopType_SecretShop = 3
 } DataDepotShopType;
 
 

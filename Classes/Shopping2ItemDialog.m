@@ -26,17 +26,21 @@
 	
 }
 
+-(DataDepotShopType) getShopType
+{
+	return DataDepotShopType_ItemShop;
+}
+
 -(void) onBuyItem
 {
 	NSLog(@"onBuyItem");
 	
-	ShopDefinition *shop = [[DataDepot depot] getShopDefinition:chapterRecord.chapterId Type:DataDepotShopType_ItemShop];
+	ShopDefinition *shop = [[DataDepot depot] getShopDefinition:chapterRecord.chapterId Type:[self getShopType]];
 	
 	lastPageIndex = 0;
 	Shopping2ShowItemsDialog *dialog = [[Shopping2ShowItemsDialog alloc] initWithItemList:shop.itemList pageIndex:0];
 	[self showDialog:dialog Callback:@selector(onBuyItem_SelectedItem:)];
 	[dialog release];
-	
 }
 
 -(void) onBuyItem_SelectedItem:(NSNumber *)num
@@ -58,7 +62,7 @@
 				break;
 		}
 		
-		ShopDefinition *shop = [[DataDepot depot] getShopDefinition:chapterRecord.chapterId Type:DataDepotShopType_ItemShop];
+		ShopDefinition *shop = [[DataDepot depot] getShopDefinition:chapterRecord.chapterId Type:[self getShopType]];
 		
 		Shopping2ShowItemsDialog *dialog = [[Shopping2ShowItemsDialog alloc] initWithItemList:shop.itemList pageIndex:lastPageIndex];
 		[self showDialog:dialog Callback:@selector(onBuyItem_SelectedItem:)];
@@ -69,7 +73,7 @@
 	
 	NSLog(@"onBuyItem_SelectedItem : %d", selectedNum);
 	
-	ShopDefinition *shop = [[DataDepot depot] getShopDefinition:chapterRecord.chapterId Type:DataDepotShopType_ItemShop];
+	ShopDefinition *shop = [[DataDepot depot] getShopDefinition:chapterRecord.chapterId Type:[self getShopType]];
 	NSNumber *itemId  = [shop.itemList objectAtIndex:selectedNum];
 	
 	ItemDefinition *item = [[DataDepot depot] getItemDefinition:[itemId intValue]];

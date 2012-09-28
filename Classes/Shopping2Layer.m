@@ -16,6 +16,7 @@
 #import "Shopping2ItemDialog.h"
 #import "Shopping2BarDialog.h"
 #import "Shopping2ChurchDialog.h"
+#import "Shopping2SecretDialog.h"
 #import "SWScrollView.h"
 #import "Shopping2MoneyBar.h"
 
@@ -76,6 +77,10 @@
 			break;
 		case Shopping2Type_Church:
 			rootDialog = [[Shopping2ChurchDialog alloc] init];
+			moneyBar = [[Shopping2MoneyBar alloc] initWithRecord:chapterRecord];
+			break;
+		case Shopping2Type_Secret:
+			rootDialog = [[Shopping2SecretDialog alloc] init];
 			moneyBar = [[Shopping2MoneyBar alloc] initWithRecord:chapterRecord];
 			break;
 		default:
