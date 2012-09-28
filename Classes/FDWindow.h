@@ -29,7 +29,7 @@
 +(CGPoint) titleButtonLoad;
 +(CGPoint) titleButtonContinue;
 
-+(CGPoint) villageLocation:(int)position villageId:(int)villageId;
++(CGPoint) villageLocation:(int)position villageImageId:(int)villageImageId;
 +(CGPoint) villageLeftButton;
 +(CGPoint) villageRightButton;
 

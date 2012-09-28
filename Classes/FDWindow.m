@@ -83,30 +83,30 @@
 	return CGPointMake(winSize.width / 2, winSize.height * 0.06);	
 }
 
-+(CGPoint) villageLocation:(int)position villageId:(int)villageId
++(CGPoint) villageLocation:(int)position villageImageId:(int)villageImageId
 {
 	CGSize winSize = [self winSize];
 	
-	switch (villageId) {
+	switch (villageImageId) {
 		case 1:
 			switch (position) {
 				case 0:
-					return CGPointMake(winSize.width * 0.32, winSize.height * 0.12);
+					return CGPointMake(winSize.width * 0.24, winSize.height * 0.10);
 					break;
 				case 1:
-					return CGPointMake(winSize.width * 0.6, winSize.height * 0.2);
+					return CGPointMake(winSize.width * 0.52, winSize.height * 0.25);
 					break;
 				case 2:
-					return CGPointMake(winSize.width * 0.8, winSize.height * 0.72);
+					return CGPointMake(winSize.width * 0.6, winSize.height * 0.58);
 					break;
 				case 3:
-					return CGPointMake(winSize.width * 0.5, winSize.height * 0.75);
+					return CGPointMake(winSize.width * 0.15, winSize.height * 0.7);
 					break;
 				case 4:
-					return CGPointMake(winSize.width * 0.2, winSize.height * 0.25);
+					return CGPointMake(winSize.width * 0.2, winSize.height * 0.4);
 					break;
 				case 5:
-					return CGPointMake(winSize.width * 0.3, winSize.height * 0.6);
+					return CGPointMake(winSize.width * 0.45, winSize.height * 0.85);
 					break;
 				default:
 					break;
@@ -168,7 +168,7 @@
 
 +(CGPoint) moneyBarLocation
 {
-	return CGPointMake(10, 140);
+	return CGPointMake(8, 145);
 }
 
 @end

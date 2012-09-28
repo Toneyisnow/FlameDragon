@@ -292,14 +292,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>131</integer>
-									<integer>128</integer>
-									<integer>9</integer>
+									<integer>302</integer>
+									<integer>295</integer>
+									<integer>278</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 2015}, {293, 572}}</string>
+							<string>{{0, 4894}, {293, 572}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -336,7 +336,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>DataDepot.m</string>
+								<string>SecretSequence.dat</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -344,11 +344,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>DataDepot.m</string>
+										<string>SecretSequence.dat</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>022D380B1615EF2F0020F816</string>
+										<string>022D38601615F9510020F816</string>
 										<key>history</key>
 										<array>
 											<string>027D538614618BFA002C310F</string>
@@ -775,7 +775,6 @@
 											<string>02BB3A4B160E088E006BEE76</string>
 											<string>02E422FF160F38450071FA29</string>
 											<string>02E4235E160F57AD0071FA29</string>
-											<string>02E42360160F57AD0071FA29</string>
 											<string>02E42361160F57AD0071FA29</string>
 											<string>02E42363160F57AD0071FA29</string>
 											<string>02E42364160F57AD0071FA29</string>
@@ -842,19 +841,20 @@
 											<string>022D37C41615E9960020F816</string>
 											<string>022D37C51615E9960020F816</string>
 											<string>022D37C61615E9960020F816</string>
-											<string>022D37C71615E9960020F816</string>
-											<string>022D37C81615E9960020F816</string>
 											<string>022D37C91615E9960020F816</string>
 											<string>022D37CA1615E9960020F816</string>
 											<string>022D37CD1615E9960020F816</string>
 											<string>022D37CE1615E9960020F816</string>
-											<string>022D37D01615E9960020F816</string>
 											<string>022D37E61615EC6E0020F816</string>
-											<string>022D37F21615EDB10020F816</string>
 											<string>022D38021615EED60020F816</string>
 											<string>022D38081615EF2F0020F816</string>
-											<string>022D38091615EF2F0020F816</string>
-											<string>022D380A1615EF2F0020F816</string>
+											<string>022D38171615F46A0020F816</string>
+											<string>022D38181615F46A0020F816</string>
+											<string>022D381A1615F46A0020F816</string>
+											<string>022D38571615F8BD0020F816</string>
+											<string>022D38581615F8BD0020F816</string>
+											<string>022D385F1615F9510020F816</string>
+											<string>022D37F21615EDB10020F816</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -1056,8 +1056,8 @@
 		<string>022D36D4161493160020F816</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>027D534C146016B0002C310F</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/suitoney/我的程序/GitHub/FlameDragon/FlameDragon.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>7 131 1115 631 0 0 1280 778 </string>
@@ -1076,12 +1076,14 @@
 					<key>Dock</key>
 					<array>
 						<dict>
+							<key>BecomeActive</key>
+							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ShoppingHomeDialog.m</string>
+								<string>VillageLayer.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -1098,8 +1100,6 @@
 							<string>355pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>

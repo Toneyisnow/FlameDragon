@@ -252,6 +252,9 @@
 		case Shopping2Type_Amor:
 			villagePos = 4;
 			break;
+		case Shopping2Type_Secret:
+			villagePos = 5;
+			break;
 		default:
 			villagePos = 1;
 			break;

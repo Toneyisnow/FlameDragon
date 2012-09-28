@@ -49,7 +49,7 @@
 	[self addChild:[bg getSprite]];
 }
 
--(int) getVillageId
+-(int) getVillageImageId
 {
 	int chapter = [chapterRecord chapterId];
 	return (chapter <= 10) ? 1 : ((chapter <= 20) ? 2 : 3);
@@ -59,7 +59,7 @@
 {
 	self.chapterRecord = record;
 	
-	NSString *bgFileName = [NSString stringWithFormat:@"Village-%02d.png", [self getVillageId]];
+	NSString *bgFileName = [NSString stringWithFormat:@"Village-%02d.png", [self getVillageImageId]];
 		
 	FDSprite *bg = [[FDSpriteStore instance] sprite:bgFileName];
 	[bg setScaleX:[Constants villageScale] Y:[Constants villageScale]];
@@ -74,7 +74,7 @@
 	cursorAnimation = [[FDSlideAnimation alloc] initWithDefinition:animationDef Sprite:cursor];
 	
 	[cursor setScaleX:[Constants villageScale] Y:[Constants villageScale]];
-	[cursor setLocation:[FDWindow villageLocation:currentPosition villageId:[self getVillageId]]];
+	[cursor setLocation:[FDWindow villageLocation:currentPosition villageImageId:[self getVillageImageId]]];
 	[cursor retain];
 	[self addChild:[cursor getSprite]];
 
@@ -102,10 +102,13 @@
 	}
 	
 	for (int pos = 0; pos < 6; pos++) {
-		if ([self clickedOnButton:[FDWindow villageLocation:pos villageId:[self getVillageId]] At:clickedLoc])
+		if ([self clickedOnButton:[FDWindow villageLocation:pos villageImageId:[self getVillageImageId]] At:clickedLoc])
 		{
 			if (pos != currentPosition) {
-				[self setPosition:pos];
+				
+				if (pos != 5) {
+					[self setPosition:pos];
+				}
 			} else {
 				[self clickEnter];
 			}
@@ -145,7 +148,7 @@
 	NSLog(@"Set Position : %d", pos);
 	
 	currentPosition = pos;
-	[cursor setLocation:[FDWindow villageLocation:currentPosition villageId:[self getVillageId]]];	
+	[cursor setLocation:[FDWindow villageLocation:currentPosition villageImageId:[self getVillageImageId]]];	
 	
 	
 	// For any set position, check the secret index
@@ -163,7 +166,7 @@
 	
 	if (secretIndex >= [secretSequence totalLength]) {
 		currentPosition = 5;		
-		[cursor setLocation:[FDWindow villageLocation:5 villageId:[self getVillageId]]];	
+		[cursor setLocation:[FDWindow villageLocation:5 villageImageId:[self getVillageImageId]]];	
 	}
 }
 
@@ -184,7 +187,7 @@
 	NSLog(@"Click Left");
 	
 	currentPosition = (currentPosition + 4) % 5;
-	[cursor setLocation:[FDWindow villageLocation:currentPosition villageId:[self getVillageId]]];
+	[cursor setLocation:[FDWindow villageLocation:currentPosition villageImageId:[self getVillageImageId]]];
 }
 
 -(void) clickRight
@@ -192,7 +195,7 @@
 	NSLog(@"Click Right");
 	
 	currentPosition = (currentPosition + 1) % 5;
-	[cursor setLocation:[FDWindow villageLocation:currentPosition villageId:[self getVillageId]]];
+	[cursor setLocation:[FDWindow villageLocation:currentPosition villageImageId:[self getVillageImageId]]];
 }
 
 -(void) enterShop

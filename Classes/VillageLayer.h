@@ -37,7 +37,7 @@
 
 -(void) takeTick;
 
--(int) getVillageId;
+-(int) getVillageImageId;
 
 -(BOOL) clickedOnButton:(CGPoint)buttonLoc At:(CGPoint)clickedLoc;
 -(BOOL) clickedInArea:(CGRect)rect At:(CGPoint)clickedLoc;
