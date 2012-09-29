@@ -197,7 +197,48 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>022D388E161727870020F816</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>VillageLabel.h</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>022D388F161727870020F816</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>VillageLabel.h</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>022D38A6161728320020F816</string>
+						<key>history</key>
+						<array>
+							<string>022D3890161727870020F816</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {909, 577}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>38 134 909 618 0 0 1280 778 </string>
+			</dict>
+		</dict>
+	</array>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -292,14 +333,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>302</integer>
-									<integer>295</integer>
-									<integer>278</integer>
+									<integer>96</integer>
+									<integer>72</integer>
+									<integer>9</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 4894}, {293, 572}}</string>
+							<string>{{0, 1306}, {293, 572}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -336,7 +377,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>SecretSequence.dat</string>
+								<string>VillageLabel.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -344,11 +385,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>SecretSequence.dat</string>
+										<string>VillageLabel.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>022D38601615F9510020F816</string>
+										<string>022D38A5161728320020F816</string>
 										<key>history</key>
 										<array>
 											<string>027D538614618BFA002C310F</string>
@@ -762,10 +803,7 @@
 											<string>02BB3960160D72FC006BEE76</string>
 											<string>02BB3961160D72FC006BEE76</string>
 											<string>02BB3964160D72FC006BEE76</string>
-											<string>02BB3965160D72FC006BEE76</string>
 											<string>02BB3966160D72FC006BEE76</string>
-											<string>02BB3969160D72FC006BEE76</string>
-											<string>02BB3971160D72FC006BEE76</string>
 											<string>02BB3973160D72FC006BEE76</string>
 											<string>02BB3974160D72FC006BEE76</string>
 											<string>02BB3975160D72FC006BEE76</string>
@@ -784,17 +822,14 @@
 											<string>02E4236F160F57AD0071FA29</string>
 											<string>02E42370160F57AD0071FA29</string>
 											<string>02E42385160F5A1E0071FA29</string>
-											<string>02E42394160F5C100071FA29</string>
 											<string>02E42397160F5C100071FA29</string>
 											<string>02E42399160F5C100071FA29</string>
-											<string>02E423AC160F5E840071FA29</string>
 											<string>02E423AF160F5E840071FA29</string>
 											<string>02E423B71610B3410071FA29</string>
 											<string>022D3650161355110020F816</string>
 											<string>022D36B1161493160020F816</string>
 											<string>022D36B2161493160020F816</string>
 											<string>022D36B3161493160020F816</string>
-											<string>022D36B7161493160020F816</string>
 											<string>022D36B8161493160020F816</string>
 											<string>022D36B9161493160020F816</string>
 											<string>022D36BC161493160020F816</string>
@@ -849,12 +884,21 @@
 											<string>022D38021615EED60020F816</string>
 											<string>022D38081615EF2F0020F816</string>
 											<string>022D38171615F46A0020F816</string>
-											<string>022D38181615F46A0020F816</string>
-											<string>022D381A1615F46A0020F816</string>
-											<string>022D38571615F8BD0020F816</string>
-											<string>022D38581615F8BD0020F816</string>
-											<string>022D385F1615F9510020F816</string>
-											<string>022D37F21615EDB10020F816</string>
+											<string>022D387E161727870020F816</string>
+											<string>022D387F161727870020F816</string>
+											<string>022D3880161727870020F816</string>
+											<string>022D3881161727870020F816</string>
+											<string>022D3882161727870020F816</string>
+											<string>022D3883161727870020F816</string>
+											<string>022D3884161727870020F816</string>
+											<string>022D3885161727870020F816</string>
+											<string>022D3886161727870020F816</string>
+											<string>022D3888161727870020F816</string>
+											<string>022D3889161727870020F816</string>
+											<string>022D388B161727870020F816</string>
+											<string>022D389C161728140020F816</string>
+											<string>022D38A3161728320020F816</string>
+											<string>022D38A4161728320020F816</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -1054,10 +1098,11 @@
 	<array>
 		<string>022D36D3161493160020F816</string>
 		<string>022D36D4161493160020F816</string>
+		<string>1C78EAAD065D492600B07095</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>027D534C146016B0002C310F</string>
+		<string>022D388E161727870020F816</string>
 		<string>/Users/suitoney/我的程序/GitHub/FlameDragon/FlameDragon.xcodeproj</string>
-		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>7 131 1115 631 0 0 1280 778 </string>
@@ -1083,7 +1128,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>VillageLayer.m</string>
+								<string>VillageLabel.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -1433,7 +1478,7 @@
 			<key>WindowToolGUID</key>
 			<string>1C78EAAD065D492600B07095</string>
 			<key>WindowToolIsVisible</key>
-			<true/>
+			<false/>
 		</dict>
 		<dict>
 			<key>Identifier</key>

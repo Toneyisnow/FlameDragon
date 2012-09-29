@@ -73,6 +73,12 @@
 	return NSLocalizedStringFromTable(@"Condition-Lose", fileName, @"comment");	
 }
 
++(NSString *) villagePositionName:(int)shopPosIndex
+{
+	NSString *idStr = [NSString stringWithFormat:@"VillagePosition-%d", shopPosIndex];
+	return NSLocalizedStringFromTable(idStr, @"Village", @"comment");
+}
+
 +(NSString *) confirm:(int)confirmId
 {
 	NSString *idStr = [NSString stringWithFormat:@"Confirm-%02d", confirmId];

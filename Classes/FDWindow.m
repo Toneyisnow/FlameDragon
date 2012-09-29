@@ -156,6 +156,11 @@
 	return CGPointMake(20, 35);
 }
 
++(CGPoint) villageLabelLocation
+{
+	return CGPointMake([self winSize].width * 0.9, [self winSize].height * 0.1);
+}
+
 +(CGRect) leftWindow
 {
 	return CGRectMake(0, 0, [self winSize].width / 2, [self winSize].height);

@@ -1,0 +1,13 @@
+/* 
+   Village.strings
+   FlameDragon
+
+   Created by sui toney on 11-12-27.
+   Copyright 2011 ms. All rights reserved.
+ */
+"VillagePosition-0" = "出 口";
+"VillagePosition-1" = "道具店";
+"VillagePosition-2" = "教 会";
+"VillagePosition-3" = "酒 店";
+"VillagePosition-4" = "武器店";
+"VillagePosition-5" = "？？？";

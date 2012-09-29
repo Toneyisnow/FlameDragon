@@ -78,6 +78,11 @@
 	[cursor retain];
 	[self addChild:[cursor getSprite]];
 
+	villageLabel = [[VillageLabel alloc] init];
+	[villageLabel setLocation:[FDWindow villageLabelLocation]];
+	[villageLabel setPositionIndex:currentPosition];
+	[villageLabel show:self];
+	 
 	secretIndex = 0;
 	secretSequence = [[DataDepot depot] getSecretSequenceDefinition:record.chapterId];
 }
@@ -149,6 +154,7 @@
 	
 	currentPosition = pos;
 	[cursor setLocation:[FDWindow villageLocation:currentPosition villageImageId:[self getVillageImageId]]];	
+	[villageLabel setPositionIndex:currentPosition];
 	
 	
 	// For any set position, check the secret index
@@ -166,7 +172,8 @@
 	
 	if (secretIndex >= [secretSequence totalLength]) {
 		currentPosition = 5;		
-		[cursor setLocation:[FDWindow villageLocation:5 villageImageId:[self getVillageImageId]]];	
+		[cursor setLocation:[FDWindow villageLocation:5 villageImageId:[self getVillageImageId]]];
+		[villageLabel setPositionIndex:currentPosition];
 	}
 }
 
@@ -263,6 +270,12 @@
 	if (confirmExit != nil) {
 		[confirmExit release];
 		confirmExit = nil;
+	}
+	
+	if (villageLabel != nil) {
+		[villageLabel close];
+		[villageLabel release];
+		villageLabel = nil;
 	}
 	
 	[super dealloc];

@@ -13,6 +13,7 @@
 #import "ConfirmMessage.h"
 #import "FDLayer.h"
 #import "SecretSequenceDefinition.h"
+#import "VillageLabel.h"
 
 @interface VillageLayer : FDLayer {
 
@@ -28,6 +29,7 @@
 	int secretIndex;
 	SecretSequenceDefinition *secretSequence;
 
+	VillageLabel *villageLabel;
 }
 
 @property (retain) ChapterRecord *chapterRecord;

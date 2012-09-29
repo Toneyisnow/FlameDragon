@@ -25,6 +25,8 @@
 +(NSString *) chapterConditionWin:(int)charId;
 +(NSString *) chapterConditionLose:(int)charId;
 
++(NSString *) villagePositionName:(int)shopIndex;
+
 +(NSString *) confirm:(int)confirmId;
 +(NSString *) message:(int)msgId;
 

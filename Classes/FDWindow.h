@@ -38,6 +38,7 @@
 +(CGPoint) chapterRecordShowLocation:(int)recordIndex;
 +(CGPoint) shoppingMessageLocation;
 +(CGPoint) shoppingMessageLocation2;
++(CGPoint) villageLabelLocation;
 
 +(CGRect) leftWindow;
 +(CGRect) rightWindow;

@@ -186,6 +186,9 @@
 		022D37A81615DBC70020F816 /* Shopping2SecretDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 022D37A71615DBC70020F816 /* Shopping2SecretDialog.m */; };
 		022D37AB1615E3120020F816 /* SecretSequenceDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 022D37AA1615E3120020F816 /* SecretSequenceDefinition.m */; };
 		022D37AD1615E8110020F816 /* SecretSequence.dat in Resources */ = {isa = PBXBuildFile; fileRef = 022D37AC1615E8110020F816 /* SecretSequence.dat */; };
+		022D386B16171F0C0020F816 /* VillageLabel.png in Resources */ = {isa = PBXBuildFile; fileRef = 022D386A16171F0C0020F816 /* VillageLabel.png */; };
+		022D386E16171F470020F816 /* VillageLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 022D386D16171F470020F816 /* VillageLabel.m */; };
+		022D38701617242E0020F816 /* Village.strings in Resources */ = {isa = PBXBuildFile; fileRef = 022D386F1617242E0020F816 /* Village.strings */; };
 		023D07BE15CF82E700AD6FA6 /* SWScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D07B415CF82E700AD6FA6 /* SWScrollView.m */; };
 		023D34AA152834A3002D3EFD /* EventChapter2.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D34A9152834A3002D3EFD /* EventChapter2.m */; };
 		02542C4E155D4C5B0050FEC8 /* ShoppingItemDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02542C4D155D4C5B0050FEC8 /* ShoppingItemDialog.m */; };
@@ -1095,6 +1098,10 @@
 		022D37A91615E3120020F816 /* SecretSequenceDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretSequenceDefinition.h; sourceTree = "<group>"; };
 		022D37AA1615E3120020F816 /* SecretSequenceDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretSequenceDefinition.m; sourceTree = "<group>"; };
 		022D37AC1615E8110020F816 /* SecretSequence.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = SecretSequence.dat; path = Data/SecretSequence.dat; sourceTree = "<group>"; };
+		022D386A16171F0C0020F816 /* VillageLabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = VillageLabel.png; path = Others/VillageLabel.png; sourceTree = "<group>"; };
+		022D386C16171F470020F816 /* VillageLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VillageLabel.h; sourceTree = "<group>"; };
+		022D386D16171F470020F816 /* VillageLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VillageLabel.m; sourceTree = "<group>"; };
+		022D386F1617242E0020F816 /* Village.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Village.strings; path = Strings/Village.strings; sourceTree = "<group>"; };
 		023D07B315CF82E700AD6FA6 /* SWScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWScrollView.h; path = tableView/SWScrollView.h; sourceTree = "<group>"; };
 		023D07B415CF82E700AD6FA6 /* SWScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWScrollView.m; path = tableView/SWScrollView.m; sourceTree = "<group>"; };
 		023D34A8152834A3002D3EFD /* EventChapter2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter2.h; sourceTree = "<group>"; };
@@ -2223,6 +2230,8 @@
 				02759D3A154A6FEA00853895 /* VillageScene.m */,
 				02759D3C154A702600853895 /* VillageLayer.h */,
 				02759D3D154A702600853895 /* VillageLayer.m */,
+				022D386C16171F470020F816 /* VillageLabel.h */,
+				022D386D16171F470020F816 /* VillageLabel.m */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -2611,6 +2620,7 @@
 		028D691B146C0F5400FB8199 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				022D386A16171F0C0020F816 /* VillageLabel.png */,
 				02E42329160F3B3F0071FA29 /* Shop_MoneyBar.png */,
 				02E42321160F397D0071FA29 /* Shop_Exit_0.png */,
 				02E42317160F388A0071FA29 /* Shop_Load_0.png */,
@@ -2912,6 +2922,7 @@
 				02733525149F13E100D0812F /* Magic.strings */,
 				02733526149F13E100D0812F /* Message.strings */,
 				029C625614910E660054B260 /* Creature.strings */,
+				022D386F1617242E0020F816 /* Village.strings */,
 			);
 			name = Strings;
 			sourceTree = "<group>";
@@ -4119,6 +4130,8 @@
 				022D368B161484780020F816 /* Occupation.dat in Resources */,
 				022D37A51615DB0E0020F816 /* VillageShop-01-5.png in Resources */,
 				022D37AD1615E8110020F816 /* SecretSequence.dat in Resources */,
+				022D386B16171F0C0020F816 /* VillageLabel.png in Resources */,
+				022D38701617242E0020F816 /* Village.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4307,6 +4320,7 @@
 				022D368E161487130020F816 /* OccupationDefinition.m in Sources */,
 				022D37A81615DBC70020F816 /* Shopping2SecretDialog.m in Sources */,
 				022D37AB1615E3120020F816 /* SecretSequenceDefinition.m in Sources */,
+				022D386E16171F470020F816 /* VillageLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
