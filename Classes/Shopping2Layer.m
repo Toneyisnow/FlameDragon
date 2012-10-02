@@ -87,6 +87,7 @@
 			break;
 	}
 	
+	[rootDialog initMessage];
 	[rootDialog initButtons];
 	[rootDialog setRecord:chapterRecord];
 	[rootDialog show:self];

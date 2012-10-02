@@ -38,6 +38,24 @@
 	return self;
 }
 
+-(void) initMessage
+{
+}
+
+-(void) setMessage:(NSString *)msg
+{
+	if (messageSprite != nil) {
+		[messageSprite removeFromLayer];
+		[messageSprite release];
+		messageSprite = nil;
+	}
+	
+	messageSprite = [[FDSprite alloc] initWithString:msg Size:16];
+	[messageSprite setAnchorPoint:CGPointMake(0, 0)];
+	[baseSprite addSprite:messageSprite zOrder:1];
+	[messageSprite setLocation:CGPointMake(10, 60)];
+}
+
 -(void) initButtons
 {
 	[self generateButtonArray];
@@ -174,6 +192,7 @@
 -(void) onSell
 {
 	NSLog(@"onSell");
+	[self setMessage:[FDLocalString message:52]];
 	
 	lastPageIndex = 0;
 	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:0];
@@ -279,6 +298,7 @@
 -(void) onGiveItem
 {
 	NSLog(@"onGiveItem");
+	[self setMessage:[FDLocalString message:52]];
 	
 	NSString *message = [FDLocalString message:58];
 	Shopping2MessageDialog *dialog = [[Shopping2MessageDialog alloc] initWithMessage:message];
@@ -418,6 +438,7 @@
 -(void) onEquip
 {
 	NSLog(@"onEquip");
+	[self setMessage:[FDLocalString message:52]];
 	
 	lastPageIndex = 0;
 	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:0];
@@ -498,6 +519,7 @@
 -(void) onInfo
 {
 	NSLog(@"onInfo");
+	[self setMessage:[FDLocalString message:52]];
 	
 	lastPageIndex = 0;
 	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:0];

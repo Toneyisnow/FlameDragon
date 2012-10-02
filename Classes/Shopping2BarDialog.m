@@ -25,9 +25,17 @@
 	[buttonArray addObject:[self button_Exit]];
 }
 
+-(void) initMessage
+{
+	[self setMessage:[FDLocalString message:55]];	
+}
+
 -(void) onSaveGame
 {
 	NSLog(@"onSaveGame");
+	
+	[self setMessage:[FDLocalString message:56]];
+	
 	Shopping2RecordDialog *dialog = [[Shopping2RecordDialog alloc] init];
 	[self showDialog:dialog Callback:@selector(confirmSaveGame:)];
 	[dialog release];
@@ -36,6 +44,8 @@
 -(void) onLoadGame
 {
 	NSLog(@"onLoadGame");
+	[self setMessage:[FDLocalString message:56]];
+	
 	Shopping2RecordDialog *dialog = [[Shopping2RecordDialog alloc] init];
 	[self showDialog:dialog Callback:@selector(confirmLoadGame:)];
 	[dialog release];	
@@ -44,6 +54,7 @@
 -(void) onExitGame
 {
 	NSLog(@"onExitGame");
+	[self setMessage:[FDLocalString message:56]];
 	
 	NSString *msg = [FDLocalString confirm:53];
 	Shopping2ConfirmDialog *dialog = [[Shopping2ConfirmDialog alloc] initWithMessage:msg];
@@ -65,7 +76,7 @@
 	lastSelectedItemIndex = index;
 	
 	GameRecord *record = [GameRecord readFromSavedFile];
-	ChapterRecord *info = [record getChapterRecord:index];
+	ChapterRecord *info = [record getChapterRecord:lastSelectedItemIndex];
 	
 	if ([info chapterId] > 0) {
 		// Show confirm dialog
@@ -93,7 +104,7 @@
 	
 	GameRecord *record = [GameRecord readFromSavedFile];
 	
-	[record setChapterRecord:chapterRecord Index:selectedNum];
+	[record setChapterRecord:chapterRecord Index:lastSelectedItemIndex];
 	[record saveRecord];
 	
 	NSLog(@"Game is Saved.");

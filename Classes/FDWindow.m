@@ -106,7 +106,7 @@
 					return CGPointMake(winSize.width * 0.2, winSize.height * 0.4);
 					break;
 				case 5:
-					return CGPointMake(winSize.width * 0.45, winSize.height * 0.85);
+					return CGPointMake(winSize.width * 0.08, winSize.height * 0.85);
 					break;
 				default:
 					break;

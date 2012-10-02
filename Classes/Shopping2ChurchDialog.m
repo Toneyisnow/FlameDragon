@@ -25,9 +25,15 @@
 	[buttonArray addObject:[self button_Transfer]];
 }
 
+-(void) initMessage
+{
+	[self setMessage:[FDLocalString message:55]];	
+}
+
 -(void) onRevive
 {
 	NSLog(@"onRevive");
+	[self setMessage:[FDLocalString message:56]];
 	
 	BOOL hasDeadFriend = FALSE;
 	for (CreatureRecord *friend in [chapterRecord friendRecords]) {
@@ -112,6 +118,8 @@
 
 -(void) onTransfer
 {
+	[self setMessage:[FDLocalString message:56]];
+	
 	BOOL hasTransferFriend = FALSE;
 	for (CreatureRecord *friend in [chapterRecord friendRecords]) {
 		if (friend.data.level >= 20)

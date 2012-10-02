@@ -26,6 +26,11 @@
 	
 }
 
+-(void) initMessage
+{
+	[self setMessage:[FDLocalString message:53]];	
+}
+
 -(DataDepotShopType) getShopType
 {
 	return DataDepotShopType_ItemShop;
@@ -34,6 +39,8 @@
 -(void) onBuyItem
 {
 	NSLog(@"onBuyItem");
+	
+	[self setMessage:[FDLocalString message:54]];
 	
 	ShopDefinition *shop = [[DataDepot depot] getShopDefinition:chapterRecord.chapterId Type:[self getShopType]];
 	

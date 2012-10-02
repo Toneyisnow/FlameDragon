@@ -18,12 +18,17 @@
 	
 	NSMutableArray *buttonArray;
 
+	FDSprite *messageSprite;
+	
 	int lastSelectedItemIndex;
 	int lastSelectedCreatureIndex;
 	int lastPageIndex;
 }
 
 -(void) initButtons;
+-(void) initMessage;
+-(void) setMessage:(NSString *)msg;
+
 -(void) generateButtonArray;
 
 -(ShoppingButton *) button_BuyAmor;

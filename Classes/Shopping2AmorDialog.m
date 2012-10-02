@@ -27,10 +27,16 @@
 	
 }
 
+-(void) initMessage
+{
+	[self setMessage:[FDLocalString message:51]];	
+}
+
 -(void) onBuyAmor
 {
 	
 	NSLog(@"onBuyAmor");
+	[self setMessage:[FDLocalString message:52]];
 	
 	// NSMutableArray *list = [self getProductList:chapterRecord.chapterId Type:DataDepotShopType_AmorShop];
 	ShopDefinition *shop = [[DataDepot depot] getShopDefinition:chapterRecord.chapterId Type:DataDepotShopType_AmorShop];
