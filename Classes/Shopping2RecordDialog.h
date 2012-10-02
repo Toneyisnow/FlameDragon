@@ -13,6 +13,6 @@
 	
 }
 
--(void) clickedRecordOn:(id)sender;
+//-(void) clickedRecordOn:(id)sender;
 
 @end

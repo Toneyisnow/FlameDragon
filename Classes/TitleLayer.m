@@ -12,6 +12,7 @@
 #import "FDWindow.h"
 #import "GameRecord.h"
 #import "VillageScene.h"
+#import "LoadingScene.h"
 #import "Constants.h"
 
 @implementation TitleLayer
@@ -86,17 +87,16 @@
 {
 	NSLog(@"onLoadGame");
 	
-	ChapterRecord *info = [ChapterRecord sampleRecord];
-	
 	/*
-	int chapterId = 1;
-	ChapterRecord *info = [[ChapterRecord alloc] initWithChapter:chapterId];
-	*/
-	
+	ChapterRecord *info = [ChapterRecord sampleRecord];
 	VillageScene *scene = [VillageScene node];
 	[scene loadWithRecord:info];
-	
 	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];
+	*/
+	
+	LoadingScene *scene = [LoadingScene node];
+	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];
+	
 }
 
 -(void) onContinueGame
