@@ -109,7 +109,7 @@
 	
 	[self settleFriend:1 At:CGPointMake(27, 16)];
 	[self settleFriend:2 At:CGPointMake(27, 16)];
-	[self settleFriend:3 At:CGPointMake(27, 16)];
+	//[self settleFriend:3 At:CGPointMake(27, 16)];
 	[self settleFriend:4 At:CGPointMake(27, 16)];
 	[self settleFriend:5 At:CGPointMake(27, 16)];
 
