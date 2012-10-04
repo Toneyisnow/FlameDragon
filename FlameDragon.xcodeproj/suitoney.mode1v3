@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>022D39E8161D7E1D0020F816</string>
+						<string>022D39FA161DCB230020F816</string>
 						<key>history</key>
 						<array>
 							<string>022D3890161727870020F816</string>
@@ -335,14 +335,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>309</integer>
-									<integer>198</integer>
-									<integer>9</integer>
+									<integer>332</integer>
+									<integer>328</integer>
+									<integer>320</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 4865}, {293, 572}}</string>
+							<string>{{0, 5439}, {293, 572}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -379,7 +379,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ActionLayers.m</string>
+								<string>Item.strings</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -387,11 +387,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ActionLayers.m</string>
+										<string>Item.strings</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>022D39E7161D7E1D0020F816</string>
+										<string>022D39F9161DCB230020F816</string>
 										<key>history</key>
 										<array>
 											<string>027D538614618BFA002C310F</string>
@@ -512,7 +512,6 @@
 											<string>02F8408414B8393F00665511</string>
 											<string>02F8408514B8393F00665511</string>
 											<string>02F840FF14B88AC600665511</string>
-											<string>02F8410014B88AC600665511</string>
 											<string>02F8410514B88AC600665511</string>
 											<string>02F841BD14B975F200665511</string>
 											<string>02F841EB14B9790100665511</string>
@@ -526,7 +525,6 @@
 											<string>02BA6DF814C082B90028C9E7</string>
 											<string>02BA6E1214C083D20028C9E7</string>
 											<string>02BA6E3314C7AC880028C9E7</string>
-											<string>02BA6E4614C7AEE90028C9E7</string>
 											<string>02BA6E8E14C7E1520028C9E7</string>
 											<string>02BA6E8F14C7E1520028C9E7</string>
 											<string>02BA6EE114C9972F0028C9E7</string>
@@ -671,7 +669,6 @@
 											<string>02AC561015D8D94000AAD4A3</string>
 											<string>02AC563315D8DD0200AAD4A3</string>
 											<string>02AC563415D8DD0200AAD4A3</string>
-											<string>02AC564B15D8DE8400AAD4A3</string>
 											<string>02AC565615D8DF7500AAD4A3</string>
 											<string>02AC566015D8E17100AAD4A3</string>
 											<string>02AC566415D8E17100AAD4A3</string>
@@ -767,7 +764,6 @@
 											<string>0281482F160B7243001CBB4D</string>
 											<string>02814832160B7243001CBB4D</string>
 											<string>02814833160B7243001CBB4D</string>
-											<string>02814837160B7243001CBB4D</string>
 											<string>02814841160B7243001CBB4D</string>
 											<string>02BB3960160D72FC006BEE76</string>
 											<string>02BB3961160D72FC006BEE76</string>
@@ -874,7 +870,6 @@
 											<string>022D3932161B44FD0020F816</string>
 											<string>022D3942161D63770020F816</string>
 											<string>022D3943161D63770020F816</string>
-											<string>022D3944161D63770020F816</string>
 											<string>022D394B161D640B0020F816</string>
 											<string>022D3951161D66460020F816</string>
 											<string>022D3954161D66460020F816</string>
@@ -906,7 +901,12 @@
 											<string>022D39E3161D7E1D0020F816</string>
 											<string>022D39E4161D7E1D0020F816</string>
 											<string>022D39E5161D7E1D0020F816</string>
-											<string>022D39E6161D7E1D0020F816</string>
+											<string>022D39F3161DCB230020F816</string>
+											<string>022D39F4161DCB230020F816</string>
+											<string>022D39F5161DCB230020F816</string>
+											<string>022D39F6161DCB230020F816</string>
+											<string>022D39F7161DCB230020F816</string>
+											<string>022D39F8161DCB230020F816</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -1109,8 +1109,8 @@
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>027D534C146016B0002C310F</string>
 		<string>022D388E161727870020F816</string>
-		<string>/Users/suitoney/我的程序/GitHub/FlameDragon/FlameDragon.xcodeproj</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>/Users/suitoney/我的程序/GitHub/FlameDragon/FlameDragon.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>7 131 1115 631 0 0 1280 778 </string>

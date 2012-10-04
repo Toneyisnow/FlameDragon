@@ -16,6 +16,8 @@
 #import "SelectMagicTargetState.h"
 #import "FDLocalString.h"
 #import "TalkMessage.h"
+#import "MagicDefinition.h"
+#import "DataDepot.h"
 
 @implementation ActionMenuState
 
@@ -115,6 +117,14 @@
 	
 	if (magicIndex < 0) {
 		[self resumeState];
+		return;
+	}
+	
+	// If mana is not enough
+	int magicId = [[currentFriend.data.magicList objectAtIndex:magicIndex] intValue];
+	MagicDefinition *magic = [[DataDepot depot] getMagicDefinition:magicId];
+	if (currentFriend.data.mpCurrent < magic.mpCost) {
+		[self selectMagic];
 		return;
 	}
 	
