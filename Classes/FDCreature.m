@@ -73,19 +73,21 @@
 	// TODO: this should be updated
 	attackRange = [[FDRange alloc] initWithMin:1 Max:[definition attackRange]];
 	
+	if (data.attackItemIndex < 0 || data.defendItemIndex < 0)
+	{
 	for (int i = 0;i < [data.itemList count]; i++) {
 		
 		int itemId = [[data.itemList objectAtIndex:i] intValue];
 		ItemDefinition *def = [[DataDepot depot] getItemDefinition:itemId];
 		
-		if ([def isKindOfClass:[AttackItemDefinition class]]) {
+		if (data.attackItemIndex < 0 && [def isKindOfClass:[AttackItemDefinition class]]) {
 			data.attackItemIndex = i;
 		}
-		if ([def isKindOfClass:[DefendItemDefinition class]]) {
+		if (data.defendItemIndex < 0 && [def isKindOfClass:[DefendItemDefinition class]]) {
 			data.defendItemIndex = i;
 		}
 	}
-	
+	}
 	// By default the AI will be
 	data.aiType = AIType_Aggressive;
 	
@@ -263,7 +265,7 @@
 {
 	int deltaHit = 0;
 	AttackItemDefinition *item = [self getAttackItem];
-	if (item != nil) 
+	if (item != nil && [item isKindOfClass:[AttackItemDefinition class]]) 
 	{
 		deltaHit += item.hit;
 	}
@@ -276,12 +278,12 @@
 	int deltaEv = 0;
 	
 	AttackItemDefinition *attackItem = [self getAttackItem];
-	if (attackItem != nil) {
+	if (attackItem != nil && [attackItem isKindOfClass:[AttackItemDefinition class]]) {
 		deltaEv += attackItem.ev;
 	}
 	
 	DefendItemDefinition *defendItem = [self getDefendItem];
-	if (defendItem != nil) {
+	if (defendItem != nil && [defendItem isKindOfClass:[DefendItemDefinition class]]) {
 		deltaEv += defendItem.ev;
 	}
 	
@@ -293,7 +295,7 @@
 	int deltaAp = 0;
 	
 	AttackItemDefinition *attackItem = [self getAttackItem];
-	if (attackItem != nil) {
+	if (attackItem != nil && [attackItem isKindOfClass:[AttackItemDefinition class]]) {
 		deltaAp += attackItem.ap;
 	}
 	
@@ -305,7 +307,7 @@
 	int deltaDp = 0;
 	
 	DefendItemDefinition *defendItem = [self getDefendItem];
-	if (defendItem != nil) {
+	if (defendItem != nil && [defendItem isKindOfClass:[DefendItemDefinition class]]) {
 		deltaDp += defendItem.dp;
 	}
 	

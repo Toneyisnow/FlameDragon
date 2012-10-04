@@ -60,6 +60,9 @@
 	[another.itemList addObjectsFromArray: itemList];
 	[another.magicList addObjectsFromArray: magicList];
 
+	another.attackItemIndex = attackItemIndex;
+	another.defendItemIndex = defendItemIndex;
+	
 	another.bodyStatus = bodyStatus;
 	another.aiType = aiType;
 	another.aiParam = aiParam;
@@ -84,7 +87,7 @@
 	[coder encodeInt:aiType forKey:@"aiType"];
 	[coder encodeCGPoint:[(FDPosition *)aiParam posValue] forKey:@"aiParam"];
 	
-	NSLog(@"Encoded CreatureData");
+	// NSLog(@"Encoded CreatureData");
 
 }
 

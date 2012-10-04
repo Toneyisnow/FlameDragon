@@ -60,6 +60,9 @@
 		[def.data.magicList addObject:magicId];
 	}
 	
+	def.data.attackItemIndex = -1;
+	def.data.defendItemIndex = -1;
+	
 	return [def autorelease];
 }
 

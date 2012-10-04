@@ -73,6 +73,7 @@
 	
 	[record.data.itemList addObject:[NSNumber numberWithInt:221]];
 	[record.data.itemList addObject:[NSNumber numberWithInt:302]];
+	[record.data.itemList addObject:[NSNumber numberWithInt:302]];
 	
 	record.data.attackItemIndex = 0;
 	record.data.defendItemIndex = 1;
@@ -89,7 +90,7 @@
 	[coder encodeInt:definitionId forKey:@"definitionId"];
 	[coder encodeObject:data forKey:@"data"];
 	
-	NSLog(@"Encoded CreatureRecord for CreatureId=%d", creatureId);
+	// NSLog(@"Encoded CreatureRecord for CreatureId=%d", creatureId);
 }
 
 -(id) initWithCoder:(NSCoder *)coder {

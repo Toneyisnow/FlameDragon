@@ -469,6 +469,8 @@
 	CreatureRecord *record = [[chapterRecord friendRecords] objectAtIndex:selectedNum];	
 	FDFriend *creature = [[FDFriend alloc] initWithDefinition:record.definitionId Id:record.creatureId Data:record.data];
 
+	NSLog(@"Creature equip items: %d %d", creature.data.attackItemIndex, creature.data.defendItemIndex);
+	
 	ItemBox *ibox = [[ItemBox alloc] initWithCreature:creature Type:ItemOperatingType_Equip];
 	[ibox setCallback:self Method:@selector(onEquip_SelectedItem:)];
 	[ibox show:layer];
@@ -507,12 +509,23 @@
 	NSNumber *itemId = [record.data.itemList objectAtIndex:lastSelectedItemIndex];
 	ItemDefinition *item = [[DataDepot depot] getItemDefinition:[itemId intValue]];
 	
+	NSLog(@"Item Id: %d", item.identifier);
+	
 	if ([item isAttackItem]) {
+		NSLog(@"isAttackItem");
 		record.data.attackItemIndex = lastSelectedItemIndex;
 	}
 	else if ([item isDefendItem]) {
+		NSLog(@"isDefendItem");
 		record.data.defendItemIndex = lastSelectedItemIndex;
 	}
+	
+	// Testing
+	NSLog(@"item index: %d", record.data.defendItemIndex);
+	
+	FDFriend *creature = [[FDFriend alloc] initWithDefinition:record.definitionId Id:record.creatureId Data:record.data];
+
+	NSLog(@"item index: %d", creature.data.defendItemIndex);
 	
 }
 

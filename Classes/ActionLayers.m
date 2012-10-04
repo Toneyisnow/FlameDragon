@@ -738,7 +738,7 @@
 
 -(ChapterRecord *) composeChapterRecord
 {
-	ChapterRecord *record = [[ChapterRecord alloc] initWithChapter:chapterId+1];
+	ChapterRecord *record = [[ChapterRecord alloc] initWithChapter:chapterId + 1];
 	record.money = money;
 	
 	for(FDCreature *creature in [field getFriendList])
@@ -827,7 +827,6 @@
 		GameWinScene *scene = [GameWinScene node];
 		[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.5 scene:scene]];	
 	}
-	
 }
 
 -(void) gameQuit
