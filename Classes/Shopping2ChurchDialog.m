@@ -14,6 +14,8 @@
 #import "Shopping2MessageDialog.h"
 #import "Shopping2Layer.h"
 
+#import "GameFormula.h"
+
 @implementation Shopping2ChurchDialog
 
 // Override Method
@@ -74,23 +76,13 @@
 	
 	lastSelectedCreatureIndex = selectedNum;
 	
-	// TODO: money
-	int moneyNeeded = 100;
-	if (chapterRecord.money < moneyNeeded) {
-		
-		// If not enough money
-		NSString *message = [FDLocalString message:63];
-		Shopping2MessageDialog *dialog = [[Shopping2MessageDialog alloc] initWithMessage:message];
-		[self showDialog:dialog Callback:nil];
-		[dialog release];
-	}
-	else {
-		
-		NSString *msg = [FDLocalString confirm:57];
-		Shopping2ConfirmDialog *dialog = [[Shopping2ConfirmDialog alloc] initWithMessage:msg];
-		[self showDialog:dialog Callback:@selector(onRevive_Confirmed:)];
-		[dialog release];
-	}
+	CreatureRecord *friend = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];
+	int moneyNeeded = [GameFormula getMoneyNeededForRevive:friend];
+	NSString *msg = [NSString stringWithFormat:[FDLocalString confirm:57], [FDLocalString creature:friend.definitionId], moneyNeeded];
+	Shopping2ConfirmDialog *dialog = [[Shopping2ConfirmDialog alloc] initWithMessage:msg];
+	[self showDialog:dialog Callback:@selector(onRevive_Confirmed:)];
+	[dialog release];
+
 }
 
 -(void) onRevive_Confirmed:(NSNumber *)num
@@ -98,6 +90,18 @@
 	int selectedNum = [num intValue];
 	if (selectedNum <= 0) {
 		// Cancel
+		return;
+	}
+	
+	CreatureRecord *friend = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];
+	int moneyNeeded = [GameFormula getMoneyNeededForRevive:friend];
+	if (chapterRecord.money < moneyNeeded) {
+		
+		// If not enough money
+		NSString *message = [FDLocalString message:63];
+		Shopping2MessageDialog *dialog = [[Shopping2MessageDialog alloc] initWithMessage:message];
+		[self showDialog:dialog Callback:nil];
+		[dialog release];
 		return;
 	}
 	
@@ -110,10 +114,11 @@
 	CreatureRecord *friend = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];
 	friend.data.hpCurrent = friend.data.hpMax;
 	
-	chapterRecord.money -= 100;
+	int moneyNeeded = [GameFormula getMoneyNeededForRevive:friend];
+	
+	chapterRecord.money -= moneyNeeded;
 
 	[(Shopping2Layer *)parentLayer updateMoneyBar];
-
 }
 
 -(void) onTransfer

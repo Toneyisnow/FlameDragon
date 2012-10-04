@@ -92,4 +92,10 @@
 	return recoverHp;
 }
 
++(int) getMoneyNeededForRevive:(CreatureRecord *)creature
+{
+	return 100 * creature.data.level;
+}
+
+
 @end

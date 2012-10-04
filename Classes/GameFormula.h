@@ -9,6 +9,7 @@
 #import "cocos2d.h"
 #import "FDCreature.h"
 #import "BattleField.h"
+#import "CreatureRecord.h"
 
 @interface GameFormula : NSObject {
 
@@ -18,5 +19,7 @@
 +(int) getExperienceFromMagic:(int)magicId Creature:(FDCreature *)creature Target:(FDCreature *)target Field:(BattleField *)field;
 +(int) calculateAttackExp:(FDCreature *)creature Target:(FDCreature *)target;
 +(int) recoverHpFromRest:(FDCreature *)creature;
+
++(int) getMoneyNeededForRevive:(CreatureRecord *)creature;
 
 @end

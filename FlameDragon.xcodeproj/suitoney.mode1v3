@@ -216,7 +216,7 @@
 						<key>_historyCapacity</key>
 						<integer>0</integer>
 						<key>bookmark</key>
-						<string>022D393D161B45590020F816</string>
+						<string>022D3958161D66460020F816</string>
 						<key>history</key>
 						<array>
 							<string>022D3890161727870020F816</string>
@@ -308,9 +308,11 @@
 								<string>506EDAA3102F461B00A389B3</string>
 								<string>2D500B1D0D5A766B00DBA0E3</string>
 								<string>02D30A4415FF74E400CA1799</string>
+								<string>02C572861518558000DAEE2C</string>
 								<string>02733BFD14A9CA8300D0812F</string>
 								<string>020759C3155CD23E009E75E9</string>
 								<string>027D54111462B8B2002C310F</string>
+								<string>027D5845146A9BE6002C310F</string>
 								<string>0297D77E147D3C4C007F3E12</string>
 								<string>027D54241462C617002C310F</string>
 								<string>027D545314659151002C310F</string>
@@ -331,14 +333,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>68</integer>
-									<integer>54</integer>
+									<integer>24</integer>
+									<integer>12</integer>
 									<integer>9</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 1020}, {293, 572}}</string>
+							<string>{{0, 377}, {293, 572}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -375,7 +377,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>LoadingLayer.m</string>
+								<string>Shopping2ChurchDialog.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -383,11 +385,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>LoadingLayer.m</string>
+										<string>Shopping2ChurchDialog.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>022D393C161B45590020F816</string>
+										<string>022D3957161D66460020F816</string>
 										<key>history</key>
 										<array>
 											<string>027D538614618BFA002C310F</string>
@@ -513,7 +515,6 @@
 											<string>02F841BD14B975F200665511</string>
 											<string>02F841EB14B9790100665511</string>
 											<string>02F841F614B9795B00665511</string>
-											<string>02BA6CB314B996BC0028C9E7</string>
 											<string>02BA6CCC14B9BD8D0028C9E7</string>
 											<string>02BA6D2D14B9CCED0028C9E7</string>
 											<string>02BA6D7614C063C00028C9E7</string>
@@ -582,7 +583,6 @@
 											<string>02C57319151AF54F00DAEE2C</string>
 											<string>02C5731A151AF54F00DAEE2C</string>
 											<string>02C5731B151AF54F00DAEE2C</string>
-											<string>02C5731E151AF54F00DAEE2C</string>
 											<string>02C5736F1522E5D700DAEE2C</string>
 											<string>02C5739C1522EF1300DAEE2C</string>
 											<string>02868FA915242B670056A399</string>
@@ -817,9 +817,7 @@
 											<string>022D36C3161493160020F816</string>
 											<string>022D36C4161493160020F816</string>
 											<string>022D36C6161493160020F816</string>
-											<string>022D36C7161493160020F816</string>
 											<string>022D36CA161493160020F816</string>
-											<string>022D36E6161494F10020F816</string>
 											<string>022D36FF161497E30020F816</string>
 											<string>022D3700161497E30020F816</string>
 											<string>022D3705161497E30020F816</string>
@@ -828,7 +826,6 @@
 											<string>022D371B161499240020F816</string>
 											<string>022D373516149C8B0020F816</string>
 											<string>022D373816149C8B0020F816</string>
-											<string>022D374F16149FD40020F816</string>
 											<string>022D375116149FD40020F816</string>
 											<string>022D375C1614A0C60020F816</string>
 											<string>022D37691614A3270020F816</string>
@@ -846,7 +843,6 @@
 											<string>022D37C91615E9960020F816</string>
 											<string>022D37CA1615E9960020F816</string>
 											<string>022D37CD1615E9960020F816</string>
-											<string>022D37CE1615E9960020F816</string>
 											<string>022D37E61615EC6E0020F816</string>
 											<string>022D38021615EED60020F816</string>
 											<string>022D38081615EF2F0020F816</string>
@@ -864,14 +860,11 @@
 											<string>022D388B161727870020F816</string>
 											<string>022D389C161728140020F816</string>
 											<string>022D38AB161B130F0020F816</string>
-											<string>022D38AC161B130F0020F816</string>
 											<string>022D38AE161B130F0020F816</string>
 											<string>022D38BD161B341A0020F816</string>
 											<string>022D38BE161B341A0020F816</string>
-											<string>022D38CF161B36520020F816</string>
 											<string>022D38D0161B36520020F816</string>
 											<string>022D38D1161B36520020F816</string>
-											<string>022D38D3161B36520020F816</string>
 											<string>022D38D9161B36BA0020F816</string>
 											<string>022D38E1161B38220020F816</string>
 											<string>022D38EE161B3E960020F816</string>
@@ -902,7 +895,16 @@
 											<string>022D3930161B44FD0020F816</string>
 											<string>022D3931161B44FD0020F816</string>
 											<string>022D3932161B44FD0020F816</string>
-											<string>022D3933161B44FD0020F816</string>
+											<string>022D3942161D63770020F816</string>
+											<string>022D3943161D63770020F816</string>
+											<string>022D3944161D63770020F816</string>
+											<string>022D394B161D640B0020F816</string>
+											<string>022D3951161D66460020F816</string>
+											<string>022D3952161D66460020F816</string>
+											<string>022D3953161D66460020F816</string>
+											<string>022D3954161D66460020F816</string>
+											<string>022D3955161D66460020F816</string>
+											<string>022D3956161D66460020F816</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

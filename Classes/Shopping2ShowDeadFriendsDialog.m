@@ -53,13 +53,13 @@
 									itemFromNormalImage:[NSString stringWithFormat:@"Icon-%03d-02.png", record.definitionId] selectedImage:NULL
 									target:self selector:@selector(clickedViewOn:)];
 		iconMenuItem.position = ccp(startX + intervalX * (i % 3), startY - intervalY * (i / 3));
-		iconMenuItem.tag = i + startIndex;
+		iconMenuItem.tag = [recordIndex intValue];
 		iconMenuItem.anchorPoint = ccp(0, 0);		
 		
 		CCMenuItemSprite* nameMenuItem = [CCMenuItemSprite itemFromNormalSprite:[nameSprite getSprite] selectedSprite:NULL target:self selector:@selector(clickedViewOn:)];
 		
 		nameMenuItem.position = ccp(startX + intervalX * (i % 3) + 25, startY - intervalY * (i / 3));
-		nameMenuItem.tag = i + startIndex;
+		nameMenuItem.tag = [recordIndex intValue];
 		nameMenuItem.anchorPoint = ccp(0, 0);
 		
 		CCMenu *menu = [CCMenu menuWithItems:iconMenuItem, nameMenuItem, nil];
