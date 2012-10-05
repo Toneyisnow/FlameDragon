@@ -89,7 +89,9 @@
 	}
 	}
 	// By default the AI will be
-	data.aiType = AIType_Aggressive;
+	if (dat == nil) {
+		data.aiType = AIType_Aggressive;
+	}
 	
 	lastGainedExperience = 0;
 	

@@ -164,6 +164,11 @@
 -(void) handleClick:(CGPoint)clickedLoc
 {
 	
+	if (isBusy)
+	{
+		return;
+	}
+	
 	//[self exitShop];
 	if (currentDialog != nil) {
 		[currentDialog clickedOn:clickedLoc];

@@ -1086,7 +1086,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 94";
 		rLen = 0;
-		rLoc = 2461;
+		rLoc = 2484;
 		rType = 0;
 		vrLen = 962;
 		vrLoc = 966;
@@ -3329,7 +3329,7 @@
 		fRef = 02D30A4215FF723900CA1799 /* Shopping2Layer.m */;
 		name = "Shopping2Layer.m: 256";
 		rLen = 0;
-		rLoc = 5401;
+		rLoc = 5432;
 		rType = 0;
 		vrLen = 679;
 		vrLoc = 4918;
@@ -3339,7 +3339,7 @@
 		fRef = 02D30A4215FF723900CA1799 /* Shopping2Layer.m */;
 		name = "Shopping2Layer.m: 256";
 		rLen = 0;
-		rLoc = 5401;
+		rLoc = 5432;
 		rType = 0;
 		vrLen = 679;
 		vrLoc = 4918;
@@ -3579,7 +3579,7 @@
 		fRef = 02D30A4215FF723900CA1799 /* Shopping2Layer.m */;
 		name = "Shopping2Layer.m: 256";
 		rLen = 0;
-		rLoc = 5401;
+		rLoc = 5432;
 		rType = 0;
 		vrLen = 717;
 		vrLoc = 1696;
@@ -3913,7 +3913,7 @@
 		fRef = 02D30A4215FF723900CA1799 /* Shopping2Layer.m */;
 		name = "Shopping2Layer.m: 256";
 		rLen = 0;
-		rLoc = 5401;
+		rLoc = 5432;
 		rType = 0;
 		vrLen = 789;
 		vrLoc = 1624;
@@ -4975,7 +4975,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 94";
 		rLen = 0;
-		rLoc = 2461;
+		rLoc = 2484;
 		rType = 0;
 		vrLen = 999;
 		vrLoc = 1152;
@@ -5255,7 +5255,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 268";
 		rLen = 0;
-		rLoc = 6767;
+		rLoc = 6790;
 		rType = 0;
 		vrLen = 732;
 		vrLoc = 6527;
@@ -5275,7 +5275,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 268";
 		rLen = 0;
-		rLoc = 6767;
+		rLoc = 6790;
 		rType = 0;
 		vrLen = 761;
 		vrLoc = 6527;
@@ -5950,7 +5950,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 404";
 		rLen = 0;
-		rLoc = 9467;
+		rLoc = 9490;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 8873;
@@ -6465,7 +6465,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 404";
 		rLen = 0;
-		rLoc = 9467;
+		rLoc = 9490;
 		rType = 0;
 		vrLen = 783;
 		vrLoc = 295;
@@ -6633,8 +6633,8 @@
 	};
 	023D34A9152834A3002D3EFD /* EventChapter2.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {915, 5681}}";
-			sepNavSelRange = "{3392, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {915, 5161}}";
+			sepNavSelRange = "{12151, 0}";
 			sepNavVisRange = "{13111, 692}";
 		};
 	};
@@ -7967,9 +7967,9 @@
 	};
 	027D54091462B712002C310F /* FDCreature.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 2119}}";
-			sepNavSelRange = "{2049, 15}";
-			sepNavVisRange = "{1583, 795}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 2080}}";
+			sepNavSelRange = "{2071, 0}";
+			sepNavVisRange = "{2415, 652}";
 		};
 	};
 	027D540A1462B712002C310F /* FDCreature.m */ = {
@@ -8488,7 +8488,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 94";
 		rLen = 0;
-		rLoc = 2461;
+		rLoc = 2484;
 		rType = 0;
 		vrLen = 965;
 		vrLoc = 963;
@@ -9194,9 +9194,9 @@
 	};
 	0297D98C1481D26C007F3E12 /* Animation.dat */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {779, 2405}}";
-			sepNavSelRange = "{1244, 0}";
-			sepNavVisRange = "{1031, 216}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 2262}}";
+			sepNavSelRange = "{1148, 0}";
+			sepNavVisRange = "{955, 196}";
 		};
 	};
 	0297D98E1481D281007F3E12 /* Creature.dat */ = {
@@ -11048,7 +11048,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {739, 1703}}";
 			sepNavSelRange = "{3128, 0}";
-			sepNavVisRange = "{2017, 1156}";
+			sepNavVisRange = "{1267, 1113}";
 		};
 	};
 	02C5728C1519944E00DAEE2C /* CreatureRecord.h */ = {
@@ -11547,15 +11547,15 @@
 	02D30A4115FF723900CA1799 /* Shopping2Layer.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {739, 1105}}";
-			sepNavSelRange = "{914, 0}";
-			sepNavVisRange = "{40, 651}";
+			sepNavSelRange = "{905, 6}";
+			sepNavVisRange = "{501, 578}";
 		};
 	};
 	02D30A4215FF723900CA1799 /* Shopping2Layer.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {831, 3926}}";
-			sepNavSelRange = "{2175, 0}";
-			sepNavVisRange = "{1624, 747}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 4134}}";
+			sepNavSelRange = "{3739, 0}";
+			sepNavVisRange = "{3621, 557}";
 		};
 	};
 	02D30A4515FF74F600CA1799 /* Shopping2Dialog.h */ = {
@@ -12382,7 +12382,7 @@
 		fRef = 0297D98C1481D26C007F3E12 /* Animation.dat */;
 		name = "Animation.dat: 186";
 		rLen = 0;
-		rLoc = 1244;
+		rLoc = 1148;
 		rType = 0;
 		vrLen = 216;
 		vrLoc = 1031;
@@ -12734,7 +12734,7 @@
 		fRef = 02D30A4215FF723900CA1799 /* Shopping2Layer.m */;
 		name = "Shopping2Layer.m: 226";
 		rLen = 0;
-		rLoc = 4851;
+		rLoc = 4882;
 		rType = 0;
 		vrLen = 323;
 		vrLoc = 4308;
