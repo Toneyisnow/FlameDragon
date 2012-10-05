@@ -656,9 +656,24 @@
 		[creature release];
 		
 	}
+	
 	for(CreatureRecord *record in [info deadCreatureRecords])
 	{
-		FDCreature *creature = [[FDCreature alloc] initWithDefinition:record.definitionId Id:record.creatureId Data:record.data];
+		FDCreature *creature;
+		
+		switch (record.creatureType) {
+			case CreatureType_Friend:
+				creature = [[FDFriend alloc] initWithDefinition:record.definitionId Id:record.creatureId Data:record.data];
+				break;
+			case CreatureType_Enemy:
+				creature = [[FDEnemy alloc] initWithDefinition:record.definitionId Id:record.creatureId Data:record.data];
+				break;
+			case CreatureType_Npc:
+				creature = [[FDNpc alloc] initWithDefinition:record.definitionId Id:record.creatureId Data:record.data];
+				break;
+			default:
+				break;
+		}
 		[[field getDeadCreatureList] addObject:creature];
 		[creature release];
 	}
@@ -763,13 +778,16 @@
 	}
 	
 	for (FDCreature *creature in [field getDeadCreatureList]) {
-		if ([creature isKindOfClass:[FDFriend class]]) {
+		//if ([creature isKindOfClass:[FDFriend class]]) {
+		if ([creature getCreatureType] == CreatureType_Friend) {
 			CreatureRecord *r = [field generateCreatureRecord:creature];
 			r.data.mpCurrent = r.data.mpMax;
 			
 			[[record friendRecords] addObject:r];
 		}
 	}
+	
+	[[record friendRecords] sortUsingSelector:@selector(compareRecords:)];
 	
 	return record;
 }

@@ -733,6 +733,8 @@
 	CreatureRecord *record = [[CreatureRecord alloc] init];
 	record.creatureId = [creature getIdentifier];
 	record.definitionId = [[creature getDefinition] getId];
+	record.creatureType = [creature getCreatureType];
+	
 	record.data = [creature.data clone];
 	record.location = [self getObjectPos:creature];
 	

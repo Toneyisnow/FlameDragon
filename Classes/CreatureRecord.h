@@ -14,6 +14,8 @@
 
 	int creatureId;
 	int definitionId;
+	int creatureType;
+	
 	CreatureData *data;
 	CGPoint location;
 	
@@ -22,10 +24,14 @@
 -(id) initWithTestData;
 +(id) friendSampleRecord:(int)friendId;
 
+- (NSComparisonResult)compareRecords:(id)inObject;
+
 //-(int) getFriendId;
 
 @property (nonatomic) int creatureId;
 @property (nonatomic) int definitionId;
+@property (nonatomic) int creatureType;
+
 @property (nonatomic, retain) CreatureData *data;
 @property (nonatomic) CGPoint location;
 

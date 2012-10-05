@@ -7,10 +7,11 @@
 //
 
 #import "CreatureRecord.h"
+#import "FDCreature.h"
 
 @implementation CreatureRecord
 
-@synthesize creatureId, definitionId;
+@synthesize creatureId, definitionId, creatureType;
 @synthesize data;
 @synthesize location;
 
@@ -22,6 +23,7 @@
 	location = CGPointMake(8, 10);
 	creatureId = 1;
 	definitionId = 1;
+	creatureType = CreatureType_Friend;
 	
 	data = [[CreatureData alloc] init];
 	data.level = 3;
@@ -53,6 +55,7 @@
 	record.location = CGPointMake(8, 10);
 	record.creatureId = friendId;
 	record.definitionId = friendId;
+	record.creatureType = CreatureType_Friend;
 	
 	record.data = [[CreatureData alloc] init];
 	record.data.level = 3;
@@ -88,6 +91,7 @@
     [coder encodeInt:location.y forKey:@"locationY"];
     [coder encodeInt:creatureId forKey:@"creatureId"];
 	[coder encodeInt:definitionId forKey:@"definitionId"];
+	[coder encodeInt:creatureType forKey:@"creatureType"];
 	[coder encodeObject:data forKey:@"data"];
 	
 	// NSLog(@"Encoded CreatureRecord for CreatureId=%d", creatureId);
@@ -103,10 +107,20 @@
 	
 	creatureId = [coder decodeIntForKey:@"creatureId"];
 	definitionId = [coder decodeIntForKey:@"definitionId"];
+	creatureType = [coder decodeIntForKey:@"creatureType"];
+	
 	data = [[coder decodeObjectForKey:@"data"] retain];
 	
 	
     return self;
+}
+
+
+- (NSComparisonResult)compareRecords:(id)inObject {
+	
+	CreatureRecord *record = (CreatureRecord *)inObject;
+	NSComparisonResult result = [[NSNumber numberWithInt: self.creatureId] compare:[NSNumber numberWithInt: record.creatureId]];
+	return result;
 }
 
 /*
