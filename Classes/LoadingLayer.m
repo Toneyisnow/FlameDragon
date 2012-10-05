@@ -78,11 +78,14 @@
 {
 	GameRecord *record = [GameRecord readFromSavedFile];
 	ChapterRecord *cRecord = [record getChapterRecord:index];
-		
-	VillageScene *scene = [VillageScene node];
-	[scene loadWithRecord:cRecord];
 	
-	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];	
+	if (cRecord.chapterId > 0)
+	{
+		VillageScene *scene = [VillageScene node];
+		[scene loadWithRecord:cRecord];
+	
+		[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];	
+	}
 }
 
 -(void) onBack:(id)sender

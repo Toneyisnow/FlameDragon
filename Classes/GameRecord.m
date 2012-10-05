@@ -23,7 +23,7 @@
 		[chapterRecords addObject:[ChapterRecord emptyRecord]];
 	}
 	
-	battleRecord = [[BattleRecord alloc] initWithTestData];
+	battleRecord = [[BattleRecord alloc] initWithChapter:0];
 	
 	return self;
 }
@@ -34,7 +34,7 @@
 														 , NSUserDomainMask
 														 , YES) objectAtIndex:0];
 	
-	return [NSString stringWithFormat:@"%@/FlameDragon1.sav", dir];
+	return [NSString stringWithFormat:@"%@/FlameDragon3.sav", dir];
 }
 
 +(id) readFromSavedFile

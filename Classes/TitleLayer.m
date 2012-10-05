@@ -110,10 +110,13 @@
 	GameStartInfo *info = [record.battleRecord retain];
 	//[record saveRecord];
 	
-	MainGameScene *mainGame = [MainGameScene node];
-	[mainGame loadWithInfo:info];
+	if (info.chapterId > 0) {
+		
+		MainGameScene *mainGame = [MainGameScene node];
+		[mainGame loadWithInfo:info];
 	
-	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:mainGame]];
+		[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:mainGame]];
+	}
 	
 	[info release];
 }
