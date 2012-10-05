@@ -86,7 +86,9 @@
 	[coder encodeInt:bodyStatus forKey:@"bodyStatus"];
 	[coder encodeInt:aiType forKey:@"aiType"];
 	[coder encodeCGPoint:[(FDPosition *)aiParam posValue] forKey:@"aiParam"];
-	
+	[coder encodeInt:attackItemIndex forKey:@"attackItemIndex"];
+    [coder encodeInt:defendItemIndex forKey:@"defendItemIndex"];
+    
 	// NSLog(@"Encoded CreatureData");
 
 }
@@ -110,7 +112,9 @@
 	self.aiParam = [FDPosition position:[coder decodeCGPointForKey:@"aiParam"]];
 	itemList = [[coder decodeObjectForKey:@"itemList"] retain];
 	magicList = [[coder decodeObjectForKey:@"magicList"] retain];
-	
+	attackItemIndex = [coder decodeIntForKey:@"attackItemIndex"];
+    defendItemIndex = [coder decodeIntForKey:@"defendItemIndex"];
+    
     return self;
 }
 

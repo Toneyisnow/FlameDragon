@@ -74,8 +74,18 @@
 		}
 	}
 	else {
-		[field cancelMove:currentFriend];
-		shouldDispose = TRUE;
+		if (![currentFriend hasActioned]) {
+			[field cancelMove:currentFriend];
+			shouldDispose = TRUE;
+		}
+		else {
+			[field closeMenu];
+			[layers creatureActionDone:currentFriend];
+			
+			isFinished = TRUE;
+			shouldDispose = TRUE;
+		}
+
 	}
 }
 

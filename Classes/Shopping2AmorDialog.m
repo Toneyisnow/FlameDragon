@@ -179,10 +179,15 @@
 	CreatureRecord *friend = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];
 	[friend.data.itemList addObject:[NSNumber numberWithInt:lastSelectedItemIndex]];
 
+	int itemIndex = [friend.data.itemList count] - 1;
 	if (equip) {
 		// Equip this item
-		
-		
+		if ([item isAttackItem]) {
+			friend.data.attackItemIndex = itemIndex;
+		}
+		if ([item isDefendItem]) {
+			friend.data.defendItemIndex = itemIndex;
+		}
 	}
 	
 	[(Shopping2Layer *)parentLayer updateMoneyBar];

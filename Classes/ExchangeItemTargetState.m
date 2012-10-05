@@ -8,6 +8,7 @@
 
 #import "ExchangeItemTargetState.h"
 #import "ItemBox.h"
+#import "ActionMenuState.h"
 
 // #import "ExchangeItemBackState.h"
 
@@ -46,8 +47,12 @@
 					
 					[layers giveItem:currentFriend ItemIndex:itemIndex Target:target];
 				
-					isFinished = TRUE;
-					shouldDispose = TRUE;
+					// Fix bug: After giving items, the creature returns to ActionItem state
+					[field showMenu:1 At:[field getObjectPos:currentFriend]];
+					nextState = [[ActionMenuState alloc] initWithLayers:layers Friend:currentFriend];
+					
+					// isFinished = TRUE;
+					// shouldDispose = TRUE;
 				}
 				else {
 					// Exchange
@@ -121,8 +126,12 @@
 	//[layers giveItem:target ItemIndex:backItemIndex Target:currentFriend];
 	//[layers giveItem:currentFriend ItemIndex:itemIndex Target:target];
 	
-	isFinished = TRUE;
-	shouldDispose = TRUE;
+	// Fix bug: After giving items, the creature returns to ActionItem state
+	[field showMenu:1 At:[field getObjectPos:currentFriend]];
+	nextState = [[ActionMenuState alloc] initWithLayers:layers Friend:currentFriend];
+	
+	// isFinished = TRUE;
+	// shouldDispose = TRUE;
 }
 
 
