@@ -509,24 +509,18 @@
 	NSNumber *itemId = [record.data.itemList objectAtIndex:lastSelectedItemIndex];
 	ItemDefinition *item = [[DataDepot depot] getItemDefinition:[itemId intValue]];
 	
-	NSLog(@"Item Id: %d", item.identifier);
+	CreatureDefinition *creatureDef = [[DataDepot depot] getCreatureDefinition:record.definitionId];
+	if (![creatureDef canEquip:[itemId intValue]]) {
+		// Cannot equip this item
+		return;
+	}
 	
 	if ([item isAttackItem]) {
-		NSLog(@"isAttackItem");
 		record.data.attackItemIndex = lastSelectedItemIndex;
 	}
 	else if ([item isDefendItem]) {
-		NSLog(@"isDefendItem");
 		record.data.defendItemIndex = lastSelectedItemIndex;
 	}
-	
-	// Testing
-	NSLog(@"item index: %d", record.data.defendItemIndex);
-	
-	FDFriend *creature = [[FDFriend alloc] initWithDefinition:record.definitionId Id:record.creatureId Data:record.data];
-
-	NSLog(@"item index: %d", creature.data.defendItemIndex);
-	
 }
 
 -(void) onInfo

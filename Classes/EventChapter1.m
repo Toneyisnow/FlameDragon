@@ -420,19 +420,19 @@
 	
 	// Hawate convert to Npc
 	BattleField *field = [[layers getFieldLayer] getField];
-	FDCreature *hawanuo = [field getCreatureById:6];
-	if (hawanuo != nil) {
+	FDCreature *hawate = [field getCreatureById:6];
+	if (hawate != nil) {
 		
 		for (int i = 1; i <= 4; i++) {
 			[self showTalkMessage:1 conversation:6 sequence:i];
 		}
 		
 		// Convert to Npc
-		CGPoint pos = [field getObjectPos:hawanuo];
-		FDNpc *hawanuoNpc = [[FDNpc alloc] initWithCreature:hawanuo];
-		[field addNpc:hawanuoNpc Position:pos];
+		CGPoint pos = [field getObjectPos:hawate];
+		FDNpc *hawateNpc = [[FDNpc alloc] initWithCreature:hawate];
+		[field addNpc:hawateNpc Position:pos];
 		
-		[field removeObject:hawanuo];
+		[field removeObject:hawate];
 	}
 }
 

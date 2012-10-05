@@ -389,6 +389,12 @@
 	}
 	
 	int itemId = [[data.itemList objectAtIndex:index] intValue];
+	
+	if (![definition canEquip:itemId]) {
+		// Cannot Equip this item
+		return;
+	}
+	
 	ItemDefinition *item = [[DataDepot depot] getItemDefinition:itemId];
 	if ([item isKindOfClass:[AttackItemDefinition class]]) {
 		data.attackItemIndex = index;
@@ -396,7 +402,6 @@
 	if ([item isKindOfClass:[DefendItemDefinition class]]) {
 		data.defendItemIndex = index;
 	}
-	
 }
 
 -(void) dropItem:(int) index

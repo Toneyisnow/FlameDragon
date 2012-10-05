@@ -12,7 +12,7 @@
 @interface CreatureDeadCondition : FDEventCondition {
 
 	int creatureId;
-	bool creatureFound;
+	//bool creatureFound;
 }
 
 -(id) initWithCreatureId:(int)c;

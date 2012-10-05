@@ -171,11 +171,18 @@
 -(void) moveCreatureId:(int)creatureId To:(CGPoint)pos showMenu:(BOOL)willShowMenu
 {
 	FDCreature *creature = [field getCreatureById:creatureId];
-	[self moveCreature:creature To:pos showMenu:willShowMenu];
+	
+	if (creature != nil) {
+		[self moveCreature:creature To:pos showMenu:willShowMenu];
+	}
 }
 
 -(void) moveCreature:(FDCreature *)creature To:(CGPoint)pos showMenu:(BOOL)willShowMenu
 {
+	if (creature == nil) {
+		return;
+	}
+	
 	// Set Cursor
 	[field setCursorTo:[field getObjectPos:creature]];
 	[field setCursorTo:pos];

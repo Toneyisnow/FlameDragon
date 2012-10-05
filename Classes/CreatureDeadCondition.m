@@ -17,38 +17,18 @@
 	self = [super init];
 	
 	creatureId = c;
-	creatureFound = FALSE;
+	//creatureFound = FALSE;
 	
 	return self;
 }
 
 -(BOOL) isMatch:(ActionLayers *)layers
 {
-	if ([layers getTurnNumber] < 1) {
-		return FALSE;
-	}
-	
 	BattleField *field = [[layers getFieldLayer] getField];
+	FDCreature *creature = [field getDeadCreatureById:creatureId];
 	
-	FDCreature *creature = [field getCreatureById:creatureId];
-	
-	if (creature == nil) {
-		
-		if (creatureFound) {
-			NSLog(@"Creature Dead Condition is matched.");
-		}
-	
-	}
-	else {
-		creatureFound = TRUE;		
-	}
-
-	
-	
-	return (creature == nil);
+	return (creature != nil);
 }
-
-
 
 
 @end
