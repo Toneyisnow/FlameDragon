@@ -7,7 +7,7 @@
 //
 
 #import "Shopping2PagedDialog.h"
-
+#import "FDSpriteStore.h"
 
 @implementation Shopping2PagedDialog
 
@@ -30,10 +30,11 @@
 	CCMenu *menu;
 	if (pageIndex > 0) {
 		
-		FDSprite *upSprite = [[FDSprite alloc] initWithString:@"A" Size:14];
+		FDSprite *upSprite = [[FDSpriteStore instance] sprite: @"Arrow_up.png"];
+		//FDSprite *upSprite = [[FDSprite alloc] initWithString:@"A" Size:14];
 		CCMenuItemSprite* upMenu = [CCMenuItemSprite itemFromNormalSprite:[upSprite getSprite] selectedSprite:NULL target:self selector:@selector(clickedUp)];
 		
-		upMenu.position = ccp(290, 65);
+		upMenu.position = ccp(280, 57);
 		upMenu.anchorPoint = ccp(0, 0);
 		
 		menu = [CCMenu menuWithItems:upMenu, nil];
@@ -43,10 +44,11 @@
 	
 	if (startIndex + max_item_count < [[self getShownList] count] ) {
 		
-		FDSprite *downSprite = [[FDSprite alloc] initWithString:@"V" Size:14];
+		FDSprite *downSprite = [[FDSpriteStore instance] sprite: @"Arrow_down.png"];
+		//FDSprite *downSprite = [[FDSprite alloc] initWithString:@"V" Size:14];
 		CCMenuItemSprite* downMenu = [CCMenuItemSprite itemFromNormalSprite:[downSprite getSprite] selectedSprite:NULL target:self selector:@selector(clickedDown)];
 		
-		downMenu.position = ccp(290, 10);
+		downMenu.position = ccp(280, 10);
 		downMenu.anchorPoint = ccp(0, 0);
 		
 		menu = [CCMenu menuWithItems:downMenu, nil];

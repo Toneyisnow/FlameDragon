@@ -193,6 +193,8 @@
 		022D38EC161B39FC0020F816 /* LoadingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 022D38EB161B39FC0020F816 /* LoadingLayer.m */; };
 		022D3AA6161F41F80020F816 /* Fight-719-2-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 022D3AA4161F41F80020F816 /* Fight-719-2-01.png */; };
 		022D3AA7161F41F80020F816 /* Fight-750-2-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 022D3AA5161F41F80020F816 /* Fight-750-2-01.png */; };
+		022D3AE216200FF90020F816 /* Arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 022D3AE016200FF90020F816 /* Arrow_down.png */; };
+		022D3AE316200FF90020F816 /* Arrow_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 022D3AE116200FF90020F816 /* Arrow_up.png */; };
 		023D07BE15CF82E700AD6FA6 /* SWScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D07B415CF82E700AD6FA6 /* SWScrollView.m */; };
 		023D34AA152834A3002D3EFD /* EventChapter2.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D34A9152834A3002D3EFD /* EventChapter2.m */; };
 		02542C4E155D4C5B0050FEC8 /* ShoppingItemDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02542C4D155D4C5B0050FEC8 /* ShoppingItemDialog.m */; };
@@ -1112,6 +1114,8 @@
 		022D38EB161B39FC0020F816 /* LoadingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingLayer.m; sourceTree = "<group>"; };
 		022D3AA4161F41F80020F816 /* Fight-719-2-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Fight-719-2-01.png"; path = "Fights/Fight-719-2-01.png"; sourceTree = "<group>"; };
 		022D3AA5161F41F80020F816 /* Fight-750-2-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Fight-750-2-01.png"; path = "Fights/Fight-750-2-01.png"; sourceTree = "<group>"; };
+		022D3AE016200FF90020F816 /* Arrow_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Arrow_down.png; path = Others/Arrow_down.png; sourceTree = "<group>"; };
+		022D3AE116200FF90020F816 /* Arrow_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Arrow_up.png; path = Others/Arrow_up.png; sourceTree = "<group>"; };
 		023D07B315CF82E700AD6FA6 /* SWScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWScrollView.h; path = tableView/SWScrollView.h; sourceTree = "<group>"; };
 		023D07B415CF82E700AD6FA6 /* SWScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWScrollView.m; path = tableView/SWScrollView.m; sourceTree = "<group>"; };
 		023D34A8152834A3002D3EFD /* EventChapter2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter2.h; sourceTree = "<group>"; };
@@ -2634,6 +2638,8 @@
 		028D691B146C0F5400FB8199 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				022D3AE016200FF90020F816 /* Arrow_down.png */,
+				022D3AE116200FF90020F816 /* Arrow_up.png */,
 				022D386A16171F0C0020F816 /* VillageLabel.png */,
 				02E42329160F3B3F0071FA29 /* Shop_MoneyBar.png */,
 				02E42321160F397D0071FA29 /* Shop_Exit_0.png */,
@@ -4150,6 +4156,8 @@
 				022D38701617242E0020F816 /* Village.strings in Resources */,
 				022D3AA6161F41F80020F816 /* Fight-719-2-01.png in Resources */,
 				022D3AA7161F41F80020F816 /* Fight-750-2-01.png in Resources */,
+				022D3AE216200FF90020F816 /* Arrow_down.png in Resources */,
+				022D3AE316200FF90020F816 /* Arrow_up.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
