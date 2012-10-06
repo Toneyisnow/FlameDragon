@@ -1386,7 +1386,7 @@
 		fRef = 02D30A621600CD0000CA1799 /* Shopping2SelectAmorTargetDialog.m */;
 		name = "Shopping2SelectAmorTargetDialog.m: 74";
 		rLen = 0;
-		rLoc = 3369;
+		rLoc = 3542;
 		rType = 0;
 		vrLen = 636;
 		vrLoc = 2067;
@@ -1436,7 +1436,7 @@
 		fRef = 02C57288151855E800DAEE2C /* CreatureData.m */;
 		name = "CreatureData.m: 42";
 		rLen = 0;
-		rLoc = 670;
+		rLoc = 692;
 		rType = 0;
 		vrLen = 470;
 		vrLoc = 204;
@@ -2157,7 +2157,7 @@
 		fRef = 02D30A621600CD0000CA1799 /* Shopping2SelectAmorTargetDialog.m */;
 		name = "Shopping2SelectAmorTargetDialog.m: 89";
 		rLen = 0;
-		rLoc = 2892;
+		rLoc = 2979;
 		rType = 0;
 		vrLen = 1036;
 		vrLoc = 2325;
@@ -2167,7 +2167,7 @@
 		fRef = 02D30A621600CD0000CA1799 /* Shopping2SelectAmorTargetDialog.m */;
 		name = "Shopping2SelectAmorTargetDialog.m: 89";
 		rLen = 0;
-		rLoc = 2892;
+		rLoc = 2979;
 		rType = 0;
 		vrLen = 989;
 		vrLoc = 2365;
@@ -2217,7 +2217,7 @@
 		fRef = 02D30A621600CD0000CA1799 /* Shopping2SelectAmorTargetDialog.m */;
 		name = "Shopping2SelectAmorTargetDialog.m: 114";
 		rLen = 0;
-		rLoc = 3369;
+		rLoc = 3542;
 		rType = 0;
 		vrLen = 971;
 		vrLoc = 3142;
@@ -2227,7 +2227,7 @@
 		fRef = 02D30A621600CD0000CA1799 /* Shopping2SelectAmorTargetDialog.m */;
 		name = "Shopping2SelectAmorTargetDialog.m: 86";
 		rLen = 0;
-		rLoc = 2821;
+		rLoc = 2908;
 		rType = 0;
 		vrLen = 1041;
 		vrLoc = 2368;
@@ -2237,7 +2237,7 @@
 		fRef = 02D30A621600CD0000CA1799 /* Shopping2SelectAmorTargetDialog.m */;
 		name = "Shopping2SelectAmorTargetDialog.m: 94";
 		rLen = 0;
-		rLoc = 3210;
+		rLoc = 3383;
 		rType = 0;
 		vrLen = 1113;
 		vrLoc = 2280;
@@ -2277,7 +2277,7 @@
 		fRef = 02D30A621600CD0000CA1799 /* Shopping2SelectAmorTargetDialog.m */;
 		name = "Shopping2SelectAmorTargetDialog.m: 111";
 		rLen = 0;
-		rLoc = 3472;
+		rLoc = 3645;
 		rType = 0;
 		vrLen = 451;
 		vrLoc = 3248;
@@ -2287,7 +2287,7 @@
 		fRef = 02D30A621600CD0000CA1799 /* Shopping2SelectAmorTargetDialog.m */;
 		name = "Shopping2SelectAmorTargetDialog.m: 110";
 		rLen = 0;
-		rLoc = 3471;
+		rLoc = 3644;
 		rType = 0;
 		vrLen = 449;
 		vrLoc = 3248;
@@ -4815,7 +4815,7 @@
 		fRef = 02C57288151855E800DAEE2C /* CreatureData.m */;
 		name = "CreatureData.m: 42";
 		rLen = 0;
-		rLoc = 670;
+		rLoc = 692;
 		rType = 0;
 		vrLen = 469;
 		vrLoc = 204;
@@ -4835,7 +4835,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 95";
 		rLen = 0;
-		rLoc = 2753;
+		rLoc = 2773;
 		rType = 0;
 		vrLen = 780;
 		vrLoc = 2046;
@@ -4955,7 +4955,7 @@
 		fRef = 02C57288151855E800DAEE2C /* CreatureData.m */;
 		name = "CreatureData.m: 65";
 		rLen = 0;
-		rLoc = 1178;
+		rLoc = 1200;
 		rType = 0;
 		vrLen = 790;
 		vrLoc = 756;
@@ -5095,7 +5095,7 @@
 		fRef = 02C57288151855E800DAEE2C /* CreatureData.m */;
 		name = "CreatureData.m: 65";
 		rLen = 0;
-		rLoc = 1178;
+		rLoc = 1200;
 		rType = 0;
 		vrLen = 591;
 		vrLoc = 0;
@@ -5245,7 +5245,7 @@
 		fRef = 027334C9149A457C00D0812F /* CreatureDetail.m */;
 		name = "CreatureDetail.m: 69";
 		rLen = 0;
-		rLoc = 2083;
+		rLoc = 2103;
 		rType = 0;
 		vrLen = 1277;
 		vrLoc = 467;
@@ -5255,7 +5255,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 268";
 		rLen = 0;
-		rLoc = 6790;
+		rLoc = 6680;
 		rType = 0;
 		vrLen = 732;
 		vrLoc = 6527;
@@ -5275,7 +5275,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 268";
 		rLen = 0;
-		rLoc = 6790;
+		rLoc = 6680;
 		rType = 0;
 		vrLen = 761;
 		vrLoc = 6527;
@@ -5285,7 +5285,7 @@
 		fRef = 02C57288151855E800DAEE2C /* CreatureData.m */;
 		name = "CreatureData.m: 90";
 		rLen = 0;
-		rLoc = 2153;
+		rLoc = 2175;
 		rType = 0;
 		vrLen = 888;
 		vrLoc = 2098;
@@ -5950,7 +5950,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 404";
 		rLen = 0;
-		rLoc = 9490;
+		rLoc = 8380;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 8873;
@@ -6219,7 +6219,7 @@
 		fRef = 02C57288151855E800DAEE2C /* CreatureData.m */;
 		name = "CreatureData.m: 116";
 		rLen = 0;
-		rLoc = 3128;
+		rLoc = 3150;
 		rType = 0;
 		vrLen = 1156;
 		vrLoc = 2017;
@@ -6465,7 +6465,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 404";
 		rLen = 0;
-		rLoc = 9490;
+		rLoc = 8380;
 		rType = 0;
 		vrLen = 783;
 		vrLoc = 295;
@@ -6475,7 +6475,7 @@
 		fRef = 02C57288151855E800DAEE2C /* CreatureData.m */;
 		name = "CreatureData.m: 116";
 		rLen = 0;
-		rLoc = 3128;
+		rLoc = 3150;
 		rType = 0;
 		vrLen = 1156;
 		vrLoc = 2017;
@@ -6579,6 +6579,45 @@
 		rType = 0;
 		vrLen = 301;
 		vrLoc = 0;
+	};
+	022D3AC01620091C0020F816 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 027D54191462BBB8002C310F /* BattleField.m */;
+		name = "BattleField.m: 736";
+		rLen = 0;
+		rLoc = 17230;
+		rType = 0;
+		vrLen = 740;
+		vrLoc = 16952;
+	};
+	022D3AC11620091C0020F816 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 02C57288151855E800DAEE2C /* CreatureData.m */;
+		name = "CreatureData.m: 162";
+		rLen = 0;
+		rLoc = 3977;
+		rType = 0;
+		vrLen = 479;
+		vrLoc = 3159;
+	};
+	022D3AC21620091C0020F816 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Incomplete implementation of class 'FDCreature'";
+		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 395;
+		rType = 1;
+	};
+	022D3AC31620091C0020F816 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
+		name = "FDCreature.m: 396";
+		rLen = 0;
+		rLoc = 8860;
+		rType = 0;
+		vrLen = 264;
+		vrLoc = 8601;
 	};
 	023D07B315CF82E700AD6FA6 /* SWScrollView.h */ = {
 		uiCtxt = {
@@ -7070,9 +7109,9 @@
 	};
 	027334C9149A457C00D0812F /* CreatureDetail.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {768, 1352}}";
-			sepNavSelRange = "{2083, 0}";
-			sepNavVisRange = "{467, 1277}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 1339}}";
+			sepNavSelRange = "{650, 0}";
+			sepNavVisRange = "{257, 1056}";
 		};
 	};
 	027334E9149B33EA00D0812F /* PBXTextBookmark */ = {
@@ -7967,16 +8006,16 @@
 	};
 	027D54091462B712002C310F /* FDCreature.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 2080}}";
-			sepNavSelRange = "{2071, 0}";
-			sepNavVisRange = "{2415, 652}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 2015}}";
+			sepNavSelRange = "{3007, 0}";
+			sepNavVisRange = "{2398, 660}";
 		};
 	};
 	027D540A1462B712002C310F /* FDCreature.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {957, 6019}}";
-			sepNavSelRange = "{9467, 0}";
-			sepNavVisRange = "{295, 783}";
+			sepNavIntBoundsRect = "{{0, 0}, {848, 5486}}";
+			sepNavSelRange = "{8860, 0}";
+			sepNavVisRange = "{8601, 264}";
 		};
 	};
 	027D540C1462B755002C310F /* FDDrawable.h */ = {
@@ -8031,9 +8070,9 @@
 	};
 	027D54191462BBB8002C310F /* BattleField.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {866, 13715}}";
-			sepNavSelRange = "{17181, 0}";
-			sepNavVisRange = "{16871, 958}";
+			sepNavIntBoundsRect = "{{0, 0}, {866, 13728}}";
+			sepNavSelRange = "{17230, 0}";
+			sepNavVisRange = "{16952, 740}";
 		};
 	};
 	027D541B1462BC7B002C310F /* GroundBlock.h */ = {
@@ -8658,7 +8697,7 @@
 		fRef = 02C57288151855E800DAEE2C /* CreatureData.m */;
 		name = "CreatureData.m: 42";
 		rLen = 0;
-		rLoc = 670;
+		rLoc = 692;
 		rType = 0;
 		vrLen = 454;
 		vrLoc = 416;
@@ -9518,9 +9557,9 @@
 	};
 	0297DEAC148E5273007F3E12 /* GameFormula.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {915, 1248}}";
-			sepNavSelRange = "{2753, 0}";
-			sepNavVisRange = "{2046, 780}";
+			sepNavIntBoundsRect = "{{0, 0}, {768, 1313}}";
+			sepNavSelRange = "{889, 0}";
+			sepNavVisRange = "{221, 1080}";
 		};
 	};
 	0297DF4F148E6393007F3E12 /* PBXTextBookmark */ = {
@@ -11039,16 +11078,16 @@
 	};
 	02C57287151855E800DAEE2C /* CreatureData.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 1196}}";
-			sepNavSelRange = "{836, 0}";
-			sepNavVisRange = "{885, 755}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 1365}}";
+			sepNavSelRange = "{1180, 0}";
+			sepNavVisRange = "{861, 768}";
 		};
 	};
 	02C57288151855E800DAEE2C /* CreatureData.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 1703}}";
-			sepNavSelRange = "{3128, 0}";
-			sepNavVisRange = "{1267, 1113}";
+			sepNavIntBoundsRect = "{{0, 0}, {848, 3432}}";
+			sepNavSelRange = "{3977, 0}";
+			sepNavVisRange = "{3159, 479}";
 		};
 	};
 	02C5728C1519944E00DAEE2C /* CreatureRecord.h */ = {
@@ -11150,7 +11189,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 47";
 		rLen = 0;
-		rLoc = 1280;
+		rLoc = 1300;
 		rType = 0;
 		vrLen = 722;
 		vrLoc = 121;
@@ -11499,7 +11538,7 @@
 		fRef = 027334C9149A457C00D0812F /* CreatureDetail.m */;
 		name = "CreatureDetail.m: 69";
 		rLen = 0;
-		rLoc = 2083;
+		rLoc = 2103;
 		rType = 0;
 		vrLen = 784;
 		vrLoc = 2243;
@@ -11693,9 +11732,9 @@
 	};
 	02D30A621600CD0000CA1799 /* Shopping2SelectAmorTargetDialog.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1209, 1625}}";
-			sepNavSelRange = "{1510, 0}";
-			sepNavVisRange = "{578, 1090}";
+			sepNavIntBoundsRect = "{{0, 0}, {1209, 1716}}";
+			sepNavSelRange = "{3312, 0}";
+			sepNavVisRange = "{2280, 1288}";
 		};
 	};
 	02D30A641600CF4D00CA1799 /* Shopping2ShowFriendsDialog.h */ = {
@@ -12165,7 +12204,7 @@
 		fRef = 027D54091462B712002C310F /* FDCreature.h */;
 		name = "FDCreature.h: 157";
 		rLen = 0;
-		rLoc = 3010;
+		rLoc = 3073;
 		rType = 0;
 		vrLen = 788;
 		vrLoc = 1513;
@@ -13841,6 +13880,10 @@
 			022D3AA1161F40400020F816 /* PBXTextBookmark */ = 022D3AA1161F40400020F816 /* PBXTextBookmark */;
 			022D3AA2161F40400020F816 /* PBXTextBookmark */ = 022D3AA2161F40400020F816 /* PBXTextBookmark */;
 			022D3AA3161F40400020F816 /* PBXTextBookmark */ = 022D3AA3161F40400020F816 /* PBXTextBookmark */;
+			022D3AC01620091C0020F816 /* PBXTextBookmark */ = 022D3AC01620091C0020F816 /* PBXTextBookmark */;
+			022D3AC11620091C0020F816 /* PBXTextBookmark */ = 022D3AC11620091C0020F816 /* PBXTextBookmark */;
+			022D3AC21620091C0020F816 /* XCBuildMessageTextBookmark */ = 022D3AC21620091C0020F816 /* XCBuildMessageTextBookmark */;
+			022D3AC31620091C0020F816 /* PBXTextBookmark */ = 022D3AC31620091C0020F816 /* PBXTextBookmark */;
 			023D07CD15CF839400AD6FA6 = 023D07CD15CF839400AD6FA6 /* PBXTextBookmark */;
 			023D348C1528337E002D3EFD = 023D348C1528337E002D3EFD /* PBXTextBookmark */;
 			023D348F1528337E002D3EFD = 023D348F1528337E002D3EFD /* PBXTextBookmark */;

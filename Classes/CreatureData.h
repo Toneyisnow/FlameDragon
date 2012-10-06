@@ -64,6 +64,18 @@ typedef enum AIType {
 +(int) ITEM_MAX;
 +(int) MAGIC_MAX;
 
+// Calculated Values
+-(int) hit;
+-(int) ev;
+-(int) ap;
+-(int) dp;
+-(int) hitWithItem:(int)itemId;
+-(int) evWithItem:(int)itemId;
+-(int) apWithItem:(int)itemId;
+-(int) dpWithItem:(int)itemId;
+
+-(AttackItemDefinition *) getAttackItem;
+-(DefendItemDefinition *) getDefendItem;
 
 @property (nonatomic,retain) NSMutableArray *magicList;
 @property (nonatomic,retain) NSMutableArray *itemList;

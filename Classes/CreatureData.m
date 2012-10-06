@@ -8,6 +8,7 @@
 
 #import "CreatureData.h"
 #import "FDPosition.h"
+#import "DataDepot.h"
 
 @implementation CreatureData
 
@@ -116,6 +117,149 @@
     defendItemIndex = [coder decodeIntForKey:@"defendItemIndex"];
     
     return self;
+}
+
+-(int) hit
+{
+	int deltaHit = 0;
+	AttackItemDefinition *item = [self getAttackItem];
+	if (item != nil && [item isAttackItem]) 
+	{
+		deltaHit = item.hit;
+	}
+	
+	return dx + deltaHit;
+}
+
+-(int) hitWithItem:(int)itemId
+{
+	int deltaHit = 0;
+	AttackItemDefinition *item = (AttackItemDefinition *)[[DataDepot depot] getItemDefinition:itemId];
+	if (item != nil && [item isAttackItem]) 
+	{
+		deltaHit = item.hit;
+		return dx + deltaHit;
+	}
+	else {
+		return [self hit];
+	}	
+}
+
+-(int) ev
+{
+	int deltaEv = 0;
+	
+	AttackItemDefinition *attackItem = [self getAttackItem];
+	if (attackItem != nil && [attackItem isAttackItem]) {
+		deltaEv += attackItem.ev;
+	}
+	
+	DefendItemDefinition *defendItem = [self getDefendItem];
+	if (defendItem != nil && [defendItem isDefendItem]) {
+		deltaEv += defendItem.ev;
+	}
+	
+	return dx + deltaEv;
+}
+
+-(int) evWithItem:(int)itemId
+{
+	int deltaEv = 0;
+	
+	ItemDefinition *item = [[DataDepot depot] getItemDefinition:itemId];
+	AttackItemDefinition *attackItem = [self getAttackItem];
+	DefendItemDefinition *defendItem = [self getDefendItem];
+	
+	if (item != nil) {
+		if ([item isAttackItem]) {
+			deltaEv = ((AttackItemDefinition *)item).ev;
+		}
+		if ([item isDefendItem]) {
+			deltaEv = ((DefendItemDefinition *)item).ev;
+		}
+	}
+	
+	if ((item == nil || ![item isAttackItem]) && attackItem != nil && [attackItem isAttackItem]) {
+		deltaEv = attackItem.ev;
+	}
+	
+	if ((item == nil || ![item isDefendItem]) && defendItem != nil && [defendItem isDefendItem]) {
+		deltaEv = defendItem.ev;
+	}
+	
+	return dx + deltaEv;	
+}
+
+-(int) ap
+{
+	int deltaAp = 0;
+	
+	AttackItemDefinition *attackItem = [self getAttackItem];
+	if (attackItem != nil && [attackItem isAttackItem]) {
+		deltaAp = attackItem.ap;
+	}
+	
+	return ap + deltaAp;
+}
+
+-(int) apWithItem:(int)itemId
+{
+	AttackItemDefinition *item = (AttackItemDefinition *)[[DataDepot depot] getItemDefinition:itemId];
+	int deltaAp = 0;
+	
+	if (item != nil && [item isAttackItem]) {
+		deltaAp = item.ap;
+		return deltaAp + ap;
+	} else {
+		return [self ap];
+	}
+}
+
+-(int) dp
+{
+	int deltaDp = 0;
+	
+	DefendItemDefinition *defendItem = [self getDefendItem];
+	if (defendItem != nil && [defendItem isDefendItem]) {
+		deltaDp = defendItem.dp;
+	}
+	
+	return dp + deltaDp;	
+}
+
+-(int) dpWithItem:(int)itemId
+{
+	DefendItemDefinition *item = (DefendItemDefinition *)[[DataDepot depot] getItemDefinition:itemId];
+	int deltaDp = 0;
+	
+	if (item != nil && [item isDefendItem]) {
+		deltaDp = item.dp;
+		return dp + deltaDp;	
+		
+	} else {
+		return [self dp];
+	}
+}
+
+-(AttackItemDefinition *) getAttackItem
+{
+	if (attackItemIndex >= 0) {
+		int itemId = [[itemList objectAtIndex: attackItemIndex] intValue];
+		AttackItemDefinition *def = (AttackItemDefinition *)[[DataDepot depot] getItemDefinition:itemId];
+		return def;
+	}
+	return nil;
+}
+
+-(DefendItemDefinition *) getDefendItem
+{
+	if (defendItemIndex >= 0) {
+		
+		int itemId = [[itemList objectAtIndex: defendItemIndex] intValue];
+		DefendItemDefinition *def = (DefendItemDefinition *)[[DataDepot depot] getItemDefinition:itemId];
+		return def;
+	}
+	return nil;
 }
 
 -(void) dealloc

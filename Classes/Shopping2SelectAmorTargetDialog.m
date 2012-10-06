@@ -77,20 +77,21 @@
 		
 		[nameSprite release];
 		
+		
 		// AP
-		NSString *ap = [NSString stringWithFormat:@"AP %03d -> %03d", 20, 35];
+		NSString *ap = [NSString stringWithFormat:@"AP %03d -> %03d", [record.data ap], [record.data apWithItem:itemId]];
 		[self addLabel:ap Location:CGPointMake(startX + 80, startY - intervalY * i + 10) Size:9];
 		
 		// DP
-		NSString *dp = [NSString stringWithFormat:@"DP %03d -> %03d", 120, 235];
+		NSString *dp = [NSString stringWithFormat:@"DP %03d -> %03d", [record.data dp], [record.data dpWithItem:itemId]];
 		[self addLabel:dp Location:CGPointMake(startX + 80, startY - intervalY * i) Size:9];
 		
 		// HIT
-		NSString *hit = [NSString stringWithFormat:@"HIT %03d -> %03d", 20, 35];
+		NSString *hit = [NSString stringWithFormat:@"HIT %03d -> %03d", [record.data hit], [record.data hitWithItem:itemId]];
 		[self addLabel:hit Location:CGPointMake(startX + 150, startY - intervalY * i + 10) Size:9];
 		
 		// EV
-		NSString *ev = [NSString stringWithFormat:@"EV  %03d -> %03d", 120, 235];
+		NSString *ev = [NSString stringWithFormat:@"EV  %03d -> %03d", [record.data ev], [record.data evWithItem:itemId]];
 		[self addLabel:ev Location:CGPointMake(startX + 150, startY - intervalY * i) Size:9];		
 		
 		

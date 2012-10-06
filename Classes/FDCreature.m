@@ -263,59 +263,6 @@
 	return message;
 }
 
--(int) hit
-{
-	int deltaHit = 0;
-	AttackItemDefinition *item = [self getAttackItem];
-	if (item != nil && [item isKindOfClass:[AttackItemDefinition class]]) 
-	{
-		deltaHit += item.hit;
-	}
-	
-	return data.dx + deltaHit;
-}
-
--(int) ev
-{
-	int deltaEv = 0;
-	
-	AttackItemDefinition *attackItem = [self getAttackItem];
-	if (attackItem != nil && [attackItem isKindOfClass:[AttackItemDefinition class]]) {
-		deltaEv += attackItem.ev;
-	}
-	
-	DefendItemDefinition *defendItem = [self getDefendItem];
-	if (defendItem != nil && [defendItem isKindOfClass:[DefendItemDefinition class]]) {
-		deltaEv += defendItem.ev;
-	}
-	
-	return data.dx + deltaEv;
-}
-
--(int) ap
-{
-	int deltaAp = 0;
-	
-	AttackItemDefinition *attackItem = [self getAttackItem];
-	if (attackItem != nil && [attackItem isKindOfClass:[AttackItemDefinition class]]) {
-		deltaAp += attackItem.ap;
-	}
-	
-	return data.ap + deltaAp;
-}
-
--(int) dp
-{
-	int deltaDp = 0;
-	
-	DefendItemDefinition *defendItem = [self getDefendItem];
-	if (defendItem != nil && [defendItem isKindOfClass:[DefendItemDefinition class]]) {
-		deltaDp += defendItem.dp;
-	}
-	
-	return data.dp + deltaDp;	
-}
-
 -(void) startTurn
 {
 	hasActioned = FALSE;
@@ -427,27 +374,6 @@
 -(CreatureType) getCreatureType
 {
 	return creatureType;
-}
-
--(AttackItemDefinition *) getAttackItem
-{
-	if (data.attackItemIndex >= 0) {
-		int itemId = [[data.itemList objectAtIndex: data.attackItemIndex] intValue];
-		AttackItemDefinition *def = (AttackItemDefinition *)[[DataDepot depot] getItemDefinition:itemId];
-		return def;
-	}
-	return nil;
-}
-
--(DefendItemDefinition *) getDefendItem
-{
-	if (data.defendItemIndex >= 0) {
-		
-		int itemId = [[data.itemList objectAtIndex: data.defendItemIndex] intValue];
-		DefendItemDefinition *def = (DefendItemDefinition *)[[DataDepot depot] getItemDefinition:itemId];
-		return def;
-	}
-	return nil;
 }
 
 -(FDRange *)attackRange

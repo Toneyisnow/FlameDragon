@@ -142,14 +142,17 @@ typedef enum ActionStatus {
 
 -(NSString *) getName;
 
--(AttackItemDefinition *) getAttackItem;
--(DefendItemDefinition *) getDefendItem;
-
-// Calculated Values
+// Calculated Values, Moved to data
+/*
 -(int) hit;
 -(int) ev;
 -(int) ap;
 -(int) dp;
+-(int) hitWithItem:(int)itemId;
+-(int) evWithItem:(int)itemId;
+-(int) apWithItem:(int)itemId;
+-(int) dpWithItem:(int)itemId;
+*/
 
 @property (nonatomic) BOOL hasMoved, hasActioned;
 @property (nonatomic) int hpPrevious, mpPrevious;
