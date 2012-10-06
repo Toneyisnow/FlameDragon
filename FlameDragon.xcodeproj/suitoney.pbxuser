@@ -3450,7 +3450,7 @@
 		fRef = 0273395C14A9751000D0812F /* FDLocalString.m */;
 		name = "FDLocalString.m: 79";
 		rLen = 0;
-		rLoc = 2592;
+		rLoc = 2598;
 		rType = 0;
 		vrLen = 791;
 		vrLoc = 2060;
@@ -3509,7 +3509,7 @@
 		fRef = 0273395B14A9751000D0812F /* FDLocalString.h */;
 		name = "FDLocalString.h: 28";
 		rLen = 19;
-		rLoc = 752;
+		rLoc = 755;
 		rType = 0;
 		vrLen = 863;
 		vrLoc = 0;
@@ -3549,7 +3549,7 @@
 		fRef = 0273395C14A9751000D0812F /* FDLocalString.m */;
 		name = "FDLocalString.m: 78";
 		rLen = 0;
-		rLoc = 2538;
+		rLoc = 2544;
 		rType = 0;
 		vrLen = 937;
 		vrLoc = 2060;
@@ -4945,7 +4945,7 @@
 		fRef = 027D54191462BBB8002C310F /* BattleField.m */;
 		name = "BattleField.m: 731";
 		rLen = 65;
-		rLoc = 16952;
+		rLoc = 17154;
 		rType = 0;
 		vrLen = 949;
 		vrLoc = 16918;
@@ -6398,7 +6398,7 @@
 		fRef = 027D54191462BBB8002C310F /* BattleField.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 735;
+		rLoc = 748;
 		rType = 1;
 	};
 	022D3A8C161F3EDE0020F816 /* PBXTextBookmark */ = {
@@ -6406,7 +6406,7 @@
 		fRef = 027D54191462BBB8002C310F /* BattleField.m */;
 		name = "BattleField.m: 736";
 		rLen = 0;
-		rLoc = 17181;
+		rLoc = 17383;
 		rType = 0;
 		vrLen = 735;
 		vrLoc = 16952;
@@ -6417,7 +6417,7 @@
 		fRef = 027D54191462BBB8002C310F /* BattleField.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 735;
+		rLoc = 748;
 		rType = 1;
 	};
 	022D3A90161F3F070020F816 /* PBXTextBookmark */ = {
@@ -6425,7 +6425,7 @@
 		fRef = 027D54191462BBB8002C310F /* BattleField.m */;
 		name = "BattleField.m: 736";
 		rLen = 0;
-		rLoc = 17230;
+		rLoc = 17432;
 		rType = 0;
 		vrLen = 740;
 		vrLoc = 16952;
@@ -6525,7 +6525,7 @@
 		fRef = 027D54191462BBB8002C310F /* BattleField.m */;
 		name = "BattleField.m: 736";
 		rLen = 0;
-		rLoc = 17181;
+		rLoc = 17383;
 		rType = 0;
 		vrLen = 958;
 		vrLoc = 16871;
@@ -6585,7 +6585,7 @@
 		fRef = 027D54191462BBB8002C310F /* BattleField.m */;
 		name = "BattleField.m: 736";
 		rLen = 0;
-		rLoc = 17230;
+		rLoc = 17432;
 		rType = 0;
 		vrLen = 740;
 		vrLoc = 16952;
@@ -6664,7 +6664,7 @@
 		fRef = 023D34A9152834A3002D3EFD /* EventChapter2.m */;
 		name = "EventChapter2.m: 325";
 		rLen = 0;
-		rLoc = 12151;
+		rLoc = 11822;
 		rType = 0;
 		vrLen = 692;
 		vrLoc = 13111;
@@ -6872,9 +6872,9 @@
 	};
 	023D34A9152834A3002D3EFD /* EventChapter2.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {915, 5161}}";
-			sepNavSelRange = "{12151, 0}";
-			sepNavVisRange = "{13111, 692}";
+			sepNavIntBoundsRect = "{{0, 0}, {915, 5057}}";
+			sepNavSelRange = "{4914, 92}";
+			sepNavVisRange = "{4291, 1162}";
 		};
 	};
 	023D34DB152839C7002D3EFD /* PBXTextBookmark */ = {
@@ -7607,16 +7607,16 @@
 	};
 	0273395B14A9751000D0812F /* FDLocalString.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {754, 455}}";
-			sepNavSelRange = "{752, 19}";
-			sepNavVisRange = "{0, 863}";
+			sepNavIntBoundsRect = "{{0, 0}, {775, 455}}";
+			sepNavSelRange = "{282, 0}";
+			sepNavVisRange = "{23, 848}";
 		};
 	};
 	0273395C14A9751000D0812F /* FDLocalString.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {848, 1248}}";
-			sepNavSelRange = "{2592, 0}";
-			sepNavVisRange = "{2060, 791}";
+			sepNavIntBoundsRect = "{{0, 0}, {775, 1287}}";
+			sepNavSelRange = "{879, 0}";
+			sepNavVisRange = "{156, 1229}";
 		};
 	};
 	0273398514A9793500D0812F /* PBXTextBookmark */ = {
@@ -8263,16 +8263,16 @@
 	};
 	027D54181462BBB8002C310F /* BattleField.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {779, 1274}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 1274}}";
 			sepNavSelRange = "{1577, 52}";
-			sepNavVisRange = "{832, 1003}";
+			sepNavVisRange = "{190, 703}";
 		};
 	};
 	027D54191462BBB8002C310F /* BattleField.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {866, 13728}}";
-			sepNavSelRange = "{17230, 0}";
-			sepNavVisRange = "{16952, 740}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 13910}}";
+			sepNavSelRange = "{13174, 0}";
+			sepNavVisRange = "{12943, 687}";
 		};
 	};
 	027D541B1462BC7B002C310F /* GroundBlock.h */ = {
@@ -8524,9 +8524,9 @@
 	};
 	027D57BB14681009002C310F /* IFieldActionable.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {812, 1079}}";
-			sepNavSelRange = "{2407, 0}";
-			sepNavVisRange = "{1690, 772}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 1157}}";
+			sepNavSelRange = "{1275, 49}";
+			sepNavVisRange = "{585, 1155}";
 		};
 	};
 	027D57BC1468185A002C310F /* ActionDispatcher.h */ = {
@@ -8559,7 +8559,7 @@
 	};
 	027D580114695ACF002C310F /* IField.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {823, 316}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 420}}";
 			sepNavSelRange = "{279, 0}";
 			sepNavVisRange = "{0, 404}";
 		};
@@ -8867,7 +8867,7 @@
 		fRef = 02C57216150C612900DAEE2C /* EventLoader.m */;
 		name = "EventLoader.m: 95";
 		rLen = 0;
-		rLoc = 2816;
+		rLoc = 2929;
 		rType = 0;
 		vrLen = 1288;
 		vrLoc = 1851;
@@ -9708,9 +9708,9 @@
 	};
 	0297DCB0148B8D85007F3E12 /* FDTalkActivity.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {823, 559}}";
-			sepNavSelRange = "{606, 0}";
-			sepNavVisRange = "{188, 437}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 559}}";
+			sepNavSelRange = "{393, 0}";
+			sepNavVisRange = "{127, 500}";
 		};
 	};
 	0297DD26148BA325007F3E12 /* TalkMessage.h */ = {
@@ -10863,7 +10863,7 @@
 		fRef = 0273395B14A9751000D0812F /* FDLocalString.h */;
 		name = "FDLocalString.h: 24";
 		rLen = 0;
-		rLoc = 628;
+		rLoc = 631;
 		rType = 0;
 		vrLen = 817;
 		vrLoc = 0;
@@ -10883,7 +10883,7 @@
 		fRef = 0273395C14A9751000D0812F /* FDLocalString.m */;
 		name = "FDLocalString.m: 91";
 		rLen = 0;
-		rLoc = 2998;
+		rLoc = 3004;
 		rType = 0;
 		vrLen = 1067;
 		vrLoc = 1144;
@@ -10967,8 +10967,8 @@
 	};
 	02BB39DF160DCA24006BEE76 /* Shopping2PagedDialog.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1160, 1144}}";
-			sepNavSelRange = "{192, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1160, 1001}}";
+			sepNavSelRange = "{964, 0}";
 			sepNavVisRange = "{604, 1171}";
 		};
 	};
@@ -11227,9 +11227,9 @@
 	};
 	02C57216150C612900DAEE2C /* EventLoader.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {915, 1521}}";
-			sepNavSelRange = "{2268, 0}";
-			sepNavVisRange = "{2266, 922}";
+			sepNavIntBoundsRect = "{{0, 0}, {915, 1443}}";
+			sepNavSelRange = "{2799, 10}";
+			sepNavVisRange = "{2097, 1187}";
 		};
 	};
 	02C57219150C61E800DAEE2C /* EventLoaderFactory.h */ = {
@@ -12431,9 +12431,9 @@
 	};
 	02D30C8316038E1100CA1799 /* Chapter-02.strings */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1066, 1872}}";
-			sepNavSelRange = "{201, 0}";
-			sepNavVisRange = "{0, 911}";
+			sepNavIntBoundsRect = "{{0, 0}, {1066, 1846}}";
+			sepNavSelRange = "{2107, 0}";
+			sepNavVisRange = "{1508, 954}";
 		};
 	};
 	02D30C971605693400CA1799 /* PBXTextBookmark */ = {
@@ -12481,7 +12481,7 @@
 		fRef = 027D54191462BBB8002C310F /* BattleField.m */;
 		name = "BattleField.m: 626";
 		rLen = 0;
-		rLoc = 14947;
+		rLoc = 15099;
 		rType = 0;
 		vrLen = 606;
 		vrLoc = 14634;
@@ -13248,7 +13248,7 @@
 		fRef = 027D57BB14681009002C310F /* IFieldActionable.h */;
 		name = "IFieldActionable.h: 85";
 		rLen = 0;
-		rLoc = 2407;
+		rLoc = 2456;
 		rType = 0;
 		vrLen = 772;
 		vrLoc = 1690;

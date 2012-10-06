@@ -14,7 +14,7 @@
 }
 
 +(NSString *) chapter:(int)charId conversation:(int)converId sequence:(int)sequenceId;
-+(NSString *) chapter:(int)charId conversation:(int)converId sequence:(int)sequenceId choice:(char)choice;
+// +(NSString *) chapter:(int)charId conversation:(int)converId sequence:(int)sequenceId choice:(char)choice;
 +(NSString *) chapterCreature:(int)charId conversation:(int)converId sequence:(int)sequenceId;
 
 +(NSString *) race:(int)raceId;

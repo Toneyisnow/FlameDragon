@@ -256,7 +256,7 @@
 	
 	[layers appendToCurrentActivity:[[[FDDurationActivity alloc] initWithDuration:0.5] autorelease]];
 	
-	for (int i = 1; i <= 6; i++) {
+	for (int i = 1; i <= 9; i++) {
 		[self showTalkMessage:2 conversation:2 sequence:i];
 	}
 	
@@ -295,14 +295,7 @@
 		isAllNpcSaved = FALSE;
 	}
 	
-	NSString *talkMessage = [FDLocalString chapter:2 conversation:3 sequence:1 choice:(isAllNpcSaved ? 'B' : 'A')];
-	FDCreature *creature = [field getCreatureById:92];
-	if (creature == nil) {
-		creature = [field getDeadCreatureById:92];
-	}
-	
-	FDTalkActivity *talk = [[FDTalkActivity alloc] initWithCreature:creature Message:talkMessage Layer:[layers getMessageLayer]];
-	[layers appendToCurrentActivity:talk];
+	[self showTalkMessage:2 conversation:3 sequence:(isAllNpcSaved ? 101 : 1)];
 	
 	[layers appendToCurrentActivityMethod:@selector(enemyClear_2) Param1:nil Param2:nil Obj:self];
 	

@@ -50,6 +50,7 @@
 
 -(void) setCursorTo:(CGPoint)pos;
 -(void) setCursorObjTo:(FDPosition *)pos;
+-(void) setCursorToObject:(FDBattleObject *)obj;
 
 //-(void) moveCursorTo:(CGPoint)pos AndTo:(CGPoint)pos2;
 

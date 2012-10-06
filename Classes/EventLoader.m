@@ -90,7 +90,10 @@
 		creature = [field getDeadCreatureById:[creatureIdStr intValue]];
 	}
 	
-	FDTalkActivity *talk = [[FDTalkActivity alloc] initWithCreature:creature Message:talkMessage Layer:[layers getMessageLayer]];
+	
+	[layers appendToCurrentActivityMethod:@selector(setCursorToObject:) Param1:creature Param2:nil Obj:field];
+	
+	FDTalkActivity *talk = [[FDTalkActivity alloc] initWithCreature:creature Message:talkMessage Layer:[layers getMessageLayer]];	
 	[layers appendToCurrentActivity:talk];	
 }
 

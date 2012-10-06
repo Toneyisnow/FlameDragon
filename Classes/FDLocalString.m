@@ -20,12 +20,14 @@
 	return NSLocalizedStringFromTable(idStr, fileName, @"comment");
 }
 
+/*
 +(NSString *) chapter:(int)charId conversation:(int)converId sequence:(int)sequenceId choice:(char)choice
 {
 	NSString *idStr = [NSString stringWithFormat:@"%02d-%02d-%03d-%c", charId, converId, sequenceId, choice];
 	NSString *fileName = [NSString stringWithFormat:@"Chapter-%02d", charId];
 	return NSLocalizedStringFromTable(idStr, fileName, @"comment");
 }
+*/
 
 +(NSString *) chapterCreature:(int)charId conversation:(int)converId sequence:(int)sequenceId
 {

@@ -531,6 +531,16 @@
 	[self setCursorTo:[pos posValue]];
 }
 
+-(void) setCursorToObject:(FDBattleObject *)obj
+{
+	if (obj == nil) {
+		return;
+	}
+	
+	CGPoint loc = [self getObjectPos:obj];
+	[self setCursorTo:loc];
+}
+
 -(void) setCursorTo:(CGPoint)pos
 {
 	CGPoint loc = [self convertPosToLoc:pos];
@@ -694,6 +704,9 @@
 
 -(CGPoint) getObjectPos:(FDBattleObject *)obj
 {
+	if (obj == nil) {
+		return CGPointMake(0, 0);
+	}
 	return [self convertLocToPos:[obj getLocation]];
 }
 
