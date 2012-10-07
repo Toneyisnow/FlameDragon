@@ -243,7 +243,7 @@
 
 -(AttackItemDefinition *) getAttackItem
 {
-	if (attackItemIndex >= 0) {
+	if (attackItemIndex >= 0 && attackItemIndex < [itemList count]) {
 		int itemId = [[itemList objectAtIndex: attackItemIndex] intValue];
 		AttackItemDefinition *def = (AttackItemDefinition *)[[DataDepot depot] getItemDefinition:itemId];
 		return def;
@@ -253,13 +253,33 @@
 
 -(DefendItemDefinition *) getDefendItem
 {
-	if (defendItemIndex >= 0) {
+	if (defendItemIndex >= 0 && defendItemIndex < [itemList count]) {
 		
 		int itemId = [[itemList objectAtIndex: defendItemIndex] intValue];
 		DefendItemDefinition *def = (DefendItemDefinition *)[[DataDepot depot] getItemDefinition:itemId];
 		return def;
 	}
 	return nil;
+}
+
+-(void) removeItem:(int)index
+{
+	if (index >= 0 && index < [itemList count]) {
+		
+		[itemList removeObjectAtIndex:index];
+		
+		if (attackItemIndex == index) {
+			attackItemIndex = -1;
+		} else if (attackItemIndex > index) {
+			attackItemIndex --;
+		}
+		
+		if (defendItemIndex == index) {
+			defendItemIndex = -1;
+		} else if (defendItemIndex > index) {
+			defendItemIndex --;
+		}
+	}
 }
 
 -(void) dealloc

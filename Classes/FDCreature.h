@@ -133,7 +133,7 @@ typedef enum ActionStatus {
 -(int) getItemId:(int) index;
 -(BOOL) isItemListFull;
 
--(void) removeItem:(int)index;
+//-(void) removeItem:(int)index;
 -(void) addItem:(int)itemId;
 
 -(void) equipEquipment:(int) index;

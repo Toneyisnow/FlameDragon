@@ -302,7 +302,7 @@
 {
 	return [data.itemList count] >= 8;
 }
-
+/*
 -(void) removeItem:(int)index
 {
 	if (index >= [data.itemList count]) {
@@ -323,7 +323,7 @@
 		data.defendItemIndex --;
 	}
 }
-
+*/
 -(void) addItem:(int)itemId
 {
 	[data.itemList addObject:[NSNumber numberWithInt:itemId]];
@@ -358,7 +358,7 @@
 	NSLog(@"Drop Item %d", index);
 	
 	
-	[self removeItem:index];
+	[data removeItem:index];
 }
 
 -(void) pickItem:(int) itemId

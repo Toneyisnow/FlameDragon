@@ -430,6 +430,7 @@
 		// Convert to Npc
 		CGPoint pos = [field getObjectPos:hawate];
 		FDNpc *hawateNpc = [[FDNpc alloc] initWithCreature:hawate];
+		
 		[field addNpc:hawateNpc Position:pos];
 		
 		[field removeObject:hawate];
@@ -464,7 +465,8 @@
 	BattleField *field = [[layers getFieldLayer] getField];
 	FDCreature *hawate = [field getCreatureById:6];
 	if (hawate != nil) {
-		[field removeObject:hawate];
+		[[field getFriendList] removeObject:hawate];
+		[[field getDeadCreatureList] removeObject:hawate];
 	}
 	
 	/*

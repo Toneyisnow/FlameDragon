@@ -38,7 +38,8 @@
 		hasFinished = TRUE;
 		
 		[[field getDeadCreatureList] addObject:creature];
-		[field removeObject:creature]; 
+		[field removeObject:creature];
+		[creature setLocation:CGPointMake(0, 0)];
 	}
 }
 

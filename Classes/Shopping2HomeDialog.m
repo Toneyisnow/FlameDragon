@@ -290,7 +290,7 @@
 	
 	chapterRecord.money += item.sellprice;
 	
-	[friend.data.itemList removeObjectAtIndex:lastSelectedItemIndex];
+	[friend.data removeItem:lastSelectedItemIndex];
 	
 	[(Shopping2Layer *)parentLayer updateMoneyBar];
 }

@@ -538,7 +538,10 @@
 	}
 	
 	CGPoint loc = [self getObjectPos:obj];
-	[self setCursorTo:loc];
+	
+	if (loc.x > 0 && loc.x <= fieldWidth && loc.y > 0 && loc.y <= fieldHeight) {
+		[self setCursorTo:loc];
+	}
 }
 
 -(void) setCursorTo:(CGPoint)pos

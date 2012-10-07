@@ -284,6 +284,8 @@
 	//[self appendToCurrentActivityMethod:@selector(isNotified) Param1:nil Param2:nil Obj:eventListener];
 	// [eventListener isNotified];
 	
+	NSLog(@"Analyse dead complete.");
+	
 	// Talk about experience
 	FDCreature *talkerFriend = nil;
 	FDCreature *target = [targets objectAtIndex:0];
@@ -312,8 +314,12 @@
 		}
 	}
 	
+	NSLog(@"Notify.");
+	
 	// Check whether the important game event is triggered
 	[self appendToMainActivityMethod:@selector(isNotified) Param1:nil Param2:nil Obj:eventListener];
+	
+	NSLog(@"End turn.");
 	
 	//End turn
 	[self appendToMainActivityMethod:@selector(creatureActionDone:) Param1:creature Param2:nil Obj:self];
@@ -350,7 +356,7 @@
 	UsableItemDefinition * itemDef = (UsableItemDefinition *)[[DataDepot depot] getItemDefinition:itemId];
 	[itemDef usedBy:target];
 	
-	[creature removeItem:itemIndex];
+	[creature.data removeItem:itemIndex];
 	
 	[self appendToMainActivityMethod:@selector(creatureActionDone:) Param1:creature Param2:nil Obj:self];
 }
@@ -360,7 +366,8 @@
 	NSLog(@"Gave Item.");
 	
 	int itemId = [creature getItemId:itemIndex];
-	[creature removeItem:itemIndex];
+	
+	[creature.data removeItem:itemIndex];
 	[target addItem:itemId];
 	
 	creature.hasActioned = TRUE;
@@ -373,8 +380,8 @@
 	int itemId = [creature getItemId:itemIndex];
 	int backItemId = [target getItemId:backItemIndex];
 
-	[creature removeItem:itemIndex];
-	[target removeItem:backItemIndex];
+	[creature.data removeItem:itemIndex];
+	[target.data removeItem:backItemIndex];
 
 	[target addItem:itemId];
 	[creature addItem:backItemId];
