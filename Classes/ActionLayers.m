@@ -260,6 +260,8 @@
 {
 	NSLog(@"Post Method for attacking.");
 	
+	[targets retain];
+	
 	// Check whether the important game event is triggered
 	[eventListener isNotified];
 
@@ -286,10 +288,11 @@
 	
 	NSLog(@"Analyse dead complete.");
 	
+	
 	// Talk about experience
 	FDCreature *talkerFriend = nil;
-	FDCreature *target = [targets objectAtIndex:0];
-	if ([creature isKindOfClass:[FDFriend class]] && creature.lastGainedExperience > 0 && creature.data.hpCurrent > 0)
+	FDCreature *target = ([targets count] > 0) ? [targets objectAtIndex:0] : nil;
+	if (creature != nil && [creature isKindOfClass:[FDFriend class]] && creature.lastGainedExperience > 0 && creature.data.hpCurrent > 0)
 	{
 		talkerFriend = creature;
 	}
@@ -323,6 +326,8 @@
 	
 	//End turn
 	[self appendToMainActivityMethod:@selector(creatureActionDone:) Param1:creature Param2:nil Obj:self];
+	
+	[targets release];
 }
 
 -(void) magicFrom:(FDCreature *)creature Targets:(NSMutableArray *)targets Id:(int)magicId

@@ -68,19 +68,19 @@
 +(CGPoint) titleButtonStart
 {
 	CGSize winSize = [self winSize];
-	return CGPointMake(winSize.width / 2, winSize.height * 0.2);	
+	return CGPointMake(winSize.width * 0.2, winSize.height * 0.13);	
 }
 
 +(CGPoint) titleButtonLoad
 {
 	CGSize winSize = [self winSize];
-	return CGPointMake(winSize.width / 2, winSize.height * 0.13);	
+	return CGPointMake(winSize.width * 0.5, winSize.height * 0.13);	
 }
 
 +(CGPoint) titleButtonContinue
 {
 	CGSize winSize = [self winSize];
-	return CGPointMake(winSize.width / 2, winSize.height * 0.06);	
+	return CGPointMake(winSize.width * 0.8, winSize.height * 0.13);	
 }
 
 +(CGPoint) villageLocation:(int)position villageImageId:(int)villageImageId
