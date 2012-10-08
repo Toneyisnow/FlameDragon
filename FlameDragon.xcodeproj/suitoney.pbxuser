@@ -28,7 +28,7 @@
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
-	0207598115502541009E75E9 /* ActionLayers.m:732 */ = {
+	0207598115502541009E75E9 /* ActionLayers.m:733 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -40,7 +40,7 @@
 		functionName = "-saveGame";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 732;
+		lineNumber = 733;
 		location = FlameDragon;
 		modificationTime = 371320248.451922;
 		originalNumberOfMultipleMatches = 1;
@@ -716,9 +716,9 @@
 	};
 	021BA1C71477789B00102DCE /* ActionLayers.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {971, 12311}}";
-			sepNavSelRange = "{7611, 0}";
-			sepNavVisRange = "{6886, 1233}";
+			sepNavIntBoundsRect = "{{0, 0}, {922, 12870}}";
+			sepNavSelRange = "{15759, 0}";
+			sepNavVisRange = "{15522, 786}";
 		};
 	};
 	021BA2271477854E00102DCE /* FDTreasure.h */ = {
@@ -3406,7 +3406,7 @@
 	};
 	022D386C16171F470020F816 /* VillageLabel.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {850, 523}}";
+			sepNavIntBoundsRect = "{{0, 0}, {850, 546}}";
 			sepNavSelRange = "{249, 0}";
 			sepNavVisRange = "{0, 301}";
 		};
@@ -4935,7 +4935,7 @@
 		fRef = 021BA1C71477789B00102DCE /* ActionLayers.m */;
 		name = "ActionLayers.m: 739";
 		rLen = 39;
-		rLoc = 19817;
+		rLoc = 19838;
 		rType = 0;
 		vrLen = 748;
 		vrLoc = 18904;
@@ -6339,7 +6339,7 @@
 		fRef = 021BA1C71477789B00102DCE /* ActionLayers.m */;
 		name = "ActionLayers.m: 779";
 		rLen = 0;
-		rLoc = 20619;
+		rLoc = 20640;
 		rType = 0;
 		vrLen = 799;
 		vrLoc = 19470;
@@ -6354,7 +6354,7 @@
 		vrLen = 301;
 		vrLoc = 0;
 	};
-	022D3A79161F38F90020F816 /* ActionLayers.m:792 */ = {
+	022D3A79161F38F90020F816 /* ActionLayers.m:793 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -6366,7 +6366,7 @@
 		functionName = "-composeChapterRecord";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 792;
+		lineNumber = 793;
 		location = FlameDragon;
 		modificationTime = 371320249.764326;
 		originalNumberOfMultipleMatches = 1;
@@ -6535,7 +6535,7 @@
 		fRef = 021BA1C71477789B00102DCE /* ActionLayers.m */;
 		name = "ActionLayers.m: 790";
 		rLen = 0;
-		rLoc = 20528;
+		rLoc = 20549;
 		rType = 0;
 		vrLen = 871;
 		vrLoc = 19763;
@@ -7146,6 +7146,20 @@
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
+	022D3B81162253830020F816 /* Chapter-01.strings */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {739, 2223}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 730}";
+		};
+	};
+	022D3B82162253830020F816 /* Chapter-02.strings */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {802, 1885}}";
+			sepNavSelRange = "{3440, 0}";
+			sepNavVisRange = "{2986, 925}";
+		};
+	};
 	023D07B315CF82E700AD6FA6 /* SWScrollView.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {824, 3263}}";
@@ -7673,6 +7687,12 @@
 		};
 	};
 	0273352A149F13ED00D0812F /* Chapter-01.strings */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = text.plist.strings;
+		name = "Chapter-01.strings";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Strings/Chapter-01.strings";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {739, 2236}}";
 			sepNavSelRange = "{123, 0}";
@@ -7762,9 +7782,9 @@
 	};
 	0273365214A19ED000D0812F /* FDWindow.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 2184}}";
-			sepNavSelRange = "{2342, 0}";
-			sepNavVisRange = "{1646, 788}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 2249}}";
+			sepNavSelRange = "{1646, 0}";
+			sepNavVisRange = "{1114, 795}";
 		};
 	};
 	0273366414A1A20000D0812F /* PBXBookmark */ = {
@@ -8013,7 +8033,7 @@
 		vrLen = 351;
 		vrLoc = 129;
 	};
-	02733A2F14A9899E00D0812F /* ActionLayers.m:947 */ = {
+	02733A2F14A9899E00D0812F /* ActionLayers.m:948 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -8025,7 +8045,7 @@
 		functionName = "-showTestData";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 947;
+		lineNumber = 948;
 		location = FlameDragon;
 		modificationTime = 371320247.744273;
 		originalNumberOfMultipleMatches = 1;
@@ -9304,7 +9324,7 @@
 		fRef = 021BA1C71477789B00102DCE /* ActionLayers.m */;
 		name = "ActionLayers.m: 799";
 		rLen = 9;
-		rLoc = 21748;
+		rLoc = 21769;
 		rType = 0;
 		vrLen = 756;
 		vrLoc = 20290;
@@ -9753,7 +9773,7 @@
 	};
 	0297D98A1481D25F007F3E12 /* Chapter-01.dat */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {779, 422}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 420}}";
 			sepNavSelRange = "{1194, 0}";
 			sepNavVisRange = "{0, 1195}";
 		};
@@ -11122,6 +11142,12 @@
 		fRef = 02BA722914CA2F240028C9E7 /* Icon.png */;
 	};
 	02BB389F160CCB03006BEE76 /* Chapter-00.strings */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = text.plist.strings;
+		name = "Chapter-00.strings";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Chapter-00.strings";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {739, 433}}";
 			sepNavSelRange = "{172, 0}";
@@ -11762,7 +11788,7 @@
 		vrLen = 377;
 		vrLoc = 121;
 	};
-	02C5746D15241B9600DAEE2C /* ActionLayers.m:770 */ = {
+	02C5746D15241B9600DAEE2C /* ActionLayers.m:771 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -11774,13 +11800,13 @@
 		functionName = "-saveGame";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 770;
+		lineNumber = 771;
 		location = FlameDragon;
 		modificationTime = 371320248.202171;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
-	02D3085715D9011100CA1799 /* ActionLayers.m:708 */ = {
+	02D3085715D9011100CA1799 /* ActionLayers.m:709 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -11792,13 +11818,13 @@
 		functionName = "-loadGame:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 708;
+		lineNumber = 709;
 		location = FlameDragon;
 		modificationTime = 371320248.876359;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
-	02D3089615D909D500CA1799 /* ActionLayers.m:649 */ = {
+	02D3089615D909D500CA1799 /* ActionLayers.m:650 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -11810,7 +11836,7 @@
 		functionName = "-loadGame:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 649;
+		lineNumber = 650;
 		location = FlameDragon;
 		modificationTime = 371320248.97125;
 		originalNumberOfMultipleMatches = 1;
@@ -11818,7 +11844,7 @@
 	};
 	02D308B615E2973900CA1799 /* Chapter-02.dat */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 437}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 420}}";
 			sepNavSelRange = "{826, 0}";
 			sepNavVisRange = "{0, 1191}";
 		};
@@ -12757,6 +12783,12 @@
 		vrLoc = 268;
 	};
 	02D30C8316038E1100CA1799 /* Chapter-02.strings */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = text.plist.strings;
+		name = "Chapter-02.strings";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Chapter-02.strings";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1066, 1846}}";
 			sepNavSelRange = "{2107, 0}";
@@ -13718,25 +13750,25 @@
 			02A0EB25147BE377005D630C /* SelectItemMenuState.m:33 */,
 			0273377414A1AFC000D0812F /* ItemsMenuState.m:115 */,
 			027337D014A2F74500D0812F /* ItemBox.m:163 */,
-			02733A2F14A9899E00D0812F /* ActionLayers.m:947 */,
+			02733A2F14A9899E00D0812F /* ActionLayers.m:948 */,
 			026BE26714B3106000484B4D /* BattleField.m:144 */,
 			02F840B314B83E1100665511 /* BattleField.m:452 */,
 			02BA714B14C9FF960028C9E7 /* EventChapter1.m:445 */,
-			02C5746D15241B9600DAEE2C /* ActionLayers.m:770 */,
+			02C5746D15241B9600DAEE2C /* ActionLayers.m:771 */,
 			0207597315502509009E75E9 /* TitleLayer.m:109 */,
-			0207598115502541009E75E9 /* ActionLayers.m:732 */,
+			0207598115502541009E75E9 /* ActionLayers.m:733 */,
 			02542C89155D5F630050FEC8 /* ShoppingLayer.m:48 */,
 			02A8A35E155D6F73003C3DC8 /* ShoppingLayer.m:189 */,
 			0222BC4115AD083A004A66DA /* EventChapter1.m:140 */,
-			02D3085715D9011100CA1799 /* ActionLayers.m:708 */,
-			02D3089615D909D500CA1799 /* ActionLayers.m:649 */,
+			02D3085715D9011100CA1799 /* ActionLayers.m:709 */,
+			02D3089615D909D500CA1799 /* ActionLayers.m:650 */,
 			028147BD160A1AB0001CBB4D /* AIEscapeDelegate.m:29 */,
 			028147BF160A1AB3001CBB4D /* AIEscapeDelegate.m:46 */,
 			02BB3A38160E081F006BEE76 /* Shopping2HomeDialog.m:551 */,
 			02BB3A3C160E0870006BEE76 /* Shopping2HomeDialog.m:542 */,
 			022D371F1614998D0020F816 /* Shopping2SelectAmorTargetDialog.m:46 */,
 			022D39B7161D77AB0020F816 /* ActionLayers.m:520 */,
-			022D3A79161F38F90020F816 /* ActionLayers.m:792 */,
+			022D3A79161F38F90020F816 /* ActionLayers.m:793 */,
 			022D3B531621E4270020F816 /* ActionLayers.m:304 */,
 			022D3B581621E4650020F816 /* ActionLayers.m:268 */,
 			022D3B5A1621E46C0020F816 /* ActionLayers.m:261 */,

@@ -195,6 +195,9 @@
 		022D3AA7161F41F80020F816 /* Fight-750-2-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 022D3AA5161F41F80020F816 /* Fight-750-2-01.png */; };
 		022D3AE216200FF90020F816 /* Arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 022D3AE016200FF90020F816 /* Arrow_down.png */; };
 		022D3AE316200FF90020F816 /* Arrow_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 022D3AE116200FF90020F816 /* Arrow_up.png */; };
+		022D3B83162253830020F816 /* Chapter-00.strings in Resources */ = {isa = PBXBuildFile; fileRef = 022D3B80162253830020F816 /* Chapter-00.strings */; };
+		022D3B84162253830020F816 /* Chapter-01.strings in Resources */ = {isa = PBXBuildFile; fileRef = 022D3B81162253830020F816 /* Chapter-01.strings */; };
+		022D3B85162253830020F816 /* Chapter-02.strings in Resources */ = {isa = PBXBuildFile; fileRef = 022D3B82162253830020F816 /* Chapter-02.strings */; };
 		023D07BE15CF82E700AD6FA6 /* SWScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D07B415CF82E700AD6FA6 /* SWScrollView.m */; };
 		023D34AA152834A3002D3EFD /* EventChapter2.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D34A9152834A3002D3EFD /* EventChapter2.m */; };
 		02542C4E155D4C5B0050FEC8 /* ShoppingItemDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02542C4D155D4C5B0050FEC8 /* ShoppingItemDialog.m */; };
@@ -219,7 +222,6 @@
 		02733527149F13E100D0812F /* Item.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02733524149F13E100D0812F /* Item.strings */; };
 		02733528149F13E100D0812F /* Magic.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02733525149F13E100D0812F /* Magic.strings */; };
 		02733529149F13E100D0812F /* Message.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02733526149F13E100D0812F /* Message.strings */; };
-		0273352B149F13ED00D0812F /* Chapter-01.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0273352A149F13ED00D0812F /* Chapter-01.strings */; };
 		02733579149F1A7800D0812F /* DistanceResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 02733578149F1A7800D0812F /* DistanceResolver.m */; };
 		0273364C14A19E3500D0812F /* ContainerBase.png in Resources */ = {isa = PBXBuildFile; fileRef = 0273364914A19E3500D0812F /* ContainerBase.png */; };
 		0273364D14A19E3500D0812F /* CreatureDato.png in Resources */ = {isa = PBXBuildFile; fileRef = 0273364A14A19E3500D0812F /* CreatureDato.png */; };
@@ -531,7 +533,6 @@
 		02BA723614CA31AF0028C9E7 /* Icon-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA723214CA31AF0028C9E7 /* Icon-32.png */; };
 		02BA723714CA31AF0028C9E7 /* Icon-57.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA723314CA31AF0028C9E7 /* Icon-57.png */; };
 		02BA723814CA31AF0028C9E7 /* IconFull.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA723414CA31AF0028C9E7 /* IconFull.png */; };
-		02BB38A0160CCB03006BEE76 /* Chapter-00.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02BB389F160CCB03006BEE76 /* Chapter-00.strings */; };
 		02BB3915160D6801006BEE76 /* SWButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BB3914160D6801006BEE76 /* SWButton.m */; };
 		02BB39E0160DCA24006BEE76 /* Shopping2PagedDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BB39DF160DCA24006BEE76 /* Shopping2PagedDialog.m */; };
 		02BD5A7F1477A93900828EDA /* Menu-020-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BD5A731477A93900828EDA /* Menu-020-1.png */; };
@@ -585,7 +586,6 @@
 		02D30BB21601FEA600CA1799 /* Shopping2RecordDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D30BB11601FEA600CA1799 /* Shopping2RecordDialog.m */; };
 		02D30C0216021A8800CA1799 /* Shopping2ShowDeadFriendsDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D30C0116021A8800CA1799 /* Shopping2ShowDeadFriendsDialog.m */; };
 		02D30C051602202B00CA1799 /* Shopping2ShowTransferDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D30C041602202B00CA1799 /* Shopping2ShowTransferDialog.m */; };
-		02D30C8416038E1100CA1799 /* Chapter-02.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02D30C8316038E1100CA1799 /* Chapter-02.strings */; };
 		02D30D3F1605B28E00CA1799 /* Icon-719-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02D30D271605B28E00CA1799 /* Icon-719-01.png */; };
 		02D30D401605B28E00CA1799 /* Icon-719-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 02D30D281605B28E00CA1799 /* Icon-719-02.png */; };
 		02D30D411605B28E00CA1799 /* Icon-719-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02D30D291605B28E00CA1799 /* Icon-719-03.png */; };
@@ -1116,6 +1116,9 @@
 		022D3AA5161F41F80020F816 /* Fight-750-2-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Fight-750-2-01.png"; path = "Fights/Fight-750-2-01.png"; sourceTree = "<group>"; };
 		022D3AE016200FF90020F816 /* Arrow_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Arrow_down.png; path = Others/Arrow_down.png; sourceTree = "<group>"; };
 		022D3AE116200FF90020F816 /* Arrow_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Arrow_up.png; path = Others/Arrow_up.png; sourceTree = "<group>"; };
+		022D3B80162253830020F816 /* Chapter-00.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-00.strings"; path = "Strings/Maps/Chapter-00.strings"; sourceTree = "<group>"; };
+		022D3B81162253830020F816 /* Chapter-01.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-01.strings"; path = "Strings/Maps/Chapter-01.strings"; sourceTree = "<group>"; };
+		022D3B82162253830020F816 /* Chapter-02.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-02.strings"; path = "Strings/Maps/Chapter-02.strings"; sourceTree = "<group>"; };
 		023D07B315CF82E700AD6FA6 /* SWScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWScrollView.h; path = tableView/SWScrollView.h; sourceTree = "<group>"; };
 		023D07B415CF82E700AD6FA6 /* SWScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWScrollView.m; path = tableView/SWScrollView.m; sourceTree = "<group>"; };
 		023D34A8152834A3002D3EFD /* EventChapter2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter2.h; sourceTree = "<group>"; };
@@ -1158,7 +1161,6 @@
 		02733524149F13E100D0812F /* Item.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Item.strings; path = Strings/Item.strings; sourceTree = "<group>"; };
 		02733525149F13E100D0812F /* Magic.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Magic.strings; path = Strings/Magic.strings; sourceTree = "<group>"; };
 		02733526149F13E100D0812F /* Message.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Message.strings; path = Strings/Message.strings; sourceTree = "<group>"; };
-		0273352A149F13ED00D0812F /* Chapter-01.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-01.strings"; path = "Strings/Chapter-01.strings"; sourceTree = "<group>"; };
 		02733577149F1A7800D0812F /* DistanceResolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistanceResolver.h; sourceTree = "<group>"; };
 		02733578149F1A7800D0812F /* DistanceResolver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistanceResolver.m; sourceTree = "<group>"; };
 		0273364914A19E3500D0812F /* ContainerBase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ContainerBase.png; path = Others/ContainerBase.png; sourceTree = "<group>"; };
@@ -1552,7 +1554,6 @@
 		02BA723214CA31AF0028C9E7 /* Icon-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-32.png"; sourceTree = "<group>"; };
 		02BA723314CA31AF0028C9E7 /* Icon-57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-57.png"; sourceTree = "<group>"; };
 		02BA723414CA31AF0028C9E7 /* IconFull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IconFull.png; sourceTree = "<group>"; };
-		02BB389F160CCB03006BEE76 /* Chapter-00.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = "Chapter-00.strings"; sourceTree = "<group>"; };
 		02BB3913160D6801006BEE76 /* SWButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWButton.h; sourceTree = "<group>"; };
 		02BB3914160D6801006BEE76 /* SWButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWButton.m; sourceTree = "<group>"; };
 		02BB39DE160DCA24006BEE76 /* Shopping2PagedDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shopping2PagedDialog.h; sourceTree = "<group>"; };
@@ -1642,7 +1643,6 @@
 		02D30C0116021A8800CA1799 /* Shopping2ShowDeadFriendsDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shopping2ShowDeadFriendsDialog.m; sourceTree = "<group>"; };
 		02D30C031602202B00CA1799 /* Shopping2ShowTransferDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shopping2ShowTransferDialog.h; sourceTree = "<group>"; };
 		02D30C041602202B00CA1799 /* Shopping2ShowTransferDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shopping2ShowTransferDialog.m; sourceTree = "<group>"; };
-		02D30C8316038E1100CA1799 /* Chapter-02.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = "Chapter-02.strings"; sourceTree = "<group>"; };
 		02D30D271605B28E00CA1799 /* Icon-719-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-719-01.png"; path = "Icons/Icon-719-01.png"; sourceTree = "<group>"; };
 		02D30D281605B28E00CA1799 /* Icon-719-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-719-02.png"; path = "Icons/Icon-719-02.png"; sourceTree = "<group>"; };
 		02D30D291605B28E00CA1799 /* Icon-719-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-719-03.png"; path = "Icons/Icon-719-03.png"; sourceTree = "<group>"; };
@@ -3077,9 +3077,9 @@
 		02D30C8516038E2200CA1799 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
-				02BB389F160CCB03006BEE76 /* Chapter-00.strings */,
-				0273352A149F13ED00D0812F /* Chapter-01.strings */,
-				02D30C8316038E1100CA1799 /* Chapter-02.strings */,
+				022D3B80162253830020F816 /* Chapter-00.strings */,
+				022D3B81162253830020F816 /* Chapter-01.strings */,
+				022D3B82162253830020F816 /* Chapter-02.strings */,
 			);
 			name = Maps;
 			sourceTree = "<group>";
@@ -3879,7 +3879,6 @@
 				02733527149F13E100D0812F /* Item.strings in Resources */,
 				02733528149F13E100D0812F /* Magic.strings in Resources */,
 				02733529149F13E100D0812F /* Message.strings in Resources */,
-				0273352B149F13ED00D0812F /* Chapter-01.strings in Resources */,
 				0273364C14A19E3500D0812F /* ContainerBase.png in Resources */,
 				0273364D14A19E3500D0812F /* CreatureDato.png in Resources */,
 				0273364E14A19E3500D0812F /* CreatureDetail.png in Resources */,
@@ -4089,7 +4088,6 @@
 				02759D4D154A72C300853895 /* VillageShop-01-2.png in Resources */,
 				02D308B715E2973900CA1799 /* Chapter-02.dat in Resources */,
 				02D3095F15FAD46300CA1799 /* Shop.dat in Resources */,
-				02D30C8416038E1100CA1799 /* Chapter-02.strings in Resources */,
 				02D30D3F1605B28E00CA1799 /* Icon-719-01.png in Resources */,
 				02D30D401605B28E00CA1799 /* Icon-719-02.png in Resources */,
 				02D30D411605B28E00CA1799 /* Icon-719-03.png in Resources */,
@@ -4137,7 +4135,6 @@
 				028148BF160CC2B5001CBB4D /* Icon-006-11.png in Resources */,
 				028148C0160CC2B5001CBB4D /* Icon-006-12.png in Resources */,
 				028148C2160CC2E2001CBB4D /* Dato-006-1.png in Resources */,
-				02BB38A0160CCB03006BEE76 /* Chapter-00.strings in Resources */,
 				02E422F3160F37970071FA29 /* Shop_Buy_0.png in Resources */,
 				02E422F4160F37970071FA29 /* Shop_Equip_0.png in Resources */,
 				02E422F5160F37970071FA29 /* Shop_Give_0.png in Resources */,
@@ -4158,6 +4155,9 @@
 				022D3AA7161F41F80020F816 /* Fight-750-2-01.png in Resources */,
 				022D3AE216200FF90020F816 /* Arrow_down.png in Resources */,
 				022D3AE316200FF90020F816 /* Arrow_up.png in Resources */,
+				022D3B83162253830020F816 /* Chapter-00.strings in Resources */,
+				022D3B84162253830020F816 /* Chapter-01.strings in Resources */,
+				022D3B85162253830020F816 /* Chapter-02.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

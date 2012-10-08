@@ -619,6 +619,7 @@
 	//[field loadMapData:level];
 	chapterId = info.chapterId;
 	turnNo = 0;
+	money = info.money;
 	
 	// Load Friends
 	for(CreatureRecord *record in [info friendRecords])
