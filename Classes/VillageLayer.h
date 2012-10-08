@@ -22,6 +22,8 @@
 	FDAnimation *cursorAnimation;
 	FDSprite *cursor;
 	
+	FDSprite *secretIndicator;
+	
 	int currentPosition;	// 0:Amor 1:Item 2:Church 3:Bar 4:Exit
 	
 	ConfirmMessage *confirmExit;
@@ -34,7 +36,6 @@
 
 @property (retain) ChapterRecord *chapterRecord;
 
--(void) setChapter:(int)chapter;
 -(void) loadWithRecord:(ChapterRecord *) record;
 
 -(void) takeTick;

@@ -28,27 +28,6 @@
 	return self;
 }
 
-// Deprecated Method
--(void) setChapter:(int)chapter
-{
-	NSString *bgFileName = nil;
-	if (chapter <= 10) {
-		bgFileName = @"Village-01.png";
-	}
-	else if (chapter > 10 && chapter <= 20) {
-		bgFileName = @"Village-02.png";
-	}
-	else {
-		bgFileName = @"Village-03.png";
-	}
-	
-	FDSprite *bg = [[FDSpriteStore instance] sprite:bgFileName];
-	[bg setScaleX:[Constants villageScale] Y:[Constants villageScale]];
-	[bg setLocation:[FDWindow screenCenter]];
-	
-	[self addChild:[bg getSprite]];
-}
-
 -(int) getVillageImageId
 {
 	int chapter = [chapterRecord chapterId];
@@ -65,6 +44,13 @@
 	[bg setScaleX:[Constants villageScale] Y:[Constants villageScale]];
 	[bg setLocation:[FDWindow screenCenter]];
 	
+	NSString *indicatorName = [NSString stringWithFormat:@"SecretIndicator-%02d.png", [self getVillageImageId]];
+	secretIndicator = [[FDSpriteStore instance] sprite:indicatorName];
+	[secretIndicator setLocation:[FDWindow secretIndicatorPosition:[self getVillageImageId]]];
+	[secretIndicator retain];
+	[secretIndicator getSprite].visible = FALSE;
+	
+	[[bg getSprite] addChild:[secretIndicator getSprite]];
 	[self addChild:[bg getSprite]];
 	
 	
@@ -82,7 +68,8 @@
 	[villageLabel setLocation:[FDWindow villageLabelLocation]];
 	[villageLabel setPositionIndex:currentPosition];
 	[villageLabel show:self];
-	 
+	
+	
 	secretIndex = 0;
 	secretSequence = [[DataDepot depot] getSecretSequenceDefinition:record.chapterId];
 }
@@ -159,13 +146,16 @@
 	
 	// For any set position, check the secret index
 	if (secretIndex >= [secretSequence totalLength]) {
+		[secretIndicator getSprite].visible = FALSE;
 		secretIndex = 0;
 		return;
 	}
 	
 	if (pos == [secretSequence sequenceAtIndex:secretIndex]) {
+		[secretIndicator getSprite].visible = TRUE;
 		secretIndex ++;
 	} else {
+		[secretIndicator getSprite].visible = FALSE;
 		secretIndex = 0;
 	}
 	NSLog(@"Secret Index: %d.", secretIndex);
@@ -276,6 +266,11 @@
 		[villageLabel close];
 		[villageLabel release];
 		villageLabel = nil;
+	}
+	
+	if (secretIndicator != nil) {
+		[secretIndicator release];
+		secretIndicator = nil;
 	}
 	
 	[super dealloc];

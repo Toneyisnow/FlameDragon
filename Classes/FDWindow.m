@@ -125,6 +125,23 @@
 	return CGPointMake(0, 0);
 }
 
++(CGPoint) secretIndicatorPosition:(int)villageImageId
+{
+	switch (villageImageId) {
+		case 1:
+			return CGPointMake(16, 192);
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		default:
+			break;
+	}
+	
+	return CGPointMake(0, 0);
+}
+
 +(CGPoint) villageLeftButton
 {
 	return CGPointMake(40, 40);

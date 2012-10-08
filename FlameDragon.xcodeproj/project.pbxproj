@@ -198,6 +198,7 @@
 		022D3B83162253830020F816 /* Chapter-00.strings in Resources */ = {isa = PBXBuildFile; fileRef = 022D3B80162253830020F816 /* Chapter-00.strings */; };
 		022D3B84162253830020F816 /* Chapter-01.strings in Resources */ = {isa = PBXBuildFile; fileRef = 022D3B81162253830020F816 /* Chapter-01.strings */; };
 		022D3B85162253830020F816 /* Chapter-02.strings in Resources */ = {isa = PBXBuildFile; fileRef = 022D3B82162253830020F816 /* Chapter-02.strings */; };
+		022D3BA4162314280020F816 /* SecretIndicator-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 022D3BA3162314280020F816 /* SecretIndicator-01.png */; };
 		023D07BE15CF82E700AD6FA6 /* SWScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D07B415CF82E700AD6FA6 /* SWScrollView.m */; };
 		023D34AA152834A3002D3EFD /* EventChapter2.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D34A9152834A3002D3EFD /* EventChapter2.m */; };
 		02542C4E155D4C5B0050FEC8 /* ShoppingItemDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02542C4D155D4C5B0050FEC8 /* ShoppingItemDialog.m */; };
@@ -1119,6 +1120,7 @@
 		022D3B80162253830020F816 /* Chapter-00.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-00.strings"; path = "Strings/Maps/Chapter-00.strings"; sourceTree = "<group>"; };
 		022D3B81162253830020F816 /* Chapter-01.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-01.strings"; path = "Strings/Maps/Chapter-01.strings"; sourceTree = "<group>"; };
 		022D3B82162253830020F816 /* Chapter-02.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-02.strings"; path = "Strings/Maps/Chapter-02.strings"; sourceTree = "<group>"; };
+		022D3BA3162314280020F816 /* SecretIndicator-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SecretIndicator-01.png"; path = "Village/SecretIndicator-01.png"; sourceTree = "<group>"; };
 		023D07B315CF82E700AD6FA6 /* SWScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWScrollView.h; path = tableView/SWScrollView.h; sourceTree = "<group>"; };
 		023D07B415CF82E700AD6FA6 /* SWScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWScrollView.m; path = tableView/SWScrollView.m; sourceTree = "<group>"; };
 		023D34A8152834A3002D3EFD /* EventChapter2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter2.h; sourceTree = "<group>"; };
@@ -2289,6 +2291,7 @@
 		02759D3F154A72AB00853895 /* Village */ = {
 			isa = PBXGroup;
 			children = (
+				022D3BA3162314280020F816 /* SecretIndicator-01.png */,
 				02759D40154A72C300853895 /* Village-01.png */,
 				02759D41154A72C300853895 /* Village-02.png */,
 				02759D42154A72C300853895 /* Village-03.png */,
@@ -4158,6 +4161,7 @@
 				022D3B83162253830020F816 /* Chapter-00.strings in Resources */,
 				022D3B84162253830020F816 /* Chapter-01.strings in Resources */,
 				022D3B85162253830020F816 /* Chapter-02.strings in Resources */,
+				022D3BA4162314280020F816 /* SecretIndicator-01.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

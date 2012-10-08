@@ -32,6 +32,7 @@
 +(CGPoint) villageLocation:(int)position villageImageId:(int)villageImageId;
 +(CGPoint) villageLeftButton;
 +(CGPoint) villageRightButton;
++(CGPoint) secretIndicatorPosition:(int)villageImageId;
 
 
 +(CGPoint) showShoppingDialogPosition;
