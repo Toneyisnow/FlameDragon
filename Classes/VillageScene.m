@@ -26,11 +26,6 @@
 	return self;
 }
 
--(void) setChapter:(int)chapter
-{
-	[mainLayer setChapter:chapter];	
-}
-
 -(void) loadWithRecord:(ChapterRecord *) record
 {
 	[mainLayer loadWithRecord:record];

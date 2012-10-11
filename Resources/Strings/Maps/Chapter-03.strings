@@ -1,0 +1,20 @@
+/* 
+   Creature.strings
+   FlameDragon
+
+   Created by sui toney on 11-12-8.
+   Copyright 2011 ms. All rights reserved.
+ */
+
+
+"Title-03" = "第三章  往塞拉村途中"; 
+
+"Condition-Lose" = "索尔死亡";
+"Condition-Win" = "敌全灭";
+
+"03-01-001-Id" = "1";
+"03-01-001" = "累死了，大家休息一下吧！";
+
+"03-99-001-Id" = "29";
+"03-99-001" = "可恨啊！#今日先碰上这群棘手的小子在先，又遇上王国海防队，真是天亡我也！啊。。。";
+

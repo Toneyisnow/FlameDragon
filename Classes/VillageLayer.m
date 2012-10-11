@@ -31,7 +31,15 @@
 -(int) getVillageImageId
 {
 	int chapter = [chapterRecord chapterId];
-	return (chapter <= 10) ? 1 : ((chapter <= 20) ? 2 : 3);
+	
+	switch (chapter) {
+		case 2: return 1;
+		case 3: return 2;
+		case 4: return 2;
+		default: break;
+	}
+	
+	return 1;
 }
 
 -(void) loadWithRecord:(ChapterRecord *)record

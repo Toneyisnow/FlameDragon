@@ -154,8 +154,8 @@
 	BOOL selectedNum = [num boolValue];
 	
 	// Buy that amor
-	ItemDefinition *item = [self getItemDefinition:chapterRecord.chapterId Type:DataDepotShopType_AmorShop Index:lastSelectedItemIndex];
-	int money = item.price;
+	// ItemDefinition *item = [self getItemDefinition:chapterRecord.chapterId Type:DataDepotShopType_AmorShop Index:lastSelectedItemIndex];
+	// int money = item.price;
 	
 	if (selectedNum) {
 		// Equip this item
@@ -188,8 +188,6 @@
 	
 	lastSelectedCreatureIndex = selectedNum;
 	
-	NSMutableArray *itemList = [[NSMutableArray alloc] init];
-	
 	ShoppingShowItemsDialog *dialog = [[ShoppingShowItemsDialog alloc] initFrom:self];
 	[dialog setSelectedCallback:self Method:@selector(onSellAmor_SelectedItem:)];
 	[self onPush:dialog];
@@ -206,8 +204,6 @@
 		
 		return;
 	}
-	
-	int itemIndex = selectedNum;
 	
 	NSString *message = [FDLocalString confirm:55];
 	ShoppingConfirmDialog *dialog = [[ShoppingConfirmDialog alloc] initWithMessage:message From:self];

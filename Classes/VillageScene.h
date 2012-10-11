@@ -17,7 +17,7 @@
 
 @property (readonly) VillageLayer *mainLayer;
 
--(void) setChapter:(int)chapter;
+//-(void) setChapter:(int)chapter;
 
 -(void) loadWithRecord:(ChapterRecord *) record;
 
