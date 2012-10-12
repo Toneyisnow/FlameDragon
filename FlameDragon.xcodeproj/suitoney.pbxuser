@@ -250,6 +250,20 @@
 			sepNavWindowFrame = "{{15, 99}, {909, 674}}";
 		};
 	};
+	021493D414A9F7F900DBA2C1 /* Icon-001-01.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Icon-001-01.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Icons/Icon-001-01.png";
+		sourceTree = "<absolute>";
+	};
+	0214941F14A9F7F900DBA2C1 /* Icon-016-04.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Icon-016-04.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Icons/Icon-016-04.png";
+		sourceTree = "<absolute>";
+	};
 	021494FE14AA0DF300DBA2C1 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 02BD5B061478030800828EDA /* ExchangeItemTargetState.h */;
@@ -352,9 +366,9 @@
 	};
 	021B9BE4146D79F200102DCE /* ChapterLoader.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {779, 429}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 429}}";
 			sepNavSelRange = "{305, 0}";
-			sepNavVisRange = "{42, 401}";
+			sepNavVisRange = "{0, 448}";
 		};
 	};
 	021B9BE5146D79F200102DCE /* ChapterLoader.m */ = {
@@ -3393,7 +3407,7 @@
 	};
 	022D386C16171F470020F816 /* VillageLabel.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {850, 546}}";
+			sepNavIntBoundsRect = "{{0, 0}, {850, 523}}";
 			sepNavSelRange = "{249, 0}";
 			sepNavVisRange = "{0, 301}";
 		};
@@ -7727,8 +7741,8 @@
 	};
 	022D3C2D1625A9A50020F816 /* Chapter-03.dat */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 420}}";
-			sepNavSelRange = "{953, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 415}}";
+			sepNavSelRange = "{5, 0}";
 			sepNavVisRange = "{0, 955}";
 		};
 	};
@@ -8016,11 +8030,17 @@
 		vrLen = 301;
 		vrLoc = 0;
 	};
-	022D3C781625C9910020F816 /* Chapter-03.strings */ = {
+	022D3C781625C9910020F816 /* Chapter-03n.strings */ = {
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = text.plist.strings;
+		name = "Chapter-03n.strings";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Strings/Maps/Chapter-03n.strings";
+		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 420}}";
-			sepNavSelRange = "{150, 0}";
-			sepNavVisRange = "{0, 343}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 832}}";
+			sepNavSelRange = "{1374, 0}";
+			sepNavVisRange = "{0, 714}";
 		};
 	};
 	022D3C7D1625CA9F0020F816 /* EventChapter3.h */ = {
@@ -8137,7 +8157,7 @@
 	};
 	022D3C9C162652390020F816 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = 022D3C781625C9910020F816 /* Chapter-03.strings */;
+		fRef = 022D3C781625C9910020F816 /* Chapter-03n.strings */;
 		name = "Chapter-03.strings: 10";
 		rLen = 0;
 		rLoc = 150;
@@ -8204,6 +8224,13 @@
 		rType = 0;
 		vrLen = 301;
 		vrLoc = 0;
+	};
+	022D3CA4162652C90020F816 /* Icon-704-02.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Icon-704-02.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Icons/704/Icon-704-02.png";
+		sourceTree = "<absolute>";
 	};
 	023D07B315CF82E700AD6FA6 /* SWScrollView.h */ = {
 		uiCtxt = {
@@ -8355,6 +8382,144 @@
 		isa = PBXBookmark;
 		fRef = 02759D44154A72C300853895 /* VillageShop-01-1.png */;
 	};
+	025DA37916283F1700DD7C30 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0297D98E1481D281007F3E12 /* Creature.dat */;
+		name = "Creature.dat: 26";
+		rLen = 0;
+		rLoc = 497;
+		rType = 0;
+		vrLen = 604;
+		vrLoc = 0;
+	};
+	025DA37A16283F1700DD7C30 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 02D308B615E2973900CA1799 /* Chapter-02.dat */;
+		name = "Chapter-02.dat: 17";
+		rLen = 0;
+		rLoc = 826;
+		rType = 0;
+		vrLen = 1191;
+		vrLoc = 0;
+	};
+	025DA37B16283F1700DD7C30 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 022D3C2D1625A9A50020F816 /* Chapter-03.dat */;
+		name = "Chapter-03.dat: 1";
+		rLen = 0;
+		rLoc = 5;
+		rType = 0;
+		vrLen = 955;
+		vrLoc = 0;
+	};
+	025DA37C16283F1700DD7C30 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 021B9BE4146D79F200102DCE /* ChapterLoader.h */;
+		name = "ChapterLoader.h: 21";
+		rLen = 0;
+		rLoc = 305;
+		rType = 0;
+		vrLen = 448;
+		vrLoc = 0;
+	};
+	025DA37D16283F1700DD7C30 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 027D5440146583D4002C310F /* FDSprite.h */;
+		name = "FDSprite.h: 18";
+		rLen = 0;
+		rLoc = 324;
+		rType = 0;
+		vrLen = 706;
+		vrLoc = 196;
+	};
+	025DA37E16283F1700DD7C30 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 027D5441146583D4002C310F /* FDSprite.m */;
+		name = "FDSprite.m: 41";
+		rLen = 0;
+		rLoc = 695;
+		rType = 0;
+		vrLen = 772;
+		vrLoc = 237;
+	};
+	025DA37F16283F1700DD7C30 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 027D542F1462D641002C310F /* FDSpriteStore.m */;
+		name = "FDSpriteStore.m: 78";
+		rLen = 0;
+		rLoc = 1605;
+		rType = 0;
+		vrLen = 729;
+		vrLoc = 492;
+	};
+	025DA38016283F1700DD7C30 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 022D3C781625C9910020F816 /* Chapter-03n.strings */;
+		name = "Chapter-03.strings: 51";
+		rLen = 0;
+		rLoc = 1374;
+		rType = 0;
+		vrLen = 902;
+		vrLoc = 714;
+	};
+	025DA38116283F1700DD7C30 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 027D542E1462D641002C310F /* FDSpriteStore.h */;
+		name = "FDSpriteStore.h: 25";
+		rLen = 0;
+		rLoc = 496;
+		rType = 0;
+		vrLen = 588;
+		vrLoc = 0;
+	};
+	025DA38216283F1700DD7C30 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 022D3CA4162652C90020F816 /* Icon-704-02.png */;
+	};
+	025DA38316283F1700DD7C30 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 022D3CA4162652C90020F816 /* Icon-704-02.png */;
+	};
+	025DA38616283F1700DD7C30 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 022D386C16171F470020F816 /* VillageLabel.h */;
+		name = "VillageLabel.h: 16";
+		rLen = 0;
+		rLoc = 249;
+		rType = 0;
+		vrLen = 301;
+		vrLoc = 0;
+	};
+	025DA4FF162841B100DD7C30 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 027D542E1462D641002C310F /* FDSpriteStore.h */;
+		name = "FDSpriteStore.h: 25";
+		rLen = 0;
+		rLoc = 467;
+		rType = 0;
+		vrLen = 559;
+		vrLoc = 0;
+	};
+	025DA500162841B100DD7C30 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 027D542E1462D641002C310F /* FDSpriteStore.h */;
+		name = "FDSpriteStore.h: 17";
+		rLen = 0;
+		rLoc = 308;
+		rType = 0;
+		vrLen = 588;
+		vrLoc = 0;
+	};
+	025DA501162841B100DD7C30 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 022D386C16171F470020F816 /* VillageLabel.h */;
+		name = "VillageLabel.h: 16";
+		rLen = 0;
+		rLoc = 249;
+		rType = 0;
+		vrLen = 301;
+		vrLoc = 0;
+	};
 	02646E8C15750D7500FEBFAC /* ShoppingRecordDialog.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {779, 345}}";
@@ -8374,7 +8539,7 @@
 		fRef = 027D542E1462D641002C310F /* FDSpriteStore.h */;
 		name = "FDSpriteStore.h: 25";
 		rLen = 0;
-		rLoc = 493;
+		rLoc = 580;
 		rType = 0;
 		vrLen = 453;
 		vrLoc = 42;
@@ -9351,7 +9516,7 @@
 		fRef = 027D542F1462D641002C310F /* FDSpriteStore.m */;
 		name = "FDSpriteStore.m: 71";
 		rLen = 26;
-		rLoc = 1279;
+		rLoc = 1643;
 		rType = 0;
 		vrLen = 543;
 		vrLoc = 809;
@@ -9748,16 +9913,16 @@
 	};
 	027D542E1462D641002C310F /* FDSpriteStore.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {779, 377}}";
-			sepNavSelRange = "{493, 0}";
-			sepNavVisRange = "{42, 453}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 416}}";
+			sepNavSelRange = "{308, 0}";
+			sepNavVisRange = "{0, 588}";
 		};
 	};
 	027D542F1462D641002C310F /* FDSpriteStore.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {779, 1001}}";
-			sepNavSelRange = "{1279, 26}";
-			sepNavVisRange = "{809, 543}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 1157}}";
+			sepNavSelRange = "{1605, 0}";
+			sepNavVisRange = "{492, 729}";
 		};
 	};
 	027D543D146583C8002C310F /* FDObject.h */ = {
@@ -9776,16 +9941,16 @@
 	};
 	027D5440146583D4002C310F /* FDSprite.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 585}}";
-			sepNavSelRange = "{667, 0}";
-			sepNavVisRange = "{197, 647}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 598}}";
+			sepNavSelRange = "{324, 0}";
+			sepNavVisRange = "{196, 706}";
 		};
 	};
 	027D5441146583D4002C310F /* FDSprite.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 1846}}";
-			sepNavSelRange = "{680, 0}";
-			sepNavVisRange = "{37, 477}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 1976}}";
+			sepNavSelRange = "{695, 0}";
+			sepNavVisRange = "{237, 772}";
 		};
 	};
 	027D5443146583DD002C310F /* FDImage.h */ = {
@@ -10378,6 +10543,48 @@
 		rType = 0;
 		vrLen = 1029;
 		vrLoc = 3478;
+	};
+	028148A9160CC2B5001CBB4D /* Icon-006-01.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Icon-006-01.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Icons/Icon-006-01.png";
+		sourceTree = "<absolute>";
+	};
+	028148AA160CC2B5001CBB4D /* Icon-006-02.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Icon-006-02.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Icons/Icon-006-02.png";
+		sourceTree = "<absolute>";
+	};
+	028148AC160CC2B5001CBB4D /* Icon-006-04.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Icon-006-04.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Icons/Icon-006-04.png";
+		sourceTree = "<absolute>";
+	};
+	028148AF160CC2B5001CBB4D /* Icon-006-07.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Icon-006-07.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Icons/Icon-006-07.png";
+		sourceTree = "<absolute>";
+	};
+	028148B0160CC2B5001CBB4D /* Icon-006-08.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Icon-006-08.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Icons/Icon-006-08.png";
+		sourceTree = "<absolute>";
+	};
+	028148B4160CC2B5001CBB4D /* Icon-006-12.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Icon-006-12.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Icons/Icon-006-12.png";
+		sourceTree = "<absolute>";
 	};
 	02868FA915242B670056A399 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -12879,7 +13086,7 @@
 	};
 	02D308B615E2973900CA1799 /* Chapter-02.dat */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 420}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 415}}";
 			sepNavSelRange = "{826, 0}";
 			sepNavVisRange = "{0, 1191}";
 		};
@@ -14289,7 +14496,7 @@
 		fRef = 027D5441146583D4002C310F /* FDSprite.m */;
 		name = "FDSprite.m: 39";
 		rLen = 0;
-		rLoc = 680;
+		rLoc = 955;
 		rType = 0;
 		vrLen = 477;
 		vrLoc = 37;
@@ -14309,7 +14516,7 @@
 		fRef = 027D5440146583D4002C310F /* FDSprite.h */;
 		name = "FDSprite.h: 34";
 		rLen = 0;
-		rLoc = 667;
+		rLoc = 730;
 		rType = 0;
 		vrLen = 647;
 		vrLoc = 197;
@@ -14764,7 +14971,7 @@
 		activeArchitecturePreference = armv6;
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 027D533B1460126F002C310F /* FlameDragon */;
-		activeSDKPreference = iphoneos4.2;
+		activeSDKPreference = iphonesimulator4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* FlameDragon */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* FlameDragon */,
@@ -15636,6 +15843,21 @@
 			02542CB7155D62DA0050FEC8 = 02542CB7155D62DA0050FEC8 /* PBXBookmark */;
 			02542CB8155D62DA0050FEC8 = 02542CB8155D62DA0050FEC8 /* PBXBookmark */;
 			02542CC3155D632D0050FEC8 = 02542CC3155D632D0050FEC8 /* PBXBookmark */;
+			025DA37916283F1700DD7C30 /* PBXTextBookmark */ = 025DA37916283F1700DD7C30 /* PBXTextBookmark */;
+			025DA37A16283F1700DD7C30 /* PBXTextBookmark */ = 025DA37A16283F1700DD7C30 /* PBXTextBookmark */;
+			025DA37B16283F1700DD7C30 /* PBXTextBookmark */ = 025DA37B16283F1700DD7C30 /* PBXTextBookmark */;
+			025DA37C16283F1700DD7C30 /* PBXTextBookmark */ = 025DA37C16283F1700DD7C30 /* PBXTextBookmark */;
+			025DA37D16283F1700DD7C30 /* PBXTextBookmark */ = 025DA37D16283F1700DD7C30 /* PBXTextBookmark */;
+			025DA37E16283F1700DD7C30 /* PBXTextBookmark */ = 025DA37E16283F1700DD7C30 /* PBXTextBookmark */;
+			025DA37F16283F1700DD7C30 /* PBXTextBookmark */ = 025DA37F16283F1700DD7C30 /* PBXTextBookmark */;
+			025DA38016283F1700DD7C30 /* PBXTextBookmark */ = 025DA38016283F1700DD7C30 /* PBXTextBookmark */;
+			025DA38116283F1700DD7C30 /* PBXTextBookmark */ = 025DA38116283F1700DD7C30 /* PBXTextBookmark */;
+			025DA38216283F1700DD7C30 /* PBXBookmark */ = 025DA38216283F1700DD7C30 /* PBXBookmark */;
+			025DA38316283F1700DD7C30 /* PBXBookmark */ = 025DA38316283F1700DD7C30 /* PBXBookmark */;
+			025DA38616283F1700DD7C30 /* PBXTextBookmark */ = 025DA38616283F1700DD7C30 /* PBXTextBookmark */;
+			025DA4FF162841B100DD7C30 /* PBXTextBookmark */ = 025DA4FF162841B100DD7C30 /* PBXTextBookmark */;
+			025DA500162841B100DD7C30 /* PBXTextBookmark */ = 025DA500162841B100DD7C30 /* PBXTextBookmark */;
+			025DA501162841B100DD7C30 /* PBXTextBookmark */ = 025DA501162841B100DD7C30 /* PBXTextBookmark */;
 			02646EC61575296800FEBFAC = 02646EC61575296800FEBFAC /* PBXTextBookmark */;
 			026BE24C14B3084800484B4D = 026BE24C14B3084800484B4D /* PBXTextBookmark */;
 			026BE24D14B3084800484B4D = 026BE24D14B3084800484B4D /* PBXTextBookmark */;

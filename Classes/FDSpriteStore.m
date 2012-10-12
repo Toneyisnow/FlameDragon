@@ -68,6 +68,18 @@ static FDSpriteStore *instance;
 	 */
 }
 
+-(FDSprite *) iconFile:(int)iconFileIndex Pos:(int)pos
+{
+	NSString *fileName = [NSString stringWithFormat:@"Icon-%02d.png", iconFileIndex];
+	
+	int posx = (pos - 1) % 3;
+	int posy = (pos - 1) / 3;
+	CGRect rect = CGRectMake(posx * 24, posy * 24, 24, 24);
+	FDSprite *sprite = [[FDSprite alloc] initFromFile:fileName withRect:rect];
+	
+	return [sprite autorelease];
+}
+
 -(FDSprite *) emptySprite
 {
 	return [self sprite: @"Empty.png"];

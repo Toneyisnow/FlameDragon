@@ -31,6 +31,17 @@
 	return self;
 }
 
+-(id) initFromFile:(NSString *)fileName withRect:(CGRect)rect
+{
+	self = [super init];
+	
+	CCSpriteBatchNode *batch = [CCSpriteBatchNode batchNodeWithFile:fileName capacity:12];
+	ccsprite = [CCSprite spriteWithBatchNode:batch rect:rect];
+	[ccsprite retain];
+	
+	return self;
+}
+
 -(id) initWithString:(NSString *)str Size:(int)size
 {
 	self = [super init];

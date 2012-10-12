@@ -15,6 +15,7 @@
 }
 
 -(id) initFromFile:(NSString *)fileName;
+-(id) initFromFile:(NSString *)fileName withRect:(CGRect)rect;
 
 -(id) initWithString:(NSString *)str Size:(int)size;
 

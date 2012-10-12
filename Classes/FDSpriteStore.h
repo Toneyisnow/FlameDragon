@@ -22,6 +22,9 @@
 -(FDSprite *) sprite:(NSString *)fileName;
 //-(FDSprite *) sprite:(NSString *)fileName Id:(int)i;
 
+// NOTE: this is not used yet
+-(FDSprite *) iconFile:(int)iconFileIndex Pos:(int)pos;
+
 -(FDSprite *) emptySprite;
 
 
