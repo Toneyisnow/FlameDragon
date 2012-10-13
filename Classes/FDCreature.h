@@ -68,7 +68,7 @@ typedef enum ActionStatus {
 	 int attackItemIndex;
 	 int defendItemIndex;
 	 */
-	FDRange *attackRange;
+	// FDRange *attackRange;
 	
 	CreatureData *data;
 	

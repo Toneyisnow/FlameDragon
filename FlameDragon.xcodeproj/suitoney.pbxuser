@@ -522,9 +522,9 @@
 	};
 	021BA0421472AB5500102DCE /* ActionMenuState.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {775, 3653}}";
-			sepNavSelRange = "{1818, 0}";
-			sepNavVisRange = "{1430, 539}";
+			sepNavIntBoundsRect = "{{0, 0}, {775, 3666}}";
+			sepNavSelRange = "{1675, 0}";
+			sepNavVisRange = "{1664, 351}";
 		};
 	};
 	021BA0441472AB6100102DCE /* ItemsMenuState.h */ = {
@@ -592,9 +592,9 @@
 	};
 	021BA0D8147400CB00102DCE /* SelectAttackTargetState.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 1001}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 1040}}";
 			sepNavSelRange = "{936, 0}";
-			sepNavVisRange = "{610, 534}";
+			sepNavVisRange = "{610, 533}";
 		};
 	};
 	021BA0DA147404B500102DCE /* FDRange.h */ = {
@@ -625,7 +625,7 @@
 			sepNavVisRange = "{136, 506}";
 		};
 	};
-	021BA12A1474120900102DCE /* BattleField.m:435 */ = {
+	021BA12A1474120900102DCE /* BattleField.m:439 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -637,7 +637,7 @@
 		functionName = "-selectMagicTarget:MagicId:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 435;
+		lineNumber = 439;
 		location = FlameDragon;
 		modificationTime = 371320247.358062;
 		originalNumberOfMultipleMatches = 1;
@@ -730,9 +730,9 @@
 	};
 	021BA1C71477789B00102DCE /* ActionLayers.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {936, 12662}}";
-			sepNavSelRange = "{22601, 0}";
-			sepNavVisRange = "{22052, 796}";
+			sepNavIntBoundsRect = "{{0, 0}, {1076, 12038}}";
+			sepNavSelRange = "{3956, 87}";
+			sepNavVisRange = "{4258, 967}";
 		};
 	};
 	021BA2271477854E00102DCE /* FDTreasure.h */ = {
@@ -943,7 +943,7 @@
 		fRef = 0297D788147D5069007F3E12 /* CreatureDefinition.h */;
 		name = "CreatureDefinition.h: 57";
 		rLen = 36;
-		rLoc = 771;
+		rLoc = 750;
 		rType = 0;
 		vrLen = 635;
 		vrLoc = 445;
@@ -953,7 +953,7 @@
 		fRef = 0297D789147D5069007F3E12 /* CreatureDefinition.m */;
 		name = "CreatureDefinition.m: 117";
 		rLen = 0;
-		rLoc = 2569;
+		rLoc = 2480;
 		rType = 0;
 		vrLen = 344;
 		vrLoc = 1757;
@@ -963,7 +963,7 @@
 		fRef = 0297D789147D5069007F3E12 /* CreatureDefinition.m */;
 		name = "CreatureDefinition.m: 117";
 		rLen = 0;
-		rLoc = 2569;
+		rLoc = 2480;
 		rType = 0;
 		vrLen = 344;
 		vrLoc = 1757;
@@ -1030,7 +1030,7 @@
 		fRef = 027334BC149A365A00D0812F /* AttackItemDefinition.h */;
 		name = "AttackItemDefinition.h: 25";
 		rLen = 0;
-		rLoc = 404;
+		rLoc = 446;
 		rType = 0;
 		vrLen = 466;
 		vrLoc = 162;
@@ -1040,7 +1040,7 @@
 		fRef = 027334BC149A365A00D0812F /* AttackItemDefinition.h */;
 		name = "AttackItemDefinition.h: 25";
 		rLen = 0;
-		rLoc = 404;
+		rLoc = 446;
 		rType = 0;
 		vrLen = 466;
 		vrLoc = 162;
@@ -1096,7 +1096,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 94";
 		rLen = 0;
-		rLoc = 2484;
+		rLoc = 2336;
 		rType = 0;
 		vrLen = 962;
 		vrLoc = 966;
@@ -1106,7 +1106,7 @@
 		fRef = 027D54091462B712002C310F /* FDCreature.h */;
 		name = "FDCreature.h: 107";
 		rLen = 0;
-		rLoc = 2032;
+		rLoc = 2035;
 		rType = 0;
 		vrLen = 813;
 		vrLoc = 1220;
@@ -1146,7 +1146,7 @@
 		fRef = 027334C2149A3B1A00D0812F /* Item.dat */;
 		name = "Item.dat: 19";
 		rLen = 0;
-		rLoc = 479;
+		rLoc = 505;
 		rType = 0;
 		vrLen = 283;
 		vrLoc = 0;
@@ -1246,7 +1246,7 @@
 		fRef = 0297D788147D5069007F3E12 /* CreatureDefinition.h */;
 		name = "CreatureDefinition.h: 60";
 		rLen = 0;
-		rLoc = 782;
+		rLoc = 761;
 		rType = 0;
 		vrLen = 633;
 		vrLoc = 539;
@@ -1256,7 +1256,7 @@
 		fRef = 027334BC149A365A00D0812F /* AttackItemDefinition.h */;
 		name = "AttackItemDefinition.h: 25";
 		rLen = 0;
-		rLoc = 404;
+		rLoc = 446;
 		rType = 0;
 		vrLen = 625;
 		vrLoc = 3;
@@ -1266,7 +1266,7 @@
 		fRef = 027334BD149A365A00D0812F /* AttackItemDefinition.m */;
 		name = "AttackItemDefinition.m: 27";
 		rLen = 0;
-		rLoc = 626;
+		rLoc = 638;
 		rType = 0;
 		vrLen = 774;
 		vrLoc = 0;
@@ -1476,7 +1476,7 @@
 		fRef = 027334C2149A3B1A00D0812F /* Item.dat */;
 		name = "Item.dat: 19";
 		rLen = 0;
-		rLoc = 479;
+		rLoc = 505;
 		rType = 0;
 		vrLen = 283;
 		vrLoc = 0;
@@ -1486,7 +1486,7 @@
 		fRef = 027334C2149A3B1A00D0812F /* Item.dat */;
 		name = "Item.dat: 15";
 		rLen = 0;
-		rLoc = 378;
+		rLoc = 404;
 		rType = 0;
 		vrLen = 283;
 		vrLoc = 0;
@@ -1496,7 +1496,7 @@
 		fRef = 027334C2149A3B1A00D0812F /* Item.dat */;
 		name = "Item.dat: 15";
 		rLen = 0;
-		rLoc = 378;
+		rLoc = 404;
 		rType = 0;
 		vrLen = 283;
 		vrLoc = 0;
@@ -1916,7 +1916,7 @@
 		fRef = 0297D789147D5069007F3E12 /* CreatureDefinition.m */;
 		name = "CreatureDefinition.m: 119";
 		rLen = 0;
-		rLoc = 2206;
+		rLoc = 2117;
 		rType = 0;
 		vrLen = 599;
 		vrLoc = 1968;
@@ -1926,7 +1926,7 @@
 		fRef = 027334C2149A3B1A00D0812F /* Item.dat */;
 		name = "Item.dat: 13";
 		rLen = 0;
-		rLoc = 363;
+		rLoc = 387;
 		rType = 0;
 		vrLen = 283;
 		vrLoc = 0;
@@ -2056,7 +2056,7 @@
 		fRef = 027334C2149A3B1A00D0812F /* Item.dat */;
 		name = "Item.dat: 13";
 		rLen = 0;
-		rLoc = 363;
+		rLoc = 387;
 		rType = 0;
 		vrLen = 283;
 		vrLoc = 0;
@@ -3407,9 +3407,10 @@
 	};
 	022D386C16171F470020F816 /* VillageLabel.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {850, 523}}";
+			sepNavIntBoundsRect = "{{0, 0}, {850, 546}}";
 			sepNavSelRange = "{249, 0}";
 			sepNavVisRange = "{0, 301}";
+			sepNavWindowFrame = "{{38, 78}, {909, 674}}";
 		};
 	};
 	022D386D16171F470020F816 /* VillageLabel.m */ = {
@@ -4733,7 +4734,7 @@
 		fRef = 027334C2149A3B1A00D0812F /* Item.dat */;
 		name = "Item.dat: 18";
 		rLen = 0;
-		rLoc = 378;
+		rLoc = 404;
 		rType = 0;
 		vrLen = 363;
 		vrLoc = 0;
@@ -4783,7 +4784,7 @@
 		fRef = 027334C2149A3B1A00D0812F /* Item.dat */;
 		name = "Item.dat: 19";
 		rLen = 0;
-		rLoc = 378;
+		rLoc = 404;
 		rType = 0;
 		vrLen = 393;
 		vrLoc = 0;
@@ -4803,7 +4804,7 @@
 		fRef = 027334C2149A3B1A00D0812F /* Item.dat */;
 		name = "Item.dat: 19";
 		rLen = 0;
-		rLoc = 378;
+		rLoc = 404;
 		rType = 0;
 		vrLen = 393;
 		vrLoc = 0;
@@ -4943,7 +4944,7 @@
 		fRef = 027D54191462BBB8002C310F /* BattleField.m */;
 		name = "BattleField.m: 731";
 		rLen = 65;
-		rLoc = 17238;
+		rLoc = 17278;
 		rType = 0;
 		vrLen = 949;
 		vrLoc = 16918;
@@ -4973,7 +4974,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 94";
 		rLen = 0;
-		rLoc = 2484;
+		rLoc = 2336;
 		rType = 0;
 		vrLen = 999;
 		vrLoc = 1152;
@@ -5173,7 +5174,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 90";
 		rLen = 0;
-		rLoc = 2365;
+		rLoc = 2217;
 		rType = 0;
 		vrLen = 913;
 		vrLoc = 1077;
@@ -5183,7 +5184,7 @@
 		fRef = 0297D789147D5069007F3E12 /* CreatureDefinition.m */;
 		name = "CreatureDefinition.m: 119";
 		rLen = 0;
-		rLoc = 2206;
+		rLoc = 2117;
 		rType = 0;
 		vrLen = 594;
 		vrLoc = 1968;
@@ -5253,7 +5254,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 268";
 		rLen = 0;
-		rLoc = 6680;
+		rLoc = 6532;
 		rType = 0;
 		vrLen = 732;
 		vrLoc = 6527;
@@ -5273,7 +5274,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 268";
 		rLen = 0;
-		rLoc = 6680;
+		rLoc = 6532;
 		rType = 0;
 		vrLen = 761;
 		vrLoc = 6527;
@@ -5323,7 +5324,7 @@
 		fRef = 027D54191462BBB8002C310F /* BattleField.m */;
 		name = "BattleField.m: 496";
 		rLen = 20;
-		rLoc = 12350;
+		rLoc = 12390;
 		rType = 0;
 		vrLen = 787;
 		vrLoc = 11724;
@@ -5938,7 +5939,7 @@
 		fRef = 027D54091462B712002C310F /* FDCreature.h */;
 		name = "FDCreature.h: 107";
 		rLen = 0;
-		rLoc = 2032;
+		rLoc = 2035;
 		rType = 0;
 		vrLen = 779;
 		vrLoc = 1254;
@@ -5948,10 +5949,10 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 404";
 		rLen = 0;
-		rLoc = 8384;
+		rLoc = 8236;
 		rType = 0;
-		vrLen = 663;
-		vrLoc = 8873;
+		vrLen = 0;
+		vrLoc = 8869;
 	};
 	022D3A26161F28EF0020F816 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -6394,7 +6395,7 @@
 		comments = "Accessing unknown 'creatureType' getter method";
 		fRef = 027D54191462BBB8002C310F /* BattleField.m */;
 		rLen = 1;
-		rLoc = 751;
+		rLoc = 755;
 		rType = 1;
 	};
 	022D3A8C161F3EDE0020F816 /* PBXTextBookmark */ = {
@@ -6402,7 +6403,7 @@
 		fRef = 027D54191462BBB8002C310F /* BattleField.m */;
 		name = "BattleField.m: 736";
 		rLen = 0;
-		rLoc = 17467;
+		rLoc = 17507;
 		rType = 0;
 		vrLen = 735;
 		vrLoc = 16952;
@@ -6412,7 +6413,7 @@
 		comments = "Accessing unknown 'creatureType' getter method";
 		fRef = 027D54191462BBB8002C310F /* BattleField.m */;
 		rLen = 1;
-		rLoc = 751;
+		rLoc = 755;
 		rType = 1;
 	};
 	022D3A90161F3F070020F816 /* PBXTextBookmark */ = {
@@ -6420,7 +6421,7 @@
 		fRef = 027D54191462BBB8002C310F /* BattleField.m */;
 		name = "BattleField.m: 736";
 		rLen = 0;
-		rLoc = 17516;
+		rLoc = 17556;
 		rType = 0;
 		vrLen = 740;
 		vrLoc = 16952;
@@ -6460,7 +6461,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 404";
 		rLen = 0;
-		rLoc = 8384;
+		rLoc = 8236;
 		rType = 0;
 		vrLen = 783;
 		vrLoc = 295;
@@ -6510,7 +6511,7 @@
 		fRef = 027D54091462B712002C310F /* FDCreature.h */;
 		name = "FDCreature.h: 108";
 		rLen = 15;
-		rLoc = 2049;
+		rLoc = 2052;
 		rType = 0;
 		vrLen = 795;
 		vrLoc = 1583;
@@ -6520,7 +6521,7 @@
 		fRef = 027D54191462BBB8002C310F /* BattleField.m */;
 		name = "BattleField.m: 736";
 		rLen = 0;
-		rLoc = 17467;
+		rLoc = 17507;
 		rType = 0;
 		vrLen = 958;
 		vrLoc = 16871;
@@ -6580,7 +6581,7 @@
 		fRef = 027D54191462BBB8002C310F /* BattleField.m */;
 		name = "BattleField.m: 736";
 		rLen = 0;
-		rLoc = 17516;
+		rLoc = 17556;
 		rType = 0;
 		vrLen = 740;
 		vrLoc = 16952;
@@ -6600,7 +6601,7 @@
 		comments = "Incomplete implementation of class 'FDCreature'";
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		rLen = 1;
-		rLoc = 395;
+		rLoc = 403;
 		rType = 1;
 	};
 	022D3AC31620091C0020F816 /* PBXTextBookmark */ = {
@@ -6608,7 +6609,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 396";
 		rLen = 0;
-		rLoc = 8864;
+		rLoc = 9026;
 		rType = 0;
 		vrLen = 264;
 		vrLoc = 8601;
@@ -6698,7 +6699,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 266";
 		rLen = 0;
-		rLoc = 6681;
+		rLoc = 6533;
 		rType = 0;
 		vrLen = 1021;
 		vrLoc = 5868;
@@ -6728,7 +6729,7 @@
 		fRef = 027D54091462B712002C310F /* FDCreature.h */;
 		name = "FDCreature.h: 144";
 		rLen = 0;
-		rLoc = 2713;
+		rLoc = 2716;
 		rType = 0;
 		vrLen = 725;
 		vrLoc = 2398;
@@ -6898,7 +6899,7 @@
 		fRef = 027D54191462BBB8002C310F /* BattleField.m */;
 		name = "BattleField.m: 541";
 		rLen = 0;
-		rLoc = 13258;
+		rLoc = 13298;
 		rType = 0;
 		vrLen = 687;
 		vrLoc = 12943;
@@ -6962,7 +6963,7 @@
 		fRef = 027D54091462B712002C310F /* FDCreature.h */;
 		name = "FDCreature.h: 144";
 		rLen = 0;
-		rLoc = 2713;
+		rLoc = 2716;
 		rType = 0;
 		vrLen = 725;
 		vrLoc = 2398;
@@ -7022,7 +7023,7 @@
 		fRef = 027D54091462B712002C310F /* FDCreature.h */;
 		name = "FDCreature.h: 144";
 		rLen = 0;
-		rLoc = 2713;
+		rLoc = 2716;
 		rType = 0;
 		vrLen = 627;
 		vrLoc = 1933;
@@ -7062,7 +7063,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 396";
 		rLen = 0;
-		rLoc = 8864;
+		rLoc = 9026;
 		rType = 0;
 		vrLen = 286;
 		vrLoc = 8578;
@@ -7232,7 +7233,7 @@
 		fRef = 027D54191462BBB8002C310F /* BattleField.m */;
 		name = "BattleField.m: 541";
 		rLen = 0;
-		rLoc = 13151;
+		rLoc = 13191;
 		rType = 0;
 		vrLen = 679;
 		vrLoc = 12985;
@@ -7242,7 +7243,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 361";
 		rLen = 0;
-		rLoc = 8461;
+		rLoc = 8313;
 		rType = 0;
 		vrLen = 722;
 		vrLoc = 295;
@@ -7252,7 +7253,7 @@
 		fRef = 027D54091462B712002C310F /* FDCreature.h */;
 		name = "FDCreature.h: 136";
 		rLen = 0;
-		rLoc = 2531;
+		rLoc = 2534;
 		rType = 0;
 		vrLen = 788;
 		vrLoc = 1279;
@@ -8053,8 +8054,8 @@
 	022D3C7E1625CA9F0020F816 /* EventChapter3.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {789, 780}}";
-			sepNavSelRange = "{1355, 0}";
-			sepNavVisRange = "{673, 1074}";
+			sepNavSelRange = "{1352, 0}";
+			sepNavVisRange = "{807, 943}";
 		};
 	};
 	022D3C911625CD600020F816 /* PBXTextBookmark */ = {
@@ -8180,7 +8181,7 @@
 		fRef = 022D3C7E1625CA9F0020F816 /* EventChapter3.m */;
 		name = "EventChapter3.m: 46";
 		rLen = 0;
-		rLoc = 1355;
+		rLoc = 1352;
 		rType = 0;
 		vrLen = 1074;
 		vrLoc = 673;
@@ -8520,6 +8521,32 @@
 		vrLen = 301;
 		vrLoc = 0;
 	};
+	025DA50716284FDD00DD7C30 /* Chapter-03.strings */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {747, 1209}}";
+			sepNavSelRange = "{222, 0}";
+			sepNavVisRange = "{0, 799}";
+		};
+	};
+	025DA5181629275100DD7C30 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Request for member 'attackScope' in something not a structure or union";
+		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 386;
+		rType = 1;
+	};
+	025DA5191629275100DD7C30 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
+		name = "FDCreature.m: 387";
+		rLen = 0;
+		rLoc = 8870;
+		rType = 0;
+		vrLen = 466;
+		vrLoc = 8455;
+	};
 	02646E8C15750D7500FEBFAC /* ShoppingRecordDialog.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {779, 345}}";
@@ -8803,16 +8830,16 @@
 	};
 	027334BC149A365A00D0812F /* AttackItemDefinition.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {848, 455}}";
-			sepNavSelRange = "{404, 0}";
-			sepNavVisRange = "{162, 466}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 455}}";
+			sepNavSelRange = "{567, 0}";
+			sepNavVisRange = "{30, 653}";
 		};
 	};
 	027334BD149A365A00D0812F /* AttackItemDefinition.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 819}}";
-			sepNavSelRange = "{626, 0}";
-			sepNavVisRange = "{0, 774}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 858}}";
+			sepNavSelRange = "{1053, 0}";
+			sepNavVisRange = "{443, 805}";
 		};
 	};
 	027334BF149A366C00D0812F /* DefendItemDefinition.h */ = {
@@ -8831,9 +8858,9 @@
 	};
 	027334C2149A3B1A00D0812F /* Item.dat */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 494}}";
-			sepNavSelRange = "{1, 0}";
-			sepNavVisRange = "{0, 484}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 520}}";
+			sepNavSelRange = "{387, 0}";
+			sepNavVisRange = "{0, 509}";
 			sepNavWindowFrame = "{{15, 99}, {909, 674}}";
 		};
 	};
@@ -8879,7 +8906,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {739, 832}}";
 			sepNavSelRange = "{783, 0}";
-			sepNavVisRange = "{271, 467}";
+			sepNavVisRange = "{303, 435}";
 		};
 	};
 	02733525149F13E100D0812F /* Magic.strings */ = {
@@ -9285,6 +9312,13 @@
 		rType = 0;
 		vrLen = 513;
 		vrLoc = 288;
+	};
+	02733AFF14A9A32A00D0812F /* Fight-016-2-01.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-016-2-01.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-016-2-01.png";
+		sourceTree = "<absolute>";
 	};
 	02733B8114A9B90A00D0812F /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -9758,16 +9792,16 @@
 	};
 	027D54091462B712002C310F /* FDCreature.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 2145}}";
-			sepNavSelRange = "{2531, 0}";
-			sepNavVisRange = "{1279, 788}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 2249}}";
+			sepNavSelRange = "{1176, 0}";
+			sepNavVisRange = "{1033, 483}";
 		};
 	};
 	027D540A1462B712002C310F /* FDCreature.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {957, 5161}}";
-			sepNavSelRange = "{8461, 0}";
-			sepNavVisRange = "{295, 722}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 5590}}";
+			sepNavSelRange = "{8813, 0}";
+			sepNavVisRange = "{8403, 535}";
 		};
 	};
 	027D540C1462B755002C310F /* FDDrawable.h */ = {
@@ -9822,9 +9856,9 @@
 	};
 	027D54191462BBB8002C310F /* BattleField.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 14053}}";
-			sepNavSelRange = "{13151, 0}";
-			sepNavVisRange = "{12985, 679}";
+			sepNavIntBoundsRect = "{{0, 0}, {817, 13780}}";
+			sepNavSelRange = "{23423, 0}";
+			sepNavVisRange = "{23194, 861}";
 		};
 	};
 	027D541B1462BC7B002C310F /* GroundBlock.h */ = {
@@ -10279,7 +10313,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 94";
 		rLen = 0;
-		rLoc = 2484;
+		rLoc = 2336;
 		rType = 0;
 		vrLen = 965;
 		vrLoc = 963;
@@ -10783,16 +10817,16 @@
 	};
 	0297D788147D5069007F3E12 /* CreatureDefinition.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 1183}}";
-			sepNavSelRange = "{782, 0}";
-			sepNavVisRange = "{539, 633}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 1196}}";
+			sepNavSelRange = "{684, 0}";
+			sepNavVisRange = "{539, 642}";
 		};
 	};
 	0297D789147D5069007F3E12 /* CreatureDefinition.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 1820}}";
-			sepNavSelRange = "{1537, 0}";
-			sepNavVisRange = "{526, 948}";
+			sepNavIntBoundsRect = "{{0, 0}, {754, 1677}}";
+			sepNavSelRange = "{2085, 0}";
+			sepNavVisRange = "{1907, 637}";
 		};
 	};
 	0297D7C7147E7379007F3E12 /* FightScene.h */ = {
@@ -10939,10 +10973,162 @@
 		vrLen = 319;
 		vrLoc = 0;
 	};
+	0297D92614815347007F3E12 /* Fight-001-1-04.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-001-1-04.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-001-1-04.png";
+		sourceTree = "<absolute>";
+	};
 	0297D92714815347007F3E12 /* Fight-001-2-01.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-001-2-01.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-001-2-01.png";
+		sourceTree = "<absolute>";
 		uiCtxt = {
 			sepNavWindowFrame = "{{38, 78}, {909, 674}}";
 		};
+	};
+	0297D92814815347007F3E12 /* Fight-001-2-02.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-001-2-02.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-001-2-02.png";
+		sourceTree = "<absolute>";
+	};
+	0297D92914815347007F3E12 /* Fight-001-2-03.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-001-2-03.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-001-2-03.png";
+		sourceTree = "<absolute>";
+	};
+	0297D92A14815347007F3E12 /* Fight-001-2-04.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-001-2-04.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-001-2-04.png";
+		sourceTree = "<absolute>";
+	};
+	0297D92B14815347007F3E12 /* Fight-001-2-05.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-001-2-05.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-001-2-05.png";
+		sourceTree = "<absolute>";
+	};
+	0297D92C14815347007F3E12 /* Fight-001-2-06.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-001-2-06.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-001-2-06.png";
+		sourceTree = "<absolute>";
+	};
+	0297D92D14815347007F3E12 /* Fight-001-2-07.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-001-2-07.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-001-2-07.png";
+		sourceTree = "<absolute>";
+	};
+	0297D92E14815347007F3E12 /* Fight-001-2-08.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-001-2-08.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-001-2-08.png";
+		sourceTree = "<absolute>";
+	};
+	0297D92F14815347007F3E12 /* Fight-001-2-09.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-001-2-09.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-001-2-09.png";
+		sourceTree = "<absolute>";
+	};
+	0297D93014815347007F3E12 /* Fight-001-2-10.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-001-2-10.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-001-2-10.png";
+		sourceTree = "<absolute>";
+	};
+	0297D93114815347007F3E12 /* Fight-701-1-01.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-701-1-01.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-701-1-01.png";
+		sourceTree = "<absolute>";
+	};
+	0297D93214815347007F3E12 /* Fight-701-1-02.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-701-1-02.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-701-1-02.png";
+		sourceTree = "<absolute>";
+	};
+	0297D93314815347007F3E12 /* Fight-701-1-03.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-701-1-03.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-701-1-03.png";
+		sourceTree = "<absolute>";
+	};
+	0297D93414815347007F3E12 /* Fight-701-1-04.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-701-1-04.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-701-1-04.png";
+		sourceTree = "<absolute>";
+	};
+	0297D93514815347007F3E12 /* Fight-701-2-01.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-701-2-01.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-701-2-01.png";
+		sourceTree = "<absolute>";
+	};
+	0297D93614815347007F3E12 /* Fight-701-2-02.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-701-2-02.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-701-2-02.png";
+		sourceTree = "<absolute>";
+	};
+	0297D93714815347007F3E12 /* Fight-701-2-03.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-701-2-03.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-701-2-03.png";
+		sourceTree = "<absolute>";
+	};
+	0297D93814815347007F3E12 /* Fight-701-2-04.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-701-2-04.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-701-2-04.png";
+		sourceTree = "<absolute>";
+	};
+	0297D93914815347007F3E12 /* Fight-701-2-05.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-701-2-05.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-701-2-05.png";
+		sourceTree = "<absolute>";
+	};
+	0297D93A14815347007F3E12 /* Fight-701-2-06.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-701-2-06.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-701-2-06.png";
+		sourceTree = "<absolute>";
+	};
+	0297D93C14815347007F3E12 /* Fight-701-2-08.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-701-2-08.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-701-2-08.png";
+		sourceTree = "<absolute>";
 	};
 	0297D95E1481D224007F3E12 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -11036,7 +11222,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {739, 429}}";
 			sepNavSelRange = "{497, 0}";
-			sepNavVisRange = "{0, 604}";
+			sepNavVisRange = "{3, 601}";
 		};
 	};
 	0297D9EB1481E86A007F3E12 /* PBXTextBookmark */ = {
@@ -11342,6 +11528,20 @@
 		vrLen = 522;
 		vrLoc = 401;
 	};
+	0297DDBA148D0E89007F3E12 /* Fight-003-1-04.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-003-1-04.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-003-1-04.png";
+		sourceTree = "<absolute>";
+	};
+	0297DDC5148D0E89007F3E12 /* Fight-003-2-11.png */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = image.png;
+		name = "Fight-003-2-11.png";
+		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Resources/Fights/Fight-003-2-11.png";
+		sourceTree = "<absolute>";
+	};
 	0297DEAB148E5273007F3E12 /* GameFormula.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {922, 397}}";
@@ -11382,7 +11582,7 @@
 	};
 	029C625614910E660054B260 /* Creature.strings */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 420}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 415}}";
 			sepNavSelRange = "{328, 0}";
 			sepNavVisRange = "{0, 343}";
 		};
@@ -13921,7 +14121,7 @@
 		fRef = 027334C2149A3B1A00D0812F /* Item.dat */;
 		name = "Item.dat: 12";
 		rLen = 0;
-		rLoc = 376;
+		rLoc = 402;
 		rType = 0;
 		vrLen = 263;
 		vrLoc = 0;
@@ -13999,7 +14199,7 @@
 		fRef = 027D54091462B712002C310F /* FDCreature.h */;
 		name = "FDCreature.h: 157";
 		rLen = 0;
-		rLoc = 3075;
+		rLoc = 3078;
 		rType = 0;
 		vrLen = 788;
 		vrLoc = 1513;
@@ -14077,7 +14277,7 @@
 		fRef = 027D54191462BBB8002C310F /* BattleField.m */;
 		name = "BattleField.m: 626";
 		rLen = 0;
-		rLoc = 15183;
+		rLoc = 15223;
 		rType = 0;
 		vrLen = 606;
 		vrLoc = 14634;
@@ -14776,7 +14976,7 @@
 		vrLen = 623;
 		vrLoc = 40;
 	};
-	02F840B314B83E1100665511 /* BattleField.m:452 */ = {
+	02F840B314B83E1100665511 /* BattleField.m:456 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -14788,7 +14988,7 @@
 		functionName = "-getMagicTargets:Pos:";
 		hitCount = 0;
 		ignoreCount = 0;
-		lineNumber = 452;
+		lineNumber = 456;
 		location = FlameDragon;
 		modificationTime = 371320248.006534;
 		originalNumberOfMultipleMatches = 1;
@@ -14863,7 +15063,7 @@
 		fRef = 027334BD149A365A00D0812F /* AttackItemDefinition.m */;
 		name = "AttackItemDefinition.m: 39";
 		rLen = 0;
-		rLoc = 864;
+		rLoc = 1144;
 		rType = 0;
 		vrLen = 359;
 		vrLoc = 805;
@@ -14873,7 +15073,7 @@
 		fRef = 027334BC149A365A00D0812F /* AttackItemDefinition.h */;
 		name = "AttackItemDefinition.h: 24";
 		rLen = 40;
-		rLoc = 366;
+		rLoc = 408;
 		rType = 0;
 		vrLen = 466;
 		vrLoc = 87;
@@ -14971,20 +15171,20 @@
 		activeArchitecturePreference = armv6;
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 027D533B1460126F002C310F /* FlameDragon */;
-		activeSDKPreference = iphonesimulator4.2;
+		activeSDKPreference = iphoneos4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* FlameDragon */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* FlameDragon */,
 		);
 		breakpoints = (
-			021BA12A1474120900102DCE /* BattleField.m:435 */,
+			021BA12A1474120900102DCE /* BattleField.m:439 */,
 			02A0EB19147BE336005D630C /* SelectItemMenuState.m:43 */,
 			02A0EB25147BE377005D630C /* SelectItemMenuState.m:33 */,
 			0273377414A1AFC000D0812F /* ItemsMenuState.m:115 */,
 			027337D014A2F74500D0812F /* ItemBox.m:163 */,
 			02733A2F14A9899E00D0812F /* ActionLayers.m:948 */,
 			026BE26714B3106000484B4D /* BattleField.m:144 */,
-			02F840B314B83E1100665511 /* BattleField.m:452 */,
+			02F840B314B83E1100665511 /* BattleField.m:456 */,
 			02BA714B14C9FF960028C9E7 /* EventChapter1.m:445 */,
 			02C5746D15241B9600DAEE2C /* ActionLayers.m:771 */,
 			0207597315502509009E75E9 /* TitleLayer.m:109 */,
@@ -15858,6 +16058,8 @@
 			025DA4FF162841B100DD7C30 /* PBXTextBookmark */ = 025DA4FF162841B100DD7C30 /* PBXTextBookmark */;
 			025DA500162841B100DD7C30 /* PBXTextBookmark */ = 025DA500162841B100DD7C30 /* PBXTextBookmark */;
 			025DA501162841B100DD7C30 /* PBXTextBookmark */ = 025DA501162841B100DD7C30 /* PBXTextBookmark */;
+			025DA5181629275100DD7C30 /* XCBuildMessageTextBookmark */ = 025DA5181629275100DD7C30 /* XCBuildMessageTextBookmark */;
+			025DA5191629275100DD7C30 /* PBXTextBookmark */ = 025DA5191629275100DD7C30 /* PBXTextBookmark */;
 			02646EC61575296800FEBFAC = 02646EC61575296800FEBFAC /* PBXTextBookmark */;
 			026BE24C14B3084800484B4D = 026BE24C14B3084800484B4D /* PBXTextBookmark */;
 			026BE24D14B3084800484B4D = 026BE24D14B3084800484B4D /* PBXTextBookmark */;

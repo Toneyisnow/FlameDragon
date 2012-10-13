@@ -43,7 +43,7 @@
 	[self settleFriend:3 At:CGPointMake( 9, 24)];
 	[self settleFriend:4 At:CGPointMake(11, 24)];
 	[self settleFriend:5 At:CGPointMake(10, 25)];
-	// [self settleFriend:6 At:CGPointMake( 8, 25)];
+	[self settleFriend:6 At:CGPointMake( 8, 25)];
 	
 	[field addNpc:[[[FDNpc alloc] initWithDefinition:7 Id:7] autorelease] Position:CGPointMake(9, 12)];
 	

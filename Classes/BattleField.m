@@ -419,6 +419,10 @@
 {
 	NSMutableArray *scopeList = [self searchActionScope:[self getObjectPos:creature] Range:[creature attackRange]];
 	
+	if (scopeList == nil) {
+		return;
+	}
+	
 	for(FDPosition *pos in scopeList)
 	{
 		FDScopeIndicator *indicator = [[FDScopeIndicator alloc] init];
@@ -773,6 +777,10 @@
 
 -(NSMutableArray *) searchActionScope:(CGPoint)pos Range:(FDRange *)range
 {
+	if (range == nil) {
+		return nil;
+	}
+	
 	// Build Map
 	FDIntMap *map = [[FDIntMap alloc] initWidth:fieldWidth Height:fieldHeight];
 	
@@ -969,6 +977,9 @@
 	NSMutableArray *result = [[NSMutableArray alloc] init];
 	
 	NSMutableArray *scopeList = [self searchActionScope:[self getObjectPos:creature] Range:[creature attackRange]];
+	if (scopeList == nil) {
+		return [result autorelease];
+	}
 	
 	for (FDPosition *pos in scopeList) {
 		FDCreature *target = [self getCreatureByPos:[pos posValue]];

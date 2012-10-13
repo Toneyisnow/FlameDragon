@@ -11,8 +11,8 @@
 
 @implementation AttackItemDefinition
 
-@synthesize itemCategory,ap,hit,ev,attackScope;
-
+@synthesize itemCategory,ap,hit,ev;
+@synthesize attackRange;
 
 +(id) readFromFile:(FDFileStream *)stream
 {
@@ -31,6 +31,15 @@
 	
 	def.ap = [stream readInt];
 	def.hit = [stream readInt];
+	
+	int scope = [stream readInt];
+	if (scope >= 2) {
+		// Short Distance Amor
+		def.attackRange = [[[FDRange alloc] initWithMin:2 Max:scope] autorelease];
+	} else {
+		// Long Distance Amor
+		def.attackRange = [[[FDRange alloc] initWithMin:1 Max:scope] autorelease];
+	}
 	
 	// Currently there is no weapon that ev > 0
 	def.ev = 0;

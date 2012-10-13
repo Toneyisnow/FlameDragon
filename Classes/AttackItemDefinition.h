@@ -7,7 +7,7 @@
 //
 
 #import "ItemDefinition.h"
-
+#import "FDRange.h"
 
 @interface AttackItemDefinition : ItemDefinition {
 
@@ -18,15 +18,15 @@
 	int ap;
 	int hit;
 	int ev;
-	int attackScope;
-	
+	//int attackScope;
+	FDRange *attackRange;
 }
 
 @property (nonatomic) int itemCategory;
 @property (nonatomic) int ap;
 @property (nonatomic) int hit;
 @property (nonatomic) int ev;
-@property (nonatomic) int attackScope;
+@property (nonatomic, retain) FDRange *attackRange;
 
 // When this item is equiped, the extra effect
 -(void) extraEffectEquipedBy:(id)obj;

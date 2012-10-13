@@ -52,8 +52,6 @@
 -(int) getId;
 -(int) getAnimationId;
 
--(int) attackRange;
-
 -(NSString *) getRaceString;
 -(NSString *) getOccupationString;
 

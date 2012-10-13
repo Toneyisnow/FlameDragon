@@ -64,14 +64,12 @@
 	hpPrevious = data.hpCurrent;
 	mpPrevious = data.mpCurrent;
 	
-	//itemList = [[NSMutableArray alloc] initWithArray:definition.itemList];
-	//magicList = [[NSMutableArray alloc] initWithArray:definition.magicList];
 	NSLog(@"Loaded Item List, Count=%d", [data.itemList count]);
 	NSLog(@"Loaded Magic List, Count=%d", [data.magicList count]);
 	
 		
 	// TODO: this should be updated
-	attackRange = [[FDRange alloc] initWithMin:1 Max:[definition attackRange]];
+	//attackRange = [[FDRange alloc] initWithMin:1 Max:[definition attackRange]];
 	
 	if (data.attackItemIndex < 0 || data.defendItemIndex < 0)
 	{
@@ -378,13 +376,23 @@
 
 -(FDRange *)attackRange
 {
-	return attackRange;
+	if (data.attackItemIndex < 0) {
+		return nil;
+	}
+	
+	NSNumber *itemId = [[data itemList] objectAtIndex:data.attackItemIndex];
+	ItemDefinition *attackItem = [[DataDepot depot] getItemDefinition:[itemId intValue]];
+	
+	if (attackItem != nil && [attackItem isAttackItem]) {
+		return ((AttackItemDefinition *)attackItem).attackRange;
+	} else {
+		return nil;
+	}
+
 }
 
 -(void) dealloc
 {
-	[attackRange release];
-	
 	[data release];
 	
 	//[animationDefinition release];

@@ -106,17 +106,6 @@
 	return [FDLocalString occupation:occupation];
 }
 
--(int) attackRange
-{
-	if (occupation == 131) {
-		return 2;
-	}
-	else {
-		return 1;
-	}
-
-}
-
 -(BOOL) canEquip:(int)itemId
 {
 	ItemDefinition *item = [[DataDepot depot] getItemDefinition:itemId];
