@@ -6649,7 +6649,7 @@
 		fRef = 0297D98C1481D26C007F3E12 /* Animation.dat */;
 		name = "Animation.dat: 174";
 		rLen = 0;
-		rLoc = 1148;
+		rLoc = 1700;
 		rType = 0;
 		vrLen = 196;
 		vrLoc = 955;
@@ -8211,7 +8211,7 @@
 		fRef = 0297D98E1481D281007F3E12 /* Creature.dat */;
 		name = "Creature.dat: 26";
 		rLen = 0;
-		rLoc = 497;
+		rLoc = 499;
 		rType = 0;
 		vrLen = 604;
 		vrLoc = 0;
@@ -8388,7 +8388,7 @@
 		fRef = 0297D98E1481D281007F3E12 /* Creature.dat */;
 		name = "Creature.dat: 26";
 		rLen = 0;
-		rLoc = 497;
+		rLoc = 499;
 		rType = 0;
 		vrLen = 604;
 		vrLoc = 0;
@@ -9856,7 +9856,7 @@
 	};
 	027D54191462BBB8002C310F /* BattleField.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {817, 13780}}";
+			sepNavIntBoundsRect = "{{0, 0}, {817, 13910}}";
 			sepNavSelRange = "{23423, 0}";
 			sepNavVisRange = "{23194, 861}";
 		};
@@ -10911,9 +10911,9 @@
 	};
 	0297D822147F1132007F3E12 /* AnimationDefinition.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1125, 2444}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1125, 2262}}";
 			sepNavSelRange = "{2634, 0}";
-			sepNavVisRange = "{1612, 936}";
+			sepNavVisRange = "{3297, 971}";
 		};
 	};
 	0297D8491481444C007F3E12 /* PBXTextBookmark */ = {
@@ -11213,16 +11213,16 @@
 	};
 	0297D98C1481D26C007F3E12 /* Animation.dat */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 2262}}";
-			sepNavSelRange = "{1148, 0}";
-			sepNavVisRange = "{955, 196}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 3211}}";
+			sepNavSelRange = "{2, 0}";
+			sepNavVisRange = "{0, 207}";
 		};
 	};
 	0297D98E1481D281007F3E12 /* Creature.dat */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {739, 429}}";
-			sepNavSelRange = "{497, 0}";
-			sepNavVisRange = "{3, 601}";
+			sepNavSelRange = "{525, 0}";
+			sepNavVisRange = "{3, 606}";
 		};
 	};
 	0297D9EB1481E86A007F3E12 /* PBXTextBookmark */ = {
@@ -14407,7 +14407,7 @@
 		fRef = 0297D98E1481D281007F3E12 /* Creature.dat */;
 		name = "Creature.dat: 24";
 		rLen = 0;
-		rLoc = 603;
+		rLoc = 608;
 		rType = 0;
 		vrLen = 433;
 		vrLoc = 0;
@@ -14417,9 +14417,9 @@
 		fRef = 0297D98C1481D26C007F3E12 /* Animation.dat */;
 		name = "Animation.dat: 186";
 		rLen = 0;
-		rLoc = 1148;
+		rLoc = 1700;
 		rType = 0;
-		vrLen = 216;
+		vrLen = 120;
 		vrLoc = 1031;
 	};
 	02D30D8A1605B54500CA1799 /* PBXTextBookmark */ = {
@@ -16694,7 +16694,7 @@
 	};
 	E0F80F5D120A0182005866B8 /* GameConfig.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {779, 386}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 415}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 530}";
 		};

@@ -26,7 +26,6 @@
 	[self loadDyingEvent:96 Action:@selector(showNpcDyingMessage96)];
 	
 	[self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
-	[self loadTeamEvent:CreatureType_Npc Action:@selector(gameOver)];
 	
 	NSLog(@"Chapter3 events loaded.");
 }
@@ -49,6 +48,7 @@
 	
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:21] autorelease] Position:CGPointMake(9, 11)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:22] autorelease] Position:CGPointMake(10, 11)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:743 Id:40] autorelease] Position:CGPointMake(10, 9)];
 	
 }
 
