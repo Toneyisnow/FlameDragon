@@ -6,18 +6,11 @@
 //  Copyright 2012 ms. All rights reserved.
 //
 
-#import "Shopping2HomeDialog.h"
+#import "Shopping2ShopDialog.h"
 
-@interface Shopping2ItemDialog : Shopping2HomeDialog {
+@interface Shopping2ItemDialog : Shopping2ShopDialog {
 
 }
 
--(DataDepotShopType) getShopType;
-
--(void) onBuyItem_SelectedItem:(NSNumber *)num;
--(void) onBuyItem_ConfirmedItem:(NSNumber *)num;
--(void) onBuyItem_Done:(NSNumber *)num;
-
--(void) doBuyItem;
 
 @end

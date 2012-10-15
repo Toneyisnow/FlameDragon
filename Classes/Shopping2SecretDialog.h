@@ -6,10 +6,10 @@
 //  Copyright 2012 ms. All rights reserved.
 //
 
-#import "Shopping2ItemDialog.h"
+#import "Shopping2ShopDialog.h"
 
 
-@interface Shopping2SecretDialog : Shopping2ItemDialog {
+@interface Shopping2SecretDialog : Shopping2ShopDialog {
 
 }
 

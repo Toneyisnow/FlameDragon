@@ -47,9 +47,7 @@
 {
 	NSLog(@"round1 event triggered.");
 	
-	BattleField *field = [[layers getFieldLayer] getField];
 	// Creatures
-	
 	
 	FDFriend *friend1 = (FDFriend *)[field getUnSettledCreatureById:1];
 	if (friend1 != nil) {
@@ -104,7 +102,6 @@
 {
 	NSLog(@"round1 event triggered.");
 	
-	BattleField *field = [[layers getFieldLayer] getField];
 	// Creatures
 	
 	[self settleFriend:1 At:CGPointMake(27, 16)];
@@ -141,8 +138,6 @@
 
 -(void) round1_2
 {
-	// BattleField *field = [[layers getFieldLayer] getField];
-
 	[layers moveCreatureId:1 To:CGPointMake(22, 15) showMenu:FALSE];
 	[layers appendToCurrentActivity:[[[FDDurationActivity alloc] initWithDuration:1.0] autorelease]];
 
@@ -155,8 +150,6 @@
 
 -(void) round1_3
 {
-	BattleField *field = [[layers getFieldLayer] getField];
-
 	[field setCursorTo:CGPointMake(17, 15)];
 	
 	// NPC
@@ -194,8 +187,6 @@
 
 -(void) round1_4
 {
-	BattleField *field = [[layers getFieldLayer] getField];
-	
 	[field setCursorTo:CGPointMake(10, 21)];
 	
 	// Enemy
@@ -239,8 +230,6 @@
 
 -(void) round3
 {
-	BattleField *field = [[layers getFieldLayer] getField];
-	
 	[layers appendToCurrentActivityMethod:@selector(setCursorObjTo:) Param1:[FDPosition positionX:16 Y:1] Param2:nil Obj:field];
 	
 	// Enemy
@@ -286,8 +275,6 @@
 
 -(void) enemyClear
 {
-	BattleField *field = [[layers getFieldLayer] getField];
-	
 	// Select one of the messages
 	if ([[field getNpcList] count] == 6) {
 		isAllNpcSaved = TRUE;
@@ -304,8 +291,6 @@
 
 -(void) enemyClear_2
 {
-	BattleField *field = [[layers getFieldLayer] getField];
-
 	// Xiliya appears
 	FDFriend *friend6 = [[FDFriend alloc] initWithDefinition:6 Id:6];
 	[field addFriend:friend6 Position:CGPointMake(23, 5)];
@@ -329,8 +314,6 @@
 
 -(void) adjustFriends
 {
-	BattleField *field = [[layers getFieldLayer] getField];
-	
 	// Add Power Medician to Creature 1
 	if (isAllNpcSaved) {
 		
@@ -374,8 +357,6 @@
 
 -(void) setAiOfId:(int)creatureId EscapeTo:(CGPoint)pos
 {
-	BattleField *field = [[layers getFieldLayer] getField];
-	
 	FDCreature *creature = [field getCreatureById:creatureId];
 	
 	if (creature != nil) {

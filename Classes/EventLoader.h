@@ -14,7 +14,7 @@
 	EventHandler *eventHandler;
 	ActionLayers *layers;
 	
-	
+	BattleField *field;
 }
 
 -(void) loadWithLayers:(ActionLayers *)l;

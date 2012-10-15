@@ -25,7 +25,7 @@
 		NSString *chapterName = [FDLocalString chapterTitle:[cRecord chapterId]];
 		CGPoint pos = [FDWindow chapterRecordShowLocation:index];
 		
-		FDSprite *recordSprite = [[FDSprite alloc] initWithString:chapterName Size:14];
+		FDSprite *recordSprite = [[FDSprite alloc] initWithString:chapterName Size:16];
 		
 		CCMenuItemSprite* menuItem = [CCMenuItemSprite itemFromNormalSprite:[recordSprite getSprite] selectedSprite:NULL target:self selector:@selector(clickedViewOn:)];
 		

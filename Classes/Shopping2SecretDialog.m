@@ -11,6 +11,16 @@
 
 @implementation Shopping2SecretDialog
 
+-(void) initMessage
+{
+	[self setMessage:[FDLocalString message:53]];	
+}
+
+-(void) updateMessage
+{
+	[self setMessage:[FDLocalString message:54]];	
+}
+
 -(DataDepotShopType) getShopType
 {
 	return DataDepotShopType_SecretShop;

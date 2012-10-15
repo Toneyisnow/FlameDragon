@@ -42,6 +42,10 @@
 {
 }
 
+-(void) updateMessage
+{
+}
+
 -(void) setMessage:(NSString *)msg
 {
 	if (messageSprite != nil) {
@@ -93,18 +97,11 @@
 	// Should be called by child class
 }
 
--(ShoppingButton *) button_BuyAmor
+-(ShoppingButton *) button_Buy
 {
 	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"Shop_Buy_0.png"]];
-	[button setCallback:self Method:@selector(onBuyAmor)];
+	[button setCallback:self Method:@selector(onBuy)];
 	return [button autorelease];
-}
-
--(ShoppingButton *) button_BuyItem
-{
-	ShoppingButton *button = [[ShoppingButton alloc] initWithSprite:[[FDSpriteStore instance] sprite:@"Shop_Buy_0.png"]];
-	[button setCallback:self Method:@selector(onBuyItem)];
-	return [button autorelease];	
 }
 
 -(ShoppingButton *) button_Sell
@@ -181,18 +178,14 @@
 	[dialog show:layer];
 }
 
--(void) onBuyAmor
-{
-}
-
--(void) onBuyItem
+-(void) onBuy
 {
 }
 
 -(void) onSell
 {
 	NSLog(@"onSell");
-	[self setMessage:[FDLocalString message:52]];
+	[self updateMessage];
 	
 	lastPageIndex = 0;
 	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:0];
@@ -298,7 +291,7 @@
 -(void) onGiveItem
 {
 	NSLog(@"onGiveItem");
-	[self setMessage:[FDLocalString message:52]];
+	[self updateMessage];
 	
 	NSString *message = [FDLocalString message:58];
 	Shopping2MessageDialog *dialog = [[Shopping2MessageDialog alloc] initWithMessage:message];
@@ -438,7 +431,7 @@
 -(void) onEquip
 {
 	NSLog(@"onEquip");
-	[self setMessage:[FDLocalString message:52]];
+	[self updateMessage];
 	
 	lastPageIndex = 0;
 	Shopping2ShowFriendsDialog *dialog = [[Shopping2ShowFriendsDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:0];

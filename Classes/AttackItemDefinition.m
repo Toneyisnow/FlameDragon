@@ -33,11 +33,11 @@
 	def.hit = [stream readInt];
 	
 	int scope = [stream readInt];
-	if (scope >= 2) {
-		// Short Distance Amor
+	if (scope > 2) {
+		// Long Distance Amor
 		def.attackRange = [[[FDRange alloc] initWithMin:2 Max:scope] autorelease];
 	} else {
-		// Long Distance Amor
+		// Short Distance Amor
 		def.attackRange = [[[FDRange alloc] initWithMin:1 Max:scope] autorelease];
 	}
 	

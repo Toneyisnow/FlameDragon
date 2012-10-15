@@ -27,6 +27,7 @@
 {
 	eventHandler = [[EventHandler alloc] initWithLayers:l];
 	layers = l;
+	field = [[layers getFieldLayer] getField];
 	
 	//[layers setEventLoader:self];
 	[layers setEventListener:eventHandler];

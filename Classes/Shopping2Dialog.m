@@ -113,6 +113,11 @@
 -(ItemDefinition *) getItemDefinition:(int)shopIndex Type:(int)shopType Index:(int)index
 {
 	ShopDefinition *shop = [[DataDepot depot] getShopDefinition:shopIndex Type:shopType];
+	
+	if (index < 0 || index >= [shop.itemList count]) {
+		return nil;
+	}
+	
 	NSNumber *itemId = [shop.itemList objectAtIndex:index];
 	
 	return [[DataDepot depot] getItemDefinition:[itemId intValue]];

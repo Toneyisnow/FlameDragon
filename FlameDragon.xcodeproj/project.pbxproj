@@ -448,6 +448,7 @@
 		025DA6B616292AB200DD7C30 /* Fight-750-1-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 025DA6B116292AB200DD7C30 /* Fight-750-1-03.png */; };
 		025DA6B716292AB200DD7C30 /* Fight-750-1-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 025DA6B216292AB200DD7C30 /* Fight-750-1-04.png */; };
 		025DA6B816292AB200DD7C30 /* Fight-750-2-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 025DA6B316292AB200DD7C30 /* Fight-750-2-01.png */; };
+		025DA92F162C4DE000DD7C30 /* Shopping2AmorDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 025DA92E162C4DE000DD7C30 /* Shopping2AmorDialog.m */; };
 		02646E8E15750D7500FEBFAC /* ShoppingRecordDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02646E8D15750D7500FEBFAC /* ShoppingRecordDialog.m */; };
 		026BE27D14B3414900484B4D /* FDRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 026BE27C14B3414900484B4D /* FDRandom.m */; };
 		0273334F1497803900D0812F /* AIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0273334E1497803900D0812F /* AIHandler.m */; };
@@ -687,7 +688,7 @@
 		02D30A4315FF723900CA1799 /* Shopping2Layer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D30A4215FF723900CA1799 /* Shopping2Layer.m */; };
 		02D30A4715FF74F600CA1799 /* Shopping2Dialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D30A4615FF74F600CA1799 /* Shopping2Dialog.m */; };
 		02D30A4A15FF786600CA1799 /* Shopping2HomeDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D30A4915FF786600CA1799 /* Shopping2HomeDialog.m */; };
-		02D30A4E15FF7DCE00CA1799 /* Shopping2AmorDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D30A4D15FF7DCE00CA1799 /* Shopping2AmorDialog.m */; };
+		02D30A4E15FF7DCE00CA1799 /* Shopping2ShopDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D30A4D15FF7DCE00CA1799 /* Shopping2ShopDialog.m */; };
 		02D30A5115FF7E5B00CA1799 /* Shopping2ItemDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D30A5015FF7E5B00CA1799 /* Shopping2ItemDialog.m */; };
 		02D30A5415FF7E8E00CA1799 /* Shopping2BarDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D30A5315FF7E8E00CA1799 /* Shopping2BarDialog.m */; };
 		02D30A5715FF7F0500CA1799 /* Shopping2ChurchDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D30A5615FF7F0500CA1799 /* Shopping2ChurchDialog.m */; };
@@ -1457,6 +1458,8 @@
 		025DA6B116292AB200DD7C30 /* Fight-750-1-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Fight-750-1-03.png"; path = "Fights/750/Fight-750-1-03.png"; sourceTree = "<group>"; };
 		025DA6B216292AB200DD7C30 /* Fight-750-1-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Fight-750-1-04.png"; path = "Fights/750/Fight-750-1-04.png"; sourceTree = "<group>"; };
 		025DA6B316292AB200DD7C30 /* Fight-750-2-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Fight-750-2-01.png"; path = "Fights/750/Fight-750-2-01.png"; sourceTree = "<group>"; };
+		025DA92D162C4DE000DD7C30 /* Shopping2AmorDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shopping2AmorDialog.h; sourceTree = "<group>"; };
+		025DA92E162C4DE000DD7C30 /* Shopping2AmorDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shopping2AmorDialog.m; sourceTree = "<group>"; };
 		02646E8C15750D7500FEBFAC /* ShoppingRecordDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingRecordDialog.h; sourceTree = "<group>"; };
 		02646E8D15750D7500FEBFAC /* ShoppingRecordDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingRecordDialog.m; sourceTree = "<group>"; };
 		026BE27B14B3414900484B4D /* FDRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDRandom.h; sourceTree = "<group>"; };
@@ -1814,8 +1817,8 @@
 		02D30A4615FF74F600CA1799 /* Shopping2Dialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shopping2Dialog.m; sourceTree = "<group>"; };
 		02D30A4815FF786600CA1799 /* Shopping2HomeDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shopping2HomeDialog.h; sourceTree = "<group>"; };
 		02D30A4915FF786600CA1799 /* Shopping2HomeDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shopping2HomeDialog.m; sourceTree = "<group>"; };
-		02D30A4C15FF7DCE00CA1799 /* Shopping2AmorDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shopping2AmorDialog.h; sourceTree = "<group>"; };
-		02D30A4D15FF7DCE00CA1799 /* Shopping2AmorDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shopping2AmorDialog.m; sourceTree = "<group>"; };
+		02D30A4C15FF7DCE00CA1799 /* Shopping2ShopDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shopping2ShopDialog.h; sourceTree = "<group>"; };
+		02D30A4D15FF7DCE00CA1799 /* Shopping2ShopDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shopping2ShopDialog.m; sourceTree = "<group>"; };
 		02D30A4F15FF7E5B00CA1799 /* Shopping2ItemDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shopping2ItemDialog.h; sourceTree = "<group>"; };
 		02D30A5015FF7E5B00CA1799 /* Shopping2ItemDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shopping2ItemDialog.m; sourceTree = "<group>"; };
 		02D30A5215FF7E8E00CA1799 /* Shopping2BarDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shopping2BarDialog.h; sourceTree = "<group>"; };
@@ -3513,8 +3516,10 @@
 				02D30A4615FF74F600CA1799 /* Shopping2Dialog.m */,
 				02D30A4815FF786600CA1799 /* Shopping2HomeDialog.h */,
 				02D30A4915FF786600CA1799 /* Shopping2HomeDialog.m */,
-				02D30A4C15FF7DCE00CA1799 /* Shopping2AmorDialog.h */,
-				02D30A4D15FF7DCE00CA1799 /* Shopping2AmorDialog.m */,
+				02D30A4C15FF7DCE00CA1799 /* Shopping2ShopDialog.h */,
+				02D30A4D15FF7DCE00CA1799 /* Shopping2ShopDialog.m */,
+				025DA92D162C4DE000DD7C30 /* Shopping2AmorDialog.h */,
+				025DA92E162C4DE000DD7C30 /* Shopping2AmorDialog.m */,
 				02D30A4F15FF7E5B00CA1799 /* Shopping2ItemDialog.h */,
 				02D30A5015FF7E5B00CA1799 /* Shopping2ItemDialog.m */,
 				02D30A5215FF7E8E00CA1799 /* Shopping2BarDialog.h */,
@@ -4886,7 +4891,7 @@
 				02D30A4315FF723900CA1799 /* Shopping2Layer.m in Sources */,
 				02D30A4715FF74F600CA1799 /* Shopping2Dialog.m in Sources */,
 				02D30A4A15FF786600CA1799 /* Shopping2HomeDialog.m in Sources */,
-				02D30A4E15FF7DCE00CA1799 /* Shopping2AmorDialog.m in Sources */,
+				02D30A4E15FF7DCE00CA1799 /* Shopping2ShopDialog.m in Sources */,
 				02D30A5115FF7E5B00CA1799 /* Shopping2ItemDialog.m in Sources */,
 				02D30A5415FF7E8E00CA1799 /* Shopping2BarDialog.m in Sources */,
 				02D30A5715FF7F0500CA1799 /* Shopping2ChurchDialog.m in Sources */,
@@ -4911,6 +4916,7 @@
 				022D38E9161B39AE0020F816 /* LoadingScene.m in Sources */,
 				022D38EC161B39FC0020F816 /* LoadingLayer.m in Sources */,
 				022D3C7F1625CA9F0020F816 /* EventChapter3.m in Sources */,
+				025DA92F162C4DE000DD7C30 /* Shopping2AmorDialog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

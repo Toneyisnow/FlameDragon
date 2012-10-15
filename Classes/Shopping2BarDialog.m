@@ -30,11 +30,15 @@
 	[self setMessage:[FDLocalString message:55]];	
 }
 
+-(void) updateMessage
+{
+	[self setMessage:[FDLocalString message:56]];	
+}
+
 -(void) onSaveGame
 {
 	NSLog(@"onSaveGame");
-	
-	[self setMessage:[FDLocalString message:56]];
+	[self updateMessage];
 	
 	Shopping2RecordDialog *dialog = [[Shopping2RecordDialog alloc] init];
 	[self showDialog:dialog Callback:@selector(confirmSaveGame:)];
@@ -44,7 +48,7 @@
 -(void) onLoadGame
 {
 	NSLog(@"onLoadGame");
-	[self setMessage:[FDLocalString message:56]];
+	[self updateMessage];
 	
 	Shopping2RecordDialog *dialog = [[Shopping2RecordDialog alloc] init];
 	[self showDialog:dialog Callback:@selector(confirmLoadGame:)];
@@ -54,7 +58,7 @@
 -(void) onExitGame
 {
 	NSLog(@"onExitGame");
-	[self setMessage:[FDLocalString message:56]];
+	[self updateMessage];
 	
 	NSString *msg = [FDLocalString confirm:53];
 	Shopping2ConfirmDialog *dialog = [[Shopping2ConfirmDialog alloc] initWithMessage:msg];

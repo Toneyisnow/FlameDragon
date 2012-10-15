@@ -27,12 +27,12 @@
 
 -(void) initButtons;
 -(void) initMessage;
+-(void) updateMessage;
 -(void) setMessage:(NSString *)msg;
 
 -(void) generateButtonArray;
 
--(ShoppingButton *) button_BuyAmor;
--(ShoppingButton *) button_BuyItem;
+-(ShoppingButton *) button_Buy;
 -(ShoppingButton *) button_Sell;
 -(ShoppingButton *) button_GiveItem;
 -(ShoppingButton *) button_Equip;
@@ -45,9 +45,7 @@
 
 -(void) showDialog:(Shopping2Dialog *)dia Callback:(SEL)callback;
 
--(void) onBuyAmor;
-
--(void) onBuyItem;
+-(void) onBuy;
 
 -(void) onSell;
 -(void) onSell_SelectedFriend:(NSNumber *)num;

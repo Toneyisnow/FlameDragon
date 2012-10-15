@@ -48,7 +48,6 @@
 }
 -(void) round1
 {
-	BattleField *field = [[layers getFieldLayer] getField];
 	// Creatures
 	FDFriend *friend1 = [[FDFriend alloc] initWithDefinition:1 Id:1];
 	[field addFriend:friend1 Position:CGPointMake(8, 15)];
@@ -99,7 +98,6 @@
 {
 	NSLog(@"Event round1 triggered.");
 	
-	BattleField *field = [[layers getFieldLayer] getField];
 	// Creatures
 	FDFriend *friend1 = [[FDFriend alloc] initWithDefinition:1 Id:1];
 	[field addFriend:friend1 Position:CGPointMake(8, 20)];
@@ -143,8 +141,6 @@
 
 -(void) round1_2_1
 {
-	BattleField *field = [[layers getFieldLayer] getField];
-	
 	// Enemy
 	FDEnemy *enemy1 = [[FDEnemy alloc] initWithDefinition:701 Id:11];
 	[field addEnemy: enemy1 Position:CGPointMake(2, 22)];
@@ -184,8 +180,6 @@
 
 -(void) round1_2_2
 {
-	BattleField *field = [[layers getFieldLayer] getField];
-	
 	[field setCursorTo:CGPointMake(3, 3)];
 	
 	// Enemy
@@ -231,8 +225,6 @@
 
 -(void) round1_3
 {
-	BattleField *field = [[layers getFieldLayer] getField];
-	
 	FDCreature *enemy = [field getCreatureById:14];
 	
 	[layers moveCreature:enemy To:CGPointMake(8, 24) showMenu:FALSE];
@@ -254,8 +246,6 @@
 {
 	NSLog(@"Event round3 triggered.");
 	
-	BattleField *field = [[layers getFieldLayer] getField];
-	
 	FDFriend *friend5 = [[FDFriend alloc] initWithDefinition:5 Id:5];
 	[field addFriend:friend5 Position:CGPointMake(12, 12)];
 	[friend5 release];
@@ -276,8 +266,6 @@
 -(void) round4
 {
 	NSLog(@"Event round4 triggered. Enemy.");
-	
-	BattleField *field = [[layers getFieldLayer] getField];
 	
 	[layers appendToCurrentActivityMethod:@selector(setCursorObjTo:) Param1:[FDPosition positionX:23 Y:23] Param2:nil Obj:field];
 	
@@ -319,8 +307,6 @@
 -(void) round5_Boss
 {
 	NSLog(@"Event round5 triggered. Boss.");
-	
-	BattleField *field = [[layers getFieldLayer] getField];
 	
 	FDEnemy *enemy1 = [[FDEnemy alloc] initWithDefinition:701 Id:25];
 	[field addEnemy:enemy1 Position:CGPointMake(1, 22)];
@@ -367,8 +353,6 @@
 -(void) round6_Npc
 {
 	NSLog(@"Event round6 triggered. Npc.");
-	
-	BattleField *field = [[layers getFieldLayer] getField];
 	
 	FDNpc *npc1 = [[FDNpc alloc] initWithDefinition:703 Id:31];
 	[field addNpc:npc1 Position:CGPointMake(24, 15)];
@@ -419,7 +403,6 @@
 	
 	
 	// Hawate convert to Npc
-	BattleField *field = [[layers getFieldLayer] getField];
 	FDCreature *hawate = [field getCreatureById:6];
 	if (hawate != nil) {
 		
@@ -462,7 +445,6 @@
 -(void) adjustFriends
 {
 	// 1. Remove Hawate from friend list
-	BattleField *field = [[layers getFieldLayer] getField];
 	FDCreature *hawate = [field getCreatureById:6];
 	if (hawate != nil) {
 		[[field getFriendList] removeObject:hawate];

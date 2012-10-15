@@ -32,10 +32,15 @@
 	[self setMessage:[FDLocalString message:55]];	
 }
 
+-(void) updateMessage
+{
+	[self setMessage:[FDLocalString message:56]];	
+}
+
 -(void) onRevive
 {
 	NSLog(@"onRevive");
-	[self setMessage:[FDLocalString message:56]];
+	[self updateMessage];
 	
 	BOOL hasDeadFriend = FALSE;
 	for (CreatureRecord *friend in [chapterRecord friendRecords]) {
@@ -123,7 +128,7 @@
 
 -(void) onTransfer
 {
-	[self setMessage:[FDLocalString message:56]];
+	[self updateMessage];
 	
 	BOOL hasTransferFriend = FALSE;
 	for (CreatureRecord *friend in [chapterRecord friendRecords]) {

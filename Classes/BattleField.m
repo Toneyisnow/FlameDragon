@@ -105,9 +105,6 @@
 {
 	[self addObject:fri Position:pos];
 	[friendList addObject:fri];
-	
-	//[self showTestData];
-
 }
 
 -(void) addEnemy:(FDEnemy *)cre Position:(CGPoint)pos
