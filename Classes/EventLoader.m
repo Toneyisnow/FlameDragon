@@ -81,8 +81,6 @@
 
 -(void) showTalkMessage:(int)charId conversation:(int)converId sequence:(int)sequenceId
 {
-	BattleField *field = [[layers getFieldLayer] getField];
-	
 	NSString *talkMessage = [FDLocalString chapter:charId conversation:converId sequence:sequenceId];
 	NSString *creatureIdStr = [FDLocalString chapterCreature:charId conversation:converId sequence:sequenceId];
 	
@@ -100,8 +98,6 @@
 
 -(void) settleFriend:(int)creatureId At:(CGPoint)loc
 {
-	BattleField *field = [[layers getFieldLayer] getField];
-	
 	FDFriend *friend = (FDFriend *)[field getUnSettledCreatureById:creatureId];
 	if (friend != nil) {
 		[field addFriend:friend Position:loc];

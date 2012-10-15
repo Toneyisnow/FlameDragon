@@ -155,7 +155,8 @@
 	// Check if the item list is full
 	if ([friend.data.itemList count] >= [CreatureData ITEM_MAX]) {
 		
-		NSString *message = [FDLocalString message:62];
+		NSString *creatureName = [FDLocalString creature:friend.definitionId];
+		NSString *message = [NSString stringWithFormat:[FDLocalString message:62], creatureName];
 		Shopping2MessageDialog *dialog = [[Shopping2MessageDialog alloc] initWithMessage:message];
 		[self showDialog:dialog Callback:nil];
 		[dialog release];
@@ -214,7 +215,8 @@
 	// Check if the item list is full
 	if ([friend.data.itemList count] >= [CreatureData ITEM_MAX]) {
 		
-		NSString *message = [FDLocalString message:62];
+		NSString *creatureName = [FDLocalString creature:friend.definitionId];
+		NSString *message = [NSString stringWithFormat:[FDLocalString message:62], creatureName];
 		Shopping2MessageDialog *dialog = [[Shopping2MessageDialog alloc] initWithMessage:message];
 		[self showDialog:dialog Callback:nil];
 		[dialog release];

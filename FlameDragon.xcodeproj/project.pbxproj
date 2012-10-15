@@ -1229,7 +1229,7 @@
 		025DA4A01628402A00DD7C30 /* Icon-704-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-704-10.png"; path = "Icons/704/Icon-704-10.png"; sourceTree = "<group>"; };
 		025DA4A11628402A00DD7C30 /* Icon-704-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-704-11.png"; path = "Icons/704/Icon-704-11.png"; sourceTree = "<group>"; };
 		025DA4A21628402A00DD7C30 /* Icon-704-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-704-12.png"; path = "Icons/704/Icon-704-12.png"; sourceTree = "<group>"; };
-		025DA4AF1628403C00DD7C30 /* Icon-719-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-719-01.png"; path = "Icons/719/Icon-719-01.png"; sourceTree = "<group>"; };
+		025DA4AF1628403C00DD7C30 /* Icon-719-01.png */ = {isa = PBXFileReference; explicitFileType = image.png; name = "Icon-719-01.png"; path = "Icons/719/Icon-719-01.png"; sourceTree = "<group>"; };
 		025DA4B01628403C00DD7C30 /* Icon-719-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-719-02.png"; path = "Icons/719/Icon-719-02.png"; sourceTree = "<group>"; };
 		025DA4B11628403C00DD7C30 /* Icon-719-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-719-03.png"; path = "Icons/719/Icon-719-03.png"; sourceTree = "<group>"; };
 		025DA4B21628403C00DD7C30 /* Icon-719-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-719-04.png"; path = "Icons/719/Icon-719-04.png"; sourceTree = "<group>"; };
@@ -5040,7 +5040,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yi Sui";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = NO;
 				"GCC_THUMB_SUPPORT[arch=armv7]" = YES;
@@ -5050,7 +5050,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0D128355-AFC3-453F-BA75-DE748F8E6422";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -5170,7 +5170,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yi Sui";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DEBUG,
@@ -5185,7 +5185,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0D128355-AFC3-453F-BA75-DE748F8E6422";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -5196,7 +5196,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yi Sui";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = NO;
 				"GCC_THUMB_SUPPORT[arch=armv7]" = YES;
@@ -5206,7 +5206,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
 				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0D128355-AFC3-453F-BA75-DE748F8E6422";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
