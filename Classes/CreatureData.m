@@ -78,6 +78,7 @@
     [coder encodeInt:dp forKey:@"dp"];
     [coder encodeInt:dx forKey:@"dx"];
     [coder encodeInt:mv forKey:@"mv"];
+    [coder encodeInt:mv forKey:@"ex"];
     [coder encodeInt:hpCurrent forKey:@"hpCurrent"];
     [coder encodeInt:hpMax forKey:@"hpMax"];
     [coder encodeInt:mpCurrent forKey:@"mpCurrent"];

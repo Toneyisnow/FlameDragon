@@ -704,9 +704,9 @@
 	};
 	021BA1C71477789B00102DCE /* ActionLayers.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {936, 12545}}";
-			sepNavSelRange = "{19834, 0}";
-			sepNavVisRange = "{19420, 974}";
+			sepNavIntBoundsRect = "{{0, 0}, {873, 12623}}";
+			sepNavSelRange = "{19169, 0}";
+			sepNavVisRange = "{18465, 847}";
 		};
 	};
 	021BA2271477854E00102DCE /* FDTreasure.h */ = {
@@ -2077,7 +2077,7 @@
 		fRef = 02C57288151855E800DAEE2C /* CreatureData.m */;
 		name = "CreatureData.m: 280";
 		rLen = 0;
-		rLoc = 6658;
+		rLoc = 6697;
 		rType = 0;
 		vrLen = 676;
 		vrLoc = 6015;
@@ -3228,7 +3228,7 @@
 		fRef = 02C57288151855E800DAEE2C /* CreatureData.m */;
 		name = "CreatureData.m: 280";
 		rLen = 0;
-		rLoc = 6658;
+		rLoc = 6697;
 		rType = 0;
 		vrLen = 487;
 		vrLoc = 519;
@@ -4753,9 +4753,9 @@
 	};
 	027D54191462BBB8002C310F /* BattleField.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {894, 13806}}";
-			sepNavSelRange = "{2634, 0}";
-			sepNavVisRange = "{2329, 646}";
+			sepNavIntBoundsRect = "{{0, 0}, {894, 14040}}";
+			sepNavSelRange = "{17251, 65}";
+			sepNavVisRange = "{17170, 881}";
 		};
 	};
 	027D541B1462BC7B002C310F /* GroundBlock.h */ = {
@@ -5616,8 +5616,8 @@
 	0297D7C8147E7379007F3E12 /* FightScene.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1160, 2782}}";
-			sepNavSelRange = "{2685, 0}";
-			sepNavVisRange = "{4820, 669}";
+			sepNavSelRange = "{1332, 0}";
+			sepNavVisRange = "{1336, 1243}";
 		};
 	};
 	0297D7ED147E77EA007F3E12 /* PBXTextBookmark */ = {
@@ -5632,9 +5632,9 @@
 	};
 	0297D803147E7D2E007F3E12 /* FightTargetInfo.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {812, 390}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 390}}";
 			sepNavSelRange = "{407, 0}";
-			sepNavVisRange = "{0, 487}";
+			sepNavVisRange = "{0, 492}";
 		};
 	};
 	0297D804147E7D2E007F3E12 /* FightTargetInfo.m */ = {
@@ -8018,7 +8018,7 @@
 	02D30A4D15FF7DCE00CA1799 /* Shopping2ShopDialog.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1349, 3432}}";
-			sepNavSelRange = "{4845, 0}";
+			sepNavSelRange = "{4883, 0}";
 			sepNavVisRange = "{4299, 926}";
 		};
 	};
