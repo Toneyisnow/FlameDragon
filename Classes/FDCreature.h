@@ -140,6 +140,8 @@ typedef enum ActionStatus {
 -(void) dropItem:(int) index;
 -(void) pickItem:(int) itemId;
 
+-(BOOL) canAttack;
+
 -(NSString *) getName;
 
 // Calculated Values, Moved to data

@@ -9,13 +9,63 @@
 #import "GameFormula.h"
 #import "FDRandom.h"
 #import "DataDepot.h"
+#import "FightingInformation.h"
 
 @implementation GameFormula
 
-+(int) getExperienceFromAttack:(FDCreature *)creature Target:(FDCreature *)target Field:(BattleField *)field
++(FightingInformation *) dealWithAttack:(FDCreature *)subject Target:(FDCreature *)target Field:(BattleField *)field fightBack:(BOOL)fightBack
+{
+	AttackInformation *attack1 = [self attackFrom:subject To:target Field:field];
+	AttackInformation *attack2 = nil;
+	AttackInformation *back1 = nil;
+	AttackInformation *back2 = nil;
+	
+	[attack1 retain];
+	
+	int exp1 = [self calculateAttackExp:subject Target:target Info:attack1];
+	int exp2 = 0;
+	int backExp1 = 0;
+	int backExp2 = 0;
+	
+	if (target.data.hpCurrent > 0) {
+		BOOL isDoubleHit = [FDRandom hitWithRate:10];	// TODO: Hard coded
+		
+		if (isDoubleHit) {
+			attack2 = [self attackFrom:subject To:target Field:field];
+			[attack2 retain];
+			exp2 = [self calculateAttackExp:subject Target:target Info:attack2];
+		}
+	}
+	subject.lastGainedExperience = exp1 + exp2;
+	
+	// Fight back
+	if (fightBack && target.data.hpCurrent > 0) {
+		
+		back1 = [self attackFrom:target To:subject Field:field];
+		[back1 retain];
+		backExp1 = [self calculateAttackExp:target Target:subject Info:back1];
+		
+		BOOL isDoubleHit = [FDRandom hitWithRate:10];	// TODO: Hard coded
+		if (creature.data.hpCurrent > 0 && isDoubleHit) {
+			back2 = [self attackFrom:target To:subject Field:field];
+			[back2 retain];
+			backExp2 = [self calculateAttackExp:target Target:field Info:back2];
+		}		
+	}
+	target.lastGainedExperience = backExp1 + backExp2;
+	
+	FightingInformation *result = [[FightingInformation alloc] initWithAttackInfo:attack1 attack2Info:attack2 backInfo:back1 back2Info:back2];
+	if (attack1 != nil) [attack1 release];
+	if (attack2 != nil) [attack2 release];
+	if (back1 != nil) [back1 release];
+	if (back2 != nil) [back2 release];
+	
+	return [result autorelease];
+}
+
++(AttackInformation *) attackFrom:(FDCreature *)creature To:(FDCreature *)target Field:(BattleField *)field
 {
 	BOOL isHit = [FDRandom hitWithRate:([creature.data hit] - [target.data ev])];
-	
 	int reduceHp;
 	
 	if (isHit)
@@ -43,10 +93,11 @@
 		reduceHp = 0;
 	}
 
+	AttackInformation *info = [[AttackInformation alloc] initWithBefore:target.data.hpCurrent after:target.data.hpCurrent-reduceHp isCritical:FALSE];
 	[target updateHP:-reduceHp];
 	
-	creature.lastGainedExperience = [GameFormula calculateAttackExp:creature Target:target];
-	return creature.lastGainedExperience;
+	// return [GameFormula calculateAttackExp:creature Target:target];
+	return [info autorelease];
 }
 
 +(int) getExperienceFromMagic:(int)magicId Creature:(FDCreature *)creature Target:(FDCreature *)target Field:(BattleField *)field
@@ -77,10 +128,20 @@
 	return creature.lastGainedExperience;
 }
 
+// Deprecated
 +(int) calculateAttackExp:(FDCreature *)creature Target:(FDCreature *)target
 {
 	// Calculate the experience
 	int reducedHp = (target.data.hpCurrent > 0) ? target.hpPrevious - target.data.hpCurrent : target.data.hpMax;
+	int exp = reducedHp * target.data.level * [target getDefinition].data.ex / creature.data.level / target.data.hpMax;
+	
+	return exp;
+}
+
++(int) calculateAttackExp:(FDCreature *)creature Target:(FDCreature *)target Info:(AttackInformation *)info
+{
+	// Calculate the experience
+	int reducedHp = (target.data.hpCurrent > 0) ? [info getBefore] - [info getAfter] : target.data.hpMax;
 	int exp = reducedHp * target.data.level * [target getDefinition].data.ex / creature.data.level / target.data.hpMax;
 	
 	return exp;

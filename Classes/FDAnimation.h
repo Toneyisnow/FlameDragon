@@ -15,12 +15,15 @@
 	AnimationDefinition *definition;
 	
 	FDSprite *sprite;
-	
+
+	int tagIndex;
+
 	BOOL finished;
 }
 
 -(id) initWithDefinition:(AnimationDefinition *)def Sprite:(FDSprite *)c;
 
+-(void) setTagIndex:(int)t;
 
 -(void) takeTick:(int)synchronizeTick;
 

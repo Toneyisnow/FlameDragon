@@ -296,6 +296,11 @@
 	return [[data.itemList objectAtIndex:index] intValue];	
 }
 
+-(BOOL) canAttack
+{
+	return data.attackItemIndex >= 0;
+}
+
 -(BOOL) isItemListFull
 {
 	return [data.itemList count] >= 8;

@@ -28,7 +28,7 @@
 #import "TitleScene.h"
 #import "GameRecord.h"
 #import "VillageScene.h"
-
+#import "FightingInformation.h"
 
 @implementation ActionLayers
 
@@ -222,14 +222,25 @@
 
 -(void) attackFrom:(FDCreature *)creature Target:(FDCreature *)target
 {
-	NSLog(@"Attack from A to B. ");
+	NSLog(@"Attack from %d to %d.", creature.creatureId, target.creatureId);
 	
-	[GameFormula getExperienceFromAttack:creature Target:target Field:field];
-
-	//NSLog(@"Get Experience: %d", exp);
+	BOOL fightBack = [field isNextTo:creature And:target] && [target canAttack];
+	FightingInformation *fightingInfo = [GameFormula dealWithAttack:creature Target:target Field:field fightBack:fightBack];
 	
+	CGPoint pos = [field getObjectPos:creature];
+	int backgroundImageId = [field getBackgroundPicId:pos];
+	FightingScene *scene = [[FightingScene alloc] initWithSubject:creature Target:target Information:fightingInfo Background:backgroundImageId];
+	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:0.5 scene:scene]];
+	
+	[scene start];	
+	
+	NSMutableArray *targets = [[NSMutableArray alloc] init];
+	[targets addObject:target];
+	[scene setPostMethod:@selector(postFightAction:Targets:) param1:creature param2:targets Obj:self];
+	
+	/*
 	// Check fight back
-	BOOL fightBack = [field isNextTo:creature And:target] && target.data.hpCurrent > 0;
+	BOOL fightBack = [field isNextTo:creature And:target] && target.data.hpCurrent > 0 && [target canAttack];
 	if (fightBack) {
 		
 		// Fight back
@@ -253,7 +264,7 @@
 	[scene start];
 	
 	[scene setPostMethod:@selector(postFightAction:Targets:) param1:creature param2:targets Obj:self];
-
+	 */
 }
 
 -(void) postFightAction:(FDCreature *)creature Targets:(NSMutableArray *)targets

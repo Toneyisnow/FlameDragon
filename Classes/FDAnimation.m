@@ -41,6 +41,12 @@
 {
 }
 
+
+-(void) setTagIndex:(int)t
+{
+	tagIndex = t;
+}
+
 -(BOOL) hasFinished
 {
 	return finished;

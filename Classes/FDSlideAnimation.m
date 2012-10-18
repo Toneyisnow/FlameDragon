@@ -44,7 +44,7 @@
 		[currentframe renderFrame:sprite];
 		
 		if (object != nil && [object respondsToSelector:callback]) {
-			[object performSelector:callback withObject:currentframe];
+			[object performSelector:callback withObject:currentframe withObject:[NSNumber numberWithInt:tag]];
 		}
 	}
 	
@@ -54,7 +54,6 @@
 		currentFrameIndex ++;
 		currentTick = 0;
 	}
-	
 }
 
 -(void) onRenderFrame:(SEL)method Id:(id)obj

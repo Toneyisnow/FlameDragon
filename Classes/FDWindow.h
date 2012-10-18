@@ -41,6 +41,10 @@
 +(CGPoint) shoppingMessageLocation2;
 +(CGPoint) villageLabelLocation;
 
++(CGPoint) fightingTaiPosition;
++(CGPoint) fightingFriendBarPosition;
++(CGPoint) fightingEnemyBarPosition;
+
 +(CGRect) leftWindow;
 +(CGRect) rightWindow;
 

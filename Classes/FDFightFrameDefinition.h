@@ -15,12 +15,13 @@
 	
 	int soundId;
 	BOOL isRemote;
-	BOOL isHitting;
+	double hittingRate;
 }
 
--(id) initFromFile:(NSString *)fileName Time:(int)t Sound:(int)s Remote:(BOOL)r Hitting:(BOOL)h;
+-(id) initFromFile:(NSString *)fileName Time:(int)t Sound:(int)s Remote:(BOOL)r Hitting:(double)h;
 
 -(BOOL) isRemote;
 -(BOOL) isHitting;
+-(double) getHittingRate;
 
 @end

@@ -15,11 +15,16 @@
 
 }
 
-+(int) getExperienceFromAttack:(FDCreature *)creature Target:(FDCreature *)target Field:(BattleField *)field;
++(FightingInformation *) dealWithAttack:(FDCreature *)subject Target:(FDCreature *)target Field:(BattleField *)field fightBack:(BOOL)fightBack
++(int) calculateAttackExp:(FDCreature *)creature Target:(FDCreature *)target Info:(AttackInformation *)info;
+
+// +(int) getExperienceFromAttack:(FDCreature *)creature Target:(FDCreature *)target Field:(BattleField *)field;
++(int) recoverHpFromRest:(FDCreature *)creature;
++(int) getMoneyNeededForRevive:(CreatureRecord *)creature;
+
+
+
 +(int) getExperienceFromMagic:(int)magicId Creature:(FDCreature *)creature Target:(FDCreature *)target Field:(BattleField *)field;
 +(int) calculateAttackExp:(FDCreature *)creature Target:(FDCreature *)target;
-+(int) recoverHpFromRest:(FDCreature *)creature;
-
-+(int) getMoneyNeededForRevive:(CreatureRecord *)creature;
 
 @end

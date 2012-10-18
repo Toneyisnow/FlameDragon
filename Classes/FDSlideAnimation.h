@@ -14,6 +14,7 @@
 	int currentFrameIndex;
 	int currentTick;
 
+	
 	id object;
 	SEL callback;
 }

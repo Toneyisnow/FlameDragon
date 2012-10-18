@@ -142,9 +142,9 @@
 		//int locY = [stream readInt];
 		int soundId = [stream readInt];
 		BOOL isRemote = ([stream readInt] == 1);
-		BOOL isHitting = ([stream readInt] == 1);
+		double hittingRate = [stream readInt] / 100.0;
 		//CGPoint location = CGPointMake(locX, locY);
-		FDFightFrameDefinition *frame = [[FDFightFrameDefinition alloc] initFromFile:spriteFile Time:interval Sound:soundId Remote:isRemote Hitting:isHitting];
+		FDFightFrameDefinition *frame = [[FDFightFrameDefinition alloc] initFromFile:spriteFile Time:interval Sound:soundId Remote:isRemote Hitting:hittingRate];
 
 		[aniDef addFrame:frame];
 		[frame release];

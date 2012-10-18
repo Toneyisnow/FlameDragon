@@ -449,6 +449,9 @@
 		025DA6B716292AB200DD7C30 /* Fight-750-1-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 025DA6B216292AB200DD7C30 /* Fight-750-1-04.png */; };
 		025DA6B816292AB200DD7C30 /* Fight-750-2-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 025DA6B316292AB200DD7C30 /* Fight-750-2-01.png */; };
 		025DA92F162C4DE000DD7C30 /* Shopping2AmorDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 025DA92E162C4DE000DD7C30 /* Shopping2AmorDialog.m */; };
+		025DA9B016301B2C00DD7C30 /* FightingScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 025DA9AF16301B2C00DD7C30 /* FightingScene.m */; };
+		025DA9B316301C9400DD7C30 /* FightingInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 025DA9B216301C9400DD7C30 /* FightingInformation.m */; };
+		025DA9B616301D2000DD7C30 /* AttackInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 025DA9B516301D2000DD7C30 /* AttackInformation.m */; };
 		02646E8E15750D7500FEBFAC /* ShoppingRecordDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02646E8D15750D7500FEBFAC /* ShoppingRecordDialog.m */; };
 		026BE27D14B3414900484B4D /* FDRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 026BE27C14B3414900484B4D /* FDRandom.m */; };
 		0273334F1497803900D0812F /* AIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0273334E1497803900D0812F /* AIHandler.m */; };
@@ -1460,6 +1463,12 @@
 		025DA6B316292AB200DD7C30 /* Fight-750-2-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Fight-750-2-01.png"; path = "Fights/750/Fight-750-2-01.png"; sourceTree = "<group>"; };
 		025DA92D162C4DE000DD7C30 /* Shopping2AmorDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shopping2AmorDialog.h; sourceTree = "<group>"; };
 		025DA92E162C4DE000DD7C30 /* Shopping2AmorDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shopping2AmorDialog.m; sourceTree = "<group>"; };
+		025DA9AE16301B2C00DD7C30 /* FightingScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FightingScene.h; sourceTree = "<group>"; };
+		025DA9AF16301B2C00DD7C30 /* FightingScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FightingScene.m; sourceTree = "<group>"; };
+		025DA9B116301C9400DD7C30 /* FightingInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FightingInformation.h; sourceTree = "<group>"; };
+		025DA9B216301C9400DD7C30 /* FightingInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FightingInformation.m; sourceTree = "<group>"; };
+		025DA9B416301D2000DD7C30 /* AttackInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttackInformation.h; sourceTree = "<group>"; };
+		025DA9B516301D2000DD7C30 /* AttackInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttackInformation.m; sourceTree = "<group>"; };
 		02646E8C15750D7500FEBFAC /* ShoppingRecordDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingRecordDialog.h; sourceTree = "<group>"; };
 		02646E8D15750D7500FEBFAC /* ShoppingRecordDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingRecordDialog.m; sourceTree = "<group>"; };
 		026BE27B14B3414900484B4D /* FDRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDRandom.h; sourceTree = "<group>"; };
@@ -3316,6 +3325,12 @@
 				0297D7C8147E7379007F3E12 /* FightScene.m */,
 				0297D803147E7D2E007F3E12 /* FightTargetInfo.h */,
 				0297D804147E7D2E007F3E12 /* FightTargetInfo.m */,
+				025DA9AE16301B2C00DD7C30 /* FightingScene.h */,
+				025DA9AF16301B2C00DD7C30 /* FightingScene.m */,
+				025DA9B116301C9400DD7C30 /* FightingInformation.h */,
+				025DA9B216301C9400DD7C30 /* FightingInformation.m */,
+				025DA9B416301D2000DD7C30 /* AttackInformation.h */,
+				025DA9B516301D2000DD7C30 /* AttackInformation.m */,
 			);
 			name = Fight;
 			sourceTree = "<group>";
@@ -4917,6 +4932,9 @@
 				022D38EC161B39FC0020F816 /* LoadingLayer.m in Sources */,
 				022D3C7F1625CA9F0020F816 /* EventChapter3.m in Sources */,
 				025DA92F162C4DE000DD7C30 /* Shopping2AmorDialog.m in Sources */,
+				025DA9B016301B2C00DD7C30 /* FightingScene.m in Sources */,
+				025DA9B316301C9400DD7C30 /* FightingInformation.m in Sources */,
+				025DA9B616301D2000DD7C30 /* AttackInformation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
