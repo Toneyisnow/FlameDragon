@@ -16,17 +16,12 @@
 	self = [super init];
 	
 	// backgroundImageId = imageId;
-	attackInfo1 = attack1 != nil ? [attack1 retain] : nil;
-	attackInfo2 = attack2 != nil ? [attack2 retain] : nil;
-	backInfo1 = back1 != nil ? [back1 retain] : nil;
-	backInfo2 = back2 != nil ?[back2 retain] : nil;
+	attackInfo1 = (attack1 != nil) ? [attack1 retain] : nil;
+	attackInfo2 = (attack2 != nil) ? [attack2 retain] : nil;
+	backInfo1 = (back1 != nil) ? [back1 retain] : nil;
+	backInfo2 = (back2 != nil) ?[back2 retain] : nil;
 	
 	return self;
-}
-
--(int) getBackGroundImageId
-{
-	return backgroundImageId;
 }
 
 -(AttackInformation *) getAttackInfo1

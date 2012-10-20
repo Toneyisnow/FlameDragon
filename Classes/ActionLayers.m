@@ -29,6 +29,8 @@
 #import "GameRecord.h"
 #import "VillageScene.h"
 #import "FightingInformation.h"
+#import "FightingScene.h"
+
 
 @implementation ActionLayers
 
@@ -222,10 +224,13 @@
 
 -(void) attackFrom:(FDCreature *)creature Target:(FDCreature *)target
 {
-	NSLog(@"Attack from %d to %d.", creature.creatureId, target.creatureId);
+	NSLog(@"Attack from %d to %d.", [creature getIdentifier], [target getIdentifier]);
 	
 	BOOL fightBack = [field isNextTo:creature And:target] && [target canAttack];
 	FightingInformation *fightingInfo = [GameFormula dealWithAttack:creature Target:target Field:field fightBack:fightBack];
+	[fightingInfo retain];
+	
+	NSLog(@"fightingInfo attack1: %d %d", [[fightingInfo getAttackInfo1] getBefore], [[fightingInfo getAttackInfo1] getAfter]);
 	
 	CGPoint pos = [field getObjectPos:creature];
 	int backgroundImageId = [field getBackgroundPicId:pos];
@@ -233,38 +238,11 @@
 	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:0.5 scene:scene]];
 	
 	[scene start];	
+	[fightingInfo release];
 	
 	NSMutableArray *targets = [[NSMutableArray alloc] init];
 	[targets addObject:target];
 	[scene setPostMethod:@selector(postFightAction:Targets:) param1:creature param2:targets Obj:self];
-	
-	/*
-	// Check fight back
-	BOOL fightBack = [field isNextTo:creature And:target] && target.data.hpCurrent > 0 && [target canAttack];
-	if (fightBack) {
-		
-		// Fight back
-		[GameFormula getExperienceFromAttack:target Target:creature Field:field];
-	}
-	else {
-		[creature updateHP:0];
-	}
-
-	// Show the Fight Scene
-	FightScene *scene = [[FightScene alloc] init];
-	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:0.5 scene:scene]];
-	
-	CGPoint pos = [field getObjectPos:creature];
-	int backId = [field getBackgroundPicId:pos];
-	
-	NSMutableArray *targets = [[NSMutableArray alloc] init];
-	[targets addObject:target];
-	
-	[scene setParameter:backId Self:creature Targets:targets FightBack:fightBack];
-	[scene start];
-	
-	[scene setPostMethod:@selector(postFightAction:Targets:) param1:creature param2:targets Obj:self];
-	 */
 }
 
 -(void) postFightAction:(FDCreature *)creature Targets:(NSMutableArray *)targets

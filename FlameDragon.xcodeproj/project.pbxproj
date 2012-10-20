@@ -84,6 +84,11 @@
 		022D3C711625C7CD0020F816 /* SecretIndicator-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 022D3C701625C7CD0020F816 /* SecretIndicator-02.png */; };
 		022D3C7F1625CA9F0020F816 /* EventChapter3.m in Sources */ = {isa = PBXBuildFile; fileRef = 022D3C7E1625CA9F0020F816 /* EventChapter3.m */; };
 		023D07BE15CF82E700AD6FA6 /* SWScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D07B415CF82E700AD6FA6 /* SWScrollView.m */; };
+		023D0D351631A57E00FBA4D2 /* Fight-006-2-14.png in Resources */ = {isa = PBXBuildFile; fileRef = 023D0D341631A57E00FBA4D2 /* Fight-006-2-14.png */; };
+		023D0D6C1632E10300FBA4D2 /* MagicalInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D0D6B1632E10300FBA4D2 /* MagicalInformation.m */; };
+		023D0D6F1632E7BD00FBA4D2 /* MagicalScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D0D6E1632E7BD00FBA4D2 /* MagicalScene.m */; };
+		023D0D721632E88B00FBA4D2 /* BattleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D0D711632E88B00FBA4D2 /* BattleScene.m */; };
+		023D0D751632F3D700FBA4D2 /* FDFreezeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D0D741632F3D700FBA4D2 /* FDFreezeAnimation.m */; };
 		023D34AA152834A3002D3EFD /* EventChapter2.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D34A9152834A3002D3EFD /* EventChapter2.m */; };
 		02542C4E155D4C5B0050FEC8 /* ShoppingItemDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02542C4D155D4C5B0050FEC8 /* ShoppingItemDialog.m */; };
 		02542C51155D4C670050FEC8 /* ShoppingBarDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02542C50155D4C670050FEC8 /* ShoppingBarDialog.m */; };
@@ -1093,6 +1098,15 @@
 		022D3C7E1625CA9F0020F816 /* EventChapter3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter3.m; sourceTree = "<group>"; };
 		023D07B315CF82E700AD6FA6 /* SWScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWScrollView.h; path = tableView/SWScrollView.h; sourceTree = "<group>"; };
 		023D07B415CF82E700AD6FA6 /* SWScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWScrollView.m; path = tableView/SWScrollView.m; sourceTree = "<group>"; };
+		023D0D341631A57E00FBA4D2 /* Fight-006-2-14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Fight-006-2-14.png"; path = "Fights/006/Fight-006-2-14.png"; sourceTree = "<group>"; };
+		023D0D6A1632E10300FBA4D2 /* MagicalInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalInformation.h; sourceTree = "<group>"; };
+		023D0D6B1632E10300FBA4D2 /* MagicalInformation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalInformation.m; sourceTree = "<group>"; };
+		023D0D6D1632E7BD00FBA4D2 /* MagicalScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalScene.h; sourceTree = "<group>"; };
+		023D0D6E1632E7BD00FBA4D2 /* MagicalScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalScene.m; sourceTree = "<group>"; };
+		023D0D701632E88B00FBA4D2 /* BattleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BattleScene.h; sourceTree = "<group>"; };
+		023D0D711632E88B00FBA4D2 /* BattleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BattleScene.m; sourceTree = "<group>"; };
+		023D0D731632F3D700FBA4D2 /* FDFreezeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDFreezeAnimation.h; sourceTree = "<group>"; };
+		023D0D741632F3D700FBA4D2 /* FDFreezeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDFreezeAnimation.m; sourceTree = "<group>"; };
 		023D34A8152834A3002D3EFD /* EventChapter2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter2.h; sourceTree = "<group>"; };
 		023D34A9152834A3002D3EFD /* EventChapter2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter2.m; sourceTree = "<group>"; };
 		02542C4C155D4C5B0050FEC8 /* ShoppingItemDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingItemDialog.h; sourceTree = "<group>"; };
@@ -2723,6 +2737,7 @@
 				025DA5DB162929FC00DD7C30 /* Fight-006-2-11.png */,
 				025DA5DC162929FC00DD7C30 /* Fight-006-2-12.png */,
 				025DA5DD162929FC00DD7C30 /* Fight-006-2-13.png */,
+				023D0D341631A57E00FBA4D2 /* Fight-006-2-14.png */,
 				025DA5DE162929FC00DD7C30 /* Fight-006-2-15.png */,
 				025DA5DF162929FC00DD7C30 /* Fight-006-2-16.png */,
 				025DA5E0162929FC00DD7C30 /* Fight-006-2-17.png */,
@@ -3146,6 +3161,8 @@
 				021B9EA7146FEBB900102DCE /* FDSlideAnimation.m */,
 				021B9EA9146FECC400102DCE /* FDSyncedAnimation.h */,
 				021B9EAA146FECC400102DCE /* FDSyncedAnimation.m */,
+				023D0D731632F3D700FBA4D2 /* FDFreezeAnimation.h */,
+				023D0D741632F3D700FBA4D2 /* FDFreezeAnimation.m */,
 				0297DAF5148259B0007F3E12 /* FDCombinedAnimation.h */,
 				0297DAF6148259B0007F3E12 /* FDCombinedAnimation.m */,
 			);
@@ -3325,10 +3342,16 @@
 				0297D7C8147E7379007F3E12 /* FightScene.m */,
 				0297D803147E7D2E007F3E12 /* FightTargetInfo.h */,
 				0297D804147E7D2E007F3E12 /* FightTargetInfo.m */,
+				023D0D701632E88B00FBA4D2 /* BattleScene.h */,
+				023D0D711632E88B00FBA4D2 /* BattleScene.m */,
 				025DA9AE16301B2C00DD7C30 /* FightingScene.h */,
 				025DA9AF16301B2C00DD7C30 /* FightingScene.m */,
+				023D0D6D1632E7BD00FBA4D2 /* MagicalScene.h */,
+				023D0D6E1632E7BD00FBA4D2 /* MagicalScene.m */,
 				025DA9B116301C9400DD7C30 /* FightingInformation.h */,
 				025DA9B216301C9400DD7C30 /* FightingInformation.m */,
+				023D0D6A1632E10300FBA4D2 /* MagicalInformation.h */,
+				023D0D6B1632E10300FBA4D2 /* MagicalInformation.m */,
 				025DA9B416301D2000DD7C30 /* AttackInformation.h */,
 				025DA9B516301D2000DD7C30 /* AttackInformation.m */,
 			);
@@ -4739,6 +4762,7 @@
 				025DA6B616292AB200DD7C30 /* Fight-750-1-03.png in Resources */,
 				025DA6B716292AB200DD7C30 /* Fight-750-1-04.png in Resources */,
 				025DA6B816292AB200DD7C30 /* Fight-750-2-01.png in Resources */,
+				023D0D351631A57E00FBA4D2 /* Fight-006-2-14.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4935,6 +4959,10 @@
 				025DA9B016301B2C00DD7C30 /* FightingScene.m in Sources */,
 				025DA9B316301C9400DD7C30 /* FightingInformation.m in Sources */,
 				025DA9B616301D2000DD7C30 /* AttackInformation.m in Sources */,
+				023D0D6C1632E10300FBA4D2 /* MagicalInformation.m in Sources */,
+				023D0D6F1632E7BD00FBA4D2 /* MagicalScene.m in Sources */,
+				023D0D721632E88B00FBA4D2 /* BattleScene.m in Sources */,
+				023D0D751632F3D700FBA4D2 /* FDFreezeAnimation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

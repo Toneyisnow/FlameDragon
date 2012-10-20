@@ -54,6 +54,7 @@ typedef	enum AnimationType
 -(NSMutableArray *) getFrameArray;
 
 -(void) setRepeatable:(BOOL)val;
+-(int) getTickCount;
 
 -(BOOL) isRepeatable;
 

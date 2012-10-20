@@ -23,7 +23,7 @@
 
 -(id) initWithAttackInfo:(AttackInformation *)attack1 attack2Info:(AttackInformation *)attack2 backInfo:(AttackInformation *)back1 back2Info:(AttackInformation *)back2;
 
--(int) getBackGroundImageId;
+//-(int) getBackGroundImageId;
 -(AttackInformation *) getAttackInfo1;
 -(AttackInformation *) getAttackInfo2;
 -(AttackInformation *) getBackInfo1;

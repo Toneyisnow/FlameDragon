@@ -173,6 +173,16 @@
 	return frameArray;
 }
 
+-(int) getTickCount
+{
+	int total = 0;
+	for (FDFrameDefinition *frame in frameArray)
+	{
+		total += frame.tickCount;
+	}
+	return total;
+}
+
 -(BOOL) isRepeatable
 {
 	return repeatable;

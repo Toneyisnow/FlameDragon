@@ -44,7 +44,7 @@
 		[currentframe renderFrame:sprite];
 		
 		if (object != nil && [object respondsToSelector:callback]) {
-			[object performSelector:callback withObject:currentframe withObject:[NSNumber numberWithInt:tag]];
+			[object performSelector:callback withObject:currentframe withObject:[NSNumber numberWithInt:tagIndex]];
 		}
 	}
 	

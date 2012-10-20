@@ -25,6 +25,7 @@
 
 -(void) setOpacity:(int)o;
 -(void) setColorR:(int)r G:(int)g B:(int)b;
+-(void) setVisible:(BOOL)visible;
 
 -(void) addSprite:(FDSprite *)s zOrder:(int)order;
 -(void) removeSprite:(FDSprite *)s;

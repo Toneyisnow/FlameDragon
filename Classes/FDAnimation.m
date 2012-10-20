@@ -52,6 +52,11 @@
 	return finished;
 }
 
+-(int) getDuration
+{
+	return [definition getTickCount];
+}
+
 -(void) reset
 {
 }

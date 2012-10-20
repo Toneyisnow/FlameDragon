@@ -116,6 +116,11 @@
 	[ccsprite setColor:ccc3(r,g,b)];
 }
 
+-(void) setVisible:(BOOL)visible
+{
+	ccsprite.visible = visible;
+}
+
 -(void) setSprite:(CCSprite *)s
 {
 	ccsprite = s;

@@ -28,7 +28,7 @@
 
 -(void) loadEvents
 {
-	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(round1_1)];
+	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(round1)];
 	[self loadTurnEvent:TurnType_Friend Turn:3 Action:@selector(round3)];
 	[self loadTurnEvent:TurnType_Friend Turn:4 Action:@selector(round4)];
 	[self loadTurnEvent:TurnType_Friend Turn:5 Action:@selector(round5_Boss)];
@@ -69,8 +69,12 @@
 	[field addFriend:friend5 Position:CGPointMake(10, 18)];
 	[friend5 release];
 	
-	FDFriend *friend6 = [[FDFriend alloc] initWithDefinition:1016 Id:6];
-	[field addFriend:friend6 Position:CGPointMake(9, 18)];
+	FDFriend *friend16 = [[FDFriend alloc] initWithDefinition:1016 Id:16];
+	[field addFriend:friend16 Position:CGPointMake(9, 18)];
+	[friend16 release];
+	
+	FDFriend *friend6 = [[FDFriend alloc] initWithDefinition:6 Id:6];
+	[field addFriend:friend6 Position:CGPointMake(9, 19)];
 	[friend6 release];
 	
 	FDNpc *npc = [[FDNpc alloc] initWithDefinition:703 Id:41];

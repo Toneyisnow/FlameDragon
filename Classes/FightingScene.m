@@ -10,16 +10,18 @@
 #import "DataDepot.h"
 #import "FDWindow.h"
 #import "FDSpriteStore.h"
+#import "FDSlideAnimation.h"
+#import "FDFightFrameDefinition.h"
 
 
 @implementation FightingScene
 
 -(id) initWithSubject:(FDCreature *)sub Target:(FDCreature *)tar Information:(FightingInformation *)info Background:(int)backgroundImageId
 {
-	self = [self init];
+	self = [super initWithBackgroundImageId:backgroundImageId];
 	
-	if (subject == nil || target == nil || fightingInfo == nil) {
-		NSError(@"FightingScene init error: parameter is nil");
+	if (sub == nil || tar == nil || info == nil) {
+		NSLog(@"FightingScene init error: parameter is nil");
 		return self;
 	}
 	
@@ -29,23 +31,22 @@
 	
 	subjectAttackAni = [[DataDepot depot] getAnimationDefinition:AnimationType_FightAttack Id:[[subject getDefinition] getAnimationId]];
 	subjectIdleAni = [[DataDepot depot] getAnimationDefinition:AnimationType_FightIdle Id:[[subject getDefinition] getAnimationId]];
+	[subjectAttackAni retain];
+	[subjectIdleAni retain];
 	
 	targetAttackAni = [[DataDepot depot] getAnimationDefinition:AnimationType_FightAttack Id:[[target getDefinition] getAnimationId]];
 	targetIdleAni = [[DataDepot depot] getAnimationDefinition:AnimationType_FightIdle Id:[[target getDefinition] getAnimationId]];
+	[targetAttackAni retain];
+	[targetIdleAni retain];
 	
-	
-	layer = [CCLayer node];	
-	
-	FDSprite *background = [[FDSpriteStore instance] sprite:[NSString stringWithFormat:@"Background-%02d.png", backgroundImageId]];
-	[background addToLayer:layer];
-	[background setLocation:[FDWindow screenCenter]];
-	
-	FDSprite *tai = [[FDSpriteStore instance] sprite:[NSString stringWithFormat:@"Tai-%02d.png", backgroundImageId]];
-	[tai addToLayer:layer];
-	[tai setLocation:[FDWindow fightingTaiPosition]];
-	
-	[self addChild: layer];
-	
+	isRemoteAttack = FALSE;
+	for (FDFrameDefinition *frame in [subjectAttackAni getFrameArray]) {
+		FDFightFrameDefinition *fightFrame = (FDFightFrameDefinition *)frame;
+		if ([fightFrame isRemote]) {
+			isRemoteAttack = TRUE;
+			break;
+		}
+	}
 	
 	return self;
 }
@@ -62,9 +63,9 @@
 	[subjectSprite retain];
 	
 	// Target
-	targetSprite = [[FDSpriteStore instance] sprite:[NSString stringWithFormat:@"Fight-%03d-1-01.png", [[[targets objectAtIndex:0] getDefinition] getAnimationId]]];
+	targetSprite = [[FDSpriteStore instance] sprite:[NSString stringWithFormat:@"Fight-%03d-1-01.png", [[target getDefinition] getAnimationId]]];
 	[targetSprite addToLayer:layer];
-	[targetSprite setLocation:CGPointMake(screenSize.width /2, screenSize.height /2)];
+	[targetSprite setLocation:[FDWindow screenCenter]];
 	[targetSprite retain];
 	
 	// Creature Bar
@@ -74,23 +75,20 @@
 	} else {
 		[subjectBar setHp:[[fightingInfo getBackInfo1] getBefore] Mp:subject.data.mpCurrent];
 	}
-
+	[subjectBar setLocation:[self getBarLocation:subject]];
+	[subjectBar show:layer];
+	
 	// Target Bar
 	targetBar = [[CreatureInfoBar alloc] initWithCreature:target ClickedOn:CGPointMake(0, 0)]; 
 	[targetBar setHp:[[fightingInfo getAttackInfo1] getBefore] Mp:target.data.mpCurrent];
-	
-	if ([subject getCreatureType] == CreatureType_Friend || [subject getCreatureType] == CreatureType_Npc) {
-		[subjectBar setLocation:[FDWindow fightingFriendBarPosition]];
-		[targetBar setLocation:[FDWindow fightingEnemyBarPosition]];
-	}
-	else {
-		[subjectBar setLocation:[FDWindow fightingEnemyBarPosition]];
-		[targetBar setLocation:[FDWindow fightingFriendBarPosition]];
-	}
-	[subjectBar show:layer];
+	[targetBar setLocation:[self getBarLocation:target]];
 	[targetBar show:layer];
 	
+	if (isRemoteAttack) {
+		[self setTargetVisible:FALSE];
+	}
 	
+	// Animation
 	subjectAnimation = [[FDCombinedAnimation alloc] init];
 	targetAnimation = [[FDCombinedAnimation alloc] init];
 	
@@ -109,31 +107,36 @@
 		[self appendTargetAttackAnimation:2];
 	}
 	
-	[self appendIdleAnimation];
-	[self appendIdleAnimation];
+	if (isRemoteAttack) {
+		FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:targetIdleAni Sprite:targetSprite];
+		[targetAnimation addAnimation:ani];
+		[ani release];		
+	} else {
+		[self appendIdleAnimation];
+	}
 }
 
 -(void) appendIdleAnimation
 {
-	FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:subjectIdleAni Sprite:subject];
+	FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:subjectIdleAni Sprite:subjectSprite];
 	[subjectAnimation addAnimation:ani];
 	[ani release];
 	
-	ani = [[FDSlideAnimation alloc] initWithDefinition:targetIdleAni Sprite:target];
+	ani = [[FDSlideAnimation alloc] initWithDefinition:targetIdleAni Sprite:targetSprite];
 	[targetAnimation addAnimation:ani];
 	[ani release];
 }
 
 -(void) appendSubjectAttackAnimation:(int)tagIndex
 {
-	FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:subjectAttackAni Sprite:subject];
+	FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:subjectAttackAni Sprite:subjectSprite];
 	[ani onRenderFrame:@selector(onSubjectAttack:Tag:) Id:self];
 	[ani setTagIndex:tagIndex];
 	[subjectAnimation addAnimation:ani];
 	[ani release];
 	
-	while ([targetAnimation totalFrame] < [subjectAnimation totalFrame]) {
-		ani = [[FDSlideAnimation alloc] initWithDefinition:targetIdleAni Sprite:target];
+	while ([targetAnimation getDuration] < [subjectAnimation getDuration]) {
+		ani = [[FDSlideAnimation alloc] initWithDefinition:targetIdleAni Sprite:targetSprite];
 		[targetAnimation addAnimation:ani];
 		[ani release];
 	}
@@ -141,25 +144,17 @@
 
 -(void) appendTargetAttackAnimation:(int)tagIndex
 {
-	FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:targetAttackAni Sprite:target];
+	FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:targetAttackAni Sprite:targetSprite];
 	[ani onRenderFrame:@selector(onTargetAttack:Tag:) Id:self];
 	[ani setTagIndex:tagIndex];
 	[targetAnimation addAnimation:ani];
 	[ani release];
 	
-	while ([subjectAnimation totalFrame] < [targetAnimation totalFrame]) {
-		ani = [[FDSlideAnimation alloc] initWithDefinition:subjectIdleAni Sprite:subject];
+	while ([subjectAnimation getDuration] < [targetAnimation getDuration]) {
+		ani = [[FDSlideAnimation alloc] initWithDefinition:subjectIdleAni Sprite:subjectSprite];
 		[subjectAnimation addAnimation:ani];
 		[ani release];
 	}
-}
-
--(void) setPostMethod:(SEL)sel param1:(id)o1 param2:(id)o2 Obj:(id)obj
-{
-	postMethod = sel;
-	obj1 = [o1 retain];
-	obj2 = [o2 retain];
-	object = obj;
 }
 
 -(void) step: (ccTime) delta
@@ -179,10 +174,23 @@
 	}
 }
 
--(void) onSubjectAttack:(FDFrameDefinition *)frame Tag:(int)tagIndex
+-(void) onSubjectAttack:(FDFrameDefinition *)frame Tag:(NSNumber *)tagIndex
 {
 	FDFightFrameDefinition *fightFrame = (FDFightFrameDefinition *)frame;
-	AttackInformation *attackInfo = (tagIndex == 1) ? [fightingInfo getAttackInfo1] : [fightingInfo getAttackInfo2];
+	AttackInformation *attackInfo = ([tagIndex intValue] == 1) ? [fightingInfo getAttackInfo1] : [fightingInfo getAttackInfo2];
+	
+	if (isRemoteAttack)
+	{
+		if ([fightFrame isRemote]) {
+			[self setTargetVisible:FALSE];
+			[subjectBar appear];
+			[taiSprite setVisible:TRUE];
+		} else {
+			[self setTargetVisible:TRUE];
+			[subjectBar hide];
+			[taiSprite setVisible:FALSE];
+		}
+	}
 	
 	if ([fightFrame isHitting]) {
 		
@@ -198,10 +206,10 @@
 	}
 }
 
--(void) onTargetAttack:(FDFrameDefinition *)frame Tag:(int)tagIndex
+-(void) onTargetAttack:(FDFrameDefinition *)frame Tag:(NSNumber *)tagIndex
 {
 	FDFightFrameDefinition *fightFrame = (FDFightFrameDefinition *)frame;
-	AttackInformation *attackInfo = (tagIndex == 1) ? [fightingInfo getBackInfo1] : [fightingInfo getBackInfo2];
+	AttackInformation *attackInfo = ([tagIndex intValue] == 1) ? [fightingInfo getBackInfo1] : [fightingInfo getBackInfo2];
 	
 	if ([fightFrame isHitting]) {
 		
@@ -217,18 +225,47 @@
 	}	
 }
 
+// This should not be called
+/*
+-(void) setSubjectVisible:(BOOL)val
+{
+	[subjectSprite setVisible:val];
+	
+	if (val) {
+		[subjectBar appear];
+	} else {
+		[subjectBar hide];
+	}
+	
+	if (![subject getCreatureType] == CreatureType_Enemy) {
+		[taiSprite setVisible:val];
+	}
+}
+*/
+
+-(void) setTargetVisible:(BOOL)val
+{
+	[targetSprite setVisible:val];
+	
+	if (val) {
+		[targetBar appear];
+	} else {
+		[targetBar hide];
+	}
+	
+	if (![target getCreatureType] == CreatureType_Enemy) {
+		[taiSprite setVisible:val];
+	}
+}
+
 -(void) dealloc
 {
 	[subject release];
 	[target release];
 	[fightingInfo release];
 	
-	if (obj1 != nil) {
-		[obj1 release];
-	}
-	if (obj2 != nil) {
-		[obj2 release];
-	}
+	[subjectAttackAni release];
+	[subjectIdleAni release];
 	
 	[super dealloc];
 }

@@ -7,16 +7,10 @@
 //
 
 #import "cocos2d.h"
-#import "FDSprite.h"
-#import "FDCreature.h"
-#import "AnimationDefinition.h"
-#import "FDCombinedAnimation.h"
-#import "CreatureInfoBar.h"
-#import "FightingInformation.h"
+#import "BattleScene.h"
 
-@interface FightingScene : CCScene {
+@interface FightingScene : BattleScene {
 
-	CCLayer *layer;
 	
 	FightingInformation *fightingInfo;
 	
@@ -27,6 +21,7 @@
 	FDSprite *subjectSprite;
 	FDSprite *targetSprite;
 
+	
 	AnimationDefinition *subjectAttackAni;
 	AnimationDefinition *subjectIdleAni;
 	FDCombinedAnimation *subjectAnimation;
@@ -35,26 +30,20 @@
 	AnimationDefinition *targetIdleAni;
 	FDCombinedAnimation *targetAnimation;
 	
-	CreatureInfoBar *subjectBar;
-	CreatureInfoBar *targetBar;
-	
-	int tickCount;
-	
-	
-	SEL postMethod;
-	id obj1;
-	id obj2;
-	id object;	
+	BOOL isRemoteAttack;
 	
 }
 
 -(id) initWithSubject:(FDCreature *)sub Target:(FDCreature *)tar Information:(FightingInformation *)info Background:(int)backgroundImageId;
 
--(void) onSubjectAttack:(FDFrameDefinition *)frame Tag:(int)tagIndex;
--(void) onTargetAttack:(FDFrameDefinition *)frame Tag:(int)tagIndex;
+-(void) onSubjectAttack:(FDFrameDefinition *)frame Tag:(NSNumber *)tagIndex;
+-(void) onTargetAttack:(FDFrameDefinition *)frame Tag:(NSNumber *)tagIndex;
 
 -(void) start;
 -(void) setPostMethod:(SEL)sel param1:(id)o1 param2:(id)o2 Obj:(id)obj;
+
+// -(void) setSubjectVisible:(BOOL)val;
+-(void) setTargetVisible:(BOOL)val;
 
 -(void) appendIdleAnimation;
 -(void) appendSubjectAttackAnimation:(int)tag;

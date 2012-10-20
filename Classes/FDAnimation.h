@@ -29,6 +29,8 @@
 
 -(BOOL) hasFinished;
 
+-(int) getDuration;
+
 -(void) reset;
 
 @end

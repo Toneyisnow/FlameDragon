@@ -51,6 +51,15 @@
 
 }
 
+-(int) getDuration
+{
+	int total = 0;
+	for (FDAnimation *ani in animationList) {
+		total += [ani getDuration];
+	}
+	return total;
+}
+
 -(void) dealloc
 {
 	
