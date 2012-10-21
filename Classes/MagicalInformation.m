@@ -30,7 +30,7 @@
 	[informationList addObject:info];
 }
 
--(NSMutableArray *) getInformations
+-(NSArray *) getInformations
 {
 	return informationList;
 }

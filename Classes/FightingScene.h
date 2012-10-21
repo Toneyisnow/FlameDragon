@@ -39,9 +39,6 @@
 -(void) onSubjectAttack:(FDFrameDefinition *)frame Tag:(NSNumber *)tagIndex;
 -(void) onTargetAttack:(FDFrameDefinition *)frame Tag:(NSNumber *)tagIndex;
 
--(void) start;
--(void) setPostMethod:(SEL)sel param1:(id)o1 param2:(id)o2 Obj:(id)obj;
-
 // -(void) setSubjectVisible:(BOOL)val;
 -(void) setTargetVisible:(BOOL)val;
 

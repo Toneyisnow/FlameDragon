@@ -8,12 +8,13 @@
 
 #import "cocos2d.h"
 #import "BattleScene.h"
+#import "MagicalInformation.h"
+#import "MagicDefinition.h"
 
 @interface MagicalScene : BattleScene {
 
-	CCLayer *layer;
-
 	MagicalInformation *magicalInfo;
+	MagicDefinition *magicDefinition;
 	
 	FDCreature *subject;
 	NSArray *targetList;
@@ -22,8 +23,6 @@
 	FDSprite *subjectSprite;
 	FDSprite *targetSprite;
 	
-	FDSprite *taiSprite;
-	
 	AnimationDefinition *subjectAttackAni;
 	AnimationDefinition *subjectIdleAni;
 	FDCombinedAnimation *subjectAnimation;
@@ -31,20 +30,13 @@
 	AnimationDefinition *targetIdleAni;
 	FDCombinedAnimation *targetAnimation;
 	
-	CreatureInfoBar *subjectBar;
-	CreatureInfoBar *targetBar;
-	
-	int tickCount;
-	BOOL isRemoteAttack;
-	
-	SEL postMethod;
-	id obj1;
-	id obj2;
-	id object;	
-	
-	
+	BOOL updatedMp;
 }
 
+-(id) initWithMagic:(int)mId Subject:(FDCreature *)sub Targets:(NSArray *)tars Information:(MagicalInformation *)info Background:(int)backgroundImageId;
 
+-(void) appendIdleAnimation;
+-(void) appendSubjectAttackAnimation;
 
+-(void) updateMp;
 @end

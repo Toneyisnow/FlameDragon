@@ -15,6 +15,6 @@
 }
 
 -(void) addInformation:(AttackInformation *)info;
--(NSMutableArray *) getInformations;
+-(NSArray *) getInformations;
 
 @end

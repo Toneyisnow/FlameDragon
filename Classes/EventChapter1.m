@@ -54,7 +54,7 @@
 	[friend1 release];
 	
 	FDFriend *friend2 = [[FDFriend alloc] initWithDefinition:2 Id:2];
-	[field addFriend:friend2 Position:CGPointMake(11, 16)];
+	[field addFriend:friend2 Position:CGPointMake(6, 16)];
 	[friend2 release];
 	
 	FDFriend *friend3 = [[FDFriend alloc] initWithDefinition:3 Id:3];

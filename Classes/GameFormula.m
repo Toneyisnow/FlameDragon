@@ -134,7 +134,7 @@
 	subject.lastGainedExperience = totalExp;
 	
 	return [result autorelease];
-}	
+}
 
 +(AttackInformation *) magicWithId:(int)magicId From:(FDCreature *)creature To:(FDCreature *)target Field:(BattleField *)field
 {

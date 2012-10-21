@@ -30,7 +30,8 @@
 #import "VillageScene.h"
 #import "FightingInformation.h"
 #import "FightingScene.h"
-
+#import "MagicalInformation.h"
+#import "MagicalScene.h"
 
 @implementation ActionLayers
 
@@ -319,25 +320,22 @@
 	[targets release];
 }
 
--(void) magicFrom:(FDCreature *)creature Targets:(NSMutableArray *)targets Id:(int)magicId
+-(void) magicFrom:(FDCreature *)creature Targets:(NSArray *)targets Id:(int)magicId
 {
 	NSLog(@"Magic from %d to %d enemies", [creature getIdentifier], [targets count]);
 	
 	MagicDefinition *magic = [[DataDepot depot] getMagicDefinition:magicId];
 	[creature updateMP:-magic.mpCost];
 	[creature updateHP:0];
-	 
-	[GameFormula getExperienceFromMagic:magicId Creature:creature Target:[targets objectAtIndex:0] Field:field];
-
-	// Show the Fight Scene
-	FightScene *scene = [[FightScene alloc] init];
-	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:0.5 scene:scene]];
+	
+	MagicalInformation *mInfo = [GameFormula dealWithMagic:magicId From:creature Target:targets Field:field];
 	
 	CGPoint pos = [field getObjectPos:creature];
-	int backId = [field getBackgroundPicId:pos];
+	int backgroundImageId = [field getBackgroundPicId:pos];
+	MagicalScene *scene = [[MagicalScene alloc] initWithMagic:magicId Subject:creature Targets:targets Information:mInfo Background:backgroundImageId];
+	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:0.5 scene:scene]];
 	
-	[scene setParameter:backId Self:creature Targets:targets FightBack:FALSE];
-	[scene start];
+	[scene start];	
 	
 	[scene setPostMethod:@selector(postFightAction:Targets:) param1:creature param2:targets Obj:self];
 }

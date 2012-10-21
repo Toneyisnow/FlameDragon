@@ -67,7 +67,7 @@ typedef enum TurnType
 -(void) moveCreatureSimple:(FDCreature *)creature To:(CGPoint)pos;
 -(void) moveCreatureIdSimple:(int)creatureId To:(CGPoint)pos;
 -(void) attackFrom:(FDCreature *)creature Target:(FDCreature *)target;
--(void) magicFrom:(FDCreature *)creature Targets:(NSMutableArray *)targets Id:(int)magicId;
+-(void) magicFrom:(FDCreature *)creature Targets:(NSArray *)targets Id:(int)magicId;
 -(void) useItem:(FDCreature *)creature ItemIndex:(int)itemIndex Target:(FDCreature *)target;
 -(void) giveItem:(FDCreature *)creature ItemIndex:(int)itemIndex Target:(FDCreature *)target;
 -(void) exchangeItem:(FDCreature *)creature ItemIndex:(int)itemIndex Target:(FDCreature *)target ItemIndex:(int)backItemIndex;

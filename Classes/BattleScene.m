@@ -20,17 +20,17 @@
 {
 	self = [super init];
 	
-	FDSprite *background = [[FDSpriteStore instance] sprite:[NSString stringWithFormat:@"Background-%02d.png", backgroundImageId]];
+	layer = [CCLayer node];	
+	[self addChild: layer];
+	
+	FDSprite *background = [[FDSpriteStore instance] sprite:[NSString stringWithFormat:@"Background-%02d.png", imageId]];
 	[background addToLayer:layer];
 	[background setLocation:[FDWindow screenCenter]];
 	
-	taiSprite = [[FDSpriteStore instance] sprite:[NSString stringWithFormat:@"Tai-%02d.png", backgroundImageId]];
+	taiSprite = [[FDSpriteStore instance] sprite:[NSString stringWithFormat:@"Tai-%02d.png", imageId]];
 	[taiSprite addToLayer:layer];
 	[taiSprite setLocation:[FDWindow fightingTaiPosition]];
 	[taiSprite retain];
-	
-	layer = [CCLayer node];	
-	[self addChild: layer];
 	
 	return self;
 }
