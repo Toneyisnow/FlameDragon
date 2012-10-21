@@ -627,8 +627,8 @@
 	021BA1C71477789B00102DCE /* ActionLayers.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1069, 12194}}";
-			sepNavSelRange = "{9352, 0}";
-			sepNavVisRange = "{8741, 1186}";
+			sepNavSelRange = "{9778, 0}";
+			sepNavVisRange = "{9182, 1088}";
 		};
 	};
 	021BA2271477854E00102DCE /* FDTreasure.h */ = {
@@ -2322,7 +2322,7 @@
 		fRef = 029C62D11494EAF80054B260 /* EventChapter1.m */;
 		name = "EventChapter1.m: 31";
 		rLen = 0;
-		rLoc = 553;
+		rLoc = 555;
 		rType = 0;
 		vrLen = 893;
 		vrLoc = 253;
@@ -2446,7 +2446,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1076, 559}}";
 			sepNavSelRange = "{905, 0}";
-			sepNavVisRange = "{231, 680}";
+			sepNavVisRange = "{230, 681}";
 		};
 	};
 	023D0D6E1632E7BD00FBA4D2 /* MagicalScene.m */ = {
@@ -2821,7 +2821,7 @@
 		fRef = 029C62D11494EAF80054B260 /* EventChapter1.m */;
 		name = "EventChapter1.m: 31";
 		rLen = 0;
-		rLoc = 553;
+		rLoc = 555;
 		rType = 0;
 		vrLen = 867;
 		vrLoc = 279;
@@ -2831,7 +2831,7 @@
 		fRef = 029C62D11494EAF80054B260 /* EventChapter1.m */;
 		name = "EventChapter1.m: 57";
 		rLen = 0;
-		rLoc = 1508;
+		rLoc = 1510;
 		rType = 0;
 		vrLen = 950;
 		vrLoc = 1175;
@@ -2841,7 +2841,7 @@
 		fRef = 029C62D11494EAF80054B260 /* EventChapter1.m */;
 		name = "EventChapter1.m: 57";
 		rLen = 0;
-		rLoc = 1508;
+		rLoc = 1510;
 		rType = 0;
 		vrLen = 1019;
 		vrLoc = 1175;
@@ -4066,16 +4066,16 @@
 	};
 	027333611497854300D0812F /* AIAggressiveDelegate.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 441}}";
-			sepNavSelRange = "{236, 0}";
-			sepNavVisRange = "{0, 371}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 372}}";
+			sepNavSelRange = "{410, 0}";
+			sepNavVisRange = "{0, 418}";
 		};
 	};
 	027333621497854300D0812F /* AIAggressiveDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {740, 1768}}";
-			sepNavSelRange = "{520, 30}";
-			sepNavVisRange = "{131, 781}";
+			sepNavIntBoundsRect = "{{0, 0}, {768, 2392}}";
+			sepNavSelRange = "{1813, 0}";
+			sepNavVisRange = "{1239, 660}";
 		};
 	};
 	02733364149785A900D0812F /* AIEscapeDelegate.h */ = {
@@ -4957,9 +4957,9 @@
 	};
 	027D54091462B712002C310F /* FDCreature.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 2145}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 2158}}";
 			sepNavSelRange = "{2561, 0}";
-			sepNavVisRange = "{1257, 812}";
+			sepNavVisRange = "{782, 390}";
 		};
 	};
 	027D540A1462B712002C310F /* FDCreature.m */ = {
@@ -5479,7 +5479,7 @@
 		fRef = 027333621497854300D0812F /* AIAggressiveDelegate.m */;
 		name = "AIAggressiveDelegate.m: 65";
 		rLen = 0;
-		rLoc = 1750;
+		rLoc = 2910;
 		rType = 0;
 		vrLen = 952;
 		vrLoc = 1044;
@@ -6332,8 +6332,8 @@
 	029C62D11494EAF80054B260 /* EventChapter1.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {739, 6461}}";
-			sepNavSelRange = "{1508, 0}";
-			sepNavVisRange = "{1175, 1019}";
+			sepNavSelRange = "{555, 0}";
+			sepNavVisRange = "{459, 936}";
 		};
 	};
 	02A0EB19147BE336005D630C /* SelectItemMenuState.m:43 */ = {
@@ -8686,9 +8686,9 @@
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeArchitecturePreference = armv6;
-		activeBuildConfigurationName = Distribution;
+		activeBuildConfigurationName = Debug;
 		activeExecutable = 027D533B1460126F002C310F /* FlameDragon */;
-		activeSDKPreference = iphonesimulator4.2;
+		activeSDKPreference = iphoneos4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* FlameDragon */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* FlameDragon */,

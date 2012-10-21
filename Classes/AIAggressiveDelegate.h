@@ -17,7 +17,8 @@
 
 -(FDCreature *) findTarget;
 -(BOOL) foundInArray:(NSMutableArray *)scopeArray Pos:(CGPoint)targetpos;
-
+-(BOOL) needAndCanRecover;
+-(void) selfRecover;
 
 
 @end

@@ -15,7 +15,8 @@
 #import "PathResolver.h"
 #import "ScopeResolver.h"
 #import "DistanceResolver.h"
-
+#import "UsableItemDefinition.h"
+#import "DataDepot.h"
 
 @implementation AIAggressiveDelegate
 
@@ -35,10 +36,58 @@
 	BattleField *field = [[layers getFieldLayer] getField];
 	CGPoint targetPos = [self generatePos:[field getObjectPos:[self findTarget]]];
 	
-	[field setCursorTo:targetPos];
-	[layers moveCreature:creature To:targetPos showMenu:FALSE];
+	if ([self needAndCanRecover]) {
+		
+		[self selfRecover];
+		[layers appendToCurrentActivityMethod:@selector(creatureEndTurn:) Param1:creature Param2:nil];
+	} else {
+		
+		[field setCursorTo:targetPos];
+		[layers moveCreature:creature To:targetPos showMenu:FALSE];
 	
-	[layers appendToCurrentActivityMethod:@selector(searchAttackTarget) Param1:nil Param2:nil Obj:self];
+		[layers appendToCurrentActivityMethod:@selector(searchAttackTarget) Param1:nil Param2:nil Obj:self];
+	}
+}
+
+-(BOOL) needAndCanRecover
+{
+	BOOL needRecover = FALSE;
+	if (creature.data.hpCurrent < creature.data.hpMax / 4) {
+		needRecover = TRUE;
+	}
+	
+	BOOL canRecover = FALSE;
+	for (int index = 0; index < [creature.data.itemList count]; index++) {
+		int itemId = [creature getItemId:index];
+		if (itemId == 101 || itemId == 102 || itemId == 103) {
+			canRecover = TRUE;
+			break;
+		}
+	}
+	
+	return needRecover && canRecover;
+}
+
+-(void) selfRecover
+{
+	int itemIndex = -1;
+	for (int index = 0; index < [creature.data.itemList count]; index++) {
+		int itemId = [creature getItemId:index];
+		if (itemId == 101 || itemId == 102 || itemId == 103) {
+			itemIndex = index;
+			break;
+		}
+	}
+	
+	if (itemIndex < 0) {
+		return;
+	}
+	
+	int itemId = [creature getItemId:itemIndex];
+	UsableItemDefinition * itemDef = (UsableItemDefinition *)[[DataDepot depot] getItemDefinition:itemId];
+	[itemDef usedBy:creature];
+	
+	[creature.data removeItem:itemIndex];
 }
 
 -(void) searchAttackTarget
