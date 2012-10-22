@@ -131,7 +131,7 @@
 		return;
 	} else {
 		// If Tienuo is alive
-		for (int i = 1; i <= 11; i++) {
+		for (int i = 2; i <= 11; i++) {
 			[self showTalkMessage:3 conversation:4 sequence:i];
 		}
 		return;

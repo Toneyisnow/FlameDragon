@@ -26,10 +26,12 @@
 	FDSprite *background = [[FDSpriteStore instance] sprite:[NSString stringWithFormat:@"Background-%02d.png", imageId]];
 	[background addToLayer:layer];
 	[background setLocation:[FDWindow screenCenter]];
+	[background setScaleX:1.3 Y:1.3];
 	
 	taiSprite = [[FDSpriteStore instance] sprite:[NSString stringWithFormat:@"Tai-%02d.png", imageId]];
 	[taiSprite addToLayer:layer];
 	[taiSprite setLocation:[FDWindow fightingTaiPosition]];
+	[taiSprite setScaleX:1.3 Y:1.3];
 	[taiSprite retain];
 	
 	return self;

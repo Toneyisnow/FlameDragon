@@ -60,12 +60,14 @@
 	subjectSprite = [[FDSpriteStore instance] sprite:[NSString stringWithFormat:@"Fight-%03d-1-01.png", [[subject getDefinition] getAnimationId]]];
 	[subjectSprite addToLayer:layer];
 	[subjectSprite setLocation:[FDWindow screenCenter]];
+	[subjectSprite setScaleX:1.3 Y:1.3];
 	[subjectSprite retain];
 	
 	// Target
 	targetSprite = [[FDSpriteStore instance] sprite:[NSString stringWithFormat:@"Fight-%03d-1-01.png", [[target getDefinition] getAnimationId]]];
 	[targetSprite addToLayer:layer];
 	[targetSprite setLocation:[FDWindow screenCenter]];
+	[targetSprite setScaleX:1.3 Y:1.3];
 	[targetSprite retain];
 	
 	// Creature Bar

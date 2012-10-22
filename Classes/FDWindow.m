@@ -189,17 +189,17 @@
 
 +(CGPoint) fightingTaiPosition
 {
-	return CGPointMake([self winSize].width * 0.7, [self winSize].height * 0.25);
+	return CGPointMake([self winSize].width * 0.7, [self winSize].height * 0.15);
 }
 
 +(CGPoint) fightingFriendBarPosition
 {
-	return CGPointMake(300, 280);
+	return CGPointMake([self winSize].width * 0.7, [self winSize].height * 0.85);
 }
 
 +(CGPoint) fightingEnemyBarPosition
 {
-	return CGPointMake(110, 55);
+	return CGPointMake([self winSize].width * 0.25, [self winSize].height * 0.1);
 }
 
 +(CGRect) leftWindow

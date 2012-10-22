@@ -450,8 +450,11 @@
 {
 	// 1. Remove Hawate from friend list
 	FDCreature *hawate = [field getCreatureById:6];
+	FDCreature *deadhawate = [field getDeadCreatureById:6];
 	if (hawate != nil) {
 		[[field getFriendList] removeObject:hawate];
+	}
+	if (deadhawate != nil) {
 		[[field getDeadCreatureList] removeObject:hawate];
 	}
 	

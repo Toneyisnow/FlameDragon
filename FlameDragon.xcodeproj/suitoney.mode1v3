@@ -275,6 +275,7 @@
 								<string>027D545314659151002C310F</string>
 								<string>0297D7C6147E72B2007F3E12</string>
 								<string>027D54071462B621002C310F</string>
+								<string>0273334C1497803100D0812F</string>
 								<string>029C62BF1494E8A10054B260</string>
 								<string>0297DBF4148B00F5007F3E12</string>
 								<string>027D5852146AA2F2002C310F</string>
@@ -287,14 +288,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>128</integer>
+									<integer>127</integer>
 									<integer>119</integer>
 									<integer>9</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 1852}, {293, 572}}</string>
+							<string>{{0, 1990}, {293, 572}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -331,7 +332,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>MagicalScene.h</string>
+								<string>FightingScene.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -339,11 +340,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>MagicalScene.h</string>
+										<string>FightingScene.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>0245776A163407C200C5F47D</string>
+										<string>02457792163570BB00C5F47D</string>
 										<key>history</key>
 										<array>
 											<string>027D538614618BFA002C310F</string>
@@ -617,8 +618,6 @@
 											<string>02D30DE51605F75C00CA1799</string>
 											<string>02D30DE91605F75C00CA1799</string>
 											<string>028147C9160A1C2C001CBB4D</string>
-											<string>028147CA160A1C2C001CBB4D</string>
-											<string>028147CD160A1C2C001CBB4D</string>
 											<string>028147D2160A1C2C001CBB4D</string>
 											<string>028147D3160A1C2C001CBB4D</string>
 											<string>028147D4160A1C2C001CBB4D</string>
@@ -841,7 +840,6 @@
 											<string>02226DC6163179F00078FA4F</string>
 											<string>02226DCF163179F00078FA4F</string>
 											<string>02226DF7163180340078FA4F</string>
-											<string>02226E23163184AA0078FA4F</string>
 											<string>023D0CD116318B7200FBA4D2</string>
 											<string>023D0CD216318B7200FBA4D2</string>
 											<string>023D0CD316318B7200FBA4D2</string>
@@ -886,17 +884,20 @@
 											<string>0245771C1634021900C5F47D</string>
 											<string>0245771D1634021900C5F47D</string>
 											<string>0245772F1634024E00C5F47D</string>
-											<string>024577381634034C00C5F47D</string>
 											<string>0245773A1634034C00C5F47D</string>
-											<string>024577421634039E00C5F47D</string>
 											<string>0245774C1634049500C5F47D</string>
-											<string>024577541634056100C5F47D</string>
-											<string>024577551634056100C5F47D</string>
 											<string>0245775C1634079000C5F47D</string>
 											<string>0245775D1634079000C5F47D</string>
-											<string>0245775E1634079000C5F47D</string>
 											<string>02457768163407C200C5F47D</string>
-											<string>02457769163407C200C5F47D</string>
+											<string>0245778316356FFB00C5F47D</string>
+											<string>0245778416356FFB00C5F47D</string>
+											<string>0245778516356FFB00C5F47D</string>
+											<string>0245778616356FFB00C5F47D</string>
+											<string>0245778716356FFB00C5F47D</string>
+											<string>0245778816356FFB00C5F47D</string>
+											<string>0245778F163570BB00C5F47D</string>
+											<string>02457790163570BB00C5F47D</string>
+											<string>02457791163570BB00C5F47D</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -1094,6 +1095,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>0245778B16356FFB00C5F47D</string>
+		<string>0245778C16356FFB00C5F47D</string>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>027D534C146016B0002C310F</string>
 		<string>1C78EAAD065D492600B07095</string>

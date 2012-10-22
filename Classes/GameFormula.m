@@ -167,10 +167,11 @@
 +(int) calculateAttackExp:(FDCreature *)creature Target:(FDCreature *)target Info:(AttackInformation *)info
 {
 	// Calculate the experience
-	int reducedHp = (target.data.hpCurrent > 0) ? [info getBefore] - [info getAfter] : target.data.hpMax;
-	int exp = reducedHp * target.data.level * [target getDefinition].data.ex / creature.data.level / target.data.hpMax;
+	double reducedHp = (target.data.hpCurrent > 0) ? [info getBefore] - [info getAfter] : target.data.hpMax;
+	double exp = reducedHp * target.data.level * [target getDefinition].data.ex / creature.data.level / target.data.hpMax;
 	
-	return exp;
+	NSLog(@"Experience got %d.", (int)exp);
+	return (int)exp;
 }
 
 // DEPRECATED
@@ -214,12 +215,12 @@
 
 +(int) commonDoubleAttackRate
 {
-	return 80;
+	return 5;
 }
 
 +(int) commonCriticalAttackRate
 {
-	return 8;
+	return 5;
 }
 
 +(int) recoverHpFromRest:(FDCreature *)creature

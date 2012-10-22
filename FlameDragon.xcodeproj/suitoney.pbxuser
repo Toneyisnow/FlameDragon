@@ -626,9 +626,9 @@
 	};
 	021BA1C71477789B00102DCE /* ActionLayers.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1069, 12194}}";
-			sepNavSelRange = "{9778, 0}";
-			sepNavVisRange = "{9182, 1088}";
+			sepNavIntBoundsRect = "{{0, 0}, {936, 12688}}";
+			sepNavSelRange = "{22419, 0}";
+			sepNavVisRange = "{22065, 920}";
 		};
 	};
 	021BA2271477854E00102DCE /* FDTreasure.h */ = {
@@ -2018,9 +2018,9 @@
 	};
 	022D3C7E1625CA9F0020F816 /* EventChapter3.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {810, 2275}}";
-			sepNavSelRange = "{213, 0}";
-			sepNavVisRange = "{1868, 826}";
+			sepNavIntBoundsRect = "{{0, 0}, {810, 2054}}";
+			sepNavSelRange = "{4325, 0}";
+			sepNavVisRange = "{4086, 703}";
 		};
 	};
 	022D3C93162652390020F816 /* PBXBookmark */ = {
@@ -2092,9 +2092,9 @@
 		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Classes/FightingScene.m";
 		sourceTree = "<absolute>";
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1041, 3237}}";
-			sepNavSelRange = "{5130, 376}";
-			sepNavVisRange = "{5129, 810}";
+			sepNavIntBoundsRect = "{{0, 0}, {1041, 3380}}";
+			sepNavSelRange = "{2281, 0}";
+			sepNavVisRange = "{1602, 942}";
 		};
 	};
 	023D0CD116318B7200FBA4D2 /* PBXTextBookmark */ = {
@@ -2412,7 +2412,7 @@
 		fRef = 0297D98E1481D281007F3E12 /* Creature.dat */;
 		name = "Creature.dat: 19";
 		rLen = 0;
-		rLoc = 356;
+		rLoc = 355;
 		rType = 0;
 		vrLen = 606;
 		vrLoc = 3;
@@ -2451,9 +2451,9 @@
 	};
 	023D0D6E1632E7BD00FBA4D2 /* MagicalScene.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {922, 2327}}";
-			sepNavSelRange = "{4388, 0}";
-			sepNavVisRange = "{4103, 742}";
+			sepNavIntBoundsRect = "{{0, 0}, {1069, 2041}}";
+			sepNavSelRange = "{2272, 0}";
+			sepNavVisRange = "{1862, 1102}";
 		};
 	};
 	023D0D701632E88B00FBA4D2 /* BattleScene.h */ = {
@@ -2465,9 +2465,9 @@
 	};
 	023D0D711632E88B00FBA4D2 /* BattleScene.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {859, 923}}";
-			sepNavSelRange = "{437, 0}";
-			sepNavVisRange = "{150, 739}";
+			sepNavIntBoundsRect = "{{0, 0}, {859, 936}}";
+			sepNavSelRange = "{899, 0}";
+			sepNavVisRange = "{150, 789}";
 		};
 	};
 	023D0D731632F3D700FBA4D2 /* FDFreezeAnimation.h */ = {
@@ -2509,7 +2509,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 176";
 		rLen = 0;
-		rLoc = 5553;
+		rLoc = 5605;
 		rType = 0;
 		vrLen = 952;
 		vrLoc = 3693;
@@ -2539,7 +2539,7 @@
 		fRef = 023D0D711632E88B00FBA4D2 /* BattleScene.m */;
 		name = "BattleScene.m: 60";
 		rLen = 0;
-		rLoc = 1312;
+		rLoc = 1381;
 		rType = 0;
 		vrLen = 522;
 		vrLoc = 891;
@@ -2629,7 +2629,7 @@
 		fRef = 023D0CC916318A8C00FBA4D2 /* FightingScene.m */;
 		name = "FightingScene.m: 261";
 		rLen = 162;
-		rLoc = 7437;
+		rLoc = 7512;
 		rType = 0;
 		vrLen = 401;
 		vrLoc = 7204;
@@ -2639,7 +2639,7 @@
 		fRef = 023D0D6E1632E7BD00FBA4D2 /* MagicalScene.m */;
 		name = "MagicalScene.m: 105";
 		rLen = 0;
-		rLoc = 4179;
+		rLoc = 4254;
 		rType = 0;
 		vrLen = 1001;
 		vrLoc = 2789;
@@ -2712,7 +2712,7 @@
 		fRef = 023D0D711632E88B00FBA4D2 /* BattleScene.m */;
 		name = "BattleScene.m: 27";
 		rLen = 0;
-		rLoc = 739;
+		rLoc = 774;
 		rType = 0;
 		vrLen = 728;
 		vrLoc = 126;
@@ -2722,7 +2722,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 176";
 		rLen = 0;
-		rLoc = 5553;
+		rLoc = 5605;
 		rType = 0;
 		vrLen = 1022;
 		vrLoc = 4516;
@@ -2881,7 +2881,7 @@
 		fRef = 023D0D6E1632E7BD00FBA4D2 /* MagicalScene.m */;
 		name = "MagicalScene.m: 72";
 		rLen = 0;
-		rLoc = 2651;
+		rLoc = 2726;
 		rType = 0;
 		vrLen = 1132;
 		vrLoc = 1381;
@@ -2891,7 +2891,7 @@
 		fRef = 023D0D6E1632E7BD00FBA4D2 /* MagicalScene.m */;
 		name = "MagicalScene.m: 134";
 		rLen = 0;
-		rLoc = 4930;
+		rLoc = 5005;
 		rType = 0;
 		vrLen = 697;
 		vrLoc = 3573;
@@ -2901,7 +2901,7 @@
 		fRef = 023D0CC916318A8C00FBA4D2 /* FightingScene.m */;
 		name = "FightingScene.m: 160";
 		rLen = 376;
-		rLoc = 5130;
+		rLoc = 5205;
 		rType = 0;
 		vrLen = 810;
 		vrLoc = 5129;
@@ -2911,7 +2911,7 @@
 		fRef = 023D0D6E1632E7BD00FBA4D2 /* MagicalScene.m */;
 		name = "MagicalScene.m: 110";
 		rLen = 0;
-		rLoc = 4102;
+		rLoc = 4177;
 		rType = 0;
 		vrLen = 1003;
 		vrLoc = 3047;
@@ -2921,7 +2921,7 @@
 		fRef = 023D0D6E1632E7BD00FBA4D2 /* MagicalScene.m */;
 		name = "MagicalScene.m: 125";
 		rLen = 0;
-		rLoc = 4101;
+		rLoc = 4176;
 		rType = 0;
 		vrLen = 818;
 		vrLoc = 3567;
@@ -2961,7 +2961,7 @@
 		fRef = 023D0D6E1632E7BD00FBA4D2 /* MagicalScene.m */;
 		name = "MagicalScene.m: 134";
 		rLen = 0;
-		rLoc = 4391;
+		rLoc = 4466;
 		rType = 0;
 		vrLen = 967;
 		vrLoc = 79;
@@ -2971,7 +2971,7 @@
 		fRef = 023D0D711632E88B00FBA4D2 /* BattleScene.m */;
 		name = "BattleScene.m: 60";
 		rLen = 0;
-		rLoc = 1312;
+		rLoc = 1381;
 		rType = 0;
 		vrLen = 548;
 		vrLoc = 889;
@@ -3071,7 +3071,7 @@
 		fRef = 023D0D6E1632E7BD00FBA4D2 /* MagicalScene.m */;
 		name = "MagicalScene.m: 135";
 		rLen = 0;
-		rLoc = 4369;
+		rLoc = 4444;
 		rType = 0;
 		vrLen = 716;
 		vrLoc = 4083;
@@ -3091,7 +3091,7 @@
 		fRef = 023D0D6E1632E7BD00FBA4D2 /* MagicalScene.m */;
 		name = "MagicalScene.m: 137";
 		rLen = 0;
-		rLoc = 4388;
+		rLoc = 4463;
 		rType = 0;
 		vrLen = 742;
 		vrLoc = 4103;
@@ -3115,6 +3115,126 @@
 		rType = 0;
 		vrLen = 680;
 		vrLoc = 231;
+	};
+	0245778316356FFB00C5F47D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 023D0D6D1632E7BD00FBA4D2 /* MagicalScene.h */;
+		name = "MagicalScene.h: 41";
+		rLen = 0;
+		rLoc = 905;
+		rType = 0;
+		vrLen = 681;
+		vrLoc = 230;
+	};
+	0245778416356FFB00C5F47D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 027333611497854300D0812F /* AIAggressiveDelegate.h */;
+		name = "AIAggressiveDelegate.h: 21";
+		rLen = 0;
+		rLoc = 410;
+		rType = 0;
+		vrLen = 418;
+		vrLoc = 0;
+	};
+	0245778516356FFB00C5F47D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 027D54091462B712002C310F /* FDCreature.h */;
+		name = "FDCreature.h: 136";
+		rLen = 0;
+		rLoc = 2561;
+		rType = 0;
+		vrLen = 390;
+		vrLoc = 782;
+	};
+	0245778616356FFB00C5F47D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 027333621497854300D0812F /* AIAggressiveDelegate.m */;
+		name = "AIAggressiveDelegate.m: 75";
+		rLen = 0;
+		rLoc = 1813;
+		rType = 0;
+		vrLen = 660;
+		vrLoc = 1239;
+	};
+	0245778716356FFB00C5F47D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 021BA1C71477789B00102DCE /* ActionLayers.m */;
+		name = "ActionLayers.m: 857";
+		rLen = 0;
+		rLoc = 22419;
+		rType = 0;
+		vrLen = 920;
+		vrLoc = 22065;
+	};
+	0245778816356FFB00C5F47D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
+		name = "GameFormula.m: 174";
+		rLen = 0;
+		rLoc = 5584;
+		rType = 0;
+		vrLen = 1055;
+		vrLoc = 5131;
+	};
+	0245778916356FFB00C5F47D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 029C62D11494EAF80054B260 /* EventChapter1.m */;
+		name = "EventChapter1.m: 31";
+		rLen = 0;
+		rLoc = 555;
+		rType = 0;
+		vrLen = 1017;
+		vrLoc = 445;
+	};
+	0245778A16356FFB00C5F47D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 029C62D11494EAF80054B260 /* EventChapter1.m */;
+		name = "EventChapter1.m: 31";
+		rLen = 0;
+		rLoc = 555;
+		rType = 0;
+		vrLen = 946;
+		vrLoc = 445;
+	};
+	0245778F163570BB00C5F47D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 029C62D11494EAF80054B260 /* EventChapter1.m */;
+		name = "EventChapter1.m: 31";
+		rLen = 0;
+		rLoc = 555;
+		rType = 0;
+		vrLen = 946;
+		vrLoc = 445;
+	};
+	02457790163570BB00C5F47D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 023D0D711632E88B00FBA4D2 /* BattleScene.m */;
+		name = "BattleScene.m: 34";
+		rLen = 0;
+		rLoc = 899;
+		rType = 0;
+		vrLen = 789;
+		vrLoc = 150;
+	};
+	02457791163570BB00C5F47D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 023D0CC916318A8C00FBA4D2 /* FightingScene.m */;
+		name = "FightingScene.m: 160";
+		rLen = 376;
+		rLoc = 5205;
+		rType = 0;
+		vrLen = 799;
+		vrLoc = 5129;
+	};
+	02457792163570BB00C5F47D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 023D0CC916318A8C00FBA4D2 /* FightingScene.m */;
+		name = "FightingScene.m: 70";
+		rLen = 0;
+		rLoc = 2281;
+		rType = 0;
+		vrLen = 942;
+		vrLoc = 1602;
 	};
 	02542C4C155D4C5B0050FEC8 /* ShoppingItemDialog.h */ = {
 		uiCtxt = {
@@ -3241,8 +3361,8 @@
 	025DA50716284FDD00DD7C30 /* Chapter-03.strings */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {747, 1222}}";
-			sepNavSelRange = "{1984, 0}";
-			sepNavVisRange = "{0, 826}";
+			sepNavSelRange = "{1578, 0}";
+			sepNavVisRange = "{1442, 985}";
 		};
 	};
 	025DA761162A93DB00DD7C30 /* PBXTextBookmark */ = {
@@ -3506,7 +3626,7 @@
 		fRef = 025DA50716284FDD00DD7C30 /* Chapter-03.strings */;
 		name = "Chapter-03.strings: 69";
 		rLen = 0;
-		rLoc = 1984;
+		rLoc = 1986;
 		rType = 0;
 		vrLen = 826;
 		vrLoc = 0;
@@ -3874,7 +3994,7 @@
 		fRef = 0273365214A19ED000D0812F /* FDWindow.m */;
 		name = "FDWindow.m: 202";
 		rLen = 0;
-		rLoc = 4154;
+		rLoc = 4251;
 		rType = 0;
 		vrLen = 499;
 		vrLoc = 3682;
@@ -4339,8 +4459,8 @@
 	0273365214A19ED000D0812F /* FDWindow.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {739, 3120}}";
-			sepNavSelRange = "{4154, 0}";
-			sepNavVisRange = "{3682, 499}";
+			sepNavSelRange = "{4220, 0}";
+			sepNavVisRange = "{3783, 691}";
 		};
 	};
 	0273366614A1A20000D0812F /* PBXBookmark */ = {
@@ -5021,9 +5141,9 @@
 	};
 	027D54191462BBB8002C310F /* BattleField.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {782, 13871}}";
-			sepNavSelRange = "{7199, 57}";
-			sepNavVisRange = "{7546, 829}";
+			sepNavIntBoundsRect = "{{0, 0}, {768, 14066}}";
+			sepNavSelRange = "{14661, 41}";
+			sepNavVisRange = "{14623, 474}";
 		};
 	};
 	027D541B1462BC7B002C310F /* GroundBlock.h */ = {
@@ -6212,9 +6332,9 @@
 	};
 	0297DEAC148E5273007F3E12 /* GameFormula.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1125, 3003}}";
-			sepNavSelRange = "{4310, 0}";
-			sepNavVisRange = "{3757, 1126}";
+			sepNavIntBoundsRect = "{{0, 0}, {1090, 3081}}";
+			sepNavSelRange = "{5584, 0}";
+			sepNavVisRange = "{5131, 1055}";
 		};
 	};
 	0297DFEF148FB8BE007F3E12 /* TurnInfo.h */ = {
@@ -6331,9 +6451,9 @@
 	};
 	029C62D11494EAF80054B260 /* EventChapter1.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 6461}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 6487}}";
 			sepNavSelRange = "{555, 0}";
-			sepNavVisRange = "{459, 936}";
+			sepNavVisRange = "{465, 1075}";
 		};
 	};
 	02A0EB19147BE336005D630C /* SelectItemMenuState.m:43 */ = {
@@ -9036,6 +9156,18 @@
 			02457768163407C200C5F47D /* PBXTextBookmark */ = 02457768163407C200C5F47D /* PBXTextBookmark */;
 			02457769163407C200C5F47D /* PBXTextBookmark */ = 02457769163407C200C5F47D /* PBXTextBookmark */;
 			0245776A163407C200C5F47D /* PBXTextBookmark */ = 0245776A163407C200C5F47D /* PBXTextBookmark */;
+			0245778316356FFB00C5F47D /* PBXTextBookmark */ = 0245778316356FFB00C5F47D /* PBXTextBookmark */;
+			0245778416356FFB00C5F47D /* PBXTextBookmark */ = 0245778416356FFB00C5F47D /* PBXTextBookmark */;
+			0245778516356FFB00C5F47D /* PBXTextBookmark */ = 0245778516356FFB00C5F47D /* PBXTextBookmark */;
+			0245778616356FFB00C5F47D /* PBXTextBookmark */ = 0245778616356FFB00C5F47D /* PBXTextBookmark */;
+			0245778716356FFB00C5F47D /* PBXTextBookmark */ = 0245778716356FFB00C5F47D /* PBXTextBookmark */;
+			0245778816356FFB00C5F47D /* PBXTextBookmark */ = 0245778816356FFB00C5F47D /* PBXTextBookmark */;
+			0245778916356FFB00C5F47D /* PBXTextBookmark */ = 0245778916356FFB00C5F47D /* PBXTextBookmark */;
+			0245778A16356FFB00C5F47D /* PBXTextBookmark */ = 0245778A16356FFB00C5F47D /* PBXTextBookmark */;
+			0245778F163570BB00C5F47D /* PBXTextBookmark */ = 0245778F163570BB00C5F47D /* PBXTextBookmark */;
+			02457790163570BB00C5F47D /* PBXTextBookmark */ = 02457790163570BB00C5F47D /* PBXTextBookmark */;
+			02457791163570BB00C5F47D /* PBXTextBookmark */ = 02457791163570BB00C5F47D /* PBXTextBookmark */;
+			02457792163570BB00C5F47D /* PBXTextBookmark */ = 02457792163570BB00C5F47D /* PBXTextBookmark */;
 			02542CB0155D62DA0050FEC8 = 02542CB0155D62DA0050FEC8 /* PBXTextBookmark */;
 			02542CB7155D62DA0050FEC8 = 02542CB7155D62DA0050FEC8 /* PBXBookmark */;
 			02542CB8155D62DA0050FEC8 = 02542CB8155D62DA0050FEC8 /* PBXBookmark */;
