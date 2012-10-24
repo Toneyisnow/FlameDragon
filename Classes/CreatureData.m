@@ -120,7 +120,7 @@
     return self;
 }
 
--(int) hit
+-(int) calculatedHit
 {
 	int deltaHit = 0;
 	AttackItemDefinition *item = [self getAttackItem];
@@ -142,11 +142,11 @@
 		return dx + deltaHit;
 	}
 	else {
-		return [self hit];
+		return [self calculatedHit];
 	}	
 }
 
--(int) ev
+-(int) calculatedEv
 {
 	int deltaEv = 0;
 	
@@ -191,7 +191,7 @@
 	return dx + deltaEv;	
 }
 
--(int) ap
+-(int) calculatedAp
 {
 	int deltaAp = 0;
 	
@@ -212,11 +212,11 @@
 		deltaAp = item.ap;
 		return deltaAp + ap;
 	} else {
-		return [self ap];
+		return [self calculatedAp];
 	}
 }
 
--(int) dp
+-(int) calculatedDp
 {
 	int deltaDp = 0;
 	
@@ -238,7 +238,7 @@
 		return dp + deltaDp;	
 		
 	} else {
-		return [self dp];
+		return [self calculatedDp];
 	}
 }
 

@@ -24,7 +24,7 @@
 {
 	startX = 25;
 	startY = 55;
-	intervalX = 150;
+	intervalX = 142;
 	intervalY = 25;
 	
 	int max_item_count = [self getMaxItemCount];

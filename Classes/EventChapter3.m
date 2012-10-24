@@ -101,20 +101,20 @@
 		return;
 	}
 	
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:29] autorelease] Position:CGPointMake(7, 1)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:30] autorelease] Position:CGPointMake(9, 1)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:31] autorelease] Position:CGPointMake(11, 1)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:32] autorelease] Position:CGPointMake(8, 2)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:33] autorelease] Position:CGPointMake(10, 2)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:34] autorelease] Position:CGPointMake(9, 3)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:29] autorelease] Around:CGPointMake(7, 1)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:30] autorelease] Around:CGPointMake(9, 1)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:31] autorelease] Around:CGPointMake(11, 1)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:32] autorelease] Around:CGPointMake(8, 2)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:33] autorelease] Around:CGPointMake(10, 2)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:34] autorelease] Around:CGPointMake(9, 3)];
 	
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:35] autorelease] Position:CGPointMake(7, 26)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:36] autorelease] Position:CGPointMake(8, 25)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:37] autorelease] Position:CGPointMake(9, 24)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:38] autorelease] Position:CGPointMake(10, 25)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:39] autorelease] Position:CGPointMake(11, 26)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:35] autorelease] Around:CGPointMake(7, 26)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:36] autorelease] Around:CGPointMake(8, 25)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:37] autorelease] Around:CGPointMake(9, 24)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:38] autorelease] Around:CGPointMake(10, 25)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:704 Id:39] autorelease] Around:CGPointMake(11, 26)];
 	
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:743 Id:40] autorelease] Position:CGPointMake(9, 26)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:743 Id:40] autorelease] Around:CGPointMake(9, 26)];
 
 	for (int i = 1; i <= 7; i++) {
 		[self showTalkMessage:3 conversation:2 sequence:i];
@@ -128,13 +128,11 @@
 		for (int i = 1; i <= 5; i++) {
 			[self showTalkMessage:3 conversation:3 sequence:i];
 		}
-		return;
 	} else {
 		// If Tienuo is alive
 		for (int i = 2; i <= 11; i++) {
 			[self showTalkMessage:3 conversation:4 sequence:i];
 		}
-		return;
 	}
 
 	[layers appendToCurrentActivityMethod:@selector(adjustFriends) Param1:nil Param2:nil Obj:self];

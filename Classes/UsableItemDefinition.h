@@ -12,9 +12,14 @@ typedef enum UsableItemType
 {
 	UsableItemType_Hp = 1,
 	UsableItemType_Mp = 2,
-	UsableItemType_MaxAp = 3,
-	UsableItemType_MaxHp = 4,
-	UsableItemType_MaxMp = 5
+	UsableItemType_AntiFreeze = 3,
+	UsableItemType_AntiPoison = 4,
+	UsableItemType_MaxHp = 5,
+	UsableItemType_MaxMp = 6,
+	UsableItemType_Ap = 7,
+	UsableItemType_Dp = 8,
+	UsableItemType_Mv = 9,
+	UsableItemType_Dx = 10
 	
 } UsableItemType;
 

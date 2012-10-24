@@ -227,7 +227,7 @@
 {
 	NSLog(@"Attack from %d to %d.", [creature getIdentifier], [target getIdentifier]);
 	
-	BOOL fightBack = [field isNextTo:creature And:target] && [target canAttack];
+	BOOL fightBack = [field isNextTo:creature And:target] && [target canFightBack];
 	FightingInformation *fightingInfo = [GameFormula dealWithAttack:creature Target:target Field:field fightBack:fightBack];
 	[fightingInfo retain];
 	

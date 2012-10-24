@@ -65,10 +65,10 @@ typedef enum AIType {
 +(int) MAGIC_MAX;
 
 // Calculated Values
--(int) hit;
--(int) ev;
--(int) ap;
--(int) dp;
+-(int) calculatedHit;
+-(int) calculatedEv;
+-(int) calculatedAp;
+-(int) calculatedDp;
 -(int) hitWithItem:(int)itemId;
 -(int) evWithItem:(int)itemId;
 -(int) apWithItem:(int)itemId;

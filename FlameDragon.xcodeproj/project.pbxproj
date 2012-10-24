@@ -90,6 +90,7 @@
 		023D0D721632E88B00FBA4D2 /* BattleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D0D711632E88B00FBA4D2 /* BattleScene.m */; };
 		023D0D751632F3D700FBA4D2 /* FDFreezeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D0D741632F3D700FBA4D2 /* FDFreezeAnimation.m */; };
 		023D34AA152834A3002D3EFD /* EventChapter2.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D34A9152834A3002D3EFD /* EventChapter2.m */; };
+		024577AE1636CE8300C5F47D /* Chapter-04.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024577AD1636CE8300C5F47D /* Chapter-04.strings */; };
 		02542C4E155D4C5B0050FEC8 /* ShoppingItemDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02542C4D155D4C5B0050FEC8 /* ShoppingItemDialog.m */; };
 		02542C51155D4C670050FEC8 /* ShoppingBarDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02542C50155D4C670050FEC8 /* ShoppingBarDialog.m */; };
 		02542C54155D4C700050FEC8 /* ShoppingChurchDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02542C53155D4C700050FEC8 /* ShoppingChurchDialog.m */; };
@@ -1109,6 +1110,7 @@
 		023D0D741632F3D700FBA4D2 /* FDFreezeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDFreezeAnimation.m; sourceTree = "<group>"; };
 		023D34A8152834A3002D3EFD /* EventChapter2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter2.h; sourceTree = "<group>"; };
 		023D34A9152834A3002D3EFD /* EventChapter2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter2.m; sourceTree = "<group>"; };
+		024577AD1636CE8300C5F47D /* Chapter-04.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-04.strings"; path = "Strings/Maps/Chapter-04.strings"; sourceTree = "<group>"; };
 		02542C4C155D4C5B0050FEC8 /* ShoppingItemDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingItemDialog.h; sourceTree = "<group>"; };
 		02542C4D155D4C5B0050FEC8 /* ShoppingItemDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingItemDialog.m; sourceTree = "<group>"; };
 		02542C4F155D4C670050FEC8 /* ShoppingBarDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingBarDialog.h; sourceTree = "<group>"; };
@@ -3603,6 +3605,7 @@
 				022D3B81162253830020F816 /* Chapter-01.strings */,
 				022D3B82162253830020F816 /* Chapter-02.strings */,
 				025DA50716284FDD00DD7C30 /* Chapter-03.strings */,
+				024577AD1636CE8300C5F47D /* Chapter-04.strings */,
 			);
 			name = Maps;
 			sourceTree = "<group>";
@@ -4763,6 +4766,7 @@
 				025DA6B716292AB200DD7C30 /* Fight-750-1-04.png in Resources */,
 				025DA6B816292AB200DD7C30 /* Fight-750-2-01.png in Resources */,
 				023D0D351631A57E00FBA4D2 /* Fight-006-2-14.png in Resources */,
+				024577AE1636CE8300C5F47D /* Chapter-04.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

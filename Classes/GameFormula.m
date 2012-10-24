@@ -82,7 +82,7 @@
 
 +(AttackInformation *) attackFrom:(FDCreature *)creature To:(FDCreature *)target Field:(BattleField *)field
 {
-	BOOL isHit = [FDRandom hitWithRate:([creature.data hit] - [target.data ev])];
+	BOOL isHit = [FDRandom hitWithRate:([creature.data calculatedHit] - [target.data calculatedEv])];
 	BOOL isCritical = [FDRandom hitWithRate:[self commonDoubleAttackRate]];
 	
 	int reduceHp;
@@ -93,11 +93,11 @@
 		
 		CGPoint creaturePos = [field getObjectPos:creature];
 		GroundBlock *creatureBlock = [[field getGroundField] blockAtX:creaturePos.x Y:creaturePos.y];
-		int adjustedAp = [creature.data ap] * (100 + [creatureBlock attackPoint]) / 100;
+		int adjustedAp = [creature.data calculatedAp] * (100 + [creatureBlock attackPoint]) / 100;
 	
 		CGPoint targetPos = [field getObjectPos:target];
 		GroundBlock *targetBlock = [[field getGroundField] blockAtX:targetPos.x Y:targetPos.y];
-		int adjustedDp = [target.data dp] * (100 + [targetBlock defencePoint]) / 100;
+		int adjustedDp = [target.data calculatedDp] * (100 + [targetBlock defencePoint]) / 100;
 	
 		int attackMax = adjustedAp - adjustedDp;
 		int attackMin = (adjustedAp - adjustedDp) * 0.9;

@@ -8,6 +8,7 @@
 
 #import "SpecialItemDefinition.h"
 #import "FDCreature.h"
+#import "FDLocalString.h"
 
 @implementation SpecialItemDefinition
 
@@ -38,7 +39,7 @@
 
 -(NSString *) getAttributeString
 {
-	return @"???";
+	return [FDLocalString unknown];
 }
 
 @end

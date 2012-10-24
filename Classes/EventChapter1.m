@@ -28,7 +28,7 @@
 
 -(void) loadEvents
 {
-	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(round1_1)];
+	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(round1)];
 	[self loadTurnEvent:TurnType_Friend Turn:3 Action:@selector(round3)];
 	[self loadTurnEvent:TurnType_Friend Turn:4 Action:@selector(round4)];
 	[self loadTurnEvent:TurnType_Friend Turn:5 Action:@selector(round5_Boss)];

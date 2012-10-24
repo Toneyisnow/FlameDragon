@@ -55,6 +55,7 @@
 
 -(void) addFriend:(FDFriend *)fri Position:(CGPoint)pos;
 -(void) addEnemy:(FDEnemy *)cre Position:(CGPoint)pos;
+-(void) addEnemy:(FDEnemy *)cre Around:(CGPoint)pos;
 -(void) addNpc:(FDNpc *)npc Position:(CGPoint)pos;
 -(NSMutableArray *) getFriendList;
 -(NSMutableArray *) getEnemyList;

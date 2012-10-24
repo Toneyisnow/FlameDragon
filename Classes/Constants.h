@@ -25,5 +25,4 @@
 
 +(int) fightAnimationIntervalUnit;
 
-
 @end

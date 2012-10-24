@@ -52,7 +52,7 @@
 -(BOOL) needAndCanRecover
 {
 	BOOL needRecover = FALSE;
-	if (creature.data.hpCurrent < creature.data.hpMax / 4) {
+	if (creature.data.hpCurrent < creature.data.hpMax / 2) {
 		needRecover = TRUE;
 	}
 	

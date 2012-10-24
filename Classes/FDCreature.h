@@ -141,6 +141,7 @@ typedef enum ActionStatus {
 -(void) pickItem:(int) itemId;
 
 -(BOOL) canAttack;
+-(BOOL) canFightBack;
 
 -(NSString *) getName;
 

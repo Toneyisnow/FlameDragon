@@ -282,6 +282,17 @@
 		isAllNpcSaved = FALSE;
 	}
 	
+	if (isAllNpcSaved) {
+		// Add a power drink
+		for (int i = 1; i <= 5; i++) {
+			FDCreature *creature = [field getCreatureById:i];
+			if (![creature isItemListFull]) {
+				[creature addItem:113];
+				break;
+			}
+		}
+	}
+	
 	[self showTalkMessage:2 conversation:3 sequence:(isAllNpcSaved ? 101 : 1)];
 	
 	[layers appendToCurrentActivityMethod:@selector(enemyClear_2) Param1:nil Param2:nil Obj:self];

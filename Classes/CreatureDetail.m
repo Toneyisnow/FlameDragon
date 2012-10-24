@@ -29,15 +29,15 @@
 -(void) initData
 {
 	[self addInt:creature.data.dx Dimen:3 Pos:CGPointMake(25, 26)];
-	[self addInt:[creature.data hit] Dimen:3 Pos:CGPointMake(25, 14)];
-	[self addInt:[creature.data ev] Dimen:3 Pos:CGPointMake(25, 2)];
+	[self addInt:[creature.data calculatedHit] Dimen:3 Pos:CGPointMake(25, 14)];
+	[self addInt:[creature.data calculatedEv] Dimen:3 Pos:CGPointMake(25, 2)];
 	
 	[self addInt:creature.data.level Dimen:2 Pos:CGPointMake(65, 50)];
 	[self addInt:creature.data.ex Dimen:2 Pos:CGPointMake(65, 38)];
 	[self addInt:creature.data.mv Dimen:2 Pos:CGPointMake(65, 26)];
 	
-	[self addInt:[creature.data ap] Dimen:3 Pos:CGPointMake(65, 14)];
-	[self addInt:[creature.data dp] Dimen:3 Pos:CGPointMake(65, 2)];
+	[self addInt:[creature.data calculatedAp] Dimen:3 Pos:CGPointMake(65, 14)];
+	[self addInt:[creature.data calculatedDp] Dimen:3 Pos:CGPointMake(65, 2)];
 	
 	
 	[self addInt:creature.data.hpCurrent Dimen:3 Pos:CGPointMake(175, 40)];

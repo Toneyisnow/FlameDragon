@@ -34,7 +34,7 @@
 		//FDSprite *upSprite = [[FDSprite alloc] initWithString:@"A" Size:14];
 		CCMenuItemSprite* upMenu = [CCMenuItemSprite itemFromNormalSprite:[upSprite getSprite] selectedSprite:NULL target:self selector:@selector(clickedUp)];
 		
-		upMenu.position = ccp(280, 57);
+		upMenu.position = ccp(283, 57);
 		upMenu.anchorPoint = ccp(0, 0);
 		
 		menu = [CCMenu menuWithItems:upMenu, nil];
@@ -48,7 +48,7 @@
 		//FDSprite *downSprite = [[FDSprite alloc] initWithString:@"V" Size:14];
 		CCMenuItemSprite* downMenu = [CCMenuItemSprite itemFromNormalSprite:[downSprite getSprite] selectedSprite:NULL target:self selector:@selector(clickedDown)];
 		
-		downMenu.position = ccp(280, 10);
+		downMenu.position = ccp(283, 10);
 		downMenu.anchorPoint = ccp(0, 0);
 		
 		menu = [CCMenu menuWithItems:downMenu, nil];

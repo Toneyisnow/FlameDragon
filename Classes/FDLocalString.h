@@ -30,5 +30,6 @@
 +(NSString *) confirm:(int)confirmId;
 +(NSString *) message:(int)msgId;
 
++(NSString *) unknown;
 
 @end

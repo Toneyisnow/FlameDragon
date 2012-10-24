@@ -119,6 +119,30 @@
 	[npcList addObject:npc];
 }
 
+-(void) addEnemy:(FDEnemy *)cre Around:(CGPoint)pos
+{
+	CGPoint aroundPos[9] = {
+		CGPointMake(0, 0),
+		CGPointMake(1, 0),
+		CGPointMake(1, 1),
+		CGPointMake(0, 1),
+		CGPointMake(-1, 1),
+		CGPointMake(-1, 0),
+		CGPointMake(-1, -1),
+		CGPointMake(0, -1),
+		CGPointMake(1, -1)
+	};
+	
+	for (int i = 0; i < 9; i++)
+	{
+		CGPoint nowPos = CGPointMake(pos.x + aroundPos[i].x, pos.y + aroundPos[i].y);
+		if ([self getCreatureByPos:nowPos] == nil) {
+			[self addEnemy:cre Position:nowPos];
+			return;
+		}
+	}
+}
+
 -(void) addObject:(FDBattleObject *)obj Position:(CGPoint)pos
 {
 	CGPoint location = [self convertPosToLoc:pos];	

@@ -95,5 +95,9 @@
 	return NSLocalizedStringFromTable(idStr, @"Message", @"comment");			
 }
 
++(NSString *) unknown
+{
+	return @"???";
+}
 
 @end

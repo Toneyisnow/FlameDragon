@@ -289,7 +289,7 @@
 
 -(int) getItemId:(int) index
 {
-	if (index > [data.itemList count] - 1) {
+	if (index < 0 || index >= [data.itemList count]) {
 		return 0;
 	}
 	
@@ -298,7 +298,25 @@
 
 -(BOOL) canAttack
 {
-	return data.attackItemIndex >= 0;
+	if ([self getItemId:data.attackItemIndex] > 0) {
+		return TRUE;
+	}
+	
+	return FALSE;
+}
+
+-(BOOL) canFightBack
+{
+	int itemId = [self getItemId:data.attackItemIndex];
+	
+	ItemDefinition *item = [[DataDepot depot] getItemDefinition:itemId];
+	
+	if (item != nil && [item isKindOfClass:[AttackItemDefinition class]]) {
+		AttackItemDefinition *aItem = (AttackItemDefinition *)item;
+		return [self canAttack] && (aItem.itemCategory != 4);
+	}
+	
+	return FALSE;
 }
 
 -(BOOL) isItemListFull

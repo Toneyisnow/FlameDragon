@@ -8,6 +8,7 @@
 
 #import "UsableItemDefinition.h"
 #import "FDCreature.h"
+#import "FDLocalString.h"
 
 @implementation UsableItemDefinition
 
@@ -36,7 +37,7 @@
 
 -(void) usedBy:(id)obj
 {
-	if (![obj isKindOfClass:[FDCreature class]]) {
+	if (obj == nil || ![obj isKindOfClass:[FDCreature class]]) {
 		return;
 	}
 	
@@ -50,11 +51,24 @@
 		case UsableItemType_Mp:
 			[creature updateMP:quantity];
 			break;
+		case UsableItemType_AntiFreeze:
+			break;
+		case UsableItemType_AntiPoison:
+			break;
 		case UsableItemType_MaxHp:
-			//[creature updateMaxHP:quantity];
+			creature.data.hpMax += quantity;
 			break;
 		case UsableItemType_MaxMp:
-			//[creature updateMaxHP:quantity];
+			creature.data.mpMax += quantity;
+			break;
+		case UsableItemType_Ap:
+			creature.data.ap += quantity;
+			break;
+		case UsableItemType_Dp:
+			creature.data.dp += quantity;
+			break;
+		case UsableItemType_Dx:
+			creature.data.dx += quantity;
 			break;
 		default:
 			break;
@@ -80,6 +94,7 @@
 			str = [NSString stringWithFormat:@"+MP %03d", quantity];
 			break;
 		default:
+			str = [FDLocalString unknown];
 			break;
 	}
 	
