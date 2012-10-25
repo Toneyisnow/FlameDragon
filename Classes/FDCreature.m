@@ -319,6 +319,14 @@
 	return FALSE;
 }
 
+-(BOOL) isAbleToAttack:(FDCreature *)another
+{
+	if (another == nil) {
+		return FALSE;
+	}
+	return [self.data calculatedAp] > [another.data calculatedDp];
+}
+
 -(BOOL) isItemListFull
 {
 	return [data.itemList count] >= 8;

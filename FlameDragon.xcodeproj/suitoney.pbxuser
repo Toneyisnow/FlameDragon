@@ -2516,7 +2516,7 @@
 		fRef = 0273365214A19ED000D0812F /* FDWindow.m */;
 		name = "FDWindow.m: 202";
 		rLen = 0;
-		rLoc = 4220;
+		rLoc = 4226;
 		rType = 0;
 		vrLen = 691;
 		vrLoc = 3783;
@@ -2650,7 +2650,7 @@
 		fRef = 027D54091462B712002C310F /* FDCreature.h */;
 		name = "FDCreature.h: 146";
 		rLen = 0;
-		rLoc = 2744;
+		rLoc = 2790;
 		rType = 0;
 		vrLen = 586;
 		vrLoc = 2382;
@@ -2810,7 +2810,7 @@
 		fRef = 0297D98E1481D281007F3E12 /* Creature.dat */;
 		name = "Creature.dat: 13";
 		rLen = 0;
-		rLoc = 240;
+		rLoc = 236;
 		rType = 0;
 		vrLen = 612;
 		vrLoc = 0;
@@ -2830,7 +2830,7 @@
 		fRef = 029C62D11494EAF80054B260 /* EventChapter1.m */;
 		name = "EventChapter1.m: 31";
 		rLen = 0;
-		rLoc = 553;
+		rLoc = 555;
 		rType = 0;
 		vrLen = 946;
 		vrLoc = 445;
@@ -3750,9 +3750,9 @@
 	};
 	027333621497854300D0812F /* AIAggressiveDelegate.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {768, 2392}}";
-			sepNavSelRange = "{1813, 0}";
-			sepNavVisRange = "{1239, 660}";
+			sepNavIntBoundsRect = "{{0, 0}, {831, 2327}}";
+			sepNavSelRange = "{2730, 0}";
+			sepNavVisRange = "{2304, 888}";
 		};
 	};
 	02733364149785A900D0812F /* AIEscapeDelegate.h */ = {
@@ -3842,9 +3842,9 @@
 	};
 	027334BA149A362D00D0812F /* UsableItemDefinition.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 1365}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 1326}}";
 			sepNavSelRange = "{1391, 0}";
-			sepNavVisRange = "{967, 608}";
+			sepNavVisRange = "{1222, 627}";
 		};
 	};
 	027334BC149A365A00D0812F /* AttackItemDefinition.h */ = {
@@ -3877,9 +3877,9 @@
 	};
 	027334C2149A3B1A00D0812F /* Item.dat */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 494}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 481}}";
 			sepNavSelRange = "{125, 0}";
-			sepNavVisRange = "{0, 462}";
+			sepNavVisRange = "{0, 481}";
 			sepNavWindowFrame = "{{15, 99}, {909, 674}}";
 		};
 	};
@@ -4015,9 +4015,9 @@
 	};
 	0273365214A19ED000D0812F /* FDWindow.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 3120}}";
-			sepNavSelRange = "{4220, 0}";
-			sepNavVisRange = "{3783, 691}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 2730}}";
+			sepNavSelRange = "{3206, 0}";
+			sepNavVisRange = "{2971, 419}";
 		};
 	};
 	0273366614A1A20000D0812F /* PBXBookmark */ = {
@@ -4704,16 +4704,16 @@
 	};
 	027D54091462B712002C310F /* FDCreature.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 2015}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 2028}}";
 			sepNavSelRange = "{2744, 0}";
-			sepNavVisRange = "{2382, 586}";
+			sepNavVisRange = "{2446, 672}";
 		};
 	};
 	027D540A1462B712002C310F /* FDCreature.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {775, 5551}}";
-			sepNavSelRange = "{7074, 0}";
-			sepNavVisRange = "{6989, 598}";
+			sepNavIntBoundsRect = "{{0, 0}, {775, 5889}}";
+			sepNavSelRange = "{7536, 0}";
+			sepNavVisRange = "{7183, 739}";
 		};
 	};
 	027D540C1462B755002C310F /* FDDrawable.h */ = {
@@ -5711,8 +5711,8 @@
 	0297D98E1481D281007F3E12 /* Creature.dat */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {739, 416}}";
-			sepNavSelRange = "{240, 0}";
-			sepNavVisRange = "{0, 612}";
+			sepNavSelRange = "{236, 0}";
+			sepNavVisRange = "{0, 577}";
 		};
 	};
 	0297D9EB1481E86A007F3E12 /* PBXTextBookmark */ = {
@@ -6864,9 +6864,9 @@
 	};
 	02BB39DF160DCA24006BEE76 /* Shopping2PagedDialog.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1160, 1001}}";
-			sepNavSelRange = "{964, 0}";
-			sepNavVisRange = "{604, 1171}";
+			sepNavIntBoundsRect = "{{0, 0}, {1160, 988}}";
+			sepNavSelRange = "{1542, 0}";
+			sepNavVisRange = "{589, 1124}";
 		};
 	};
 	02BB3A38160E081F006BEE76 /* Shopping2HomeDialog.m:544 */ = {
@@ -8143,7 +8143,7 @@
 	};
 	02E422DB160E257E0071FA29 /* Shopping2ShowSellItemsDialog.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 420}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 366}}";
 			sepNavSelRange = "{289, 0}";
 			sepNavVisRange = "{0, 304}";
 		};
@@ -8178,6 +8178,11 @@
 		name = Shopping2ShowItemsDialog.m;
 		path = "/Users/suitoney/我的程序/GitHub/FlameDragon/Classes/Shopping2ShowItemsDialog.m";
 		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {739, 1729}}";
+			sepNavSelRange = "{525, 0}";
+			sepNavVisRange = "{362, 741}";
+		};
 	};
 	02E42361160F57AD0071FA29 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -8405,7 +8410,7 @@
 		activeArchitecturePreference = armv6;
 		activeBuildConfigurationName = Debug;
 		activeExecutable = 027D533B1460126F002C310F /* FlameDragon */;
-		activeSDKPreference = iphonesimulator4.2;
+		activeSDKPreference = iphoneos4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* FlameDragon */;
 		addToTargets = (
 			1D6058900D05DD3D006BFB54 /* FlameDragon */,

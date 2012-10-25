@@ -142,6 +142,7 @@ typedef enum ActionStatus {
 
 -(BOOL) canAttack;
 -(BOOL) canFightBack;
+-(BOOL) isAbleToAttack:(FDCreature *)another;
 
 -(NSString *) getName;
 

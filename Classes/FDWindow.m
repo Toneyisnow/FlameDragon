@@ -137,10 +137,10 @@
 {
 	switch (villageImageId) {
 		case 1:
-			return CGPointMake(16, 192);
+			return CGPointMake(12.5, 193);
 			break;
 		case 2:
-			return CGPointMake(16, 192);
+			return CGPointMake(287.5, 81.5);
 			break;
 		case 3:
 			break;

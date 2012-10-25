@@ -106,7 +106,7 @@
 	}
 	
 	//[field setCursorTo:targetpos];
-	if (inAttackScope) {
+	if (inAttackScope && [creature isAbleToAttack:target]) {
 		[layers appendToCurrentActivityMethod:@selector(attackFrom:Target:) Param1:creature Param2:target];
 	}
 	else {
