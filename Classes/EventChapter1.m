@@ -69,21 +69,21 @@
 	[field addFriend:friend5 Position:CGPointMake(10, 18)];
 	[friend5 release];
 	
-	FDFriend *friend16 = [[FDFriend alloc] initWithDefinition:1016 Id:16];
+	FDFriend *friend16 = [[FDFriend alloc] initWithDefinition:1016 Id:6];
 	[field addFriend:friend16 Position:CGPointMake(9, 18)];
 	[friend16 release];
-	
+	/*
 	FDFriend *friend6 = [[FDFriend alloc] initWithDefinition:6 Id:6];
 	[field addFriend:friend6 Position:CGPointMake(9, 19)];
 	[friend6 release];
-	
+	*/
 	FDNpc *npc = [[FDNpc alloc] initWithDefinition:703 Id:41];
 	[field addNpc:npc Position:CGPointMake(8, 20)];
 	[npc release];
 	
 	// Enemy
 	FDEnemy *enemy1 = [[FDEnemy alloc] initWithDefinition:701 Id:11];
-	[field addEnemy: enemy1 Position:CGPointMake(3, 19)];
+	[field addEnemy: enemy1 Position:CGPointMake(5, 19)];
 	[enemy1 release];
 	
 	FDEnemy *enemy2 = [[FDEnemy alloc] initWithDefinition:702 Id:29];
@@ -454,16 +454,10 @@
 	if (hawate != nil) {
 		[[field getFriendList] removeObject:hawate];
 	}
-	if (deadhawate != nil) {
-		[[field getDeadCreatureList] removeObject:hawate];
-	}
 	
-	/*
-	FDCreature *hawateDead = [field getDeadCreatureById:6];
-	if (hawateDead != nil) {
-		[[field getDeadCreatureList] removeObject:hawate];
+	if (deadhawate != nil) {
+		[[field getDeadCreatureList] removeObject:deadhawate];
 	}
-	*/
 	
 	// 2. Confirm Hanuo is in the friend list
 	

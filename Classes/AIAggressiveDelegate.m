@@ -97,16 +97,18 @@
 	CGPoint targetpos = [field getObjectPos:target];
 	BOOL inAttackScope = FALSE;
 	
-	NSMutableArray *scopeList = [field searchActionScope:[field getObjectPos:creature] Range:[creature attackRange]];
-	for (FDPosition *pos in scopeList) {
-		if ([FDPosition isEqual:[pos posValue] With:targetpos]) {
-			inAttackScope = TRUE;
-			break;
+	if ([creature isAbleToAttack:target]) {
+		NSMutableArray *scopeList = [field searchActionScope:[field getObjectPos:creature] Range:[creature attackRange]];
+		for (FDPosition *pos in scopeList) {
+			if ([FDPosition isEqual:[pos posValue] With:targetpos]) {
+				inAttackScope = TRUE;
+				break;
+			}
 		}
 	}
 	
 	//[field setCursorTo:targetpos];
-	if (inAttackScope && [creature isAbleToAttack:target]) {
+	if (inAttackScope) {
 		[layers appendToCurrentActivityMethod:@selector(attackFrom:Target:) Param1:creature Param2:target];
 	}
 	else {

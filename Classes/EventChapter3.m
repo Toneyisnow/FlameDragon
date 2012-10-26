@@ -64,14 +64,14 @@
 {
 	CGPoint startPoints[8] = 
 		{
-			CGPointMake(9, 5),
-			CGPointMake(10, 5),
-			CGPointMake(8, 4),
-			CGPointMake(11, 4),
-			CGPointMake(9, 3),
-			CGPointMake(10, 3),
-			CGPointMake(7, 3),
-			CGPointMake(12, 3)
+			CGPointMake(9, 4),
+			CGPointMake(10, 4),
+			CGPointMake(8, 3),
+			CGPointMake(11, 3),
+			CGPointMake(9, 2),
+			CGPointMake(10, 2),
+			CGPointMake(7, 2),
+			CGPointMake(12, 2)
 	};
 	
 	for (int i = 0; i < 8; i++) {

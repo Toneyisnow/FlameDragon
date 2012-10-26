@@ -84,6 +84,10 @@
 		
 		[activity takeTick:synchronizeTick];
 		
+		if ([activityList count] == 0) {
+			break;
+		}
+		
 		if ([activity hasFinished]) {
 			
 			//[activity postActivity];
@@ -840,7 +844,7 @@
 
 -(void) gameOver
 {
-	//[self clearAllActivity];
+	[self clearAllActivity];
 	
 	GameOverScene *scene = [GameOverScene node];
 	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:0.5 scene:scene]];	
@@ -848,7 +852,7 @@
 
 -(void) gameWin
 {
-	//[self clearAllActivity];
+	[self clearAllActivity];
 	NSLog(@"Game Win.");
 	
 	//ChapterRecord *record = [ChapterRecord sampleRecord];
@@ -868,7 +872,7 @@
 {
 	NSLog(@"Game Quit.");
 	
-	// [self clearAllActivity];
+	[self clearAllActivity];
 	
 	TitleScene *scene = [TitleScene node];
 	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];	
