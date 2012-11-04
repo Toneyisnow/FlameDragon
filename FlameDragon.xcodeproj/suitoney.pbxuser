@@ -8074,7 +8074,7 @@
 		fRef = 027334C2149A3B1A00D0812F /* Item.dat */;
 		name = "Item.dat: 35";
 		rLen = 0;
-		rLoc = 539;
+		rLoc = 557;
 		rType = 0;
 		vrLen = 417;
 		vrLoc = 170;
