@@ -844,7 +844,7 @@
 
 -(void) gameOver
 {
-	[self clearAllActivity];
+	//[self clearAllActivity];
 	
 	GameOverScene *scene = [GameOverScene node];
 	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:0.5 scene:scene]];	

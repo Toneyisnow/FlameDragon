@@ -168,7 +168,7 @@
 {
 	// Calculate the experience
 	double reducedHp = (target.data.hpCurrent > 0) ? [info getBefore] - [info getAfter] : target.data.hpMax;
-	double exp = reducedHp * target.data.level * [target getDefinition].data.ex / creature.data.level / target.data.hpMax;
+	double exp = reducedHp * target.data.level * [target getDefinition].data.ex / (double)creature.data.level / (double)target.data.hpMax;
 	
 	NSLog(@"Experience got %d.", (int)exp);
 	return (int)exp;
