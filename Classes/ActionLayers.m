@@ -324,6 +324,31 @@
 	[targets release];
 }
 
+-(void) magicFrom:(FDCreature *)creature TargetPos:(CGPoint)position Id:(int)magicId
+{
+	NSLog(@"Magic %d from %d to pos (%d, %d)", magicId, [creature getIdentifier], position.x, position.y);
+	
+	MagicDefinition *magic = [[DataDepot depot] getMagicDefinition:magicId];
+	[creature updateMP:-magic.mpCost];
+	[creature updateHP:0];
+	
+	BOOL areBadGuys = ([creature getCreatureType] == CreatureType_Friend && magic.magicType == MagicType_Attack)
+					|| ([creature getCreatureType] == CreatureType_Enemy && magic.magicType == MagicType_Recover);
+	
+	NSMutableArray *targets = [field getCreaturesAt:position Range:magic.effectRange BadGuys:areBadGuys];
+	MagicalInformation *mInfo = [GameFormula dealWithMagic:magicId From:creature Target:targets Field:field];
+	
+	CGPoint pos = [field getObjectPos:creature];
+	int backgroundImageId = [field getBackgroundPicId:pos];
+	MagicalScene *scene = [[MagicalScene alloc] initWithMagic:magicId Subject:creature Targets:targets Information:mInfo Background:backgroundImageId];
+	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:0.5 scene:scene]];
+	
+	[scene start];	
+	
+	[scene setPostMethod:@selector(postFightAction:Targets:) param1:creature param2:targets Obj:self];	
+}
+
+/*
 -(void) magicFrom:(FDCreature *)creature Targets:(NSArray *)targets Id:(int)magicId
 {
 	NSLog(@"Magic from %d to %d enemies", [creature getIdentifier], [targets count]);
@@ -343,6 +368,7 @@
 	
 	[scene setPostMethod:@selector(postFightAction:Targets:) param1:creature param2:targets Obj:self];
 }
+*/
 
 -(void) useItem:(FDCreature *)creature ItemIndex:(int)itemIndex Target:(FDCreature *)target
 {
@@ -465,6 +491,22 @@
 	}
 	
 	[self appendToCurrentActivityMethod:@selector(checkEndTurn) Param1:nil Param2:nil Obj:self];
+}
+
+-(void) creaturePendAction:(FDCreature *)creature
+{
+	NSLog(@"Pend Action for creature %d", [creature getIdentifier]);
+	
+	[creature pendAction];
+	
+	if ([creature getCreatureType] == CreatureType_Enemy) {
+		//[enemyAiHandler isNotified];
+		[self appendToCurrentActivityMethod:@selector(isNotified) Param1:nil Param2:nil Obj:enemyAiHandler];
+	}
+	if ([creature getCreatureType] == CreatureType_Npc) {
+		//[npcAiHandler isNotified];
+		[self appendToCurrentActivityMethod:@selector(isNotified) Param1:nil Param2:nil Obj:npcAiHandler];
+	}
 }
 
 -(void) checkEndTurn

@@ -78,6 +78,7 @@ typedef enum ActionStatus {
 	// Properties in turn
 	BOOL hasMoved;
 	BOOL hasActioned;
+	BOOL pendingAction;	// Only used for AI
 	//BOOL hasEndedTurn;
 	
 	GestureStatus gestureStatus;
@@ -126,6 +127,7 @@ typedef enum ActionStatus {
 
 -(void) startTurn;
 -(void) endTurn;
+-(void) pendAction;
 
 -(FDRange *) attackRange;
 
@@ -158,7 +160,7 @@ typedef enum ActionStatus {
 -(int) dpWithItem:(int)itemId;
 */
 
-@property (nonatomic) BOOL hasMoved, hasActioned;
+@property (nonatomic) BOOL hasMoved, hasActioned, pendingAction;
 @property (nonatomic) int hpPrevious, mpPrevious;
 @property (nonatomic) int lastGainedExperience;
 @property (nonatomic, retain) CreatureData *data;

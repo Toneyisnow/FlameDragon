@@ -8,6 +8,7 @@
 
 #import "SelectMagicTargetState.h"
 #import "FDEnemy.h"
+#import "DataDepot.h"
 
 @implementation SelectMagicTargetState
 
@@ -35,11 +36,13 @@
 		if ([field isInScope:position])
 		{
 			int magicId = [[currentFriend.data.magicList objectAtIndex:magicIndex] intValue];
-			NSMutableArray *targetSet = [field getMagicTargets:magicId Pos:position];
+			MagicDefinition *magic = [[DataDepot depot] getMagicDefinition:magicId];
+			
+			NSMutableArray *targetSet = [field getCreaturesAt:position Range:magic.effectRange BadGuys:TRUE];
 			if ([targetSet count] > 0) {
 				
 				[field removeAllIndicators];
-				[layers magicFrom:currentFriend Targets:targetSet Id:magicId];
+				[layers magicFrom:currentFriend TargetPos:position Id:magicId];
 				
 				isFinished = TRUE;
 				shouldDispose = TRUE;

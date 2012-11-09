@@ -472,6 +472,8 @@
 	[scope release];
 }
 
+// DEPRECATED
+/*
 -(NSMutableArray *) getMagicTargets:(int)magicId Pos:(CGPoint)position
 {
 	NSMutableArray *resultArray = [[NSMutableArray alloc] init];
@@ -493,6 +495,7 @@
 	
 	return [resultArray autorelease];
 }
+*/
 
 -(void) selectItemTarget:(FDCreature *)creature IncludeSelf:(BOOL)includeSelf
 {
@@ -981,6 +984,24 @@
 	return [resolver resolveScopeFrom:[self getObjectPos:creature] min:0 max:creature.data.mv];
 }
 
+-(int) getDirectDistance:(FDCreature *)creature1 And:(FDCreature *)creature2
+{
+	if (creature1 == nil || creature2 == nil) {
+		return 999;
+	}
+	
+	CGPoint pos1 = [self getObjectPos:creature1];
+	CGPoint pos2 = [self getObjectPos:creature2];
+	
+	int dx = pos1.x - pos2.x;
+	dx = (dx < 0) ? -dx : dx;
+	
+	int dy = pos1.y - pos2.y;
+	dy = (dy < 0) ? -dy : dy;
+	
+	return dx + dy;
+}
+
 -(NSMutableArray *) getEnemyInAttackScope:(FDCreature *)creature
 {
 	Class enemyClass;
@@ -1072,6 +1093,30 @@
 			[result addObject:(FDTreasure *)obj];
 		}
 	}
+	return [result autorelease];
+}
+
+-(NSMutableArray *) getCreaturesAt:(CGPoint)position Range:(int)ran BadGuys:(BOOL)areGadGuys
+{
+	NSMutableArray *result = [[NSMutableArray alloc] init];
+	
+	FDRange *range = [[FDRange alloc] initWithMin:0 Max:ran];
+	NSMutableArray *scopeList = [self searchActionScope:position Range:range];
+	
+	for(FDPosition *pos in scopeList)
+	{
+		FDCreature *c = [self getCreatureByPos:[pos posValue]];
+		if (c == nil) {
+			continue;
+		}
+		if ((areGadGuys && [c getCreatureType] == CreatureType_Enemy)
+		|| (!areGadGuys && ([c getCreatureType] == CreatureType_Friend ||[c getCreatureType] == CreatureType_Npc))
+			 ) {
+			[result addObject:c];
+		}
+	}
+
+	[range release];
 	return [result autorelease];
 }
 

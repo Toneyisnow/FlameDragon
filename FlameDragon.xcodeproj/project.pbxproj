@@ -751,6 +751,7 @@
 		02D4C62816466FE500B9B407 /* Icon-708-10.png in Resources */ = {isa = PBXBuildFile; fileRef = 02D4C61C16466FE500B9B407 /* Icon-708-10.png */; };
 		02D4C62916466FE500B9B407 /* Icon-708-11.png in Resources */ = {isa = PBXBuildFile; fileRef = 02D4C61D16466FE500B9B407 /* Icon-708-11.png */; };
 		02D4C62A16466FE500B9B407 /* Icon-708-12.png in Resources */ = {isa = PBXBuildFile; fileRef = 02D4C61E16466FE500B9B407 /* Icon-708-12.png */; };
+		02D4C638164B07AD00B9B407 /* AIMagicalDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D4C637164B07AD00B9B407 /* AIMagicalDelegate.m */; };
 		02E422DC160E257E0071FA29 /* Shopping2ShowSellItemsDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E422DB160E257E0071FA29 /* Shopping2ShowSellItemsDialog.m */; };
 		02E422F3160F37970071FA29 /* Shop_Buy_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 02E422EC160F37970071FA29 /* Shop_Buy_0.png */; };
 		02E422F4160F37970071FA29 /* Shop_Equip_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 02E422ED160F37970071FA29 /* Shop_Equip_0.png */; };
@@ -1948,6 +1949,8 @@
 		02D4C61C16466FE500B9B407 /* Icon-708-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-708-10.png"; path = "Icons/708/Icon-708-10.png"; sourceTree = "<group>"; };
 		02D4C61D16466FE500B9B407 /* Icon-708-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-708-11.png"; path = "Icons/708/Icon-708-11.png"; sourceTree = "<group>"; };
 		02D4C61E16466FE500B9B407 /* Icon-708-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-708-12.png"; path = "Icons/708/Icon-708-12.png"; sourceTree = "<group>"; };
+		02D4C636164B07AD00B9B407 /* AIMagicalDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIMagicalDelegate.h; sourceTree = "<group>"; };
+		02D4C637164B07AD00B9B407 /* AIMagicalDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIMagicalDelegate.m; sourceTree = "<group>"; };
 		02E422DA160E257E0071FA29 /* Shopping2ShowSellItemsDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shopping2ShowSellItemsDialog.h; sourceTree = "<group>"; };
 		02E422DB160E257E0071FA29 /* Shopping2ShowSellItemsDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shopping2ShowSellItemsDialog.m; sourceTree = "<group>"; };
 		02E422EC160F37970071FA29 /* Shop_Buy_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shop_Buy_0.png; path = Others/Shop_Buy_0.png; sourceTree = "<group>"; };
@@ -2996,6 +2999,8 @@
 				027333621497854300D0812F /* AIAggressiveDelegate.m */,
 				02733364149785A900D0812F /* AIEscapeDelegate.h */,
 				02733365149785A900D0812F /* AIEscapeDelegate.m */,
+				02D4C636164B07AD00B9B407 /* AIMagicalDelegate.h */,
+				02D4C637164B07AD00B9B407 /* AIMagicalDelegate.m */,
 			);
 			name = AI;
 			sourceTree = "<group>";
@@ -5151,6 +5156,7 @@
 				023D0D6F1632E7BD00FBA4D2 /* MagicalScene.m in Sources */,
 				023D0D721632E88B00FBA4D2 /* BattleScene.m in Sources */,
 				023D0D751632F3D700FBA4D2 /* FDFreezeAnimation.m in Sources */,
+				02D4C638164B07AD00B9B407 /* AIMagicalDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

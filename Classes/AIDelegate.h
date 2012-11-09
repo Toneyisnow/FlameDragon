@@ -25,5 +25,8 @@
 -(void) setParameter:(id)param;
 
 -(void) takeAction;
+-(FDCreature *) findTarget;
+-(BOOL) needAndCanRecover;
+-(void) selfRecover;
 
 @end

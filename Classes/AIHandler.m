@@ -50,13 +50,26 @@
 	NSMutableArray *array = (creatureClass == [FDEnemy class]) ? [[[layers getFieldLayer] getField] getEnemyList]: [[[layers getFieldLayer] getField] getNpcList];
 	for (FDCreature *creature in array) {
 		
-		if (creature.hasActioned) {
+		if (creature.hasActioned|| creature.pendingAction) {
 			continue;
 		}
 		
 		if (selectedCreature == nil || [creature getIdentifier] < [selectedCreature getIdentifier]) {
 			selectedCreature = creature;
 		}
+	}
+	
+	if (selectedCreature == nil) {
+		for (FDCreature *creature in array) {
+			
+			if (creature.hasActioned || !creature.pendingAction) {
+				continue;
+			}
+			
+			if (selectedCreature == nil || [creature getIdentifier] < [selectedCreature getIdentifier]) {
+				selectedCreature = creature;
+			}
+		}		
 	}
 	
 	if (selectedCreature == nil) {
@@ -85,8 +98,11 @@
 			break;
 	}
 	
-	[delegate takeAction];
-	//[delegate release];
+	if (delegate != nil)
+	{
+		[delegate takeAction];
+		//[delegate release];
+	}
 }
 
 @end

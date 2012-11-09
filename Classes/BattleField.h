@@ -73,6 +73,7 @@
 -(TreasureRecord *) generateTreasureRecord:(FDTreasure *)treasure;
 
 -(BOOL) isNextTo:(FDCreature *)creature1 And:(FDCreature *)creature2;
+-(int) getDirectDistance:(FDCreature *)creature1 And:(FDCreature *)creature2;
 
 -(void) takeTick:(int)synchronizeTick;
 

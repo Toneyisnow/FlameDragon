@@ -37,7 +37,7 @@
 -(void) selectAttackTarget:(FDCreature *)creature;
 
 -(void) selectMagicTarget:(FDCreature *)creature MagicIndex:(int)magicIndex;
--(NSMutableArray *) getMagicTargets:(int)magicId Pos:(CGPoint)position;
+// -(NSMutableArray *) getMagicTargets:(int)magicId Pos:(CGPoint)position;
 
 -(void) selectItemTarget:(FDCreature *)creature IncludeSelf:(BOOL)includeSelf;
 
@@ -83,6 +83,8 @@
 //-(bool) isLocked;
 
 -(FDTreasure *) getTreasureAt:(CGPoint) pos;
+-(NSMutableArray *) getCreaturesAt:(CGPoint)position Range:(int)range BadGuys:(BOOL)areGadGuys;
+
 //-(void) pickUpTreasure:(FDCreature *) creature;
 
 

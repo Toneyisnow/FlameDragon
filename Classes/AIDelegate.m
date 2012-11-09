@@ -14,7 +14,8 @@
 #import "PathResolver.h"
 #import "ScopeResolver.h"
 #import "DistanceResolver.h"
-
+#import "DataDepot.h"
+#import "UsableItemDefinition.h"
 
 @implementation AIDelegate
 
@@ -102,6 +103,91 @@
 	NSLog(@"Get Target Pos: %f, %f", [finalPos posValue].x, [finalPos posValue].y);
 	
 	return [finalPos posValue];
+}
+
+
+-(FDCreature *) findTarget
+{
+	BattleField *field = [[layers getFieldLayer] getField];	
+	CGPoint currentPos = [field getObjectPos:creature];
+	
+	FDCreature *terminateCreature = nil;
+	if ([creature isKindOfClass:[FDEnemy class]])
+	{
+		terminateCreature = [[field getFriendList] objectAtIndex:0];
+	}
+	else if ([creature isKindOfClass:[FDNpc class]])
+	{
+		terminateCreature = [[field getEnemyList] objectAtIndex:0];
+	}
+	
+	[disResolver resolveDistanceFrom:currentPos terminateAt:[field getObjectPos:terminateCreature]];
+	
+	float minDistance = 999;
+	FDCreature *finalTarget = nil;
+	
+	NSMutableArray *candidateList = [[NSMutableArray alloc] init];
+	if ([creature isKindOfClass:[FDEnemy class]]) {
+		[candidateList addObjectsFromArray:[field getFriendList]];
+		[candidateList addObjectsFromArray:[field getNpcList]];
+	}
+	else if ([creature isKindOfClass:[FDNpc class]]) {
+		[candidateList addObjectsFromArray:[field getEnemyList]];
+	}
+	
+	for (FDCreature *c in candidateList) {
+		
+		float distance = [disResolver getDistanceTo:[field getObjectPos:c]];
+		if (distance < minDistance) {
+			minDistance = distance;
+			finalTarget = c;
+		}
+	}
+	
+	NSLog(@"Find target: %d", [finalTarget getIdentifier]);
+	
+	return finalTarget;
+}
+
+-(BOOL) needAndCanRecover
+{
+	BOOL needRecover = FALSE;
+	if (creature.data.hpCurrent < creature.data.hpMax) {
+		needRecover = TRUE;
+	}
+	
+	BOOL canRecover = FALSE;
+	for (int index = 0; index < [creature.data.itemList count]; index++) {
+		int itemId = [creature getItemId:index];
+		if (itemId == 101 || itemId == 102 || itemId == 103) {
+			canRecover = TRUE;
+			break;
+		}
+	}
+	
+	return needRecover && canRecover;
+}
+
+-(void) selfRecover
+{
+	int itemIndex = -1;
+	for (int index = 0; index < [creature.data.itemList count]; index++) {
+		int itemId = [creature getItemId:index];
+		if (itemId == 101 || itemId == 102 || itemId == 103) {
+			itemIndex = index;
+			break;
+		}
+	}
+	
+	if (itemIndex < 0) {
+		return;
+	}
+	
+	int itemId = [creature getItemId:itemIndex];
+	UsableItemDefinition * itemDef = (UsableItemDefinition *)[[DataDepot depot] getItemDefinition:itemId];
+	[itemDef usedBy:creature];
+	
+	[creature.data removeItem:itemIndex];
 }
 
 @end

@@ -20,7 +20,7 @@
 
 @implementation FDCreature
 
-@synthesize hasMoved,hasActioned;
+@synthesize hasMoved,hasActioned,pendingAction;
 @synthesize hpPrevious,mpPrevious;
 @synthesize data;
 @synthesize lastGainedExperience;
@@ -265,6 +265,7 @@
 {
 	hasActioned = FALSE;
 	hasMoved = FALSE;
+	pendingAction = FALSE;
 	
 	[sprite setColorR:255 G:255 B:255];
 }
@@ -273,9 +274,17 @@
 {
 	if (!hasActioned) {
 		hasActioned = TRUE;
+		pendingAction = FALSE;
 	}
 	
 	[sprite setColorR:127 G:127 B:127];
+}
+
+-(void) pendAction
+{
+	pendingAction = TRUE;
+	
+	[sprite setColorR:255 G:255 B:255];	
 }
 
 -(int) getMagicId:(int) index
