@@ -14,7 +14,7 @@
 
 @synthesize useType;
 @synthesize quantity;
-
+@synthesize isReusable;
 
 +(id) readFromFile:(FDFileStream *)stream
 {
@@ -30,6 +30,8 @@
 	
 	def.useType = [stream readInt];
 	def.quantity = [stream readInt];
+	
+	def.isReusable = ([stream readInt] == 1);
 	
 	return [def autorelease];
 }

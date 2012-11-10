@@ -22,6 +22,7 @@
 	NSString *idStr = [NSString stringWithFormat:@"%03d", def.identifier];
 	def.name = NSLocalizedStringFromTable (idStr, @"Item", @"comment");
 	
+	def.price = [stream readInt];
 	def.sellprice = [stream readInt];
 	
 	return [def autorelease];

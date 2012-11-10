@@ -19,7 +19,12 @@ typedef enum UsableItemType
 	UsableItemType_Ap = 7,
 	UsableItemType_Dp = 8,
 	UsableItemType_Mv = 9,
-	UsableItemType_Dx = 10
+	UsableItemType_Dx = 10,
+	UsableItemType_Ukn1 = 11,
+	UsableItemType_Ukn2 = 12,
+	UsableItemType_Ukn3 = 13,
+	UsableItemType_Ukn4 = 14
+	
 	
 } UsableItemType;
 
@@ -28,13 +33,14 @@ typedef enum UsableItemType
 	// For item
 	UsableItemType useType;
 	int quantity;
+	BOOL isReusable;
 	
 }
 
 
 @property (nonatomic) UsableItemType useType;
 @property (nonatomic) int quantity;
-
+@property (nonatomic) BOOL isReusable;
 
 -(void) usedBy:(id)obj;
 
