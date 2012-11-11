@@ -48,6 +48,8 @@
 }
 
 +(id) readFromFile:(FDFileStream *)stream;
++(id) readBaseInfoFromFile:(FDFileStream *)stream;
++(id) readFromFile:(FDFileStream *)stream BaseInfo:(NSMutableDictionary *)dict;
 
 -(int) getId;
 -(int) getAnimationId;

@@ -66,6 +66,78 @@
 	return [def autorelease];
 }
 
++(id) readBaseInfoFromFile:(FDFileStream *)stream
+{
+	CreatureDefinition * def = [[CreatureDefinition alloc] init];
+	
+	def.identifier = [stream readInt];
+	
+	def.race = [stream readInt];
+	def.occupation = [stream readInt];
+	def.data.ap = [stream readInt];
+	def.data.dp = [stream readInt];
+	def.data.dx = [stream readInt];
+	def.data.hpCurrent = def.data.hpMax = [stream readInt];
+	def.data.mpCurrent = def.data.mpMax = [stream readInt];
+	def.data.mv = [stream readInt];
+	def.data.ex = [stream readInt];
+	
+	return [def autorelease];
+}
+
++(id) readFromFile:(FDFileStream *)stream BaseInfo:(NSMutableDictionary *)dict
+{
+	if (dict == nil) {
+		return nil;
+	}
+	
+	CreatureDefinition * def = [[CreatureDefinition alloc] init];
+	
+	def.identifier = [stream readInt];
+	int baseId = [stream readInt];
+	def.data.level = [stream readInt];
+	
+	CreatureDefinition * baseDef = [dict objectForKey:[NSNumber numberWithInt:baseId]];
+	
+	if (baseDef == nil) {
+		NSLog(@"Error Reading Creature File: Cannot find the base info with Id=%d", baseId);
+		return nil;
+	}
+	
+	
+	
+	def.name = [FDLocalString creature:baseDef.identifier];
+	
+	def.race = baseDef.race;
+	def.occupation = baseDef.occupation;
+	def.data.ap = baseDef.data.ap * def.data.level;
+	def.data.dp = baseDef.data.dp * def.data.level;
+	def.data.dx = baseDef.data.dx * def.data.level;
+	def.data.hpCurrent = def.data.hpMax = baseDef.data.hpMax * def.data.level;
+	def.data.mpCurrent = def.data.mpMax = baseDef.data.mpMax * def.data.level;
+	def.data.mv = baseDef.data.mv;
+	def.data.ex = baseDef.data.ex;
+	
+	// Read items
+	int itemCount = [stream readInt];
+	for (int i = 0; i < itemCount; i ++) {
+		NSNumber *itemId = [NSNumber numberWithInt:[stream readInt]];
+		[def.data.itemList addObject:itemId];
+	}
+	
+	// Read magics
+	int magicCount = [stream readInt];
+	for (int i = 0; i < magicCount; i ++) {
+		NSNumber *magicId = [NSNumber numberWithInt:[stream readInt]];
+		[def.data.magicList addObject:magicId];
+	}
+	
+	def.data.attackItemIndex = -1;
+	def.data.defendItemIndex = -1;
+	
+	return [def autorelease];
+}
+
 /*
 -(id) init
 {
@@ -80,15 +152,7 @@
 
 -(int) getAnimationId
 {
-	// For some cases, animationId should be converted
-	switch (identifier) {
-		case 1016:
-			return 16;
-		default:
-			break;
-	}
-	
-	return identifier;
+	return identifier % 1000;
 }
 
 -(int) getId

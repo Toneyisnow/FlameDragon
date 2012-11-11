@@ -134,14 +134,33 @@ static DataDepot *instance = nil;
 	
 	int creatureCount = [file readInt];
 	for (int m = 0; m < creatureCount; m++) {
-		
 		CreatureDefinition *def = [CreatureDefinition readFromFile:file];
 		[creatureDictionary setObject:def forKey:[NSNumber numberWithInt:[def getId]]];
 	}
-		
+	[file close];
+	
+	
+	// Read base data for enemies
+	file = [[FDFileStream alloc] initWithDataFile:@"LeveledCreature" Ext:@"dat"];
+	[file open];
+	
+	int baseInfoCount = [file readInt];
+	NSMutableDictionary *baseInfoDict = [[NSMutableDictionary alloc] init];
+	for (int m = 0; m < baseInfoCount; m++) {
+		CreatureDefinition *def = [CreatureDefinition readBaseInfoFromFile:file];
+		[baseInfoDict setObject:def forKey:[NSNumber numberWithInt:[def getId]]];
+	}
+	
+	// Read enemy/NPC data
+	int leveledCreatureCount = [file readInt];
+	for (int m = 0; m < leveledCreatureCount; m++) {
+		CreatureDefinition *def = [CreatureDefinition readFromFile:file BaseInfo:baseInfoDict];
+		[creatureDictionary setObject:def forKey:[NSNumber numberWithInt:[def getId]]];
+	}
+	
+	[baseInfoDict release];
 	[file close];
 	NSLog(@"Loaded Creature Dictionary.");
-	
 }
 
 -(void) loadOccupationDictionary

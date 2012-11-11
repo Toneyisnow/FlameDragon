@@ -1251,6 +1251,7 @@
 		02D4CADC164E1F9A00B9B407 /* Chapter-12.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02D4CAD4164E1F9A00B9B407 /* Chapter-12.strings */; };
 		02D4CADD164E1F9A00B9B407 /* Chapter-13.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02D4CAD5164E1F9A00B9B407 /* Chapter-13.strings */; };
 		02D4CAF0164E372600B9B407 /* Chapter-05.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02D4CAE6164E365000B9B407 /* Chapter-05.strings */; };
+		02DB8227164FE2D40081EC45 /* LeveledCreature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DB8226164FE2D40081EC45 /* LeveledCreature.dat */; };
 		02E422DC160E257E0071FA29 /* Shopping2ShowSellItemsDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E422DB160E257E0071FA29 /* Shopping2ShowSellItemsDialog.m */; };
 		02E422F3160F37970071FA29 /* Shop_Buy_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 02E422EC160F37970071FA29 /* Shop_Buy_0.png */; };
 		02E422F4160F37970071FA29 /* Shop_Equip_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 02E422ED160F37970071FA29 /* Shop_Equip_0.png */; };
@@ -2949,6 +2950,7 @@
 		02D4CAD4164E1F9A00B9B407 /* Chapter-12.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-12.strings"; path = "Strings/Maps/Chapter-12.strings"; sourceTree = "<group>"; };
 		02D4CAD5164E1F9A00B9B407 /* Chapter-13.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-13.strings"; path = "Strings/Maps/Chapter-13.strings"; sourceTree = "<group>"; };
 		02D4CAE6164E365000B9B407 /* Chapter-05.strings */ = {isa = PBXFileReference; explicitFileType = text.plist.strings; fileEncoding = 4; name = "Chapter-05.strings"; path = "Strings/Maps/Chapter-05.strings"; sourceTree = "<group>"; };
+		02DB8226164FE2D40081EC45 /* LeveledCreature.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LeveledCreature.dat; path = Data/LeveledCreature.dat; sourceTree = "<group>"; };
 		02E422DA160E257E0071FA29 /* Shopping2ShowSellItemsDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shopping2ShowSellItemsDialog.h; sourceTree = "<group>"; };
 		02E422DB160E257E0071FA29 /* Shopping2ShowSellItemsDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shopping2ShowSellItemsDialog.m; sourceTree = "<group>"; };
 		02E422EC160F37970071FA29 /* Shop_Buy_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shop_Buy_0.png; path = Others/Shop_Buy_0.png; sourceTree = "<group>"; };
@@ -4572,6 +4574,7 @@
 				02F8403914B8167F00665511 /* Magic.dat */,
 				027334C2149A3B1A00D0812F /* Item.dat */,
 				0297D98E1481D281007F3E12 /* Creature.dat */,
+				02DB8226164FE2D40081EC45 /* LeveledCreature.dat */,
 				022D368A161484780020F816 /* Occupation.dat */,
 				022D37AC1615E8110020F816 /* SecretSequence.dat */,
 				0297D98C1481D26C007F3E12 /* Animation.dat */,
@@ -7237,6 +7240,7 @@
 				02D4CADC164E1F9A00B9B407 /* Chapter-12.strings in Resources */,
 				02D4CADD164E1F9A00B9B407 /* Chapter-13.strings in Resources */,
 				02D4CAF0164E372600B9B407 /* Chapter-05.strings in Resources */,
+				02DB8227164FE2D40081EC45 /* LeveledCreature.dat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
