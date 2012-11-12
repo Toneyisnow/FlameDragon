@@ -1252,6 +1252,26 @@
 		02D4CADD164E1F9A00B9B407 /* Chapter-13.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02D4CAD5164E1F9A00B9B407 /* Chapter-13.strings */; };
 		02D4CAF0164E372600B9B407 /* Chapter-05.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02D4CAE6164E365000B9B407 /* Chapter-05.strings */; };
 		02DB8227164FE2D40081EC45 /* LeveledCreature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DB8226164FE2D40081EC45 /* LeveledCreature.dat */; };
+		02DB823C16514A6F0081EC45 /* Chapter-11.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DB822816514A6F0081EC45 /* Chapter-11.dat */; };
+		02DB823D16514A6F0081EC45 /* Chapter-12.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DB822916514A6F0081EC45 /* Chapter-12.dat */; };
+		02DB823E16514A6F0081EC45 /* Chapter-13.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DB822A16514A6F0081EC45 /* Chapter-13.dat */; };
+		02DB823F16514A6F0081EC45 /* Chapter-14.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DB822B16514A6F0081EC45 /* Chapter-14.dat */; };
+		02DB824016514A6F0081EC45 /* Chapter-15.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DB822C16514A6F0081EC45 /* Chapter-15.dat */; };
+		02DB824116514A6F0081EC45 /* Chapter-16.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DB822D16514A6F0081EC45 /* Chapter-16.dat */; };
+		02DB824216514A6F0081EC45 /* Chapter-17.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DB822E16514A6F0081EC45 /* Chapter-17.dat */; };
+		02DB824316514A6F0081EC45 /* Chapter-18.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DB822F16514A6F0081EC45 /* Chapter-18.dat */; };
+		02DB824416514A6F0081EC45 /* Chapter-19.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DB823016514A6F0081EC45 /* Chapter-19.dat */; };
+		02DB824516514A6F0081EC45 /* Chapter-20.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DB823116514A6F0081EC45 /* Chapter-20.dat */; };
+		02DB824616514A6F0081EC45 /* Chapter-21.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DB823216514A6F0081EC45 /* Chapter-21.dat */; };
+		02DB824716514A6F0081EC45 /* Chapter-22.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DB823316514A6F0081EC45 /* Chapter-22.dat */; };
+		02DB824816514A6F0081EC45 /* Chapter-23.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DB823416514A6F0081EC45 /* Chapter-23.dat */; };
+		02DB824916514A6F0081EC45 /* Chapter-24.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DB823516514A6F0081EC45 /* Chapter-24.dat */; };
+		02DB824A16514A6F0081EC45 /* Chapter-25.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DB823616514A6F0081EC45 /* Chapter-25.dat */; };
+		02DB824B16514A6F0081EC45 /* Chapter-26.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DB823716514A6F0081EC45 /* Chapter-26.dat */; };
+		02DB824C16514A6F0081EC45 /* Chapter-27.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DB823816514A6F0081EC45 /* Chapter-27.dat */; };
+		02DB824D16514A6F0081EC45 /* Chapter-28.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DB823916514A6F0081EC45 /* Chapter-28.dat */; };
+		02DB824E16514A6F0081EC45 /* Chapter-29.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DB823A16514A6F0081EC45 /* Chapter-29.dat */; };
+		02DB824F16514A6F0081EC45 /* Chapter-30.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DB823B16514A6F0081EC45 /* Chapter-30.dat */; };
 		02E422DC160E257E0071FA29 /* Shopping2ShowSellItemsDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E422DB160E257E0071FA29 /* Shopping2ShowSellItemsDialog.m */; };
 		02E422F3160F37970071FA29 /* Shop_Buy_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 02E422EC160F37970071FA29 /* Shop_Buy_0.png */; };
 		02E422F4160F37970071FA29 /* Shop_Equip_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 02E422ED160F37970071FA29 /* Shop_Equip_0.png */; };
@@ -2951,6 +2971,26 @@
 		02D4CAD5164E1F9A00B9B407 /* Chapter-13.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-13.strings"; path = "Strings/Maps/Chapter-13.strings"; sourceTree = "<group>"; };
 		02D4CAE6164E365000B9B407 /* Chapter-05.strings */ = {isa = PBXFileReference; explicitFileType = text.plist.strings; fileEncoding = 4; name = "Chapter-05.strings"; path = "Strings/Maps/Chapter-05.strings"; sourceTree = "<group>"; };
 		02DB8226164FE2D40081EC45 /* LeveledCreature.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LeveledCreature.dat; path = Data/LeveledCreature.dat; sourceTree = "<group>"; };
+		02DB822816514A6F0081EC45 /* Chapter-11.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-11.dat"; path = "Data/Maps/Chapter-11.dat"; sourceTree = "<group>"; };
+		02DB822916514A6F0081EC45 /* Chapter-12.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-12.dat"; path = "Data/Maps/Chapter-12.dat"; sourceTree = "<group>"; };
+		02DB822A16514A6F0081EC45 /* Chapter-13.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-13.dat"; path = "Data/Maps/Chapter-13.dat"; sourceTree = "<group>"; };
+		02DB822B16514A6F0081EC45 /* Chapter-14.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-14.dat"; path = "Data/Maps/Chapter-14.dat"; sourceTree = "<group>"; };
+		02DB822C16514A6F0081EC45 /* Chapter-15.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-15.dat"; path = "Data/Maps/Chapter-15.dat"; sourceTree = "<group>"; };
+		02DB822D16514A6F0081EC45 /* Chapter-16.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-16.dat"; path = "Data/Maps/Chapter-16.dat"; sourceTree = "<group>"; };
+		02DB822E16514A6F0081EC45 /* Chapter-17.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-17.dat"; path = "Data/Maps/Chapter-17.dat"; sourceTree = "<group>"; };
+		02DB822F16514A6F0081EC45 /* Chapter-18.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-18.dat"; path = "Data/Maps/Chapter-18.dat"; sourceTree = "<group>"; };
+		02DB823016514A6F0081EC45 /* Chapter-19.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-19.dat"; path = "Data/Maps/Chapter-19.dat"; sourceTree = "<group>"; };
+		02DB823116514A6F0081EC45 /* Chapter-20.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-20.dat"; path = "Data/Maps/Chapter-20.dat"; sourceTree = "<group>"; };
+		02DB823216514A6F0081EC45 /* Chapter-21.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-21.dat"; path = "Data/Maps/Chapter-21.dat"; sourceTree = "<group>"; };
+		02DB823316514A6F0081EC45 /* Chapter-22.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-22.dat"; path = "Data/Maps/Chapter-22.dat"; sourceTree = "<group>"; };
+		02DB823416514A6F0081EC45 /* Chapter-23.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-23.dat"; path = "Data/Maps/Chapter-23.dat"; sourceTree = "<group>"; };
+		02DB823516514A6F0081EC45 /* Chapter-24.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-24.dat"; path = "Data/Maps/Chapter-24.dat"; sourceTree = "<group>"; };
+		02DB823616514A6F0081EC45 /* Chapter-25.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-25.dat"; path = "Data/Maps/Chapter-25.dat"; sourceTree = "<group>"; };
+		02DB823716514A6F0081EC45 /* Chapter-26.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-26.dat"; path = "Data/Maps/Chapter-26.dat"; sourceTree = "<group>"; };
+		02DB823816514A6F0081EC45 /* Chapter-27.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-27.dat"; path = "Data/Maps/Chapter-27.dat"; sourceTree = "<group>"; };
+		02DB823916514A6F0081EC45 /* Chapter-28.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-28.dat"; path = "Data/Maps/Chapter-28.dat"; sourceTree = "<group>"; };
+		02DB823A16514A6F0081EC45 /* Chapter-29.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-29.dat"; path = "Data/Maps/Chapter-29.dat"; sourceTree = "<group>"; };
+		02DB823B16514A6F0081EC45 /* Chapter-30.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-30.dat"; path = "Data/Maps/Chapter-30.dat"; sourceTree = "<group>"; };
 		02E422DA160E257E0071FA29 /* Shopping2ShowSellItemsDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shopping2ShowSellItemsDialog.h; sourceTree = "<group>"; };
 		02E422DB160E257E0071FA29 /* Shopping2ShowSellItemsDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shopping2ShowSellItemsDialog.m; sourceTree = "<group>"; };
 		02E422EC160F37970071FA29 /* Shop_Buy_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shop_Buy_0.png; path = Others/Shop_Buy_0.png; sourceTree = "<group>"; };
@@ -4595,6 +4635,26 @@
 				02D4C67E164E194200B9B407 /* Chapter-08.dat */,
 				02D4C67F164E194200B9B407 /* Chapter-09.dat */,
 				02D4C680164E194200B9B407 /* Chapter-10.dat */,
+				02DB822816514A6F0081EC45 /* Chapter-11.dat */,
+				02DB822916514A6F0081EC45 /* Chapter-12.dat */,
+				02DB822A16514A6F0081EC45 /* Chapter-13.dat */,
+				02DB822B16514A6F0081EC45 /* Chapter-14.dat */,
+				02DB822C16514A6F0081EC45 /* Chapter-15.dat */,
+				02DB822D16514A6F0081EC45 /* Chapter-16.dat */,
+				02DB822E16514A6F0081EC45 /* Chapter-17.dat */,
+				02DB822F16514A6F0081EC45 /* Chapter-18.dat */,
+				02DB823016514A6F0081EC45 /* Chapter-19.dat */,
+				02DB823116514A6F0081EC45 /* Chapter-20.dat */,
+				02DB823216514A6F0081EC45 /* Chapter-21.dat */,
+				02DB823316514A6F0081EC45 /* Chapter-22.dat */,
+				02DB823416514A6F0081EC45 /* Chapter-23.dat */,
+				02DB823516514A6F0081EC45 /* Chapter-24.dat */,
+				02DB823616514A6F0081EC45 /* Chapter-25.dat */,
+				02DB823716514A6F0081EC45 /* Chapter-26.dat */,
+				02DB823816514A6F0081EC45 /* Chapter-27.dat */,
+				02DB823916514A6F0081EC45 /* Chapter-28.dat */,
+				02DB823A16514A6F0081EC45 /* Chapter-29.dat */,
+				02DB823B16514A6F0081EC45 /* Chapter-30.dat */,
 			);
 			name = Maps;
 			sourceTree = "<group>";
@@ -7241,6 +7301,26 @@
 				02D4CADD164E1F9A00B9B407 /* Chapter-13.strings in Resources */,
 				02D4CAF0164E372600B9B407 /* Chapter-05.strings in Resources */,
 				02DB8227164FE2D40081EC45 /* LeveledCreature.dat in Resources */,
+				02DB823C16514A6F0081EC45 /* Chapter-11.dat in Resources */,
+				02DB823D16514A6F0081EC45 /* Chapter-12.dat in Resources */,
+				02DB823E16514A6F0081EC45 /* Chapter-13.dat in Resources */,
+				02DB823F16514A6F0081EC45 /* Chapter-14.dat in Resources */,
+				02DB824016514A6F0081EC45 /* Chapter-15.dat in Resources */,
+				02DB824116514A6F0081EC45 /* Chapter-16.dat in Resources */,
+				02DB824216514A6F0081EC45 /* Chapter-17.dat in Resources */,
+				02DB824316514A6F0081EC45 /* Chapter-18.dat in Resources */,
+				02DB824416514A6F0081EC45 /* Chapter-19.dat in Resources */,
+				02DB824516514A6F0081EC45 /* Chapter-20.dat in Resources */,
+				02DB824616514A6F0081EC45 /* Chapter-21.dat in Resources */,
+				02DB824716514A6F0081EC45 /* Chapter-22.dat in Resources */,
+				02DB824816514A6F0081EC45 /* Chapter-23.dat in Resources */,
+				02DB824916514A6F0081EC45 /* Chapter-24.dat in Resources */,
+				02DB824A16514A6F0081EC45 /* Chapter-25.dat in Resources */,
+				02DB824B16514A6F0081EC45 /* Chapter-26.dat in Resources */,
+				02DB824C16514A6F0081EC45 /* Chapter-27.dat in Resources */,
+				02DB824D16514A6F0081EC45 /* Chapter-28.dat in Resources */,
+				02DB824E16514A6F0081EC45 /* Chapter-29.dat in Resources */,
+				02DB824F16514A6F0081EC45 /* Chapter-30.dat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2935,7 +2935,7 @@
 		fRef = 0297D789147D5069007F3E12 /* CreatureDefinition.m */;
 		name = "CreatureDefinition.m: 108";
 		rLen = 0;
-		rLoc = 4077;
+		rLoc = 3995;
 		rType = 0;
 		vrLen = 646;
 		vrLoc = 1893;
@@ -3395,9 +3395,9 @@
 	};
 	027334C2149A3B1A00D0812F /* Item.dat */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 2496}}";
-			sepNavSelRange = "{2, 0}";
-			sepNavVisRange = "{0, 535}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 2613}}";
+			sepNavSelRange = "{3721, 0}";
+			sepNavVisRange = "{3441, 339}";
 			sepNavWindowFrame = "{{15, 99}, {909, 674}}";
 		};
 	};
@@ -4372,9 +4372,9 @@
 	};
 	027D541B1462BC7B002C310F /* GroundBlock.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 585}}";
-			sepNavSelRange = "{606, 0}";
-			sepNavVisRange = "{40, 663}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 572}}";
+			sepNavSelRange = "{345, 0}";
+			sepNavVisRange = "{121, 566}";
 		};
 	};
 	027D541C1462BC7B002C310F /* GroundBlock.m */ = {
@@ -4725,9 +4725,9 @@
 	};
 	027D5850146AA2E3002C310F /* GroundField.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {812, 1092}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 1092}}";
 			sepNavSelRange = "{1609, 0}";
-			sepNavVisRange = "{198, 871}";
+			sepNavVisRange = "{509, 682}";
 		};
 	};
 	027D5859146AAF8C002C310F /* FDIntMap.h */ = {
@@ -5072,9 +5072,9 @@
 	};
 	0297D789147D5069007F3E12 /* CreatureDefinition.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 2561}}";
-			sepNavSelRange = "{3058, 0}";
-			sepNavVisRange = "{3256, 531}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 2548}}";
+			sepNavSelRange = "{3775, 0}";
+			sepNavVisRange = "{3615, 381}";
 		};
 	};
 	0297D7C7147E7379007F3E12 /* FightScene.h */ = {
@@ -5245,7 +5245,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {739, 416}}";
 			sepNavSelRange = "{1194, 0}";
-			sepNavVisRange = "{0, 1194}";
+			sepNavVisRange = "{0, 1193}";
 		};
 	};
 	0297D98C1481D26C007F3E12 /* Animation.dat */ = {
@@ -5257,9 +5257,9 @@
 	};
 	0297D98E1481D281007F3E12 /* Creature.dat */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 559}}";
-			sepNavSelRange = "{294, 0}";
-			sepNavVisRange = "{0, 547}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 377}}";
+			sepNavSelRange = "{1, 0}";
+			sepNavVisRange = "{0, 332}";
 		};
 	};
 	0297D9EB1481E86A007F3E12 /* PBXTextBookmark */ = {
@@ -7722,6 +7722,13 @@
 			sepNavVisRange = "{0, 1889}";
 		};
 	};
+	02D4C67F164E194200B9B407 /* Chapter-09.dat */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {739, 598}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{160, 1530}";
+		};
+	};
 	02D4CACE164E1F9A00B9B407 /* Chapter-06.strings */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {739, 1521}}";
@@ -7804,7 +7811,7 @@
 		fRef = 0297D98E1481D281007F3E12 /* Creature.dat */;
 		name = "Creature.dat: 1";
 		rLen = 0;
-		rLoc = 2;
+		rLoc = 1;
 		rType = 0;
 		vrLen = 588;
 		vrLoc = 0;
@@ -7814,7 +7821,7 @@
 		fRef = 027D541B1462BC7B002C310F /* GroundBlock.h */;
 		name = "GroundBlock.h: 32";
 		rLen = 0;
-		rLoc = 606;
+		rLoc = 639;
 		rType = 0;
 		vrLen = 663;
 		vrLoc = 40;
@@ -8351,6 +8358,41 @@
 	02D4CB47164E6E6D00B9B407 /* PBXBookmark */ = {
 		isa = PBXBookmark;
 		fRef = 0297D8EF14814E3C007F3E12 /* Tai-01.png */;
+	};
+	02DB8226164FE2D40081EC45 /* LeveledCreature.dat */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {739, 377}}";
+			sepNavSelRange = "{486, 0}";
+			sepNavVisRange = "{0, 543}";
+		};
+	};
+	02DB822816514A6F0081EC45 /* Chapter-11.dat */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {739, 728}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2023}";
+		};
+	};
+	02DB822A16514A6F0081EC45 /* Chapter-13.dat */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {739, 494}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2065}";
+		};
+	};
+	02DB822D16514A6F0081EC45 /* Chapter-16.dat */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {739, 611}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2303}";
+		};
+	};
+	02DB823016514A6F0081EC45 /* Chapter-19.dat */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {739, 598}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1463}";
+		};
 	};
 	02E422DA160E257E0071FA29 /* Shopping2ShowSellItemsDialog.h */ = {
 		uiCtxt = {

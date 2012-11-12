@@ -12,9 +12,10 @@ typedef enum GroundBlockType {
 	
 	GroundBlockTypeGround = 0,
 	GroundBlockTypeChasm = 1,
-	GroundBlockTypeForest = 6,
 	GroundBlockTypeMarsh = 3,
-	GroundBlockTypeGap = 4
+	GroundBlockTypeGap = 4,
+	GroundBlockTypeBlackForest = 5,
+	GroundBlockTypeForest = 6
 } GroundBlockType;
 
 typedef enum GroundBlockAccessType {
