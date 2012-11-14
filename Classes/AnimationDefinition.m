@@ -133,17 +133,37 @@
 			break;
 	}
 	
+	int hitArray[frameCount];
+	int remoteFrameIndex = 0;
+	
+	if (aniType == AnimationType_FightAttack) {
+		
+		int next = [stream readInt];
+		int index = 1;
+		while (next != -1) {
+			hitArray[index - 1] = next;
+			index ++;
+			next = [stream readInt];
+		}
+	}
+	
+	for (int i = 1; i <= frameCount; i++) {
+		
+	}
+	
+	if (aniType == AnimationType_FightAttack) {
+		remoteFrameIndex = [stream readInt];
+	}
+	
 	for (int i = 1; i <= frameCount; i++) {
 		
 		NSString *spriteFile = [NSString stringWithFormat:@"Fight-%03d-%d-%02d.png", creatureAniId, aniTypeInt, i];
 	
-		int interval = [stream readInt] * [Constants fightAnimationIntervalUnit];
-		//int locX = [stream readInt];
-		//int locY = [stream readInt];
-		int soundId = [stream readInt];
-		BOOL isRemote = ([stream readInt] == 1);
-		double hittingRate = [stream readInt] / 100.0;
-		//CGPoint location = CGPointMake(locX, locY);
+		int interval = 2 * [Constants fightAnimationIntervalUnit];
+		int soundId = 0;
+		BOOL isRemote = (i <= remoteFrameIndex);
+		double hittingRate = (aniType == AnimationType_FightAttack) ? hitArray[i - 1] / 100.0 : 0;
+		
 		FDFightFrameDefinition *frame = [[FDFightFrameDefinition alloc] initFromFile:spriteFile Time:interval Sound:soundId Remote:isRemote Hitting:hittingRate];
 
 		[aniDef addFrame:frame];
