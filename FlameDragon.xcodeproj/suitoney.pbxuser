@@ -180,16 +180,16 @@
 	};
 	0214952214AA0F0F00DBA2C1 /* Occupation.strings */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 442}}";
-			sepNavSelRange = "{489, 0}";
-			sepNavVisRange = "{41, 456}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 455}}";
+			sepNavSelRange = "{511, 0}";
+			sepNavVisRange = "{79, 435}";
 		};
 	};
 	0214952314AA0F0F00DBA2C1 /* Race.strings */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 420}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 218}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 370}}";
+			sepNavSelRange = "{244, 0}";
+			sepNavVisRange = "{0, 247}";
 		};
 	};
 	0214956D14ACBE6A00DBA2C1 /* ExchangeItemTargetState.m */ = {
@@ -808,9 +808,9 @@
 	};
 	022D368A161484780020F816 /* Occupation.dat */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 455}}";
-			sepNavSelRange = "{155, 0}";
-			sepNavVisRange = "{0, 274}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 520}}";
+			sepNavSelRange = "{349, 0}";
+			sepNavVisRange = "{98, 252}";
 		};
 	};
 	022D368C161487130020F816 /* OccupationDefinition.h */ = {
@@ -1072,7 +1072,7 @@
 	};
 	022D386F1617242E0020F816 /* Village.strings */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 420}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 370}}";
 			sepNavSelRange = "{257, 0}";
 			sepNavVisRange = "{0, 297}";
 		};
@@ -2873,7 +2873,7 @@
 		fRef = 029C625614910E660054B260 /* Creature.strings */;
 		name = "Creature.strings: 22";
 		rLen = 0;
-		rLoc = 328;
+		rLoc = 1359;
 		rType = 0;
 		vrLen = 343;
 		vrLoc = 0;
@@ -3689,7 +3689,7 @@
 	};
 	027334C2149A3B1A00D0812F /* Item.dat */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 2418}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 2444}}";
 			sepNavSelRange = "{2580, 0}";
 			sepNavVisRange = "{3159, 510}";
 			sepNavWindowFrame = "{{15, 99}, {909, 674}}";
@@ -3732,16 +3732,16 @@
 	};
 	02733525149F13E100D0812F /* Magic.strings */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 420}}";
-			sepNavSelRange = "{122, 0}";
-			sepNavVisRange = "{0, 134}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 370}}";
+			sepNavSelRange = "{191, 0}";
+			sepNavVisRange = "{0, 195}";
 		};
 	};
 	02733526149F13E100D0812F /* Message.strings */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {739, 897}}";
 			sepNavSelRange = "{1190, 0}";
-			sepNavVisRange = "{803, 751}";
+			sepNavVisRange = "{910, 645}";
 		};
 	};
 	02733533149F15E400D0812F /* PBXTextBookmark */ = {
@@ -5551,9 +5551,9 @@
 	};
 	0297D98E1481D281007F3E12 /* Creature.dat */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 370}}";
-			sepNavSelRange = "{1, 0}";
-			sepNavVisRange = "{0, 332}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 910}}";
+			sepNavSelRange = "{202, 0}";
+			sepNavVisRange = "{0, 524}";
 		};
 	};
 	0297D9EB1481E86A007F3E12 /* PBXTextBookmark */ = {
@@ -5801,9 +5801,9 @@
 	};
 	029C625614910E660054B260 /* Creature.strings */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 415}}";
-			sepNavSelRange = "{328, 0}";
-			sepNavVisRange = "{0, 343}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 1404}}";
+			sepNavSelRange = "{1551, 0}";
+			sepNavVisRange = "{1168, 389}";
 		};
 	};
 	029C626B149112040054B260 /* FDOperationActivity.h */ = {
@@ -6230,7 +6230,7 @@
 	};
 	02BA6EB814C7F2F70028C9E7 /* Levelup.dat */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {779, 368}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 370}}";
 			sepNavSelRange = "{146, 0}";
 			sepNavVisRange = "{0, 147}";
 		};
@@ -7134,7 +7134,7 @@
 	};
 	02D3095E15FAD46300CA1799 /* Shop.dat */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 389}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 370}}";
 			sepNavSelRange = "{171, 0}";
 			sepNavVisRange = "{0, 180}";
 		};
@@ -8126,7 +8126,7 @@
 		fRef = 0297D98E1481D281007F3E12 /* Creature.dat */;
 		name = "Creature.dat: 1";
 		rLen = 0;
-		rLoc = 1;
+		rLoc = 2;
 		rType = 0;
 		vrLen = 588;
 		vrLoc = 0;
@@ -8647,7 +8647,7 @@
 		fRef = 0214952214AA0F0F00DBA2C1 /* Occupation.strings */;
 		name = "Occupation.strings: 33";
 		rLen = 0;
-		rLoc = 489;
+		rLoc = 503;
 		rType = 0;
 		vrLen = 456;
 		vrLoc = 41;
@@ -8676,9 +8676,9 @@
 	};
 	02DB8226164FE2D40081EC45 /* LeveledCreature.dat */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 470}}";
-			sepNavSelRange = "{486, 0}";
-			sepNavVisRange = "{0, 543}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 1040}}";
+			sepNavSelRange = "{2, 0}";
+			sepNavVisRange = "{1374, 637}";
 		};
 	};
 	02DB822816514A6F0081EC45 /* Chapter-11.dat */ = {
@@ -9043,7 +9043,7 @@
 		fRef = 02DB8226164FE2D40081EC45 /* LeveledCreature.dat */;
 		name = "LeveledCreature.dat: 25";
 		rLen = 0;
-		rLoc = 486;
+		rLoc = 1954;
 		rType = 0;
 		vrLen = 543;
 		vrLoc = 0;
@@ -9105,7 +9105,7 @@
 		fRef = 0297D98E1481D281007F3E12 /* Creature.dat */;
 		name = "Creature.dat: 1";
 		rLen = 0;
-		rLoc = 1;
+		rLoc = 2;
 		rType = 0;
 		vrLen = 332;
 		vrLoc = 0;
@@ -9155,7 +9155,7 @@
 		fRef = 0297D98E1481D281007F3E12 /* Creature.dat */;
 		name = "Creature.dat: 1";
 		rLen = 0;
-		rLoc = 1;
+		rLoc = 2;
 		rType = 0;
 		vrLen = 332;
 		vrLoc = 0;
@@ -9281,7 +9281,7 @@
 	};
 	02F8403914B8167F00665511 /* Magic.dat */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 383}}";
+			sepNavIntBoundsRect = "{{0, 0}, {739, 370}}";
 			sepNavSelRange = "{45, 0}";
 			sepNavVisRange = "{0, 45}";
 		};
