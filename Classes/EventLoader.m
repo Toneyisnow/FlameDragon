@@ -19,7 +19,7 @@
 #import "CreatureDeadCondition.h"
 #import "CreatureDyingCondition.h"
 #import "TeamEliminatedCondition.h"
-
+#import "ArrivePositionCondition.h"
 
 @implementation EventLoader
 
@@ -45,37 +45,42 @@
 -(void) loadTurnEvent:(TurnType) turnType Turn:(int)turnNum Action:(SEL)action
 {
 	TurnCondition *condition = [[TurnCondition alloc] initWithTurnType:turnType Number:turnNum];
-	FDEvent *event = [[FDEvent alloc] initWithCondition:condition Delegate:self Method:action];
-	[eventHandler addEvent:event];
-	[condition release];
-	[event release];
-	
+	[self loadSingleEvent:condition Action:action];
+	[condition release];	
 }
 
 -(void) loadDyingEvent:(int)creatureId Action:(SEL)action
 {	
 	CreatureDyingCondition *condition = [[CreatureDyingCondition alloc] initWithCreatureId:creatureId];
-	FDEvent *event = [[FDEvent alloc] initWithCondition:condition Delegate:self Method:action];
-	[eventHandler addEvent:event];
+	[self loadSingleEvent:condition Action:action];
 	[condition release];
-	[event release];
 }
 
 -(void) loadDieEvent:(int)creatureId Action:(SEL)action
 {	
 	CreatureDeadCondition *condition = [[CreatureDeadCondition alloc] initWithCreatureId:creatureId];
-	FDEvent *event = [[FDEvent alloc] initWithCondition:condition Delegate:self Method:action];
-	[eventHandler addEvent:event];
+	[self loadSingleEvent:condition Action:action];
 	[condition release];
-	[event release];
 }
 
 -(void) loadTeamEvent:(CreatureType) creatureType Action:(SEL)action
 {
 	TeamEliminatedCondition *condition = [[TeamEliminatedCondition alloc] initWithTeam:creatureType];
+	[self loadSingleEvent:condition Action:action];
+	[condition release];
+}
+
+-(void) loadPositionEvent:(int)creatureId AtPosition:(CGPoint)pos Action:(SEL)action
+{
+	ArrivePositionCondition *condition = [[ArrivePositionCondition alloc] initWithCreatureId:creatureId Position:pos];
+	[self loadSingleEvent:condition Action:action];
+	[condition release];
+}
+
+-(void) loadSingleEvent:(FDEventCondition *)condition Action:(SEL)action
+{
 	FDEvent *event = [[FDEvent alloc] initWithCondition:condition Delegate:self Method:action];
 	[eventHandler addEvent:event];
-	[condition release];
 	[event release];	
 }
 
@@ -105,6 +110,17 @@
 	}
 	
 }
+
+-(void) setAiOfId:(int)creatureId EscapeTo:(CGPoint)pos
+{
+	FDCreature *creature = [field getCreatureById:creatureId];
+	
+	if (creature != nil) {
+		creature.data.aiType = AIType_Escape;
+		creature.data.aiParam = [[[FDPosition alloc] initX:pos.x Y:pos.y] autorelease];
+	}
+}
+
 
 -(void) gameOver
 {

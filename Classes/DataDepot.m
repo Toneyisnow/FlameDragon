@@ -138,9 +138,11 @@ static DataDepot *instance = nil;
 		[creatureDictionary setObject:def forKey:[NSNumber numberWithInt:[def getId]]];
 	}
 	[file close];
+	NSLog(@"Loaded Creature Dictionary.");
 	
 	
 	// Read base data for enemies
+	NSLog(@"Loading Leveled Creature Dictionary.");
 	file = [[FDFileStream alloc] initWithDataFile:@"LeveledCreature" Ext:@"dat"];
 	[file open];
 	
@@ -160,7 +162,7 @@ static DataDepot *instance = nil;
 	
 	[baseInfoDict release];
 	[file close];
-	NSLog(@"Loaded Creature Dictionary.");
+	NSLog(@"Loaded Leveled Creature Dictionary.");
 }
 
 -(void) loadOccupationDictionary

@@ -233,13 +233,9 @@
 	[layers appendToCurrentActivityMethod:@selector(setCursorObjTo:) Param1:[FDPosition positionX:16 Y:1] Param2:nil Obj:field];
 	
 	// Enemy
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:31] autorelease] Position:CGPointMake(16, 1)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:32] autorelease] Position:CGPointMake(16, 1)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:33] autorelease] Position:CGPointMake(16, 1)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:34] autorelease] Position:CGPointMake(16, 1)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:35] autorelease] Position:CGPointMake(16, 1)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:36] autorelease] Position:CGPointMake(16, 1)];
-	
+	for (int iden = 31; iden <= 36; iden++) {
+		[field addEnemy:[[[FDEnemy alloc] initWithDefinition:701 Id:iden] autorelease] Position:CGPointMake(16, 1)];
+	}
 	
 	[layers moveCreatureId:31 To:CGPointMake(16, 4) showMenu:FALSE];
 	
@@ -364,16 +360,6 @@
 -(void) showNpcDyingMessage96
 {
 	[self showTalkMessage:2 conversation:96 sequence:1];
-}
-
--(void) setAiOfId:(int)creatureId EscapeTo:(CGPoint)pos
-{
-	FDCreature *creature = [field getCreatureById:creatureId];
-	
-	if (creature != nil) {
-		creature.data.aiType = AIType_Escape;
-		creature.data.aiParam = [[[FDPosition alloc] initX:pos.x Y:pos.y] autorelease];
-	}
 }
 
 
