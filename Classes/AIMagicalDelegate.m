@@ -62,7 +62,7 @@
 	[field setCursorTo:position];
 	
 	[layers magicFrom:creature TargetPos:position Id:magic.identifier];
-	[layers appendToCurrentActivityMethod:@selector(creatureEndTurn:) Param1:creature Param2:nil];
+//	[layers appendToCurrentActivityMethod:@selector(creatureEndTurn:) Param1:creature Param2:nil];
 }
 
 -(void) takePendAction

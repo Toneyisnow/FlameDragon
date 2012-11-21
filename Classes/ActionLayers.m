@@ -338,14 +338,16 @@
 	NSMutableArray *targets = [field getCreaturesAt:position Range:magic.effectRange BadGuys:areBadGuys];
 	MagicalInformation *mInfo = [GameFormula dealWithMagic:magicId From:creature Target:targets Field:field];
 	
-	CGPoint pos = [field getObjectPos:creature];
-	int backgroundImageId = [field getBackgroundPicId:pos];
-	MagicalScene *scene = [[MagicalScene alloc] initWithMagic:magicId Subject:creature Targets:targets Information:mInfo Background:backgroundImageId];
-	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:0.5 scene:scene]];
-	
-	[scene start];	
-	
-	[scene setPostMethod:@selector(postFightAction:Targets:) param1:creature param2:targets Obj:self];	
+	if (magic.magicType == MagicType_Attack) {
+		CGPoint pos = [field getObjectPos:creature];
+		int backgroundImageId = [field getBackgroundPicId:pos];
+		MagicalScene *scene = [[MagicalScene alloc] initWithMagic:magicId Subject:creature Targets:targets Information:mInfo Background:backgroundImageId];
+		[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:0.5 scene:scene]];
+		[scene start];	
+		[scene setPostMethod:@selector(postFightAction:Targets:) param1:creature param2:targets Obj:self];
+	} else {
+		[self appendToMainActivityMethod:@selector(postFightAction:Targets:) Param1:creature Param2:targets Obj:self];
+	}
 }
 
 /*
