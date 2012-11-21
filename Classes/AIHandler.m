@@ -8,6 +8,7 @@
 
 #import "AIHandler.h"
 #import "AIAggressiveDelegate.h"
+#import "AIMagicalDelegate.h"
 #import "AIEscapeDelegate.h"
 #import "FDEnemy.h"
 #import "FDFriend.h"
@@ -88,7 +89,12 @@
 	
 	switch (creature.data.aiType) {
 		case AIType_Aggressive:
-			delegate = [[AIAggressiveDelegate alloc] initWithCreature:creature Layers:layers];
+			if ([[creature getDefinition] isMagicalCreature]) {
+				delegate = [[AIMagicalDelegate alloc] initWithCreature:creature Layers:layers];
+			} else {
+				delegate = [[AIAggressiveDelegate alloc] initWithCreature:creature Layers:layers];
+			}
+
 			break;
 		case AIType_Escape:
 			delegate = [[AIEscapeDelegate alloc] initWithCreature:creature Layers:layers];

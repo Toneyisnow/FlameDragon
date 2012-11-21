@@ -63,6 +63,8 @@
 	def.data.attackItemIndex = -1;
 	def.data.defendItemIndex = -1;
 	
+	// NSLog(@"Creature %d Loaded.", def.identifier);
+	
 	return [def autorelease];
 }
 
@@ -177,6 +179,11 @@
 	
 	return (([item isAttackItem] && [occu canUseAttackItem:((AttackItemDefinition *)item).itemCategory])
 		 || ([item isDefendItem] && [occu canUseDefendItem:((DefendItemDefinition *)item).itemCategory]));
+}
+
+-(BOOL) isMagicalCreature
+{
+	return [data.magicList count] > 0;
 }
 
 -(void) dealloc

@@ -94,6 +94,18 @@
 	[field addEnemy: enemy3 Position:CGPointMake(6, 18)];
 	[enemy3 release];
 	
+	FDEnemy *enemy4 = [[FDEnemy alloc] initWithDefinition:706 Id:14];
+	[field addEnemy: enemy4 Position:CGPointMake(7, 18)];
+	[enemy4 release];
+	
+	FDEnemy *enemy5 = [[FDEnemy alloc] initWithDefinition:708 Id:15];
+	[field addEnemy: enemy5 Position:CGPointMake(6, 17)];
+	[enemy5 release];
+	
+	FDEnemy *enemy6 = [[FDEnemy alloc] initWithDefinition:712 Id:16];
+	[field addEnemy: enemy6 Position:CGPointMake(5, 18)];
+	[enemy6 release];
+	
 	FDTreasure *treasure1 = [FDTreasure treasureWithType:TreasureType_Red Item:101];
 	[field addObject:treasure1 Position:CGPointMake(4, 2)];
 }

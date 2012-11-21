@@ -3162,23 +3162,6 @@
 		02DB9C55165346080081EC45 /* Fight-706-2-12.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB93F0165346030081EC45 /* Fight-706-2-12.png */; };
 		02DB9C56165346080081EC45 /* Fight-706-2-13.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB93F1165346030081EC45 /* Fight-706-2-13.png */; };
 		02DB9C57165346080081EC45 /* Fight-706-2-14.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB93F2165346030081EC45 /* Fight-706-2-14.png */; };
-		02DB9C58165346080081EC45 /* Fight-706-1-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB93F4165346030081EC45 /* Fight-706-1-01.png */; };
-		02DB9C59165346080081EC45 /* Fight-706-1-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB93F5165346030081EC45 /* Fight-706-1-02.png */; };
-		02DB9C5A165346080081EC45 /* Fight-706-1-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB93F6165346030081EC45 /* Fight-706-1-03.png */; };
-		02DB9C5B165346080081EC45 /* Fight-706-1-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB93F7165346030081EC45 /* Fight-706-1-04.png */; };
-		02DB9C5C165346080081EC45 /* Fight-706-2-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB93F8165346030081EC45 /* Fight-706-2-01.png */; };
-		02DB9C5D165346080081EC45 /* Fight-706-2-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB93F9165346030081EC45 /* Fight-706-2-02.png */; };
-		02DB9C5E165346080081EC45 /* Fight-706-2-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB93FA165346030081EC45 /* Fight-706-2-03.png */; };
-		02DB9C5F165346080081EC45 /* Fight-706-2-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB93FB165346030081EC45 /* Fight-706-2-04.png */; };
-		02DB9C60165346080081EC45 /* Fight-706-2-05.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB93FC165346030081EC45 /* Fight-706-2-05.png */; };
-		02DB9C61165346080081EC45 /* Fight-706-2-06.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB93FD165346030081EC45 /* Fight-706-2-06.png */; };
-		02DB9C62165346080081EC45 /* Fight-706-2-07.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB93FE165346030081EC45 /* Fight-706-2-07.png */; };
-		02DB9C63165346080081EC45 /* Fight-706-2-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB93FF165346030081EC45 /* Fight-706-2-08.png */; };
-		02DB9C64165346080081EC45 /* Fight-706-2-09.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9400165346030081EC45 /* Fight-706-2-09.png */; };
-		02DB9C65165346080081EC45 /* Fight-706-2-10.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9401165346030081EC45 /* Fight-706-2-10.png */; };
-		02DB9C66165346080081EC45 /* Fight-706-2-11.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9402165346030081EC45 /* Fight-706-2-11.png */; };
-		02DB9C67165346080081EC45 /* Fight-706-2-12.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9403165346030081EC45 /* Fight-706-2-12.png */; };
-		02DB9C68165346080081EC45 /* Fight-706-2-13.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9404165346030081EC45 /* Fight-706-2-13.png */; };
 		02DB9C69165346080081EC45 /* Fight-708-1-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9406165346030081EC45 /* Fight-708-1-01.png */; };
 		02DB9C6A165346080081EC45 /* Fight-708-1-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9407165346030081EC45 /* Fight-708-1-02.png */; };
 		02DB9C6B165346080081EC45 /* Fight-708-1-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9408165346030081EC45 /* Fight-708-1-03.png */; };
@@ -3244,20 +3227,6 @@
 		02DB9CA7165346080081EC45 /* Fight-710-3-10.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9446165346030081EC45 /* Fight-710-3-10.png */; };
 		02DB9CA8165346080081EC45 /* Fight-710-3-11.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9447165346030081EC45 /* Fight-710-3-11.png */; };
 		02DB9CA9165346080081EC45 /* Fight-710-3-12.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9448165346030081EC45 /* Fight-710-3-12.png */; };
-		02DB9CAA165346080081EC45 /* Fight-711-1-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB944A165346030081EC45 /* Fight-711-1-01.png */; };
-		02DB9CAB165346080081EC45 /* Fight-711-2-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB944B165346030081EC45 /* Fight-711-2-01.png */; };
-		02DB9CAC165346080081EC45 /* Fight-711-2-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB944C165346030081EC45 /* Fight-711-2-02.png */; };
-		02DB9CAD165346080081EC45 /* Fight-711-2-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB944D165346030081EC45 /* Fight-711-2-03.png */; };
-		02DB9CAE165346080081EC45 /* Fight-711-2-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB944E165346030081EC45 /* Fight-711-2-04.png */; };
-		02DB9CAF165346080081EC45 /* Fight-711-2-05.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB944F165346030081EC45 /* Fight-711-2-05.png */; };
-		02DB9CB0165346080081EC45 /* Fight-712-1-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9451165346030081EC45 /* Fight-712-1-01.png */; };
-		02DB9CB1165346080081EC45 /* Fight-712-1-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9452165346030081EC45 /* Fight-712-1-02.png */; };
-		02DB9CB2165346080081EC45 /* Fight-712-1-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9453165346030081EC45 /* Fight-712-1-03.png */; };
-		02DB9CB3165346080081EC45 /* Fight-712-1-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9454165346030081EC45 /* Fight-712-1-04.png */; };
-		02DB9CB4165346080081EC45 /* Fight-712-2-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9455165346030081EC45 /* Fight-712-2-01.png */; };
-		02DB9CB5165346080081EC45 /* Fight-712-2-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9456165346030081EC45 /* Fight-712-2-02.png */; };
-		02DB9CB6165346080081EC45 /* Fight-712-2-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9457165346030081EC45 /* Fight-712-2-03.png */; };
-		02DB9CB7165346080081EC45 /* Fight-712-2-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9458165346030081EC45 /* Fight-712-2-04.png */; };
 		02DB9CB8165346080081EC45 /* Fight-713-1-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB945A165346030081EC45 /* Fight-713-1-01.png */; };
 		02DB9CB9165346080081EC45 /* Fight-713-1-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB945B165346030081EC45 /* Fight-713-1-02.png */; };
 		02DB9CBA165346080081EC45 /* Fight-713-1-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB945C165346030081EC45 /* Fight-713-1-03.png */; };
@@ -4059,6 +4028,34 @@
 		02DB9FEA16534B030081EC45 /* Fight-901-2-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9FE916534B030081EC45 /* Fight-901-2-01.png */; };
 		02DBA0691657ED820081EC45 /* EventChapter4.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DBA0681657ED820081EC45 /* EventChapter4.m */; };
 		02DBA06C1657F5C60081EC45 /* ArrivePositionCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DBA06B1657F5C60081EC45 /* ArrivePositionCondition.m */; };
+		02DBA0BF165A6B070081EC45 /* Fight-711-1-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA0BA165A6B060081EC45 /* Fight-711-1-01.png */; };
+		02DBA0C0165A6B070081EC45 /* Fight-711-2-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA0BB165A6B060081EC45 /* Fight-711-2-01.png */; };
+		02DBA0C1165A6B070081EC45 /* Fight-711-2-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA0BC165A6B070081EC45 /* Fight-711-2-02.png */; };
+		02DBA0C2165A6B070081EC45 /* Fight-711-2-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA0BD165A6B070081EC45 /* Fight-711-2-03.png */; };
+		02DBA0C3165A6B070081EC45 /* Fight-711-2-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA0BE165A6B070081EC45 /* Fight-711-2-04.png */; };
+		02DBA0CA165A6B140081EC45 /* Fight-712-1-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA0C4165A6B140081EC45 /* Fight-712-1-01.png */; };
+		02DBA0CB165A6B140081EC45 /* Fight-712-2-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA0C5165A6B140081EC45 /* Fight-712-2-01.png */; };
+		02DBA0CC165A6B140081EC45 /* Fight-712-2-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA0C6165A6B140081EC45 /* Fight-712-2-02.png */; };
+		02DBA0CD165A6B140081EC45 /* Fight-712-2-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA0C7165A6B140081EC45 /* Fight-712-2-03.png */; };
+		02DBA0CE165A6B140081EC45 /* Fight-712-2-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA0C8165A6B140081EC45 /* Fight-712-2-04.png */; };
+		02DBA0CF165A6B140081EC45 /* Fight-712-2-05.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA0C9165A6B140081EC45 /* Fight-712-2-05.png */; };
+		02DBA16F165A8BC50081EC45 /* Fight-707-1-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA15E165A8BC50081EC45 /* Fight-707-1-01.png */; };
+		02DBA170165A8BC50081EC45 /* Fight-707-1-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA15F165A8BC50081EC45 /* Fight-707-1-02.png */; };
+		02DBA171165A8BC50081EC45 /* Fight-707-1-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA160165A8BC50081EC45 /* Fight-707-1-03.png */; };
+		02DBA172165A8BC50081EC45 /* Fight-707-1-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA161165A8BC50081EC45 /* Fight-707-1-04.png */; };
+		02DBA173165A8BC50081EC45 /* Fight-707-2-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA162165A8BC50081EC45 /* Fight-707-2-01.png */; };
+		02DBA174165A8BC50081EC45 /* Fight-707-2-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA163165A8BC50081EC45 /* Fight-707-2-02.png */; };
+		02DBA175165A8BC50081EC45 /* Fight-707-2-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA164165A8BC50081EC45 /* Fight-707-2-03.png */; };
+		02DBA176165A8BC50081EC45 /* Fight-707-2-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA165165A8BC50081EC45 /* Fight-707-2-04.png */; };
+		02DBA177165A8BC50081EC45 /* Fight-707-2-05.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA166165A8BC50081EC45 /* Fight-707-2-05.png */; };
+		02DBA178165A8BC50081EC45 /* Fight-707-2-06.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA167165A8BC50081EC45 /* Fight-707-2-06.png */; };
+		02DBA179165A8BC50081EC45 /* Fight-707-2-07.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA168165A8BC50081EC45 /* Fight-707-2-07.png */; };
+		02DBA17A165A8BC50081EC45 /* Fight-707-2-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA169165A8BC50081EC45 /* Fight-707-2-08.png */; };
+		02DBA17B165A8BC50081EC45 /* Fight-707-2-09.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA16A165A8BC50081EC45 /* Fight-707-2-09.png */; };
+		02DBA17C165A8BC50081EC45 /* Fight-707-2-10.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA16B165A8BC50081EC45 /* Fight-707-2-10.png */; };
+		02DBA17D165A8BC50081EC45 /* Fight-707-2-11.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA16C165A8BC50081EC45 /* Fight-707-2-11.png */; };
+		02DBA17E165A8BC50081EC45 /* Fight-707-2-12.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA16D165A8BC50081EC45 /* Fight-707-2-12.png */; };
+		02DBA17F165A8BC50081EC45 /* Fight-707-2-13.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA16E165A8BC50081EC45 /* Fight-707-2-13.png */; };
 		02E422DC160E257E0071FA29 /* Shopping2ShowSellItemsDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E422DB160E257E0071FA29 /* Shopping2ShowSellItemsDialog.m */; };
 		02E422F3160F37970071FA29 /* Shop_Buy_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 02E422EC160F37970071FA29 /* Shop_Buy_0.png */; };
 		02E422F4160F37970071FA29 /* Shop_Equip_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 02E422ED160F37970071FA29 /* Shop_Equip_0.png */; };
@@ -7668,23 +7665,6 @@
 		02DB93F0165346030081EC45 /* Fight-706-2-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-706-2-12.png"; sourceTree = "<group>"; };
 		02DB93F1165346030081EC45 /* Fight-706-2-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-706-2-13.png"; sourceTree = "<group>"; };
 		02DB93F2165346030081EC45 /* Fight-706-2-14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-706-2-14.png"; sourceTree = "<group>"; };
-		02DB93F4165346030081EC45 /* Fight-706-1-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-706-1-01.png"; sourceTree = "<group>"; };
-		02DB93F5165346030081EC45 /* Fight-706-1-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-706-1-02.png"; sourceTree = "<group>"; };
-		02DB93F6165346030081EC45 /* Fight-706-1-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-706-1-03.png"; sourceTree = "<group>"; };
-		02DB93F7165346030081EC45 /* Fight-706-1-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-706-1-04.png"; sourceTree = "<group>"; };
-		02DB93F8165346030081EC45 /* Fight-706-2-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-706-2-01.png"; sourceTree = "<group>"; };
-		02DB93F9165346030081EC45 /* Fight-706-2-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-706-2-02.png"; sourceTree = "<group>"; };
-		02DB93FA165346030081EC45 /* Fight-706-2-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-706-2-03.png"; sourceTree = "<group>"; };
-		02DB93FB165346030081EC45 /* Fight-706-2-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-706-2-04.png"; sourceTree = "<group>"; };
-		02DB93FC165346030081EC45 /* Fight-706-2-05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-706-2-05.png"; sourceTree = "<group>"; };
-		02DB93FD165346030081EC45 /* Fight-706-2-06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-706-2-06.png"; sourceTree = "<group>"; };
-		02DB93FE165346030081EC45 /* Fight-706-2-07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-706-2-07.png"; sourceTree = "<group>"; };
-		02DB93FF165346030081EC45 /* Fight-706-2-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-706-2-08.png"; sourceTree = "<group>"; };
-		02DB9400165346030081EC45 /* Fight-706-2-09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-706-2-09.png"; sourceTree = "<group>"; };
-		02DB9401165346030081EC45 /* Fight-706-2-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-706-2-10.png"; sourceTree = "<group>"; };
-		02DB9402165346030081EC45 /* Fight-706-2-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-706-2-11.png"; sourceTree = "<group>"; };
-		02DB9403165346030081EC45 /* Fight-706-2-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-706-2-12.png"; sourceTree = "<group>"; };
-		02DB9404165346030081EC45 /* Fight-706-2-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-706-2-13.png"; sourceTree = "<group>"; };
 		02DB9406165346030081EC45 /* Fight-708-1-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-708-1-01.png"; sourceTree = "<group>"; };
 		02DB9407165346030081EC45 /* Fight-708-1-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-708-1-02.png"; sourceTree = "<group>"; };
 		02DB9408165346030081EC45 /* Fight-708-1-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-708-1-03.png"; sourceTree = "<group>"; };
@@ -7750,20 +7730,6 @@
 		02DB9446165346030081EC45 /* Fight-710-3-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-710-3-10.png"; sourceTree = "<group>"; };
 		02DB9447165346030081EC45 /* Fight-710-3-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-710-3-11.png"; sourceTree = "<group>"; };
 		02DB9448165346030081EC45 /* Fight-710-3-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-710-3-12.png"; sourceTree = "<group>"; };
-		02DB944A165346030081EC45 /* Fight-711-1-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-711-1-01.png"; sourceTree = "<group>"; };
-		02DB944B165346030081EC45 /* Fight-711-2-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-711-2-01.png"; sourceTree = "<group>"; };
-		02DB944C165346030081EC45 /* Fight-711-2-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-711-2-02.png"; sourceTree = "<group>"; };
-		02DB944D165346030081EC45 /* Fight-711-2-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-711-2-03.png"; sourceTree = "<group>"; };
-		02DB944E165346030081EC45 /* Fight-711-2-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-711-2-04.png"; sourceTree = "<group>"; };
-		02DB944F165346030081EC45 /* Fight-711-2-05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-711-2-05.png"; sourceTree = "<group>"; };
-		02DB9451165346030081EC45 /* Fight-712-1-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-712-1-01.png"; sourceTree = "<group>"; };
-		02DB9452165346030081EC45 /* Fight-712-1-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-712-1-02.png"; sourceTree = "<group>"; };
-		02DB9453165346030081EC45 /* Fight-712-1-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-712-1-03.png"; sourceTree = "<group>"; };
-		02DB9454165346030081EC45 /* Fight-712-1-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-712-1-04.png"; sourceTree = "<group>"; };
-		02DB9455165346030081EC45 /* Fight-712-2-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-712-2-01.png"; sourceTree = "<group>"; };
-		02DB9456165346030081EC45 /* Fight-712-2-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-712-2-02.png"; sourceTree = "<group>"; };
-		02DB9457165346030081EC45 /* Fight-712-2-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-712-2-03.png"; sourceTree = "<group>"; };
-		02DB9458165346030081EC45 /* Fight-712-2-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-712-2-04.png"; sourceTree = "<group>"; };
 		02DB945A165346030081EC45 /* Fight-713-1-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-713-1-01.png"; sourceTree = "<group>"; };
 		02DB945B165346030081EC45 /* Fight-713-1-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-713-1-02.png"; sourceTree = "<group>"; };
 		02DB945C165346030081EC45 /* Fight-713-1-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-713-1-03.png"; sourceTree = "<group>"; };
@@ -8567,6 +8533,34 @@
 		02DBA0681657ED820081EC45 /* EventChapter4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter4.m; sourceTree = "<group>"; };
 		02DBA06A1657F5C60081EC45 /* ArrivePositionCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrivePositionCondition.h; sourceTree = "<group>"; };
 		02DBA06B1657F5C60081EC45 /* ArrivePositionCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrivePositionCondition.m; sourceTree = "<group>"; };
+		02DBA0BA165A6B060081EC45 /* Fight-711-1-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-711-1-01.png"; sourceTree = "<group>"; };
+		02DBA0BB165A6B060081EC45 /* Fight-711-2-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-711-2-01.png"; sourceTree = "<group>"; };
+		02DBA0BC165A6B070081EC45 /* Fight-711-2-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-711-2-02.png"; sourceTree = "<group>"; };
+		02DBA0BD165A6B070081EC45 /* Fight-711-2-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-711-2-03.png"; sourceTree = "<group>"; };
+		02DBA0BE165A6B070081EC45 /* Fight-711-2-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-711-2-04.png"; sourceTree = "<group>"; };
+		02DBA0C4165A6B140081EC45 /* Fight-712-1-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-712-1-01.png"; sourceTree = "<group>"; };
+		02DBA0C5165A6B140081EC45 /* Fight-712-2-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-712-2-01.png"; sourceTree = "<group>"; };
+		02DBA0C6165A6B140081EC45 /* Fight-712-2-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-712-2-02.png"; sourceTree = "<group>"; };
+		02DBA0C7165A6B140081EC45 /* Fight-712-2-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-712-2-03.png"; sourceTree = "<group>"; };
+		02DBA0C8165A6B140081EC45 /* Fight-712-2-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-712-2-04.png"; sourceTree = "<group>"; };
+		02DBA0C9165A6B140081EC45 /* Fight-712-2-05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-712-2-05.png"; sourceTree = "<group>"; };
+		02DBA15E165A8BC50081EC45 /* Fight-707-1-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-707-1-01.png"; sourceTree = "<group>"; };
+		02DBA15F165A8BC50081EC45 /* Fight-707-1-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-707-1-02.png"; sourceTree = "<group>"; };
+		02DBA160165A8BC50081EC45 /* Fight-707-1-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-707-1-03.png"; sourceTree = "<group>"; };
+		02DBA161165A8BC50081EC45 /* Fight-707-1-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-707-1-04.png"; sourceTree = "<group>"; };
+		02DBA162165A8BC50081EC45 /* Fight-707-2-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-707-2-01.png"; sourceTree = "<group>"; };
+		02DBA163165A8BC50081EC45 /* Fight-707-2-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-707-2-02.png"; sourceTree = "<group>"; };
+		02DBA164165A8BC50081EC45 /* Fight-707-2-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-707-2-03.png"; sourceTree = "<group>"; };
+		02DBA165165A8BC50081EC45 /* Fight-707-2-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-707-2-04.png"; sourceTree = "<group>"; };
+		02DBA166165A8BC50081EC45 /* Fight-707-2-05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-707-2-05.png"; sourceTree = "<group>"; };
+		02DBA167165A8BC50081EC45 /* Fight-707-2-06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-707-2-06.png"; sourceTree = "<group>"; };
+		02DBA168165A8BC50081EC45 /* Fight-707-2-07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-707-2-07.png"; sourceTree = "<group>"; };
+		02DBA169165A8BC50081EC45 /* Fight-707-2-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-707-2-08.png"; sourceTree = "<group>"; };
+		02DBA16A165A8BC50081EC45 /* Fight-707-2-09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-707-2-09.png"; sourceTree = "<group>"; };
+		02DBA16B165A8BC50081EC45 /* Fight-707-2-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-707-2-10.png"; sourceTree = "<group>"; };
+		02DBA16C165A8BC50081EC45 /* Fight-707-2-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-707-2-11.png"; sourceTree = "<group>"; };
+		02DBA16D165A8BC50081EC45 /* Fight-707-2-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-707-2-12.png"; sourceTree = "<group>"; };
+		02DBA16E165A8BC50081EC45 /* Fight-707-2-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-707-2-13.png"; sourceTree = "<group>"; };
 		02E422DA160E257E0071FA29 /* Shopping2ShowSellItemsDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shopping2ShowSellItemsDialog.h; sourceTree = "<group>"; };
 		02E422DB160E257E0071FA29 /* Shopping2ShowSellItemsDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shopping2ShowSellItemsDialog.m; sourceTree = "<group>"; };
 		02E422EC160F37970071FA29 /* Shop_Buy_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shop_Buy_0.png; path = Others/Shop_Buy_0.png; sourceTree = "<group>"; };
@@ -14302,23 +14296,23 @@
 		02DB93F3165346030081EC45 /* 707 */ = {
 			isa = PBXGroup;
 			children = (
-				02DB93F4165346030081EC45 /* Fight-706-1-01.png */,
-				02DB93F5165346030081EC45 /* Fight-706-1-02.png */,
-				02DB93F6165346030081EC45 /* Fight-706-1-03.png */,
-				02DB93F7165346030081EC45 /* Fight-706-1-04.png */,
-				02DB93F8165346030081EC45 /* Fight-706-2-01.png */,
-				02DB93F9165346030081EC45 /* Fight-706-2-02.png */,
-				02DB93FA165346030081EC45 /* Fight-706-2-03.png */,
-				02DB93FB165346030081EC45 /* Fight-706-2-04.png */,
-				02DB93FC165346030081EC45 /* Fight-706-2-05.png */,
-				02DB93FD165346030081EC45 /* Fight-706-2-06.png */,
-				02DB93FE165346030081EC45 /* Fight-706-2-07.png */,
-				02DB93FF165346030081EC45 /* Fight-706-2-08.png */,
-				02DB9400165346030081EC45 /* Fight-706-2-09.png */,
-				02DB9401165346030081EC45 /* Fight-706-2-10.png */,
-				02DB9402165346030081EC45 /* Fight-706-2-11.png */,
-				02DB9403165346030081EC45 /* Fight-706-2-12.png */,
-				02DB9404165346030081EC45 /* Fight-706-2-13.png */,
+				02DBA15E165A8BC50081EC45 /* Fight-707-1-01.png */,
+				02DBA15F165A8BC50081EC45 /* Fight-707-1-02.png */,
+				02DBA160165A8BC50081EC45 /* Fight-707-1-03.png */,
+				02DBA161165A8BC50081EC45 /* Fight-707-1-04.png */,
+				02DBA162165A8BC50081EC45 /* Fight-707-2-01.png */,
+				02DBA163165A8BC50081EC45 /* Fight-707-2-02.png */,
+				02DBA164165A8BC50081EC45 /* Fight-707-2-03.png */,
+				02DBA165165A8BC50081EC45 /* Fight-707-2-04.png */,
+				02DBA166165A8BC50081EC45 /* Fight-707-2-05.png */,
+				02DBA167165A8BC50081EC45 /* Fight-707-2-06.png */,
+				02DBA168165A8BC50081EC45 /* Fight-707-2-07.png */,
+				02DBA169165A8BC50081EC45 /* Fight-707-2-08.png */,
+				02DBA16A165A8BC50081EC45 /* Fight-707-2-09.png */,
+				02DBA16B165A8BC50081EC45 /* Fight-707-2-10.png */,
+				02DBA16C165A8BC50081EC45 /* Fight-707-2-11.png */,
+				02DBA16D165A8BC50081EC45 /* Fight-707-2-12.png */,
+				02DBA16E165A8BC50081EC45 /* Fight-707-2-13.png */,
 			);
 			name = 707;
 			path = Fights/707;
@@ -14416,12 +14410,11 @@
 		02DB9449165346030081EC45 /* 711 */ = {
 			isa = PBXGroup;
 			children = (
-				02DB944A165346030081EC45 /* Fight-711-1-01.png */,
-				02DB944B165346030081EC45 /* Fight-711-2-01.png */,
-				02DB944C165346030081EC45 /* Fight-711-2-02.png */,
-				02DB944D165346030081EC45 /* Fight-711-2-03.png */,
-				02DB944E165346030081EC45 /* Fight-711-2-04.png */,
-				02DB944F165346030081EC45 /* Fight-711-2-05.png */,
+				02DBA0BA165A6B060081EC45 /* Fight-711-1-01.png */,
+				02DBA0BB165A6B060081EC45 /* Fight-711-2-01.png */,
+				02DBA0BC165A6B070081EC45 /* Fight-711-2-02.png */,
+				02DBA0BD165A6B070081EC45 /* Fight-711-2-03.png */,
+				02DBA0BE165A6B070081EC45 /* Fight-711-2-04.png */,
 			);
 			name = 711;
 			path = Fights/711;
@@ -14430,14 +14423,12 @@
 		02DB9450165346030081EC45 /* 712 */ = {
 			isa = PBXGroup;
 			children = (
-				02DB9451165346030081EC45 /* Fight-712-1-01.png */,
-				02DB9452165346030081EC45 /* Fight-712-1-02.png */,
-				02DB9453165346030081EC45 /* Fight-712-1-03.png */,
-				02DB9454165346030081EC45 /* Fight-712-1-04.png */,
-				02DB9455165346030081EC45 /* Fight-712-2-01.png */,
-				02DB9456165346030081EC45 /* Fight-712-2-02.png */,
-				02DB9457165346030081EC45 /* Fight-712-2-03.png */,
-				02DB9458165346030081EC45 /* Fight-712-2-04.png */,
+				02DBA0C4165A6B140081EC45 /* Fight-712-1-01.png */,
+				02DBA0C5165A6B140081EC45 /* Fight-712-2-01.png */,
+				02DBA0C6165A6B140081EC45 /* Fight-712-2-02.png */,
+				02DBA0C7165A6B140081EC45 /* Fight-712-2-03.png */,
+				02DBA0C8165A6B140081EC45 /* Fight-712-2-04.png */,
+				02DBA0C9165A6B140081EC45 /* Fight-712-2-05.png */,
 			);
 			name = 712;
 			path = Fights/712;
@@ -19214,23 +19205,6 @@
 				02DB9C55165346080081EC45 /* Fight-706-2-12.png in Resources */,
 				02DB9C56165346080081EC45 /* Fight-706-2-13.png in Resources */,
 				02DB9C57165346080081EC45 /* Fight-706-2-14.png in Resources */,
-				02DB9C58165346080081EC45 /* Fight-706-1-01.png in Resources */,
-				02DB9C59165346080081EC45 /* Fight-706-1-02.png in Resources */,
-				02DB9C5A165346080081EC45 /* Fight-706-1-03.png in Resources */,
-				02DB9C5B165346080081EC45 /* Fight-706-1-04.png in Resources */,
-				02DB9C5C165346080081EC45 /* Fight-706-2-01.png in Resources */,
-				02DB9C5D165346080081EC45 /* Fight-706-2-02.png in Resources */,
-				02DB9C5E165346080081EC45 /* Fight-706-2-03.png in Resources */,
-				02DB9C5F165346080081EC45 /* Fight-706-2-04.png in Resources */,
-				02DB9C60165346080081EC45 /* Fight-706-2-05.png in Resources */,
-				02DB9C61165346080081EC45 /* Fight-706-2-06.png in Resources */,
-				02DB9C62165346080081EC45 /* Fight-706-2-07.png in Resources */,
-				02DB9C63165346080081EC45 /* Fight-706-2-08.png in Resources */,
-				02DB9C64165346080081EC45 /* Fight-706-2-09.png in Resources */,
-				02DB9C65165346080081EC45 /* Fight-706-2-10.png in Resources */,
-				02DB9C66165346080081EC45 /* Fight-706-2-11.png in Resources */,
-				02DB9C67165346080081EC45 /* Fight-706-2-12.png in Resources */,
-				02DB9C68165346080081EC45 /* Fight-706-2-13.png in Resources */,
 				02DB9C69165346080081EC45 /* Fight-708-1-01.png in Resources */,
 				02DB9C6A165346080081EC45 /* Fight-708-1-02.png in Resources */,
 				02DB9C6B165346080081EC45 /* Fight-708-1-03.png in Resources */,
@@ -19296,20 +19270,6 @@
 				02DB9CA7165346080081EC45 /* Fight-710-3-10.png in Resources */,
 				02DB9CA8165346080081EC45 /* Fight-710-3-11.png in Resources */,
 				02DB9CA9165346080081EC45 /* Fight-710-3-12.png in Resources */,
-				02DB9CAA165346080081EC45 /* Fight-711-1-01.png in Resources */,
-				02DB9CAB165346080081EC45 /* Fight-711-2-01.png in Resources */,
-				02DB9CAC165346080081EC45 /* Fight-711-2-02.png in Resources */,
-				02DB9CAD165346080081EC45 /* Fight-711-2-03.png in Resources */,
-				02DB9CAE165346080081EC45 /* Fight-711-2-04.png in Resources */,
-				02DB9CAF165346080081EC45 /* Fight-711-2-05.png in Resources */,
-				02DB9CB0165346080081EC45 /* Fight-712-1-01.png in Resources */,
-				02DB9CB1165346080081EC45 /* Fight-712-1-02.png in Resources */,
-				02DB9CB2165346080081EC45 /* Fight-712-1-03.png in Resources */,
-				02DB9CB3165346080081EC45 /* Fight-712-1-04.png in Resources */,
-				02DB9CB4165346080081EC45 /* Fight-712-2-01.png in Resources */,
-				02DB9CB5165346080081EC45 /* Fight-712-2-02.png in Resources */,
-				02DB9CB6165346080081EC45 /* Fight-712-2-03.png in Resources */,
-				02DB9CB7165346080081EC45 /* Fight-712-2-04.png in Resources */,
 				02DB9CB8165346080081EC45 /* Fight-713-1-01.png in Resources */,
 				02DB9CB9165346080081EC45 /* Fight-713-1-02.png in Resources */,
 				02DB9CBA165346080081EC45 /* Fight-713-1-03.png in Resources */,
@@ -20109,6 +20069,34 @@
 				02DB9FE5165347760081EC45 /* Fight-019-2-12.png in Resources */,
 				02DB9FE6165347760081EC45 /* Fight-019-2-13.png in Resources */,
 				02DB9FEA16534B030081EC45 /* Fight-901-2-01.png in Resources */,
+				02DBA0BF165A6B070081EC45 /* Fight-711-1-01.png in Resources */,
+				02DBA0C0165A6B070081EC45 /* Fight-711-2-01.png in Resources */,
+				02DBA0C1165A6B070081EC45 /* Fight-711-2-02.png in Resources */,
+				02DBA0C2165A6B070081EC45 /* Fight-711-2-03.png in Resources */,
+				02DBA0C3165A6B070081EC45 /* Fight-711-2-04.png in Resources */,
+				02DBA0CA165A6B140081EC45 /* Fight-712-1-01.png in Resources */,
+				02DBA0CB165A6B140081EC45 /* Fight-712-2-01.png in Resources */,
+				02DBA0CC165A6B140081EC45 /* Fight-712-2-02.png in Resources */,
+				02DBA0CD165A6B140081EC45 /* Fight-712-2-03.png in Resources */,
+				02DBA0CE165A6B140081EC45 /* Fight-712-2-04.png in Resources */,
+				02DBA0CF165A6B140081EC45 /* Fight-712-2-05.png in Resources */,
+				02DBA16F165A8BC50081EC45 /* Fight-707-1-01.png in Resources */,
+				02DBA170165A8BC50081EC45 /* Fight-707-1-02.png in Resources */,
+				02DBA171165A8BC50081EC45 /* Fight-707-1-03.png in Resources */,
+				02DBA172165A8BC50081EC45 /* Fight-707-1-04.png in Resources */,
+				02DBA173165A8BC50081EC45 /* Fight-707-2-01.png in Resources */,
+				02DBA174165A8BC50081EC45 /* Fight-707-2-02.png in Resources */,
+				02DBA175165A8BC50081EC45 /* Fight-707-2-03.png in Resources */,
+				02DBA176165A8BC50081EC45 /* Fight-707-2-04.png in Resources */,
+				02DBA177165A8BC50081EC45 /* Fight-707-2-05.png in Resources */,
+				02DBA178165A8BC50081EC45 /* Fight-707-2-06.png in Resources */,
+				02DBA179165A8BC50081EC45 /* Fight-707-2-07.png in Resources */,
+				02DBA17A165A8BC50081EC45 /* Fight-707-2-08.png in Resources */,
+				02DBA17B165A8BC50081EC45 /* Fight-707-2-09.png in Resources */,
+				02DBA17C165A8BC50081EC45 /* Fight-707-2-10.png in Resources */,
+				02DBA17D165A8BC50081EC45 /* Fight-707-2-11.png in Resources */,
+				02DBA17E165A8BC50081EC45 /* Fight-707-2-12.png in Resources */,
+				02DBA17F165A8BC50081EC45 /* Fight-707-2-13.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

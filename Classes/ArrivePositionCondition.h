@@ -11,7 +11,7 @@
 #import "FDCreature.h"
 
 
-@interface ArrivePositionCondition : NSObject {
+@interface ArrivePositionCondition : FDEventCondition {
 
 	int creatureId;
 	CGPoint eventPosition;

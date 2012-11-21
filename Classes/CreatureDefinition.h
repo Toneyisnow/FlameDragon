@@ -58,6 +58,7 @@
 -(NSString *) getOccupationString;
 
 -(BOOL) canEquip:(int)itemCategory;
+-(BOOL) isMagicalCreature;
 
 @property (nonatomic) int identifier;
 @property (nonatomic, retain) NSString *name;
