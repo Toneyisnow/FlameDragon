@@ -228,10 +228,10 @@ static DataDepot *instance = nil;
 	FDFileStream *file = [[FDFileStream alloc] initWithDataFile:@"Shop" Ext:@"dat"];
 	[file open];
 	
-	int shopCount = [file readInt];
-	for (int m = 0; m < shopCount; m++) {
+	// int shopCount = [file readInt];
+	int chapter;
+	while ((chapter = [file readInt]) > 0) {
 		
-		int chapter = [file readInt];
 		int type = [file readInt];
 		int key = chapter * 10 + type;
 		
