@@ -10,6 +10,8 @@
 #import "EventChapter1.h"
 #import "EventChapter2.h"
 #import "EventChapter3.h"
+#import "EventChapter4.h"
+#import "EventChapter99.h"
 
 @implementation EventLoaderFactory
 
@@ -25,6 +27,12 @@
 			break;
 		case 3:
 			loader = [[EventChapter3 alloc] init];
+			break;
+		case 4:
+			loader = [[EventChapter4 alloc] init];
+			break;
+		case 99:
+			loader = [[EventChapter99 alloc] init];
 			break;
 		default:
 			break;
