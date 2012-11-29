@@ -158,19 +158,19 @@
 -(void) round1_2_1
 {
 	// Enemy
-	FDEnemy *enemy1 = [[FDEnemy alloc] initWithDefinition:701 Id:11];
+	FDEnemy *enemy1 = [[FDEnemy alloc] initWithDefinition:50101 Id:11];
 	[field addEnemy: enemy1 Position:CGPointMake(2, 22)];
 	[enemy1 release];
 	
-	FDEnemy *enemy2 = [[FDEnemy alloc] initWithDefinition:701 Id:12];
+	FDEnemy *enemy2 = [[FDEnemy alloc] initWithDefinition:50101 Id:12];
 	[field addEnemy: enemy2 Position:CGPointMake(3, 22)];
 	[enemy2 release];
 	
-	FDEnemy *enemy3 = [[FDEnemy alloc] initWithDefinition:701 Id:13];
+	FDEnemy *enemy3 = [[FDEnemy alloc] initWithDefinition:50101 Id:13];
 	[field addEnemy: enemy3 Position:CGPointMake(4, 23)];
 	[enemy3 release];
 	
-	FDEnemy *enemy4 = [[FDEnemy alloc] initWithDefinition:701 Id:14];
+	FDEnemy *enemy4 = [[FDEnemy alloc] initWithDefinition:50101 Id:14];
 	[field addEnemy: enemy4 Position:CGPointMake(5, 23)];
 	[enemy4 release];
 	
@@ -199,19 +199,19 @@
 	[field setCursorTo:CGPointMake(3, 3)];
 	
 	// Enemy
-	FDEnemy *enemy5 = [[FDEnemy alloc] initWithDefinition:701 Id:15];
+	FDEnemy *enemy5 = [[FDEnemy alloc] initWithDefinition:50101 Id:15];
 	[field addEnemy: enemy5 Position:CGPointMake(4, 2)];
 	[enemy5 release];
 	
-	FDEnemy *enemy6 = [[FDEnemy alloc] initWithDefinition:701 Id:16];
+	FDEnemy *enemy6 = [[FDEnemy alloc] initWithDefinition:50101 Id:16];
 	[field addEnemy: enemy6 Position:CGPointMake(3, 2)];
 	[enemy6 release];
 	
-	FDEnemy *enemy7 = [[FDEnemy alloc] initWithDefinition:701 Id:17];
+	FDEnemy *enemy7 = [[FDEnemy alloc] initWithDefinition:50101 Id:17];
 	[field addEnemy: enemy7 Position:CGPointMake(2, 3)];
 	[enemy7 release];
 	
-	FDEnemy *enemy8 = [[FDEnemy alloc] initWithDefinition:701 Id:18];
+	FDEnemy *enemy8 = [[FDEnemy alloc] initWithDefinition:50101 Id:18];
 	[field addEnemy: enemy8 Position:CGPointMake(2, 3)];
 	[enemy8 release];
 	
@@ -285,19 +285,19 @@
 	
 	[layers appendToCurrentActivityMethod:@selector(setCursorObjTo:) Param1:[FDPosition positionX:23 Y:23] Param2:nil Obj:field];
 	
-	FDEnemy *enemy1 = [[FDEnemy alloc] initWithDefinition:701 Id:21];
+	FDEnemy *enemy1 = [[FDEnemy alloc] initWithDefinition:50101 Id:21];
 	[field addEnemy:enemy1 Position:CGPointMake(19, 23)];
 	[enemy1 release];
 	
-	FDEnemy *enemy2 = [[FDEnemy alloc] initWithDefinition:701 Id:22];
+	FDEnemy *enemy2 = [[FDEnemy alloc] initWithDefinition:50101 Id:22];
 	[field addEnemy:enemy2 Position:CGPointMake(20,22)];
 	[enemy2 release];
 	
-	FDEnemy *enemy3 = [[FDEnemy alloc] initWithDefinition:701 Id:23];
+	FDEnemy *enemy3 = [[FDEnemy alloc] initWithDefinition:50101 Id:23];
 	[field addEnemy:enemy3 Position:CGPointMake(21, 21)];
 	[enemy3 release];
 	
-	FDEnemy *enemy4 = [[FDEnemy alloc] initWithDefinition:701 Id:24];
+	FDEnemy *enemy4 = [[FDEnemy alloc] initWithDefinition:50101 Id:24];
 	[field addEnemy:enemy4 Position:CGPointMake(22, 21)];
 	[enemy4 release];
 	
@@ -324,23 +324,23 @@
 {
 	NSLog(@"Event round5 triggered. Boss.");
 	
-	FDEnemy *enemy1 = [[FDEnemy alloc] initWithDefinition:701 Id:25];
+	FDEnemy *enemy1 = [[FDEnemy alloc] initWithDefinition:50101 Id:25];
 	[field addEnemy:enemy1 Position:CGPointMake(1, 22)];
 	[enemy1 release];
 	
-	FDEnemy *enemy2 = [[FDEnemy alloc] initWithDefinition:701 Id:26];
+	FDEnemy *enemy2 = [[FDEnemy alloc] initWithDefinition:50101 Id:26];
 	[field addEnemy:enemy2 Position:CGPointMake(2, 22)];
 	[enemy2 release];
 	
-	FDEnemy *enemy3 = [[FDEnemy alloc] initWithDefinition:701 Id:27];
+	FDEnemy *enemy3 = [[FDEnemy alloc] initWithDefinition:50101 Id:27];
 	[field addEnemy:enemy3 Position:CGPointMake(5, 24)];
 	[enemy3 release];
 	
-	FDEnemy *enemy4 = [[FDEnemy alloc] initWithDefinition:701 Id:28];
+	FDEnemy *enemy4 = [[FDEnemy alloc] initWithDefinition:50101 Id:28];
 	[field addEnemy:enemy4 Position:CGPointMake(5, 24)];
 	[enemy4 release];
 	
-	FDEnemy *enemyBoss = [[FDEnemy alloc] initWithDefinition:702 Id:29];
+	FDEnemy *enemyBoss = [[FDEnemy alloc] initWithDefinition:50102 Id:29];
 	[field addEnemy:enemyBoss Position:CGPointMake(4, 23)];
 	[enemyBoss release];
 	
@@ -370,19 +370,19 @@
 {
 	NSLog(@"Event round6 triggered. Npc.");
 	
-	FDNpc *npc1 = [[FDNpc alloc] initWithDefinition:703 Id:31];
+	FDNpc *npc1 = [[FDNpc alloc] initWithDefinition:50103 Id:31];
 	[field addNpc:npc1 Position:CGPointMake(24, 15)];
 	[npc1 release];
 
-	FDNpc *npc2 = [[FDNpc alloc] initWithDefinition:703 Id:32];
+	FDNpc *npc2 = [[FDNpc alloc] initWithDefinition:50103 Id:32];
 	[field addNpc:npc2 Position:CGPointMake(24, 15)];
 	[npc2 release];
 	
-	FDNpc *npc3 = [[FDNpc alloc] initWithDefinition:703 Id:33];
+	FDNpc *npc3 = [[FDNpc alloc] initWithDefinition:50103 Id:33];
 	[field addNpc:npc3 Position:CGPointMake(24, 15)];
 	[npc3 release];
 	
-	FDNpc *npc4 = [[FDNpc alloc] initWithDefinition:703 Id:34];
+	FDNpc *npc4 = [[FDNpc alloc] initWithDefinition:50103 Id:34];
 	[field addNpc:npc4 Position:CGPointMake(24, 15)];
 	[npc4 release];
 	
