@@ -84,7 +84,7 @@
 	[field addEnemy: enemy5 Position:CGPointMake(6, 17)];
 	[enemy5 release];
 	
-	FDEnemy *enemy6 = [[FDEnemy alloc] initWithDefinition:50404 Id:16];
+	FDEnemy *enemy6 = [[FDEnemy alloc] initWithDefinition:50405 Id:16];
 	[field addEnemy: enemy6 Position:CGPointMake(5, 18)];
 	[enemy6 release];
 	

@@ -158,6 +158,10 @@
 		reduceHp = 0;
 	}
 	
+	if (magic.magicType == MagicType_Recover ) {
+		reduceHp = -reduceHp;
+	}
+	
 	AttackInformation *aInfo = [[AttackInformation alloc] initWithBefore:target.data.hpCurrent after:(target.data.hpCurrent - reduceHp) isCritical:FALSE];
 	[target updateHP:-reduceHp];
 	
@@ -167,7 +171,7 @@
 +(int) calculateAttackExp:(FDCreature *)creature Target:(FDCreature *)target Info:(AttackInformation *)info
 {
 	// Calculate the experience
-	double reducedHp = (target.data.hpCurrent > 0) ? [info getBefore] - [info getAfter] : target.data.hpMax;
+	double reducedHp = (target.data.hpCurrent > 0) ? abs([info getBefore] - [info getAfter]) : target.data.hpMax;
 	double exp = reducedHp * target.data.level * [target getDefinition].data.ex / (double)creature.data.level / (double)target.data.hpMax;
 	
 	NSLog(@"Experience got %d.", (int)exp);

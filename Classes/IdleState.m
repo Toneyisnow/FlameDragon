@@ -47,12 +47,14 @@
 	}
 	else {
 		// Show system menu
+		if ([FDPosition isEqual:[field getCursorPos] With:position])
+		{
+			[field showMenu:3 At:position];
+			nextState = [[SystemMenuState alloc] initWithLayers:layers Position:position];
+		}
+		
 		[field setCursorTo:position];
-		[field showMenu:3 At:position];
-		nextState = [[SystemMenuState alloc] initWithLayers:layers Position:position];
 	}
-
-	
 }
 
 -(void) pressLeft
