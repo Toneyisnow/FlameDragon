@@ -11,6 +11,13 @@
 
 @implementation FDEnemy
 
+-(id) initWithDefinition:(int)identity Id:(int)i DropItem:(int)itemId
+{
+	self = [self initWithDefinition:identity Id:i Data:nil];
+	dropItemId = itemId;
+	return self;
+}
+
 -(id) initWithDefinition:(int)identity Id:(int)i
 {
 	return [self initWithDefinition:identity Id:i Data:nil];
@@ -27,6 +34,16 @@
 {
 	self = [super init];
 	return self;
+}
+
+-(void) setDropItem:(int)itemId
+{
+	dropItemId = itemId;
+}
+
+-(int) getDropItem
+{
+	return dropItemId;
 }
 
 /*

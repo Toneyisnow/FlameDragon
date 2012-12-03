@@ -32,8 +32,13 @@
 	[self addInt:[creature.data calculatedHit] Dimen:3 Pos:CGPointMake(25, 14)];
 	[self addInt:[creature.data calculatedEv] Dimen:3 Pos:CGPointMake(25, 2)];
 	
+	if ([creature getCreatureType] == CreatureType_Friend) {
+		[self addInt:creature.data.ex Dimen:2 Pos:CGPointMake(65, 38)];
+	} else {
+		[self addInt:100 Dimen:2 Pos:CGPointMake(65, 38)];
+	}
+	
 	[self addInt:creature.data.level Dimen:2 Pos:CGPointMake(65, 50)];
-	[self addInt:creature.data.ex Dimen:2 Pos:CGPointMake(65, 38)];
 	[self addInt:creature.data.mv Dimen:2 Pos:CGPointMake(65, 26)];
 	
 	[self addInt:[creature.data calculatedAp] Dimen:3 Pos:CGPointMake(65, 14)];
@@ -85,7 +90,17 @@
 {
 	NSString *template = (dimen == 2) ? @"%02d" : @"%03d";
 	
-	FDSprite *sprite = [[FDSprite alloc] initWithString:[NSString stringWithFormat:template, value] Size:9];
+	FDSprite *sprite = nil;
+	
+	if ((dimen == 2 && value <= 99) || (dimen == 3 && value <= 999)) {
+		sprite = [[FDSprite alloc] initWithString:[NSString stringWithFormat:template, value] Size:9];
+	} else if (dimen == 2) {
+		sprite = [[FDSprite alloc] initWithString:@"??" Size:9];
+	} else {
+		sprite = [[FDSprite alloc] initWithString:@"???" Size:9];
+	}
+
+
 	[sprite setAnchorPoint:CGPointMake(0, 0)];
 	[sprite setLocation:pos];
 	[baseSprite addSprite:sprite zOrder:1];

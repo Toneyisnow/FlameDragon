@@ -11,6 +11,8 @@
 
 @interface FDEnemy : FDCreature {
 
+	int dropItemId;
+	
 }
 
 // +(FDEnemy *) createEnemyWithId:(int) identifier;
@@ -18,5 +20,8 @@
 -(id) initWithDefinition:(int)identity Id:(int)i;
 -(id) initWithDefinition:(int)identity Id:(int)i Data:(CreatureData *)dat;
 -(id) initWithSavedState:(int)record;
+
+-(void) setDropItem:(int)itemId;
+-(int) getDropItem;
 
 @end

@@ -316,39 +316,81 @@ static DataDepot *instance = nil;
 
 -(ItemDefinition *) getItemDefinition:(int)itemId
 {
-	return [itemDictionary objectForKey:[NSNumber numberWithInt:itemId]];
+	ItemDefinition *def = [itemDictionary objectForKey:[NSNumber numberWithInt:itemId]];
+	
+	if (def == nil) {
+		NSLog(@"DataDepot Error: Cannot find ItemId=%d", itemId);
+		return nil;
+	}
+	return def;
 }
 
 -(MagicDefinition *) getMagicDefinition:(int)magicId
 {
-	return [magicDictionary objectForKey:[NSNumber numberWithInt:magicId]];
+	MagicDefinition *def = [magicDictionary objectForKey:[NSNumber numberWithInt:magicId]];
+	
+	if (def == nil) {
+		NSLog(@"DataDepot Error: Cannot find MagicId=%d", magicId);
+		return nil;
+	}
+	return def;
 }
 
 -(CreatureDefinition *) getCreatureDefinition:(int)creatureDefId
 {
-	return [creatureDictionary objectForKey:[NSNumber numberWithInt:creatureDefId]];
+	CreatureDefinition *def = [creatureDictionary objectForKey:[NSNumber numberWithInt:creatureDefId]];
+	
+	if (def == nil) {
+		NSLog(@"DataDepot Error: Cannot find CreatureDefId=%d", creatureDefId);
+		return nil;
+	}
+	return def;
 }
 
 -(LevelUpDefinition *) getLevelUpDefinition:(int)creatureDefId
 {
-	return [levelUpDictionary objectForKey:[NSNumber numberWithInt:creatureDefId]];
+	LevelUpDefinition *def = [levelUpDictionary objectForKey:[NSNumber numberWithInt:creatureDefId]];
+	
+	if (def == nil) {
+		NSLog(@"DataDepot Error: Cannot find LevelUp Information with CreatureDefId=%d", creatureDefId);
+		return nil;
+	}
+	return def;
 }
 
 -(ShopDefinition *) getShopDefinition:(int)chapterId Type:(DataDepotShopType)shopType
 {
 	int key = chapterId * 10 + shopType;
 	
-	return [shopDictionary objectForKey:[NSNumber numberWithInt:key]];
+	ShopDefinition *def = [shopDictionary objectForKey:[NSNumber numberWithInt:key]];
+	
+	if (def == nil) {
+		NSLog(@"DataDepot Error: Cannot find Shop chapterId=%d shopType=%d", chapterId, shopType);
+		return nil;
+	}
+	return def;
 }
 
 -(OccupationDefinition *) getOccupationDefinition:(int)occupationId
 {
-	return [occupationDictionary objectForKey:[NSNumber numberWithInt:occupationId]];
+	OccupationDefinition *def = [occupationDictionary objectForKey:[NSNumber numberWithInt:occupationId]];
+	
+	if (def == nil) {
+		NSLog(@"DataDepot Error: Cannot find OccupationId=%d", occupationId);
+		return nil;
+	}
+	return def;
 }
 
 -(SecretSequenceDefinition *) getSecretSequenceDefinition:(int)chapterId
 {
-	return [secretSequenceDictionary objectForKey:[NSNumber numberWithInt:chapterId]];
+	SecretSequenceDefinition *def = [secretSequenceDictionary objectForKey:[NSNumber numberWithInt:chapterId]];
+	
+	if (def == nil) {
+		NSLog(@"DataDepot Error: Cannot find SecretSequence for ChapterId=%d", chapterId);
+		return nil;
+	}
+	return def;
 }
 
 -(AnimationDefinition *) getAnimationDefinition:(AnimationType)type Id:(int)aniId
