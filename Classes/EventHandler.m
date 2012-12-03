@@ -26,9 +26,39 @@
 -(void) addEvent:(FDEvent *)event
 {
 	// Assign an Id for that event
-	event.eventId = ++eventIdIndex;
+	//event.eventId = ++eventIdIndex;
 	
 	[events addObject:event];
+}
+
+-(void) deactivateEvent:(int)eventId
+{
+	for (FDEvent *event in events) {
+		if (event.eventId == eventId) {
+			[event deactivate];
+		}
+	}
+}
+
+-(void) setEvent:(int)eventId dependentTo:(int)depId
+{
+	FDEvent *target = nil;
+	FDEvent *dependent = nil;
+	
+	for (FDEvent *event in events) {
+		if (event.eventId == eventId) {
+			target = event;
+		}
+		if (event.eventId == depId) {
+			dependent = event;
+		}
+	}
+	
+	if (target == nil || dependent == nil) {
+		return;
+	}
+	
+	[target setDependentEvent:dependent];
 }
 
 -(void) setInitialEvent:(FDEvent *)event
@@ -46,7 +76,7 @@
 			
 			NSLog(@"Event is triggered.");
 			[event doAction];
-			[events removeObject:event];
+			// [events removeObject:event];
 		}
 	}
 }
@@ -55,7 +85,9 @@
 {
 	NSMutableArray *result = [[NSMutableArray alloc] init];
 	for (FDEvent *event in events) {
-		[result addObject:[NSNumber numberWithInt:event.eventId]];
+		if ([event isActiveEvent]) {
+			[result addObject:[NSNumber numberWithInt:event.eventId]];
+		}
 	}
 	
 	return [result autorelease];
@@ -77,7 +109,7 @@
 		}
 		
 		if (!isActive) {
-			[events removeObject:event];
+			[event deactivate];
 		}
 	}	
 }

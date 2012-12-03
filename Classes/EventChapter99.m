@@ -17,6 +17,13 @@
 
 	[self loadDieEvent:1 Action:@selector(gameOver)];
 	
+	
+	int ed1 = [self loadDieEvent:13 Action:@selector(oneDead)];
+	
+	int e1 = [self loadPositionEvent:11 AtPosition:CGPointMake( 1, 9) Action:@selector(onEscaped1)];
+	
+	[eventHandler setEvent:e1 dependentTo:ed1];
+	
 	NSLog(@"Chapter99 events loaded.");
 
 }
@@ -52,7 +59,6 @@
 	[friend16 release];
 	 */
 	
-	
 	FDNpc *npc = [[FDNpc alloc] initWithDefinition:50103 Id:41];
 	[field addNpc:npc Position:CGPointMake(8, 20)];
 	[npc release];
@@ -69,7 +75,7 @@
 	FDEnemy *enemy3 = [[FDEnemy alloc] initWithDefinition:50101 Id:13];
 	[field addEnemy: enemy3 Position:CGPointMake(6, 18)];
 	[enemy3 release];
-	
+	/*
 	FDEnemy *enemy4 = [[FDEnemy alloc] initWithDefinition:50403 Id:14];
 	[field addEnemy: enemy4 Position:CGPointMake(7, 18)];
 	[enemy4 release];
@@ -81,10 +87,33 @@
 	FDEnemy *enemy6 = [[FDEnemy alloc] initWithDefinition:50405 Id:16];
 	[field addEnemy: enemy6 Position:CGPointMake(5, 18)];
 	[enemy6 release];
-	
+	*/
 	
 	FDTreasure *treasure1 = [FDTreasure treasureWithType:TreasureType_Red Item:101];
 	[field addObject:treasure1 Position:CGPointMake(4, 2)];
+}
+
+-(void) oneDead
+{
+	[self showTalkMessage:4 conversation:3 sequence:1];
+	
+	/*
+	[eventHandler deactivateEvent:ed1];
+	[eventHandler deactivateEvent:ed2];
+	[eventHandler deactivateEvent:ed3];
+	[eventHandler deactivateEvent:ed4];
+	*/
+	
+	[super setAiOfId:11 EscapeTo:CGPointMake( 1, 9)];
+	
+}
+
+-(void) onEscaped1
+{
+	FDCreature *c = [field getCreatureById:11];
+	if (c != nil) {
+		[field removeObject:c];
+	}
 }
 
 @end

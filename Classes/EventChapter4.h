@@ -13,6 +13,11 @@
 
 @interface EventChapter4 : EventLoader {
 
+	int ed1;
+	int ed2;
+	int ed3;
+	int ed4;
+	
 }
 
 @end

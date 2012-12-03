@@ -12,10 +12,14 @@
 @interface FDEvent : NSObject {
 
 	int eventId;
+	bool isActivated;
+	
 	FDEventCondition *condition;
 	
 	id object;
 	SEL method;
+	
+	FDEvent *dependentEvent;
 }
 
 @property (assign) int eventId;
@@ -25,5 +29,10 @@
 -(BOOL) isTriggered:(ActionLayers *)layers;
 
 -(void) doAction;
+
+-(void) deactivate;
+-(BOOL) isActiveEvent;
+
+-(void) setDependentEvent:(FDEvent *)event;
 
 @end

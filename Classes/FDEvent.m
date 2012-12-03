@@ -21,17 +21,38 @@
 	object = o;
 	method = m;
 	
+	dependentEvent = nil;
+	isActivated = TRUE;
+	
 	return self;
 }
 
 -(BOOL) isTriggered:(ActionLayers *)layers
 {
-	return [condition isMatch:layers];
+	return (dependentEvent == nil || ![dependentEvent isActiveEvent])
+			&& isActivated
+			&& [condition isMatch:layers];
 }
 
 -(void) doAction
 {
 	[object performSelector:method];
+	isActivated = FALSE;
+}
+
+-(BOOL) isActiveEvent
+{
+	return isActivated;
+}
+
+-(void) deactivate
+{
+	isActivated = FALSE;
+}
+
+-(void) setDependentEvent:(FDEvent *)event
+{
+	dependentEvent = event;
 }
 
 -(void) dealloc

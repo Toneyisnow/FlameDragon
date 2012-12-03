@@ -23,8 +23,13 @@
 
 -(void) addEvent:(FDEvent *)event;
 
+-(void) deactivateEvent:(int)eventId;
+
 -(void) setInitialEvent:(FDEvent *)event;
 
+-(void) setEvent:(int)eventId dependentTo:(int)depId;
+
+										   
 //-(void) doInitialEvent;
 
 -(NSMutableArray *) saveState;

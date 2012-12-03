@@ -21,10 +21,20 @@
 	
 	[self loadDieEvent:1 Action:@selector(gameOver)];
 	
-	[self loadDieEvent:81 Action:@selector(oneDead)];
-	[self loadDieEvent:82 Action:@selector(oneDead)];
-	[self loadDieEvent:83 Action:@selector(oneDead)];
-	[self loadDieEvent:84 Action:@selector(oneDead)];
+	ed1 = [self loadDieEvent:81 Action:@selector(oneDead)];
+	ed2 = [self loadDieEvent:82 Action:@selector(oneDead)];
+	ed3 = [self loadDieEvent:83 Action:@selector(oneDead)];
+	ed4 = [self loadDieEvent:84 Action:@selector(oneDead)];
+	
+	int e1 = [self loadPositionEvent:81 AtPosition:CGPointMake( 1, 9) Action:@selector(onEscaped1)];
+	int e2 = [self loadPositionEvent:82 AtPosition:CGPointMake(20, 8) Action:@selector(onEscaped2)];
+	int e3 = [self loadPositionEvent:83 AtPosition:CGPointMake(1, 19) Action:@selector(onEscaped3)];
+	int e4 = [self loadPositionEvent:84 AtPosition:CGPointMake(11,20) Action:@selector(onEscaped4)];
+	
+	[eventHandler setEvent:e1 dependentTo:ed1];
+	[eventHandler setEvent:e2 dependentTo:ed2];
+	[eventHandler setEvent:e3 dependentTo:ed3];
+	[eventHandler setEvent:e4 dependentTo:ed4];
 	
 	[self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
 	
@@ -112,15 +122,15 @@
 {
 	[self showTalkMessage:4 conversation:3 sequence:1];
 	
+	[eventHandler deactivateEvent:ed1];
+	[eventHandler deactivateEvent:ed2];
+	[eventHandler deactivateEvent:ed3];
+	[eventHandler deactivateEvent:ed4];
+	
 	[super setAiOfId:81 EscapeTo:CGPointMake( 1, 9)];
 	[super setAiOfId:82 EscapeTo:CGPointMake(20, 8)];
 	[super setAiOfId:83 EscapeTo:CGPointMake(1, 19)];
 	[super setAiOfId:84 EscapeTo:CGPointMake(11, 20)];
-	
-	[self loadPositionEvent:81 AtPosition:CGPointMake( 1, 9) Action:@selector(onEscaped1)];
-	[self loadPositionEvent:82 AtPosition:CGPointMake(20, 8) Action:@selector(onEscaped2)];
-	[self loadPositionEvent:83 AtPosition:CGPointMake(1, 19) Action:@selector(onEscaped3)];
-	[self loadPositionEvent:84 AtPosition:CGPointMake(11,20) Action:@selector(onEscaped4)];
 }
 
 -(void) onEscaped1

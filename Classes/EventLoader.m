@@ -32,6 +32,8 @@
 	//[layers setEventLoader:self];
 	[layers setEventListener:eventHandler];
 	
+	generatedEventId = 1;
+	
 	[self loadEvents];
 	
 }
@@ -42,46 +44,59 @@
 	
 }
 
--(void) loadTurnEvent:(TurnType) turnType Turn:(int)turnNum Action:(SEL)action
+-(int) loadTurnEvent:(TurnType) turnType Turn:(int)turnNum Action:(SEL)action
 {
 	TurnCondition *condition = [[TurnCondition alloc] initWithTurnType:turnType Number:turnNum];
-	[self loadSingleEvent:condition Action:action];
+	int eventId = [self loadSingleEvent:condition Action:action];
 	[condition release];	
+	
+	return eventId;
 }
 
--(void) loadDyingEvent:(int)creatureId Action:(SEL)action
+-(int) loadDyingEvent:(int)creatureId Action:(SEL)action
 {	
 	CreatureDyingCondition *condition = [[CreatureDyingCondition alloc] initWithCreatureId:creatureId];
-	[self loadSingleEvent:condition Action:action];
+	int eventId = [self loadSingleEvent:condition Action:action];
 	[condition release];
+	
+	return eventId;
 }
 
--(void) loadDieEvent:(int)creatureId Action:(SEL)action
+-(int) loadDieEvent:(int)creatureId Action:(SEL)action
 {	
 	CreatureDeadCondition *condition = [[CreatureDeadCondition alloc] initWithCreatureId:creatureId];
-	[self loadSingleEvent:condition Action:action];
+	int eventId = [self loadSingleEvent:condition Action:action];
 	[condition release];
+	
+	return eventId;
 }
 
--(void) loadTeamEvent:(CreatureType) creatureType Action:(SEL)action
+-(int) loadTeamEvent:(CreatureType) creatureType Action:(SEL)action
 {
 	TeamEliminatedCondition *condition = [[TeamEliminatedCondition alloc] initWithTeam:creatureType];
-	[self loadSingleEvent:condition Action:action];
+	int eventId = [self loadSingleEvent:condition Action:action];
 	[condition release];
+	
+	return eventId;
 }
 
--(void) loadPositionEvent:(int)creatureId AtPosition:(CGPoint)pos Action:(SEL)action
+-(int) loadPositionEvent:(int)creatureId AtPosition:(CGPoint)pos Action:(SEL)action
 {
 	ArrivePositionCondition *condition = [[ArrivePositionCondition alloc] initWithCreatureId:creatureId Position:pos];
-	[self loadSingleEvent:condition Action:action];
+	int eventId = [self loadSingleEvent:condition Action:action];
 	[condition release];
+	
+	return eventId;
 }
 
--(void) loadSingleEvent:(FDEventCondition *)condition Action:(SEL)action
+-(int) loadSingleEvent:(FDEventCondition *)condition Action:(SEL)action
 {
 	FDEvent *event = [[FDEvent alloc] initWithCondition:condition Delegate:self Method:action];
+	event.eventId = generatedEventId ++;
 	[eventHandler addEvent:event];
-	[event release];	
+	[event release];
+	
+	return event.eventId;
 }
 
 -(void) showTalkMessage:(int)charId conversation:(int)converId sequence:(int)sequenceId
@@ -120,7 +135,6 @@
 		creature.data.aiParam = [[[FDPosition alloc] initX:pos.x Y:pos.y] autorelease];
 	}
 }
-
 
 -(void) gameOver
 {
