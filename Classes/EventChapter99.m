@@ -25,6 +25,8 @@
 {
 	// Creatures
 	FDFriend *friend1 = [[FDFriend alloc] initWithDefinition:1 Id:1];
+	
+	NSLog(@"friend1 animation id %d", [[friend1 getDefinition] getAnimationId]);
 	[field addFriend:friend1 Position:CGPointMake(8, 15)];
 	[friend1 release];
 	
@@ -44,31 +46,31 @@
 	[field addFriend:friend5 Position:CGPointMake(10, 18)];
 	[friend5 release];
 	
+	/*
 	FDFriend *friend16 = [[FDFriend alloc] initWithDefinition:1016 Id:6];
 	[field addFriend:friend16 Position:CGPointMake(9, 18)];
 	[friend16 release];
-	/*
-	 FDFriend *friend6 = [[FDFriend alloc] initWithDefinition:6 Id:6];
-	 [field addFriend:friend6 Position:CGPointMake(9, 19)];
-	 [friend6 release];
 	 */
-	FDNpc *npc = [[FDNpc alloc] initWithDefinition:703 Id:41];
+	
+	
+	FDNpc *npc = [[FDNpc alloc] initWithDefinition:50103 Id:41];
 	[field addNpc:npc Position:CGPointMake(8, 20)];
 	[npc release];
 	
 	// Enemy
-	FDEnemy *enemy1 = [[FDEnemy alloc] initWithDefinition:701 Id:11];
+	FDEnemy *enemy1 = [[FDEnemy alloc] initWithDefinition:50101 Id:11];
 	[field addEnemy: enemy1 Position:CGPointMake(5, 19)];
 	[enemy1 release];
 	
-	FDEnemy *enemy2 = [[FDEnemy alloc] initWithDefinition:702 Id:29];
+	FDEnemy *enemy2 = [[FDEnemy alloc] initWithDefinition:50102 Id:29];
 	[field addEnemy: enemy2 Position:CGPointMake(4, 19)];
 	[enemy2 release];
 	
-	FDEnemy *enemy3 = [[FDEnemy alloc] initWithDefinition:701 Id:13];
+	FDEnemy *enemy3 = [[FDEnemy alloc] initWithDefinition:50101 Id:13];
 	[field addEnemy: enemy3 Position:CGPointMake(6, 18)];
 	[enemy3 release];
 	
+	/*
 	FDEnemy *enemy4 = [[FDEnemy alloc] initWithDefinition:706 Id:14];
 	[field addEnemy: enemy4 Position:CGPointMake(7, 18)];
 	[enemy4 release];
@@ -80,6 +82,7 @@
 	FDEnemy *enemy6 = [[FDEnemy alloc] initWithDefinition:712 Id:16];
 	[field addEnemy: enemy6 Position:CGPointMake(5, 18)];
 	[enemy6 release];
+	*/
 	
 	FDTreasure *treasure1 = [FDTreasure treasureWithType:TreasureType_Red Item:101];
 	[field addObject:treasure1 Position:CGPointMake(4, 2)];

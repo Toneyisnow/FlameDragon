@@ -4070,6 +4070,16 @@
 		02DBA1EC16664E050081EC45 /* Chapter-99.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA1EB16664E050081EC45 /* Chapter-99.dat */; };
 		02DBA1EF16664E340081EC45 /* EventChapter99.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DBA1EE16664E340081EC45 /* EventChapter99.m */; };
 		02DBA200166651CB0081EC45 /* Chapter-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA1FF166651CB0081EC45 /* Chapter-99.png */; };
+		02DBA248166CD7E50081EC45 /* Chapter-01-Creature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA23E166CD7E50081EC45 /* Chapter-01-Creature.dat */; };
+		02DBA249166CD7E50081EC45 /* Chapter-02-Creature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA23F166CD7E50081EC45 /* Chapter-02-Creature.dat */; };
+		02DBA24A166CD7E50081EC45 /* Chapter-03-Creature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA240166CD7E50081EC45 /* Chapter-03-Creature.dat */; };
+		02DBA24B166CD7E50081EC45 /* Chapter-04-Creature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA241166CD7E50081EC45 /* Chapter-04-Creature.dat */; };
+		02DBA24C166CD7E50081EC45 /* Chapter-05-Creature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA242166CD7E50081EC45 /* Chapter-05-Creature.dat */; };
+		02DBA24D166CD7E50081EC45 /* Chapter-06-Creature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA243166CD7E50081EC45 /* Chapter-06-Creature.dat */; };
+		02DBA24E166CD7E50081EC45 /* Chapter-07-Creature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA244166CD7E50081EC45 /* Chapter-07-Creature.dat */; };
+		02DBA24F166CD7E50081EC45 /* Chapter-08-Creature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA245166CD7E50081EC45 /* Chapter-08-Creature.dat */; };
+		02DBA250166CD7E50081EC45 /* Chapter-09-Creature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA246166CD7E50081EC45 /* Chapter-09-Creature.dat */; };
+		02DBA251166CD7E50081EC45 /* Chapter-10-Creature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02DBA247166CD7E50081EC45 /* Chapter-10-Creature.dat */; };
 		02E422DC160E257E0071FA29 /* Shopping2ShowSellItemsDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E422DB160E257E0071FA29 /* Shopping2ShowSellItemsDialog.m */; };
 		02E422F3160F37970071FA29 /* Shop_Buy_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 02E422EC160F37970071FA29 /* Shop_Buy_0.png */; };
 		02E422F4160F37970071FA29 /* Shop_Equip_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 02E422ED160F37970071FA29 /* Shop_Equip_0.png */; };
@@ -8590,6 +8600,16 @@
 		02DBA1ED16664E340081EC45 /* EventChapter99.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter99.h; sourceTree = "<group>"; };
 		02DBA1EE16664E340081EC45 /* EventChapter99.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter99.m; sourceTree = "<group>"; };
 		02DBA1FF166651CB0081EC45 /* Chapter-99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Chapter-99.png"; path = "Maps/Chapter-99.png"; sourceTree = "<group>"; };
+		02DBA23E166CD7E50081EC45 /* Chapter-01-Creature.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-01-Creature.dat"; path = "Data/Maps/Chapter-01-Creature.dat"; sourceTree = "<group>"; };
+		02DBA23F166CD7E50081EC45 /* Chapter-02-Creature.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-02-Creature.dat"; path = "Data/Maps/Chapter-02-Creature.dat"; sourceTree = "<group>"; };
+		02DBA240166CD7E50081EC45 /* Chapter-03-Creature.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-03-Creature.dat"; path = "Data/Maps/Chapter-03-Creature.dat"; sourceTree = "<group>"; };
+		02DBA241166CD7E50081EC45 /* Chapter-04-Creature.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-04-Creature.dat"; path = "Data/Maps/Chapter-04-Creature.dat"; sourceTree = "<group>"; };
+		02DBA242166CD7E50081EC45 /* Chapter-05-Creature.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-05-Creature.dat"; path = "Data/Maps/Chapter-05-Creature.dat"; sourceTree = "<group>"; };
+		02DBA243166CD7E50081EC45 /* Chapter-06-Creature.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-06-Creature.dat"; path = "Data/Maps/Chapter-06-Creature.dat"; sourceTree = "<group>"; };
+		02DBA244166CD7E50081EC45 /* Chapter-07-Creature.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-07-Creature.dat"; path = "Data/Maps/Chapter-07-Creature.dat"; sourceTree = "<group>"; };
+		02DBA245166CD7E50081EC45 /* Chapter-08-Creature.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-08-Creature.dat"; path = "Data/Maps/Chapter-08-Creature.dat"; sourceTree = "<group>"; };
+		02DBA246166CD7E50081EC45 /* Chapter-09-Creature.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-09-Creature.dat"; path = "Data/Maps/Chapter-09-Creature.dat"; sourceTree = "<group>"; };
+		02DBA247166CD7E50081EC45 /* Chapter-10-Creature.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-10-Creature.dat"; path = "Data/Maps/Chapter-10-Creature.dat"; sourceTree = "<group>"; };
 		02E422DA160E257E0071FA29 /* Shopping2ShowSellItemsDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shopping2ShowSellItemsDialog.h; sourceTree = "<group>"; };
 		02E422DB160E257E0071FA29 /* Shopping2ShowSellItemsDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shopping2ShowSellItemsDialog.m; sourceTree = "<group>"; };
 		02E422EC160F37970071FA29 /* Shop_Buy_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shop_Buy_0.png; path = Others/Shop_Buy_0.png; sourceTree = "<group>"; };
@@ -9921,15 +9941,25 @@
 			isa = PBXGroup;
 			children = (
 				0297D98A1481D25F007F3E12 /* Chapter-01.dat */,
+				02DBA23E166CD7E50081EC45 /* Chapter-01-Creature.dat */,
 				02D308B615E2973900CA1799 /* Chapter-02.dat */,
+				02DBA23F166CD7E50081EC45 /* Chapter-02-Creature.dat */,
 				022D3C2D1625A9A50020F816 /* Chapter-03.dat */,
+				02DBA240166CD7E50081EC45 /* Chapter-03-Creature.dat */,
 				027C3D69163BC773003AB006 /* Chapter-04.dat */,
+				02DBA241166CD7E50081EC45 /* Chapter-04-Creature.dat */,
 				02D4C67B164E194200B9B407 /* Chapter-05.dat */,
+				02DBA242166CD7E50081EC45 /* Chapter-05-Creature.dat */,
 				02D4C67C164E194200B9B407 /* Chapter-06.dat */,
+				02DBA243166CD7E50081EC45 /* Chapter-06-Creature.dat */,
 				02D4C67D164E194200B9B407 /* Chapter-07.dat */,
+				02DBA244166CD7E50081EC45 /* Chapter-07-Creature.dat */,
 				02D4C67E164E194200B9B407 /* Chapter-08.dat */,
+				02DBA245166CD7E50081EC45 /* Chapter-08-Creature.dat */,
 				02D4C67F164E194200B9B407 /* Chapter-09.dat */,
+				02DBA246166CD7E50081EC45 /* Chapter-09-Creature.dat */,
 				02D4C680164E194200B9B407 /* Chapter-10.dat */,
+				02DBA247166CD7E50081EC45 /* Chapter-10-Creature.dat */,
 				02DB822816514A6F0081EC45 /* Chapter-11.dat */,
 				02DB822916514A6F0081EC45 /* Chapter-12.dat */,
 				02DB822A16514A6F0081EC45 /* Chapter-13.dat */,
@@ -20154,6 +20184,16 @@
 				02DBA1DB16664DC50081EC45 /* Chapter-99.strings in Resources */,
 				02DBA1EC16664E050081EC45 /* Chapter-99.dat in Resources */,
 				02DBA200166651CB0081EC45 /* Chapter-99.png in Resources */,
+				02DBA248166CD7E50081EC45 /* Chapter-01-Creature.dat in Resources */,
+				02DBA249166CD7E50081EC45 /* Chapter-02-Creature.dat in Resources */,
+				02DBA24A166CD7E50081EC45 /* Chapter-03-Creature.dat in Resources */,
+				02DBA24B166CD7E50081EC45 /* Chapter-04-Creature.dat in Resources */,
+				02DBA24C166CD7E50081EC45 /* Chapter-05-Creature.dat in Resources */,
+				02DBA24D166CD7E50081EC45 /* Chapter-06-Creature.dat in Resources */,
+				02DBA24E166CD7E50081EC45 /* Chapter-07-Creature.dat in Resources */,
+				02DBA24F166CD7E50081EC45 /* Chapter-08-Creature.dat in Resources */,
+				02DBA250166CD7E50081EC45 /* Chapter-09-Creature.dat in Resources */,
+				02DBA251166CD7E50081EC45 /* Chapter-10-Creature.dat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

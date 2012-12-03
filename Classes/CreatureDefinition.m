@@ -15,7 +15,7 @@
 @implementation CreatureDefinition
 
 @synthesize name;
-@synthesize identifier, race, occupation;
+@synthesize identifier, animationId, race, occupation;
 
 @synthesize data;
 
@@ -31,7 +31,7 @@
 	CreatureDefinition * def = [[CreatureDefinition alloc] init];
 
 	def.identifier = [stream readInt];
-	
+	def.animationId = def.identifier % 1000;
 	
 	def.name = [FDLocalString creature:def.identifier];
 	
@@ -73,6 +73,7 @@
 	CreatureDefinition * def = [[CreatureDefinition alloc] init];
 	
 	def.identifier = [stream readInt];
+	def.animationId = def.identifier % 1000;
 	
 	def.race = [stream readInt];
 	def.occupation = [stream readInt];
@@ -106,10 +107,8 @@
 		return nil;
 	}
 	
-	
-	
+	def.animationId = [baseDef getAnimationId];
 	def.name = [FDLocalString creature:baseDef.identifier];
-	
 	def.race = baseDef.race;
 	def.occupation = baseDef.occupation;
 	def.data.ap = baseDef.data.ap * def.data.level;
@@ -154,7 +153,7 @@
 
 -(int) getAnimationId
 {
-	return identifier % 1000;
+	return animationId;
 }
 
 -(int) getId

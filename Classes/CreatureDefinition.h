@@ -13,6 +13,8 @@
 @interface CreatureDefinition : NSObject {
 
 	int identifier;
+	int animationId;
+	
 	NSString *name;
 	
 	int race;
@@ -61,6 +63,7 @@
 -(BOOL) isMagicalCreature;
 
 @property (nonatomic) int identifier;
+@property (nonatomic) int animationId;
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic) int race;
 @property (nonatomic) int occupation;
