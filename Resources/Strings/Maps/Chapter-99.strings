@@ -1,0 +1,13 @@
+/* 
+   Chapter-99.strings
+   FlameDragon
+
+   Created by sui toney on 12-11-28.
+   Copyright 2012 ms. All rights reserved.
+ */
+
+"Title-99" = "测试专用";
+
+"Condition-Lose" = "索尔死亡";
+"Condition-Win" = "敌全灭";
+

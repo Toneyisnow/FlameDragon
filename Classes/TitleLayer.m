@@ -74,7 +74,8 @@
 {
 	NSLog(@"onNewGame");
 	
-	GameStartInfo *info = [[ChapterRecord alloc] initWithChapter:1];
+	//GameStartInfo *info = [[ChapterRecord alloc] initWithChapter:1];
+	GameStartInfo *info = [[ChapterRecord alloc] initWithChapter:99];
 	
 	MainGameScene *mainGame = [MainGameScene node];
 	[mainGame loadWithInfo:info];

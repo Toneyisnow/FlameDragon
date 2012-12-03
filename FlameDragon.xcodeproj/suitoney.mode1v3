@@ -229,6 +229,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -285,21 +287,24 @@
 								<string>027D54081462B705002C310F</string>
 								<string>50F414EB1069373D002A0D5E</string>
 								<string>029C625214910E2B0054B260</string>
+								<string>02D30C8516038E2200CA1799</string>
 								<string>0297D95714815BD8007F3E12</string>
+								<string>0297D95814815BE1007F3E12</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>298</integer>
-									<integer>174</integer>
-									<integer>9</integer>
+									<integer>343</integer>
+									<integer>318</integer>
+									<integer>317</integer>
+									<integer>309</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 4698}, {293, 580}}</string>
+							<string>{{0, 5780}, {293, 580}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -329,14 +334,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>ActionLayers.m</string>
+								<string>Chapter-99.strings</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -344,11 +347,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>ActionLayers.m</string>
+										<string>Chapter-99.strings</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>02DBA1C3165D2B8E0081EC45</string>
+										<string>02DBA1EA16664DD30081EC45</string>
 										<key>history</key>
 										<array>
 											<string>027D538614618BFA002C310F</string>
@@ -844,7 +847,6 @@
 											<string>02D4CB19164E6E6D00B9B407</string>
 											<string>02D4CB1C164E6E6D00B9B407</string>
 											<string>02D4CB1E164E6E6D00B9B407</string>
-											<string>02D4CB1F164E6E6D00B9B407</string>
 											<string>02D4CB21164E6E6D00B9B407</string>
 											<string>02D4CB22164E6E6D00B9B407</string>
 											<string>02D4CB23164E6E6D00B9B407</string>
@@ -860,7 +862,6 @@
 											<string>02D4CB2E164E6E6D00B9B407</string>
 											<string>02D4CB2F164E6E6D00B9B407</string>
 											<string>02D4CB30164E6E6D00B9B407</string>
-											<string>02D4CB31164E6E6D00B9B407</string>
 											<string>02D4CB32164E6E6D00B9B407</string>
 											<string>02D4CB34164E6E6D00B9B407</string>
 											<string>02D4CB35164E6E6D00B9B407</string>
@@ -880,7 +881,6 @@
 											<string>02DBA0061653540E0081EC45</string>
 											<string>02DBA00A1653540E0081EC45</string>
 											<string>02DBA00B1653540E0081EC45</string>
-											<string>02DBA00C1653540E0081EC45</string>
 											<string>02DBA00D1653540E0081EC45</string>
 											<string>02DBA00E1653540E0081EC45</string>
 											<string>02DBA00F1653540E0081EC45</string>
@@ -938,7 +938,6 @@
 											<string>02DBA0451653540E0081EC45</string>
 											<string>02DBA0461653540E0081EC45</string>
 											<string>02DBA0491653540E0081EC45</string>
-											<string>02DBA07A16588D140081EC45</string>
 											<string>02DBA07B16588D140081EC45</string>
 											<string>02DBA07C16588D140081EC45</string>
 											<string>02DBA07D16588D140081EC45</string>
@@ -947,7 +946,6 @@
 											<string>02DBA08016588D140081EC45</string>
 											<string>02DBA08116588D140081EC45</string>
 											<string>02DBA08416588D140081EC45</string>
-											<string>02DBA08516588D140081EC45</string>
 											<string>02DBA08716588D140081EC45</string>
 											<string>02DBA08816588D140081EC45</string>
 											<string>02DBA08916588D140081EC45</string>
@@ -966,7 +964,6 @@
 											<string>02DBA09916588D140081EC45</string>
 											<string>02DBA09A16588D140081EC45</string>
 											<string>02DBA0AE165A67A40081EC45</string>
-											<string>02DBA0DB165A79FE0081EC45</string>
 											<string>02DBA0DC165A79FE0081EC45</string>
 											<string>02DBA0DD165A79FE0081EC45</string>
 											<string>02DBA0DE165A79FE0081EC45</string>
@@ -998,7 +995,6 @@
 											<string>02DBA0F8165A79FE0081EC45</string>
 											<string>02DBA0F9165A79FE0081EC45</string>
 											<string>02DBA0FA165A79FE0081EC45</string>
-											<string>02DBA105165A79FE0081EC45</string>
 											<string>02DBA106165A79FE0081EC45</string>
 											<string>02DBA107165A79FE0081EC45</string>
 											<string>02DBA109165A79FE0081EC45</string>
@@ -1011,7 +1007,6 @@
 											<string>02DBA119165A7BBB0081EC45</string>
 											<string>02DBA11A165A7BBB0081EC45</string>
 											<string>02DBA124165A88250081EC45</string>
-											<string>02DBA138165A88250081EC45</string>
 											<string>02DBA185165A8C0C0081EC45</string>
 											<string>02DBA186165A8C0C0081EC45</string>
 											<string>02DBA187165A8C0C0081EC45</string>
@@ -1030,8 +1025,6 @@
 											<string>02DBA194165A8C0C0081EC45</string>
 											<string>02DBA195165A8C0C0081EC45</string>
 											<string>02DBA1A2165D28000081EC45</string>
-											<string>02DBA1A3165D28000081EC45</string>
-											<string>02DBA1A4165D28000081EC45</string>
 											<string>02DBA1A5165D28000081EC45</string>
 											<string>02DBA1A6165D28000081EC45</string>
 											<string>02DBA1AF165D2A850081EC45</string>
@@ -1039,7 +1032,20 @@
 											<string>02DBA1B2165D2A850081EC45</string>
 											<string>02DBA1C0165D2B8E0081EC45</string>
 											<string>02DBA1C1165D2B8E0081EC45</string>
-											<string>02DBA1C2165D2B8E0081EC45</string>
+											<string>02DBA1DC16664DD30081EC45</string>
+											<string>02DBA1DD16664DD30081EC45</string>
+											<string>02DBA1DE16664DD30081EC45</string>
+											<string>02DBA1DF16664DD30081EC45</string>
+											<string>02DBA1E016664DD30081EC45</string>
+											<string>02DBA1E116664DD30081EC45</string>
+											<string>02DBA1E216664DD30081EC45</string>
+											<string>02DBA1E316664DD30081EC45</string>
+											<string>02DBA1E416664DD30081EC45</string>
+											<string>02DBA1E516664DD30081EC45</string>
+											<string>02DBA1E616664DD30081EC45</string>
+											<string>02DBA1E716664DD30081EC45</string>
+											<string>02DBA1E816664DD30081EC45</string>
+											<string>02DBA1E916664DD30081EC45</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
