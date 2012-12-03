@@ -11,6 +11,10 @@
 
 @interface FDBatchActivity : FDActivity {
 
+	
+	NSMutableArray *activities;
 }
+
+-(void) addActivity:(FDActivity *)act;
 
 @end

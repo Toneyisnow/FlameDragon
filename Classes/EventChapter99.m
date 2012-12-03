@@ -65,7 +65,7 @@
 	
 	// Enemy
 	FDEnemy *enemy1 = [[FDEnemy alloc] initWithDefinition:50101 Id:11];
-	[field addEnemy: enemy1 Position:CGPointMake(5, 19)];
+	[field addEnemy: enemy1 Position:CGPointMake(1, 9)];
 	[enemy1 release];
 	
 	FDEnemy *enemy2 = [[FDEnemy alloc] initWithDefinition:50102 Id:29];
@@ -75,7 +75,7 @@
 	FDEnemy *enemy3 = [[FDEnemy alloc] initWithDefinition:50101 Id:13];
 	[field addEnemy: enemy3 Position:CGPointMake(6, 18)];
 	[enemy3 release];
-	/*
+	
 	FDEnemy *enemy4 = [[FDEnemy alloc] initWithDefinition:50403 Id:14];
 	[field addEnemy: enemy4 Position:CGPointMake(7, 18)];
 	[enemy4 release];
@@ -84,10 +84,10 @@
 	[field addEnemy: enemy5 Position:CGPointMake(6, 17)];
 	[enemy5 release];
 	
-	FDEnemy *enemy6 = [[FDEnemy alloc] initWithDefinition:50405 Id:16];
+	FDEnemy *enemy6 = [[FDEnemy alloc] initWithDefinition:50404 Id:16];
 	[field addEnemy: enemy6 Position:CGPointMake(5, 18)];
 	[enemy6 release];
-	*/
+	
 	
 	FDTreasure *treasure1 = [FDTreasure treasureWithType:TreasureType_Red Item:101];
 	[field addObject:treasure1 Position:CGPointMake(4, 2)];

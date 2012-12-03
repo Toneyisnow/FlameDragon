@@ -15,6 +15,7 @@
 #import "FDOperationActivity.h"
 #import "TurnInfo.h"
 #import "FDEmptyActivity.h"
+#import "FDBatchActivity.h"
 #import "UsableItemDefinition.h"
 #import "DataDepot.h"
 #import "ItemBox.h"
@@ -266,14 +267,17 @@
 		[activity release];
 	}
 	
+	FDBatchActivity *activity = [[FDBatchActivity alloc] init];
 	for (FDCreature *target in targets) {
 		
 			if (target.data.hpCurrent <= 0) {
-				FDExplodeActivity *activity = [[FDExplodeActivity alloc] initWithObject:target Field:field];
-				[self appendToCurrentActivity:activity];
-				[activity release];
+				FDExplodeActivity *act = [[FDExplodeActivity alloc] initWithObject:target Field:field];
+				[activity addActivity:act];
+				[act release];
 			}
 	}
+	[self appendToCurrentActivity:activity];
+	[activity release];
 	[targets release];
 	
 	// Check whether the important game event is triggered
@@ -326,7 +330,7 @@
 
 -(void) magicFrom:(FDCreature *)creature TargetPos:(CGPoint)position Id:(int)magicId
 {
-	NSLog(@"Magic %d from %d to pos (%d, %d)", magicId, [creature getIdentifier], position.x, position.y);
+	NSLog(@"Magic %d from %d to pos (%f, %f)", magicId, [creature getIdentifier], position.x, position.y);
 	
 	MagicDefinition *magic = [[DataDepot depot] getMagicDefinition:magicId];
 	[creature updateMP:-magic.mpCost];
@@ -336,6 +340,8 @@
 					|| ([creature getCreatureType] == CreatureType_Enemy && magic.magicType == MagicType_Recover);
 	
 	NSMutableArray *targets = [field getCreaturesAt:position Range:magic.effectRange BadGuys:areBadGuys];
+	NSLog(@"Target Creature count: %d", [targets count]);
+	
 	MagicalInformation *mInfo = [GameFormula dealWithMagic:magicId From:creature Target:targets Field:field];
 	
 	if (magic.magicType == MagicType_Attack) {
