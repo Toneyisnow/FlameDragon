@@ -11,6 +11,7 @@
 
 @interface AIAggressiveDelegate : AIDelegate {
 
+	FDCreature *attackTarget;
 }
 
 // -(CGPoint) generatePos;

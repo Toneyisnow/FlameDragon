@@ -284,9 +284,9 @@ static DataDepot *instance = nil;
 	FDFileStream *file = [[FDFileStream alloc] initWithDataFile:@"Animation"];
 	[file open];
 	
-	int creatureCount = [file readInt];
-	for (int k = 0;  k < creatureCount; k++) {
-		int creatureAniId = [file readInt];
+	int creatureAniId = [file readInt];
+	while (creatureAniId > 0) {
+	
 		int aniCount = [file readInt];
 		
 		// Idle Animation
@@ -306,6 +306,8 @@ static DataDepot *instance = nil;
 			[animationDictionary setObject:attackAni forKey:[NSString stringWithFormat:@"%d-%d", creatureAniId, AnimationType_FightSkill]];
 			
 		}
+		
+		creatureAniId = [file readInt];
 	}
 	
 	

@@ -57,11 +57,12 @@
 	FDFriend *friend16 = [[FDFriend alloc] initWithDefinition:1016 Id:6];
 	[field addFriend:friend16 Position:CGPointMake(9, 18)];
 	[friend16 release];
-	 */
+	*/
 	
 	FDNpc *npc = [[FDNpc alloc] initWithDefinition:50103 Id:41];
 	[field addNpc:npc Position:CGPointMake(8, 20)];
 	[npc release];
+	 
 	
 	// Enemy
 	FDEnemy *enemy1 = [[FDEnemy alloc] initWithDefinition:50101 Id:11];
@@ -80,11 +81,11 @@
 	[field addEnemy: enemy4 Position:CGPointMake(7, 18)];
 	[enemy4 release];
 	
-	FDEnemy *enemy5 = [[FDEnemy alloc] initWithDefinition:50404 Id:15];
+	FDEnemy *enemy5 = [[FDEnemy alloc] initWithDefinition:50607 Id:15];
 	[field addEnemy: enemy5 Position:CGPointMake(6, 17)];
 	[enemy5 release];
 	
-	FDEnemy *enemy6 = [[FDEnemy alloc] initWithDefinition:50405 Id:16];
+	FDEnemy *enemy6 = [[FDEnemy alloc] initWithDefinition:50605 Id:16];
 	[field addEnemy: enemy6 Position:CGPointMake(5, 18)];
 	[enemy6 release];
 	

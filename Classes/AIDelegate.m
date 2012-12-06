@@ -88,15 +88,33 @@
 	[disResolver resolveDistanceFrom:targetPos terminateAt:originPos];
 	
 	// Find the scope
-	float minDistance = 999;
+	float bestDistance = 999;
+	int bestDistanceInUnit = 0;
+	BOOL inAttackScope = FALSE;
+	
 	FDPosition *finalPos = [FDPosition positionX:originPos.x Y:originPos.y];
 	NSMutableArray *scopeArray = [field searchMoveScope:creature];
 	
+	FDRange *range = [creature attackRange];
 	for (FDPosition *pos in scopeArray) {
-		float distance = [disResolver getDistanceTo:[pos posValue]];
-		if (distance < minDistance) {
-			minDistance = distance;
-			finalPos = pos;
+		
+		int distanceInUnit = [field getDirectDistancePos:targetPos And:[pos posValue]];
+		if ([range containsValue:distanceInUnit]) {
+			
+			inAttackScope = TRUE;
+			if (distanceInUnit > bestDistanceInUnit) {
+				bestDistanceInUnit = distanceInUnit;
+				finalPos = pos;
+			}
+		}
+		
+		if (!inAttackScope) {
+			float distance = [disResolver getDistanceTo:[pos posValue]];
+		
+			if (distance < bestDistance) {
+				bestDistance = distance;
+				finalPos = pos;
+			}
 		}
 	}
 	
@@ -138,7 +156,7 @@
 	for (FDCreature *c in candidateList) {
 		
 		float distance = [disResolver getDistanceTo:[field getObjectPos:c]];
-		if (distance < minDistance) {
+		if (distance < minDistance && [creature isAbleToAttack:c]) {
 			minDistance = distance;
 			finalTarget = c;
 		}

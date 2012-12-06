@@ -20,4 +20,6 @@
 -(int) min;
 -(int) max;
 
+-(BOOL) containsValue:(int)val;
+
 @end

@@ -333,7 +333,7 @@
 	if (another == nil) {
 		return FALSE;
 	}
-	return [self.data calculatedAp] > [another.data calculatedDp];
+	return (self.data.attackItemIndex >= 0) && [self.data calculatedAp] > [another.data calculatedDp];
 }
 
 -(BOOL) isItemListFull

@@ -993,6 +993,11 @@
 	CGPoint pos1 = [self getObjectPos:creature1];
 	CGPoint pos2 = [self getObjectPos:creature2];
 	
+	return [self getDirectDistancePos:pos1 And:pos2];
+}
+
+-(int) getDirectDistancePos:(CGPoint)pos1 And:(CGPoint)pos2
+{
 	int dx = pos1.x - pos2.x;
 	dx = (dx < 0) ? -dx : dx;
 	

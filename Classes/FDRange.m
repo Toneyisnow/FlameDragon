@@ -33,4 +33,9 @@
 	return max;
 }
 
+-(BOOL) containsValue:(int)val
+{
+	return min <= val && val <= max;
+}
+
 @end

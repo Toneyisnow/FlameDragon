@@ -74,6 +74,7 @@
 
 -(BOOL) isNextTo:(FDCreature *)creature1 And:(FDCreature *)creature2;
 -(int) getDirectDistance:(FDCreature *)creature1 And:(FDCreature *)creature2;
+-(int) getDirectDistancePos:(CGPoint)pos1 And:(CGPoint)pos2;
 
 -(void) takeTick:(int)synchronizeTick;
 

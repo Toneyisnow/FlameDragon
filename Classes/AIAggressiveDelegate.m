@@ -25,6 +25,7 @@
 	self = [super initWithCreature:c Layers:l];
 	
 	[self initDistanceResolver];
+	attackTarget = nil;
 	
 	return self;
 }
@@ -34,7 +35,6 @@
 	NSLog(@"AIAggressiveDelegate take action on creature %d", [creature getIdentifier]);
 	
 	BattleField *field = [[layers getFieldLayer] getField];
-	CGPoint targetPos = [self generatePos:[field getObjectPos:[self findTarget]]];
 		
 	if ([self needAndCanRecover]) {
 		
@@ -42,6 +42,8 @@
 		[layers appendToCurrentActivityMethod:@selector(creatureEndTurn:) Param1:creature Param2:nil];
 	} else {
 		
+		attackTarget = [self findTarget];
+		CGPoint targetPos = [self generatePos:[field getObjectPos:attackTarget]];
 		[field setCursorTo:targetPos];
 		[layers moveCreature:creature To:targetPos showMenu:FALSE];
 	
@@ -53,10 +55,19 @@
 -(void) searchAttackTarget
 {
 	BattleField *field = [[layers getFieldLayer] getField];
-	FDCreature *target = [self findTarget];
-	CGPoint targetpos = [field getObjectPos:target];
+	//FDCreature *target = [self findTarget];
+	//CGPoint targetpos = [field getObjectPos:attackTarget];
+	
 	BOOL inAttackScope = FALSE;
 	
+	FDRange *range = [creature attackRange];
+	
+	if (attackTarget != nil && [creature isAbleToAttack:attackTarget]
+		&& (range != nil && [range containsValue:[field getDirectDistance:creature And:attackTarget]])) {
+		inAttackScope = TRUE;
+	}
+	
+	/*
 	if ([creature isAbleToAttack:target]) {
 		NSMutableArray *scopeList = [field searchActionScope:[field getObjectPos:creature] Range:[creature attackRange]];
 		for (FDPosition *pos in scopeList) {
@@ -66,10 +77,11 @@
 			}
 		}
 	}
+	*/
 	
 	//[field setCursorTo:targetpos];
 	if (inAttackScope) {
-		[layers appendToCurrentActivityMethod:@selector(attackFrom:Target:) Param1:creature Param2:target];
+		[layers appendToCurrentActivityMethod:@selector(attackFrom:Target:) Param1:creature Param2:attackTarget];
 	}
 	else {
 		[layers appendToCurrentActivityMethod:@selector(creatureEndTurn:) Param1:creature Param2:nil];
