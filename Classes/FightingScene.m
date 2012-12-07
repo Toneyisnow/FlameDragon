@@ -127,6 +127,20 @@
 	ani = [[FDSlideAnimation alloc] initWithDefinition:targetIdleAni Sprite:targetSprite];
 	[targetAnimation addAnimation:ani];
 	[ani release];
+	
+	while ([targetAnimation getDuration] < [subjectAnimation getDuration]) {
+	
+		ani = [[FDSlideAnimation alloc] initWithDefinition:targetIdleAni Sprite:targetSprite];
+		[targetAnimation addAnimation:ani];
+		[ani release];
+	}
+		
+	while ([targetAnimation getDuration] > [subjectAnimation getDuration]) {
+	
+		ani = [[FDSlideAnimation alloc] initWithDefinition:subjectIdleAni Sprite:subjectSprite];
+		[subjectAnimation addAnimation:ani];
+		[ani release];
+	}
 }
 
 -(void) appendSubjectAttackAnimation:(int)tagIndex

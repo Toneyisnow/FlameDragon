@@ -18,6 +18,7 @@
 // +(FDEnemy *) createEnemyWithId:(int) identifier;
 
 -(id) initWithDefinition:(int)identity Id:(int)i;
+-(id) initWithDefinition:(int)identity Id:(int)i DropItem:(int)dId;
 -(id) initWithDefinition:(int)identity Id:(int)i Data:(CreatureData *)dat;
 -(id) initWithSavedState:(int)record;
 

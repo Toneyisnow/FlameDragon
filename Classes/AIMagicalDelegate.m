@@ -53,6 +53,7 @@
 	}
 	
 	if (candidate == nil) {
+		NSLog(@"Didn't find candidate.");
 		[layers appendToCurrentActivityMethod:@selector(creaturePendAction:) Param1:creature Param2:nil];
 		return;
 	}
@@ -130,7 +131,7 @@
 	}
 	
 	for (int index = [creature.data.magicList count] - 1; index >= 0; index--) {
-		NSNumber *magicId = [creature.data.magicList objectAtIndex:0];
+		NSNumber *magicId = [creature.data.magicList objectAtIndex:index];
 		MagicDefinition *magic = [[DataDepot depot] getMagicDefinition:[magicId intValue]];
 	
 		if (magic == nil) {

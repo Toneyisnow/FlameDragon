@@ -278,7 +278,7 @@
 	}
 	[self appendToCurrentActivity:activity];
 	[activity release];
-	[targets release];
+	//[targets release];
 	
 	// Check whether the important game event is triggered
 	//[self appendToCurrentActivityMethod:@selector(isNotified) Param1:nil Param2:nil Obj:eventListener];
@@ -301,6 +301,7 @@
 	
 	if (talkerFriend != nil) {
 	
+		
 		NSString *message = [NSString stringWithFormat:[FDLocalString message:5], talkerFriend.lastGainedExperience];
 		FDTalkActivity *talk = [[FDTalkActivity alloc] initWithCreature:talkerFriend Message:message Layer:messageLayer];
 		[self appendToMainActivity:talk];
@@ -894,7 +895,7 @@
 
 -(void) gameOver
 {
-	//[self clearAllActivity];
+	// [self clearAllActivity];
 	
 	GameOverScene *scene = [GameOverScene node];
 	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:0.5 scene:scene]];	
