@@ -256,6 +256,7 @@
 	NSLog(@"Post Method for attacking.");
 	
 	[targets retain];
+	NSMutableArray *dropItemList = [[NSMutableArray alloc] init];
 	
 	// Check whether the important game event is triggered
 	[eventListener isNotified];
@@ -286,8 +287,33 @@
 	
 	NSLog(@"Analyse dead complete.");
 	
+	// Drop Item
+	BOOL cannotCarryMore = FALSE;
+	for (FDCreature *target in targets) {
+		
+		if ([target getCreatureType] == CreatureType_Enemy && target.data.hpCurrent <= 0) {
+			
+			FDEnemy *enemy = (FDEnemy *)target;
+			ItemDefinition *dropItem = [[DataDepot depot] getItemDefinition:[enemy getDropItem]];
+			if (dropItem != nil) {
+				[dropItemList addObject:dropItem];
+				
+				if (![dropItem isMoney]) {
+					// Add item
+					if ([creature isItemListFull]) {
+						cannotCarryMore = TRUE;
+					} else {
+						[creature.data.itemList addObject:[NSNumber numberWithInt:dropItem.identifier]];
+					}
+				} else {
+					// Add money
+					money += [dropItem getMoneyQuantity];
+				}
+			}
+		}
+	}
 	
-	// Talk about experience
+	// Talk about experience/drop item
 	FDCreature *talkerFriend = nil;
 	FDCreature *target = ([targets count] > 0) ? [targets objectAtIndex:0] : nil;
 	if (creature != nil && [creature isKindOfClass:[FDFriend class]] && creature.lastGainedExperience > 0 && creature.data.hpCurrent > 0)
@@ -301,7 +327,6 @@
 	
 	if (talkerFriend != nil) {
 	
-		
 		NSString *message = [NSString stringWithFormat:[FDLocalString message:5], talkerFriend.lastGainedExperience];
 		FDTalkActivity *talk = [[FDTalkActivity alloc] initWithCreature:talkerFriend Message:message Layer:messageLayer];
 		[self appendToMainActivity:talk];
@@ -313,6 +338,19 @@
 			TalkMessage *message = [[TalkMessage alloc] initWithCreature:talkerFriend Message:levelUpMsg];
 			[self appendToMainActivityMethod:@selector(show:) Param1:messageLayer Param2:nil Obj:message];
 			// [message show:messageLayer];
+		}
+		
+		for (ItemDefinition *dropItem in dropItemList) {
+			NSString *message = [NSString stringWithFormat:[FDLocalString message:21], dropItem.name];
+			FDTalkActivity *talk = [[FDTalkActivity alloc] initWithCreature:talkerFriend Message:message Layer:messageLayer];
+			[self appendToMainActivity:talk];
+			[talk release];			
+		}
+		
+		if (cannotCarryMore) {
+			FDTalkActivity *talk = [[FDTalkActivity alloc] initWithCreature:talkerFriend Message:[FDLocalString message:22] Layer:messageLayer];
+			[self appendToMainActivity:talk];
+			[talk release];
 		}
 	}
 	
@@ -327,6 +365,7 @@
 	[self appendToMainActivityMethod:@selector(creatureActionDone:) Param1:creature Param2:nil Obj:self];
 	
 	[targets release];
+	[dropItemList release];
 }
 
 -(void) magicFrom:(FDCreature *)creature TargetPos:(CGPoint)position Id:(int)magicId

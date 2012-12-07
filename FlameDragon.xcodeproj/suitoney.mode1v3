@@ -268,6 +268,8 @@
 								<string>2D500B1D0D5A766B00DBA0E3</string>
 								<string>027D54111462B8B2002C310F</string>
 								<string>027D5845146A9BE6002C310F</string>
+								<string>0297D77E147D3C4C007F3E12</string>
+								<string>027334C4149A434C00D0812F</string>
 								<string>0297D7C6147E72B2007F3E12</string>
 								<string>027D54071462B621002C310F</string>
 								<string>0273334C1497803100D0812F</string>
@@ -284,14 +286,14 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>148</integer>
-									<integer>70</integer>
+									<integer>185</integer>
+									<integer>107</integer>
 									<integer>9</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 2012}, {293, 580}}</string>
+							<string>{{0, 2864}, {293, 580}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -340,7 +342,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>02B59DBF1671E0C20066783F</string>
+										<string>02B59DD71671EC4B0066783F</string>
 										<key>history</key>
 										<array>
 											<string>027D538614618BFA002C310F</string>
@@ -726,7 +728,6 @@
 											<string>025DA9B91630403800DD7C30</string>
 											<string>025DA9BA1630403800DD7C30</string>
 											<string>025DA9BB1630403800DD7C30</string>
-											<string>025DA9BC1630403800DD7C30</string>
 											<string>025DA9C41630403800DD7C30</string>
 											<string>025DA9C81630403800DD7C30</string>
 											<string>025DA9CA1630403800DD7C30</string>
@@ -776,7 +777,6 @@
 											<string>024577D716381EDB00C5F47D</string>
 											<string>024577D816381EDB00C5F47D</string>
 											<string>024577D916381EDB00C5F47D</string>
-											<string>024577DC16381EDB00C5F47D</string>
 											<string>024577DD16381EDB00C5F47D</string>
 											<string>024577E416381EDB00C5F47D</string>
 											<string>024577E516381EDB00C5F47D</string>
@@ -820,7 +820,6 @@
 											<string>02D4CB30164E6E6D00B9B407</string>
 											<string>02D4CB32164E6E6D00B9B407</string>
 											<string>02D4CB34164E6E6D00B9B407</string>
-											<string>02D4CB35164E6E6D00B9B407</string>
 											<string>02D4CB36164E6E6D00B9B407</string>
 											<string>02D4CB3B164E6E6D00B9B407</string>
 											<string>02D4CB3C164E6E6D00B9B407</string>
@@ -896,7 +895,6 @@
 											<string>02DBA07C16588D140081EC45</string>
 											<string>02DBA07D16588D140081EC45</string>
 											<string>02DBA07E16588D140081EC45</string>
-											<string>02DBA07F16588D140081EC45</string>
 											<string>02DBA08016588D140081EC45</string>
 											<string>02DBA08716588D140081EC45</string>
 											<string>02DBA08A16588D140081EC45</string>
@@ -941,7 +939,6 @@
 											<string>02DBA106165A79FE0081EC45</string>
 											<string>02DBA109165A79FE0081EC45</string>
 											<string>02DBA10A165A79FE0081EC45</string>
-											<string>02DBA10C165A79FE0081EC45</string>
 											<string>02DBA10D165A79FE0081EC45</string>
 											<string>02DBA10F165A79FE0081EC45</string>
 											<string>02DBA11A165A7BBB0081EC45</string>
@@ -1102,7 +1099,12 @@
 											<string>02B59DB41671DC6B0066783F</string>
 											<string>02B59DB51671DC6B0066783F</string>
 											<string>02B59DBE1671E0C20066783F</string>
-											<string>02B59DB61671DC6B0066783F</string>
+											<string>02B59DC71671E22C0066783F</string>
+											<string>02B59DD21671EC4B0066783F</string>
+											<string>02B59DD31671EC4B0066783F</string>
+											<string>02B59DD41671EC4B0066783F</string>
+											<string>02B59DD51671EC4B0066783F</string>
+											<string>02B59DD61671EC4B0066783F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -1302,8 +1304,8 @@
 	<array>
 		<string>1CD10A99069EF8BA00B06720</string>
 		<string>027D534C146016B0002C310F</string>
-		<string>1C78EAAD065D492600B07095</string>
 		<string>/Users/suitoney/我的程序/GitHub/FlameDragon/FlameDragon.xcodeproj</string>
+		<string>1C78EAAD065D492600B07095</string>
 	</array>
 	<key>WindowString</key>
 	<string>1 139 1217 639 0 0 1280 778 </string>
