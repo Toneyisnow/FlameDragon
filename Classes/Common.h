@@ -21,5 +21,6 @@
 
 +(int) maxBetween:(int)val1 and:(int)val2;
 +(int) minBetween:(int)val1 and:(int)val2;
++(double) getAbs:(double)d1;
 
 @end

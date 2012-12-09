@@ -136,6 +136,15 @@
 	}
 }
 
+-(void) setAiOfId:(int)creatureId withType:(AIType) type
+{
+	FDCreature *creature = [field getCreatureById:creatureId];
+	
+	if (creature != nil) {
+		creature.data.aiType = type;
+	}
+}
+
 -(void) gameOver
 {
 	[layers gameOver];

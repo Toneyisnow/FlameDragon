@@ -11,6 +11,7 @@
 #import "DataDepot.h"
 #import "FightingInformation.h"
 #import "MagicalInformation.h"
+#import "Common.h"
 
 @implementation GameFormula
 
@@ -170,9 +171,33 @@
 
 +(int) calculateAttackExp:(FDCreature *)creature Target:(FDCreature *)target Info:(AttackInformation *)info
 {
+	if (creature == nil || target == nil || info == nil) {
+		NSLog(@"Error in calculateAttackExp: object is nil.");
+		return 0;
+	}
+	
 	// Calculate the experience
-	double reducedHp = (target.data.hpCurrent > 0) ? abs([info getBefore] - [info getAfter]) : target.data.hpMax;
-	double exp = reducedHp * target.data.level * [target getDefinition].data.ex / (double)creature.data.level / (double)target.data.hpMax;
+	double calculatedHp = 0;
+	
+	NSLog(@"Info: %d, %d", [info getBefore], [info getAfter]);
+	if (target.data.hpCurrent <= 0) {
+		calculatedHp = target.data.hpMax;
+	} else {
+	
+		int after = [Common minBetween:[info getAfter] and:target.data.hpMax];
+		after = [Common maxBetween:after and:0];
+		
+		calculatedHp = [Common getAbs:(double)([info getBefore] - after)];
+	}
+	NSLog(@"Calculcated HP: %f", calculatedHp);
+	
+	double exp = 0;
+	if ([target getCreatureType] == CreatureType_Enemy) {
+		exp = calculatedHp * target.data.level * [target getDefinition].data.ex / (double)creature.data.level / (double)target.data.hpMax;
+	} else {
+		exp = calculatedHp * 100 * target.data.level / (double)creature.data.level / (double)target.data.hpMax;
+	}
+
 	
 	NSLog(@"Experience got %d.", (int)exp);
 	return (int)exp;

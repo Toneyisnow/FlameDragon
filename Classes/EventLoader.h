@@ -35,6 +35,7 @@
 -(void) showTalkMessage:(int)charId conversation:(int)converId sequence:(int)sequenceId;
 
 -(void) setAiOfId:(int)creatureId EscapeTo:(CGPoint)pos;
+-(void) setAiOfId:(int)creatureId withType:(AIType) type;
 
 -(void) gameOver;
 

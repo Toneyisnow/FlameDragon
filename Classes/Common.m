@@ -54,4 +54,12 @@
 	
 }
 
++(double) getAbs:(double) d1
+{
+	if (d1 < 0) {
+		return -d1;
+	}
+	return d1;
+}
+
 @end
