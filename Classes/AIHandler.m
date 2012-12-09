@@ -10,6 +10,7 @@
 #import "AIAggressiveDelegate.h"
 #import "AIMagicalDelegate.h"
 #import "AIEscapeDelegate.h"
+#import "AIStandByDelegate.h"
 #import "FDEnemy.h"
 #import "FDFriend.h"
 #import "FDNpc.h"
@@ -99,6 +100,9 @@
 		case AIType_Escape:
 			delegate = [[AIEscapeDelegate alloc] initWithCreature:creature Layers:layers];
 			[delegate setParameter:creature.data.aiParam];
+			break;
+		case AIType_StandBy:
+			delegate = [[AIStandByDelegate alloc] initWithCreature:creature Layers:layers];
 			break;
 		default:
 			break;

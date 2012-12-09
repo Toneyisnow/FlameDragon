@@ -21,7 +21,8 @@ typedef enum BodyStatus {
 
 typedef enum AIType {
 	AIType_Aggressive,
-	AIType_Escape
+	AIType_Escape,
+	AIType_StandBy
 } AIType;
 
 //

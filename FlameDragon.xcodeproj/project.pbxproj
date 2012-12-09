@@ -278,6 +278,7 @@
 		029C62D21494EAF80054B260 /* EventChapter1.m in Sources */ = {isa = PBXBuildFile; fileRef = 029C62D11494EAF80054B260 /* EventChapter1.m */; };
 		02A8A34B155D674E003C3DC8 /* LinkedDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A8A34A155D674E003C3DC8 /* LinkedDialog.m */; };
 		02AC561E15D8DA8100AAD4A3 /* FDLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02AC561D15D8DA8100AAD4A3 /* FDLayer.m */; };
+		02B59E5D167423230066783F /* AIStandByDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B59E5C167423230066783F /* AIStandByDelegate.m */; };
 		02BA6CF514B9C4000028C9E7 /* CreatureDetailBarHp.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA6CF314B9C4000028C9E7 /* CreatureDetailBarHp.png */; };
 		02BA6CF614B9C4000028C9E7 /* CreatureDetailBarMp.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA6CF414B9C4000028C9E7 /* CreatureDetailBarMp.png */; };
 		02BA6D5F14C0581D0028C9E7 /* GameOver.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA6D5E14C0581D0028C9E7 /* GameOver.png */; };
@@ -4759,6 +4760,8 @@
 		02A8A34A155D674E003C3DC8 /* LinkedDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedDialog.m; sourceTree = "<group>"; };
 		02AC561C15D8DA8100AAD4A3 /* FDLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDLayer.h; sourceTree = "<group>"; };
 		02AC561D15D8DA8100AAD4A3 /* FDLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDLayer.m; sourceTree = "<group>"; };
+		02B59E5B167423230066783F /* AIStandByDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIStandByDelegate.h; sourceTree = "<group>"; };
+		02B59E5C167423230066783F /* AIStandByDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIStandByDelegate.m; sourceTree = "<group>"; };
 		02BA6CF314B9C4000028C9E7 /* CreatureDetailBarHp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CreatureDetailBarHp.png; path = Others/CreatureDetailBarHp.png; sourceTree = "<group>"; };
 		02BA6CF414B9C4000028C9E7 /* CreatureDetailBarMp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CreatureDetailBarMp.png; path = Others/CreatureDetailBarMp.png; sourceTree = "<group>"; };
 		02BA6D5E14C0581D0028C9E7 /* GameOver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GameOver.png; path = Others/GameOver.png; sourceTree = "<group>"; };
@@ -9119,6 +9122,8 @@
 				02733365149785A900D0812F /* AIEscapeDelegate.m */,
 				02D4C636164B07AD00B9B407 /* AIMagicalDelegate.h */,
 				02D4C637164B07AD00B9B407 /* AIMagicalDelegate.m */,
+				02B59E5B167423230066783F /* AIStandByDelegate.h */,
+				02B59E5C167423230066783F /* AIStandByDelegate.m */,
 			);
 			name = AI;
 			sourceTree = "<group>";
@@ -20398,6 +20403,7 @@
 				02DBA0691657ED820081EC45 /* EventChapter4.m in Sources */,
 				02DBA06C1657F5C60081EC45 /* ArrivePositionCondition.m in Sources */,
 				02DBA1EF16664E340081EC45 /* EventChapter99.m in Sources */,
+				02B59E5D167423230066783F /* AIStandByDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

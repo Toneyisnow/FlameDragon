@@ -49,7 +49,7 @@
 	[field addFriend:friend4 Position:CGPointMake(12, 18)];
 	[friend4 release];
 	
-	FDFriend *friend5 = [[FDFriend alloc] initWithDefinition:5 Id:5];
+	FDFriend *friend5 = [[FDFriend alloc] initWithDefinition:8 Id:8];
 	[field addFriend:friend5 Position:CGPointMake(10, 18)];
 	[friend5 release];
 	
@@ -88,6 +88,8 @@
 	FDEnemy *enemy6 = [[FDEnemy alloc] initWithDefinition:50506 Id:16 DropItem:102];
 	[field addEnemy: enemy6 Position:CGPointMake(5, 18)];
 	[enemy6 release];
+	
+	[self setAiOfId:13 withType:AIType_StandBy];
 	
 	
 	FDTreasure *treasure1 = [FDTreasure treasureWithType:TreasureType_Red Item:101];
