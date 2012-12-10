@@ -88,16 +88,10 @@
 {
 	NSLog(@"onLoadGame");
 	
-	/*
-	ChapterRecord *info = [ChapterRecord sampleRecord];
-	VillageScene *scene = [VillageScene node];
-	[scene loadWithRecord:info];
-	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];
-	*/
+	[self loadTestingGame];
 	
-	LoadingScene *scene = [LoadingScene node];
-	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];
-	
+	// LoadingScene *scene = [LoadingScene node];
+	// [[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];
 }
 
 -(void) onContinueGame
@@ -120,6 +114,46 @@
 	}
 	
 	[info release];
+}
+
+-(void) loadTestingGame
+{
+	ChapterRecord *record = [ChapterRecord generateRecord:4 money:400];
+	
+	[[record friendRecords] addObject:[self loadTestingRecord:1 level:8]];
+	[[record friendRecords] addObject:[self loadTestingRecord:2 level:8]];
+	[[record friendRecords] addObject:[self loadTestingRecord:3 level:8]];
+	[[record friendRecords] addObject:[self loadTestingRecord:4 level:8]];
+	[[record friendRecords] addObject:[self loadTestingRecord:5 level:8]];
+	[[record friendRecords] addObject:[self loadTestingRecord:6 level:8]];
+	[[record friendRecords] addObject:[self loadTestingRecord:7 level:8]];
+	
+	VillageScene *scene = [VillageScene node];
+	[scene loadWithRecord:record];
+	
+	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];
+}
+
+-(CreatureRecord *) loadTestingRecord:(int)creatureId level:(int)level
+{
+	FDFriend *creature = [[FDFriend alloc] initWithDefinition:creatureId Id:creatureId];
+	
+	for (int i = creature.data.level; i < level; i++) {
+		[creature levelUp];
+	}
+	
+	CreatureRecord *r = [[CreatureRecord alloc] init];
+	r.creatureId = [creature getIdentifier];
+	r.definitionId = [[creature getDefinition] getId];
+	r.creatureType = [creature getCreatureType];
+	
+	r.data = [creature.data clone];
+	r.data.hpCurrent = r.data.hpMax;
+	r.data.mpCurrent = r.data.mpMax;
+	
+	[creature release];
+	
+	return r;
 }
 
 @end

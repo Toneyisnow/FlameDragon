@@ -20,6 +20,7 @@
 
 +(ChapterRecord *) emptyRecord;
 +(ChapterRecord *) sampleRecord;
++(ChapterRecord *) generateRecord:(int)chapter money:(int)m;
 
 @property (nonatomic, assign) int money;
 

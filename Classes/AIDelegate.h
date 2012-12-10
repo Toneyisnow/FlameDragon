@@ -22,6 +22,7 @@
 -(id) initWithCreature:(FDCreature *)c Layers:(ActionLayers *)layers;
 -(void) initDistanceResolver;
 -(CGPoint) generatePos:(CGPoint)targetPos;
+//-(CGPoint) generatePos:(CGPoint)targetPos forAttack:(BOOL)attackOnly;
 -(void) setParameter:(id)param;
 
 -(void) takeAction;

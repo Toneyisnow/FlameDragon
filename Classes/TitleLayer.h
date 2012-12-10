@@ -7,7 +7,7 @@
 //
 
 #import "cocos2d.h"
-
+#import "CreatureRecord.h"
 
 @interface TitleLayer : CCLayer {
 
@@ -19,6 +19,9 @@
 -(void) onContinueGame;
 
 -(BOOL) clickedOnButton:(CGPoint)buttonLoc At:(CGPoint)clickedLoc;
+
+-(void) loadTestingGame;
+-(CreatureRecord *) loadTestingRecord:(int)creatureId level:(int)level;
 
 
 @end

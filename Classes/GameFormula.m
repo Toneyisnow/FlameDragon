@@ -39,12 +39,12 @@
 		}
 		
 		if (target.data.hpCurrent > 0) {
-			subject.lastGainedExperience = exp1 + exp2;
+			[subject setLastGainedExperience:exp1 + exp2];
 		} else {
-			subject.lastGainedExperience = exp2;
+			[subject setLastGainedExperience:exp2];
 		}
 	} else {
-		subject.lastGainedExperience = exp1;
+		[subject setLastGainedExperience:exp1];
 	}
 
 	// Fight back
@@ -61,15 +61,15 @@
 			backExp2 = [self calculateAttackExp:target Target:subject Info:back2];
 			
 			if (subject.data.hpCurrent > 0) {
-				target.lastGainedExperience = backExp1 + backExp2;
+				[target setLastGainedExperience:backExp1 + backExp2];
 			} else {
-				target.lastGainedExperience = backExp2;
+				[target setLastGainedExperience:backExp2];
 			}
 		} else {
-			target.lastGainedExperience = backExp1;
+			[target setLastGainedExperience:backExp1];
 		}
 	} else {
-		target.lastGainedExperience = 0;
+		[target setLastGainedExperience:0];
 	}
 
 	FightingInformation *result = [[FightingInformation alloc] initWithAttackInfo:attack1 attack2Info:attack2 backInfo:back1 back2Info:back2];
@@ -132,7 +132,8 @@
 		[result addInformation:magicInfo];
 		totalExp += [self calculateAttackExp:subject Target:target Info:magicInfo];
 	}
-	subject.lastGainedExperience = totalExp;
+	
+	[subject setLastGainedExperience:totalExp];
 	
 	return [result autorelease];
 }

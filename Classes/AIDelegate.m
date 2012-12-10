@@ -78,9 +78,17 @@
 	
 	[map release];
 }
-
+/*
 -(CGPoint) generatePos:(CGPoint)targetPos
 {
+	return [self generatePos:targetPos forAttack:TRUE];
+}
+*/
+-(CGPoint) generatePos:(CGPoint)targetPos // forAttack:(BOOL)attackOnly
+{
+	
+	NSLog(@"generatePos: target Pos: %f, %f", targetPos.x, targetPos.y);
+	
 	BattleField *field = [[layers getFieldLayer] getField];
 	
 	//[disResolver resolveDistanceFrom:targetPos terminateAt:CGPointMake(1, 1)];
@@ -89,13 +97,21 @@
 	
 	// Find the scope
 	float bestDistance = 999;
-	int bestDistanceInUnit = 0;
+	int bestDistanceInUnit = -1;
 	BOOL inAttackScope = FALSE;
 	
 	FDPosition *finalPos = [FDPosition positionX:originPos.x Y:originPos.y];
 	NSMutableArray *scopeArray = [field searchMoveScope:creature];
 	
-	FDRange *range = [creature attackRange];
+	//FDRange *range = [creature attackRange];
+	
+	FDRange *range = nil;
+	if ([field getCreatureByPos:targetPos] != nil) {
+		range = [creature attackRange];
+	} else {
+		range = [FDRange rangeWithMin:0 Max:0];
+	}
+	
 	for (FDPosition *pos in scopeArray) {
 		
 		int distanceInUnit = [field getDirectDistancePos:targetPos And:[pos posValue]];
@@ -130,26 +146,35 @@
 	CGPoint currentPos = [field getObjectPos:creature];
 	
 	FDCreature *terminateCreature = nil;
-	if ([creature isKindOfClass:[FDEnemy class]])
+	NSMutableArray *terminateCandidates = nil;
+	if ([creature getCreatureType] == CreatureType_Enemy)
 	{
+		terminateCandidates = [field getFriendList];
 		terminateCreature = [[field getFriendList] objectAtIndex:0];
 	}
-	else if ([creature isKindOfClass:[FDNpc class]])
+	else if ([creature getCreatureType] == CreatureType_Npc)
 	{
+		terminateCandidates = [field getEnemyList];
 		terminateCreature = [[field getEnemyList] objectAtIndex:0];
 	}
+	
+	int candidateIndex = 0;
+	while (candidateIndex < [terminateCandidates count] && ![creature isAbleToAttack:[terminateCandidates objectAtIndex:candidateIndex]]) {
+		candidateIndex ++;
+	}
+	terminateCreature = [terminateCandidates objectAtIndex:candidateIndex];
 	
 	[disResolver resolveDistanceFrom:currentPos terminateAt:[field getObjectPos:terminateCreature]];
 	
 	float minDistance = 999;
-	FDCreature *finalTarget = nil;
+	FDCreature *finalTarget = terminateCreature;
 	
 	NSMutableArray *candidateList = [[NSMutableArray alloc] init];
-	if ([creature isKindOfClass:[FDEnemy class]]) {
+	if ([creature getCreatureType] == CreatureType_Enemy) {
 		[candidateList addObjectsFromArray:[field getFriendList]];
 		[candidateList addObjectsFromArray:[field getNpcList]];
 	}
-	else if ([creature isKindOfClass:[FDNpc class]]) {
+	else if ([creature getCreatureType] == CreatureType_Npc) {
 		[candidateList addObjectsFromArray:[field getEnemyList]];
 	}
 	

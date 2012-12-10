@@ -22,6 +22,12 @@
 	return self;
 }
 
++(id) rangeWithMin:(int)m Max:(int)a
+{
+	FDRange *r = [[self alloc] initWithMin:m Max:a];
+	
+	return [r autorelease];
+}
 
 -(int) min
 {

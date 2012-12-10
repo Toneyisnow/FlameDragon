@@ -75,6 +75,15 @@
 
 }
 
++(ChapterRecord *) generateRecord:(int)chapter money:(int)m
+{
+	ChapterRecord *record = [[ChapterRecord alloc] initWithChapter:chapter];
+	
+	record.money = m;
+	
+	return [record autorelease];
+}
+
 -(NSMutableArray *) friendRecords
 {
 	return friendRecords;

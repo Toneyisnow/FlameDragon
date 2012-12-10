@@ -16,6 +16,8 @@
 }
 
 -(id) initWithMin:(int)m Max:(int)a;
++(id) rangeWithMin:(int)m Max:(int)a;
+
 
 -(int) min;
 -(int) max;

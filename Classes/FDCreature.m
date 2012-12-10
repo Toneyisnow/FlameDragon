@@ -121,7 +121,7 @@
 
 -(void) updateAnimation
 {
-	NSLog(@"update Animation");
+	// NSLog(@"update Animation");
 	
 	if (currentAnimation != nil) {
 		[currentAnimation release];
@@ -231,6 +231,8 @@
 -(NSString *) levelUp
 {
 	data.ex -= 100;
+	data.ex = (data.ex < 0) ? 0 : data.ex;
+	
 	data.level += 1;
 	
 	LevelUpDefinition *levelUp = [[DataDepot depot] getLevelUpDefinition:[definition getId]];
@@ -429,6 +431,11 @@
 		return nil;
 	}
 
+}
+
+-(void) setLastGainedExperience:(int)exp
+{
+	lastGainedExperience = (exp > 99) ? 99 : exp;
 }
 
 -(void) dealloc

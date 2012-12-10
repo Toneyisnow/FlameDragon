@@ -17,8 +17,6 @@
 	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(round1)];
 	[self loadTurnEvent:TurnType_Friend Turn:4 Action:@selector(round4)];
 	
-	[self loadDyingEvent:40 Action:@selector(showBossDyingMessage)];
-	
 	[self loadDieEvent:1 Action:@selector(gameOver)];
 	
 	ed1 = [self loadDieEvent:81 Action:@selector(oneDead)];

@@ -119,6 +119,7 @@ typedef enum ActionStatus {
 
 -(int) updateHP:(int)delta;
 -(int) updateMP:(int)delta;
+-(void) setLastGainedExperience:(int)exp;
 
 -(NSString *) updateExpAndLevelUp;
 -(NSString *) levelUp;

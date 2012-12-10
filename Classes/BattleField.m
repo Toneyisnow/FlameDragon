@@ -893,12 +893,12 @@
 			{
 				if (c == creature)
 				{
-					NSLog(@"Got itself in search scope");
+					// NSLog(@"Got itself in search scope");
 					resistance = ScopeResistance_Plain;
 				}
 				else
 				{
-					NSLog(@"Got friend in search scope");
+					// NSLog(@"Got friend in search scope");
 					resistance = ScopeResistance_Skip;
 				}
 			}
