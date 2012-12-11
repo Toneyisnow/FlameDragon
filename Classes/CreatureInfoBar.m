@@ -43,7 +43,8 @@
 	hpValue = mpValue = nil;
 	
 	FDSprite *name = [[FDSprite alloc] initWithString:[creature getName] Size:18];
-	[name setLocation:CGPointMake(29, 45)];
+	[name setLocation:CGPointMake(5, 43)];
+	[name setAnchorPoint:CGPointMake(0, 0.5)];
 	
 	NSLog(@"Level: %d", creature.data.level);
 	NSString *levelStr = (creature.data.level < 100) ? [NSString stringWithFormat:@"LV %02d", creature.data.level] : @"LV ??";

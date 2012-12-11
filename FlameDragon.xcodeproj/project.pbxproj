@@ -243,7 +243,6 @@
 		0297D8ED14814E18007F3E12 /* Background-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 0297D8EC14814E18007F3E12 /* Background-01.png */; };
 		0297D8F014814E3C007F3E12 /* Tai-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 0297D8EF14814E3C007F3E12 /* Tai-01.png */; };
 		0297D98B1481D25F007F3E12 /* Chapter-01.dat in Resources */ = {isa = PBXBuildFile; fileRef = 0297D98A1481D25F007F3E12 /* Chapter-01.dat */; };
-		0297D98D1481D26C007F3E12 /* Animation.dat in Resources */ = {isa = PBXBuildFile; fileRef = 0297D98C1481D26C007F3E12 /* Animation.dat */; };
 		0297D98F1481D281007F3E12 /* Creature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 0297D98E1481D281007F3E12 /* Creature.dat */; };
 		0297D9FB1481E93C007F3E12 /* FDBatchActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0297D9FA1481E93C007F3E12 /* FDBatchActivity.m */; };
 		0297D9FE1481E950007F3E12 /* FDDurationActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0297D9FD1481E950007F3E12 /* FDDurationActivity.m */; };
@@ -279,6 +278,8 @@
 		02A8A34B155D674E003C3DC8 /* LinkedDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02A8A34A155D674E003C3DC8 /* LinkedDialog.m */; };
 		02AC561E15D8DA8100AAD4A3 /* FDLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02AC561D15D8DA8100AAD4A3 /* FDLayer.m */; };
 		02B59E5D167423230066783F /* AIStandByDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B59E5C167423230066783F /* AIStandByDelegate.m */; };
+		02B59EF9167614C60066783F /* EventChapter5.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B59EF8167614C60066783F /* EventChapter5.m */; };
+		02B59F521677208A0066783F /* EventChapter6.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B59F511677208A0066783F /* EventChapter6.m */; };
 		02BA6CF514B9C4000028C9E7 /* CreatureDetailBarHp.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA6CF314B9C4000028C9E7 /* CreatureDetailBarHp.png */; };
 		02BA6CF614B9C4000028C9E7 /* CreatureDetailBarMp.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA6CF414B9C4000028C9E7 /* CreatureDetailBarMp.png */; };
 		02BA6D5F14C0581D0028C9E7 /* GameOver.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA6D5E14C0581D0028C9E7 /* GameOver.png */; };
@@ -4762,6 +4763,10 @@
 		02AC561D15D8DA8100AAD4A3 /* FDLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDLayer.m; sourceTree = "<group>"; };
 		02B59E5B167423230066783F /* AIStandByDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIStandByDelegate.h; sourceTree = "<group>"; };
 		02B59E5C167423230066783F /* AIStandByDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIStandByDelegate.m; sourceTree = "<group>"; };
+		02B59EF7167614C60066783F /* EventChapter5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter5.h; sourceTree = "<group>"; };
+		02B59EF8167614C60066783F /* EventChapter5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter5.m; sourceTree = "<group>"; };
+		02B59F501677208A0066783F /* EventChapter6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter6.h; sourceTree = "<group>"; };
+		02B59F511677208A0066783F /* EventChapter6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter6.m; sourceTree = "<group>"; };
 		02BA6CF314B9C4000028C9E7 /* CreatureDetailBarHp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CreatureDetailBarHp.png; path = Others/CreatureDetailBarHp.png; sourceTree = "<group>"; };
 		02BA6CF414B9C4000028C9E7 /* CreatureDetailBarMp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CreatureDetailBarMp.png; path = Others/CreatureDetailBarMp.png; sourceTree = "<group>"; };
 		02BA6D5E14C0581D0028C9E7 /* GameOver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GameOver.png; path = Others/GameOver.png; sourceTree = "<group>"; };
@@ -10038,6 +10043,7 @@
 		029C62BF1494E8A10054B260 /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				02B59F4F167720610066783F /* Chapter */,
 				029C62CF1494EAC70054B260 /* Condition */,
 				029C62C01494E8B10054B260 /* EventHandler.h */,
 				029C62C11494E8B10054B260 /* EventHandler.m */,
@@ -10045,16 +10051,6 @@
 				029C62C41494E90E0054B260 /* IListener.m */,
 				029C62C61494E95A0054B260 /* FDEvent.h */,
 				029C62C71494E95A0054B260 /* FDEvent.m */,
-				029C62D01494EAF80054B260 /* EventChapter1.h */,
-				029C62D11494EAF80054B260 /* EventChapter1.m */,
-				023D34A8152834A3002D3EFD /* EventChapter2.h */,
-				023D34A9152834A3002D3EFD /* EventChapter2.m */,
-				022D3C7D1625CA9F0020F816 /* EventChapter3.h */,
-				022D3C7E1625CA9F0020F816 /* EventChapter3.m */,
-				02DBA0671657ED820081EC45 /* EventChapter4.h */,
-				02DBA0681657ED820081EC45 /* EventChapter4.m */,
-				02DBA1ED16664E340081EC45 /* EventChapter99.h */,
-				02DBA1EE16664E340081EC45 /* EventChapter99.m */,
 				02C57215150C612900DAEE2C /* EventLoader.h */,
 				02C57216150C612900DAEE2C /* EventLoader.m */,
 				02C57219150C61E800DAEE2C /* EventLoaderFactory.h */,
@@ -10082,6 +10078,27 @@
 				02DBA06B1657F5C60081EC45 /* ArrivePositionCondition.m */,
 			);
 			name = Condition;
+			sourceTree = "<group>";
+		};
+		02B59F4F167720610066783F /* Chapter */ = {
+			isa = PBXGroup;
+			children = (
+				029C62D01494EAF80054B260 /* EventChapter1.h */,
+				029C62D11494EAF80054B260 /* EventChapter1.m */,
+				023D34A8152834A3002D3EFD /* EventChapter2.h */,
+				023D34A9152834A3002D3EFD /* EventChapter2.m */,
+				022D3C7D1625CA9F0020F816 /* EventChapter3.h */,
+				022D3C7E1625CA9F0020F816 /* EventChapter3.m */,
+				02DBA0671657ED820081EC45 /* EventChapter4.h */,
+				02DBA0681657ED820081EC45 /* EventChapter4.m */,
+				02B59EF7167614C60066783F /* EventChapter5.h */,
+				02B59EF8167614C60066783F /* EventChapter5.m */,
+				02B59F501677208A0066783F /* EventChapter6.h */,
+				02B59F511677208A0066783F /* EventChapter6.m */,
+				02DBA1ED16664E340081EC45 /* EventChapter99.h */,
+				02DBA1EE16664E340081EC45 /* EventChapter99.m */,
+			);
+			name = Chapter;
 			sourceTree = "<group>";
 		};
 		02BD5A911477AC0400828EDA /* Message */ = {
@@ -16371,7 +16388,6 @@
 				0297D8ED14814E18007F3E12 /* Background-01.png in Resources */,
 				0297D8F014814E3C007F3E12 /* Tai-01.png in Resources */,
 				0297D98B1481D25F007F3E12 /* Chapter-01.dat in Resources */,
-				0297D98D1481D26C007F3E12 /* Animation.dat in Resources */,
 				0297D98F1481D281007F3E12 /* Creature.dat in Resources */,
 				0297DBBE148A7007007F3E12 /* Cursor.png in Resources */,
 				0297DBF1148B0027007F3E12 /* CreatureInfoBarBase.png in Resources */,
@@ -20404,6 +20420,8 @@
 				02DBA06C1657F5C60081EC45 /* ArrivePositionCondition.m in Sources */,
 				02DBA1EF16664E340081EC45 /* EventChapter99.m in Sources */,
 				02B59E5D167423230066783F /* AIStandByDelegate.m in Sources */,
+				02B59EF9167614C60066783F /* EventChapter5.m in Sources */,
+				02B59F521677208A0066783F /* EventChapter6.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

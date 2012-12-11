@@ -27,7 +27,7 @@
 
 -(void) setInitialEvent:(FDEvent *)event;
 
--(void) setEvent:(int)eventId dependentTo:(int)depId;
+-(void) setEvent:(int)eventId dependentOn:(int)depId;
 
 										   
 //-(void) doInitialEvent;

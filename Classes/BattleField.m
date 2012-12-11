@@ -923,7 +923,7 @@
 				continue;
 			}
 			
-			NSLog(@"Got enemy in search scope for ZOC");
+			// NSLog(@"Got enemy in search scope for ZOC");
 			[map setX:i Y:j Value:ScopeResistance_Gap];
 			
 			// Set ZOC zone

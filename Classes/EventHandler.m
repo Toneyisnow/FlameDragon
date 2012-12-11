@@ -40,7 +40,7 @@
 	}
 }
 
--(void) setEvent:(int)eventId dependentTo:(int)depId
+-(void) setEvent:(int)eventId dependentOn:(int)depId
 {
 	FDEvent *target = nil;
 	FDEvent *dependent = nil;

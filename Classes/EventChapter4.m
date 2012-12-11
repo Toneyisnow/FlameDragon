@@ -29,10 +29,10 @@
 	int e3 = [self loadPositionEvent:83 AtPosition:CGPointMake(1, 19) Action:@selector(onEscaped3)];
 	int e4 = [self loadPositionEvent:84 AtPosition:CGPointMake(11,20) Action:@selector(onEscaped4)];
 	
-	[eventHandler setEvent:e1 dependentTo:ed1];
-	[eventHandler setEvent:e2 dependentTo:ed2];
-	[eventHandler setEvent:e3 dependentTo:ed3];
-	[eventHandler setEvent:e4 dependentTo:ed4];
+	[eventHandler setEvent:e1 dependentOn:ed1];
+	[eventHandler setEvent:e2 dependentOn:ed2];
+	[eventHandler setEvent:e3 dependentOn:ed3];
+	[eventHandler setEvent:e4 dependentOn:ed4];
 	
 	[self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
 	
@@ -104,7 +104,7 @@
 
 -(void) round4
 {
-	NSLog(@"round1 event triggered.");
+	NSLog(@"round4 event triggered.");
 
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50403 Id:81] autorelease] Position:CGPointMake(1, 9)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50403 Id:82] autorelease] Position:CGPointMake(20, 8)];
@@ -160,5 +160,13 @@
 	}
 }
 
+-(void) enemyClear
+{
+	for (int i = 1; i <= 4; i++) {
+		[self showTalkMessage:4 conversation:4 sequence:i];
+	}
+	
+	[layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];
+}
 
 @end

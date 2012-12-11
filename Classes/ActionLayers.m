@@ -948,7 +948,7 @@
 	//ChapterRecord *record = [ChapterRecord sampleRecord];
 	ChapterRecord *record = [self composeChapterRecord];
 	
-	if (chapterId < 4) {
+	if (chapterId < 5) {
 		VillageScene *scene = [VillageScene node];
 		[scene loadWithRecord:record];
 		[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.5 scene:scene]];	

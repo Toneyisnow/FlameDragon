@@ -7,7 +7,7 @@
  */
 
 
-"TItle-04" = "第四章 塞拉村前";
+"Title-04" = "第四章 塞拉村前";
 
 "Condition-Lose" = "索尔死亡";
 "Condition-Win" = "敌全灭";
