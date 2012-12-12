@@ -865,17 +865,18 @@
 	for(FDCreature *creature in [field getFriendList])
 	{
 		CreatureRecord *r = [field generateCreatureRecord:creature];
-		r.data.hpCurrent = r.data.hpMax;
-		r.data.mpCurrent = r.data.mpMax;
+		[r.data recoverHealth];
+		[r.data clearAllStatus];
 		
 		[[record friendRecords] addObject:r];
 	}
 	
 	for (FDCreature *creature in [field getDeadCreatureList]) {
-		//if ([creature isKindOfClass:[FDFriend class]]) {
+		
 		if ([creature getCreatureType] == CreatureType_Friend) {
 			CreatureRecord *r = [field generateCreatureRecord:creature];
-			r.data.mpCurrent = r.data.mpMax;
+			[r.data recoverHealth];
+			[r.data clearAllStatus];
 			
 			[[record friendRecords] addObject:r];
 		}

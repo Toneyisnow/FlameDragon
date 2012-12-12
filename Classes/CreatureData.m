@@ -27,6 +27,8 @@
 	itemList = [[NSMutableArray alloc] init];
 	magicList = [[NSMutableArray alloc] init];
 	
+	[self clearAllStatus];
+	
 	attackItemIndex = -1;
 	defendItemIndex = -1;
 	
@@ -64,7 +66,15 @@
 	another.attackItemIndex = attackItemIndex;
 	another.defendItemIndex = defendItemIndex;
 	
-	another.bodyStatus = bodyStatus;
+	another.statusEnhanceAp = statusEnhanceAp;
+	another.statusEnhanceDp = statusEnhanceDp;
+	another.statusEnhanceDx = statusEnhanceDx;
+	another.statusFrozen = statusFrozen;
+	another.statusProhibited = statusProhibited;
+	another.statusPoisoned = statusPoisoned;
+	
+	
+	//another.bodyStatus = bodyStatus;
 	another.aiType = aiType;
 	another.aiParam = aiParam;
 	
@@ -85,7 +95,14 @@
     [coder encodeInt:mpMax forKey:@"mpMax"];
 	[coder encodeObject:itemList forKey:@"itemList"];
 	[coder encodeObject:magicList forKey:@"magicList"];
-	[coder encodeInt:bodyStatus forKey:@"bodyStatus"];
+	
+	[coder encodeBool:statusEnhanceAp forKey:@"statusEnhanceAp"];
+	[coder encodeBool:statusEnhanceDp forKey:@"statusEnhanceDp"];
+	[coder encodeBool:statusEnhanceDx forKey:@"statusEnhanceDx"];
+	[coder encodeBool:statusPoisoned forKey:@"statusPoisoned"];
+	[coder encodeBool:statusProhibited forKey:@"statusProhibited"];
+	[coder encodeBool:statusFrozen forKey:@"statusFrozen"];
+	
 	[coder encodeInt:aiType forKey:@"aiType"];
 	[coder encodeCGPoint:[(FDPosition *)aiParam posValue] forKey:@"aiParam"];
 	[coder encodeInt:attackItemIndex forKey:@"attackItemIndex"];
@@ -109,7 +126,14 @@
     mpCurrent = [coder decodeIntForKey:@"mpCurrent"];
     hpMax = [coder decodeIntForKey:@"hpMax"];
 	mpMax = [coder decodeIntForKey:@"mpMax"];
-    bodyStatus = [coder decodeIntForKey:@"bodyStatus"];
+	
+	statusEnhanceAp = [code decodeBoolForKey:@"statusEnhanceAp"];
+	statusEnhanceDp = [code decodeBoolForKey:@"statusEnhanceDp"];
+	statusEnhanceDx = [code decodeBoolForKey:@"statusEnhanceDx"];
+	statusPoisoned =  [code decodeBoolForKey:@"statusPoisoned"];
+	statusFrozen =  [code decodeBoolForKey:@"statusFrozen"];
+	statusProhibited =  [code decodeBoolForKey:@"statusProhibited"];
+	
     aiType = [coder decodeIntForKey:@"aiType"];
 	self.aiParam = [FDPosition position:[coder decodeCGPointForKey:@"aiParam"]];
 	itemList = [[coder decodeObjectForKey:@"itemList"] retain];
@@ -281,6 +305,25 @@
 			defendItemIndex --;
 		}
 	}
+}
+
+-(void) clearAllStatus
+{
+	statusEnhanceAp = FALSE;
+	statusEnhanceDp = FALSE;
+	statusEnhanceDx = FALSE;
+	statusPoisoned = FALSE;
+	statusFrozen = FALSE;
+	statusProhibited = FALSE;
+}
+
+-(void) recoverHealth
+{
+	if (hpCurrent > 0) {
+		hpCurrent = hpMax;
+	}
+	
+	mpCurrent = mpMax;
 }
 
 -(void) dealloc
