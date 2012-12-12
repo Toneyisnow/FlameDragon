@@ -31,4 +31,6 @@
 // When this item is equiped, the extra effect
 -(void) extraEffectEquipedBy:(id)obj;
 
+-(int) getPoisonRate;
+
 @end

@@ -68,4 +68,14 @@
 	return str;
 }
 
+-(int) getPoisonRate
+{
+	// Cui Du Dao
+	if (identifier == 214) {
+		return 30;
+	}
+	
+	return 0;
+}
+
 @end

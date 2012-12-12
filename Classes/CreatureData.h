@@ -52,12 +52,12 @@ typedef enum AIType {
 	NSMutableArray *itemList;
 	
 	// BodyStatus bodyStatus;
-	BOOL statusEnhanceAp;
-	BOOL statusEnhanceDp;
-	BOOL statusEnhanceDx;
-	BOOL statusPoisoned;
-	BOOL statusFrozen;
-	BOOL statusProhibited;
+	int statusEnhanceAp;
+	int statusEnhanceDp;
+	int statusEnhanceDx;
+	int statusPoisoned;
+	int statusFrozen;
+	int statusProhibited;
 	
 	
 	AIType aiType;
@@ -86,6 +86,7 @@ typedef enum AIType {
 
 -(void) clearAllStatus;
 -(void) recoverHealth;
+-(void) updateStatusInTurn;
 
 -(AttackItemDefinition *) getAttackItem;
 -(DefendItemDefinition *) getDefendItem;
@@ -105,12 +106,12 @@ typedef enum AIType {
 @property (nonatomic) int hpMax;
 @property (nonatomic) int mpMax;
 
-@property (nonatomic) BOOL statusEnhanceAp;
-@property (nonatomic) BOOL statusEnhanceDp;
-@property (nonatomic) BOOL statusEnhanceDx;
-@property (nonatomic) BOOL statusPoisoned;
-@property (nonatomic) BOOL statusFrozen;
-@property (nonatomic) BOOL statusProhibited;
+@property (nonatomic) int statusEnhanceAp;
+@property (nonatomic) int statusEnhanceDp;
+@property (nonatomic) int statusEnhanceDx;
+@property (nonatomic) int statusPoisoned;
+@property (nonatomic) int statusFrozen;
+@property (nonatomic) int statusProhibited;
 
 
 @property (nonatomic) int attackItemIndex;

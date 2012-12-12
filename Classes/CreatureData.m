@@ -15,6 +15,7 @@
 @synthesize magicList, itemList;
 
 @synthesize level,ap,dp,dx,hpCurrent,mpCurrent,hpMax,mpMax,mv,ex;
+@synthesize statusEnhanceAp, statusEnhanceDp, statusEnhanceDx, statusFrozen, statusPoisoned, statusProhibited;
 @synthesize attackItemIndex, defendItemIndex;
 @synthesize aiType;
 @synthesize aiParam;
@@ -96,12 +97,12 @@
 	[coder encodeObject:itemList forKey:@"itemList"];
 	[coder encodeObject:magicList forKey:@"magicList"];
 	
-	[coder encodeBool:statusEnhanceAp forKey:@"statusEnhanceAp"];
-	[coder encodeBool:statusEnhanceDp forKey:@"statusEnhanceDp"];
-	[coder encodeBool:statusEnhanceDx forKey:@"statusEnhanceDx"];
-	[coder encodeBool:statusPoisoned forKey:@"statusPoisoned"];
-	[coder encodeBool:statusProhibited forKey:@"statusProhibited"];
-	[coder encodeBool:statusFrozen forKey:@"statusFrozen"];
+	[coder encodeInt:statusEnhanceAp forKey:@"statusEnhanceAp"];
+	[coder encodeInt:statusEnhanceDp forKey:@"statusEnhanceDp"];
+	[coder encodeInt:statusEnhanceDx forKey:@"statusEnhanceDx"];
+	[coder encodeInt:statusPoisoned forKey:@"statusPoisoned"];
+	[coder encodeInt:statusProhibited forKey:@"statusProhibited"];
+	[coder encodeInt:statusFrozen forKey:@"statusFrozen"];
 	
 	[coder encodeInt:aiType forKey:@"aiType"];
 	[coder encodeCGPoint:[(FDPosition *)aiParam posValue] forKey:@"aiParam"];
@@ -127,12 +128,12 @@
     hpMax = [coder decodeIntForKey:@"hpMax"];
 	mpMax = [coder decodeIntForKey:@"mpMax"];
 	
-	statusEnhanceAp = [code decodeBoolForKey:@"statusEnhanceAp"];
-	statusEnhanceDp = [code decodeBoolForKey:@"statusEnhanceDp"];
-	statusEnhanceDx = [code decodeBoolForKey:@"statusEnhanceDx"];
-	statusPoisoned =  [code decodeBoolForKey:@"statusPoisoned"];
-	statusFrozen =  [code decodeBoolForKey:@"statusFrozen"];
-	statusProhibited =  [code decodeBoolForKey:@"statusProhibited"];
+	statusEnhanceAp = [coder decodeIntForKey:@"statusEnhanceAp"];
+	statusEnhanceDp = [coder decodeIntForKey:@"statusEnhanceDp"];
+	statusEnhanceDx = [coder decodeIntForKey:@"statusEnhanceDx"];
+	statusPoisoned =  [coder decodeIntForKey:@"statusPoisoned"];
+	statusFrozen =  [coder decodeIntForKey:@"statusFrozen"];
+	statusProhibited =  [coder decodeIntForKey:@"statusProhibited"];
 	
     aiType = [coder decodeIntForKey:@"aiType"];
 	self.aiParam = [FDPosition position:[coder decodeCGPointForKey:@"aiParam"]];
@@ -309,12 +310,12 @@
 
 -(void) clearAllStatus
 {
-	statusEnhanceAp = FALSE;
-	statusEnhanceDp = FALSE;
-	statusEnhanceDx = FALSE;
-	statusPoisoned = FALSE;
-	statusFrozen = FALSE;
-	statusProhibited = FALSE;
+	statusEnhanceAp = 0;
+	statusEnhanceDp = 0;
+	statusEnhanceDx = 0;
+	statusPoisoned = 0;
+	statusFrozen = 0;
+	statusProhibited = 0;
 }
 
 -(void) recoverHealth
@@ -324,6 +325,23 @@
 	}
 	
 	mpCurrent = mpMax;
+}
+
+-(void) updateStatusInTurn
+{
+	// Poison
+	if (statusPoisoned > 0) {
+		hpCurrent -= hpMax / 10;
+		if (hpCurrent < 1) hpCurrent = 1;
+	}
+	
+	
+	if (statusEnhanceAp > 0) statusEnhanceAp --;
+	if (statusEnhanceDp > 0) statusEnhanceDp --;
+	if (statusEnhanceDx > 0) statusEnhanceDx --;
+	if (statusPoisoned > 0) statusPoisoned --;
+	if (statusProhibited > 0) statusProhibited --;
+	if (statusFrozen > 0) statusFrozen --;
 }
 
 -(void) dealloc

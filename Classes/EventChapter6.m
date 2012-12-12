@@ -7,7 +7,7 @@
 //
 
 #import "EventChapter6.h"
-
+#import "FDDurationActivity.h"
 
 @implementation EventChapter6
 
@@ -94,14 +94,30 @@
 		return;
 	}
 	
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:151] autorelease] Around:CGPointMake(20,22)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:152] autorelease] Around:CGPointMake(20,24)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:153] autorelease] Around:CGPointMake(20,26)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:154] autorelease] Around:CGPointMake(19,23)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:155] autorelease] Around:CGPointMake(19,25)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:156] autorelease] Around:CGPointMake(18,24)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:157] autorelease] Around:CGPointMake(18,26)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:158] autorelease] Around:CGPointMake(17,23)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:159] autorelease] Around:CGPointMake(17,25)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:160] autorelease] Around:CGPointMake(16,22)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:161] autorelease] Around:CGPointMake(16,24)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:162] autorelease] Around:CGPointMake(26,26)];
 	
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50609 Id:163] autorelease] Around:CGPointMake(15,24)];
+	
+	for (int i = 1; i <= 3; i++) {
+		[self showTalkMessage:6 conversation:3 sequence:i];
+	}
 }
 
 -(void) showBossDyingMessage
 {
 	[self showTalkMessage:6 conversation:4 sequence:1];
 	[self showTalkMessage:6 conversation:4 sequence:2];
-	
 }
 
 -(void) enemyClear

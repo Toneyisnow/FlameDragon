@@ -109,6 +109,16 @@
 		}
 		
 		NSLog(@"Reduce HP: (%d - %d) %d", attackMin, attackMax, reduceHp);
+		
+		// Poisoned
+		AttackItemDefinition *weapon = [creature.data getAttackItem];
+		if (weapon != nil) {
+			BOOL isPoisoned = [FDRandom hitWithRate:[weapon getPoisonRate]];
+			
+			if (isPoisoned) {
+				target.data.statusPoisoned = TRUE;
+			}
+		}
 	}
 	else
 	{

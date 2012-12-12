@@ -689,7 +689,18 @@
 	
 	// Trigger Events
 	[eventListener isNotified];
-		
+	
+	// Status checking
+	for (FDCreature *c in [field getFriendList]) {
+		[c.data updatStatusInTurn];
+	}
+	for (FDCreature *c in [field getNpcList]) {
+		[c.data updatStatusInTurn];
+	}
+	for (FDCreature *c in [field getEnemyList]) {
+		[c.data updatStatusInTurn];
+	}
+	
 	// Show new turn
 	turnNo ++;
 	[self appendToMainActivityMethod:@selector(startFriendTurn) Param1:nil Param2:nil];
