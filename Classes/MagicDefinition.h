@@ -13,7 +13,10 @@
 typedef enum MagicType
 {
 	MagicType_Attack = 1,
-	MagicType_Recover = 2
+	MagicType_Recover = 2,
+	MagicType_Offensive = 3,
+	MagicType_Defensive = 4
+	
 } MagicType;
 
 @interface MagicDefinition : NSObject {
@@ -32,6 +35,7 @@ typedef enum MagicType
 +(id) readFromFile:(FDFileStream *)stream;
 
 -(void) takeEffect:(id)obj;
+-(BOOL) hasAnimation;
 
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic) MagicType magicType;

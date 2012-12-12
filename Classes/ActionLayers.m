@@ -692,13 +692,13 @@
 	
 	// Status checking
 	for (FDCreature *c in [field getFriendList]) {
-		[c.data updatStatusInTurn];
+		[c.data updateStatusInTurn];
 	}
 	for (FDCreature *c in [field getNpcList]) {
-		[c.data updatStatusInTurn];
+		[c.data updateStatusInTurn];
 	}
 	for (FDCreature *c in [field getEnemyList]) {
-		[c.data updatStatusInTurn];
+		[c.data updateStatusInTurn];
 	}
 	
 	// Show new turn

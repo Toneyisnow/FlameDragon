@@ -8,6 +8,7 @@
 
 #import "cocos2d.h"
 #import "FDFileStream.h"
+#import "FDLocalString.h"
 
 typedef enum ItemType
 {

@@ -22,9 +22,9 @@
 		
 	def.identifier = [stream readInt];
 	
-	NSString *idStr = [NSString stringWithFormat:@"%03d", def.identifier];
-	def.name = NSLocalizedStringFromTable (idStr, @"Item", @"comment");
-	
+	//NSString *idStr = [NSString stringWithFormat:@"%03d", def.identifier];
+	//def.name = NSLocalizedStringFromTable (idStr, @"Item", @"comment");
+	def.name = [FDLocalString item:def.identifier];
 	def.price = [stream readInt];
 	def.sellprice = [stream readInt];
 	

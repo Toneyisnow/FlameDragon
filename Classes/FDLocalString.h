@@ -21,6 +21,9 @@
 +(NSString *) occupation:(int)occupationId;
 +(NSString *) creature:(int)creatureDefId;
 
++(NSString *) item:(int)itemId;
++(NSString *) magic:(int)magicId;
+
 +(NSString *) chapterTitle:(int)charId;
 +(NSString *) chapterConditionWin:(int)charId;
 +(NSString *) chapterConditionLose:(int)charId;

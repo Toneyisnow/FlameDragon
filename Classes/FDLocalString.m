@@ -56,6 +56,18 @@
 	return NSLocalizedStringFromTable(idStr, @"Creature", @"comment");
 }
 
++(NSString *) item:(int)itemId
+{
+	NSString *idStr = [NSString stringWithFormat:@"%03d", itemId];
+	return NSLocalizedStringFromTable (idStr, @"Item", @"comment");
+}
+
++(NSString *) magic:(int)magicId
+{
+	NSString *idStr = [NSString stringWithFormat:@"%03d", magicId];
+	return NSLocalizedStringFromTable (idStr, @"Magic", @"comment");
+}
+
 +(NSString *) chapterTitle:(int)charId
 {
 	NSString *idStr = [NSString stringWithFormat:@"Title-%02d", charId];

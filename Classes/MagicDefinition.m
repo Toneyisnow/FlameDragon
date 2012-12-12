@@ -7,6 +7,7 @@
 //
 
 #import "MagicDefinition.h"
+#import "FDLocalString.h"
 
 @implementation MagicDefinition
 
@@ -21,8 +22,9 @@
 	
 	def.identifier = [stream readInt];
 	
-	NSString *idStr = [NSString stringWithFormat:@"%03d", def.identifier];
-	def.name = NSLocalizedStringFromTable (idStr, @"Magic", @"comment");
+	//NSString *idStr = [NSString stringWithFormat:@"%03d", def.identifier];
+	//def.name = NSLocalizedStringFromTable (idStr, @"Magic", @"comment");
+	def.name = [FDLocalString magic:def.identifier];
 	
 	def.magicType = [stream readInt];
 
@@ -45,5 +47,11 @@
 	
 	
 }
+
+-(BOOL) hasAnimation
+{
+	return magicType == MagicType_Attack;
+}
+
 
 @end

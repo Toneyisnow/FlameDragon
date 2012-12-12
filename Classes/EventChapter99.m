@@ -22,7 +22,7 @@
 	
 	int e1 = [self loadPositionEvent:11 AtPosition:CGPointMake( 1, 9) Action:@selector(onEscaped1)];
 	
-	[eventHandler setEvent:e1 dependentTo:ed1];
+	[eventHandler setEvent:e1 dependentOn:ed1];
 	
 	NSLog(@"Chapter99 events loaded.");
 

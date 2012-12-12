@@ -20,8 +20,9 @@
 	
 	def.identifier = [stream readInt];
 	
-	NSString *idStr = [NSString stringWithFormat:@"%03d", def.identifier];
-	def.name = NSLocalizedStringFromTable (idStr, @"Item", @"comment");
+	//NSString *idStr = [NSString stringWithFormat:@"%03d", def.identifier];
+	//def.name = NSLocalizedStringFromTable (idStr, @"Item", @"comment");
+	def.name = [FDLocalString item:def.identifier];
 	
 	//def.name = [stream readString];
 	def.itemCategory = [stream readInt];
