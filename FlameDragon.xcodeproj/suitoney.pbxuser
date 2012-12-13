@@ -10550,7 +10550,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {841, 910}}";
 			sepNavSelRange = "{2, 0}";
-			sepNavVisRange = "{358, 491}";
+			sepNavVisRange = "{0, 336}";
 		};
 	};
 	02BA6EBA14C7F35E0028C9E7 /* LevelUpDefinition.h */ = {

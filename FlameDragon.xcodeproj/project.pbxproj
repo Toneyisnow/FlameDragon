@@ -293,6 +293,7 @@
 		02B59FBB167857EF0066783F /* Icon-763-10.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B59FAF167857EF0066783F /* Icon-763-10.png */; };
 		02B59FBC167857EF0066783F /* Icon-763-11.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B59FB0167857EF0066783F /* Icon-763-11.png */; };
 		02B59FBD167857EF0066783F /* Icon-763-12.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B59FB1167857EF0066783F /* Icon-763-12.png */; };
+		02B59FF2167880CD0066783F /* LearntMagic.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02B59FF1167880CD0066783F /* LearntMagic.dat */; };
 		02BA6CF514B9C4000028C9E7 /* CreatureDetailBarHp.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA6CF314B9C4000028C9E7 /* CreatureDetailBarHp.png */; };
 		02BA6CF614B9C4000028C9E7 /* CreatureDetailBarMp.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA6CF414B9C4000028C9E7 /* CreatureDetailBarMp.png */; };
 		02BA6D5F14C0581D0028C9E7 /* GameOver.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA6D5E14C0581D0028C9E7 /* GameOver.png */; };
@@ -4793,6 +4794,7 @@
 		02B59FAF167857EF0066783F /* Icon-763-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-763-10.png"; sourceTree = "<group>"; };
 		02B59FB0167857EF0066783F /* Icon-763-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-763-11.png"; sourceTree = "<group>"; };
 		02B59FB1167857EF0066783F /* Icon-763-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-763-12.png"; sourceTree = "<group>"; };
+		02B59FF1167880CD0066783F /* LearntMagic.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LearntMagic.dat; path = Data/LearntMagic.dat; sourceTree = "<group>"; };
 		02BA6CF314B9C4000028C9E7 /* CreatureDetailBarHp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CreatureDetailBarHp.png; path = Others/CreatureDetailBarHp.png; sourceTree = "<group>"; };
 		02BA6CF414B9C4000028C9E7 /* CreatureDetailBarMp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CreatureDetailBarMp.png; path = Others/CreatureDetailBarMp.png; sourceTree = "<group>"; };
 		02BA6D5E14C0581D0028C9E7 /* GameOver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GameOver.png; path = Others/GameOver.png; sourceTree = "<group>"; };
@@ -9964,6 +9966,7 @@
 				0297D95814815BE1007F3E12 /* Maps */,
 				02D3095E15FAD46300CA1799 /* Shop.dat */,
 				02BA6EB814C7F2F70028C9E7 /* Levelup.dat */,
+				02B59FF1167880CD0066783F /* LearntMagic.dat */,
 				02F8403914B8167F00665511 /* Magic.dat */,
 				027334C2149A3B1A00D0812F /* Item.dat */,
 				0297D98E1481D281007F3E12 /* Creature.dat */,
@@ -20276,6 +20279,7 @@
 				02B59FBB167857EF0066783F /* Icon-763-10.png in Resources */,
 				02B59FBC167857EF0066783F /* Icon-763-11.png in Resources */,
 				02B59FBD167857EF0066783F /* Icon-763-12.png in Resources */,
+				02B59FF2167880CD0066783F /* LearntMagic.dat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
