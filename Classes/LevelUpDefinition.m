@@ -27,7 +27,7 @@
 	def.dpRange = [stream readRange];
 	def.dxRange = [stream readRange];
 	
-	return def;
+	return [def autorelease];
 }
 
 -(int) getId

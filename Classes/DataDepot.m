@@ -41,6 +41,7 @@ static DataDepot *instance = nil;
 	[self loadShopDictionary];
 	[self loadOccupationDictionary];
 	[self loadSecretSequenceDictionary];
+	[self loadLevelUpMagicDictionary];
 }
 
 -(void) loadItemDictionary
@@ -270,6 +271,30 @@ static DataDepot *instance = nil;
 	NSLog(@"Loaded SecretSequence Dictionary.");
 }
 
+-(void) loadLevelUpMagicDictionary
+{
+	NSLog(@"Loading LevelUp Magic Dictionary.");
+	
+	if (levelUpMagicDictionary != nil) {
+		[levelUpMagicDictionary release];
+		levelUpMagicDictionary = nil;
+	}
+	
+	levelUpMagicDictionary = [[NSMutableDictionary alloc] init];
+	FDFileStream *file = [[FDFileStream alloc] initWithDataFile:@"LevelupMagic" Ext:@"dat"];
+	[file open];
+	
+	LevelUpMagicDefinition * def = [LevelUpMagicDefinition readFromFile:file];
+	while (def != nil) {
+		[levelUpMagicDictionary setObject:def forKey:[def getKey]];
+		def = [LevelUpMagicDefinition readFromFile:file];
+	}
+	
+	[file close];
+	
+	NSLog(@"Loaded LevelUp Magic Dictionary.");	
+}
+
 -(void) loadAnimationDictionary
 {
 	NSLog(@"Loading Animation Dictionary.");
@@ -393,6 +418,18 @@ static DataDepot *instance = nil;
 		return nil;
 	}
 	return def;
+}
+
+-(MagicDefinition *) getLevelUpMagicDefinition:(int)creatureDefId atLeveL:(int)level
+{
+	int key = creatureDefId * 100 + level;
+	LevelUpMagicDefinition *def = [levelUpMagicDictionary objectForKey:[NSNumber numberWithInt:key]];
+	
+	if (def == nil) {
+		return nil;
+	}
+	
+	return [self getMagicDefinition:def.magicId];
 }
 
 -(AnimationDefinition *) getAnimationDefinition:(AnimationType)type Id:(int)aniId

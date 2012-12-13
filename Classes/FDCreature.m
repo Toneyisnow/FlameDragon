@@ -242,12 +242,16 @@
 	int apInc = [FDRandom fromRange:levelUp.apRange];
 	int dpInc = [FDRandom fromRange:levelUp.dpRange];
 	int dxInc = [FDRandom fromRange:levelUp.dxRange];
+	MagicDefinition *magic = [[DataDepot depot] getLevelUpMagicDefinition:[definition getId] atLeveL:data.level];
 	
 	data.hpMax += hpInc;
 	data.mpMax += mpInc;
 	data.ap += apInc;
 	data.dp += dpInc;
 	data.dx += dxInc;
+	if (magic != nil) {
+		[data.magicList addObject:[NSNumber numberWithInt:magic.identifier]];
+	}
 	
 	// NSString *message = [NSString stringWithFormat:@"等级上升了！#攻击力提升5#防御力提升3#速度提升4#"];
 	
@@ -257,8 +261,9 @@
 	NSString *msgAp = (apInc > 0) ? [NSString stringWithFormat:[FDLocalString message:14], apInc] : @"";
 	NSString *msgDp = (dpInc > 0) ? [NSString stringWithFormat:[FDLocalString message:15], dpInc] : @"";
 	NSString *msgDx = (dxInc > 0) ? [NSString stringWithFormat:[FDLocalString message:16], dxInc] : @"";
+	NSString *msgMagic = (magic != nil) ? [NSString stringWithFormat:[FDLocalString message:17], magic.name] : @"";
 	
-	NSString *message = [NSString stringWithFormat:@"%@%@%@%@%@%@", msg0, msgHp, msgMp, msgAp, msgDp, msgDx];
+	NSString *message = [NSString stringWithFormat:@"%@%@%@%@%@%@%@", msg0, msgHp, msgMp, msgAp, msgDp, msgDx, msgMagic];
 	
 	return message;
 }
