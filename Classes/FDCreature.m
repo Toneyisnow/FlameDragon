@@ -443,7 +443,10 @@
 	lastGainedExperience = (exp > 99) ? 99 : exp;
 }
 
-
+-(BOOL) canFireMagic
+{
+	return ([data.magicList count] > 0) && !hasMoved && (data.statusProhibited <= 0);
+}
 
 -(void) dealloc
 {

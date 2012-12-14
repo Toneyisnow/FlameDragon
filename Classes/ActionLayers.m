@@ -376,8 +376,8 @@
 	[creature updateMP:-magic.mpCost];
 	[creature updateHP:0];
 	
-	BOOL areBadGuys = ([creature getCreatureType] == CreatureType_Friend && magic.magicType == MagicType_Attack)
-					|| ([creature getCreatureType] == CreatureType_Enemy && magic.magicType == MagicType_Recover);
+	BOOL areBadGuys = ([creature getCreatureType] == CreatureType_Friend && (magic.magicType == MagicType_Attack || magic.magicType == MagicType_Offensive))
+					|| ([creature getCreatureType] == CreatureType_Enemy && (magic.magicType == MagicType_Recover || magic.magicType == MagicType_Defensive));
 	
 	NSMutableArray *targets = [field getCreaturesAt:position Range:magic.effectRange BadGuys:areBadGuys];
 	NSLog(@"Target Creature count: %d", [targets count]);
@@ -562,8 +562,8 @@
 	if (turnType == TurnType_Friend)
 	{
 		for (FDCreature *creature in [field getFriendList]) {
-			if (!creature.hasActioned) {
-			return;
+			if (!creature.hasActioned && creature.data.statusFrozen <= 0) {
+				return;
 			}
 		}
 		[self endFriendTurn];
@@ -571,7 +571,7 @@
 	else if	(turnType == TurnType_NPC)
 	{
 		for (FDCreature *creature in [field getNpcList]) {
-			if (!creature.hasActioned) {
+			if (!creature.hasActioned && creature.data.statusFrozen <= 0) {
 				return;
 			}
 		}
@@ -580,7 +580,7 @@
 	else if (turnType == TurnType_Enemy)
 	{
 		for (FDCreature *creature in [field getEnemyList]) {
-			if (!creature.hasActioned) {
+			if (!creature.hasActioned && creature.data.statusFrozen <= 0) {
 				return;
 			}
 		}

@@ -76,6 +76,33 @@
 		[mpBar setScaleX:(float)creature.data.mpCurrent/creature.data.mpMax Y:1];
 		[baseSprite addSprite:mpBar zOrder:1];
 	}
+	
+	int statusX = 105;
+	int statusY = 13;
+	int statusDeltaX = 20;
+	if (creature.data.statusEnhanceAp > 0) {
+		[self addStatusIcon:@"Status-EnhancedAp.png" Pos:CGPointMake(statusX, statusY)];
+	}
+	statusX += statusDeltaX;
+	if (creature.data.statusEnhanceDp > 0) {
+		[self addStatusIcon:@"Status-EnhancedDp.png" Pos:CGPointMake(statusX, statusY)];
+	}
+	statusX += statusDeltaX;
+	if (creature.data.statusEnhanceDx > 0) {
+		[self addStatusIcon:@"Status-EnhancedDx.png" Pos:CGPointMake(statusX, statusY)];
+	}
+	statusX += statusDeltaX;
+	if (creature.data.statusPoisoned > 0) {
+		[self addStatusIcon:@"Status-Poisoned.png" Pos:CGPointMake(statusX, statusY)];
+	}
+	statusX += statusDeltaX;
+	if (creature.data.statusProhibited > 0) {
+		[self addStatusIcon:@"Status-Prohibited.png" Pos:CGPointMake(statusX, statusY)];
+	}
+	statusX += statusDeltaX;
+	if (creature.data.statusFrozen > 0) {
+		[self addStatusIcon:@"Status-Frozen.png" Pos:CGPointMake(statusX, statusY)];
+	}
 }
 
 -(void) addString:(NSString *)str Pos:(CGPoint) pos
@@ -102,6 +129,14 @@
 
 
 	[sprite setAnchorPoint:CGPointMake(0, 0)];
+	[sprite setLocation:pos];
+	[baseSprite addSprite:sprite zOrder:1];
+}
+
+-(void) addStatusIcon:(NSString *)fileName Pos:(CGPoint) pos
+{
+	FDSprite *sprite = [[FDSpriteStore instance] sprite:fileName];
+	[sprite setScaleX:0.75 Y:0.75];
 	[sprite setLocation:pos];
 	[baseSprite addSprite:sprite zOrder:1];
 }

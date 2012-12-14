@@ -154,7 +154,12 @@
 		deltaHit = item.hit;
 	}
 	
-	return dx + deltaHit;
+	int total = dx + deltaHit;
+	if (statusEnhanceDx > 0) {
+		total += 0.15 * total;
+	}
+	
+	return total;
 }
 
 -(int) hitWithItem:(int)itemId
@@ -185,7 +190,12 @@
 		deltaEv += defendItem.ev;
 	}
 	
-	return dx + deltaEv;
+	int total = dx + deltaEv;
+	if (statusEnhanceDx > 0) {
+		total += 0.15 * total;
+	}
+	
+	return total;
 }
 
 -(int) evWithItem:(int)itemId
@@ -225,7 +235,12 @@
 		deltaAp = attackItem.ap;
 	}
 	
-	return ap + deltaAp;
+	int total = ap + deltaAp;
+	if (statusEnhanceAp > 0) {
+		total += 0.15 * total;
+	}
+	
+	return total;
 }
 
 -(int) apWithItem:(int)itemId
@@ -250,7 +265,12 @@
 		deltaDp = defendItem.dp;
 	}
 	
-	return dp + deltaDp;	
+	int total = dp + deltaDp;
+	if (statusEnhanceDp > 0) {
+		total += 0.15 * total;
+	}
+	
+	return total;
 }
 
 -(int) dpWithItem:(int)itemId

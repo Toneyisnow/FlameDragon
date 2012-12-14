@@ -45,10 +45,10 @@
 	}
 	
 	FDCreature *candidate = nil;
-	if (magic.magicType == MagicType_Attack) {
+	if (magic.magicType == MagicType_Attack || magic.magicType == MagicType_Offensive) {
 		candidate = [self findAffensiveTarget:magic];
 	}
-	else if (magic.magicType == MagicType_Recover) {
+	else if (magic.magicType == MagicType_Recover || magic.magicType == MagicType_Defensive) {
 		candidate = [self findDefensiveTarget:magic];
 	}
 	
@@ -126,7 +126,7 @@
 
 -(MagicDefinition *) getAvailableMagic
 {
-	if ([creature.data.magicList count] == 0) {
+	if (![creature canFireMagic]) {
 		return nil;
 	}
 	

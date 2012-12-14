@@ -306,6 +306,12 @@
 		02B5A020167AA3AE0066783F /* Fight-763-2-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B5A015167AA3AE0066783F /* Fight-763-2-08.png */; };
 		02B5A021167AA3AE0066783F /* Fight-763-2-09.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B5A016167AA3AE0066783F /* Fight-763-2-09.png */; };
 		02B5A022167AA3AE0066783F /* Fight-763-2-10.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B5A017167AA3AE0066783F /* Fight-763-2-10.png */; };
+		02B5A04F167AFCF60066783F /* Status-EnhancedAp.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B5A049167AFCF60066783F /* Status-EnhancedAp.png */; };
+		02B5A050167AFCF60066783F /* Status-EnhancedDp.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B5A04A167AFCF60066783F /* Status-EnhancedDp.png */; };
+		02B5A051167AFCF60066783F /* Status-EnhancedDx.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B5A04B167AFCF60066783F /* Status-EnhancedDx.png */; };
+		02B5A052167AFCF60066783F /* Status-Frozen.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B5A04C167AFCF60066783F /* Status-Frozen.png */; };
+		02B5A053167AFCF60066783F /* Status-Poisoned.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B5A04D167AFCF60066783F /* Status-Poisoned.png */; };
+		02B5A054167AFCF60066783F /* Status-Prohibited.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B5A04E167AFCF60066783F /* Status-Prohibited.png */; };
 		02BA6CF514B9C4000028C9E7 /* CreatureDetailBarHp.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA6CF314B9C4000028C9E7 /* CreatureDetailBarHp.png */; };
 		02BA6CF614B9C4000028C9E7 /* CreatureDetailBarMp.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA6CF414B9C4000028C9E7 /* CreatureDetailBarMp.png */; };
 		02BA6D5F14C0581D0028C9E7 /* GameOver.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA6D5E14C0581D0028C9E7 /* GameOver.png */; };
@@ -4820,6 +4826,12 @@
 		02B5A015167AA3AE0066783F /* Fight-763-2-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-763-2-08.png"; sourceTree = "<group>"; };
 		02B5A016167AA3AE0066783F /* Fight-763-2-09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-763-2-09.png"; sourceTree = "<group>"; };
 		02B5A017167AA3AE0066783F /* Fight-763-2-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-763-2-10.png"; sourceTree = "<group>"; };
+		02B5A049167AFCF60066783F /* Status-EnhancedAp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Status-EnhancedAp.png"; path = "Others/Status-EnhancedAp.png"; sourceTree = "<group>"; };
+		02B5A04A167AFCF60066783F /* Status-EnhancedDp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Status-EnhancedDp.png"; path = "Others/Status-EnhancedDp.png"; sourceTree = "<group>"; };
+		02B5A04B167AFCF60066783F /* Status-EnhancedDx.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Status-EnhancedDx.png"; path = "Others/Status-EnhancedDx.png"; sourceTree = "<group>"; };
+		02B5A04C167AFCF60066783F /* Status-Frozen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Status-Frozen.png"; path = "Others/Status-Frozen.png"; sourceTree = "<group>"; };
+		02B5A04D167AFCF60066783F /* Status-Poisoned.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Status-Poisoned.png"; path = "Others/Status-Poisoned.png"; sourceTree = "<group>"; };
+		02B5A04E167AFCF60066783F /* Status-Prohibited.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Status-Prohibited.png"; path = "Others/Status-Prohibited.png"; sourceTree = "<group>"; };
 		02BA6CF314B9C4000028C9E7 /* CreatureDetailBarHp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CreatureDetailBarHp.png; path = Others/CreatureDetailBarHp.png; sourceTree = "<group>"; };
 		02BA6CF414B9C4000028C9E7 /* CreatureDetailBarMp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CreatureDetailBarMp.png; path = Others/CreatureDetailBarMp.png; sourceTree = "<group>"; };
 		02BA6D5E14C0581D0028C9E7 /* GameOver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GameOver.png; path = Others/GameOver.png; sourceTree = "<group>"; };
@@ -9752,6 +9764,12 @@
 				02E422F0160F37970071FA29 /* Shop_Revive_0.png */,
 				02E422F1160F37970071FA29 /* Shop_Sell_0.png */,
 				02E422F2160F37970071FA29 /* Shop_Trans_0.png */,
+				02B5A049167AFCF60066783F /* Status-EnhancedAp.png */,
+				02B5A04A167AFCF60066783F /* Status-EnhancedDp.png */,
+				02B5A04B167AFCF60066783F /* Status-EnhancedDx.png */,
+				02B5A04C167AFCF60066783F /* Status-Frozen.png */,
+				02B5A04D167AFCF60066783F /* Status-Poisoned.png */,
+				02B5A04E167AFCF60066783F /* Status-Prohibited.png */,
 				02BA70DF14C9ED0B0028C9E7 /* BoxOpened_Blue.png */,
 				02BA70B114C9E5D00028C9E7 /* BoxOpened_Red.png */,
 				02BA6D5E14C0581D0028C9E7 /* GameOver.png */,
@@ -20338,6 +20356,12 @@
 				02B5A020167AA3AE0066783F /* Fight-763-2-08.png in Resources */,
 				02B5A021167AA3AE0066783F /* Fight-763-2-09.png in Resources */,
 				02B5A022167AA3AE0066783F /* Fight-763-2-10.png in Resources */,
+				02B5A04F167AFCF60066783F /* Status-EnhancedAp.png in Resources */,
+				02B5A050167AFCF60066783F /* Status-EnhancedDp.png in Resources */,
+				02B5A051167AFCF60066783F /* Status-EnhancedDx.png in Resources */,
+				02B5A052167AFCF60066783F /* Status-Frozen.png in Resources */,
+				02B5A053167AFCF60066783F /* Status-Poisoned.png in Resources */,
+				02B5A054167AFCF60066783F /* Status-Prohibited.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

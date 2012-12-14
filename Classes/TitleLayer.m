@@ -118,7 +118,7 @@
 
 -(void) loadTestingGame
 {
-	ChapterRecord *record = [ChapterRecord generateRecord:5 money:4000];
+	ChapterRecord *record = [ChapterRecord generateRecord:6 money:4000];
 	
 	[[record friendRecords] addObject:[self loadTestingRecord:1 level:12]];
 	[[record friendRecords] addObject:[self loadTestingRecord:2 level:12]];
@@ -127,6 +127,7 @@
 	[[record friendRecords] addObject:[self loadTestingRecord:5 level:12]];
 	[[record friendRecords] addObject:[self loadTestingRecord:6 level:12]];
 	[[record friendRecords] addObject:[self loadTestingRecord:7 level:12]];
+	[[record friendRecords] addObject:[self loadTestingRecord:8 level:12]];
 	
 	VillageScene *scene = [VillageScene node];
 	[scene loadWithRecord:record];

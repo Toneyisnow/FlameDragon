@@ -344,7 +344,7 @@
 		switch (menuItemId[i]) {
 			case 10:
 				// Magic
-				isValid = ([creature.data.magicList count] > 0) && !creature.hasMoved; 
+				isValid = [creature canFireMagic]; 
 				break;
 			case 11:
 				// Attack

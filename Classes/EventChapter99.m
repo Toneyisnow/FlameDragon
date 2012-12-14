@@ -67,6 +67,14 @@
 	// Enemy
 	FDEnemy *enemy1 = [[FDEnemy alloc] initWithDefinition:50101 Id:11];
 	[field addEnemy: enemy1 Position:CGPointMake(1, 9)];
+	enemy1.data.statusEnhanceAp = 2;
+	enemy1.data.statusEnhanceDp = 1;
+	enemy1.data.statusEnhanceDx = 2;
+	enemy1.data.statusFrozen = 3;
+	enemy1.data.statusProhibited = 1;
+	enemy1.data.statusPoisoned = 2;
+	
+	
 	[enemy1 release];
 	
 	FDEnemy *enemy2 = [[FDEnemy alloc] initWithDefinition:50506 Id:29];

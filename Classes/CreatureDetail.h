@@ -19,5 +19,6 @@
 -(void) initData;
 -(void) addInt:(int)value Dimen:(int)dimen Pos:(CGPoint) pos;
 -(void) addString:(NSString *)str Pos:(CGPoint) pos;
+-(void) addStatusIcon:(NSString *)fileName Pos:(CGPoint) pos;
 
 @end

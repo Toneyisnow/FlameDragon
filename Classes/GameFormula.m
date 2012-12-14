@@ -142,7 +142,7 @@
 	}
 	int totalExp = 0;
 	for (FDCreature *target in targetList) {
-		AttackInformation *magicInfo = [self magicWithId:magicId From:subject To:target Field:field];
+		AttackInformation *magicInfo = [self magicWithId:magic From:subject To:target Field:field];
 		[result addInformation:magicInfo];
 		
 		if (magic.magicType == MagicType_Attack || magic.magicType == MagicType_Recover) {
@@ -150,7 +150,6 @@
 		} else {
 			totalExp += [self calculateMagicExp:subject Target:target Magic:magic];
 		}
-
 	}
 	
 	[subject setLastGainedExperience:totalExp];
@@ -158,8 +157,9 @@
 	return [result autorelease];
 }
 
-+(AttackInformation *) magicWithId:(MagicDefinition *)magic From:(FDCreature *)creature To:(FDCreature *)target Field:(BattleField *)field
++(AttackInformation *) magicWithId:(id)obj From:(FDCreature *)creature To:(FDCreature *)target Field:(BattleField *)field
 {
+	MagicDefinition *magic = (MagicDefinition *)obj;
 	BOOL isHit = [FDRandom hitWithRate:magic.hittingRate];
 	
 	int reduceHp = 0;
@@ -236,8 +236,10 @@
 	return (int)exp;
 }
 
-+(int) calculateMagicExp:(FDCreature *)creature Target:(FDCreature *)target Magic:(MagicDefinition *)magic
++(int) calculateMagicExp:(FDCreature *)creature Target:(FDCreature *)target Magic:(id)obj
 {
+	MagicDefinition *magic = (MagicDefinition *)obj;
+	
 	if (creature == nil || target == nil || magic == nil) {
 		NSLog(@"Error in calculateMagicExp: object is nil.");
 		return 0;

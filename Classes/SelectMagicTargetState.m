@@ -38,7 +38,8 @@
 			int magicId = [[currentFriend.data.magicList objectAtIndex:magicIndex] intValue];
 			MagicDefinition *magic = [[DataDepot depot] getMagicDefinition:magicId];
 			
-			NSMutableArray *targetSet = [field getCreaturesAt:position Range:magic.effectRange BadGuys:(magic.magicType == MagicType_Attack)];
+			NSMutableArray *targetSet = [field getCreaturesAt:position Range:magic.effectRange 
+													  BadGuys:(magic.magicType == MagicType_Attack || magic.magicType == MagicType_Offensive)];
 			if ([targetSet count] > 0) {
 				
 				[field removeAllIndicators];

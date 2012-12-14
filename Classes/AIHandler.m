@@ -52,7 +52,7 @@
 	NSMutableArray *array = (creatureClass == [FDEnemy class]) ? [[[layers getFieldLayer] getField] getEnemyList]: [[[layers getFieldLayer] getField] getNpcList];
 	for (FDCreature *creature in array) {
 		
-		if (creature.hasActioned|| creature.pendingAction) {
+		if (creature.hasActioned || creature.data.statusFrozen > 0 || creature.pendingAction) {
 			continue;
 		}
 		
@@ -64,7 +64,7 @@
 	if (selectedCreature == nil) {
 		for (FDCreature *creature in array) {
 			
-			if (creature.hasActioned || !creature.pendingAction) {
+			if (creature.hasActioned || creature.data.statusFrozen > 0 || !creature.pendingAction) {
 				continue;
 			}
 			

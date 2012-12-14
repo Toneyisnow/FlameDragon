@@ -7,6 +7,7 @@
 //
 
 #import "cocos2d.h"
+#import "FDFileStream.h"
 
 @interface LevelUpMagicDefinition : NSObject {
 
