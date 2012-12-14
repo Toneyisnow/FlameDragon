@@ -308,16 +308,6 @@
 	}
 }
 
--(void) clearAllStatus
-{
-	statusEnhanceAp = 0;
-	statusEnhanceDp = 0;
-	statusEnhanceDx = 0;
-	statusPoisoned = 0;
-	statusFrozen = 0;
-	statusProhibited = 0;
-}
-
 -(void) recoverHealth
 {
 	if (hpCurrent > 0) {
@@ -342,6 +332,31 @@
 	if (statusPoisoned > 0) statusPoisoned --;
 	if (statusProhibited > 0) statusProhibited --;
 	if (statusFrozen > 0) statusFrozen --;
+}
+
+-(void) clearAllStatus
+{
+	statusEnhanceAp = 0;
+	statusEnhanceDp = 0;
+	statusEnhanceDx = 0;
+	statusPoisoned = 0;
+	statusFrozen = 0;
+	statusProhibited = 0;
+}
+
+-(void) clearStatusPoisoned
+{
+	statusPoisoned = 0;
+}
+
+-(void) clearStatusProhibited
+{
+	statusProhibited = 0;
+}
+
+-(void) clearStatusFrozen
+{
+	statusFrozen = 0;
 }
 
 -(void) dealloc

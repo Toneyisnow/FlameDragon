@@ -135,12 +135,22 @@
 +(MagicalInformation *) dealWithMagic:(int)magicId From:(FDCreature *)subject Target:(NSArray *)targetList Field:(BattleField *)field
 {
 	MagicalInformation *result = [[MagicalInformation alloc] init];
+	MagicDefinition *magic = [[DataDepot depot] getMagicDefinition:magicId];
 	
+	if (magic == nil) {
+		return result;
+	}
 	int totalExp = 0;
 	for (FDCreature *target in targetList) {
 		AttackInformation *magicInfo = [self magicWithId:magicId From:subject To:target Field:field];
 		[result addInformation:magicInfo];
-		totalExp += [self calculateAttackExp:subject Target:target Info:magicInfo];
+		
+		if (magic.magicType == MagicType_Attack || magic.magicType == MagicType_Recover) {
+			totalExp += [self calculateAttackExp:subject Target:target Info:magicInfo];
+		} else {
+			totalExp += [self calculateMagicExp:subject Target:target Magic:magic];
+		}
+
 	}
 	
 	[subject setLastGainedExperience:totalExp];
@@ -148,19 +158,34 @@
 	return [result autorelease];
 }
 
-+(AttackInformation *) magicWithId:(int)magicId From:(FDCreature *)creature To:(FDCreature *)target Field:(BattleField *)field
++(AttackInformation *) magicWithId:(MagicDefinition *)magic From:(FDCreature *)creature To:(FDCreature *)target Field:(BattleField *)field
 {
-	MagicDefinition *magic = [[DataDepot depot] getMagicDefinition:magicId];
 	BOOL isHit = [FDRandom hitWithRate:magic.hittingRate];
 	
-	int reduceHp;
+	int reduceHp = 0;
 	
 	if (isHit)
 	{
 		NSLog(@"GameFormula: Magic is Hit");
 		
-		reduceHp = [FDRandom from:[magic.quantityRange min] to:[magic.quantityRange max]];
-		reduceHp = (reduceHp < 0) ? 0 : reduceHp;
+		switch (magic.magicType) {
+			case MagicType_Attack:
+				reduceHp = [FDRandom from:[magic.quantityRange min] to:[magic.quantityRange max]];
+				reduceHp = (reduceHp < 0) ? 0 : reduceHp;
+				break;
+			case MagicType_Recover:
+				reduceHp = -[FDRandom from:[magic.quantityRange min] to:[magic.quantityRange max]];
+				reduceHp = (reduceHp > 0) ? 0 : reduceHp;
+				break;
+			case MagicType_Offensive:
+				[magic takeOffensiveEffect:target];
+				break;
+			case MagicType_Defensive:
+				[magic takeDefensiveEffect:target];
+				break;
+			default:
+				break;
+		}
 		
 		NSLog(@"Reduce HP: (%d - %d) %d", [magic.quantityRange min], [magic.quantityRange max], reduceHp);
 	}
@@ -170,9 +195,6 @@
 		reduceHp = 0;
 	}
 	
-	if (magic.magicType == MagicType_Recover ) {
-		reduceHp = -reduceHp;
-	}
 	
 	AttackInformation *aInfo = [[AttackInformation alloc] initWithBefore:target.data.hpCurrent after:(target.data.hpCurrent - reduceHp) isCritical:FALSE];
 	[target updateHP:-reduceHp];
@@ -214,44 +236,19 @@
 	return (int)exp;
 }
 
-// DEPRECATED
-+(int) getExperienceFromMagic:(int)magicId Creature:(FDCreature *)creature Target:(FDCreature *)target Field:(BattleField *)field
++(int) calculateMagicExp:(FDCreature *)creature Target:(FDCreature *)target Magic:(MagicDefinition *)magic
 {
-	MagicDefinition *magic = [[DataDepot depot] getMagicDefinition:magicId];
-	BOOL isHit = [FDRandom hitWithRate:magic.hittingRate];
-	
-	int reduceHp;
-	
-	if (isHit)
-	{
-		NSLog(@"GameFormula: Magic is Hit");
-		
-		reduceHp = [FDRandom from:[magic.quantityRange min] to:[magic.quantityRange max]];
-		reduceHp = (reduceHp < 0) ? 0 : reduceHp;
-		
-		NSLog(@"Reduce HP: (%d - %d) %d", [magic.quantityRange min], [magic.quantityRange max], reduceHp);
-	}
-	else
-	{
-		NSLog(@"GameFormula: not Hit");
-		reduceHp = 0;
+	if (creature == nil || target == nil || magic == nil) {
+		NSLog(@"Error in calculateMagicExp: object is nil.");
+		return 0;
 	}
 	
-	[target updateHP:-reduceHp];
-
-	creature.lastGainedExperience = [GameFormula calculateAttackExp:creature Target:target];
-	return creature.lastGainedExperience;
-}
-
-// Deprecated
-+(int) calculateAttackExp:(FDCreature *)creature Target:(FDCreature *)target
-{
-	// Calculate the experience
-	int reducedHp = (target.data.hpCurrent > 0) ? target.hpPrevious - target.data.hpCurrent : target.data.hpMax;
-	int exp = reducedHp * target.data.level * [target getDefinition].data.ex / creature.data.level / target.data.hpMax;
+	double exp = [magic baseExperience] * target.data.level / creature.data.level;
 	
-	return exp;
+	NSLog(@"Experience got %d.", (int)exp);
+	return (int)exp;
 }
+
 
 +(int) commonDoubleAttackRate
 {
@@ -265,14 +262,65 @@
 
 +(int) recoverHpFromRest:(FDCreature *)creature
 {
+	if (creature == nil) return 0;
+	
 	int recoverHp = [FDRandom from:creature.data.hpMax/15 to:creature.data.hpMax/10];
 	return recoverHp;
 }
 
 +(int) getMoneyNeededForRevive:(CreatureRecord *)creature
 {
+	if (creature == nil) return 0;
+	
 	return 100 * creature.data.level;
 }
 
++(void) actionedByEnhanceAp:(FDCreature *)creature
+{
+	if (creature == nil) return;
+	
+	int roundCount = [FDRandom from:2 to:4];
+	creature.data.statusEnhanceAp = roundCount;
+}
+
++(void) actionedByEnhanceDp:(FDCreature *)creature
+{
+	if (creature == nil) return;
+	
+	int roundCount = [FDRandom from:2 to:4];
+	creature.data.statusEnhanceDp = roundCount;
+}
+
++(void) actionedByEnhanceDx:(FDCreature *)creature
+{
+	if (creature == nil) return;
+	
+	int roundCount = [FDRandom from:2 to:4];
+	creature.data.statusEnhanceDx = roundCount;
+}
+
++(void) actionedByPoison:(FDCreature *)creature
+{
+	if (creature == nil) return;
+	
+	int roundCount = [FDRandom from:2 to:4];
+	creature.data.statusPoisoned = roundCount;
+}
+
++(void) actionedByProhibited:(FDCreature *)creature
+{
+	if (creature == nil) return;
+	
+	int roundCount = [FDRandom from:2 to:4];
+	creature.data.statusProhibited = roundCount;
+}
+
++(void) actionedByFrozen:(FDCreature *)creature
+{
+	if (creature == nil) return;
+	
+	int roundCount = [FDRandom from:2 to:4];
+	creature.data.statusFrozen = roundCount;
+}
 
 @end

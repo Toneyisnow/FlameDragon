@@ -84,9 +84,13 @@ typedef enum AIType {
 
 -(void) removeItem:(int)index;
 
--(void) clearAllStatus;
 -(void) recoverHealth;
 -(void) updateStatusInTurn;
+
+-(void) clearAllStatus;
+-(void) clearStatusPoisoned;
+-(void) clearStatusProhibited;
+-(void) clearStatusFrozen;
 
 -(AttackItemDefinition *) getAttackItem;
 -(DefendItemDefinition *) getDefendItem;

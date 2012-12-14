@@ -34,7 +34,11 @@ typedef enum MagicType
 
 +(id) readFromFile:(FDFileStream *)stream;
 
--(void) takeEffect:(id)obj;
+-(void) takeOffensiveEffect:(id)obj;
+-(void) takeDefensiveEffect:(id)obj;
+
+-(int) baseExperience;
+
 -(BOOL) hasAnimation;
 
 @property (nonatomic, retain) NSString *name;

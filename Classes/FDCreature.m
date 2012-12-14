@@ -443,6 +443,8 @@
 	lastGainedExperience = (exp > 99) ? 99 : exp;
 }
 
+
+
 -(void) dealloc
 {
 	[data release];

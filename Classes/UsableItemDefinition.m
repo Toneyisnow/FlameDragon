@@ -54,8 +54,10 @@
 			[creature updateMP:quantity];
 			break;
 		case UsableItemType_AntiFreeze:
+			[creature.data clearStatusFrozen];
 			break;
 		case UsableItemType_AntiPoison:
+			[creature.data clearStatusPoisoned];
 			break;
 		case UsableItemType_MaxHp:
 			creature.data.hpMax += quantity;

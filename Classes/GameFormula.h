@@ -21,10 +21,10 @@
 +(AttackInformation *) attackFrom:(FDCreature *)creature To:(FDCreature *)target Field:(BattleField *)field;
 
 +(MagicalInformation *) dealWithMagic:(int)magicId From:(FDCreature *)subject Target:(NSArray *)targetList Field:(BattleField *)field;
-+(AttackInformation *) magicWithId:(int)magicId From:(FDCreature *)creature To:(FDCreature *)target Field:(BattleField *)field;
++(AttackInformation *) magicWithId:(MagicDefinition *)magic From:(FDCreature *)creature To:(FDCreature *)target Field:(BattleField *)field;
 
 +(int) calculateAttackExp:(FDCreature *)creature Target:(FDCreature *)target Info:(AttackInformation *)info;
-
++(int) calculateMagicExp:(FDCreature *)creature Target:(FDCreature *)target Magic:(MagicDefinition *)magic;
 
 
 // +(int) getExperienceFromAttack:(FDCreature *)creature Target:(FDCreature *)target Field:(BattleField *)field;
@@ -36,5 +36,14 @@
 
 +(int) getExperienceFromMagic:(int)magicId Creature:(FDCreature *)creature Target:(FDCreature *)target Field:(BattleField *)field;
 +(int) calculateAttackExp:(FDCreature *)creature Target:(FDCreature *)target;
+
+
++(void) actionedByEnhanceAp:(FDCreature *)creature;
++(void) actionedByEnhanceDp:(FDCreature *)creature;
++(void) actionedByEnhanceDx:(FDCreature *)creature;
++(void) actionedByPoison:(FDCreature *)creature;
++(void) actionedByProhibited:(FDCreature *)creature;
++(void) actionedByFrozen:(FDCreature *)creature;
+
 
 @end
