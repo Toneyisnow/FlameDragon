@@ -295,6 +295,17 @@
 		02B59FBD167857EF0066783F /* Icon-763-12.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B59FB1167857EF0066783F /* Icon-763-12.png */; };
 		02B59FF2167880CD0066783F /* LevelupMagic.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02B59FF1167880CD0066783F /* LevelupMagic.dat */; };
 		02B59FF816798AAC0066783F /* LevelUpMagicDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B59FF716798AAC0066783F /* LevelUpMagicDefinition.m */; };
+		02B5A018167AA3AE0066783F /* Fight-763-1-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B5A00D167AA3AE0066783F /* Fight-763-1-01.png */; };
+		02B5A019167AA3AE0066783F /* Fight-763-2-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B5A00E167AA3AE0066783F /* Fight-763-2-01.png */; };
+		02B5A01A167AA3AE0066783F /* Fight-763-2-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B5A00F167AA3AE0066783F /* Fight-763-2-02.png */; };
+		02B5A01B167AA3AE0066783F /* Fight-763-2-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B5A010167AA3AE0066783F /* Fight-763-2-03.png */; };
+		02B5A01C167AA3AE0066783F /* Fight-763-2-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B5A011167AA3AE0066783F /* Fight-763-2-04.png */; };
+		02B5A01D167AA3AE0066783F /* Fight-763-2-05.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B5A012167AA3AE0066783F /* Fight-763-2-05.png */; };
+		02B5A01E167AA3AE0066783F /* Fight-763-2-06.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B5A013167AA3AE0066783F /* Fight-763-2-06.png */; };
+		02B5A01F167AA3AE0066783F /* Fight-763-2-07.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B5A014167AA3AE0066783F /* Fight-763-2-07.png */; };
+		02B5A020167AA3AE0066783F /* Fight-763-2-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B5A015167AA3AE0066783F /* Fight-763-2-08.png */; };
+		02B5A021167AA3AE0066783F /* Fight-763-2-09.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B5A016167AA3AE0066783F /* Fight-763-2-09.png */; };
+		02B5A022167AA3AE0066783F /* Fight-763-2-10.png in Resources */ = {isa = PBXBuildFile; fileRef = 02B5A017167AA3AE0066783F /* Fight-763-2-10.png */; };
 		02BA6CF514B9C4000028C9E7 /* CreatureDetailBarHp.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA6CF314B9C4000028C9E7 /* CreatureDetailBarHp.png */; };
 		02BA6CF614B9C4000028C9E7 /* CreatureDetailBarMp.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA6CF414B9C4000028C9E7 /* CreatureDetailBarMp.png */; };
 		02BA6D5F14C0581D0028C9E7 /* GameOver.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BA6D5E14C0581D0028C9E7 /* GameOver.png */; };
@@ -4798,6 +4809,17 @@
 		02B59FF1167880CD0066783F /* LevelupMagic.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LevelupMagic.dat; path = Data/LevelupMagic.dat; sourceTree = "<group>"; };
 		02B59FF616798AAC0066783F /* LevelUpMagicDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelUpMagicDefinition.h; sourceTree = "<group>"; };
 		02B59FF716798AAC0066783F /* LevelUpMagicDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelUpMagicDefinition.m; sourceTree = "<group>"; };
+		02B5A00D167AA3AE0066783F /* Fight-763-1-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-763-1-01.png"; sourceTree = "<group>"; };
+		02B5A00E167AA3AE0066783F /* Fight-763-2-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-763-2-01.png"; sourceTree = "<group>"; };
+		02B5A00F167AA3AE0066783F /* Fight-763-2-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-763-2-02.png"; sourceTree = "<group>"; };
+		02B5A010167AA3AE0066783F /* Fight-763-2-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-763-2-03.png"; sourceTree = "<group>"; };
+		02B5A011167AA3AE0066783F /* Fight-763-2-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-763-2-04.png"; sourceTree = "<group>"; };
+		02B5A012167AA3AE0066783F /* Fight-763-2-05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-763-2-05.png"; sourceTree = "<group>"; };
+		02B5A013167AA3AE0066783F /* Fight-763-2-06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-763-2-06.png"; sourceTree = "<group>"; };
+		02B5A014167AA3AE0066783F /* Fight-763-2-07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-763-2-07.png"; sourceTree = "<group>"; };
+		02B5A015167AA3AE0066783F /* Fight-763-2-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-763-2-08.png"; sourceTree = "<group>"; };
+		02B5A016167AA3AE0066783F /* Fight-763-2-09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-763-2-09.png"; sourceTree = "<group>"; };
+		02B5A017167AA3AE0066783F /* Fight-763-2-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-763-2-10.png"; sourceTree = "<group>"; };
 		02BA6CF314B9C4000028C9E7 /* CreatureDetailBarHp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CreatureDetailBarHp.png; path = Others/CreatureDetailBarHp.png; sourceTree = "<group>"; };
 		02BA6CF414B9C4000028C9E7 /* CreatureDetailBarMp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CreatureDetailBarMp.png; path = Others/CreatureDetailBarMp.png; sourceTree = "<group>"; };
 		02BA6D5E14C0581D0028C9E7 /* GameOver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GameOver.png; path = Others/GameOver.png; sourceTree = "<group>"; };
@@ -9960,6 +9982,7 @@
 				02DB9756165346050081EC45 /* 759 */,
 				02DB9770165346050081EC45 /* 760 */,
 				02DB978A165346050081EC45 /* 761 */,
+				02B5A00C167AA3AE0066783F /* 763 */,
 				02DB9791165346050081EC45 /* 901 */,
 			);
 			name = Fights;
@@ -10155,6 +10178,25 @@
 			);
 			name = 763;
 			path = Icons/763;
+			sourceTree = "<group>";
+		};
+		02B5A00C167AA3AE0066783F /* 763 */ = {
+			isa = PBXGroup;
+			children = (
+				02B5A00D167AA3AE0066783F /* Fight-763-1-01.png */,
+				02B5A00E167AA3AE0066783F /* Fight-763-2-01.png */,
+				02B5A00F167AA3AE0066783F /* Fight-763-2-02.png */,
+				02B5A010167AA3AE0066783F /* Fight-763-2-03.png */,
+				02B5A011167AA3AE0066783F /* Fight-763-2-04.png */,
+				02B5A012167AA3AE0066783F /* Fight-763-2-05.png */,
+				02B5A013167AA3AE0066783F /* Fight-763-2-06.png */,
+				02B5A014167AA3AE0066783F /* Fight-763-2-07.png */,
+				02B5A015167AA3AE0066783F /* Fight-763-2-08.png */,
+				02B5A016167AA3AE0066783F /* Fight-763-2-09.png */,
+				02B5A017167AA3AE0066783F /* Fight-763-2-10.png */,
+			);
+			name = 763;
+			path = Fights/763;
 			sourceTree = "<group>";
 		};
 		02BD5A911477AC0400828EDA /* Message */ = {
@@ -20285,6 +20327,17 @@
 				02B59FBC167857EF0066783F /* Icon-763-11.png in Resources */,
 				02B59FBD167857EF0066783F /* Icon-763-12.png in Resources */,
 				02B59FF2167880CD0066783F /* LevelupMagic.dat in Resources */,
+				02B5A018167AA3AE0066783F /* Fight-763-1-01.png in Resources */,
+				02B5A019167AA3AE0066783F /* Fight-763-2-01.png in Resources */,
+				02B5A01A167AA3AE0066783F /* Fight-763-2-02.png in Resources */,
+				02B5A01B167AA3AE0066783F /* Fight-763-2-03.png in Resources */,
+				02B5A01C167AA3AE0066783F /* Fight-763-2-04.png in Resources */,
+				02B5A01D167AA3AE0066783F /* Fight-763-2-05.png in Resources */,
+				02B5A01E167AA3AE0066783F /* Fight-763-2-06.png in Resources */,
+				02B5A01F167AA3AE0066783F /* Fight-763-2-07.png in Resources */,
+				02B5A020167AA3AE0066783F /* Fight-763-2-08.png in Resources */,
+				02B5A021167AA3AE0066783F /* Fight-763-2-09.png in Resources */,
+				02B5A022167AA3AE0066783F /* Fight-763-2-10.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

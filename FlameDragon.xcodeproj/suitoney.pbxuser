@@ -597,16 +597,16 @@
 	};
 	021BA1C61477789B00102DCE /* ActionLayers.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {894, 1885}}";
+			sepNavIntBoundsRect = "{{0, 0}, {894, 1859}}";
 			sepNavSelRange = "{1707, 0}";
-			sepNavVisRange = "{885, 1530}";
+			sepNavVisRange = "{914, 1501}";
 		};
 	};
 	021BA1C71477789B00102DCE /* ActionLayers.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1076, 13624}}";
-			sepNavSelRange = "{6444, 80}";
-			sepNavVisRange = "{8722, 1224}";
+			sepNavIntBoundsRect = "{{0, 0}, {1097, 12896}}";
+			sepNavSelRange = "{12766, 0}";
+			sepNavVisRange = "{12274, 1055}";
 		};
 	};
 	021BA2271477854E00102DCE /* FDTreasure.h */ = {
@@ -3308,16 +3308,16 @@
 	};
 	027334B9149A362D00D0812F /* UsableItemDefinition.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 637}}";
+			sepNavIntBoundsRect = "{{0, 0}, {841, 637}}";
 			sepNavSelRange = "{824, 10}";
-			sepNavVisRange = "{383, 485}";
+			sepNavVisRange = "{131, 582}";
 		};
 	};
 	027334BA149A362D00D0812F /* UsableItemDefinition.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {841, 1378}}";
-			sepNavSelRange = "{622, 49}";
-			sepNavVisRange = "{277, 751}";
+			sepNavIntBoundsRect = "{{0, 0}, {841, 1391}}";
+			sepNavSelRange = "{1273, 0}";
+			sepNavVisRange = "{1028, 678}";
 		};
 	};
 	027334BC149A365A00D0812F /* AttackItemDefinition.h */ = {
@@ -4067,7 +4067,7 @@
 		vrLen = 442;
 		vrLoc = 0;
 	};
-	027C3D43163BA59A003AB006 /* GameFormula.m:202 */ = {
+	027C3D43163BA59A003AB006 /* GameFormula.m:224 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -4079,7 +4079,7 @@
 		functionName = "+calculateAttackExp:Target:Info:";
 		hitCount = 4;
 		ignoreCount = 0;
-		lineNumber = 202;
+		lineNumber = 224;
 		location = FlameDragon;
 		modificationTime = 376709316.179755;
 		originalNumberOfMultipleMatches = 1;
@@ -4178,16 +4178,16 @@
 	};
 	027D54091462B712002C310F /* FDCreature.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {841, 2223}}";
-			sepNavSelRange = "{2387, 0}";
-			sepNavVisRange = "{2447, 545}";
+			sepNavIntBoundsRect = "{{0, 0}, {841, 2041}}";
+			sepNavSelRange = "{2884, 0}";
+			sepNavVisRange = "{2668, 673}";
 		};
 	};
 	027D540A1462B712002C310F /* FDCreature.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {859, 5681}}";
-			sepNavSelRange = "{6782, 0}";
-			sepNavVisRange = "{5510, 1432}";
+			sepNavIntBoundsRect = "{{0, 0}, {841, 6396}}";
+			sepNavSelRange = "{10197, 0}";
+			sepNavVisRange = "{9794, 533}";
 		};
 	};
 	027D540C1462B755002C310F /* FDDrawable.h */ = {
@@ -4904,16 +4904,16 @@
 	};
 	0297D785147D45CD007F3E12 /* MagicDefinition.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {841, 676}}";
-			sepNavSelRange = "{318, 0}";
-			sepNavVisRange = "{334, 645}";
+			sepNavIntBoundsRect = "{{0, 0}, {841, 728}}";
+			sepNavSelRange = "{671, 0}";
+			sepNavVisRange = "{375, 670}";
 		};
 	};
 	0297D786147D45CD007F3E12 /* MagicDefinition.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {841, 728}}";
-			sepNavSelRange = "{184, 0}";
-			sepNavVisRange = "{400, 670}";
+			sepNavIntBoundsRect = "{{0, 0}, {841, 1924}}";
+			sepNavSelRange = "{2336, 0}";
+			sepNavVisRange = "{2120, 352}";
 		};
 	};
 	0297D788147D5069007F3E12 /* CreatureDefinition.h */ = {
@@ -5322,16 +5322,16 @@
 	};
 	0297DEAB148E5273007F3E12 /* GameFormula.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1013, 533}}";
-			sepNavSelRange = "{577, 0}";
-			sepNavVisRange = "{168, 1282}";
+			sepNavIntBoundsRect = "{{0, 0}, {1013, 676}}";
+			sepNavSelRange = "{1069, 0}";
+			sepNavVisRange = "{37, 1288}";
 		};
 	};
 	0297DEAC148E5273007F3E12 /* GameFormula.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1125, 3445}}";
-			sepNavSelRange = "{3709, 0}";
-			sepNavVisRange = "{3012, 1036}";
+			sepNavIntBoundsRect = "{{0, 0}, {1125, 4095}}";
+			sepNavSelRange = "{6455, 0}";
+			sepNavVisRange = "{4081, 1074}";
 		};
 	};
 	0297DFEF148FB8BE007F3E12 /* TurnInfo.h */ = {
@@ -6293,7 +6293,7 @@
 		fRef = 0297D785147D45CD007F3E12 /* MagicDefinition.h */;
 		name = "MagicDefinition.h: 37";
 		rLen = 9;
-		rLoc = 717;
+		rLoc = 788;
 		rType = 0;
 		vrLen = 456;
 		vrLoc = 196;
@@ -6303,7 +6303,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 174";
 		rLen = 0;
-		rLoc = 6198;
+		rLoc = 6791;
 		rType = 0;
 		vrLen = 973;
 		vrLoc = 5033;
@@ -6430,7 +6430,7 @@
 		fRef = 0297D786147D45CD007F3E12 /* MagicDefinition.m */;
 		name = "MagicDefinition.m: 15";
 		rLen = 0;
-		rLoc = 265;
+		rLoc = 289;
 		rType = 0;
 		vrLen = 450;
 		vrLoc = 545;
@@ -6470,7 +6470,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 174";
 		rLen = 0;
-		rLoc = 6198;
+		rLoc = 6791;
 		rType = 0;
 		vrLen = 631;
 		vrLoc = 6325;
@@ -7086,7 +7086,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 163";
 		rLen = 0;
-		rLoc = 5349;
+		rLoc = 5944;
 		rType = 0;
 		vrLen = 1145;
 		vrLoc = 4932;
@@ -7326,7 +7326,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 163";
 		rLen = 0;
-		rLoc = 5349;
+		rLoc = 5944;
 		rType = 0;
 		vrLen = 1037;
 		vrLoc = 4351;
@@ -7676,7 +7676,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 180";
 		rLen = 0;
-		rLoc = 6508;
+		rLoc = 7101;
 		rType = 0;
 		vrLen = 1164;
 		vrLoc = 3765;
@@ -7686,7 +7686,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 138";
 		rLen = 0;
-		rLoc = 4641;
+		rLoc = 4936;
 		rType = 0;
 		vrLen = 1123;
 		vrLoc = 4932;
@@ -7696,7 +7696,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 138";
 		rLen = 0;
-		rLoc = 4641;
+		rLoc = 4936;
 		rType = 0;
 		vrLen = 1123;
 		vrLoc = 4932;
@@ -7864,7 +7864,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 175";
 		rLen = 0;
-		rLoc = 6198;
+		rLoc = 6791;
 		rType = 0;
 		vrLen = 1090;
 		vrLoc = 4791;
@@ -7874,7 +7874,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 175";
 		rLen = 0;
-		rLoc = 6198;
+		rLoc = 6791;
 		rType = 0;
 		vrLen = 1090;
 		vrLoc = 4791;
@@ -7924,7 +7924,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 160";
 		rLen = 0;
-		rLoc = 5349;
+		rLoc = 5944;
 		rType = 0;
 		vrLen = 1269;
 		vrLoc = 4664;
@@ -7934,7 +7934,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 191";
 		rLen = 0;
-		rLoc = 6241;
+		rLoc = 6834;
 		rType = 0;
 		vrLen = 1010;
 		vrLoc = 5294;
@@ -7944,7 +7944,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 184";
 		rLen = 0;
-		rLoc = 5995;
+		rLoc = 6588;
 		rType = 0;
 		vrLen = 1052;
 		vrLoc = 5294;
@@ -7964,7 +7964,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 184";
 		rLen = 0;
-		rLoc = 5995;
+		rLoc = 6588;
 		rType = 0;
 		vrLen = 1052;
 		vrLoc = 5294;
@@ -7974,12 +7974,12 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 188";
 		rLen = 0;
-		rLoc = 6091;
+		rLoc = 6684;
 		rType = 0;
 		vrLen = 1068;
 		vrLoc = 5294;
 	};
-	02B59E3416741EB60066783F /* GameFormula.m:193 */ = {
+	02B59E3416741EB60066783F /* GameFormula.m:215 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
 		);
@@ -7991,7 +7991,7 @@
 		functionName = "+calculateAttackExp:Target:Info:";
 		hitCount = 4;
 		ignoreCount = 0;
-		lineNumber = 193;
+		lineNumber = 215;
 		location = FlameDragon;
 		modificationTime = 376709308.299414;
 		originalNumberOfMultipleMatches = 1;
@@ -8002,7 +8002,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 188";
 		rLen = 0;
-		rLoc = 6091;
+		rLoc = 6684;
 		rType = 0;
 		vrLen = 1056;
 		vrLoc = 5263;
@@ -8012,7 +8012,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 188";
 		rLen = 0;
-		rLoc = 6091;
+		rLoc = 6684;
 		rType = 0;
 		vrLen = 1056;
 		vrLoc = 5263;
@@ -8022,7 +8022,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 190";
 		rLen = 0;
-		rLoc = 6144;
+		rLoc = 6737;
 		rType = 0;
 		vrLen = 1215;
 		vrLoc = 5081;
@@ -8032,7 +8032,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 190";
 		rLen = 0;
-		rLoc = 6144;
+		rLoc = 6737;
 		rType = 0;
 		vrLen = 1215;
 		vrLoc = 5081;
@@ -8052,7 +8052,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 190";
 		rLen = 0;
-		rLoc = 6167;
+		rLoc = 6760;
 		rType = 0;
 		vrLen = 1128;
 		vrLoc = 5520;
@@ -8062,7 +8062,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 192";
 		rLen = 0;
-		rLoc = 6226;
+		rLoc = 6819;
 		rType = 0;
 		vrLen = 979;
 		vrLoc = 5407;
@@ -8072,7 +8072,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 192";
 		rLen = 0;
-		rLoc = 6226;
+		rLoc = 6819;
 		rType = 0;
 		vrLen = 1162;
 		vrLoc = 3541;
@@ -8082,7 +8082,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 198";
 		rLen = 0;
-		rLoc = 6487;
+		rLoc = 7080;
 		rType = 0;
 		vrLen = 1115;
 		vrLoc = 5537;
@@ -8092,7 +8092,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 187";
 		rLen = 0;
-		rLoc = 6010;
+		rLoc = 6603;
 		rType = 0;
 		vrLen = 1060;
 		vrLoc = 5407;
@@ -8116,7 +8116,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 188";
 		rLen = 0;
-		rLoc = 6115;
+		rLoc = 6708;
 		rType = 0;
 		vrLen = 971;
 		vrLoc = 5407;
@@ -9794,7 +9794,7 @@
 		fRef = 02C57287151855E800DAEE2C /* CreatureData.h */;
 		name = "CreatureData.h: 108";
 		rLen = 15;
-		rLoc = 2021;
+		rLoc = 2109;
 		rType = 0;
 		vrLen = 843;
 		vrLoc = 1611;
@@ -9835,7 +9835,7 @@
 		fRef = 02C57288151855E800DAEE2C /* CreatureData.m */;
 		fallbackIsa = XCBuildMessageTextBookmark;
 		rLen = 1;
-		rLoc = 355;
+		rLoc = 370;
 		rType = 1;
 	};
 	02B59F8A16782B8F0066783F /* PBXTextBookmark */ = {
@@ -9843,7 +9843,7 @@
 		fRef = 02C57288151855E800DAEE2C /* CreatureData.m */;
 		name = "CreatureData.m: 338";
 		rLen = 0;
-		rLoc = 8572;
+		rLoc = 8734;
 		rType = 0;
 		vrLen = 140;
 		vrLoc = 7946;
@@ -9863,7 +9863,7 @@
 		fRef = 02C57288151855E800DAEE2C /* CreatureData.m */;
 		name = "CreatureData.m: 339";
 		rLen = 0;
-		rLoc = 8572;
+		rLoc = 8734;
 		rType = 0;
 		vrLen = 217;
 		vrLoc = 7913;
@@ -9962,7 +9962,7 @@
 		fRef = 02C57288151855E800DAEE2C /* CreatureData.m */;
 		name = "CreatureData.m: 330";
 		rLen = 27;
-		rLoc = 8076;
+		rLoc = 7919;
 		rType = 0;
 		vrLen = 564;
 		vrLoc = 8005;
@@ -9972,7 +9972,7 @@
 		fRef = 02C57287151855E800DAEE2C /* CreatureData.h */;
 		name = "CreatureData.h: 89";
 		rLen = 0;
-		rLoc = 1437;
+		rLoc = 1413;
 		rType = 0;
 		vrLen = 793;
 		vrLoc = 1098;
@@ -10192,7 +10192,7 @@
 		fRef = 0297D786147D45CD007F3E12 /* MagicDefinition.m */;
 		name = "MagicDefinition.m: 27";
 		rLen = 50;
-		rLoc = 645;
+		rLoc = 669;
 		rType = 0;
 		vrLen = 499;
 		vrLoc = 357;
@@ -10429,7 +10429,7 @@
 		fRef = 0297D786147D45CD007F3E12 /* MagicDefinition.m */;
 		name = "MagicDefinition.m: 11";
 		rLen = 0;
-		rLoc = 184;
+		rLoc = 208;
 		rType = 0;
 		vrLen = 762;
 		vrLoc = 0;
@@ -10439,7 +10439,7 @@
 		fRef = 02C57288151855E800DAEE2C /* CreatureData.m */;
 		name = "CreatureData.m: 330";
 		rLen = 27;
-		rLoc = 8076;
+		rLoc = 7919;
 		rType = 0;
 		vrLen = 564;
 		vrLoc = 8005;
@@ -10449,7 +10449,7 @@
 		fRef = 02C57287151855E800DAEE2C /* CreatureData.h */;
 		name = "CreatureData.h: 89";
 		rLen = 0;
-		rLoc = 1437;
+		rLoc = 1413;
 		rType = 0;
 		vrLen = 793;
 		vrLoc = 1098;
@@ -10480,7 +10480,7 @@
 		fRef = 02C57287151855E800DAEE2C /* CreatureData.h */;
 		name = "CreatureData.h: 89";
 		rLen = 0;
-		rLoc = 1437;
+		rLoc = 1413;
 		rType = 0;
 		vrLen = 793;
 		vrLoc = 1098;
@@ -10530,7 +10530,7 @@
 		fRef = 0297D786147D45CD007F3E12 /* MagicDefinition.m */;
 		name = "MagicDefinition.m: 11";
 		rLen = 0;
-		rLoc = 184;
+		rLoc = 208;
 		rType = 0;
 		vrLen = 670;
 		vrLoc = 400;
@@ -11435,16 +11435,16 @@
 	};
 	02C57287151855E800DAEE2C /* CreatureData.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {841, 1716}}";
-			sepNavSelRange = "{1437, 0}";
-			sepNavVisRange = "{1098, 793}";
+			sepNavIntBoundsRect = "{{0, 0}, {841, 1729}}";
+			sepNavSelRange = "{1525, 0}";
+			sepNavVisRange = "{1142, 800}";
 		};
 	};
 	02C57288151855E800DAEE2C /* CreatureData.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {841, 4888}}";
-			sepNavSelRange = "{8076, 27}";
-			sepNavVisRange = "{8005, 564}";
+			sepNavIntBoundsRect = "{{0, 0}, {841, 5265}}";
+			sepNavSelRange = "{8647, 0}";
+			sepNavVisRange = "{8194, 470}";
 		};
 	};
 	02C5728C1519944E00DAEE2C /* CreatureRecord.h */ = {
@@ -12652,7 +12652,7 @@
 		fRef = 0297D785147D45CD007F3E12 /* MagicDefinition.h */;
 		name = "MagicDefinition.h: 37";
 		rLen = 9;
-		rLoc = 717;
+		rLoc = 788;
 		rType = 0;
 		vrLen = 523;
 		vrLoc = 129;
@@ -13783,7 +13783,7 @@
 		fRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */;
 		name = "GameFormula.m: 173";
 		rLen = 0;
-		rLoc = 6574;
+		rLoc = 7167;
 		rType = 0;
 		vrLen = 1010;
 		vrLoc = 2723;
@@ -13905,7 +13905,7 @@
 		fRef = 0297D786147D45CD007F3E12 /* MagicDefinition.m */;
 		name = "MagicDefinition.m: 11";
 		rLen = 32;
-		rLoc = 185;
+		rLoc = 209;
 		rType = 0;
 		vrLen = 854;
 		vrLoc = 129;
@@ -14777,8 +14777,8 @@
 			02BB3A3C160E0870006BEE76 /* Shopping2HomeDialog.m:535 */,
 			022D371F1614998D0020F816 /* Shopping2SelectAmorTargetDialog.m:46 */,
 			022D3A79161F38F90020F816 /* ActionLayers.m:885 */,
-			027C3D43163BA59A003AB006 /* GameFormula.m:202 */,
-			02B59E3416741EB60066783F /* GameFormula.m:193 */,
+			027C3D43163BA59A003AB006 /* GameFormula.m:224 */,
+			02B59E3416741EB60066783F /* GameFormula.m:215 */,
 		);
 		codeSenseManager = 027D53401460128F002C310F /* Code sense */;
 		executables = (
