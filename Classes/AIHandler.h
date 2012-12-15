@@ -15,6 +15,8 @@
 	ActionLayers *layers;
 	Class creatureClass;
 	
+	int lastOperatedCreatureId;
+	
 }
 
 -(id) initEnemyHandlerWithLayers:(ActionLayers *)l;

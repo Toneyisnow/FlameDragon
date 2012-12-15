@@ -70,10 +70,17 @@
 {
 	BattleField *field = [[layers getFieldLayer] getField];
 
-	CGPoint targetPos = [self generatePos:[field getObjectPos:[self findTarget]]];
-	[field setCursorTo:targetPos];
-	[layers moveCreature:creature To:targetPos showMenu:FALSE];
-
+	NSLog(@"takePendAction");
+	FDCreature *target = [self findTarget];
+	if (target != nil) {
+		NSLog(@"target != nil");
+		CGPoint targetPos = [self generatePos:[field getObjectPos:target]];
+		NSLog(@"generated targetPos.");
+		[field setCursorTo:targetPos];
+		[layers moveCreature:creature To:targetPos showMenu:FALSE];
+	}
+	
+	NSLog(@"End Pend Action;");
 	[layers appendToCurrentActivityMethod:@selector(creatureEndTurn:) Param1:creature Param2:nil];
 }
 

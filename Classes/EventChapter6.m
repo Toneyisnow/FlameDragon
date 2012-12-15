@@ -23,6 +23,7 @@
 	
 	[self loadDyingEvent:199 Action:@selector(showBossDyingMessage)];
 	
+	NSLog(@"Chapter6 events loaded.");
 }
 
 -(void) round1
@@ -46,6 +47,7 @@
 	
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50603 Id:101] autorelease] Position:CGPointMake(11, 15)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50603 Id:102] autorelease] Position:CGPointMake(12, 14)];
+	
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50608 Id:103] autorelease] Position:CGPointMake( 9, 15)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50608 Id:104] autorelease] Position:CGPointMake(13, 15)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50605 Id:105] autorelease] Position:CGPointMake(10, 14)];

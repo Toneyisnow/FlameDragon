@@ -66,7 +66,7 @@
 	
 	// Enemy
 	FDEnemy *enemy1 = [[FDEnemy alloc] initWithDefinition:50101 Id:11];
-	[field addEnemy: enemy1 Position:CGPointMake(1, 9)];
+	//[field addEnemy: enemy1 Position:CGPointMake(1, 9)];
 	enemy1.data.statusEnhanceAp = 2;
 	enemy1.data.statusEnhanceDp = 1;
 	enemy1.data.statusEnhanceDx = 2;
@@ -77,7 +77,7 @@
 	
 	[enemy1 release];
 	
-	FDEnemy *enemy2 = [[FDEnemy alloc] initWithDefinition:50506 Id:29];
+	FDEnemy *enemy2 = [[FDEnemy alloc] initWithDefinition:50505 Id:29];
 	[field addEnemy: enemy2 Position:CGPointMake(4, 19)];
 	[enemy2 release];
 	
@@ -93,7 +93,7 @@
 	[field addEnemy: enemy5 Position:CGPointMake(6, 17)];
 	[enemy5 release];
 	
-	FDEnemy *enemy6 = [[FDEnemy alloc] initWithDefinition:50506 Id:16 DropItem:102];
+	FDEnemy *enemy6 = [[FDEnemy alloc] initWithDefinition:50505 Id:16 DropItem:102];
 	[field addEnemy: enemy6 Position:CGPointMake(5, 18)];
 	[enemy6 release];
 	

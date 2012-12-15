@@ -23,6 +23,8 @@
 	self = [super init];
 	
 	creatureClass = [FDEnemy class];
+	lastOperatedCreatureId = 0;
+	
 	layers = l;
 	
 	[layers setEnemyAiHandler:self];
@@ -110,6 +112,7 @@
 	
 	if (delegate != nil)
 	{
+		lastOperatedCreatureId = [creature getIdentifier];
 		[delegate takeAction];
 		//[delegate release];
 	}

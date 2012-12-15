@@ -28,7 +28,7 @@
 	
 	pool = [[NSAutoreleasePool alloc] init];
 	fileName = fName;
-	
+	// NSLog(@"Load File %@", fileName);
 	// fileContent = [NSString stringWithContentsOfFile: fileName];
 
 	return self;

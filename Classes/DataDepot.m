@@ -314,12 +314,13 @@ static DataDepot *instance = nil;
 	
 	animationDictionary  = [[NSMutableDictionary alloc] init];
 	
-	FDFileStream *file = [[FDFileStream alloc] initWithDataFile:@"Animation"];
+	FDFileStream *file = [[FDFileStream alloc] initWithDataFile:@"FightAnimation"];
 	[file open];
 	
 	int creatureAniId = [file readInt];
 	while (creatureAniId > 0) {
 	
+		NSLog(@"Load Animation for AniId %d", creatureAniId);
 		int aniCount = [file readInt];
 		
 		// Idle Animation

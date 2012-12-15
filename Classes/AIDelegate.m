@@ -159,9 +159,10 @@
 	}
 	
 	int candidateIndex = 0;
-	while (candidateIndex < [terminateCandidates count] && ![creature isAbleToAttack:[terminateCandidates objectAtIndex:candidateIndex]]) {
+	while (candidateIndex < [terminateCandidates count]-1 && ![creature isAbleToAttack:[terminateCandidates objectAtIndex:candidateIndex]]) {
 		candidateIndex ++;
 	}
+	
 	terminateCreature = [terminateCandidates objectAtIndex:candidateIndex];
 	
 	[disResolver resolveDistanceFrom:currentPos terminateAt:[field getObjectPos:terminateCreature]];
@@ -186,6 +187,7 @@
 			finalTarget = c;
 		}
 	}
+	[candidateList release];
 	
 	NSLog(@"Find target: %d", [finalTarget getIdentifier]);
 	

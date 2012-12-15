@@ -200,11 +200,11 @@
 		if ([fightFrame isRemote]) {
 			[self setTargetVisible:FALSE];
 			[subjectBar appear];
-			[taiSprite setVisible:TRUE];
+			//[taiSprite setVisible:TRUE];
 		} else {
 			[self setTargetVisible:TRUE];
 			[subjectBar hide];
-			[taiSprite setVisible:FALSE];
+			//[taiSprite setVisible:FALSE];
 		}
 	}
 	
@@ -269,9 +269,12 @@
 		[targetBar hide];
 	}
 	
-	if (![target getCreatureType] == CreatureType_Enemy) {
+	if ([target getCreatureType] == CreatureType_Enemy) {
+		[taiSprite setVisible:!val];
+	} else {
 		[taiSprite setVisible:val];
 	}
+	
 }
 
 -(void) dealloc
