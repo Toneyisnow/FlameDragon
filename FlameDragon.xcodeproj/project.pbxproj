@@ -100,6 +100,7 @@
 		025DA9B616301D2000DD7C30 /* AttackInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 025DA9B516301D2000DD7C30 /* AttackInformation.m */; };
 		02646E8E15750D7500FEBFAC /* ShoppingRecordDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02646E8D15750D7500FEBFAC /* ShoppingRecordDialog.m */; };
 		0266D4BC167C06370067CC45 /* EventChapter7.m in Sources */ = {isa = PBXBuildFile; fileRef = 0266D4BB167C06370067CC45 /* EventChapter7.m */; };
+		0266D4C0167C5AB40067CC45 /* EventChapter8.m in Sources */ = {isa = PBXBuildFile; fileRef = 0266D4BF167C5AB40067CC45 /* EventChapter8.m */; };
 		026BE27D14B3414900484B4D /* FDRandom.m in Sources */ = {isa = PBXBuildFile; fileRef = 026BE27C14B3414900484B4D /* FDRandom.m */; };
 		0273334F1497803900D0812F /* AIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 0273334E1497803900D0812F /* AIHandler.m */; };
 		027333521497809600D0812F /* AIDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 027333511497809600D0812F /* AIDelegate.m */; };
@@ -4532,6 +4533,8 @@
 		02646E8D15750D7500FEBFAC /* ShoppingRecordDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingRecordDialog.m; sourceTree = "<group>"; };
 		0266D4BA167C06370067CC45 /* EventChapter7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter7.h; sourceTree = "<group>"; };
 		0266D4BB167C06370067CC45 /* EventChapter7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter7.m; sourceTree = "<group>"; };
+		0266D4BE167C5AB40067CC45 /* EventChapter8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter8.h; sourceTree = "<group>"; };
+		0266D4BF167C5AB40067CC45 /* EventChapter8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter8.m; sourceTree = "<group>"; };
 		026BE27B14B3414900484B4D /* FDRandom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDRandom.h; sourceTree = "<group>"; };
 		026BE27C14B3414900484B4D /* FDRandom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDRandom.m; sourceTree = "<group>"; };
 		0273334D1497803900D0812F /* AIHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIHandler.h; sourceTree = "<group>"; };
@@ -10178,6 +10181,8 @@
 				02B59F511677208A0066783F /* EventChapter6.m */,
 				0266D4BA167C06370067CC45 /* EventChapter7.h */,
 				0266D4BB167C06370067CC45 /* EventChapter7.m */,
+				0266D4BE167C5AB40067CC45 /* EventChapter8.h */,
+				0266D4BF167C5AB40067CC45 /* EventChapter8.m */,
 				02DBA1ED16664E340081EC45 /* EventChapter99.h */,
 				02DBA1EE16664E340081EC45 /* EventChapter99.m */,
 			);
@@ -20578,6 +20583,7 @@
 				02B59F521677208A0066783F /* EventChapter6.m in Sources */,
 				02B59FF816798AAC0066783F /* LevelUpMagicDefinition.m in Sources */,
 				0266D4BC167C06370067CC45 /* EventChapter7.m in Sources */,
+				0266D4C0167C5AB40067CC45 /* EventChapter8.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -20701,7 +20707,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = NO;
 				"GCC_THUMB_SUPPORT[arch=armv7]" = YES;
@@ -20831,7 +20837,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DEBUG,
@@ -20857,7 +20863,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = NO;
 				"GCC_THUMB_SUPPORT[arch=armv7]" = YES;

@@ -320,7 +320,7 @@ static DataDepot *instance = nil;
 	int creatureAniId = [file readInt];
 	while (creatureAniId > 0) {
 	
-		NSLog(@"Load Animation for AniId %d", creatureAniId);
+		// NSLog(@"Load Animation for AniId %d", creatureAniId);
 		int aniCount = [file readInt];
 		
 		// Idle Animation

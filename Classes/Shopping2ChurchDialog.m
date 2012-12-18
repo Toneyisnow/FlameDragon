@@ -139,6 +139,9 @@
 		}
 	}
 	
+	// TODO: Before we have transfer function
+	hasTransferFriend = FALSE;
+	
 	if (hasTransferFriend) {
 		Shopping2ShowTransferDialog *dialog = [[Shopping2ShowTransferDialog alloc] init];
 		[self showDialog:dialog Callback:@selector(onTransfer_SelectedFriend:)];

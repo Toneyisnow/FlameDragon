@@ -86,11 +86,11 @@
 	[field addEnemy: enemy1 Position:CGPointMake(3, 19)];
 	[enemy1 release];
 	
-	FDEnemy *enemy2 = [[FDEnemy alloc] initWithDefinition:702 Id:29];
+	FDEnemy *enemy2 = [[FDEnemy alloc] initWithDefinition:702 Id:29 DropItem:201];
 	[field addEnemy: enemy2 Position:CGPointMake(4, 19)];
 	[enemy2 release];
 	
-	FDEnemy *enemy3 = [[FDEnemy alloc] initWithDefinition:701 Id:13];
+	FDEnemy *enemy3 = [[FDEnemy alloc] initWithDefinition:701 Id:13 DropItem:101];
 	[field addEnemy: enemy3 Position:CGPointMake(6, 18)];
 	[enemy3 release];
 	

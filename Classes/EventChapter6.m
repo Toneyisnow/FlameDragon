@@ -15,6 +15,7 @@
 -(void) loadEvents
 {
 	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(round1)];
+	[self loadTurnEvent:TurnType_Friend Turn:5 Action:@selector(batch2)];
 	[self loadTurnEvent:TurnType_Friend Turn:10 Action:@selector(round10)];
 	[self loadTurnEvent:TurnType_Friend Turn:15 Action:@selector(round15)];
 	
@@ -48,33 +49,46 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50603 Id:101] autorelease] Position:CGPointMake(11, 15)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50603 Id:102] autorelease] Position:CGPointMake(12, 14)];
 	
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50608 Id:103] autorelease] Position:CGPointMake( 9, 15)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50608 Id:103 DropItem:102] autorelease] Position:CGPointMake( 9, 15)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50608 Id:104] autorelease] Position:CGPointMake(13, 15)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50605 Id:105] autorelease] Position:CGPointMake(10, 14)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50605 Id:105 DropItem:101] autorelease] Position:CGPointMake(10, 14)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50605 Id:106] autorelease] Position:CGPointMake(14, 14)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50602 Id:107] autorelease] Position:CGPointMake(10, 17)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50602 Id:108] autorelease] Position:CGPointMake(11, 16)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50602 Id:108 DropItem:901] autorelease] Position:CGPointMake(11, 16)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50602 Id:109] autorelease] Position:CGPointMake(12, 16)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50602 Id:110] autorelease] Position:CGPointMake(13, 17)];
 	
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50603 Id:111] autorelease] Position:CGPointMake( 8,  9)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50603 Id:112] autorelease] Position:CGPointMake(12,  9)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50603 Id:112 DropItem:102] autorelease] Position:CGPointMake(12,  9)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50608 Id:113] autorelease] Position:CGPointMake(10,  7)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50608 Id:114] autorelease] Position:CGPointMake(10, 11)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50605 Id:115] autorelease] Position:CGPointMake( 7, 11)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50605 Id:116] autorelease] Position:CGPointMake(14, 11)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50605 Id:116 DropItem:201] autorelease] Position:CGPointMake(14, 11)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50602 Id:117] autorelease] Position:CGPointMake( 9,  8)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50602 Id:118] autorelease] Position:CGPointMake(11,  8)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50602 Id:119] autorelease] Position:CGPointMake(11, 10)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50602 Id:119 DropItem:201] autorelease] Position:CGPointMake(11, 10)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50602 Id:120] autorelease] Position:CGPointMake( 9, 10)];
 	
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50601 Id:199] autorelease] Position:CGPointMake(10, 9)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50601 Id:199 DropItem:803] autorelease] Position:CGPointMake(10, 9)];
+	
+	for (int i = 111; i <= 120; i++) {
+		[self setAiOfId:i withType:AIType_StandBy];
+	}
+	[self setAiOfId:199 withType:AIType_StandBy];
 	
 	[layers appendToCurrentActivity:[[[FDDurationActivity alloc] initWithDuration:0.5] autorelease]];
 	
 	for (int i = 1; i <= 18; i++) {
 		[self showTalkMessage:6 conversation:1 sequence:i];
 	}
+}
+
+-(void) batch2
+{
+	for (int i = 111; i <= 120; i++) {
+		[self setAiOfId:i withType:AIType_Aggressive];
+	}
+	[self setAiOfId:199 withType:AIType_Aggressive];
 }
 
 -(void) round10
@@ -99,17 +113,17 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:151] autorelease] Around:CGPointMake(20,22)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:152] autorelease] Around:CGPointMake(20,24)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:153] autorelease] Around:CGPointMake(20,26)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:154] autorelease] Around:CGPointMake(19,23)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:154 DropItem:802] autorelease] Around:CGPointMake(19,23)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:155] autorelease] Around:CGPointMake(19,25)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:156] autorelease] Around:CGPointMake(18,24)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:156 DropItem:102] autorelease] Around:CGPointMake(18,24)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:157] autorelease] Around:CGPointMake(18,26)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:158] autorelease] Around:CGPointMake(17,23)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:158 DropItem:101] autorelease] Around:CGPointMake(17,23)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:159] autorelease] Around:CGPointMake(17,25)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:160] autorelease] Around:CGPointMake(16,22)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:161] autorelease] Around:CGPointMake(16,24)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:161 DropItem:203] autorelease] Around:CGPointMake(16,24)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:162] autorelease] Around:CGPointMake(26,26)];
 	
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50609 Id:163] autorelease] Around:CGPointMake(15,24)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50609 Id:163 DropItem:237] autorelease] Around:CGPointMake(15,24)];
 	
 	for (int i = 1; i <= 3; i++) {
 		[self showTalkMessage:6 conversation:3 sequence:i];

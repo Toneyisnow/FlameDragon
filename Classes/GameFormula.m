@@ -266,7 +266,7 @@
 {
 	if (creature == nil) return 0;
 	
-	int recoverHp = [FDRandom from:creature.data.hpMax/15 to:creature.data.hpMax/10];
+	int recoverHp = [FDRandom from:creature.data.hpMax/10 to:creature.data.hpMax/5];
 	return recoverHp;
 }
 

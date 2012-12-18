@@ -18,7 +18,6 @@
 @implementation EventChapter1
 
 /*
-
 -(void) loadEvents
 {
 	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(round1_1)];
@@ -443,7 +442,7 @@
 
 -(void) loadEvents
 {
-	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(round1)];
+	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(round1_1)];
 	[self loadTurnEvent:TurnType_Friend Turn:3 Action:@selector(round3)];
 	[self loadTurnEvent:TurnType_Friend Turn:4 Action:@selector(round4)];
 	[self loadTurnEvent:TurnType_Friend Turn:5 Action:@selector(round5_Boss)];
@@ -514,7 +513,7 @@
 	[field addEnemy: enemy1 Position:CGPointMake(2, 22)];
 	[enemy1 release];
 	
-	FDEnemy *enemy2 = [[FDEnemy alloc] initWithDefinition:50101 Id:12];
+	FDEnemy *enemy2 = [[FDEnemy alloc] initWithDefinition:50101 Id:12 DropItem:101];
 	[field addEnemy: enemy2 Position:CGPointMake(3, 22)];
 	[enemy2 release];
 	
@@ -559,7 +558,7 @@
 	[field addEnemy: enemy6 Position:CGPointMake(3, 2)];
 	[enemy6 release];
 	
-	FDEnemy *enemy7 = [[FDEnemy alloc] initWithDefinition:50101 Id:17];
+	FDEnemy *enemy7 = [[FDEnemy alloc] initWithDefinition:50101 Id:17 DropItem:101];
 	[field addEnemy: enemy7 Position:CGPointMake(2, 3)];
 	[enemy7 release];
 	
@@ -641,7 +640,7 @@
 	[field addEnemy:enemy1 Position:CGPointMake(19, 23)];
 	[enemy1 release];
 	
-	FDEnemy *enemy2 = [[FDEnemy alloc] initWithDefinition:50101 Id:22];
+	FDEnemy *enemy2 = [[FDEnemy alloc] initWithDefinition:50101 Id:22 DropItem:101];
 	[field addEnemy:enemy2 Position:CGPointMake(20,22)];
 	[enemy2 release];
 	
@@ -692,7 +691,7 @@
 	[field addEnemy:enemy4 Position:CGPointMake(5, 24)];
 	[enemy4 release];
 	
-	FDEnemy *enemyBoss = [[FDEnemy alloc] initWithDefinition:50102 Id:29];
+	FDEnemy *enemyBoss = [[FDEnemy alloc] initWithDefinition:50102 Id:29 DropItem:201];
 	[field addEnemy:enemyBoss Position:CGPointMake(4, 23)];
 	[enemyBoss release];
 	
