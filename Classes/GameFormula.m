@@ -228,7 +228,7 @@
 	if ([target getCreatureType] == CreatureType_Enemy) {
 		exp = calculatedHp * target.data.level * [target getDefinition].data.ex / (double)creature.data.level / (double)target.data.hpMax;
 	} else {
-		exp = calculatedHp * 100 * target.data.level / (double)creature.data.level / (double)target.data.hpMax;
+		exp = calculatedHp * 100 * target.data.level * 0.7 / (double)creature.data.level / (double)target.data.hpMax;
 	}
 
 	

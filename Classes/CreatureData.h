@@ -65,6 +65,9 @@ typedef enum AIType {
 	
 	int attackItemIndex;
 	int defendItemIndex;
+	
+	// Only will be available for FDEnemy
+	int dropItemId;
 }
 
 -(CreatureData *) clone;
@@ -121,6 +124,8 @@ typedef enum AIType {
 
 @property (nonatomic) int attackItemIndex;
 @property (nonatomic) int defendItemIndex;
+
+@property (nonatomic) int dropItemId;
 
 @property (nonatomic) AIType aiType;
 @property (retain, nonatomic) id aiParam;

@@ -121,7 +121,7 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:159] autorelease] Around:CGPointMake(17,25)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:160] autorelease] Around:CGPointMake(16,22)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:161 DropItem:203] autorelease] Around:CGPointMake(16,24)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:162] autorelease] Around:CGPointMake(26,26)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50607 Id:162] autorelease] Around:CGPointMake(16,26)];
 	
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50609 Id:163 DropItem:237] autorelease] Around:CGPointMake(15,24)];
 	

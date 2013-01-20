@@ -11,7 +11,7 @@
 
 @interface FDEnemy : FDCreature {
 
-	int dropItemId;
+	// int dropItemId; // This has been moved to CreatureData
 	
 }
 

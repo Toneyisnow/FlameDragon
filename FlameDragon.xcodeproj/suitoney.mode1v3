@@ -269,32 +269,20 @@
 								<string>020759C3155CD23E009E75E9</string>
 								<string>027D54111462B8B2002C310F</string>
 								<string>027D5845146A9BE6002C310F</string>
-								<string>027D54071462B621002C310F</string>
-								<string>029C62BF1494E8A10054B260</string>
-								<string>02B59F4F167720610066783F</string>
-								<string>0297DBF4148B00F5007F3E12</string>
-								<string>027D5852146AA2F2002C310F</string>
-								<string>027D54081462B705002C310F</string>
 								<string>50F414EB1069373D002A0D5E</string>
-								<string>02733C1614A9CDFB00D0812F</string>
-								<string>029C625214910E2B0054B260</string>
-								<string>0297D95714815BD8007F3E12</string>
 								<string>1C37FBAC04509CD000000102</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>73</integer>
-									<integer>63</integer>
-									<integer>62</integer>
-									<integer>60</integer>
-									<integer>9</integer>
+									<integer>98</integer>
+									<integer>71</integer>
 									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
-							<string>{{0, 948}, {293, 580}}</string>
+							<string>{{0, 1114}, {293, 580}}</string>
 						</dict>
 						<key>PBXTopSmartGroupGIDs</key>
 						<array/>
@@ -324,14 +312,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>EventChapter5.m</string>
+								<string>Info.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -339,11 +325,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>EventChapter5.m</string>
+										<string>Info.plist</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>0266D561167F4CC60067CC45</string>
+										<string>0266D56C16813F580067CC45</string>
 										<key>history</key>
 										<array>
 											<string>027D538614618BFA002C310F</string>
@@ -755,7 +741,6 @@
 											<string>027C3D0C16398448003AB006</string>
 											<string>027C3D73163BCFCB003AB006</string>
 											<string>02D4C5B81644ECEA00B9B407</string>
-											<string>02D4C5EF1646222A00B9B407</string>
 											<string>02D4C5F01646222A00B9B407</string>
 											<string>02D4C62C1646737200B9B407</string>
 											<string>02D4C62D1646737200B9B407</string>
@@ -1225,7 +1210,8 @@
 											<string>0266D55D167F4CC60067CC45</string>
 											<string>0266D55E167F4CC60067CC45</string>
 											<string>0266D55F167F4CC60067CC45</string>
-											<string>0266D560167F4CC60067CC45</string>
+											<string>0266D56A16813F580067CC45</string>
+											<string>0266D56B16813F580067CC45</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>

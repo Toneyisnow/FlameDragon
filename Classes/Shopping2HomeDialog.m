@@ -424,8 +424,7 @@
 	NSNumber *itemId = [originFriend.data.itemList objectAtIndex:lastSelectedItemIndex];
 	
 	[targetFriend.data.itemList addObject:itemId];
-	[originFriend.data.itemList removeObjectAtIndex:lastSelectedItemIndex];
-	
+	[originFriend.data removeItem:lastSelectedItemIndex];
 }
 
 -(void) onEquip

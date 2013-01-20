@@ -74,6 +74,9 @@
 		case UsableItemType_Dx:
 			creature.data.dx += quantity;
 			break;
+		case UsableItemType_Mv:
+			creature.data.mv += quantity;
+			break;
 		default:
 			break;
 	}

@@ -193,6 +193,7 @@
 		027D584E146A9C04002C310F /* ScopeResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 027D584B146A9C04002C310F /* ScopeResolver.m */; };
 		027D5851146AA2E3002C310F /* GroundField.m in Sources */ = {isa = PBXBuildFile; fileRef = 027D5850146AA2E3002C310F /* GroundField.m */; };
 		027D585B146AAF8C002C310F /* FDIntMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 027D585A146AAF8C002C310F /* FDIntMap.m */; };
+		027EF6A716AB770D007DC970 /* EventChapter9.m in Sources */ = {isa = PBXBuildFile; fileRef = 027EF6A616AB770D007DC970 /* EventChapter9.m */; };
 		028148C2160CC2E2001CBB4D /* Dato-006-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 028148C1160CC2E2001CBB4D /* Dato-006-1.png */; };
 		02868FD7152572350056A399 /* TreasureRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 02868FD6152572350056A399 /* TreasureRecord.m */; };
 		028D691D146C0F6300FB8199 /* WhiteBlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 028D691C146C0F6300FB8199 /* WhiteBlock.png */; };
@@ -4681,6 +4682,8 @@
 		027D5850146AA2E3002C310F /* GroundField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroundField.m; sourceTree = "<group>"; };
 		027D5859146AAF8C002C310F /* FDIntMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDIntMap.h; sourceTree = "<group>"; };
 		027D585A146AAF8C002C310F /* FDIntMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDIntMap.m; sourceTree = "<group>"; };
+		027EF6A516AB770D007DC970 /* EventChapter9.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter9.h; sourceTree = "<group>"; };
+		027EF6A616AB770D007DC970 /* EventChapter9.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter9.m; sourceTree = "<group>"; };
 		028148C1160CC2E2001CBB4D /* Dato-006-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Dato-006-1.png"; path = "Dato/Dato-006-1.png"; sourceTree = "<group>"; };
 		02868FD5152572350056A399 /* TreasureRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreasureRecord.h; sourceTree = "<group>"; };
 		02868FD6152572350056A399 /* TreasureRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreasureRecord.m; sourceTree = "<group>"; };
@@ -10183,6 +10186,8 @@
 				0266D4BB167C06370067CC45 /* EventChapter7.m */,
 				0266D4BE167C5AB40067CC45 /* EventChapter8.h */,
 				0266D4BF167C5AB40067CC45 /* EventChapter8.m */,
+				027EF6A516AB770D007DC970 /* EventChapter9.h */,
+				027EF6A616AB770D007DC970 /* EventChapter9.m */,
 				02DBA1ED16664E340081EC45 /* EventChapter99.h */,
 				02DBA1EE16664E340081EC45 /* EventChapter99.m */,
 			);
@@ -20584,6 +20589,7 @@
 				02B59FF816798AAC0066783F /* LevelUpMagicDefinition.m in Sources */,
 				0266D4BC167C06370067CC45 /* EventChapter7.m in Sources */,
 				0266D4C0167C5AB40067CC45 /* EventChapter8.m in Sources */,
+				027EF6A716AB770D007DC970 /* EventChapter9.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

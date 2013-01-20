@@ -16,7 +16,7 @@
 
 @synthesize level,ap,dp,dx,hpCurrent,mpCurrent,hpMax,mpMax,mv,ex;
 @synthesize statusEnhanceAp, statusEnhanceDp, statusEnhanceDx, statusFrozen, statusPoisoned, statusProhibited;
-@synthesize attackItemIndex, defendItemIndex;
+@synthesize attackItemIndex, defendItemIndex, dropItemId;
 @synthesize aiType;
 @synthesize aiParam;
 @synthesize bodyStatus;
@@ -32,6 +32,8 @@
 	
 	attackItemIndex = -1;
 	defendItemIndex = -1;
+	
+	dropItemId = 0;
 	
 	return self;
 }
@@ -66,6 +68,8 @@
 
 	another.attackItemIndex = attackItemIndex;
 	another.defendItemIndex = defendItemIndex;
+	
+	another.dropItemId = dropItemId;
 	
 	another.statusEnhanceAp = statusEnhanceAp;
 	another.statusEnhanceDp = statusEnhanceDp;
@@ -109,6 +113,8 @@
 	[coder encodeInt:attackItemIndex forKey:@"attackItemIndex"];
     [coder encodeInt:defendItemIndex forKey:@"defendItemIndex"];
     
+	[coder encodeInt:dropItemId forKey:@"dropItemId"];
+    
 	// NSLog(@"Encoded CreatureData");
 
 }
@@ -142,7 +148,9 @@
 	attackItemIndex = [coder decodeIntForKey:@"attackItemIndex"];
     defendItemIndex = [coder decodeIntForKey:@"defendItemIndex"];
     
-    return self;
+    dropItemId = [coder decodeIntForKey:@"dropItemId"];
+    
+	return self;
 }
 
 -(int) calculatedHit

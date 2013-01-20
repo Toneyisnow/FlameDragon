@@ -14,7 +14,7 @@
 -(id) initWithDefinition:(int)identity Id:(int)i DropItem:(int)itemId
 {
 	self = [self initWithDefinition:identity Id:i Data:nil];
-	dropItemId = itemId;
+	data.dropItemId = itemId;
 	return self;
 }
 
@@ -38,12 +38,12 @@
 
 -(void) setDropItem:(int)itemId
 {
-	dropItemId = itemId;
+	data.dropItemId = itemId;
 }
 
 -(int) getDropItem
 {
-	return dropItemId;
+	return data.dropItemId;
 }
 
 /*
