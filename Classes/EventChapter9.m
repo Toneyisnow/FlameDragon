@@ -20,8 +20,6 @@
 	
 	[self loadDyingEvent:199 Action:@selector(laitingDead)];
 	
-	knightId = 200;
-	
 	NSLog(@"Chapter8 events loaded.");
 }
 
@@ -84,18 +82,33 @@
 	}
 }
 
--(void) reenforce
-{
-	
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50909 Id:105] autorelease] Position:CGPointMake( 1, 16)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50909 Id:106] autorelease] Position:CGPointMake(25, 16)];
-	
-	
-	
-}
-
 -(void) laitingDead
 {
+	for (int i = 1; i <= 21; i++) {
+		[self showTalkMessage:9 conversation:2 sequence:i];
+	}
+	
+	FDCreature *laiting = [field getCreatureById:199];
+	FDFriend *friendLaiting = [[FDFriend alloc] initWithDefinition:13 Id:13];
+	[field addFriend:friendLaiting Position:[field getObjectPos:laiting]];
+	[friendLaiting release];
+	
+	
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50909 Id:201] autorelease] Position:CGPointMake( 2, 16)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50909 Id:202] autorelease] Position:CGPointMake(24, 16)];
+	
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50904 Id:203] autorelease] Position:CGPointMake( 1,  6)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50904 Id:204] autorelease] Position:CGPointMake(25,  6)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50904 Id:205] autorelease] Position:CGPointMake( 1, 16)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50904 Id:206] autorelease] Position:CGPointMake(25, 16)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50904 Id:207] autorelease] Position:CGPointMake( 1, 24)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50904 Id:208] autorelease] Position:CGPointMake(25, 24)];
+	
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50902 Id:209] autorelease] Position:CGPointMake(13,  2)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50911 Id:210] autorelease] Position:CGPointMake(12,  1)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50911 Id:211] autorelease] Position:CGPointMake(14,  1)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50911 Id:212] autorelease] Position:CGPointMake(12,  3)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50911 Id:213] autorelease] Position:CGPointMake(14,  3)];
 	
 }
 
@@ -107,7 +120,21 @@
 		[self showTalkMessage:9 conversation:3 sequence:i];
 	}
 	
+	[layers appendToCurrentActivityMethod:@selector(removeLaiting) Param1:nil Param2:nil Obj:self];
 	[layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];
+}
+
+-(void) removeLaiting
+{
+	NSArray *friends = [field getFriendList];
+	
+	for(FDCreature *c in friends)
+	{
+		if ([c getIdentifier] == 13) {
+			[[field getFriendList] removeObject:c];
+			break;
+		}
+	}
 }
 
 

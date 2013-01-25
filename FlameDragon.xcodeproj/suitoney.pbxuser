@@ -1426,9 +1426,9 @@
 	};
 	022D3C7E1625CA9F0020F816 /* EventChapter3.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {880, 1976}}";
-			sepNavSelRange = "{3558, 0}";
-			sepNavVisRange = "{2654, 1808}";
+			sepNavIntBoundsRect = "{{0, 0}, {880, 2132}}";
+			sepNavSelRange = "{4848, 45}";
+			sepNavVisRange = "{4056, 929}";
 		};
 	};
 	023D07B315CF82E700AD6FA6 /* SWScrollView.h */ = {
@@ -2702,8 +2702,8 @@
 	0266D4BF167C5AB40067CC45 /* EventChapter8.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {901, 1469}}";
-			sepNavSelRange = "{187, 881}";
-			sepNavVisRange = "{124, 1062}";
+			sepNavSelRange = "{4336, 196}";
+			sepNavVisRange = "{3904, 721}";
 		};
 	};
 	0266D510167F4CC60067CC45 /* PBXTextBookmark */ = {
@@ -4290,9 +4290,9 @@
 	};
 	027D54091462B712002C310F /* FDCreature.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {841, 2067}}";
+			sepNavIntBoundsRect = "{{0, 0}, {841, 2210}}";
 			sepNavSelRange = "{2905, 0}";
-			sepNavVisRange = "{2635, 722}";
+			sepNavVisRange = "{1555, 891}";
 		};
 	};
 	027D540A1462B712002C310F /* FDCreature.m */ = {
@@ -4350,14 +4350,14 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {841, 1313}}";
 			sepNavSelRange = "{1993, 0}";
-			sepNavVisRange = "{920, 1174}";
+			sepNavVisRange = "{919, 1174}";
 		};
 	};
 	027D54191462BBB8002C310F /* BattleField.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {866, 15275}}";
+			sepNavIntBoundsRect = "{{0, 0}, {866, 15184}}";
 			sepNavSelRange = "{17258, 0}";
-			sepNavVisRange = "{16820, 760}";
+			sepNavVisRange = "{16532, 877}";
 		};
 	};
 	027D541B1462BC7B002C310F /* GroundBlock.h */ = {
@@ -4748,8 +4748,48 @@
 	027EF6A516AB770D007DC970 /* EventChapter9.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {841, 433}}";
-			sepNavSelRange = "{226, 0}";
+			sepNavSelRange = "{127, 116}";
 			sepNavVisRange = "{0, 253}";
+		};
+	};
+	027EF6A616AB770D007DC970 /* EventChapter9.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {841, 1794}}";
+			sepNavSelRange = "{6718, 0}";
+			sepNavVisRange = "{5667, 1061}";
+		};
+	};
+	027EF6AF16AF67DD007DC970 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "Expected ']' before ')' token";
+		fRef = 027EF6A616AB770D007DC970 /* EventChapter9.m */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 92;
+		rType = 1;
+	};
+	027EF6B016AF67DD007DC970 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 027EF6A616AB770D007DC970 /* EventChapter9.m */;
+		name = "EventChapter9.m: 93";
+		rLen = 0;
+		rLoc = 4622;
+		rType = 0;
+		vrLen = 317;
+		vrLoc = 6115;
+	};
+	027EF6B916B01BC1007DC970 /* EventChapter10.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {841, 433}}";
+			sepNavSelRange = "{228, 0}";
+			sepNavVisRange = "{0, 255}";
+		};
+	};
+	027EF6BA16B01BC1007DC970 /* EventChapter10.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {841, 637}}";
+			sepNavSelRange = "{1174, 0}";
+			sepNavVisRange = "{208, 976}";
 		};
 	};
 	0281477F160A0BD1001CBB4D /* AIHandler.m */ = {
@@ -5168,7 +5208,7 @@
 	0297D98E1481D281007F3E12 /* Creature.dat */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {841, 923}}";
-			sepNavSelRange = "{2, 0}";
+			sepNavSelRange = "{393, 0}";
 			sepNavVisRange = "{0, 740}";
 		};
 	};
@@ -5417,9 +5457,9 @@
 	};
 	029C625614910E660054B260 /* Creature.strings */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {841, 1417}}";
+			sepNavIntBoundsRect = "{{0, 0}, {841, 1430}}";
 			sepNavSelRange = "{887, 0}";
-			sepNavVisRange = "{759, 536}";
+			sepNavVisRange = "{877, 526}";
 		};
 	};
 	029C626B149112040054B260 /* FDOperationActivity.h */ = {
@@ -6548,8 +6588,8 @@
 	02B59F511677208A0066783F /* EventChapter6.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {901, 2041}}";
-			sepNavSelRange = "{4564, 0}";
-			sepNavVisRange = "{4771, 1846}";
+			sepNavSelRange = "{6641, 144}";
+			sepNavVisRange = "{6131, 906}";
 		};
 	};
 	02B59F53167732010066783F /* PBXBookmark */ = {
@@ -8052,9 +8092,9 @@
 	};
 	02C57216150C612900DAEE2C /* EventLoader.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {936, 2028}}";
-			sepNavSelRange = "{3851, 0}";
-			sepNavVisRange = "{3473, 604}";
+			sepNavIntBoundsRect = "{{0, 0}, {936, 2054}}";
+			sepNavSelRange = "{3639, 60}";
+			sepNavVisRange = "{3316, 757}";
 		};
 	};
 	02C57219150C61E800DAEE2C /* EventLoaderFactory.h */ = {
@@ -8066,9 +8106,9 @@
 	};
 	02C5721A150C61E800DAEE2C /* EventLoaderFactory.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {841, 754}}";
-			sepNavSelRange = "{383, 0}";
-			sepNavVisRange = "{0, 757}";
+			sepNavIntBoundsRect = "{{0, 0}, {841, 819}}";
+			sepNavSelRange = "{1147, 0}";
+			sepNavVisRange = "{0, 773}";
 		};
 	};
 	02C5724A151849D200DAEE2C /* PBXTextBookmark */ = {
@@ -9173,9 +9213,9 @@
 	};
 	02D4CAD1164E1F9A00B9B407 /* Chapter-09.strings */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {791, 1144}}";
-			sepNavSelRange = "{161, 0}";
-			sepNavVisRange = "{0, 817}";
+			sepNavIntBoundsRect = "{{0, 0}, {841, 1066}}";
+			sepNavSelRange = "{2527, 0}";
+			sepNavVisRange = "{1475, 1088}";
 		};
 	};
 	02D4CAD2164E1F9A00B9B407 /* Chapter-10.strings */ = {
@@ -9696,16 +9736,16 @@
 	};
 	02DBA0671657ED820081EC45 /* EventChapter4.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {841, 372}}";
+			sepNavIntBoundsRect = "{{0, 0}, {841, 433}}";
 			sepNavSelRange = "{246, 40}";
 			sepNavVisRange = "{0, 296}";
 		};
 	};
 	02DBA0681657ED820081EC45 /* EventChapter4.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {915, 1911}}";
+			sepNavIntBoundsRect = "{{0, 0}, {915, 1885}}";
 			sepNavSelRange = "{3078, 0}";
-			sepNavVisRange = "{4109, 1533}";
+			sepNavVisRange = "{4109, 1500}";
 		};
 	};
 	02DBA06A1657F5C60081EC45 /* ArrivePositionCondition.h */ = {
@@ -10290,9 +10330,9 @@
 	};
 	02DBA246166CD7E50081EC45 /* Chapter-09-Creature.dat */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {841, 372}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 263}";
+			sepNavIntBoundsRect = "{{0, 0}, {841, 433}}";
+			sepNavSelRange = "{301, 0}";
+			sepNavVisRange = "{0, 327}";
 		};
 	};
 	02DBA247166CD7E50081EC45 /* Chapter-10-Creature.dat */ = {
@@ -10571,7 +10611,7 @@
 	};
 	29B97313FDCFA39411CA2CEA /* Project object */ = {
 		activeArchitecturePreference = armv6;
-		activeBuildConfigurationName = Distribution;
+		activeBuildConfigurationName = Debug;
 		activeExecutable = 027D533B1460126F002C310F /* FlameDragon */;
 		activeSDKPreference = iphoneos4.2;
 		activeTarget = 1D6058900D05DD3D006BFB54 /* FlameDragon */;
@@ -11007,6 +11047,8 @@
 			027D54A61465B029002C310F = 027D54A61465B029002C310F /* PBXTextBookmark */;
 			027D5774146806C8002C310F = 027D5774146806C8002C310F /* PBXTextBookmark */;
 			027D589C146ABA74002C310F = 027D589C146ABA74002C310F /* PBXTextBookmark */;
+			027EF6AF16AF67DD007DC970 /* XCBuildMessageTextBookmark */ = 027EF6AF16AF67DD007DC970 /* XCBuildMessageTextBookmark */;
+			027EF6B016AF67DD007DC970 /* PBXTextBookmark */ = 027EF6B016AF67DD007DC970 /* PBXTextBookmark */;
 			028147C9160A1C2C001CBB4D = 028147C9160A1C2C001CBB4D /* PBXTextBookmark */;
 			02814841160B7243001CBB4D = 02814841160B7243001CBB4D /* PBXTextBookmark */;
 			02868FA915242B670056A399 = 02868FA915242B670056A399 /* PBXTextBookmark */;
