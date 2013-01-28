@@ -17,7 +17,8 @@
 	[self loadTurnEvent:TurnType_Friend Turn:5 Action:@selector(reinforcement)];
 	[self loadTurnEvent:TurnType_Friend Turn:10 Action:@selector(batch2)];
 	[self loadTurnEvent:TurnType_Friend Turn:20 Action:@selector(batch3)];
-	
+
+	[self loadDieEvent:1 Action:@selector(gameOver)];
 	[self loadDieEvent:12 Action:@selector(gameOver)];
 	[self loadDieEvent:901 Action:@selector(gameOver)];
 	[self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
