@@ -21,7 +21,7 @@
 	
 	[self loadDyingEvent:199 Action:@selector(bossDyingMessage)];
 	
-	NSLog(@"Chapter8 events loaded.");
+	NSLog(@"Chapter10 events loaded.");
 }
 
 -(void) initialBattle
@@ -40,7 +40,6 @@
 	[self settleFriend:9 At:CGPointMake(17, 44)];
 	[self settleFriend:10 At:CGPointMake(14, 45)];
 	[self settleFriend:11 At:CGPointMake(18, 45)];
-	// [self settleFriend:13 At:CGPointMake(16, 41)];
 	
 	[field addFriend:[[[FDFriend alloc] initWithDefinition:13 Id:13] autorelease] Position:CGPointMake(16, 41)];
 	
