@@ -8,7 +8,7 @@
  
 "Title-10" = "第十章 洞窟中的激战";
 
-"Condition-Lose" = "索尔死亡";
+"Condition-Lose" = "索尔或索菲亚或卡纳恩三世死亡";
 "Condition-Win" = "敌全灭";
 
 "10-01-001-id" = "1";
