@@ -195,6 +195,31 @@
 		027D585B146AAF8C002C310F /* FDIntMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 027D585A146AAF8C002C310F /* FDIntMap.m */; };
 		027EF6A716AB770D007DC970 /* EventChapter9.m in Sources */ = {isa = PBXBuildFile; fileRef = 027EF6A616AB770D007DC970 /* EventChapter9.m */; };
 		027EF6BB16B01BC1007DC970 /* EventChapter10.m in Sources */ = {isa = PBXBuildFile; fileRef = 027EF6BA16B01BC1007DC970 /* EventChapter10.m */; };
+		027EF6D016BEA194007DC970 /* Fight-030-1-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6C116BEA194007DC970 /* Fight-030-1-01.png */; };
+		027EF6D116BEA194007DC970 /* Fight-030-1-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6C216BEA194007DC970 /* Fight-030-1-02.png */; };
+		027EF6D216BEA194007DC970 /* Fight-030-1-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6C316BEA194007DC970 /* Fight-030-1-03.png */; };
+		027EF6D316BEA194007DC970 /* Fight-030-1-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6C416BEA194007DC970 /* Fight-030-1-04.png */; };
+		027EF6D416BEA194007DC970 /* Fight-030-2-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6C516BEA194007DC970 /* Fight-030-2-01.png */; };
+		027EF6D516BEA194007DC970 /* Fight-030-2-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6C616BEA194007DC970 /* Fight-030-2-02.png */; };
+		027EF6D616BEA194007DC970 /* Fight-030-2-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6C716BEA194007DC970 /* Fight-030-2-03.png */; };
+		027EF6D716BEA194007DC970 /* Fight-030-2-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6C816BEA194007DC970 /* Fight-030-2-04.png */; };
+		027EF6D816BEA194007DC970 /* Fight-030-2-05.png in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6C916BEA194007DC970 /* Fight-030-2-05.png */; };
+		027EF6D916BEA194007DC970 /* Fight-030-2-06.png in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6CA16BEA194007DC970 /* Fight-030-2-06.png */; };
+		027EF6DA16BEA194007DC970 /* Fight-030-2-07.png in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6CB16BEA194007DC970 /* Fight-030-2-07.png */; };
+		027EF6DB16BEA194007DC970 /* Fight-030-2-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6CC16BEA194007DC970 /* Fight-030-2-08.png */; };
+		027EF6DC16BEA194007DC970 /* Fight-030-2-09.png in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6CD16BEA194007DC970 /* Fight-030-2-09.png */; };
+		027EF6DD16BEA194007DC970 /* Fight-030-2-10.png in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6CE16BEA194007DC970 /* Fight-030-2-10.png */; };
+		027EF6DE16BEA194007DC970 /* Fight-030-2-11.png in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6CF16BEA194007DC970 /* Fight-030-2-11.png */; };
+		027EF6E916BEA1CC007DC970 /* Chapter-11-Creature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6DF16BEA1CC007DC970 /* Chapter-11-Creature.dat */; };
+		027EF6EA16BEA1CC007DC970 /* Chapter-12-Creature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6E016BEA1CC007DC970 /* Chapter-12-Creature.dat */; };
+		027EF6EB16BEA1CC007DC970 /* Chapter-13-Creature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6E116BEA1CC007DC970 /* Chapter-13-Creature.dat */; };
+		027EF6EC16BEA1CC007DC970 /* Chapter-14-Creature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6E216BEA1CC007DC970 /* Chapter-14-Creature.dat */; };
+		027EF6ED16BEA1CC007DC970 /* Chapter-15-Creature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6E316BEA1CC007DC970 /* Chapter-15-Creature.dat */; };
+		027EF6EE16BEA1CC007DC970 /* Chapter-16-Creature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6E416BEA1CC007DC970 /* Chapter-16-Creature.dat */; };
+		027EF6EF16BEA1CC007DC970 /* Chapter-17-Creature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6E516BEA1CC007DC970 /* Chapter-17-Creature.dat */; };
+		027EF6F016BEA1CC007DC970 /* Chapter-18-Creature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6E616BEA1CC007DC970 /* Chapter-18-Creature.dat */; };
+		027EF6F116BEA1CC007DC970 /* Chapter-19-Creature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6E716BEA1CC007DC970 /* Chapter-19-Creature.dat */; };
+		027EF6F216BEA1CC007DC970 /* Chapter-20-Creature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6E816BEA1CC007DC970 /* Chapter-20-Creature.dat */; };
 		028148C2160CC2E2001CBB4D /* Dato-006-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 028148C1160CC2E2001CBB4D /* Dato-006-1.png */; };
 		02868FD7152572350056A399 /* TreasureRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 02868FD6152572350056A399 /* TreasureRecord.m */; };
 		028D691D146C0F6300FB8199 /* WhiteBlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 028D691C146C0F6300FB8199 /* WhiteBlock.png */; };
@@ -2441,25 +2466,25 @@
 		02DB995D165346060081EC45 /* Fight-026-2-23.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90CD165346010081EC45 /* Fight-026-2-23.png */; };
 		02DB995E165346060081EC45 /* Fight-026-2-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90CE165346010081EC45 /* Fight-026-2-24.png */; };
 		02DB995F165346060081EC45 /* Fight-026-2-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90CF165346010081EC45 /* Fight-026-2-25.png */; };
-		02DB9960165346060081EC45 /* 人物ID-14 [攻击]-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90D1165346010081EC45 /* 人物ID-14 [攻击]-0.png */; };
-		02DB9961165346060081EC45 /* 人物ID-14 [攻击]-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90D2165346010081EC45 /* 人物ID-14 [攻击]-1.png */; };
-		02DB9962165346060081EC45 /* 人物ID-14 [攻击]-10.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90D3165346010081EC45 /* 人物ID-14 [攻击]-10.png */; };
-		02DB9963165346060081EC45 /* 人物ID-14 [攻击]-11.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90D4165346010081EC45 /* 人物ID-14 [攻击]-11.png */; };
-		02DB9964165346060081EC45 /* 人物ID-14 [攻击]-12.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90D5165346010081EC45 /* 人物ID-14 [攻击]-12.png */; };
-		02DB9965165346060081EC45 /* 人物ID-14 [攻击]-13.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90D6165346010081EC45 /* 人物ID-14 [攻击]-13.png */; };
-		02DB9966165346060081EC45 /* 人物ID-14 [攻击]-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90D7165346010081EC45 /* 人物ID-14 [攻击]-2.png */; };
-		02DB9967165346060081EC45 /* 人物ID-14 [攻击]-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90D8165346010081EC45 /* 人物ID-14 [攻击]-3.png */; };
-		02DB9968165346060081EC45 /* 人物ID-14 [攻击]-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90D9165346010081EC45 /* 人物ID-14 [攻击]-4.png */; };
-		02DB9969165346060081EC45 /* 人物ID-14 [攻击]-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90DA165346010081EC45 /* 人物ID-14 [攻击]-5.png */; };
-		02DB996A165346060081EC45 /* 人物ID-14 [攻击]-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90DB165346010081EC45 /* 人物ID-14 [攻击]-6.png */; };
-		02DB996B165346060081EC45 /* 人物ID-14 [攻击]-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90DC165346010081EC45 /* 人物ID-14 [攻击]-7.png */; };
-		02DB996C165346060081EC45 /* 人物ID-14 [攻击]-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90DD165346010081EC45 /* 人物ID-14 [攻击]-8.png */; };
-		02DB996D165346060081EC45 /* 人物ID-14 [攻击]-9.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90DE165346010081EC45 /* 人物ID-14 [攻击]-9.png */; };
-		02DB996E165346060081EC45 /* 人物ID-14 [防御]-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90DF165346010081EC45 /* 人物ID-14 [防御]-0.png */; };
-		02DB996F165346060081EC45 /* 人物ID-14 [防御]-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90E0165346010081EC45 /* 人物ID-14 [防御]-1.png */; };
-		02DB9970165346060081EC45 /* 人物ID-14 [防御]-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90E1165346010081EC45 /* 人物ID-14 [防御]-2.png */; };
-		02DB9971165346060081EC45 /* 人物ID-14 [防御]-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90E2165346010081EC45 /* 人物ID-14 [防御]-3.png */; };
-		02DB9972165346060081EC45 /* Fight-027-1-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90E4165346010081EC45 /* Fight-027-1-01.png */; };
+		02DB9960165346060081EC45 /* Fight-027-2-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90D1165346010081EC45 /* Fight-027-2-01.png */; };
+		02DB9961165346060081EC45 /* Fight-027-2-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90D2165346010081EC45 /* Fight-027-2-02.png */; };
+		02DB9962165346060081EC45 /* Fight-027-2-11.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90D3165346010081EC45 /* Fight-027-2-11.png */; };
+		02DB9963165346060081EC45 /* Fight-027-2-12.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90D4165346010081EC45 /* Fight-027-2-12.png */; };
+		02DB9964165346060081EC45 /* Fight-027-2-13.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90D5165346010081EC45 /* Fight-027-2-13.png */; };
+		02DB9965165346060081EC45 /* Fight-027-2-14.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90D6165346010081EC45 /* Fight-027-2-14.png */; };
+		02DB9966165346060081EC45 /* Fight-027-1-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90D7165346010081EC45 /* Fight-027-1-03.png */; };
+		02DB9967165346060081EC45 /* Fight-027-2-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90D8165346010081EC45 /* Fight-027-2-04.png */; };
+		02DB9968165346060081EC45 /* Fight-027-2-05.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90D9165346010081EC45 /* Fight-027-2-05.png */; };
+		02DB9969165346060081EC45 /* Fight-027-2-06.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90DA165346010081EC45 /* Fight-027-2-06.png */; };
+		02DB996A165346060081EC45 /* Fight-027-2-07.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90DB165346010081EC45 /* Fight-027-2-07.png */; };
+		02DB996B165346060081EC45 /* Fight-027-2-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90DC165346010081EC45 /* Fight-027-2-08.png */; };
+		02DB996C165346060081EC45 /* Fight-027-2-09.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90DD165346010081EC45 /* Fight-027-2-09.png */; };
+		02DB996D165346060081EC45 /* Fight-027-2-10.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90DE165346010081EC45 /* Fight-027-2-10.png */; };
+		02DB996E165346060081EC45 /* Fight-027-1-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90DF165346010081EC45 /* Fight-027-1-01.png */; };
+		02DB996F165346060081EC45 /* Fight-027-1-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90E0165346010081EC45 /* Fight-027-1-02.png */; };
+		02DB9970165346060081EC45 /* Fight-027-2-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90E1165346010081EC45 /* Fight-027-2-03.png */; };
+		02DB9971165346060081EC45 /* Fight-027-1-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90E2165346010081EC45 /* Fight-027-1-04.png */; };
+		02DB9972165346060081EC45 /* Fight-028-1-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90E4165346010081EC45 /* Fight-028-1-01.png */; };
 		02DB9973165346060081EC45 /* Fight-028-2-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90E5165346010081EC45 /* Fight-028-2-01.png */; };
 		02DB9974165346060081EC45 /* Fight-028-2-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90E6165346010081EC45 /* Fight-028-2-02.png */; };
 		02DB9975165346060081EC45 /* Fight-028-2-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB90E7165346010081EC45 /* Fight-028-2-03.png */; };
@@ -2507,21 +2532,6 @@
 		02DB999F165346060081EC45 /* Fight-029-3-17.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9112165346010081EC45 /* Fight-029-3-17.png */; };
 		02DB99A0165346060081EC45 /* Fight-029-3-18.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9113165346010081EC45 /* Fight-029-3-18.png */; };
 		02DB99A1165346060081EC45 /* Fight-029-3-19.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9114165346010081EC45 /* Fight-029-3-19.png */; };
-		02DB99A2165346060081EC45 /* 人物ID-1A [攻击]-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9116165346010081EC45 /* 人物ID-1A [攻击]-0.png */; };
-		02DB99A3165346060081EC45 /* 人物ID-1A [攻击]-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9117165346010081EC45 /* 人物ID-1A [攻击]-1.png */; };
-		02DB99A4165346060081EC45 /* 人物ID-1A [攻击]-10.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9118165346010081EC45 /* 人物ID-1A [攻击]-10.png */; };
-		02DB99A5165346060081EC45 /* 人物ID-1A [攻击]-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9119165346010081EC45 /* 人物ID-1A [攻击]-2.png */; };
-		02DB99A6165346060081EC45 /* 人物ID-1A [攻击]-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB911A165346010081EC45 /* 人物ID-1A [攻击]-3.png */; };
-		02DB99A7165346060081EC45 /* 人物ID-1A [攻击]-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB911B165346010081EC45 /* 人物ID-1A [攻击]-4.png */; };
-		02DB99A8165346060081EC45 /* 人物ID-1A [攻击]-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB911C165346010081EC45 /* 人物ID-1A [攻击]-5.png */; };
-		02DB99A9165346060081EC45 /* 人物ID-1A [攻击]-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB911D165346010081EC45 /* 人物ID-1A [攻击]-6.png */; };
-		02DB99AA165346060081EC45 /* 人物ID-1A [攻击]-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB911E165346010081EC45 /* 人物ID-1A [攻击]-7.png */; };
-		02DB99AB165346060081EC45 /* 人物ID-1A [攻击]-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB911F165346010081EC45 /* 人物ID-1A [攻击]-8.png */; };
-		02DB99AC165346060081EC45 /* 人物ID-1A [攻击]-9.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9120165346010081EC45 /* 人物ID-1A [攻击]-9.png */; };
-		02DB99AD165346060081EC45 /* 人物ID-1A [防御]-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9121165346010081EC45 /* 人物ID-1A [防御]-0.png */; };
-		02DB99AE165346060081EC45 /* 人物ID-1A [防御]-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9122165346010081EC45 /* 人物ID-1A [防御]-1.png */; };
-		02DB99AF165346060081EC45 /* 人物ID-1A [防御]-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9123165346010081EC45 /* 人物ID-1A [防御]-2.png */; };
-		02DB99B0165346060081EC45 /* 人物ID-1A [防御]-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9124165346010081EC45 /* 人物ID-1A [防御]-3.png */; };
 		02DB99B1165346060081EC45 /* Fight-031-1-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9126165346010081EC45 /* Fight-031-1-01.png */; };
 		02DB99B2165346060081EC45 /* Fight-031-1-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9127165346010081EC45 /* Fight-031-1-02.png */; };
 		02DB99B3165346060081EC45 /* Fight-031-1-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB9128165346010081EC45 /* Fight-031-1-03.png */; };
@@ -4687,6 +4697,31 @@
 		027EF6A616AB770D007DC970 /* EventChapter9.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter9.m; sourceTree = "<group>"; };
 		027EF6B916B01BC1007DC970 /* EventChapter10.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter10.h; sourceTree = "<group>"; };
 		027EF6BA16B01BC1007DC970 /* EventChapter10.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter10.m; sourceTree = "<group>"; };
+		027EF6C116BEA194007DC970 /* Fight-030-1-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-030-1-01.png"; sourceTree = "<group>"; };
+		027EF6C216BEA194007DC970 /* Fight-030-1-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-030-1-02.png"; sourceTree = "<group>"; };
+		027EF6C316BEA194007DC970 /* Fight-030-1-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-030-1-03.png"; sourceTree = "<group>"; };
+		027EF6C416BEA194007DC970 /* Fight-030-1-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-030-1-04.png"; sourceTree = "<group>"; };
+		027EF6C516BEA194007DC970 /* Fight-030-2-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-030-2-01.png"; sourceTree = "<group>"; };
+		027EF6C616BEA194007DC970 /* Fight-030-2-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-030-2-02.png"; sourceTree = "<group>"; };
+		027EF6C716BEA194007DC970 /* Fight-030-2-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-030-2-03.png"; sourceTree = "<group>"; };
+		027EF6C816BEA194007DC970 /* Fight-030-2-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-030-2-04.png"; sourceTree = "<group>"; };
+		027EF6C916BEA194007DC970 /* Fight-030-2-05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-030-2-05.png"; sourceTree = "<group>"; };
+		027EF6CA16BEA194007DC970 /* Fight-030-2-06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-030-2-06.png"; sourceTree = "<group>"; };
+		027EF6CB16BEA194007DC970 /* Fight-030-2-07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-030-2-07.png"; sourceTree = "<group>"; };
+		027EF6CC16BEA194007DC970 /* Fight-030-2-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-030-2-08.png"; sourceTree = "<group>"; };
+		027EF6CD16BEA194007DC970 /* Fight-030-2-09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-030-2-09.png"; sourceTree = "<group>"; };
+		027EF6CE16BEA194007DC970 /* Fight-030-2-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-030-2-10.png"; sourceTree = "<group>"; };
+		027EF6CF16BEA194007DC970 /* Fight-030-2-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-030-2-11.png"; sourceTree = "<group>"; };
+		027EF6DF16BEA1CC007DC970 /* Chapter-11-Creature.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-11-Creature.dat"; path = "Data/Maps/Chapter-11-Creature.dat"; sourceTree = "<group>"; };
+		027EF6E016BEA1CC007DC970 /* Chapter-12-Creature.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-12-Creature.dat"; path = "Data/Maps/Chapter-12-Creature.dat"; sourceTree = "<group>"; };
+		027EF6E116BEA1CC007DC970 /* Chapter-13-Creature.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-13-Creature.dat"; path = "Data/Maps/Chapter-13-Creature.dat"; sourceTree = "<group>"; };
+		027EF6E216BEA1CC007DC970 /* Chapter-14-Creature.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-14-Creature.dat"; path = "Data/Maps/Chapter-14-Creature.dat"; sourceTree = "<group>"; };
+		027EF6E316BEA1CC007DC970 /* Chapter-15-Creature.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-15-Creature.dat"; path = "Data/Maps/Chapter-15-Creature.dat"; sourceTree = "<group>"; };
+		027EF6E416BEA1CC007DC970 /* Chapter-16-Creature.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-16-Creature.dat"; path = "Data/Maps/Chapter-16-Creature.dat"; sourceTree = "<group>"; };
+		027EF6E516BEA1CC007DC970 /* Chapter-17-Creature.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-17-Creature.dat"; path = "Data/Maps/Chapter-17-Creature.dat"; sourceTree = "<group>"; };
+		027EF6E616BEA1CC007DC970 /* Chapter-18-Creature.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-18-Creature.dat"; path = "Data/Maps/Chapter-18-Creature.dat"; sourceTree = "<group>"; };
+		027EF6E716BEA1CC007DC970 /* Chapter-19-Creature.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-19-Creature.dat"; path = "Data/Maps/Chapter-19-Creature.dat"; sourceTree = "<group>"; };
+		027EF6E816BEA1CC007DC970 /* Chapter-20-Creature.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-20-Creature.dat"; path = "Data/Maps/Chapter-20-Creature.dat"; sourceTree = "<group>"; };
 		028148C1160CC2E2001CBB4D /* Dato-006-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Dato-006-1.png"; path = "Dato/Dato-006-1.png"; sourceTree = "<group>"; };
 		02868FD5152572350056A399 /* TreasureRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreasureRecord.h; sourceTree = "<group>"; };
 		02868FD6152572350056A399 /* TreasureRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreasureRecord.m; sourceTree = "<group>"; };
@@ -7015,25 +7050,25 @@
 		02DB90CD165346010081EC45 /* Fight-026-2-23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-026-2-23.png"; sourceTree = "<group>"; };
 		02DB90CE165346010081EC45 /* Fight-026-2-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-026-2-24.png"; sourceTree = "<group>"; };
 		02DB90CF165346010081EC45 /* Fight-026-2-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-026-2-25.png"; sourceTree = "<group>"; };
-		02DB90D1165346010081EC45 /* 人物ID-14 [攻击]-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-14 [攻击]-0.png"; sourceTree = "<group>"; };
-		02DB90D2165346010081EC45 /* 人物ID-14 [攻击]-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-14 [攻击]-1.png"; sourceTree = "<group>"; };
-		02DB90D3165346010081EC45 /* 人物ID-14 [攻击]-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-14 [攻击]-10.png"; sourceTree = "<group>"; };
-		02DB90D4165346010081EC45 /* 人物ID-14 [攻击]-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-14 [攻击]-11.png"; sourceTree = "<group>"; };
-		02DB90D5165346010081EC45 /* 人物ID-14 [攻击]-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-14 [攻击]-12.png"; sourceTree = "<group>"; };
-		02DB90D6165346010081EC45 /* 人物ID-14 [攻击]-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-14 [攻击]-13.png"; sourceTree = "<group>"; };
-		02DB90D7165346010081EC45 /* 人物ID-14 [攻击]-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-14 [攻击]-2.png"; sourceTree = "<group>"; };
-		02DB90D8165346010081EC45 /* 人物ID-14 [攻击]-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-14 [攻击]-3.png"; sourceTree = "<group>"; };
-		02DB90D9165346010081EC45 /* 人物ID-14 [攻击]-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-14 [攻击]-4.png"; sourceTree = "<group>"; };
-		02DB90DA165346010081EC45 /* 人物ID-14 [攻击]-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-14 [攻击]-5.png"; sourceTree = "<group>"; };
-		02DB90DB165346010081EC45 /* 人物ID-14 [攻击]-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-14 [攻击]-6.png"; sourceTree = "<group>"; };
-		02DB90DC165346010081EC45 /* 人物ID-14 [攻击]-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-14 [攻击]-7.png"; sourceTree = "<group>"; };
-		02DB90DD165346010081EC45 /* 人物ID-14 [攻击]-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-14 [攻击]-8.png"; sourceTree = "<group>"; };
-		02DB90DE165346010081EC45 /* 人物ID-14 [攻击]-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-14 [攻击]-9.png"; sourceTree = "<group>"; };
-		02DB90DF165346010081EC45 /* 人物ID-14 [防御]-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-14 [防御]-0.png"; sourceTree = "<group>"; };
-		02DB90E0165346010081EC45 /* 人物ID-14 [防御]-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-14 [防御]-1.png"; sourceTree = "<group>"; };
-		02DB90E1165346010081EC45 /* 人物ID-14 [防御]-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-14 [防御]-2.png"; sourceTree = "<group>"; };
-		02DB90E2165346010081EC45 /* 人物ID-14 [防御]-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-14 [防御]-3.png"; sourceTree = "<group>"; };
-		02DB90E4165346010081EC45 /* Fight-027-1-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-027-1-01.png"; sourceTree = "<group>"; };
+		02DB90D1165346010081EC45 /* Fight-027-2-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-027-2-01.png"; sourceTree = "<group>"; };
+		02DB90D2165346010081EC45 /* Fight-027-2-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-027-2-02.png"; sourceTree = "<group>"; };
+		02DB90D3165346010081EC45 /* Fight-027-2-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-027-2-11.png"; sourceTree = "<group>"; };
+		02DB90D4165346010081EC45 /* Fight-027-2-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-027-2-12.png"; sourceTree = "<group>"; };
+		02DB90D5165346010081EC45 /* Fight-027-2-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-027-2-13.png"; sourceTree = "<group>"; };
+		02DB90D6165346010081EC45 /* Fight-027-2-14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-027-2-14.png"; sourceTree = "<group>"; };
+		02DB90D7165346010081EC45 /* Fight-027-1-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-027-1-03.png"; sourceTree = "<group>"; };
+		02DB90D8165346010081EC45 /* Fight-027-2-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-027-2-04.png"; sourceTree = "<group>"; };
+		02DB90D9165346010081EC45 /* Fight-027-2-05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-027-2-05.png"; sourceTree = "<group>"; };
+		02DB90DA165346010081EC45 /* Fight-027-2-06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-027-2-06.png"; sourceTree = "<group>"; };
+		02DB90DB165346010081EC45 /* Fight-027-2-07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-027-2-07.png"; sourceTree = "<group>"; };
+		02DB90DC165346010081EC45 /* Fight-027-2-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-027-2-08.png"; sourceTree = "<group>"; };
+		02DB90DD165346010081EC45 /* Fight-027-2-09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-027-2-09.png"; sourceTree = "<group>"; };
+		02DB90DE165346010081EC45 /* Fight-027-2-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-027-2-10.png"; sourceTree = "<group>"; };
+		02DB90DF165346010081EC45 /* Fight-027-1-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-027-1-01.png"; sourceTree = "<group>"; };
+		02DB90E0165346010081EC45 /* Fight-027-1-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-027-1-02.png"; sourceTree = "<group>"; };
+		02DB90E1165346010081EC45 /* Fight-027-2-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-027-2-03.png"; sourceTree = "<group>"; };
+		02DB90E2165346010081EC45 /* Fight-027-1-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-027-1-04.png"; sourceTree = "<group>"; };
+		02DB90E4165346010081EC45 /* Fight-028-1-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-028-1-01.png"; sourceTree = "<group>"; };
 		02DB90E5165346010081EC45 /* Fight-028-2-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-028-2-01.png"; sourceTree = "<group>"; };
 		02DB90E6165346010081EC45 /* Fight-028-2-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-028-2-02.png"; sourceTree = "<group>"; };
 		02DB90E7165346010081EC45 /* Fight-028-2-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-028-2-03.png"; sourceTree = "<group>"; };
@@ -7081,21 +7116,6 @@
 		02DB9112165346010081EC45 /* Fight-029-3-17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-029-3-17.png"; sourceTree = "<group>"; };
 		02DB9113165346010081EC45 /* Fight-029-3-18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-029-3-18.png"; sourceTree = "<group>"; };
 		02DB9114165346010081EC45 /* Fight-029-3-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-029-3-19.png"; sourceTree = "<group>"; };
-		02DB9116165346010081EC45 /* 人物ID-1A [攻击]-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-1A [攻击]-0.png"; sourceTree = "<group>"; };
-		02DB9117165346010081EC45 /* 人物ID-1A [攻击]-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-1A [攻击]-1.png"; sourceTree = "<group>"; };
-		02DB9118165346010081EC45 /* 人物ID-1A [攻击]-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-1A [攻击]-10.png"; sourceTree = "<group>"; };
-		02DB9119165346010081EC45 /* 人物ID-1A [攻击]-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-1A [攻击]-2.png"; sourceTree = "<group>"; };
-		02DB911A165346010081EC45 /* 人物ID-1A [攻击]-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-1A [攻击]-3.png"; sourceTree = "<group>"; };
-		02DB911B165346010081EC45 /* 人物ID-1A [攻击]-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-1A [攻击]-4.png"; sourceTree = "<group>"; };
-		02DB911C165346010081EC45 /* 人物ID-1A [攻击]-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-1A [攻击]-5.png"; sourceTree = "<group>"; };
-		02DB911D165346010081EC45 /* 人物ID-1A [攻击]-6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-1A [攻击]-6.png"; sourceTree = "<group>"; };
-		02DB911E165346010081EC45 /* 人物ID-1A [攻击]-7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-1A [攻击]-7.png"; sourceTree = "<group>"; };
-		02DB911F165346010081EC45 /* 人物ID-1A [攻击]-8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-1A [攻击]-8.png"; sourceTree = "<group>"; };
-		02DB9120165346010081EC45 /* 人物ID-1A [攻击]-9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-1A [攻击]-9.png"; sourceTree = "<group>"; };
-		02DB9121165346010081EC45 /* 人物ID-1A [防御]-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-1A [防御]-0.png"; sourceTree = "<group>"; };
-		02DB9122165346010081EC45 /* 人物ID-1A [防御]-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-1A [防御]-1.png"; sourceTree = "<group>"; };
-		02DB9123165346010081EC45 /* 人物ID-1A [防御]-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-1A [防御]-2.png"; sourceTree = "<group>"; };
-		02DB9124165346010081EC45 /* 人物ID-1A [防御]-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "人物ID-1A [防御]-3.png"; sourceTree = "<group>"; };
 		02DB9126165346010081EC45 /* Fight-031-1-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-031-1-01.png"; sourceTree = "<group>"; };
 		02DB9127165346010081EC45 /* Fight-031-1-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-031-1-02.png"; sourceTree = "<group>"; };
 		02DB9128165346010081EC45 /* Fight-031-1-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-031-1-03.png"; sourceTree = "<group>"; };
@@ -10061,15 +10081,25 @@
 				02D4C680164E194200B9B407 /* Chapter-10.dat */,
 				02DBA247166CD7E50081EC45 /* Chapter-10-Creature.dat */,
 				02DB822816514A6F0081EC45 /* Chapter-11.dat */,
+				027EF6DF16BEA1CC007DC970 /* Chapter-11-Creature.dat */,
 				02DB822916514A6F0081EC45 /* Chapter-12.dat */,
+				027EF6E016BEA1CC007DC970 /* Chapter-12-Creature.dat */,
 				02DB822A16514A6F0081EC45 /* Chapter-13.dat */,
+				027EF6E116BEA1CC007DC970 /* Chapter-13-Creature.dat */,
 				02DB822B16514A6F0081EC45 /* Chapter-14.dat */,
+				027EF6E216BEA1CC007DC970 /* Chapter-14-Creature.dat */,
 				02DB822C16514A6F0081EC45 /* Chapter-15.dat */,
+				027EF6E316BEA1CC007DC970 /* Chapter-15-Creature.dat */,
 				02DB822D16514A6F0081EC45 /* Chapter-16.dat */,
+				027EF6E416BEA1CC007DC970 /* Chapter-16-Creature.dat */,
 				02DB822E16514A6F0081EC45 /* Chapter-17.dat */,
+				027EF6E516BEA1CC007DC970 /* Chapter-17-Creature.dat */,
 				02DB822F16514A6F0081EC45 /* Chapter-18.dat */,
+				027EF6E616BEA1CC007DC970 /* Chapter-18-Creature.dat */,
 				02DB823016514A6F0081EC45 /* Chapter-19.dat */,
+				027EF6E716BEA1CC007DC970 /* Chapter-19-Creature.dat */,
 				02DB823116514A6F0081EC45 /* Chapter-20.dat */,
+				027EF6E816BEA1CC007DC970 /* Chapter-20-Creature.dat */,
 				02DB823216514A6F0081EC45 /* Chapter-21.dat */,
 				02DB823316514A6F0081EC45 /* Chapter-22.dat */,
 				02DB823416514A6F0081EC45 /* Chapter-23.dat */,
@@ -13425,24 +13455,24 @@
 		02DB90D0165346010081EC45 /* 027 */ = {
 			isa = PBXGroup;
 			children = (
-				02DB90D1165346010081EC45 /* 人物ID-14 [攻击]-0.png */,
-				02DB90D2165346010081EC45 /* 人物ID-14 [攻击]-1.png */,
-				02DB90D3165346010081EC45 /* 人物ID-14 [攻击]-10.png */,
-				02DB90D4165346010081EC45 /* 人物ID-14 [攻击]-11.png */,
-				02DB90D5165346010081EC45 /* 人物ID-14 [攻击]-12.png */,
-				02DB90D6165346010081EC45 /* 人物ID-14 [攻击]-13.png */,
-				02DB90D7165346010081EC45 /* 人物ID-14 [攻击]-2.png */,
-				02DB90D8165346010081EC45 /* 人物ID-14 [攻击]-3.png */,
-				02DB90D9165346010081EC45 /* 人物ID-14 [攻击]-4.png */,
-				02DB90DA165346010081EC45 /* 人物ID-14 [攻击]-5.png */,
-				02DB90DB165346010081EC45 /* 人物ID-14 [攻击]-6.png */,
-				02DB90DC165346010081EC45 /* 人物ID-14 [攻击]-7.png */,
-				02DB90DD165346010081EC45 /* 人物ID-14 [攻击]-8.png */,
-				02DB90DE165346010081EC45 /* 人物ID-14 [攻击]-9.png */,
-				02DB90DF165346010081EC45 /* 人物ID-14 [防御]-0.png */,
-				02DB90E0165346010081EC45 /* 人物ID-14 [防御]-1.png */,
-				02DB90E1165346010081EC45 /* 人物ID-14 [防御]-2.png */,
-				02DB90E2165346010081EC45 /* 人物ID-14 [防御]-3.png */,
+				02DB90D1165346010081EC45 /* Fight-027-2-01.png */,
+				02DB90D2165346010081EC45 /* Fight-027-2-02.png */,
+				02DB90D3165346010081EC45 /* Fight-027-2-11.png */,
+				02DB90D4165346010081EC45 /* Fight-027-2-12.png */,
+				02DB90D5165346010081EC45 /* Fight-027-2-13.png */,
+				02DB90D6165346010081EC45 /* Fight-027-2-14.png */,
+				02DB90D7165346010081EC45 /* Fight-027-1-03.png */,
+				02DB90D8165346010081EC45 /* Fight-027-2-04.png */,
+				02DB90D9165346010081EC45 /* Fight-027-2-05.png */,
+				02DB90DA165346010081EC45 /* Fight-027-2-06.png */,
+				02DB90DB165346010081EC45 /* Fight-027-2-07.png */,
+				02DB90DC165346010081EC45 /* Fight-027-2-08.png */,
+				02DB90DD165346010081EC45 /* Fight-027-2-09.png */,
+				02DB90DE165346010081EC45 /* Fight-027-2-10.png */,
+				02DB90DF165346010081EC45 /* Fight-027-1-01.png */,
+				02DB90E0165346010081EC45 /* Fight-027-1-02.png */,
+				02DB90E1165346010081EC45 /* Fight-027-2-03.png */,
+				02DB90E2165346010081EC45 /* Fight-027-1-04.png */,
 			);
 			name = 027;
 			path = Fights/027;
@@ -13451,7 +13481,7 @@
 		02DB90E3165346010081EC45 /* 028 */ = {
 			isa = PBXGroup;
 			children = (
-				02DB90E4165346010081EC45 /* Fight-027-1-01.png */,
+				02DB90E4165346010081EC45 /* Fight-028-1-01.png */,
 				02DB90E5165346010081EC45 /* Fight-028-2-01.png */,
 				02DB90E6165346010081EC45 /* Fight-028-2-02.png */,
 				02DB90E7165346010081EC45 /* Fight-028-2-03.png */,
@@ -13515,21 +13545,21 @@
 		02DB9115165346010081EC45 /* 030 */ = {
 			isa = PBXGroup;
 			children = (
-				02DB9116165346010081EC45 /* 人物ID-1A [攻击]-0.png */,
-				02DB9117165346010081EC45 /* 人物ID-1A [攻击]-1.png */,
-				02DB9118165346010081EC45 /* 人物ID-1A [攻击]-10.png */,
-				02DB9119165346010081EC45 /* 人物ID-1A [攻击]-2.png */,
-				02DB911A165346010081EC45 /* 人物ID-1A [攻击]-3.png */,
-				02DB911B165346010081EC45 /* 人物ID-1A [攻击]-4.png */,
-				02DB911C165346010081EC45 /* 人物ID-1A [攻击]-5.png */,
-				02DB911D165346010081EC45 /* 人物ID-1A [攻击]-6.png */,
-				02DB911E165346010081EC45 /* 人物ID-1A [攻击]-7.png */,
-				02DB911F165346010081EC45 /* 人物ID-1A [攻击]-8.png */,
-				02DB9120165346010081EC45 /* 人物ID-1A [攻击]-9.png */,
-				02DB9121165346010081EC45 /* 人物ID-1A [防御]-0.png */,
-				02DB9122165346010081EC45 /* 人物ID-1A [防御]-1.png */,
-				02DB9123165346010081EC45 /* 人物ID-1A [防御]-2.png */,
-				02DB9124165346010081EC45 /* 人物ID-1A [防御]-3.png */,
+				027EF6C116BEA194007DC970 /* Fight-030-1-01.png */,
+				027EF6C216BEA194007DC970 /* Fight-030-1-02.png */,
+				027EF6C316BEA194007DC970 /* Fight-030-1-03.png */,
+				027EF6C416BEA194007DC970 /* Fight-030-1-04.png */,
+				027EF6C516BEA194007DC970 /* Fight-030-2-01.png */,
+				027EF6C616BEA194007DC970 /* Fight-030-2-02.png */,
+				027EF6C716BEA194007DC970 /* Fight-030-2-03.png */,
+				027EF6C816BEA194007DC970 /* Fight-030-2-04.png */,
+				027EF6C916BEA194007DC970 /* Fight-030-2-05.png */,
+				027EF6CA16BEA194007DC970 /* Fight-030-2-06.png */,
+				027EF6CB16BEA194007DC970 /* Fight-030-2-07.png */,
+				027EF6CC16BEA194007DC970 /* Fight-030-2-08.png */,
+				027EF6CD16BEA194007DC970 /* Fight-030-2-09.png */,
+				027EF6CE16BEA194007DC970 /* Fight-030-2-10.png */,
+				027EF6CF16BEA194007DC970 /* Fight-030-2-11.png */,
 			);
 			name = 030;
 			path = Fights/030;
@@ -18677,25 +18707,25 @@
 				02DB995D165346060081EC45 /* Fight-026-2-23.png in Resources */,
 				02DB995E165346060081EC45 /* Fight-026-2-24.png in Resources */,
 				02DB995F165346060081EC45 /* Fight-026-2-25.png in Resources */,
-				02DB9960165346060081EC45 /* 人物ID-14 [攻击]-0.png in Resources */,
-				02DB9961165346060081EC45 /* 人物ID-14 [攻击]-1.png in Resources */,
-				02DB9962165346060081EC45 /* 人物ID-14 [攻击]-10.png in Resources */,
-				02DB9963165346060081EC45 /* 人物ID-14 [攻击]-11.png in Resources */,
-				02DB9964165346060081EC45 /* 人物ID-14 [攻击]-12.png in Resources */,
-				02DB9965165346060081EC45 /* 人物ID-14 [攻击]-13.png in Resources */,
-				02DB9966165346060081EC45 /* 人物ID-14 [攻击]-2.png in Resources */,
-				02DB9967165346060081EC45 /* 人物ID-14 [攻击]-3.png in Resources */,
-				02DB9968165346060081EC45 /* 人物ID-14 [攻击]-4.png in Resources */,
-				02DB9969165346060081EC45 /* 人物ID-14 [攻击]-5.png in Resources */,
-				02DB996A165346060081EC45 /* 人物ID-14 [攻击]-6.png in Resources */,
-				02DB996B165346060081EC45 /* 人物ID-14 [攻击]-7.png in Resources */,
-				02DB996C165346060081EC45 /* 人物ID-14 [攻击]-8.png in Resources */,
-				02DB996D165346060081EC45 /* 人物ID-14 [攻击]-9.png in Resources */,
-				02DB996E165346060081EC45 /* 人物ID-14 [防御]-0.png in Resources */,
-				02DB996F165346060081EC45 /* 人物ID-14 [防御]-1.png in Resources */,
-				02DB9970165346060081EC45 /* 人物ID-14 [防御]-2.png in Resources */,
-				02DB9971165346060081EC45 /* 人物ID-14 [防御]-3.png in Resources */,
-				02DB9972165346060081EC45 /* Fight-027-1-01.png in Resources */,
+				02DB9960165346060081EC45 /* Fight-027-2-01.png in Resources */,
+				02DB9961165346060081EC45 /* Fight-027-2-02.png in Resources */,
+				02DB9962165346060081EC45 /* Fight-027-2-11.png in Resources */,
+				02DB9963165346060081EC45 /* Fight-027-2-12.png in Resources */,
+				02DB9964165346060081EC45 /* Fight-027-2-13.png in Resources */,
+				02DB9965165346060081EC45 /* Fight-027-2-14.png in Resources */,
+				02DB9966165346060081EC45 /* Fight-027-1-03.png in Resources */,
+				02DB9967165346060081EC45 /* Fight-027-2-04.png in Resources */,
+				02DB9968165346060081EC45 /* Fight-027-2-05.png in Resources */,
+				02DB9969165346060081EC45 /* Fight-027-2-06.png in Resources */,
+				02DB996A165346060081EC45 /* Fight-027-2-07.png in Resources */,
+				02DB996B165346060081EC45 /* Fight-027-2-08.png in Resources */,
+				02DB996C165346060081EC45 /* Fight-027-2-09.png in Resources */,
+				02DB996D165346060081EC45 /* Fight-027-2-10.png in Resources */,
+				02DB996E165346060081EC45 /* Fight-027-1-01.png in Resources */,
+				02DB996F165346060081EC45 /* Fight-027-1-02.png in Resources */,
+				02DB9970165346060081EC45 /* Fight-027-2-03.png in Resources */,
+				02DB9971165346060081EC45 /* Fight-027-1-04.png in Resources */,
+				02DB9972165346060081EC45 /* Fight-028-1-01.png in Resources */,
 				02DB9973165346060081EC45 /* Fight-028-2-01.png in Resources */,
 				02DB9974165346060081EC45 /* Fight-028-2-02.png in Resources */,
 				02DB9975165346060081EC45 /* Fight-028-2-03.png in Resources */,
@@ -18743,21 +18773,6 @@
 				02DB999F165346060081EC45 /* Fight-029-3-17.png in Resources */,
 				02DB99A0165346060081EC45 /* Fight-029-3-18.png in Resources */,
 				02DB99A1165346060081EC45 /* Fight-029-3-19.png in Resources */,
-				02DB99A2165346060081EC45 /* 人物ID-1A [攻击]-0.png in Resources */,
-				02DB99A3165346060081EC45 /* 人物ID-1A [攻击]-1.png in Resources */,
-				02DB99A4165346060081EC45 /* 人物ID-1A [攻击]-10.png in Resources */,
-				02DB99A5165346060081EC45 /* 人物ID-1A [攻击]-2.png in Resources */,
-				02DB99A6165346060081EC45 /* 人物ID-1A [攻击]-3.png in Resources */,
-				02DB99A7165346060081EC45 /* 人物ID-1A [攻击]-4.png in Resources */,
-				02DB99A8165346060081EC45 /* 人物ID-1A [攻击]-5.png in Resources */,
-				02DB99A9165346060081EC45 /* 人物ID-1A [攻击]-6.png in Resources */,
-				02DB99AA165346060081EC45 /* 人物ID-1A [攻击]-7.png in Resources */,
-				02DB99AB165346060081EC45 /* 人物ID-1A [攻击]-8.png in Resources */,
-				02DB99AC165346060081EC45 /* 人物ID-1A [攻击]-9.png in Resources */,
-				02DB99AD165346060081EC45 /* 人物ID-1A [防御]-0.png in Resources */,
-				02DB99AE165346060081EC45 /* 人物ID-1A [防御]-1.png in Resources */,
-				02DB99AF165346060081EC45 /* 人物ID-1A [防御]-2.png in Resources */,
-				02DB99B0165346060081EC45 /* 人物ID-1A [防御]-3.png in Resources */,
 				02DB99B1165346060081EC45 /* Fight-031-1-01.png in Resources */,
 				02DB99B2165346060081EC45 /* Fight-031-1-02.png in Resources */,
 				02DB99B3165346060081EC45 /* Fight-031-1-03.png in Resources */,
@@ -20384,6 +20399,31 @@
 				02B5A053167AFCF60066783F /* Status-Poisoned.png in Resources */,
 				02B5A054167AFCF60066783F /* Status-Prohibited.png in Resources */,
 				027B6744167B191A00A730EF /* FightAnimation.dat in Resources */,
+				027EF6D016BEA194007DC970 /* Fight-030-1-01.png in Resources */,
+				027EF6D116BEA194007DC970 /* Fight-030-1-02.png in Resources */,
+				027EF6D216BEA194007DC970 /* Fight-030-1-03.png in Resources */,
+				027EF6D316BEA194007DC970 /* Fight-030-1-04.png in Resources */,
+				027EF6D416BEA194007DC970 /* Fight-030-2-01.png in Resources */,
+				027EF6D516BEA194007DC970 /* Fight-030-2-02.png in Resources */,
+				027EF6D616BEA194007DC970 /* Fight-030-2-03.png in Resources */,
+				027EF6D716BEA194007DC970 /* Fight-030-2-04.png in Resources */,
+				027EF6D816BEA194007DC970 /* Fight-030-2-05.png in Resources */,
+				027EF6D916BEA194007DC970 /* Fight-030-2-06.png in Resources */,
+				027EF6DA16BEA194007DC970 /* Fight-030-2-07.png in Resources */,
+				027EF6DB16BEA194007DC970 /* Fight-030-2-08.png in Resources */,
+				027EF6DC16BEA194007DC970 /* Fight-030-2-09.png in Resources */,
+				027EF6DD16BEA194007DC970 /* Fight-030-2-10.png in Resources */,
+				027EF6DE16BEA194007DC970 /* Fight-030-2-11.png in Resources */,
+				027EF6E916BEA1CC007DC970 /* Chapter-11-Creature.dat in Resources */,
+				027EF6EA16BEA1CC007DC970 /* Chapter-12-Creature.dat in Resources */,
+				027EF6EB16BEA1CC007DC970 /* Chapter-13-Creature.dat in Resources */,
+				027EF6EC16BEA1CC007DC970 /* Chapter-14-Creature.dat in Resources */,
+				027EF6ED16BEA1CC007DC970 /* Chapter-15-Creature.dat in Resources */,
+				027EF6EE16BEA1CC007DC970 /* Chapter-16-Creature.dat in Resources */,
+				027EF6EF16BEA1CC007DC970 /* Chapter-17-Creature.dat in Resources */,
+				027EF6F016BEA1CC007DC970 /* Chapter-18-Creature.dat in Resources */,
+				027EF6F116BEA1CC007DC970 /* Chapter-19-Creature.dat in Resources */,
+				027EF6F216BEA1CC007DC970 /* Chapter-20-Creature.dat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
