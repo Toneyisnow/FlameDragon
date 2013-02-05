@@ -90,6 +90,7 @@
 	
 	// [self loadTestingGame];
 	
+	
 	LoadingScene *scene = [LoadingScene node];
 	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];
 }
@@ -118,7 +119,7 @@
 
 -(void) loadTestingGame
 {
-	ChapterRecord *record = [ChapterRecord generateRecord:8 money:10000];
+	ChapterRecord *record = [ChapterRecord generateRecord:9 money:10000];
 	
 	[[record friendRecords] addObject:[self loadTestingRecord:1 level:22]];
 	[[record friendRecords] addObject:[self loadTestingRecord:2 level:22]];
@@ -130,6 +131,7 @@
 	[[record friendRecords] addObject:[self loadTestingRecord:8 level:22]];
 	[[record friendRecords] addObject:[self loadTestingRecord:9 level:22]];
 	[[record friendRecords] addObject:[self loadTestingRecord:10 level:22]];
+	[[record friendRecords] addObject:[self loadTestingRecord:11 level:25]];
 	
 	VillageScene *scene = [VillageScene node];
 	[scene loadWithRecord:record];

@@ -156,7 +156,7 @@ static DataDepot *instance = nil;
 	[file close];
 	
 	// Read enemy/NPC data
-	for (int level = 1; level <= 10; level++) {
+	for (int level = 1; level <= 20; level++) {
 		NSString *levelDataFile = [NSString stringWithFormat:@"Chapter-%02d-Creature", level];
 		FDFileStream *levelFile = [[FDFileStream alloc] initWithDataFile:levelDataFile Ext:@"dat"];
 		[levelFile open];
@@ -320,7 +320,7 @@ static DataDepot *instance = nil;
 	int creatureAniId = [file readInt];
 	while (creatureAniId > 0) {
 	
-		// NSLog(@"Load Animation for AniId %d", creatureAniId);
+		NSLog(@"Load Animation for AniId %d", creatureAniId);
 		int aniCount = [file readInt];
 		
 		// Idle Animation
