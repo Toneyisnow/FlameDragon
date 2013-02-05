@@ -114,6 +114,7 @@
 	
 	FDCreature *laiting = [field getCreatureById:199];
 	FDFriend *friendLaiting = [[FDFriend alloc] initWithDefinition:13 Id:13];
+	friendLaiting.data.hpCurrent = 1;
 	[field addFriend:friendLaiting Position:[field getObjectPos:laiting]];
 	[friendLaiting release];
 	
