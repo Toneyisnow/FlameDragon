@@ -14,13 +14,14 @@
 -(void) loadEvents
 {
 	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(initialBattle)];
+	[self loadTurnEvent:TurnType_Friend Turn:7 Action:@selector(batch2)];
 	
 	[self loadDieEvent:1 Action:@selector(gameOver)];
 	[self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
 	
 	[self loadDyingEvent:199 Action:@selector(laitingDead)];
 	
-	NSLog(@"Chapter8 events loaded.");
+	NSLog(@"Chapter9 events loaded.");
 }
 
 -(void) initialBattle
@@ -75,11 +76,34 @@
 	
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50910 Id:199] autorelease] Position:CGPointMake(13, 16)];
 	
+	[self setAiOfId:103 withType:AIType_StandBy];
+	[self setAiOfId:104 withType:AIType_StandBy];
+	[self setAiOfId:113 withType:AIType_StandBy];
+	[self setAiOfId:114 withType:AIType_StandBy];
+	[self setAiOfId:119 withType:AIType_StandBy];
+	[self setAiOfId:120 withType:AIType_StandBy];
+	[self setAiOfId:125 withType:AIType_StandBy];
+	[self setAiOfId:126 withType:AIType_StandBy];
+	[self setAiOfId:199 withType:AIType_StandBy];
+	
 	[field setCursorTo:CGPointMake(16, 40)];
 	
 	for (int i = 1; i <= 7; i++) {
 		[self showTalkMessage:9 conversation:1 sequence:i];
 	}
+}
+
+-(void) batch2
+{
+	[self setAiOfId:103 withType:AIType_Aggressive];
+	[self setAiOfId:104 withType:AIType_Aggressive];
+	[self setAiOfId:113 withType:AIType_Aggressive];
+	[self setAiOfId:114 withType:AIType_Aggressive];
+	[self setAiOfId:119 withType:AIType_Aggressive];
+	[self setAiOfId:120 withType:AIType_Aggressive];
+	[self setAiOfId:125 withType:AIType_Aggressive];
+	[self setAiOfId:126 withType:AIType_Aggressive];
+	[self setAiOfId:199 withType:AIType_Aggressive];
 }
 
 -(void) laitingDead
@@ -109,7 +133,6 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50911 Id:211] autorelease] Position:CGPointMake(14,  1)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50911 Id:212] autorelease] Position:CGPointMake(12,  3)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50911 Id:213] autorelease] Position:CGPointMake(14,  3)];
-	
 }
 
 -(void) enemyClear
