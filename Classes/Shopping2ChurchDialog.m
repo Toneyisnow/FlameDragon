@@ -132,7 +132,9 @@
 	
 	BOOL hasTransferFriend = FALSE;
 	for (CreatureRecord *friend in [chapterRecord friendRecords]) {
-		if (friend.data.level >= 20)
+		
+		int definitionId = [[friend getDefinition] getId];
+		if (friend.data.level >= 20 && [[DataDepot depot] getTransfersDefinition:definitionId] != nil)
 		{
 			hasTransferFriend = TRUE;
 			break;

@@ -6,9 +6,9 @@
    Copyright 2012 ms. All rights reserved.
  */
 
-"Title-12" = "第十二章 幻之森林";
+"Title-12" = "第十二章 北山道";
 
-"Condition-Lose" = "索尔死亡";
+"Condition-Lose" = "索尔或米亚斯多德死亡";
 "Condition-Win" = "敌全灭";
 
 "12-01-001-Id" = "14";

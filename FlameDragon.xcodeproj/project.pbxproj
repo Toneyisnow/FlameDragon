@@ -222,6 +222,18 @@
 		027EF6F216BEA1CC007DC970 /* Chapter-20-Creature.dat in Resources */ = {isa = PBXBuildFile; fileRef = 027EF6E816BEA1CC007DC970 /* Chapter-20-Creature.dat */; };
 		028148C2160CC2E2001CBB4D /* Dato-006-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 028148C1160CC2E2001CBB4D /* Dato-006-1.png */; };
 		02868FD7152572350056A399 /* TreasureRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 02868FD6152572350056A399 /* TreasureRecord.m */; };
+		028A965216C1508A003F8BB2 /* EventChapter11.m in Sources */ = {isa = PBXBuildFile; fileRef = 028A965116C1508A003F8BB2 /* EventChapter11.m */; };
+		028A965A16C15200003F8BB2 /* EventChapter12.m in Sources */ = {isa = PBXBuildFile; fileRef = 028A965916C15200003F8BB2 /* EventChapter12.m */; };
+		028A965D16C1520E003F8BB2 /* EventChapter13.m in Sources */ = {isa = PBXBuildFile; fileRef = 028A965C16C1520E003F8BB2 /* EventChapter13.m */; };
+		028A966016C15220003F8BB2 /* EventChapter14.m in Sources */ = {isa = PBXBuildFile; fileRef = 028A965F16C15220003F8BB2 /* EventChapter14.m */; };
+		028A966716C1524C003F8BB2 /* EventChapter15.m in Sources */ = {isa = PBXBuildFile; fileRef = 028A966616C1524C003F8BB2 /* EventChapter15.m */; };
+		028A966A16C1525D003F8BB2 /* EventChapter16.m in Sources */ = {isa = PBXBuildFile; fileRef = 028A966916C1525D003F8BB2 /* EventChapter16.m */; };
+		028A966D16C1526E003F8BB2 /* EventChapter17.m in Sources */ = {isa = PBXBuildFile; fileRef = 028A966C16C1526E003F8BB2 /* EventChapter17.m */; };
+		028A967016C15280003F8BB2 /* EventChapter18.m in Sources */ = {isa = PBXBuildFile; fileRef = 028A966F16C15280003F8BB2 /* EventChapter18.m */; };
+		028A967316C1529A003F8BB2 /* EventChapter19.m in Sources */ = {isa = PBXBuildFile; fileRef = 028A967216C1529A003F8BB2 /* EventChapter19.m */; };
+		028A967616C152B0003F8BB2 /* EventChapter20.m in Sources */ = {isa = PBXBuildFile; fileRef = 028A967516C152B0003F8BB2 /* EventChapter20.m */; };
+		028A968316C28BD2003F8BB2 /* TransferDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 028A968216C28BD2003F8BB2 /* TransferDefinition.m */; };
+		028A968616C29089003F8BB2 /* TransfersDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 028A968516C29089003F8BB2 /* TransfersDefinition.m */; };
 		028D691D146C0F6300FB8199 /* WhiteBlock.png in Resources */ = {isa = PBXBuildFile; fileRef = 028D691C146C0F6300FB8199 /* WhiteBlock.png */; };
 		028D6982146D208E00FB8199 /* FDPointMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 028D6981146D208E00FB8199 /* FDPointMap.m */; };
 		0297D6EB147BEC59007F3E12 /* Menu-030-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0297D6C7147BEC59007F3E12 /* Menu-030-1.png */; };
@@ -4725,6 +4737,31 @@
 		028148C1160CC2E2001CBB4D /* Dato-006-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Dato-006-1.png"; path = "Dato/Dato-006-1.png"; sourceTree = "<group>"; };
 		02868FD5152572350056A399 /* TreasureRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreasureRecord.h; sourceTree = "<group>"; };
 		02868FD6152572350056A399 /* TreasureRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreasureRecord.m; sourceTree = "<group>"; };
+		028A965016C1508A003F8BB2 /* EventChapter11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter11.h; sourceTree = "<group>"; };
+		028A965116C1508A003F8BB2 /* EventChapter11.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter11.m; sourceTree = "<group>"; };
+		028A965816C15200003F8BB2 /* EventChapter12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter12.h; sourceTree = "<group>"; };
+		028A965916C15200003F8BB2 /* EventChapter12.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter12.m; sourceTree = "<group>"; };
+		028A965B16C1520E003F8BB2 /* EventChapter13.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter13.h; sourceTree = "<group>"; };
+		028A965C16C1520E003F8BB2 /* EventChapter13.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter13.m; sourceTree = "<group>"; };
+		028A965E16C15220003F8BB2 /* EventChapter14.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter14.h; sourceTree = "<group>"; };
+		028A965F16C15220003F8BB2 /* EventChapter14.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter14.m; sourceTree = "<group>"; };
+		028A966516C1524C003F8BB2 /* EventChapter15.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter15.h; sourceTree = "<group>"; };
+		028A966616C1524C003F8BB2 /* EventChapter15.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter15.m; sourceTree = "<group>"; };
+		028A966816C1525D003F8BB2 /* EventChapter16.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter16.h; sourceTree = "<group>"; };
+		028A966916C1525D003F8BB2 /* EventChapter16.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter16.m; sourceTree = "<group>"; };
+		028A966B16C1526E003F8BB2 /* EventChapter17.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter17.h; sourceTree = "<group>"; };
+		028A966C16C1526E003F8BB2 /* EventChapter17.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter17.m; sourceTree = "<group>"; };
+		028A966E16C15280003F8BB2 /* EventChapter18.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter18.h; sourceTree = "<group>"; };
+		028A966F16C15280003F8BB2 /* EventChapter18.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter18.m; sourceTree = "<group>"; };
+		028A967116C1529A003F8BB2 /* EventChapter19.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter19.h; sourceTree = "<group>"; };
+		028A967216C1529A003F8BB2 /* EventChapter19.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter19.m; sourceTree = "<group>"; };
+		028A967416C152B0003F8BB2 /* EventChapter20.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter20.h; sourceTree = "<group>"; };
+		028A967516C152B0003F8BB2 /* EventChapter20.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter20.m; sourceTree = "<group>"; };
+		028A968016C27345003F8BB2 /* Transfer.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Transfer.dat; sourceTree = "<group>"; };
+		028A968116C28BD2003F8BB2 /* TransferDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransferDefinition.h; sourceTree = "<group>"; };
+		028A968216C28BD2003F8BB2 /* TransferDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransferDefinition.m; sourceTree = "<group>"; };
+		028A968416C29089003F8BB2 /* TransfersDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransfersDefinition.h; sourceTree = "<group>"; };
+		028A968516C29089003F8BB2 /* TransfersDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransfersDefinition.m; sourceTree = "<group>"; };
 		028D691C146C0F6300FB8199 /* WhiteBlock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = WhiteBlock.png; path = Others/WhiteBlock.png; sourceTree = "<group>"; };
 		028D6980146D208E00FB8199 /* FDPointMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDPointMap.h; sourceTree = "<group>"; };
 		028D6981146D208E00FB8199 /* FDPointMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDPointMap.m; sourceTree = "<group>"; };
@@ -9855,6 +9892,10 @@
 				022D368D161487130020F816 /* OccupationDefinition.m */,
 				022D37A91615E3120020F816 /* SecretSequenceDefinition.h */,
 				022D37AA1615E3120020F816 /* SecretSequenceDefinition.m */,
+				028A968116C28BD2003F8BB2 /* TransferDefinition.h */,
+				028A968216C28BD2003F8BB2 /* TransferDefinition.m */,
+				028A968416C29089003F8BB2 /* TransfersDefinition.h */,
+				028A968516C29089003F8BB2 /* TransfersDefinition.m */,
 				0297D821147F1132007F3E12 /* AnimationDefinition.h */,
 				0297D822147F1132007F3E12 /* AnimationDefinition.m */,
 				027D54281462C64F002C310F /* FDFrameDefinition.h */,
@@ -10053,6 +10094,7 @@
 				022D368A161484780020F816 /* Occupation.dat */,
 				022D37AC1615E8110020F816 /* SecretSequence.dat */,
 				027B6743167B191A00A730EF /* FightAnimation.dat */,
+				028A968016C27345003F8BB2 /* Transfer.dat */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -10223,6 +10265,26 @@
 				027EF6A616AB770D007DC970 /* EventChapter9.m */,
 				027EF6B916B01BC1007DC970 /* EventChapter10.h */,
 				027EF6BA16B01BC1007DC970 /* EventChapter10.m */,
+				028A965016C1508A003F8BB2 /* EventChapter11.h */,
+				028A965116C1508A003F8BB2 /* EventChapter11.m */,
+				028A965816C15200003F8BB2 /* EventChapter12.h */,
+				028A965916C15200003F8BB2 /* EventChapter12.m */,
+				028A965B16C1520E003F8BB2 /* EventChapter13.h */,
+				028A965C16C1520E003F8BB2 /* EventChapter13.m */,
+				028A965E16C15220003F8BB2 /* EventChapter14.h */,
+				028A965F16C15220003F8BB2 /* EventChapter14.m */,
+				028A966516C1524C003F8BB2 /* EventChapter15.h */,
+				028A966616C1524C003F8BB2 /* EventChapter15.m */,
+				028A966816C1525D003F8BB2 /* EventChapter16.h */,
+				028A966916C1525D003F8BB2 /* EventChapter16.m */,
+				028A966B16C1526E003F8BB2 /* EventChapter17.h */,
+				028A966C16C1526E003F8BB2 /* EventChapter17.m */,
+				028A966E16C15280003F8BB2 /* EventChapter18.h */,
+				028A966F16C15280003F8BB2 /* EventChapter18.m */,
+				028A967116C1529A003F8BB2 /* EventChapter19.h */,
+				028A967216C1529A003F8BB2 /* EventChapter19.m */,
+				028A967416C152B0003F8BB2 /* EventChapter20.h */,
+				028A967516C152B0003F8BB2 /* EventChapter20.m */,
 				02DBA1ED16664E340081EC45 /* EventChapter99.h */,
 				02DBA1EE16664E340081EC45 /* EventChapter99.m */,
 			);
@@ -20636,6 +20698,18 @@
 				0266D4C0167C5AB40067CC45 /* EventChapter8.m in Sources */,
 				027EF6A716AB770D007DC970 /* EventChapter9.m in Sources */,
 				027EF6BB16B01BC1007DC970 /* EventChapter10.m in Sources */,
+				028A965216C1508A003F8BB2 /* EventChapter11.m in Sources */,
+				028A965A16C15200003F8BB2 /* EventChapter12.m in Sources */,
+				028A965D16C1520E003F8BB2 /* EventChapter13.m in Sources */,
+				028A966016C15220003F8BB2 /* EventChapter14.m in Sources */,
+				028A966716C1524C003F8BB2 /* EventChapter15.m in Sources */,
+				028A966A16C1525D003F8BB2 /* EventChapter16.m in Sources */,
+				028A966D16C1526E003F8BB2 /* EventChapter17.m in Sources */,
+				028A967016C15280003F8BB2 /* EventChapter18.m in Sources */,
+				028A967316C1529A003F8BB2 /* EventChapter19.m in Sources */,
+				028A967616C152B0003F8BB2 /* EventChapter20.m in Sources */,
+				028A968316C28BD2003F8BB2 /* TransferDefinition.m in Sources */,
+				028A968616C29089003F8BB2 /* TransfersDefinition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

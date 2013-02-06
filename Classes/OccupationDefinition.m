@@ -32,6 +32,8 @@
 			[def.defendItemCategoryList addObject:[NSNumber numberWithInt:itemCategory]];
 	}
 	
+	def.magicDefenceRate = [stream readInt];
+	
 	return def;
 }
 

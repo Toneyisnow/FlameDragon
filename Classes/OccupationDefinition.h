@@ -16,11 +16,13 @@
 	NSMutableArray *attackItemCategoryList;
 	NSMutableArray *defendItemCategoryList;
 	
+	int magicDefenceRate;
 }
 
 @property (assign, readonly) NSMutableArray *attackItemCategoryList;
 @property (assign, readonly) NSMutableArray *defendItemCategoryList;
 @property (assign) int occupationId;
+@property (assign) int magicDefenceRate;
 
 
 

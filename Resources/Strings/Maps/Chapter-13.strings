@@ -8,7 +8,7 @@
 
 "Title-13" = "第十三章 哈斯米尔之战";
 
-"Condition-Lose" = "索尔死亡";
+"Condition-Lose" = "索尔死亡或精灵全灭";
 "Condition-Win" = "敌全灭";
 
 "13-01-001-Id" = "9";

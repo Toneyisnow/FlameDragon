@@ -168,9 +168,16 @@
 	{
 		NSLog(@"GameFormula: Magic is Hit");
 		
+		OccupationDefinition *occu = [[DataDepot depot] getOccupationDefinition:[target getDefinition].occupation];
+		double rate = 1.0;
+		if (occu != nil)
+		{
+			rate = (double)(100 - occu.magicDefenceRate)/100.0;
+		}
+		
 		switch (magic.magicType) {
 			case MagicType_Attack:
-				reduceHp = [FDRandom from:[magic.quantityRange min] to:[magic.quantityRange max]];
+				reduceHp = (int)([FDRandom from:[magic.quantityRange min] to:[magic.quantityRange max]] * rate);
 				reduceHp = (reduceHp < 0) ? 0 : reduceHp;
 				break;
 			case MagicType_Recover:

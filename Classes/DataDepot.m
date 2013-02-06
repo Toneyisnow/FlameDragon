@@ -42,6 +42,7 @@ static DataDepot *instance = nil;
 	[self loadOccupationDictionary];
 	[self loadSecretSequenceDictionary];
 	[self loadLevelUpMagicDictionary];
+	[self loadTransferDictionary];
 }
 
 -(void) loadItemDictionary
@@ -193,7 +194,6 @@ static DataDepot *instance = nil;
 		OccupationDefinition *def = [OccupationDefinition readFromFile:file];
 		[occupationDictionary setObject:def forKey:[NSNumber numberWithInt:def.occupationId]];
 	}
-	
 	[file close];
 	
 	NSLog(@"Loaded Occupation Dictionary.");
@@ -300,7 +300,30 @@ static DataDepot *instance = nil;
 	
 	[file close];
 	
-	NSLog(@"Loaded LevelUp Magic Dictionary.");	
+	NSLog(@"Loaded LevelUp Magic Dictionary.");
+}
+
+-(void) loadTransferDictionary
+{
+	NSLog(@"Loading Transfer Dictionary.");
+	
+	if (transferDictionary != nil) {
+		[transferDictionary release];
+		transferDictionary = nil;
+	}
+	
+	transferDictionary = [[NSMutableDictionary alloc] init];
+	FDFileStream *file = [[FDFileStream alloc] initWithDataFile:@"Transfer" Ext:@"dat"];
+	[file open];
+	
+	int transferCount = [file readInt];
+	for (int m = 0; m < transferCount; m++) {
+		TransfersDefinition * def = [TransfersDefinition readFromFile:file];
+		[transferDictionary setObject:def forKey:[NSNumber numberWithInt:def.creatureDefId]];
+	}
+	[file close];
+	
+	NSLog(@"Loaded Transfer Dictionary.");
 }
 
 -(void) loadAnimationDictionary
@@ -320,7 +343,7 @@ static DataDepot *instance = nil;
 	int creatureAniId = [file readInt];
 	while (creatureAniId > 0) {
 	
-		NSLog(@"Load Animation for AniId %d", creatureAniId);
+		// NSLog(@"Load Animation for AniId %d", creatureAniId);
 		int aniCount = [file readInt];
 		
 		// Idle Animation
@@ -455,8 +478,19 @@ static DataDepot *instance = nil;
 		[animationDictionary setObject:def forKey:key];
 	}
 	
-	
 	return [animationDictionary objectForKey:key];
 }
+
+-(TransfersDefinition *) getTransfersDefinition:(int)creatureDefId
+{
+	TransfersDefinition *def = [transferDictionary objectForKey:[NSNumber numberWithInt:creatureDefId]];
+	
+	if (def == nil) {
+		NSLog(@"DataDepot Error: Cannot find TransfersDefinition for CreatureDefId=%d", creatureDefId);
+		return nil;
+	}
+	return def;
+}
+
 
 @end

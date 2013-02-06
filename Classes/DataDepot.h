@@ -16,6 +16,7 @@
 #import "OccupationDefinition.h"
 #import "SecretSequenceDefinition.h"
 #import "LevelUpMagicDefinition.h"
+#import "TransfersDefinition.h"
 
 @interface DataDepot : NSObject {
 
@@ -28,6 +29,7 @@
 	NSMutableDictionary *occupationDictionary;
 	NSMutableDictionary *secretSequenceDictionary;
 	NSMutableDictionary *levelUpMagicDictionary;
+	NSMutableDictionary *transferDictionary;
 	
 }
 
@@ -43,6 +45,7 @@
 -(void) loadOccupationDictionary;
 -(void) loadSecretSequenceDictionary;
 -(void) loadLevelUpMagicDictionary;
+-(void) loadTransferDictionary;
 
 -(ItemDefinition *) getItemDefinition:(int)itemId;
 -(MagicDefinition *) getMagicDefinition:(int)magicId;
@@ -53,5 +56,6 @@
 -(OccupationDefinition *) getOccupationDefinition:(int)occupationId;
 -(SecretSequenceDefinition *) getSecretSequenceDefinition:(int)chapterId;
 -(MagicDefinition *) getLevelUpMagicDefinition:(int)creatureDefId atLeveL:(int)level;
+-(TransfersDefinition *) getTransfersDefinition:(int)creatureDefId;
 
 @end
