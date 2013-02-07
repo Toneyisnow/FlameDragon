@@ -11,6 +11,10 @@
 
 @interface Shopping2ShowTransferDialog : Shopping2ScrollDialog {
 	
+	NSMutableArray *transferList;
+	
 }
+
+-(id) initWithFriends:(NSMutableArray *)list pageIndex:(int)pIndex;
 
 @end

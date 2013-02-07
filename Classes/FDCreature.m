@@ -347,6 +347,12 @@
 {
 	return [data.itemList count] >= 8;
 }
+
+-(BOOL) hasItem:(int)itemId
+{
+	
+}
+
 /*
 -(void) removeItem:(int)index
 {

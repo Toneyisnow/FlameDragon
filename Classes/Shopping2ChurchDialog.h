@@ -11,7 +11,7 @@
 
 @interface Shopping2ChurchDialog : Shopping2HomeDialog {
 
-
+	int transferFee;
 }
 
 -(void) onRevive_SelectedFriend:(NSNumber *)num;

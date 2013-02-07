@@ -12,7 +12,7 @@
 @implementation TransferDefinition
 
 @synthesize apRange, dpRange, dxRange, hpRange, mpRange, mvRange;
-@synthesize transferId, toCreatureDefId, requireItemId;
+@synthesize transferId, fromCreatureDefId, toCreatureDefId, requireItemId;
 
 +(id) readFromFile:(FDFileStream *)stream
 {

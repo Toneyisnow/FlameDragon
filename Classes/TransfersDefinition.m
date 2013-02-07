@@ -24,6 +24,8 @@
 	
 	for (int i = 0; i < count; i++) {
 		TransferDefinition *t = [TransferDefinition readFromFile:stream];
+		t.fromCreatureDefId = def.creatureDefId;
+		
 		[def.transferArray addObject:t];
 	}
 	

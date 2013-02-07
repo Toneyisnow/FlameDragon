@@ -57,5 +57,6 @@
 -(SecretSequenceDefinition *) getSecretSequenceDefinition:(int)chapterId;
 -(MagicDefinition *) getLevelUpMagicDefinition:(int)creatureDefId atLeveL:(int)level;
 -(TransfersDefinition *) getTransfersDefinition:(int)creatureDefId;
+-(TransferDefinition *) getTransferDefinition:(int)transferId;
 
 @end

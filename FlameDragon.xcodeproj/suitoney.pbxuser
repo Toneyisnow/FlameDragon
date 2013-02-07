@@ -790,7 +790,7 @@
 		fRef = 02D30C041602202B00CA1799 /* Shopping2ShowTransferDialog.m */;
 		name = "Shopping2ShowTransferDialog.m: 19";
 		rLen = 0;
-		rLoc = 302;
+		rLoc = 3353;
 		rType = 0;
 		vrLen = 579;
 		vrLoc = 3;
@@ -1058,7 +1058,7 @@
 		fRef = 02D30A5515FF7F0500CA1799 /* Shopping2ChurchDialog.h */;
 		name = "Shopping2ChurchDialog.h: 25";
 		rLen = 0;
-		rLoc = 459;
+		rLoc = 476;
 		rType = 0;
 		vrLen = 465;
 		vrLoc = 0;
@@ -2385,7 +2385,7 @@
 	};
 	025DA92E162C4DE000DD7C30 /* Shopping2AmorDialog.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {841, 433}}";
+			sepNavIntBoundsRect = "{{0, 0}, {727, 429}}";
 			sepNavSelRange = "{278, 0}";
 			sepNavVisRange = "{0, 433}";
 		};
@@ -3023,7 +3023,7 @@
 		fRef = 02D30A5615FF7F0500CA1799 /* Shopping2ChurchDialog.m */;
 		name = "Shopping2ChurchDialog.m: 144";
 		rLen = 0;
-		rLoc = 3931;
+		rLoc = 3940;
 		rType = 0;
 		vrLen = 810;
 		vrLoc = 3507;
@@ -3385,9 +3385,9 @@
 	};
 	02733526149F13E100D0812F /* Message.strings */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {841, 923}}";
-			sepNavSelRange = "{853, 0}";
-			sepNavVisRange = "{322, 742}";
+			sepNavIntBoundsRect = "{{0, 0}, {727, 936}}";
+			sepNavSelRange = "{1272, 0}";
+			sepNavVisRange = "{883, 732}";
 		};
 	};
 	02733533149F15E400D0812F /* PBXTextBookmark */ = {
@@ -4096,16 +4096,16 @@
 	};
 	027D54091462B712002C310F /* FDCreature.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {727, 2236}}";
-			sepNavSelRange = "{2905, 0}";
-			sepNavVisRange = "{1555, 868}";
+			sepNavIntBoundsRect = "{{0, 0}, {727, 2184}}";
+			sepNavSelRange = "{2724, 0}";
+			sepNavVisRange = "{2289, 697}";
 		};
 	};
 	027D540A1462B712002C310F /* FDCreature.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {936, 6149}}";
-			sepNavSelRange = "{9790, 0}";
-			sepNavVisRange = "{2193, 445}";
+			sepNavIntBoundsRect = "{{0, 0}, {859, 6201}}";
+			sepNavSelRange = "{8340, 0}";
+			sepNavVisRange = "{8052, 693}";
 		};
 	};
 	027D540C1462B755002C310F /* FDDrawable.h */ = {
@@ -4754,7 +4754,7 @@
 		fRef = 02C57287151855E800DAEE2C /* CreatureData.h */;
 		name = "CreatureData.h: 128";
 		rLen = 0;
-		rLoc = 2522;
+		rLoc = 2590;
 		rType = 0;
 		vrLen = 983;
 		vrLoc = 1668;
@@ -4764,7 +4764,7 @@
 		fRef = 027D540A1462B712002C310F /* FDCreature.m */;
 		name = "FDCreature.m: 427";
 		rLen = 0;
-		rLoc = 9790;
+		rLoc = 9826;
 		rType = 0;
 		vrLen = 445;
 		vrLoc = 2193;
@@ -4946,7 +4946,7 @@
 		fRef = 027D54091462B712002C310F /* FDCreature.h */;
 		name = "FDCreature.h: 150";
 		rLen = 0;
-		rLoc = 2905;
+		rLoc = 2962;
 		rType = 0;
 		vrLen = 891;
 		vrLoc = 1555;
@@ -5849,16 +5849,16 @@
 	};
 	028A968116C28BD2003F8BB2 /* TransferDefinition.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {727, 598}}";
-			sepNavSelRange = "{875, 0}";
-			sepNavVisRange = "{240, 641}";
+			sepNavIntBoundsRect = "{{0, 0}, {727, 585}}";
+			sepNavSelRange = "{705, 0}";
+			sepNavVisRange = "{130, 696}";
 		};
 	};
 	028A968216C28BD2003F8BB2 /* TransferDefinition.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {727, 468}}";
-			sepNavSelRange = "{288, 0}";
-			sepNavVisRange = "{28, 760}";
+			sepNavSelRange = "{294, 0}";
+			sepNavVisRange = "{28, 779}";
 		};
 	};
 	028A968416C29089003F8BB2 /* TransfersDefinition.h */ = {
@@ -5870,9 +5870,9 @@
 	};
 	028A968516C29089003F8BB2 /* TransfersDefinition.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {782, 741}}";
-			sepNavSelRange = "{892, 0}";
-			sepNavVisRange = "{442, 543}";
+			sepNavIntBoundsRect = "{{0, 0}, {727, 754}}";
+			sepNavSelRange = "{587, 0}";
+			sepNavVisRange = "{131, 617}";
 		};
 	};
 	028A968916C29EEF003F8BB2 /* PBXTextBookmark */ = {
@@ -6358,7 +6358,7 @@
 		fRef = 028A968516C29089003F8BB2 /* TransfersDefinition.m */;
 		name = "TransfersDefinition.m: 47";
 		rLen = 0;
-		rLoc = 892;
+		rLoc = 938;
 		rType = 0;
 		vrLen = 543;
 		vrLoc = 442;
@@ -6408,7 +6408,7 @@
 		fRef = 027D54091462B712002C310F /* FDCreature.h */;
 		name = "FDCreature.h: 150";
 		rLen = 0;
-		rLoc = 2905;
+		rLoc = 2962;
 		rType = 0;
 		vrLen = 868;
 		vrLoc = 1555;
@@ -6418,7 +6418,7 @@
 		fRef = 02D30A5615FF7F0500CA1799 /* Shopping2ChurchDialog.m */;
 		name = "Shopping2ChurchDialog.m: 137";
 		rLen = 0;
-		rLoc = 3805;
+		rLoc = 3814;
 		rType = 0;
 		vrLen = 919;
 		vrLoc = 3556;
@@ -6438,7 +6438,7 @@
 		fRef = 02D30C041602202B00CA1799 /* Shopping2ShowTransferDialog.m */;
 		name = "Shopping2ShowTransferDialog.m: 19";
 		rLen = 0;
-		rLoc = 302;
+		rLoc = 3353;
 		rType = 0;
 		vrLen = 579;
 		vrLoc = 3;
@@ -6488,7 +6488,7 @@
 		fRef = 028A968116C28BD2003F8BB2 /* TransferDefinition.h */;
 		name = "TransferDefinition.h: 44";
 		rLen = 0;
-		rLoc = 875;
+		rLoc = 870;
 		rType = 0;
 		vrLen = 641;
 		vrLoc = 240;
@@ -6543,16 +6543,16 @@
 	};
 	0297D77F147D3C59007F3E12 /* DataDepot.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {782, 806}}";
-			sepNavSelRange = "{901, 0}";
-			sepNavVisRange = "{777, 1223}";
+			sepNavIntBoundsRect = "{{0, 0}, {727, 819}}";
+			sepNavSelRange = "{1254, 0}";
+			sepNavVisRange = "{777, 1286}";
 		};
 	};
 	0297D780147D3C59007F3E12 /* DataDepot.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {848, 6682}}";
-			sepNavSelRange = "{8850, 0}";
-			sepNavVisRange = "{8750, 448}";
+			sepNavIntBoundsRect = "{{0, 0}, {789, 6955}}";
+			sepNavSelRange = "{14088, 0}";
+			sepNavVisRange = "{13670, 790}";
 			sepNavWindowFrame = "{{15, 99}, {909, 674}}";
 		};
 	};
@@ -6586,9 +6586,9 @@
 	};
 	0297D788147D5069007F3E12 /* CreatureDefinition.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {792, 1170}}";
+			sepNavIntBoundsRect = "{{0, 0}, {727, 1248}}";
 			sepNavSelRange = "{204, 43}";
-			sepNavVisRange = "{623, 590}";
+			sepNavVisRange = "{444, 520}";
 		};
 	};
 	0297D789147D5069007F3E12 /* CreatureDefinition.m */ = {
@@ -9299,16 +9299,16 @@
 	};
 	02BB39DE160DCA24006BEE76 /* Shopping2PagedDialog.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 420}}";
+			sepNavIntBoundsRect = "{{0, 0}, {727, 429}}";
 			sepNavSelRange = "{358, 0}";
 			sepNavVisRange = "{0, 491}";
 		};
 	};
 	02BB39DF160DCA24006BEE76 /* Shopping2PagedDialog.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1160, 988}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1160, 1144}}";
 			sepNavSelRange = "{1542, 0}";
-			sepNavVisRange = "{589, 1124}";
+			sepNavVisRange = "{933, 890}";
 		};
 	};
 	02BB3A38160E081F006BEE76 /* Shopping2HomeDialog.m:543 */ = {
@@ -9492,7 +9492,7 @@
 	};
 	02C57213150C521800DAEE2C /* BattleRecord.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 1820}}";
+			sepNavIntBoundsRect = "{{0, 0}, {727, 1846}}";
 			sepNavSelRange = "{928, 0}";
 			sepNavVisRange = "{1083, 925}";
 		};
@@ -9557,23 +9557,23 @@
 	};
 	02C57287151855E800DAEE2C /* CreatureData.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {841, 1638}}";
-			sepNavSelRange = "{2522, 0}";
-			sepNavVisRange = "{1668, 983}";
+			sepNavIntBoundsRect = "{{0, 0}, {727, 1872}}";
+			sepNavSelRange = "{1450, 39}";
+			sepNavVisRange = "{1242, 864}";
 		};
 	};
 	02C57288151855E800DAEE2C /* CreatureData.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {841, 5148}}";
-			sepNavSelRange = "{4416, 0}";
-			sepNavVisRange = "{7898, 514}";
+			sepNavIntBoundsRect = "{{0, 0}, {747, 5473}}";
+			sepNavSelRange = "{8506, 0}";
+			sepNavVisRange = "{8010, 590}";
 		};
 	};
 	02C5728C1519944E00DAEE2C /* CreatureRecord.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 507}}";
+			sepNavIntBoundsRect = "{{0, 0}, {727, 507}}";
 			sepNavSelRange = "{607, 0}";
-			sepNavVisRange = "{124, 582}";
+			sepNavVisRange = "{80, 626}";
 		};
 	};
 	02C5728D1519944E00DAEE2C /* CreatureRecord.m */ = {
@@ -9831,9 +9831,9 @@
 	};
 	02D30A4615FF74F600CA1799 /* Shopping2Dialog.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 1638}}";
+			sepNavIntBoundsRect = "{{0, 0}, {727, 1690}}";
 			sepNavSelRange = "{2453, 0}";
-			sepNavVisRange = "{1853, 728}";
+			sepNavVisRange = "{1533, 759}";
 		};
 	};
 	02D30A4815FF786600CA1799 /* Shopping2HomeDialog.h */ = {
@@ -9845,9 +9845,9 @@
 	};
 	02D30A4915FF786600CA1799 /* Shopping2HomeDialog.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1076, 7696}}";
-			sepNavSelRange = "{7637, 0}";
-			sepNavVisRange = "{7918, 990}";
+			sepNavIntBoundsRect = "{{0, 0}, {1076, 7852}}";
+			sepNavSelRange = "{7663, 396}";
+			sepNavVisRange = "{7572, 831}";
 		};
 	};
 	02D30A4C15FF7DCE00CA1799 /* Shopping2ShopDialog.h */ = {
@@ -9894,16 +9894,16 @@
 	};
 	02D30A5515FF7F0500CA1799 /* Shopping2ChurchDialog.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {739, 397}}";
-			sepNavSelRange = "{459, 0}";
-			sepNavVisRange = "{0, 465}";
+			sepNavIntBoundsRect = "{{0, 0}, {727, 429}}";
+			sepNavSelRange = "{244, 0}";
+			sepNavVisRange = "{0, 482}";
 		};
 	};
 	02D30A5615FF7F0500CA1799 /* Shopping2ChurchDialog.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1132, 2418}}";
-			sepNavSelRange = "{3805, 0}";
-			sepNavVisRange = "{3556, 919}";
+			sepNavIntBoundsRect = "{{0, 0}, {957, 3081}}";
+			sepNavSelRange = "{5970, 0}";
+			sepNavVisRange = "{5405, 995}";
 		};
 	};
 	02D30A5815FF81B900CA1799 /* Shopping2ShowProductDialog.h */ = {
@@ -9951,15 +9951,15 @@
 	02D30A611600CD0000CA1799 /* Shopping2SelectAmorTargetDialog.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {727, 429}}";
-			sepNavSelRange = "{405, 0}";
+			sepNavSelRange = "{282, 123}";
 			sepNavVisRange = "{0, 412}";
 		};
 	};
 	02D30A621600CD0000CA1799 /* Shopping2SelectAmorTargetDialog.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1209, 1794}}";
-			sepNavSelRange = "{2442, 0}";
-			sepNavVisRange = "{60, 723}";
+			sepNavSelRange = "{3904, 128}";
+			sepNavVisRange = "{3606, 433}";
 		};
 	};
 	02D30A641600CF4D00CA1799 /* Shopping2ShowFriendsDialog.h */ = {
@@ -10361,15 +10361,15 @@
 	02D30C031602202B00CA1799 /* Shopping2ShowTransferDialog.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {727, 429}}";
-			sepNavSelRange = "{258, 0}";
-			sepNavVisRange = "{0, 270}";
+			sepNavSelRange = "{343, 0}";
+			sepNavVisRange = "{0, 372}";
 		};
 	};
 	02D30C041602202B00CA1799 /* Shopping2ShowTransferDialog.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {727, 455}}";
-			sepNavSelRange = "{302, 0}";
-			sepNavVisRange = "{3, 579}";
+			sepNavIntBoundsRect = "{{0, 0}, {1251, 1417}}";
+			sepNavSelRange = "{3320, 0}";
+			sepNavVisRange = "{783, 1436}";
 		};
 	};
 	02D30C2E1602241900CA1799 /* PBXTextBookmark */ = {

@@ -29,6 +29,7 @@
 
 -(void) initMessage
 {
+	transferFee = 300;
 	[self setMessage:[FDLocalString message:55]];	
 }
 
@@ -133,7 +134,7 @@
 	BOOL hasTransferFriend = FALSE;
 	for (CreatureRecord *friend in [chapterRecord friendRecords]) {
 		
-		int definitionId = [[friend getDefinition] getId];
+		int definitionId = friend.definitionId;
 		if (friend.data.level >= 20 && [[DataDepot depot] getTransfersDefinition:definitionId] != nil)
 		{
 			hasTransferFriend = TRUE;
@@ -166,9 +167,14 @@
 		return;
 	}
 	
-	lastSelectedCreatureIndex = selectedNum;
+	lastSelectedItemIndex = selectedNum;
 	
-	NSString *msg = [FDLocalString confirm:58];
+	TransferDefinition *transfer = [[DataDepot depot] getTransferDefinition:lastSelectedItemIndex];
+	CreatureDefinition *creature = [[DataDepot depot] getCreatureDefinition:transfer.fromCreatureDefId];
+	CreatureDefinition *creatureNew = [[DataDepot depot] getCreatureDefinition:transfer.toCreatureDefId];
+	NSString *occupationNewName = [creatureNew getOccupationString];
+	
+	NSString *msg = [NSString stringWithFormat:[FDLocalString confirm:58], [creature getName], occupationNewName, transferFee];
 	Shopping2ConfirmDialog *dialog = [[Shopping2ConfirmDialog alloc] initWithMessage:msg];
 	[self showDialog:dialog Callback:@selector(onTransfer_Confirm:)];
 	[dialog release];
@@ -184,12 +190,51 @@
 	}
 	
 	// Transfer the career of the friend
-	[self doTransfer];
+	if (chapterRecord.money >= transferFee) {
+		[self doTransfer];
+	}
+	else {
+		NSString *msg = [FDLocalString message:61];
+		Shopping2MessageDialog *dialog = [[Shopping2MessageDialog alloc] initWithMessage:msg];
+		[self showDialog:dialog Callback:nil];
+		[dialog release];
+	}
 	
 }
 
 -(void) doTransfer
 {
+	TransferDefinition *transfer = [[DataDepot depot] getTransferDefinition:lastSelectedItemIndex];
+	
+	CreatureRecord *friend;
+	for (CreatureRecord *r in [chapterRecord friendRecords]) {
+		if (r.creatureId == transfer.fromCreatureDefId) {
+			friend = r;
+			break;
+		}
+	}
+	
+	if (transfer.requireItemId != 0) {
+		
+		if (![friend.data hasItem:transfer.requiredItemId]) {
+			NSLog(@"The Creature %d doesn't have the item that support this transfer %d.", friend.creatureId, transfer.requiredItemId);
+			return;
+		}
+		
+		[friend.data removeItemWithId:transfer.requiredItemId];
+	}
+	
+	
+	chapterRecord.money -= transferFee;
+	
+	
+	CreatureRecord *friend = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];
+	int itemId = [[friend.data.itemList objectAtIndex:lastSelectedItemIndex] intValue];
+	ItemDefinition *item = [[DataDepot depot] getItemDefinition:itemId];
+	
+	chapterRecord.money += item.sellprice;
+	
+	[friend.data removeItem:lastSelectedItemIndex];
 	
 	[(Shopping2Layer *)parentLayer updateMoneyBar];
 }

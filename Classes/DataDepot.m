@@ -492,5 +492,18 @@ static DataDepot *instance = nil;
 	return def;
 }
 
+-(TransferDefinition *) getTransferDefinition:(int)transferId
+{
+	// This is the tricky part
+	int creatureDefId = transferId % 100;
+	
+	TransfersDefinition *transfers = [self getTransfersDefinition:creatureDefId];
+	for (TransferDefinition *def in transfers)
+	{
+		if (def.transferId = transferId) {
+			return def;
+		}
+	}
+}
 
 @end

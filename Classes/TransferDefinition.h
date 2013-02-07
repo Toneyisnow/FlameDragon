@@ -13,7 +13,7 @@
 @interface TransferDefinition : NSObject {
 
 	int transferId;
-	//int fromCreatureDefId;
+	int fromCreatureDefId;
 	int toCreatureDefId;
 	
 	int requireItemId;
@@ -35,7 +35,7 @@
 @property (assign) FDRange *mvRange;
 
 @property (assign) int transferId;
-// @property (assign) int fromCreatureDefId;
+@property (assign) int fromCreatureDefId;
 @property (assign) int toCreatureDefId;
 @property (assign) int requireItemId;
 

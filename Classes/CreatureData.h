@@ -87,6 +87,8 @@ typedef enum AIType {
 
 
 -(void) removeItem:(int)index;
+-(BOOL) hasItem:(int)itemId;
+-(void) removeItemWithId:(int) itemId;
 
 -(void) recoverHealth;
 -(void) updateStatusInTurn;

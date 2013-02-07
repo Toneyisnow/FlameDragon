@@ -336,6 +336,17 @@
 	}
 }
 
+-(void) removeItemWithId:(int) itemId
+{
+	for (int i = 0; i < [itemList count]; i++) {
+		NSNumber *num = [itemList objectAtIndex:i];
+		if (itemId == [num intValue]) {
+			[self removeItem:i];
+			return;
+		}
+	}
+}
+
 -(void) recoverHealth
 {
 	if (hpCurrent > 0) {
