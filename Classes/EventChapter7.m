@@ -187,6 +187,7 @@
 		
 		FDFriend *kaili = [[FDFriend alloc] initWithDefinition:10 Id:10];
 		[[field getFriendList] addObject:kaili];
+		[kaili release];
 	}
 	
 	[layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];
