@@ -143,7 +143,6 @@ typedef enum ActionStatus {
 
 -(void) equipEquipment:(int) index;
 -(void) dropItem:(int) index;
--(void) pickItem:(int) itemId;
 
 -(BOOL) canAttack;
 -(BOOL) canFightBack;

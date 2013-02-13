@@ -348,10 +348,6 @@
 	return [data.itemList count] >= 8;
 }
 
--(BOOL) hasItem:(int)itemId
-{
-	
-}
 
 /*
 -(void) removeItem:(int)index
@@ -410,11 +406,6 @@
 	
 	
 	[data removeItem:index];
-}
-
--(void) pickItem:(int) itemId
-{
-	NSLog(@"Picked item %d", itemId);
 }
 
 -(NSString *) getName

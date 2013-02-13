@@ -559,6 +559,8 @@
 
 -(void) checkEndTurn
 {
+	NSLog(@"Checking End Turn...");
+	
 	if (turnType == TurnType_Friend)
 	{
 		for (FDCreature *creature in [field getFriendList]) {
@@ -639,8 +641,16 @@
 
 	turnType = TurnType_NPC;
 
-	// If there is no NPC
-	if ([[field getNpcList] count] > 0) {
+	// If there is no NPC actionable
+	BOOL hasActionableTarget = FALSE;
+	for (FDCreature *creature in [field getNpcList]) {
+		if (creature.data.statusFrozen <= 0) {
+			hasActionableTarget = TRUE;
+			break;
+		}
+	}
+	
+	if (hasActionableTarget) {
 		turnType = TurnType_NPC;
 		[npcAiHandler isNotified];
 	}
@@ -674,8 +684,22 @@
 	NSLog(@"Start Enemy Turn");
 
 	turnType = TurnType_Enemy;
-	[enemyAiHandler isNotified];
-
+	
+	// If there is no NPC actionable
+	BOOL hasActionableTarget = FALSE;
+	for (FDCreature *creature in [field getEnemyList]) {
+		if (creature.data.statusFrozen <= 0) {
+			hasActionableTarget = TRUE;
+			break;
+		}
+	}
+	
+	if (hasActionableTarget) {
+		[enemyAiHandler isNotified];
+	}
+	else {
+		[self endEnemyTurn];
+	}
 }
 
 -(void) endEnemyTurn
@@ -960,7 +984,7 @@
 	//ChapterRecord *record = [ChapterRecord sampleRecord];
 	ChapterRecord *record = [self composeChapterRecord];
 	
-	if (chapterId < 10) {
+	if (chapterId < 15) {
 		VillageScene *scene = [VillageScene node];
 		[scene loadWithRecord:record];
 		[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.5 scene:scene]];	

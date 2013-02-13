@@ -58,6 +58,7 @@
 
 -(NSString *) getRaceString;
 -(NSString *) getOccupationString;
+-(NSString *) getNameString;
 
 -(BOOL) canEquip:(int)itemCategory;
 -(BOOL) isMagicalCreature;

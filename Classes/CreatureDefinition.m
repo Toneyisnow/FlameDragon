@@ -171,6 +171,11 @@
 	return [FDLocalString occupation:occupation];
 }
 
+-(NSString *) getNameString
+{
+	return name;
+}
+
 -(BOOL) canEquip:(int)itemId
 {
 	ItemDefinition *item = [[DataDepot depot] getItemDefinition:itemId];

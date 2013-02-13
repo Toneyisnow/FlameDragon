@@ -13,7 +13,7 @@
 
 @synthesize attackItemCategoryList;
 @synthesize defendItemCategoryList;
-@synthesize occupationId;
+@synthesize occupationId, magicDefenceRate;
 
 +(id) readFromFile:(FDFileStream *)stream
 {

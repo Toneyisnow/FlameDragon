@@ -15,6 +15,7 @@
 {
 	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(initialBattle)];
 	[self loadTurnEvent:TurnType_Friend Turn:5 Action:@selector(reinforcement)];
+	[self loadTurnEvent:TurnType_Friend Turn:7 Action:@selector(batch1)];
 	[self loadTurnEvent:TurnType_Friend Turn:10 Action:@selector(batch2)];
 	[self loadTurnEvent:TurnType_Friend Turn:20 Action:@selector(batch3)];
 
@@ -91,18 +92,29 @@
 	
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51001 Id:199] autorelease] Position:CGPointMake(16, 5)];
 	
+	
 	for (int i = 119; i <= 138; i++) {
 		[self setAiOfId:i withType:AIType_StandBy];
 	}
+	[self setAiOfId:103 withType:AIType_StandBy];
+	[self setAiOfId:104 withType:AIType_StandBy];
+	[self setAiOfId:109 withType:AIType_StandBy];
+	[self setAiOfId:110 withType:AIType_StandBy];
+	[self setAiOfId:111 withType:AIType_StandBy];
+	[self setAiOfId:112 withType:AIType_StandBy];
+	[self setAiOfId:115 withType:AIType_StandBy];
+	[self setAiOfId:116 withType:AIType_StandBy];
 	[self setAiOfId:199 withType:AIType_StandBy];
 	
 	// Add NPC
-	[field addNpc:[[[FDNpc alloc] initWithDefinition:901 Id:901] autorelease] Position:CGPointMake(25, 9)];
+	
+	 [field addNpc:[[[FDNpc alloc] initWithDefinition:901 Id:901] autorelease] Position:CGPointMake(25, 9)];
 	[field addNpc:[[[FDNpc alloc] initWithDefinition: 12 Id: 12] autorelease] Position:CGPointMake( 7, 9)];
 	FDCreature *c901 = [field getCreatureById:901];
 	FDCreature *c12 = [field getCreatureById:12];
 	c901.data.statusFrozen = 255;
 	c12.data.statusFrozen = 255;
+	
 	
 	// Talk
 	for (int i = 1; i <= 12; i++) {
@@ -124,6 +136,18 @@
 	for (int i = 1; i <= 3; i++) {
 		[self showTalkMessage:10 conversation:2 sequence:i];
 	}
+}
+
+-(void) batch1
+{
+	[self setAiOfId:103 withType:AIType_Aggressive];
+	[self setAiOfId:104 withType:AIType_Aggressive];
+	[self setAiOfId:109 withType:AIType_Aggressive];
+	[self setAiOfId:110 withType:AIType_Aggressive];
+	[self setAiOfId:111 withType:AIType_Aggressive];
+	[self setAiOfId:112 withType:AIType_Aggressive];
+	[self setAiOfId:115 withType:AIType_Aggressive];
+	[self setAiOfId:116 withType:AIType_Aggressive];
 }
 
 -(void) batch2

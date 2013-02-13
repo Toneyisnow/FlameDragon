@@ -27,12 +27,12 @@
 	
 }
 
-@property (assign) FDRange *apRange;
-@property (assign) FDRange *dpRange;
-@property (assign) FDRange *dxRange;
-@property (assign) FDRange *hpRange;
-@property (assign) FDRange *mpRange;
-@property (assign) FDRange *mvRange;
+@property (retain) FDRange *apRange;
+@property (retain) FDRange *dpRange;
+@property (retain) FDRange *dxRange;
+@property (retain) FDRange *hpRange;
+@property (retain) FDRange *mpRange;
+@property (retain) FDRange *mvRange;
 
 @property (assign) int transferId;
 @property (assign) int fromCreatureDefId;

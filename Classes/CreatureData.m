@@ -347,6 +347,23 @@
 	}
 }
 
+-(void) addItem:(int)itemId
+{
+	[itemList addObject:[NSNumber numberWithInt:itemId]];
+}
+
+-(BOOL) hasItem:(int)itemId
+{
+	for (int i = 0; i < [itemList count]; i++) {
+		NSNumber *num = [itemList objectAtIndex:i];
+		if (itemId == [num intValue]) {
+			return TRUE;
+		}
+	}
+	
+	return FALSE;
+}
+
 -(void) recoverHealth
 {
 	if (hpCurrent > 0) {

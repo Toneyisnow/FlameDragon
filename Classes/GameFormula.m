@@ -258,6 +258,10 @@
 	return (int)exp;
 }
 
++(int) getCalculatedLevel:(FDCreature *)creature
+{
+	return creature.data.level;
+}
 
 +(int) commonDoubleAttackRate
 {

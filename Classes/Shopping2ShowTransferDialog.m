@@ -8,6 +8,7 @@
 
 #import "Shopping2ShowTransferDialog.h"
 #import "DataDepot.h"
+#import "CreatureRecord.h"
 
 @implementation Shopping2ShowTransferDialog
 
@@ -44,7 +45,7 @@
 		
 		NSLog(@"Found Transfer List for CreatureDef %d", [creatureDef getId]);
 		
-		for (int m = 0; m < [transferDef count]; m++) {
+		for (int m = 0; m < [transferDef totalCount]; m++) {
 			TransferDefinition *def = [transferDef getTransfer:m];
 			
 			if (def.requireItemId == 0 || [record.data hasItem:def.requireItemId]) {
@@ -62,7 +63,7 @@
 		CreatureDefinition *creatureDef = [[DataDepot depot] getCreatureDefinition:transferDef.fromCreatureDefId];
 		CreatureDefinition *creatureNewDef = [[DataDepot depot] getCreatureDefinition:transferDef.toCreatureDefId];
 		
-		NSString *creatureName = [FDLocalString creature:creatureDefId];
+		// NSString *creatureName = [FDLocalString creature:transferDef.fromCreatureDefId];
 		NSString *occupationName = [creatureDef getOccupationString];
 		NSString *occupationNewName = [creatureNewDef getOccupationString];
 		
@@ -70,7 +71,7 @@
 		FDSprite *messageSprite = [[FDSprite alloc] initWithString:message Size:16];
 		
 		CCMenuItem *iconMenuItem = [CCMenuItemImage 
-									itemFromNormalImage:[NSString stringWithFormat:@"Icon-%03d-02.png", creatureDefId] selectedImage:NULL
+									itemFromNormalImage:[NSString stringWithFormat:@"Icon-%03d-02.png", transferDef.fromCreatureDefId] selectedImage:NULL
 									target:self selector:@selector(clickedViewOn:)];
 		iconMenuItem.position = ccp(startX, startY - intervalY * i);
 		iconMenuItem.tag = transferDef.transferId;
@@ -93,6 +94,11 @@
 -(int) getMaxItemCount
 {
 	return 3;
+}
+
+-(NSMutableArray *) getShownList
+{
+	return transferList;
 }
 
 -(void) dealloc

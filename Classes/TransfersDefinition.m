@@ -40,7 +40,7 @@
 	return self;
 }
 
--(TransfersDefinition *) getTransfer:(int)index
+-(TransferDefinition *) getTransfer:(int)index
 {
 	if (transferArray == nil || index < 0 || index >= [transferArray count]) {
 		return nil;

@@ -22,6 +22,8 @@
 	// def.fromCreatureDefId = [stream readInt];
 	def.toCreatureDefId = def.transferId;
 	
+	def.requireItemId = [stream readInt];
+	
 	def.apRange = [stream readRange];
 	def.dpRange = [stream readRange];
 	def.dxRange = [stream readRange];

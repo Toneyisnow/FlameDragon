@@ -85,7 +85,7 @@ typedef enum AIType {
 -(int) apWithItem:(int)itemId;
 -(int) dpWithItem:(int)itemId;
 
-
+-(void) addItem:(int)itemId;
 -(void) removeItem:(int)index;
 -(BOOL) hasItem:(int)itemId;
 -(void) removeItemWithId:(int) itemId;

@@ -319,9 +319,12 @@ static DataDepot *instance = nil;
 	int transferCount = [file readInt];
 	for (int m = 0; m < transferCount; m++) {
 		TransfersDefinition * def = [TransfersDefinition readFromFile:file];
+		
+		// NSLog(@"Loaded Transfer Id = %d", def.creatureDefId);
 		[transferDictionary setObject:def forKey:[NSNumber numberWithInt:def.creatureDefId]];
 	}
 	[file close];
+	[file release];
 	
 	NSLog(@"Loaded Transfer Dictionary.");
 }
@@ -498,12 +501,23 @@ static DataDepot *instance = nil;
 	int creatureDefId = transferId % 100;
 	
 	TransfersDefinition *transfers = [self getTransfersDefinition:creatureDefId];
-	for (TransferDefinition *def in transfers)
-	{
+	
+	for (int m = 0; m < [transfers totalCount]; m++) {
+		TransferDefinition *def = [transfers getTransfer:m];
 		if (def.transferId = transferId) {
 			return def;
 		}
 	}
+	
+	return nil;
+}
+
+
+-(void) dealloc
+{
+	
+	
+	[super dealloc];
 }
 
 @end

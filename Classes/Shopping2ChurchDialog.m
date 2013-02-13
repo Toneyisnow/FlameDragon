@@ -15,6 +15,7 @@
 #import "Shopping2Layer.h"
 
 #import "GameFormula.h"
+#import "FDRandom.h"
 
 @implementation Shopping2ChurchDialog
 
@@ -143,10 +144,11 @@
 	}
 	
 	// TODO: Before we have transfer function
-	hasTransferFriend = FALSE;
+	// hasTransferFriend = FALSE;
 	
 	if (hasTransferFriend) {
-		Shopping2ShowTransferDialog *dialog = [[Shopping2ShowTransferDialog alloc] init];
+		
+		Shopping2ShowTransferDialog *dialog = [[Shopping2ShowTransferDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:lastPageIndex];
 		[self showDialog:dialog Callback:@selector(onTransfer_SelectedFriend:)];
 		[dialog release];
 	}
@@ -163,7 +165,14 @@
 {
 	int selectedNum = [num intValue];
 	if (selectedNum < 0) {
-		// Cancel
+		
+		if (selectedNum == -1) return;
+		lastPageIndex = (selectedNum == -2) ? lastPageIndex - 1 : ((selectedNum == -3) ? lastPageIndex + 1 : 0);
+		
+		Shopping2ShowTransferDialog *dialog = [[Shopping2ShowTransferDialog alloc] initWithFriends:[chapterRecord friendRecords] pageIndex:lastPageIndex];
+		[self showDialog:dialog Callback:@selector(onTransfer_SelectedFriend:)];
+		[dialog release];
+		
 		return;
 	}
 	
@@ -174,7 +183,7 @@
 	CreatureDefinition *creatureNew = [[DataDepot depot] getCreatureDefinition:transfer.toCreatureDefId];
 	NSString *occupationNewName = [creatureNew getOccupationString];
 	
-	NSString *msg = [NSString stringWithFormat:[FDLocalString confirm:58], [creature getName], occupationNewName, transferFee];
+	NSString *msg = [NSString stringWithFormat:[FDLocalString confirm:58], [creature getNameString], occupationNewName, transferFee];
 	Shopping2ConfirmDialog *dialog = [[Shopping2ConfirmDialog alloc] initWithMessage:msg];
 	[self showDialog:dialog Callback:@selector(onTransfer_Confirm:)];
 	[dialog release];
@@ -194,7 +203,7 @@
 		[self doTransfer];
 	}
 	else {
-		NSString *msg = [FDLocalString message:61];
+		NSString *msg = [FDLocalString message:63];
 		Shopping2MessageDialog *dialog = [[Shopping2MessageDialog alloc] initWithMessage:msg];
 		[self showDialog:dialog Callback:nil];
 		[dialog release];
@@ -206,7 +215,12 @@
 {
 	TransferDefinition *transfer = [[DataDepot depot] getTransferDefinition:lastSelectedItemIndex];
 	
-	CreatureRecord *friend;
+	if (transfer == nil) {
+		NSLog(@"Error:Did not find the Transfer with Id = %d to transfer.", transfer.transferId);
+		return;
+	}
+	
+	CreatureRecord *friend = nil;
 	for (CreatureRecord *r in [chapterRecord friendRecords]) {
 		if (r.creatureId == transfer.fromCreatureDefId) {
 			friend = r;
@@ -214,27 +228,34 @@
 		}
 	}
 	
+	if (friend == nil) {
+		NSLog(@"Error:Did not find the Friend with DefinitionId = %d to transfer.", transfer.fromCreatureDefId);
+		return;
+	}
+	
 	if (transfer.requireItemId != 0) {
 		
-		if (![friend.data hasItem:transfer.requiredItemId]) {
-			NSLog(@"The Creature %d doesn't have the item that support this transfer %d.", friend.creatureId, transfer.requiredItemId);
+		if (![friend.data hasItem:transfer.requireItemId]) {
+			NSLog(@"Error:The Creature %d doesn't have the item that support this transfer %d.", friend.creatureId, transfer.requireItemId);
 			return;
 		}
 		
-		[friend.data removeItemWithId:transfer.requiredItemId];
+		[friend.data removeItemWithId:transfer.requireItemId];
 	}
-	
 	
 	chapterRecord.money -= transferFee;
 	
-	
-	CreatureRecord *friend = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];
-	int itemId = [[friend.data.itemList objectAtIndex:lastSelectedItemIndex] intValue];
-	ItemDefinition *item = [[DataDepot depot] getItemDefinition:itemId];
-	
-	chapterRecord.money += item.sellprice;
-	
-	[friend.data removeItem:lastSelectedItemIndex];
+	// Update the Creature Data
+	friend.definitionId = transfer.toCreatureDefId;
+	friend.data.level = 1;
+	friend.data.ap += [FDRandom fromRange:transfer.apRange];
+	friend.data.dp += [FDRandom fromRange:transfer.dpRange];
+	friend.data.dx += [FDRandom fromRange:transfer.dxRange];
+	friend.data.hpMax += [FDRandom fromRange:transfer.hpRange];
+	friend.data.mpMax += [FDRandom fromRange:transfer.mpRange];
+	friend.data.mv += [FDRandom fromRange:transfer.mvRange];
+	friend.data.hpCurrent = friend.data.hpMax;
+	friend.data.mpCurrent = friend.data.mpMax;
 	
 	[(Shopping2Layer *)parentLayer updateMoneyBar];
 }

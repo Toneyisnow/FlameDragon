@@ -23,7 +23,7 @@
 
 +(id) readFromFile:(FDFileStream *)stream;
 
--(TransfersDefinition *) getTransfer:(int)index;
+-(TransferDefinition *) getTransfer:(int)index;
 -(int) totalCount;
 
 

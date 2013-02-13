@@ -7,9 +7,9 @@
 //
 
 #import "cocos2d.h"
-#import "Shopping2ScrollDialog.h"
+#import "Shopping2PagedDialog.h"
 
-@interface Shopping2ShowTransferDialog : Shopping2ScrollDialog {
+@interface Shopping2ShowTransferDialog : Shopping2PagedDialog {
 	
 	NSMutableArray *transferList;
 	

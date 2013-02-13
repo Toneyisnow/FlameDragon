@@ -26,7 +26,7 @@
 +(int) calculateAttackExp:(FDCreature *)creature Target:(FDCreature *)target Info:(AttackInformation *)info;
 +(int) calculateMagicExp:(FDCreature *)creature Target:(FDCreature *)target Magic:(id)magic;
 
-
++(int) getCalculatedLevel:(FDCreature *)creature;
 // +(int) getExperienceFromAttack:(FDCreature *)creature Target:(FDCreature *)target Field:(BattleField *)field;
 +(int) recoverHpFromRest:(FDCreature *)creature;
 +(int) getMoneyNeededForRevive:(CreatureRecord *)creature;
