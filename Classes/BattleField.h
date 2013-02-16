@@ -28,6 +28,7 @@
 	GroundField *groundField;
 	//GroundBlock[][] groundBlocks;
 	
+	int fieldChapterId;
 	int fieldWidth;
 	int fieldHeight;
 	

@@ -504,7 +504,7 @@ static DataDepot *instance = nil;
 	
 	for (int m = 0; m < [transfers totalCount]; m++) {
 		TransferDefinition *def = [transfers getTransfer:m];
-		if (def.transferId = transferId) {
+		if (def.transferId == transferId) {
 			return def;
 		}
 	}

@@ -45,9 +45,6 @@
 	[backgroundDic setObject:rect forKey:[NSNumber numberWithInt:1]];
 	[rect release];
 	
-	
-	
-	
 	NSLog(@"Ground Field Loaded. w=%d h=%d", width, height);
 	
 	return self;

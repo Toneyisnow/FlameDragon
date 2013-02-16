@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -397,6 +397,26 @@
 		02BD5AF61477EB3500828EDA /* Empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 02BD5AF51477EB3500828EDA /* Empty.png */; };
 		02BD5B051477F31F00828EDA /* SelectItemTargetState.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BD5B041477F31F00828EDA /* SelectItemTargetState.m */; };
 		02BD5B081478030800828EDA /* ExchangeItemTargetState.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BD5B071478030800828EDA /* ExchangeItemTargetState.m */; };
+		02C381C916CD2BA90099FCA3 /* Background-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C381BF16CD2BA90099FCA3 /* Background-02.png */; };
+		02C381CA16CD2BA90099FCA3 /* Background-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C381C016CD2BA90099FCA3 /* Background-03.png */; };
+		02C381CB16CD2BA90099FCA3 /* Background-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C381C116CD2BA90099FCA3 /* Background-04.png */; };
+		02C381CC16CD2BA90099FCA3 /* Background-05.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C381C216CD2BA90099FCA3 /* Background-05.png */; };
+		02C381CD16CD2BA90099FCA3 /* Background-06.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C381C316CD2BA90099FCA3 /* Background-06.png */; };
+		02C381CE16CD2BA90099FCA3 /* Background-07.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C381C416CD2BA90099FCA3 /* Background-07.png */; };
+		02C381CF16CD2BA90099FCA3 /* Background-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C381C516CD2BA90099FCA3 /* Background-08.png */; };
+		02C381D016CD2BA90099FCA3 /* Background-09.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C381C616CD2BA90099FCA3 /* Background-09.png */; };
+		02C381D116CD2BA90099FCA3 /* Background-10.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C381C716CD2BA90099FCA3 /* Background-10.png */; };
+		02C381D216CD2BA90099FCA3 /* Background-11.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C381C816CD2BA90099FCA3 /* Background-11.png */; };
+		02C381DD16CD2BBD0099FCA3 /* Tai-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C381D316CD2BBD0099FCA3 /* Tai-02.png */; };
+		02C381DE16CD2BBD0099FCA3 /* Tai-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C381D416CD2BBD0099FCA3 /* Tai-03.png */; };
+		02C381DF16CD2BBD0099FCA3 /* Tai-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C381D516CD2BBD0099FCA3 /* Tai-04.png */; };
+		02C381E016CD2BBD0099FCA3 /* Tai-05.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C381D616CD2BBD0099FCA3 /* Tai-05.png */; };
+		02C381E116CD2BBD0099FCA3 /* Tai-06.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C381D716CD2BBD0099FCA3 /* Tai-06.png */; };
+		02C381E216CD2BBD0099FCA3 /* Tai-07.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C381D816CD2BBD0099FCA3 /* Tai-07.png */; };
+		02C381E316CD2BBD0099FCA3 /* Tai-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C381D916CD2BBD0099FCA3 /* Tai-08.png */; };
+		02C381E416CD2BBD0099FCA3 /* Tai-09.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C381DA16CD2BBD0099FCA3 /* Tai-09.png */; };
+		02C381E516CD2BBD0099FCA3 /* Tai-10.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C381DB16CD2BBD0099FCA3 /* Tai-10.png */; };
+		02C381E616CD2BBD0099FCA3 /* Tai-11.png in Resources */ = {isa = PBXBuildFile; fileRef = 02C381DC16CD2BBD0099FCA3 /* Tai-11.png */; };
 		02C5720E150C51ED00DAEE2C /* GameStartInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C5720D150C51ED00DAEE2C /* GameStartInfo.m */; };
 		02C57211150C520400DAEE2C /* ChapterRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C57210150C520400DAEE2C /* ChapterRecord.m */; };
 		02C57214150C521800DAEE2C /* BattleRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C57213150C521800DAEE2C /* BattleRecord.m */; };
@@ -4975,6 +4995,26 @@
 		02BD5B041477F31F00828EDA /* SelectItemTargetState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectItemTargetState.m; sourceTree = "<group>"; };
 		02BD5B061478030800828EDA /* ExchangeItemTargetState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeItemTargetState.h; sourceTree = "<group>"; };
 		02BD5B071478030800828EDA /* ExchangeItemTargetState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeItemTargetState.m; sourceTree = "<group>"; };
+		02C381BF16CD2BA90099FCA3 /* Background-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-02.png"; path = "Backgrounds/Background-02.png"; sourceTree = "<group>"; };
+		02C381C016CD2BA90099FCA3 /* Background-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-03.png"; path = "Backgrounds/Background-03.png"; sourceTree = "<group>"; };
+		02C381C116CD2BA90099FCA3 /* Background-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-04.png"; path = "Backgrounds/Background-04.png"; sourceTree = "<group>"; };
+		02C381C216CD2BA90099FCA3 /* Background-05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-05.png"; path = "Backgrounds/Background-05.png"; sourceTree = "<group>"; };
+		02C381C316CD2BA90099FCA3 /* Background-06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-06.png"; path = "Backgrounds/Background-06.png"; sourceTree = "<group>"; };
+		02C381C416CD2BA90099FCA3 /* Background-07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-07.png"; path = "Backgrounds/Background-07.png"; sourceTree = "<group>"; };
+		02C381C516CD2BA90099FCA3 /* Background-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-08.png"; path = "Backgrounds/Background-08.png"; sourceTree = "<group>"; };
+		02C381C616CD2BA90099FCA3 /* Background-09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-09.png"; path = "Backgrounds/Background-09.png"; sourceTree = "<group>"; };
+		02C381C716CD2BA90099FCA3 /* Background-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-10.png"; path = "Backgrounds/Background-10.png"; sourceTree = "<group>"; };
+		02C381C816CD2BA90099FCA3 /* Background-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-11.png"; path = "Backgrounds/Background-11.png"; sourceTree = "<group>"; };
+		02C381D316CD2BBD0099FCA3 /* Tai-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-02.png"; path = "Tais/Tai-02.png"; sourceTree = "<group>"; };
+		02C381D416CD2BBD0099FCA3 /* Tai-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-03.png"; path = "Tais/Tai-03.png"; sourceTree = "<group>"; };
+		02C381D516CD2BBD0099FCA3 /* Tai-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-04.png"; path = "Tais/Tai-04.png"; sourceTree = "<group>"; };
+		02C381D616CD2BBD0099FCA3 /* Tai-05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-05.png"; path = "Tais/Tai-05.png"; sourceTree = "<group>"; };
+		02C381D716CD2BBD0099FCA3 /* Tai-06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-06.png"; path = "Tais/Tai-06.png"; sourceTree = "<group>"; };
+		02C381D816CD2BBD0099FCA3 /* Tai-07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-07.png"; path = "Tais/Tai-07.png"; sourceTree = "<group>"; };
+		02C381D916CD2BBD0099FCA3 /* Tai-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-08.png"; path = "Tais/Tai-08.png"; sourceTree = "<group>"; };
+		02C381DA16CD2BBD0099FCA3 /* Tai-09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-09.png"; path = "Tais/Tai-09.png"; sourceTree = "<group>"; };
+		02C381DB16CD2BBD0099FCA3 /* Tai-10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-10.png"; path = "Tais/Tai-10.png"; sourceTree = "<group>"; };
+		02C381DC16CD2BBD0099FCA3 /* Tai-11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-11.png"; path = "Tais/Tai-11.png"; sourceTree = "<group>"; };
 		02C5720C150C51ED00DAEE2C /* GameStartInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStartInfo.h; sourceTree = "<group>"; };
 		02C5720D150C51ED00DAEE2C /* GameStartInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStartInfo.m; sourceTree = "<group>"; };
 		02C5720F150C520400DAEE2C /* ChapterRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterRecord.h; sourceTree = "<group>"; };
@@ -9938,6 +9978,16 @@
 			isa = PBXGroup;
 			children = (
 				0297D8EC14814E18007F3E12 /* Background-01.png */,
+				02C381BF16CD2BA90099FCA3 /* Background-02.png */,
+				02C381C016CD2BA90099FCA3 /* Background-03.png */,
+				02C381C116CD2BA90099FCA3 /* Background-04.png */,
+				02C381C216CD2BA90099FCA3 /* Background-05.png */,
+				02C381C316CD2BA90099FCA3 /* Background-06.png */,
+				02C381C416CD2BA90099FCA3 /* Background-07.png */,
+				02C381C516CD2BA90099FCA3 /* Background-08.png */,
+				02C381C616CD2BA90099FCA3 /* Background-09.png */,
+				02C381C716CD2BA90099FCA3 /* Background-10.png */,
+				02C381C816CD2BA90099FCA3 /* Background-11.png */,
 			);
 			name = Backgrounds;
 			sourceTree = "<group>";
@@ -9946,6 +9996,16 @@
 			isa = PBXGroup;
 			children = (
 				0297D8EF14814E3C007F3E12 /* Tai-01.png */,
+				02C381D316CD2BBD0099FCA3 /* Tai-02.png */,
+				02C381D416CD2BBD0099FCA3 /* Tai-03.png */,
+				02C381D516CD2BBD0099FCA3 /* Tai-04.png */,
+				02C381D616CD2BBD0099FCA3 /* Tai-05.png */,
+				02C381D716CD2BBD0099FCA3 /* Tai-06.png */,
+				02C381D816CD2BBD0099FCA3 /* Tai-07.png */,
+				02C381D916CD2BBD0099FCA3 /* Tai-08.png */,
+				02C381DA16CD2BBD0099FCA3 /* Tai-09.png */,
+				02C381DB16CD2BBD0099FCA3 /* Tai-10.png */,
+				02C381DC16CD2BBD0099FCA3 /* Tai-11.png */,
 			);
 			name = Tais;
 			sourceTree = "<group>";
@@ -16509,8 +16569,11 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FlameDragon" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -20488,6 +20551,26 @@
 				027EF6F116BEA1CC007DC970 /* Chapter-19-Creature.dat in Resources */,
 				027EF6F216BEA1CC007DC970 /* Chapter-20-Creature.dat in Resources */,
 				028A977416CB3269003F8BB2 /* Transfer.dat in Resources */,
+				02C381C916CD2BA90099FCA3 /* Background-02.png in Resources */,
+				02C381CA16CD2BA90099FCA3 /* Background-03.png in Resources */,
+				02C381CB16CD2BA90099FCA3 /* Background-04.png in Resources */,
+				02C381CC16CD2BA90099FCA3 /* Background-05.png in Resources */,
+				02C381CD16CD2BA90099FCA3 /* Background-06.png in Resources */,
+				02C381CE16CD2BA90099FCA3 /* Background-07.png in Resources */,
+				02C381CF16CD2BA90099FCA3 /* Background-08.png in Resources */,
+				02C381D016CD2BA90099FCA3 /* Background-09.png in Resources */,
+				02C381D116CD2BA90099FCA3 /* Background-10.png in Resources */,
+				02C381D216CD2BA90099FCA3 /* Background-11.png in Resources */,
+				02C381DD16CD2BBD0099FCA3 /* Tai-02.png in Resources */,
+				02C381DE16CD2BBD0099FCA3 /* Tai-03.png in Resources */,
+				02C381DF16CD2BBD0099FCA3 /* Tai-04.png in Resources */,
+				02C381E016CD2BBD0099FCA3 /* Tai-05.png in Resources */,
+				02C381E116CD2BBD0099FCA3 /* Tai-06.png in Resources */,
+				02C381E216CD2BBD0099FCA3 /* Tai-07.png in Resources */,
+				02C381E316CD2BBD0099FCA3 /* Tai-08.png in Resources */,
+				02C381E416CD2BBD0099FCA3 /* Tai-09.png in Resources */,
+				02C381E516CD2BBD0099FCA3 /* Tai-10.png in Resources */,
+				02C381E616CD2BBD0099FCA3 /* Tai-11.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -20835,7 +20918,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yi Sui";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = NO;
 				"GCC_THUMB_SUPPORT[arch=armv7]" = YES;
@@ -20843,9 +20926,8 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
-				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0D128355-AFC3-453F-BA75-DE748F8E6422";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -20857,17 +20939,16 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FlameDragon_Prefix.pch;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Resources/Info.plist;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = FlameDragon;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -20879,9 +20960,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
-				PREBINDING = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = "cocos2d libraries";
 				ZERO_LINK = NO;
 			};
@@ -20894,18 +20974,17 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FlameDragon_Prefix.pch;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Resources/Info.plist;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = FlameDragon;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -20917,17 +20996,16 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FlameDragon_Prefix.pch;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Resources/Info.plist;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = FlameDragon;
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -20941,7 +21019,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
-				PREBINDING = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = "cocos2d libraries";
 			};
 			name = Debug;
@@ -20952,9 +21030,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
-				PREBINDING = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = "cocos2d libraries";
 				ZERO_LINK = NO;
 			};
@@ -20965,7 +21042,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Yi Sui (74QF9MJWJZ)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DEBUG,
@@ -20977,10 +21054,9 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
 				ONLY_ACTIVE_ARCH = YES;
-				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				"PROVISIONING_PROFILE[sdk=*]" = "91561540-6D41-48D6-84F2-74EF2013EE4B";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -20991,7 +21067,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yi Sui";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = NO;
 				"GCC_THUMB_SUPPORT[arch=armv7]" = YES;
@@ -20999,9 +21075,8 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
-				PREBINDING = NO;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0D128355-AFC3-453F-BA75-DE748F8E6422";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -21018,7 +21093,7 @@
 				02BA71FC14CA286D0028C9E7 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Distribution;
+			defaultConfigurationName = Debug;
 		};
 		506EE06410304F0100A389B3 /* Build configuration list for PBXNativeTarget "cocos2d libraries" */ = {
 			isa = XCConfigurationList;
@@ -21028,7 +21103,7 @@
 				02BA71FD14CA286D0028C9E7 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Distribution;
+			defaultConfigurationName = Debug;
 		};
 		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FlameDragon" */ = {
 			isa = XCConfigurationList;
@@ -21038,7 +21113,7 @@
 				02BA71FB14CA286D0028C9E7 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Distribution;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

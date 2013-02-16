@@ -29,7 +29,7 @@
 		[def.transferArray addObject:t];
 	}
 	
-	return def;
+	return [def autorelease];
 }
 
 -(id) init

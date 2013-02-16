@@ -54,7 +54,7 @@
 	shoppingType = type;
 	
 	
-	NSString *bgFileName = [NSString stringWithFormat:@"VillageShop-%02d-%d.png", [self getVillageId], shoppingType];
+	NSString *bgFileName = [NSString stringWithFormat:@"VillageShop-01-%d.png", shoppingType];
 	
 	FDSprite *bg = [[FDSpriteStore instance] sprite:bgFileName];
 	[bg setScaleX:[Constants villageScale] Y:[Constants villageScale]];

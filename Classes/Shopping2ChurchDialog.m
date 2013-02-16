@@ -213,7 +213,7 @@
 
 -(void) doTransfer
 {
-	TransferDefinition *transfer = [[DataDepot depot] getTransferDefinition:lastSelectedItemIndex];
+    TransferDefinition *transfer = [[DataDepot depot] getTransferDefinition:lastSelectedItemIndex];
 	
 	if (transfer == nil) {
 		NSLog(@"Error:Did not find the Transfer with Id = %d to transfer.", transfer.transferId);
@@ -258,6 +258,8 @@
 	friend.data.mpCurrent = friend.data.mpMax;
 	
 	[(Shopping2Layer *)parentLayer updateMoneyBar];
+    
+    lastSelectedItemIndex = 0;
 }
 
 @end

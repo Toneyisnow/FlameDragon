@@ -60,6 +60,11 @@
 	viewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
 	viewController.wantsFullScreenLayout = YES;
 	
+    // Adding the Navigation Controller
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:viewController];
+    
+    
+    
 	//
 	// Create the EAGLView manually
 	//  1. Create a RGB565 format. Alternative: RGBA8
@@ -88,11 +93,12 @@
 	// Edit the RootViewController.m file to edit the supported orientations.
 	//
 #if GAME_AUTOROTATION == kGameAutorotationUIViewController
-	[director setDeviceOrientation:kCCDeviceOrientationPortrait];
+	// [director setDeviceOrientation:kCCDeviceOrientationPortrait];
+	[director setDeviceOrientation:kCCDeviceOrientationLandscapeRight];
 #else
 	[director setDeviceOrientation:kCCDeviceOrientationLandscapeLeft];
 #endif
-	
+    
 	[director setAnimationInterval:([Constants tickLength]/1000.0)];
 	[director setDisplayFPS:NO];
 	
@@ -104,8 +110,9 @@
 	[viewController setView:glView];
 	
 	// make the View Controller a child of the main window
-	[window addSubview: viewController.view];
-	
+	//[window addSubview: viewController.view];
+	[window setRootViewController:viewController];
+    
 	[window makeKeyAndVisible];
 	
 	// Default texture format for PNG/BMP/TIFF/JPEG/GIF images

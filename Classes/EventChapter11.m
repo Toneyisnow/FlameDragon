@@ -68,9 +68,6 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51102 Id:124] autorelease] Position:CGPointMake(14,44)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51102 Id:125] autorelease] Position:CGPointMake(28,42)];
 	
-	// Add NPC
-	[field addNpc:[[[FDNpc alloc] initWithDefinition:901 Id:901] autorelease] Position:CGPointMake(25, 9)];
-	
 	// Talk
 	[layers appendToCurrentActivity:[[[FDDurationActivity alloc] initWithDuration:1.0] autorelease]];
 	for (int i = 1; i <= 12; i++) {

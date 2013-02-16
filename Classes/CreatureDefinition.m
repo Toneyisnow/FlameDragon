@@ -190,6 +190,19 @@
 	return [data.magicList count] > 0;
 }
 
+-(BOOL) canFly {
+    
+    if (occupation == 133 || occupation == 171) {
+        return YES;
+    }
+    
+    if (race == 5) {
+        return YES;
+    }
+    
+    return NO;
+}
+
 -(void) dealloc
 {
 	[data release];

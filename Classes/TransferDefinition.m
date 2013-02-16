@@ -19,7 +19,6 @@
 	TransferDefinition * def = [[TransferDefinition alloc] init];
 	
 	def.transferId = [stream readInt];
-	// def.fromCreatureDefId = [stream readInt];
 	def.toCreatureDefId = def.transferId;
 	
 	def.requireItemId = [stream readInt];
@@ -31,7 +30,7 @@
 	def.mpRange = [stream readRange];
 	def.mvRange = [stream readRange];
 	
-	return def;
+	return [def autorelease];
 }
 
 @end

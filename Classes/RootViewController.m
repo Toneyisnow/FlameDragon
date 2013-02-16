@@ -45,7 +45,7 @@
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
 	
-	//
+    //
 	// There are 2 ways to support auto-rotation:
 	//  - The OpenGL / cocos2d way
 	//     - Faster, but doesn't rotate the UIKit objects
@@ -128,6 +128,25 @@
 }
 #endif // GAME_AUTOROTATION == kGameAutorotationUIViewController
 
+/// ------ Support for iOS 6.0 --------
+- (BOOL)shouldAutorotate {
+    return YES;
+}
+
+- (NSUInteger)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskLandscapeRight;
+}
+
+// Returns interface orientation masks.
+- (UIInterfaceOrientation)preferredInterfaceOrientationForPresentation {
+    return UIInterfaceOrientationLandscapeRight;
+}
+
+-(NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
+    return UIInterfaceOrientationMaskLandscapeRight;
+}
+
+/// ----------------------------
 
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.

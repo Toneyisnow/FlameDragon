@@ -120,7 +120,7 @@
 
 -(void) loadTestingGame
 {
-	ChapterRecord *record = [ChapterRecord generateRecord:10 money:60000];
+	ChapterRecord *record = [ChapterRecord generateRecord:11 money:60000];
 	
 	[[record friendRecords] addObject:[self loadTestingRecord:1 level:28]];
 	[[record friendRecords] addObject:[self loadTestingRecord:2 level:28]];
@@ -159,6 +159,13 @@
 	r.data.hpCurrent = r.data.hpMax;
 	r.data.mpCurrent = r.data.mpMax;
 	
+    if (r.creatureId == 1) {
+        [r.data.itemList addObject:[NSNumber numberWithInt:811]];
+    }
+    if (r.creatureId == 3) {
+        [r.data.itemList addObject:[NSNumber numberWithInt:809]];
+    }
+    
 	[creature release];
 	
 	return r;

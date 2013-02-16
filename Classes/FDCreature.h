@@ -136,6 +136,8 @@ typedef enum ActionStatus {
 -(int) getItemId:(int) index;
 -(BOOL) isItemListFull;
 
+-(BOOL) canFly;
+
 //-(void) removeItem:(int)index;
 
 // These item related methods should go to CreatureData

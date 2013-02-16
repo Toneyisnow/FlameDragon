@@ -232,10 +232,13 @@
 	NSLog(@"Calculcated HP: %f", calculatedHp);
 	
 	double exp = 0;
+    int targetLevel = [GameFormula getCalculatedLevel:target];
+    int creatureLevel = [GameFormula getCalculatedLevel:creature];
+    
 	if ([target getCreatureType] == CreatureType_Enemy) {
-		exp = calculatedHp * target.data.level * [target getDefinition].data.ex / (double)creature.data.level / (double)target.data.hpMax;
+		exp = calculatedHp * targetLevel * [target getDefinition].data.ex / (double)creatureLevel / (double)target.data.hpMax;
 	} else {
-		exp = calculatedHp * 100 * target.data.level * 0.7 / (double)creature.data.level / (double)target.data.hpMax;
+		exp = calculatedHp * 100 * targetLevel * 0.7 / (double)creatureLevel / (double)target.data.hpMax;
 	}
 
 	
@@ -252,7 +255,9 @@
 		return 0;
 	}
 	
-	double exp = [magic baseExperience] * target.data.level / creature.data.level;
+	int targetLevel = [GameFormula getCalculatedLevel:target];
+    int creatureLevel = [GameFormula getCalculatedLevel:creature];
+    double exp = [magic baseExperience] * targetLevel / creatureLevel;
 	
 	NSLog(@"Experience got %d.", (int)exp);
 	return (int)exp;
@@ -260,6 +265,28 @@
 
 +(int) getCalculatedLevel:(FDCreature *)creature
 {
+	int occupation = [creature getDefinition].occupation;
+	
+	switch (occupation) {
+		case 112:
+		case 113:
+		case 122:
+		case 123:
+		case 132:
+		case 133:
+		case 142:
+		case 143:
+		case 152:
+		case 153:
+		case 155:
+		case 156:
+		case 162:
+		case 163:
+		case 999:
+			return creature.data.level + 30;
+		default:
+			return creature.data.level;
+	}
 	return creature.data.level;
 }
 

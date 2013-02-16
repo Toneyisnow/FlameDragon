@@ -189,7 +189,7 @@
 
 +(CGPoint) fightingTaiPosition
 {
-	return CGPointMake([self winSize].width * 0.7, [self winSize].height * 0.15);
+	return CGPointMake([self winSize].width * 0.7, [self winSize].height * 0.2);
 }
 
 +(CGPoint) fightingFriendBarPosition

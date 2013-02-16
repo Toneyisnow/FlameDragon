@@ -53,6 +53,8 @@
 	groundImage = [[FDSprite alloc] initFromFile:[NSString stringWithFormat:@"Chapter-%02d.png", chapterId]];
 	[groundImage retain];
 	
+	fieldChapterId = chapterId;
+	
 	[self loadMapData:chapterId];
 
 	return self;
@@ -619,8 +621,8 @@
 
 -(int) getBackgroundPicId:(CGPoint)pos
 {
-	return [groundField fightBackgroundIdAtX:pos.x Y:pos.y];
-			
+	return fieldChapterId;
+	// return [groundField fightBackgroundIdAtX:pos.x Y:pos.y];
 }
 
 -(NSMutableArray *) getObjectsByPos:(CGPoint)pos
@@ -858,7 +860,7 @@
 					resistance = ScopeResistance_Plain;
 					break;
 				case GroundBlockAccessTypeCanFly:
-					resistance = ScopeResistance_Gap;
+					resistance = ([creature canFly] ? ScopeResistance_Plain : ScopeResistance_Gap);
 					break;
 				case GroundBlockAccessTypeNone:
 					resistance = ScopeResistance_Gap;

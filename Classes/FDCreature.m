@@ -445,6 +445,10 @@
 	return ([data.magicList count] > 0) && !hasMoved && (data.statusProhibited <= 0);
 }
 
+-(BOOL) canFly {
+    return [definition canFly];
+}
+
 -(void) dealloc
 {
 	[data release];

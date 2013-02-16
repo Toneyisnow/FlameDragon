@@ -788,7 +788,7 @@
 	
 	for(CreatureRecord *record in [info deadCreatureRecords])
 	{
-		FDCreature *creature;
+		FDCreature *creature = nil;
 		
 		switch (record.creatureType) {
 			case CreatureType_Friend:
@@ -825,7 +825,7 @@
 		[eventListener loadState:[info activeEventIds]];
 	}
 	
-	turnNo --;	// TODO: bug
+	turnNo --;
 	
 	[self runGame];
 }
