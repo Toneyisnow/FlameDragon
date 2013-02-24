@@ -11,6 +11,10 @@
 
 @interface FDCursor : FDBattleObject {
 
+    int curSize;
 }
+
+// Currently only 1,2,3 are supported
+-(void) setSize:(int) size;
 
 @end

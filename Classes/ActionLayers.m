@@ -52,9 +52,11 @@
 	synchronizeTick = 0;
 	SYNCHRONIZE_TOTAL_INT = 1000;
 
-	sideBar = [[SideBar alloc] init];
+	sideBar = [[SideBar alloc] initWithField:field];
 	[sideBar show:messageLayer];
 	
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotificationUpdateSideBar:) name:@"LayerUpdateSideBar" object:nil];
+    
 	return self;
 }
 
@@ -72,7 +74,7 @@
 {
 	synchronizeTick = (synchronizeTick + 1) % SYNCHRONIZE_TOTAL_INT;
 
-	[messageLayer updateScreen:synchronizeTick];
+    [messageLayer updateScreen:synchronizeTick];
 	
 	if ([messageLayer getMessage] != nil) {
 		// The message should block all the other ticks
@@ -81,13 +83,24 @@
 	
 	[fieldLayer updateScreen:synchronizeTick];
 	
+    if (sideBar != nil) {
+        [sideBar takeTick];
+    }
+    
+    if (activityList == nil) {
+        return;
+    }
+    
+    /*
 	for (FDActivity *activity in activityList) {
 		
-		[activity takeTick:synchronizeTick];
+        [activity takeTick:synchronizeTick];
+		NSLog(@"Activity takeTick");
 		
 		if ([activityList count] == 0) {
 			break;
 		}
+		NSLog(@"Activity takeTick");
 		
 		if ([activity hasFinished]) {
 			
@@ -99,6 +112,30 @@
 			[activityList removeObject:activity];
 		}
 	}
+    */
+    
+    int index = 0;
+    int endIndex = [activityList count];
+    while (activityList != nil && index < endIndex) {
+        
+        FDActivity *activity = [activityList objectAtIndex:index];
+        
+        [activity takeTick:synchronizeTick];
+		// NSLog(@"Activity takeTick");
+		
+		if ([activity hasFinished]) {
+			
+			//[activity postActivity];
+			if ([activity getNext] != nil) {
+				[activityList addObject:[activity getNext]];
+			}
+			
+			[activityList removeObject:activity];
+            endIndex--;
+		} else {
+            index++;
+        }
+    }
 }
 
 -(void) appendNewActivity:(FDActivity *)activity
@@ -966,6 +1003,22 @@
 	
 	[info show:messageLayer];
 	[info release];	
+}
+
+-(void) receiveNotificationUpdateSideBar:(NSNotification *)notification {
+    
+    CGPoint cursor = [field getCursorPos];
+    NSLog(@"Notification Received. (%f, %f)", cursor.x, cursor.y);
+    
+    @try {
+        
+    if (sideBar != nil) {
+        [sideBar updateContent];
+    }
+    }
+    @catch (NSException *exception) {
+
+    }
 }
 
 -(void) gameOver

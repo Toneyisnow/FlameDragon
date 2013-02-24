@@ -129,10 +129,10 @@
 #endif // GAME_AUTOROTATION == kGameAutorotationUIViewController
 
 /// ------ Support for iOS 6.0 --------
+
 - (BOOL)shouldAutorotate {
     return YES;
 }
-
 - (NSUInteger)supportedInterfaceOrientations{
     return UIInterfaceOrientationMaskLandscapeRight;
 }
@@ -145,6 +145,7 @@
 -(NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window {
     return UIInterfaceOrientationMaskLandscapeRight;
 }
+
 
 /// ----------------------------
 

@@ -20,6 +20,15 @@
 	return self;
 }
 
+-(id) initWithTexture:(CCTexture2D *) tex
+{
+    self = [super init];
+	
+	texture = [tex retain];
+	
+	return self;
+}
+
 -(CCTexture2D *) texture
 {
 	return texture;

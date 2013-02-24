@@ -16,10 +16,21 @@
 	self = [super init];
 	
 	zOrder = BattleObjectOrder_Indicator;
+    
+    curSize = 1;
+    [self setSprite: [[FDSpriteStore instance] sprite:@"Cursor-01.png"]];
 	
-	[self setSprite: [[FDSpriteStore instance] sprite:@"Cursor.png"]];
-	
-	return self;
+    return self;
+}
+
+-(void) setSize:(int) size {
+    curSize = size;
+    
+    NSString *fileName = [NSString stringWithFormat:@"Cursor-%02d.png",size];
+    NSLog(@"Set Cursor file = %@", fileName);
+    
+    FDImage *image = [[FDSpriteStore instance] image:fileName];
+	[sprite setImage:image ChangeSize:YES];
 }
 
 

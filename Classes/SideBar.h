@@ -7,14 +7,30 @@
 //
 
 #import "IBar.h"
-
+#import "BattleField.h"
 
 @interface SideBar : IBar {
 
+    BattleField *battleField;
+    
+    FDImage *backgroundImage;
+    FDSprite *blockSprite;
+    FDSprite *apSprite;
+    FDSprite *dpSprite;
+    
+    FDCreature *creature;
+    FDSprite *objectSprite;
 }
 
+-(id) initWithField:(BattleField *)field;
 
 -(CGPoint) getPosLeft;
 -(CGPoint) getPosRight;
+-(void) updateContent;
+-(NSString *) formatNumber:(int)value;
+
+-(void) takeTick;
+
+-(void) clearSprite:(FDSprite *)sprite;
 
 @end

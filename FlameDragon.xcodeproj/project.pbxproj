@@ -425,6 +425,11 @@
 		02C57289151855E800DAEE2C /* CreatureData.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C57288151855E800DAEE2C /* CreatureData.m */; };
 		02C5728E1519944E00DAEE2C /* CreatureRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C5728D1519944E00DAEE2C /* CreatureRecord.m */; };
 		02C5735C1522DA1400DAEE2C /* GameRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 02C5735B1522DA1400DAEE2C /* GameRecord.m */; };
+		02CB2FC116CF694C00C985C7 /* Cursor-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CB2FBF16CF694B00C985C7 /* Cursor-01.png */; };
+		02CB2FC216CF694C00C985C7 /* Cursor-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CB2FC016CF694B00C985C7 /* Cursor-02.png */; };
+		02CB2FC416CF6EBA00C985C7 /* Cursor-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CB2FC316CF6EB900C985C7 /* Cursor-03.png */; };
+		02CB2FC616D4533000C985C7 /* Background-12.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CB2FC516D4533000C985C7 /* Background-12.png */; };
+		02CB2FC816D4534D00C985C7 /* Tai-12.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CB2FC716D4534D00C985C7 /* Tai-12.png */; };
 		02D308B715E2973900CA1799 /* Chapter-02.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02D308B615E2973900CA1799 /* Chapter-02.dat */; };
 		02D3094F15F6598F00CA1799 /* SpecialItemDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D3094E15F6598F00CA1799 /* SpecialItemDefinition.m */; };
 		02D3095A15FAC3AA00CA1799 /* ShoppingSelectAmorTargetDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D3095915FAC3AA00CA1799 /* ShoppingSelectAmorTargetDialog.m */; };
@@ -5031,6 +5036,11 @@
 		02C5728D1519944E00DAEE2C /* CreatureRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatureRecord.m; sourceTree = "<group>"; };
 		02C5735A1522DA1400DAEE2C /* GameRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRecord.h; sourceTree = "<group>"; };
 		02C5735B1522DA1400DAEE2C /* GameRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRecord.m; sourceTree = "<group>"; };
+		02CB2FBF16CF694B00C985C7 /* Cursor-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cursor-01.png"; path = "Others/Cursor-01.png"; sourceTree = "<group>"; };
+		02CB2FC016CF694B00C985C7 /* Cursor-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cursor-02.png"; path = "Others/Cursor-02.png"; sourceTree = "<group>"; };
+		02CB2FC316CF6EB900C985C7 /* Cursor-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cursor-03.png"; path = "Others/Cursor-03.png"; sourceTree = "<group>"; };
+		02CB2FC516D4533000C985C7 /* Background-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-12.png"; path = "Backgrounds/Background-12.png"; sourceTree = "<group>"; };
+		02CB2FC716D4534D00C985C7 /* Tai-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-12.png"; path = "Tais/Tai-12.png"; sourceTree = "<group>"; };
 		02D308B615E2973900CA1799 /* Chapter-02.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-02.dat"; path = "Data/Maps/Chapter-02.dat"; sourceTree = "<group>"; };
 		02D3094D15F6598F00CA1799 /* SpecialItemDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialItemDefinition.h; sourceTree = "<group>"; };
 		02D3094E15F6598F00CA1799 /* SpecialItemDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialItemDefinition.m; sourceTree = "<group>"; };
@@ -9904,6 +9914,9 @@
 				0297DBEF148B0027007F3E12 /* CreatureInfoBarHp.png */,
 				0297DBF0148B0027007F3E12 /* CreatureInfoBarMp.png */,
 				0297DBBD148A7006007F3E12 /* Cursor.png */,
+				02CB2FBF16CF694B00C985C7 /* Cursor-01.png */,
+				02CB2FC016CF694B00C985C7 /* Cursor-02.png */,
+				02CB2FC316CF6EB900C985C7 /* Cursor-03.png */,
 				02BD5AF51477EB3500828EDA /* Empty.png */,
 				02BD5ACC1477CFD800828EDA /* ItemBox.png */,
 				02BD5A8F1477ABE300828EDA /* MagicBox.png */,
@@ -9988,6 +10001,7 @@
 				02C381C616CD2BA90099FCA3 /* Background-09.png */,
 				02C381C716CD2BA90099FCA3 /* Background-10.png */,
 				02C381C816CD2BA90099FCA3 /* Background-11.png */,
+				02CB2FC516D4533000C985C7 /* Background-12.png */,
 			);
 			name = Backgrounds;
 			sourceTree = "<group>";
@@ -10006,6 +10020,7 @@
 				02C381DA16CD2BBD0099FCA3 /* Tai-09.png */,
 				02C381DB16CD2BBD0099FCA3 /* Tai-10.png */,
 				02C381DC16CD2BBD0099FCA3 /* Tai-11.png */,
+				02CB2FC716D4534D00C985C7 /* Tai-12.png */,
 			);
 			name = Tais;
 			sourceTree = "<group>";
@@ -20571,6 +20586,11 @@
 				02C381E416CD2BBD0099FCA3 /* Tai-09.png in Resources */,
 				02C381E516CD2BBD0099FCA3 /* Tai-10.png in Resources */,
 				02C381E616CD2BBD0099FCA3 /* Tai-11.png in Resources */,
+				02CB2FC116CF694C00C985C7 /* Cursor-01.png in Resources */,
+				02CB2FC216CF694C00C985C7 /* Cursor-02.png in Resources */,
+				02CB2FC416CF6EBA00C985C7 /* Cursor-03.png in Resources */,
+				02CB2FC616D4533000C985C7 /* Background-12.png in Resources */,
+				02CB2FC816D4534D00C985C7 /* Tai-12.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -120,6 +120,8 @@ typedef enum TurnType
 -(void) appendToCurrentActivityMethod:(SEL)method Param1:(id)obj1 Param2:(id)obj2 Obj:(id)obj;
 -(void) clearAllActivity;
 
+-(void) receiveNotificationUpdateSideBar:(NSNotification *)notification;
+
 /*
 -(void) appendToLastActivity:(FDActivity *)activity;
 -(void) appendToLastActivityMethod:(SEL)method Param1:(id)obj1 Param2:(id)obj2;

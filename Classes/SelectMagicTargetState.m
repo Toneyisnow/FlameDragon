@@ -43,6 +43,7 @@
 			if ([targetSet count] > 0) {
 				
 				[field removeAllIndicators];
+                [field setCursorSize:1];
 				[layers magicFrom:currentFriend TargetPos:position Id:magicId];
 				
 				isFinished = TRUE;
@@ -57,6 +58,7 @@
 		else {
 			// Cancel the state
 			[field removeAllIndicators];
+            [field setCursorSize:1];
 			shouldDispose = TRUE;
 		}
 	}

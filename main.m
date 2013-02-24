@@ -9,8 +9,18 @@
 #import <UIKit/UIKit.h>
 
 int main(int argc, char *argv[]) {
-	NSAutoreleasePool *pool = [NSAutoreleasePool new];
-	int retVal = UIApplicationMain(argc, argv, nil, @"FlameDragonAppDelegate");
-	[pool release];
-	return retVal;
+    
+    @try {
+     NSAutoreleasePool *pool = [NSAutoreleasePool new];
+     int retVal = UIApplicationMain(argc, argv, nil, @"FlameDragonAppDelegate");
+     [pool release];
+     return retVal;
+     }
+    @catch (NSException *exception) {
+        NSLog(@"%@", [exception reason]);
+    }
+    @finally {
+        
+    }
+	
 }

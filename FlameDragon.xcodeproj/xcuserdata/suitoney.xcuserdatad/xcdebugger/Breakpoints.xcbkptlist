@@ -52,11 +52,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/ActionLayers.m"
-         timestampString = "382417177.1841139"
+         timestampString = "383333608.292734"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1065"
-         endingLineNumber = "1065"
+         startingLineNumber = "1117"
+         endingLineNumber = "1117"
          landmarkName = "-showTestData"
          landmarkType = "5">
       </FileBreakpoint>
@@ -65,37 +65,13 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/BattleField.m"
-         timestampString = "382417177.18416"
+         timestampString = "383194923.493792"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "165"
-         endingLineNumber = "165"
-         landmarkName = "-removeObject:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Classes/BattleField.m"
-         timestampString = "382417177.184218"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "479"
-         endingLineNumber = "479"
+         startingLineNumber = "469"
+         endingLineNumber = "469"
          landmarkName = "@implementation BattleField"
          landmarkType = "3">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Classes/EventChapter1.m"
-         timestampString = "382417177.1842589"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "372"
-         endingLineNumber = "372">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
@@ -157,11 +133,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/ActionLayers.m"
-         timestampString = "382417177.184641"
+         timestampString = "383333608.292734"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "909"
-         endingLineNumber = "909"
+         startingLineNumber = "946"
+         endingLineNumber = "946"
          landmarkName = "-composeChapterRecord"
          landmarkType = "5">
       </FileBreakpoint>
@@ -280,6 +256,45 @@
          startingLineNumber = "216"
          endingLineNumber = "216"
          landmarkName = "-doTransfer"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Classes/SideBar.m"
+         timestampString = "383197671.763891"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "89"
+         endingLineNumber = "89"
+         landmarkName = "-updateContent"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Classes/ActionLayers.m"
+         timestampString = "383333608.292734"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1016"
+         endingLineNumber = "1016"
+         landmarkName = "-receiveNotificationUpdateSideBar:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Classes/ActionLayers.m"
+         timestampString = "383328419.028527"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "95"
+         endingLineNumber = "95"
+         landmarkName = "-takeTick"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

@@ -1,4 +1,5 @@
 #import "DistanceResolver.h"
+#import "Common.h"
 
 @implementation DistanceResolver
 
@@ -65,6 +66,11 @@
 	}
 	
 	return [valObj floatValue];
+}
+
+-(float) getHeristicValue:(CGPoint)pos toTarget:(CGPoint)target {
+    
+    return [Common getAbs:(pos.x-target.x)]+[Common getAbs:(pos.y-target.y)];
 }
 
 -(float) resolveDistanceFrom:(CGPoint)oPos To:(CGPoint)tPos

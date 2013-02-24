@@ -86,6 +86,7 @@
 -(GroundField *) getGroundField;
 
 -(int) getBackgroundPicId:(CGPoint)pos;
+-(int) getChapterId;
 
 -(NSMutableArray *) searchMoveScope:(FDCreature *)creature;
 -(NSMutableArray *) searchActionScope:(CGPoint)pos Range:(FDRange *)range;

@@ -60,7 +60,7 @@
 	// Add Npc
 	FDNpc *npc = [[[FDNpc alloc] initWithDefinition:15 Id:15] autorelease];
 	[field addNpc:npc Position:CGPointMake(11, 8)];
-	
+	[self setAiOfId:15 EscapeTo:CGPointMake(16, 45)];
 	
 	// Talk
 	for (int i = 1; i <= 11; i++) {
@@ -82,14 +82,13 @@
 	FDEnemy *enemy4 = [[[FDEnemy alloc] initWithDefinition:51204 Id:204 DropItem:105] autorelease];
 	[field addEnemy:enemy4 Position:CGPointMake(26,39)];
 	
-	[layers moveCreature:enemy1 To:CGPointMake(25, 39) showMenu:FALSE];
+    [layers moveCreatureId:201 To:CGPointMake(25, 39) showMenu:FALSE];
 	
 	[layers appendToCurrentActivityMethod:@selector(reinforcement_2) Param1:nil Param2:nil Obj:self];
-	
 	// Add branch activities
 	[layers appendNewActivity:[[[FDEmptyActivity alloc] init] autorelease]];
-	[layers moveCreature:enemy2 To:CGPointMake(26, 40) showMenu:FALSE];
-	
+	[layers moveCreatureId:202 To:CGPointMake(26, 40) showMenu:FALSE];
+    
 	[layers appendNewActivity:[[[FDEmptyActivity alloc] init] autorelease]];
 	[layers moveCreature:enemy3 To:CGPointMake(27, 39) showMenu:FALSE];
 	
@@ -99,16 +98,16 @@
 
 -(void) reinforcement_2
 {
-	FDEnemy *enemy1 = [[[FDEnemy alloc] initWithDefinition:51202 Id:201] autorelease];
+	FDEnemy *enemy1 = [[[FDEnemy alloc] initWithDefinition:51202 Id:205] autorelease];
 	[field addEnemy:enemy1 Position:CGPointMake(2,31)];
 	
-	FDEnemy *enemy2 = [[[FDEnemy alloc] initWithDefinition:51202 Id:202 DropItem:901] autorelease];
+	FDEnemy *enemy2 = [[[FDEnemy alloc] initWithDefinition:51202 Id:206 DropItem:901] autorelease];
 	[field addEnemy:enemy2 Position:CGPointMake(2,31)];
 	
-	FDEnemy *enemy3 = [[[FDEnemy alloc] initWithDefinition:51203 Id:203] autorelease];
+	FDEnemy *enemy3 = [[[FDEnemy alloc] initWithDefinition:51203 Id:207] autorelease];
 	[field addEnemy:enemy3 Position:CGPointMake(2,31)];
 	
-	FDEnemy *enemy4 = [[[FDEnemy alloc] initWithDefinition:51204 Id:204] autorelease];
+	FDEnemy *enemy4 = [[[FDEnemy alloc] initWithDefinition:51204 Id:208] autorelease];
 	[field addEnemy:enemy4 Position:CGPointMake(2,31)];
 	
 	[layers moveCreature:enemy1 To:CGPointMake(3,31) showMenu:FALSE];

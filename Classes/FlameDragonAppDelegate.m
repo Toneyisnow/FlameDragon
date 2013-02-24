@@ -59,11 +59,6 @@
 	// Init the View Controller
 	viewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
 	viewController.wantsFullScreenLayout = YES;
-	
-    // Adding the Navigation Controller
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:viewController];
-    
-    
     
 	//
 	// Create the EAGLView manually
@@ -93,8 +88,8 @@
 	// Edit the RootViewController.m file to edit the supported orientations.
 	//
 #if GAME_AUTOROTATION == kGameAutorotationUIViewController
-	// [director setDeviceOrientation:kCCDeviceOrientationPortrait];
-	[director setDeviceOrientation:kCCDeviceOrientationLandscapeRight];
+	[director setDeviceOrientation:kCCDeviceOrientationPortrait];
+	// [director setDeviceOrientation:kCCDeviceOrientationLandscapeRight];
 #else
 	[director setDeviceOrientation:kCCDeviceOrientationLandscapeLeft];
 #endif

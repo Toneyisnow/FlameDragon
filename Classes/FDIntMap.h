@@ -22,4 +22,7 @@
 
 -(int) getX:(int)x Y:(int)y;
 
+-(int *) getMap;
+-(FDIntMap *) clone;
+
 @end

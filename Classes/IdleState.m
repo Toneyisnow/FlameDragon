@@ -26,12 +26,13 @@
 	
 	FDCreature *creature = [field getCreatureByPos:position];
 	
-	if (creature != nil)
+    if (creature != nil)
 	{
-		if ([creature isKindOfClass:[FDFriend class]] && !creature.hasActioned)
+		[field setCursorTo:position];
+        
+        if ([creature isKindOfClass:[FDFriend class]] && !creature.hasActioned)
 		{
 			// Show actions
-			[field setCursorTo:position];
 			[layers prepareToMove:creature Location:location];
 			[field prepareToMove:creature];
 			

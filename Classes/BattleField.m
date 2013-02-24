@@ -266,30 +266,16 @@
 		enemyType2 = CreatureType_Npc;
 	}
 	
-	FDIntMap *map = [[FDIntMap alloc] initWidth:fieldWidth Height:fieldHeight];
-	
+	FDIntMap *map = nil;
+    
+    if ([creature canFly]) {
+        map = [[groundField getGroundMapForFly] clone];
+    } else {
+        map = [[groundField getGroundMapForGround] clone];
+    }
+    
 	for (int i = 1; i <= fieldWidth; i++) {
 		for (int j = 1; j <= fieldHeight; j++) {
-			
-			GroundBlock *block = [groundField blockAtX:i Y:j];
-			switch ([block getAccessType])
-			{
-				case GroundBlockTypeGround:
-					[map setX:i Y:j Value: PathBlockType_Plain];
-					break;
-				case GroundBlockTypeForest:
-					[map setX:i Y:j Value: PathBlockType_Plain];
-					break;
-				case GroundBlockTypeChasm:
-					[map setX:i Y:j Value: PathBlockType_Blocked];
-					break;
-				case GroundBlockTypeGap:
-					[map setX:i Y:j Value: PathBlockType_Blocked];
-					break;
-				default:
-					[map setX:i Y:j Value: PathBlockType_Plain];
-					break;
-			}
 			
 			FDCreature *c = [self getCreatureByPos:CGPointMake(i, j)];
 			if (c != nil && ([c getCreatureType] == enemyType1 || [c getCreatureType] == enemyType2))
@@ -472,6 +458,10 @@
 	}
 	
 	[scope release];
+    
+    // Set Cursor Size
+    [self setCursorSize:magic.effectRange + 1];
+    
 }
 
 // DEPRECATED
@@ -574,6 +564,12 @@
 	}
 }
 
+-(void) setCursorSize:(int)size {
+    if (cursor != nil) {
+        [cursor setSize:size];
+    }
+}
+
 -(void) setCursorTo:(CGPoint)pos
 {
 	CGPoint loc = [self convertPosToLoc:pos];
@@ -611,6 +607,9 @@
 	
 	CGPoint mapLoc = [self getMapLocation];
 	[self setMapLocation:CGPointMake(mapLoc.x + dx, mapLoc.y + dy)];
+    
+    // Notify to Update the side bar
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"LayerUpdateSideBar" object:self];
 }
 
 -(CGPoint) getCursorPos
@@ -623,6 +622,10 @@
 {
 	return fieldChapterId;
 	// return [groundField fightBackgroundIdAtX:pos.x Y:pos.y];
+}
+
+-(int) getChapterId {
+    return fieldChapterId;
 }
 
 -(NSMutableArray *) getObjectsByPos:(CGPoint)pos

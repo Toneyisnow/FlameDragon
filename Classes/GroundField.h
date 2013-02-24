@@ -9,6 +9,7 @@
 #import "cocos2d.h"
 #import "GroundBlock.h"
 #import "FDFileStream.h"
+#import "FDIntMap.h"
 
 @interface GroundField : NSObject {
 
@@ -16,6 +17,10 @@
 	NSMutableArray *blockList;
 	
 	NSMutableDictionary *backgroundDic;
+    
+    FDIntMap *groundMapForGround;
+    FDIntMap *groundMapForFly;
+    
 }
 
 -(id) initWithDefinitionStream:(FDFileStream *)fileStream;
@@ -25,5 +30,8 @@
 -(GroundBlock *) blockAtX:(int)x Y:(int)y;
 
 -(int) fightBackgroundIdAtX:(int)x Y:(int)y;
+
+-(FDIntMap *) getGroundMapForGround;
+-(FDIntMap *) getGroundMapForFly;
 
 @end

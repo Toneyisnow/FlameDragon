@@ -91,8 +91,8 @@
 
 -(void) enemyClear
 {
-	for (int i = 1; i <= 35; i++) {
-		[self showTalkMessage:10 conversation:4 sequence:i];
+	for (int i = 1; i <= 12; i++) {
+		[self showTalkMessage:11 conversation:2 sequence:i];
 	}
 	
 	[layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];

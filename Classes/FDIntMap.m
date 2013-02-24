@@ -44,6 +44,18 @@
 	return map[(x-1)*height+y-1];
 }
 
+-(int *) getMap {
+    return map;
+}
+
+-(FDIntMap *) clone {
+    
+    FDIntMap *another = [[FDIntMap alloc] initWidth:width Height:height];
+    
+    memcpy([another getMap], map, width * height * sizeof(int));
+    return another;
+}
+
 -(void) dealloc
 {
 	free(map);

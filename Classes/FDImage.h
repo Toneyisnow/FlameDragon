@@ -15,6 +15,7 @@
 }
 
 -(id) initFromFile:(NSString *)fileName;
+-(id) initWithTexture:(CCTexture2D *) tex;
 
 -(CCTexture2D *) texture;
 

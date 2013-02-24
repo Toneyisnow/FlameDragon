@@ -20,6 +20,7 @@
 -(NSDictionary *) resolveDistanceFrom:(CGPoint)pos terminateAt:(CGPoint)termi;
 -(float) getDistanceTo:(CGPoint)pos;
 -(float) resolveDistanceFrom:(CGPoint)oPos To:(CGPoint)tPos;
+-(float) getHeristicValue:(CGPoint)pos toTarget:(CGPoint)target;
 
 
 -(void) walk:(FDPosition *)pos;

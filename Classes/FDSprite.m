@@ -7,7 +7,7 @@
 //
 
 #import "FDSprite.h"
-
+#import "Common.h"
 
 @implementation FDSprite
 
@@ -31,14 +31,23 @@
 	return self;
 }
 
+-(id) initFromImage:(FDImage *)image withRect:(CGRect)rect {
+    self = [super init];
+    
+    ccsprite = [[CCSprite alloc] initWithTexture:[image texture] rect:rect];
+    return self;
+}
+
 -(id) initFromFile:(NSString *)fileName withRect:(CGRect)rect
 {
 	self = [super init];
-	
+	/*
 	CCSpriteBatchNode *batch = [CCSpriteBatchNode batchNodeWithFile:fileName capacity:12];
 	ccsprite = [CCSprite spriteWithBatchNode:batch rect:rect];
 	[ccsprite retain];
-	
+	*/
+    ccsprite = [[CCSprite alloc] initWithFile:fileName rect:rect];
+    
 	return self;
 }
 
@@ -52,6 +61,20 @@
 	
 	ccsprite = [label retain];
 	
+	return self;
+}
+
+-(id) initWithSprite:(FDSprite *) sprite
+{
+    if (sprite == nil || [sprite getSprite] == nil) {
+        return nil;
+    }
+    
+    self = [super init];
+	
+    ccsprite = [CCSprite spriteWithTexture:[sprite getSprite].texture];
+	[ccsprite retain];
+    
 	return self;
 }
 
@@ -128,17 +151,43 @@
 
 -(void) setImage:(FDImage *)image
 {
-	//[ccsprite setTexture:[image texture]];
+    [self setImage:image ChangeSize:NO];
 	
-	CCTexture2D *texture = [image texture];
+    /*
+    CCTexture2D *texture = [image texture];
 	[ccsprite setTexture:texture];
-	 
+    */
+    
 	//pixelsWide
 	//ccsprite set = texture.boundingBox.size;
 	
 	//[[ccsprite setTextureRect:d];
 	//texture.boundingBox.size = image.boundingBox.size;
 }
+
+-(void) setImage:(FDImage *)image ChangeSize:(BOOL)sizeChanged {
+   
+    CCTexture2D *texture = [image texture];
+	[ccsprite setTexture:texture];
+    
+    if (sizeChanged) {
+        CGSize texSize = [texture contentSize];
+        [ccsprite setTextureRect:CGRectMake(0, 0, texSize.width, texSize.height)];
+    }
+}
+
+-(void) setFrame:(NSString *)fileName {
+    
+    // NSString *fullName = [Common fileFullPath:fileName];
+    // [UIImage imageNamed:fileName];
+    
+    CCSpriteFrameCache *cache = [CCSpriteFrameCache sharedSpriteFrameCache];
+    [cache addSpriteFramesWithFile:fileName];
+    
+    CCSpriteFrame *frame = [cache spriteFrameByName:fileName];
+    [ccsprite setDisplayFrame:frame];
+}
+
 
 -(void) addToLayer:(CCLayer *)layer
 {

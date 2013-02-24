@@ -16,12 +16,16 @@
 
 -(id) initFromFile:(NSString *)fileName;
 -(id) initFromFile:(NSString *)fileName withRect:(CGRect)rect;
-
+-(id) initFromImage:(FDImage *)image withRect:(CGRect)rect;
 -(id) initWithString:(NSString *)str Size:(int)size;
+-(id) initWithSprite:(FDSprite *) sprite;
 
 -(CCSprite *) getSprite;
 -(void) setSprite:(CCSprite *)s;
 -(void) setImage:(FDImage *)image;
+-(void) setImage:(FDImage *)image ChangeSize:(BOOL)sizeChanged;
+
+-(void) setFrame:(NSString *)fileName;
 
 -(void) setOpacity:(int)o;
 -(void) setColorR:(int)r G:(int)g B:(int)b;
