@@ -30,7 +30,7 @@
 	{
 		[field setCursorTo:position];
         
-        if ([creature isKindOfClass:[FDFriend class]] && !creature.hasActioned)
+        if ([creature isKindOfClass:[FDFriend class]] && !creature.hasActioned && [creature isNotFrozen])
 		{
 			// Show actions
 			[layers prepareToMove:creature Location:location];

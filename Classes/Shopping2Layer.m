@@ -19,7 +19,7 @@
 #import "Shopping2SecretDialog.h"
 #import "SWScrollView.h"
 #import "Shopping2MoneyBar.h"
-
+#import "FDAudioEngine.h"
 
 @implementation Shopping2Layer
 
@@ -46,6 +46,31 @@
 {
 	int chapter = [chapterRecord chapterId];
 	return (chapter <= 10) ? 1 : ((chapter <= 20) ? 2 : 3);
+}
+
+-(void) onEnterTransitionDidFinish {
+    
+    AudioShopType audioType = AudioShopType_Amor;
+    switch (shoppingType) {
+        case Shopping2Type_Amor:
+            audioType = AudioShopType_Amor;
+            break;
+        case Shopping2Type_Item:
+            audioType = AudioShopType_Item;
+            break;
+        case Shopping2Type_Church:
+            audioType = AudioShopType_Church;
+            break;
+        case Shopping2Type_Bar:
+            audioType = AudioShopType_Bar;
+            break;
+        case Shopping2Type_Secret:
+            audioType = AudioShopType_Amor;
+            break;
+        default:
+            break;
+    }
+    [FDAudioEngine playShopMusic:audioType];
 }
 
 -(void) loadWithRecord:(ChapterRecord *)record Type:(Shopping2Type)type

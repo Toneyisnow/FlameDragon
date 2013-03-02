@@ -449,6 +449,10 @@
     return [definition canFly];
 }
 
+-(BOOL) isNotFrozen {
+    return data.statusFrozen <= 0;
+}
+
 -(void) dealloc
 {
 	[data release];

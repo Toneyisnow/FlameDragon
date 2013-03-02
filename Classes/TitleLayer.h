@@ -8,8 +8,9 @@
 
 #import "cocos2d.h"
 #import "CreatureRecord.h"
+#import "CCVideoPlayer.h"
 
-@interface TitleLayer : CCLayer {
+@interface TitleLayer : CCLayer<CCVideoPlayerDelegate> {
 
 }
 
@@ -20,7 +21,7 @@
 
 -(BOOL) clickedOnButton:(CGPoint)buttonLoc At:(CGPoint)clickedLoc;
 
--(void) loadTestingGame;
+-(CCScene *) loadTestingGame;
 -(CreatureRecord *) loadTestingRecord:(int)creatureId level:(int)level;
 
 

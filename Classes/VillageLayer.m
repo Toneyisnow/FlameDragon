@@ -14,6 +14,7 @@
 #import "ShoppingScene.h"
 #import "MainGameScene.h"
 #import "BattleRecord.h"
+#import "FDAudioEngine.h"
 
 @implementation VillageLayer
 
@@ -33,14 +34,29 @@
 	int chapter = [chapterRecord chapterId];
 	
 	switch (chapter) {
-		case 2: return 1;
-		case 3: return 2;
-		case 4: return 1;
-		case 5: return 2;
+		case 2:return 1;
+		case 3:return 2;
+		case 4:return 1;
+		case 5:return 2;
+		case 6:return 2;
+		case 7:return 1;
+		case 8:return 2;
+		case 9:return 2;
+		case 10:return 1;
+		case 11:return 2;
+		case 12:return 2;
+		case 13:return 2;
+        case 14:return 2;
+        case 15:return 2;
 		default: break;
 	}
 	
 	return 1;
+}
+
+-(void) onEnterTransitionDidFinish {
+
+    [FDAudioEngine playVillageMusic:chapterRecord.chapterId];
 }
 
 -(void) loadWithRecord:(ChapterRecord *)record
@@ -62,10 +78,11 @@
 	[[bg getSprite] addChild:[secretIndicator getSprite]];
 	[self addChild:[bg getSprite]];
 	
-	
 	currentPosition = 1;
-	cursor = [[FDSpriteStore instance] sprite:@"Icon-001-01.png"];
-	AnimationDefinition *animationDef = [AnimationDefinition idleAnimation:1];
+    
+    int cursorDefId = [[[chapterRecord friendRecords] objectAtIndex:0] definitionId];
+	cursor = [[FDSpriteStore instance] sprite:[NSString stringWithFormat:@"Icon-%03d-01.png", cursorDefId]];
+	AnimationDefinition *animationDef = [AnimationDefinition idleAnimation:cursorDefId];
 	cursorAnimation = [[FDSlideAnimation alloc] initWithDefinition:animationDef Sprite:cursor];
 	
 	[cursor setScaleX:[Constants villageScale] Y:[Constants villageScale]];
@@ -115,21 +132,6 @@
 			}
 		}
 	}
-	
-	/*
-	if ([self clickedOnButton:[FDWindow villageLocation:currentPosition villageId:[self getVillageId]] At:clickedLoc])
-	{
-		[self clickEnter];
-	}
-	else if ([self clickedInArea:[FDWindow leftWindow] At:clickedLoc])
-	{
-		[self clickLeft];
-	}
-	else if ([self clickedInArea:[FDWindow rightWindow] At:clickedLoc])
-	{
-		[self clickRight];
-	}
-	 */
 }
 
 -(BOOL) clickedOnButton:(CGPoint)buttonLoc At:(CGPoint)clickedLoc
@@ -151,7 +153,6 @@
 	currentPosition = pos;
 	[cursor setLocation:[FDWindow villageLocation:currentPosition villageImageId:[self getVillageImageId]]];	
 	[villageLabel setPositionIndex:currentPosition];
-	
 	
 	// For any set position, check the secret index
 	if (secretIndex >= [secretSequence totalLength]) {
@@ -258,8 +259,6 @@
 	[mainGame loadWithInfo:chapterRecord];
 	
 	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:mainGame]];
-	
-	//[info release];	
 }
 
 -(void) dealloc

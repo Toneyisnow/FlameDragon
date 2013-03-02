@@ -124,7 +124,10 @@
 	[[DataDepot depot] loadAllDictionaries];
 	
 	// Run the intro Scene
-	[[CCDirector sharedDirector] runWithScene: [TitleScene node]];		
+	[[CCDirector sharedDirector] runWithScene: [TitleScene node]];
+	
+    // Start Movie
+    [CCVideoPlayer playMovieWithFile:@"Openning.mp4"];
 }
 
 

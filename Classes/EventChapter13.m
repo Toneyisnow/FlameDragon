@@ -23,8 +23,6 @@
 	
 	[self loadPositionEvent:1 AtPosition:CGPointMake(25,6) Action:@selector(onHeroBadge)];
 	
-	[self loadDyingEvent:199 Action:@selector(bossDyingMessage)];
-	
 	NSLog(@"Chapter13 events loaded.");
 }
 
@@ -152,13 +150,6 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51301 Id:199 DropItem:309] autorelease] Around:CGPointMake(35,9)];
 	
 	[self showTalkMessage:13 conversation:3 sequence:1];
-}
-
--(void) bossDyingMessage
-{
-	for (int i = 1; i <= 5; i++) {
-		[self showTalkMessage:10 conversation:3 sequence:i];
-	}
 }
 
 -(void) enemyClear

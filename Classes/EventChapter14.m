@@ -39,7 +39,7 @@
 	[self settleFriend:9 At:CGPointMake(30,38)];
 	[self settleFriend:10 At:CGPointMake(35,38)];
 	[self settleFriend:11 At:CGPointMake(38,37)];
-	[self settleFriend:12 At:CGPointMake(40,42)];
+	[self settleFriend:12 At:CGPointMake(40,32)];
 	[self settleFriend:13 At:CGPointMake(35,29)];
 	[self settleFriend:14 At:CGPointMake(28,37)];
 	[self settleFriend:15 At:CGPointMake(30,33)];

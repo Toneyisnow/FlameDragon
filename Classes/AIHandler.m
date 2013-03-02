@@ -66,7 +66,7 @@
 	if (selectedCreature == nil) {
 		for (FDCreature *creature in array) {
 			
-			if (creature.hasActioned || creature.data.statusFrozen > 0 || !creature.pendingAction) {
+			if (creature.hasActioned || ![creature isNotFrozen] || !creature.pendingAction) {
 				continue;
 			}
 			

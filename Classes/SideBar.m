@@ -144,7 +144,7 @@
         return [NSString stringWithFormat:@"+ %02d", value];
     }
     else {
-        return [NSString stringWithFormat:@"- %02d", -value];
+        return [NSString stringWithFormat:@"-- %02d", -value];
     }
     return nil;
 }

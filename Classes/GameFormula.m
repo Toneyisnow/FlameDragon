@@ -283,7 +283,12 @@
 		case 162:
 		case 163:
 		case 999:
-			return creature.data.level + 30;
+            if ([creature getCreatureType] == CreatureType_Friend) {
+                return creature.data.level + 30;
+            } else {
+                return creature.data.level + 20;
+            }
+			
 		default:
 			return creature.data.level;
 	}

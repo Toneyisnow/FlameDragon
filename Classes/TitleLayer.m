@@ -14,13 +14,13 @@
 #import "VillageScene.h"
 #import "LoadingScene.h"
 #import "Constants.h"
+#import "FDAudioEngine.h"
 
 @implementation TitleLayer
 
 -(id) init
 {
 	self = [super init];
-	
 	
 	FDSprite *bg = [[FDSpriteStore instance] sprite:@"Title.png"];
 	[bg setScaleX:[Constants commonScale] Y:[Constants commonScale]];
@@ -43,6 +43,10 @@
 	[self addChild:[loadButton getSprite]];
 	[self addChild:[continueButton getSprite]];
 	
+    [CCVideoPlayer setDelegate:self];
+    
+    [FDAudioEngine playTitleMusic];
+    
 	return self;
 }
 
@@ -52,7 +56,7 @@
 	CGPoint location = [touch locationInView: [touch view]];
 	CGPoint clickedLoc = [[CCDirector sharedDirector] convertToGL:location];
 	
-	if ([self clickedOnButton:[FDWindow titleButtonStart] At:clickedLoc])
+    if ([self clickedOnButton:[FDWindow titleButtonStart] At:clickedLoc])
 	{
 		[self onNewGame];
 	}
@@ -81,19 +85,20 @@
 	[mainGame loadWithInfo:info];
 	
 	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:mainGame]];
-	
+    
+    [FDAudioEngine stopMusic];
 }
 
 -(void) onLoadGame
 {
 	NSLog(@"onLoadGame");
 	
-	[self loadTestingGame];
-	
-	/*
-	LoadingScene *scene = [LoadingScene node];
+	CCScene *scene = [self loadTestingGame];
+	// LoadingScene *scene = [LoadingScene node];
+    
 	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];
-	 */
+    
+    [FDAudioEngine stopMusic];
 }
 
 -(void) onContinueGame
@@ -116,11 +121,13 @@
 	}
 	
 	[info release];
+    
+    [FDAudioEngine stopMusic];
 }
 
--(void) loadTestingGame
+-(CCScene *) loadTestingGame
 {
-	ChapterRecord *record = [ChapterRecord generateRecord:3 money:60000];
+	ChapterRecord *record = [ChapterRecord generateRecord:13 money:60000];
 	
 	[[record friendRecords] addObject:[self loadTestingRecord:1 level:28]];
 	[[record friendRecords] addObject:[self loadTestingRecord:2 level:28]];
@@ -136,11 +143,12 @@
 	[[record friendRecords] addObject:[self loadTestingRecord:12 level:25]];
 	[[record friendRecords] addObject:[self loadTestingRecord:13 level:25]];
 	[[record friendRecords] addObject:[self loadTestingRecord:14 level:25]];
+	[[record friendRecords] addObject:[self loadTestingRecord:15 level:25]];
 	
 	VillageScene *scene = [VillageScene node];
 	[scene loadWithRecord:record];
 	
-	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];
+    return scene;
 }
 
 -(CreatureRecord *) loadTestingRecord:(int)creatureId level:(int)level
@@ -170,6 +178,16 @@
 	[creature release];
 	
 	return r;
+}
+
+-(void) moviePlaybackFinished {
+    CCLOG(@"moviePlaybackFinished");
+    [[CCDirector sharedDirector] stopAnimation];
+}
+
+-(void) movieStartsPlaying {
+    CCLOG(@"");
+    [[CCDirector sharedDirector] startAnimation];
 }
 
 @end

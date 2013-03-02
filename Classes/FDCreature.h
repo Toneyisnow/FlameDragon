@@ -137,6 +137,7 @@ typedef enum ActionStatus {
 -(BOOL) isItemListFull;
 
 -(BOOL) canFly;
+-(BOOL) isNotFrozen;
 
 //-(void) removeItem:(int)index;
 

@@ -33,6 +33,7 @@
 #import "FightingScene.h"
 #import "MagicalInformation.h"
 #import "MagicalScene.h"
+#import "FDAudioEngine.h"
 
 @implementation ActionLayers
 
@@ -391,10 +392,6 @@
 		}
 	}
 	
-	NSLog(@"Notify.");
-	
-	// Check whether the important game event is triggered
-	[self appendToMainActivityMethod:@selector(isNotified) Param1:nil Param2:nil Obj:eventListener];
 	
 	NSLog(@"End turn.");
 	
@@ -544,6 +541,11 @@
 
 -(void) creatureActionDone:(FDCreature *)creature
 {
+    
+    // Check whether the important game event is triggered
+	NSLog(@"Notify.");
+	[self appendToMainActivityMethod:@selector(isNotified) Param1:nil Param2:nil Obj:eventListener];
+	
 	if (creature != nil) {
 		
 		creature.hasActioned = TRUE;
@@ -570,7 +572,7 @@
 		//[enemyAiHandler isNotified];
 		[self appendToCurrentActivityMethod:@selector(isNotified) Param1:nil Param2:nil Obj:enemyAiHandler];
 	}
-	if ([creature getCreatureType] == CreatureType_Npc) {
+	else if ([creature getCreatureType] == CreatureType_Npc) {
 		//[npcAiHandler isNotified];
 		[self appendToCurrentActivityMethod:@selector(isNotified) Param1:nil Param2:nil Obj:npcAiHandler];
 	}
@@ -601,7 +603,7 @@
 	if (turnType == TurnType_Friend)
 	{
 		for (FDCreature *creature in [field getFriendList]) {
-			if (!creature.hasActioned && creature.data.statusFrozen <= 0) {
+			if (!creature.hasActioned && [creature isNotFrozen]) {
 				return;
 			}
 		}
@@ -610,7 +612,7 @@
 	else if	(turnType == TurnType_NPC)
 	{
 		for (FDCreature *creature in [field getNpcList]) {
-			if (!creature.hasActioned && creature.data.statusFrozen <= 0) {
+			if (!creature.hasActioned && [creature isNotFrozen]) {
 				return;
 			}
 		}
@@ -619,7 +621,7 @@
 	else if (turnType == TurnType_Enemy)
 	{
 		for (FDCreature *creature in [field getEnemyList]) {
-			if (!creature.hasActioned && creature.data.statusFrozen <= 0) {
+			if (!creature.hasActioned && [creature isNotFrozen]) {
 				return;
 			}
 		}
@@ -630,7 +632,6 @@
 -(void) startFriendTurn
 {
 	NSLog(@"Start Friend Turn");
-
 	
 	turnType = TurnType_Friend;
 	
@@ -649,6 +650,11 @@
 	FDCreature *firstFriend = [[field getFriendList] objectAtIndex:0];
 	CGPoint pos = [field getObjectPos:firstFriend];
 	[self appendToMainActivityMethod:@selector(setCursorObjTo:) Param1:[FDPosition positionX:pos.x Y:pos.y] Param2:nil Obj:field];
+    
+    if (turnNo == 1) {
+        // Play Background Music
+        [FDAudioEngine playBattleGroundMusic:chapterId];
+    }
 }
 
 -(void) endFriendTurn
@@ -774,6 +780,9 @@
 	turnNo = 0;
 	money = info.money;
 	
+    // Stop previous background Music
+    [FDAudioEngine stopMusic];
+    
 	// Load Friends
 	for(CreatureRecord *record in [info friendRecords])
 	{
@@ -865,6 +874,9 @@
 	turnNo --;
 	
 	[self runGame];
+    
+    // Play background music
+    [FDAudioEngine playBattleGroundMusic:chapterId];
 }
 
 -(void) runGame

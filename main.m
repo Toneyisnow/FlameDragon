@@ -11,10 +11,10 @@
 int main(int argc, char *argv[]) {
     
     @try {
-     NSAutoreleasePool *pool = [NSAutoreleasePool new];
-     int retVal = UIApplicationMain(argc, argv, nil, @"FlameDragonAppDelegate");
-     [pool release];
-     return retVal;
+        NSAutoreleasePool *pool = [NSAutoreleasePool new];
+        int retVal = UIApplicationMain(argc, argv, nil, @"FlameDragonAppDelegate");
+        [pool release];
+        return retVal;
      }
     @catch (NSException *exception) {
         NSLog(@"%@", [exception reason]);
