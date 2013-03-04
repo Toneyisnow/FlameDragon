@@ -177,7 +177,9 @@
 
 -(void) enemyClear
 {
-	FDCreature *suofeiyaNpc = [field getCreatureById:12];
+	[layers gameCleared];
+    
+    FDCreature *suofeiyaNpc = [field getCreatureById:12];
 	
 	FDFriend *suofeiya = [[FDFriend alloc] initWithDefinition:12 Id:12];
 	[field addFriend:suofeiya Position:[field getObjectPos:suofeiyaNpc]];

@@ -45,9 +45,9 @@
 		case 10:return 1;
 		case 11:return 2;
 		case 12:return 2;
-		case 13:return 2;
-        case 14:return 2;
-        case 15:return 2;
+		case 13:return 3;
+        case 14:return 3;
+        case 15:return 3;
 		default: break;
 	}
 	

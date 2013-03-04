@@ -14,7 +14,7 @@
 
 @synthesize name;
 @synthesize magicType;
-@synthesize identifier, effectScope, effectRange, hittingRate, mpCost;
+@synthesize identifier, effectScope, effectRange, hittingRate, mpCost, aiConsiderRate;
 @synthesize quantityRange;
 
 +(id) readFromFile:(FDFileStream *)stream
@@ -37,7 +37,8 @@
 	def.effectScope = [stream readInt];
 	def.effectRange = [stream readInt];
 	def.mpCost = [stream readInt];
-	
+	def.aiConsiderRate = [stream readInt];
+    
 	return [def autorelease];
 }
 
@@ -105,13 +106,35 @@
 	}
 }
 
+-(BOOL) hasDefensiveEffectOn:(id)obj {
+    FDCreature *target = (FDCreature *)obj;
+    
+    if (magicType == MagicType_Recover && target.data.hpCurrent < target.data.hpMax) {
+        return TRUE;
+    }
+    
+    if (identifier == 404 && target.data.statusPoisoned > 0) {
+        return TRUE;
+    }
+    
+    if (identifier == 405 && target.data.statusFrozen > 0) {
+        return TRUE;
+    }
+    
+    if (identifier == 401 || identifier == 402 || identifier == 403) {
+        return TRUE;
+    }
+    
+    return FALSE;
+}
+
 -(int) baseExperience
 {
 	switch (identifier) {
 		case 401:
 		case 402:
 		case 403:
-			return 2;
+			return 4;
 		case 406:
 			return 8;
 		case 301:

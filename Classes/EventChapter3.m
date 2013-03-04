@@ -123,7 +123,9 @@
 
 -(void) enemyClear
 {
-	if ([field getDeadCreatureById:7] != nil) {
+	[layers gameCleared];
+    
+    if ([field getDeadCreatureById:7] != nil) {
 		// If Tienuo dead
 		for (int i = 1; i <= 5; i++) {
 			[self showTalkMessage:3 conversation:3 sequence:i];

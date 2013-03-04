@@ -124,7 +124,22 @@
 					return CGPointMake(0, 0);	
 			}
 		case 3:
-			
+			switch (position) {
+				case 0:
+					return CGPointMake(winSize.width * 0.24, winSize.height * 0.10);
+				case 1:
+					return CGPointMake(winSize.width * 0.52, winSize.height * 0.25);
+				case 2:
+					return CGPointMake(winSize.width * 0.76, winSize.height * 0.55);
+				case 3:
+					return CGPointMake(winSize.width * 0.35, winSize.height * 0.75);
+				case 4:
+					return CGPointMake(winSize.width * 0.2, winSize.height * 0.4);
+				case 5:
+					return CGPointMake(winSize.width * 0.68, winSize.height * 0.85);
+				default:
+					return CGPointMake(0, 0);
+			}
 			break;
 		default:
 			break;
@@ -138,14 +153,12 @@
 	switch (villageImageId) {
 		case 1:
 			return CGPointMake(12.5, 193);
-			break;
 		case 2:
 			return CGPointMake(287.5, 81.5);
-			break;
 		case 3:
-			break;
-		default:
-			break;
+            return CGPointMake(108, 115);
+        default:
+    		break;
 	}
 	
 	return CGPointMake(0, 0);

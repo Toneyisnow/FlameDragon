@@ -161,7 +161,9 @@
 
 -(void) enemyClear
 {
-	FDFriend *mia = [[FDFriend alloc] initWithDefinition:15 Id:15];
+	[layers gameCleared];
+    
+    FDFriend *mia = [[FDFriend alloc] initWithDefinition:15 Id:15];
 	[[field getFriendList] addObject:mia];
 	
 	for (int i = 2; i <= 10; i++) {

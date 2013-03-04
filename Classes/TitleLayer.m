@@ -105,6 +105,8 @@
 {
 	NSLog(@"onContinueGame");
 	
+    [FDAudioEngine stopMusic];
+    
 	//GameStartInfo *info = [[GameLoadedInfo alloc] initWithLevel:1];
 	//GameStartInfo *info = [[GameLoadedInfo alloc] readFromFile:nil];
 	
@@ -122,7 +124,6 @@
 	
 	[info release];
     
-    [FDAudioEngine stopMusic];
 }
 
 -(CCScene *) loadTestingGame

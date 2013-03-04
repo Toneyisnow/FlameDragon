@@ -29,6 +29,7 @@ typedef enum MagicType
 	int effectRange;	// 
 	int hittingRate;
 	int mpCost;
+    int aiConsiderRate;
 	FDRange *quantityRange;
 }
 
@@ -36,6 +37,7 @@ typedef enum MagicType
 
 -(void) takeOffensiveEffect:(id)obj;
 -(void) takeDefensiveEffect:(id)obj;
+-(BOOL) hasDefensiveEffectOn:(id)obj;
 
 -(int) baseExperience;
 
@@ -49,6 +51,7 @@ typedef enum MagicType
 @property (nonatomic) int effectRange;
 @property (nonatomic) int hittingRate;
 @property (nonatomic) int mpCost;
+@property (nonatomic) int aiConsiderRate;
 
 @property (nonatomic, retain) FDRange *quantityRange;
 

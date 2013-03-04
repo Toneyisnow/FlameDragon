@@ -21,6 +21,7 @@
 	maxStep = step;
 	targetPos = target;
 	
+    
 	[linkedPos setX:pos.x Y:pos.y Value:pos];
 	
 	[positionQueue addObject:[FDPosition positionX:pos.x Y:pos.y]];
@@ -57,6 +58,12 @@
 	
 	[array release];
 	
+    /*
+    FDPath *path = [[FDPath alloc] init];
+    [path addPos:[FDPosition positionX:pos.x Y:pos.y]];
+    [path addPos:[FDPosition positionX:pos.x Y:target.y]];
+    [path addPos:[FDPosition positionX:target.x Y:target.y]];
+    */
 	return [path autorelease];
 }
 

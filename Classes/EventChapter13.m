@@ -154,7 +154,9 @@
 
 -(void) enemyClear
 {
-	/*
+	[layers gameCleared];
+    
+    /*
 	FDFriend *hawate = [[FDFriend alloc] initWithDefinition:16 Id:16];
 	[[field getFriendList] addObject:hawate];
 	*/

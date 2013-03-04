@@ -14,7 +14,7 @@
 	
 }
 
--(MagicDefinition *) getAvailableMagic;
+-(NSMutableArray *) getAvailableMagic;
 -(void) takeMagicAction;
 -(void) takePendAction;
 

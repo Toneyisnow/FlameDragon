@@ -237,7 +237,9 @@
 
 -(void) enemyClear
 {
-	// Talk
+	[layers gameCleared];
+    
+    // Talk
 	if ([field getCreatureById:10] != nil) {
 		for (int i = 1; i <= 4; i++) {
 			[self showTalkMessage:15 conversation:6 sequence:i];

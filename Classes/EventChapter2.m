@@ -20,7 +20,6 @@
 #import "CreatureDyingCondition.h"
 #import "TeamEliminatedCondition.h"
 
-
 @implementation EventChapter2
 
 -(void) loadEvents
@@ -267,7 +266,10 @@
 }
 
 -(void) enemyClear
-{
+{    
+    [layers gameCleared];
+    
+
 	// Select one of the messages
 	if ([[field getNpcList] count] == 6) {
 		isAllNpcSaved = TRUE;
@@ -289,8 +291,6 @@
 	[self showTalkMessage:2 conversation:3 sequence:(isAllNpcSaved ? 101 : 1)];
 	
 	[layers appendToCurrentActivityMethod:@selector(enemyClear_2) Param1:nil Param2:nil Obj:self];
-	
-	// Save some data into Record
 }
 
 -(void) enemyClear_2

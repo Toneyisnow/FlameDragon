@@ -187,6 +187,7 @@
 		02759D4D154A72C300853895 /* VillageShop-01-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 02759D46154A72C300853895 /* VillageShop-01-2.png */; };
 		02759E5C154FDCFA00853895 /* ShoppingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02759E59154FDCFA00853895 /* ShoppingLayer.m */; };
 		02759E5D154FDCFA00853895 /* ShoppingScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 02759E5B154FDCFA00853895 /* ShoppingScene.m */; };
+		02785B3E16E2DA640014E8F5 /* SecretIndicator-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02785B3D16E2DA640014E8F5 /* SecretIndicator-03.png */; };
 		027B6744167B191A00A730EF /* FightAnimation.dat in Resources */ = {isa = PBXBuildFile; fileRef = 027B6743167B191A00A730EF /* FightAnimation.dat */; };
 		027C3D6A163BC773003AB006 /* Chapter-04.dat in Resources */ = {isa = PBXBuildFile; fileRef = 027C3D69163BC773003AB006 /* Chapter-04.dat */; };
 		027D53A114618C6E002C310F /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 027D53A014618C6E002C310F /* HelloWorldLayer.m */; };
@@ -4723,6 +4724,7 @@
 		02759E59154FDCFA00853895 /* ShoppingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingLayer.m; sourceTree = "<group>"; };
 		02759E5A154FDCFA00853895 /* ShoppingScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingScene.h; sourceTree = "<group>"; };
 		02759E5B154FDCFA00853895 /* ShoppingScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingScene.m; sourceTree = "<group>"; };
+		02785B3D16E2DA640014E8F5 /* SecretIndicator-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SecretIndicator-03.png"; path = "Village/SecretIndicator-03.png"; sourceTree = "<group>"; };
 		027B6743167B191A00A730EF /* FightAnimation.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = FightAnimation.dat; path = Data/FightAnimation.dat; sourceTree = "<group>"; };
 		027C3D69163BC773003AB006 /* Chapter-04.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-04.dat"; path = "Data/Maps/Chapter-04.dat"; sourceTree = "<group>"; };
 		027D539F14618C6E002C310F /* HelloWorldLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
@@ -9667,6 +9669,7 @@
 				022D37A41615DB0D0020F816 /* VillageShop-01-5.png */,
 				022D3BA3162314280020F816 /* SecretIndicator-01.png */,
 				022D3C701625C7CD0020F816 /* SecretIndicator-02.png */,
+				02785B3D16E2DA640014E8F5 /* SecretIndicator-03.png */,
 			);
 			name = Village;
 			sourceTree = "<group>";
@@ -20727,6 +20730,7 @@
 				0262184D16E1E254009CE8DD /* Battle_3.mp3 in Resources */,
 				0262185016E1E43D009CE8DD /* Battle_4.mp3 in Resources */,
 				0262185116E1E43D009CE8DD /* Battle_5.mp3 in Resources */,
+				02785B3E16E2DA640014E8F5 /* SecretIndicator-03.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

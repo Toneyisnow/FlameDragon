@@ -369,10 +369,11 @@
 
 -(void) enemyClear
 {
+    [layers gameCleared];
+    
 	for (int i = 1; i <= 13; i++) {
 		[self showTalkMessage:1 conversation:7 sequence:i];
 	}
-	
 	
 	[layers appendToCurrentActivityMethod:@selector(adjustFriends) Param1:nil Param2:nil Obj:self];
 	

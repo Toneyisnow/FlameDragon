@@ -392,7 +392,11 @@
 		}
 	}
 	
-	
+    NSLog(@"Notify.");
+    
+    // Check whether the important game event is triggered
+    [self appendToMainActivityMethod:@selector(isNotified) Param1:nil Param2:nil Obj:eventListener];
+
 	NSLog(@"End turn.");
 	
 	//End turn
@@ -541,12 +545,7 @@
 
 -(void) creatureActionDone:(FDCreature *)creature
 {
-    
-    // Check whether the important game event is triggered
-	NSLog(@"Notify.");
-	[self appendToMainActivityMethod:@selector(isNotified) Param1:nil Param2:nil Obj:eventListener];
-	
-	if (creature != nil) {
+    if (creature != nil) {
 		
 		creature.hasActioned = TRUE;
 		
@@ -576,6 +575,9 @@
 		//[npcAiHandler isNotified];
 		[self appendToCurrentActivityMethod:@selector(isNotified) Param1:nil Param2:nil Obj:npcAiHandler];
 	}
+	
+    // Check end turn
+    [self appendToCurrentActivityMethod:@selector(isNotified) Param1:nil Param2:nil Obj:eventListener];
 	
 	[self appendToCurrentActivityMethod:@selector(checkEndTurn) Param1:nil Param2:nil Obj:self];
 }
@@ -808,7 +810,7 @@
 	turnNo = info.turnNo;
 	money = info.money;
 	
-	// Load Creatures
+    // Load Creatures
 	for(CreatureRecord *record in [info friendRecords])
 	{
 		FDFriend *creature = [[FDFriend alloc] initWithDefinition:record.definitionId Id:record.creatureId Data:record.data];
@@ -873,10 +875,10 @@
 	
 	turnNo --;
 	
-	[self runGame];
-    
     // Play background music
     [FDAudioEngine playBattleGroundMusic:chapterId];
+	
+    [self runGame];
 }
 
 -(void) runGame
@@ -1031,6 +1033,12 @@
     @catch (NSException *exception) {
 
     }
+}
+
+-(void) gameCleared {
+    
+    // Stop background music
+    [FDAudioEngine stopMusic];
 }
 
 -(void) gameOver

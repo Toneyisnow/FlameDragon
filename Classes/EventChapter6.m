@@ -138,7 +138,9 @@
 
 -(void) enemyClear
 {
-	// Beikewei appears
+	[layers gameCleared];
+    
+    // Beikewei appears
 	FDFriend *friend9 = [[FDFriend alloc] initWithDefinition:9 Id:9];
 	[field addFriend:friend9 Position:CGPointMake(12, 26)];
 	[friend9 release];

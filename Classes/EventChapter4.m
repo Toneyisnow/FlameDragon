@@ -162,7 +162,9 @@
 
 -(void) enemyClear
 {
-	for (int i = 1; i <= 4; i++) {
+	[layers gameCleared];
+    
+    for (int i = 1; i <= 4; i++) {
 		[self showTalkMessage:4 conversation:4 sequence:i];
 	}
 	

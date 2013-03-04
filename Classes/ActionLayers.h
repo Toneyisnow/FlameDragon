@@ -99,6 +99,7 @@ typedef enum TurnType
 -(void) gameWin;
 -(void) gameQuit;
 -(void) gameContinue;
+-(void) gameCleared;
 
 -(ChapterRecord *) composeChapterRecord;
 

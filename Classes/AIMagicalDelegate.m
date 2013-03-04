@@ -9,6 +9,7 @@
 #import "AIMagicalDelegate.h"
 #import "MagicDefinition.h"
 #import "DataDepot.h"
+#import "FDRandom.h"
 
 @implementation AIMagicalDelegate
 
@@ -37,33 +38,57 @@
 {
 	BattleField *field = [[layers getFieldLayer] getField];
 	
-	MagicDefinition *magic = [self getAvailableMagic];
+    NSMutableArray *magicList = [self getAvailableMagic];
 	
-	if (magic == nil) {
-		[layers appendToCurrentActivityMethod:@selector(creaturePendAction:) Param1:creature Param2:nil];
-		return;
-	}
+    if (magicList == nil || [magicList count] == 0) {
+        [layers appendToCurrentActivityMethod:@selector(creaturePendAction:) Param1:creature Param2:nil];
+        return;
+    }
 	
-	FDCreature *candidate = nil;
-	if (magic.magicType == MagicType_Attack || magic.magicType == MagicType_Offensive) {
-		candidate = [self findAffensiveTarget:magic];
-	}
-	else if (magic.magicType == MagicType_Recover || magic.magicType == MagicType_Defensive) {
-		candidate = [self findDefensiveTarget:magic];
-	}
+    NSMutableArray *canMagicList = [[NSMutableArray alloc] init];
+    NSMutableArray *candidateList = [[NSMutableArray alloc] init];
+    FDCreature *candidate = nil;
+    for (MagicDefinition *magic in magicList)
+	{
+        FDCreature *candidate = nil;
+        if (magic.magicType == MagicType_Attack || magic.magicType == MagicType_Offensive) {
+            candidate = [self findAffensiveTarget:magic];
+        }
+        else if (magic.magicType == MagicType_Recover || magic.magicType == MagicType_Defensive) {
+            candidate = [self findDefensiveTarget:magic];
+        }
 	
-	if (candidate == nil) {
-		NSLog(@"Didn't find candidate.");
-		[layers appendToCurrentActivityMethod:@selector(creaturePendAction:) Param1:creature Param2:nil];
-		return;
+        if (candidate != nil) {
+            [canMagicList addObject:magic];
+            [candidateList addObject:candidate];
+        }
 	}
-	
+    
+    if ([canMagicList count] == 0) {
+        NSLog(@"Didn't find candidate.");
+        [layers appendToCurrentActivityMethod:@selector(creaturePendAction:) Param1:creature Param2:nil];
+        return;
+    }
+    
+    int magicIndex = [self chooseMagicFromCandidate:canMagicList];
+    MagicDefinition *selectedMagic = [canMagicList objectAtIndex:magicIndex];
+    FDCreature *selectedCandidate = [candidateList objectAtIndex:magicIndex];
+    
+    if (selectedMagic == nil || selectedCandidate == nil) {
+        NSLog(@"Didn't find candidate.");
+        [layers appendToCurrentActivityMethod:@selector(creaturePendAction:) Param1:creature Param2:nil];
+        return;
+    }
+    
 	// Use Magic
-	CGPoint position = [field getObjectPos:candidate];
+	CGPoint position = [field getObjectPos:selectedCandidate];
 	[field setCursorTo:position];
 	
-	[layers magicFrom:creature TargetPos:position Id:magic.identifier];
-//	[layers appendToCurrentActivityMethod:@selector(creatureEndTurn:) Param1:creature Param2:nil];
+	[layers magicFrom:creature TargetPos:position Id:selectedMagic.identifier];
+    // [layers appendToCurrentActivityMethod:@selector(creatureEndTurn:) Param1:creature Param2:nil];
+    
+    [canMagicList release];
+    [candidateList release];
 }
 
 -(void) takePendAction
@@ -121,7 +146,7 @@
 		float distance = [field getDirectDistance:creature And:c];
 		
 		if (distance <= magic.effectScope + magic.effectRange) {
-			if (c.data.hpCurrent < c.data.hpMax && (candidate == nil || candidate.data.hpCurrent > c.data.hpCurrent)) {
+			if ([magic hasDefensiveEffectOn:c] && c.data.hpCurrent < c.data.hpMax && (candidate == nil || candidate.data.hpCurrent > c.data.hpCurrent)) {
 				candidate = c;
 			}
 		}
@@ -131,12 +156,14 @@
 	return candidate;
 }
 
--(MagicDefinition *) getAvailableMagic
+-(NSMutableArray *) getAvailableMagic
 {
 	if (![creature canFireMagic]) {
 		return nil;
 	}
 	
+    NSMutableArray *magicList = [[NSMutableArray alloc] init];
+    
 	for (int index = [creature.data.magicList count] - 1; index >= 0; index--) {
 		NSNumber *magicId = [creature.data.magicList objectAtIndex:index];
 		MagicDefinition *magic = [[DataDepot depot] getMagicDefinition:[magicId intValue]];
@@ -146,11 +173,31 @@
 		}
 		
 		if (creature.data.mpCurrent >= magic.mpCost) {
-			return magic;
+			[magicList addObject:magic];
 		}
 	}
 	
-	return nil;
+	return [magicList autorelease];
 }
+
+-(int) chooseMagicFromCandidate:(NSMutableArray *)candidateMagicList {
+    
+    int totalConsideration = 0;
+    
+    for (MagicDefinition *magic in candidateMagicList) {
+        totalConsideration += magic.aiConsiderRate;
+    }
+    
+    int ranValue = [FDRandom from:0 to:totalConsideration];
+    for (int i = 0; i < [candidateMagicList count]; i++) {
+        MagicDefinition *magic = [candidateMagicList objectAtIndex:i];
+        ranValue -= magic.aiConsiderRate;
+        if (ranValue <= 0) {
+            return i;
+        }
+    }
+    return 0;
+}
+
 
 @end

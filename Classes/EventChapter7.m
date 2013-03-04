@@ -183,7 +183,9 @@
 
 -(void) adjustFriends
 {
-	if ([field getCreatureById:10] != nil) {
+	[layers gameCleared];
+    
+    if ([field getCreatureById:10] != nil) {
 		
 		FDFriend *kaili = [[FDFriend alloc] initWithDefinition:10 Id:10];
 		[[field getFriendList] addObject:kaili];

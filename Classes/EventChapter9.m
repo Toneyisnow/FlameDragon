@@ -138,7 +138,9 @@
 
 -(void) enemyClear
 {
-	[field addNpc:[[[FDNpc alloc] initWithDefinition:50911 Id:301] autorelease] Position:CGPointMake(13, 1)];
+	[layers gameCleared];
+    
+    [field addNpc:[[[FDNpc alloc] initWithDefinition:50911 Id:301] autorelease] Position:CGPointMake(13, 1)];
 	
 	for (int i = 1; i <= 5; i++) {
 		[self showTalkMessage:9 conversation:3 sequence:i];
