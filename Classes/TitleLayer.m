@@ -141,6 +141,7 @@
 	[[record friendRecords] addObject:[self loadTestingRecord:9 level:22]];
 	[[record friendRecords] addObject:[self loadTestingRecord:10 level:22]];
 	[[record friendRecords] addObject:[self loadTestingRecord:11 level:25]];
+    
 	[[record friendRecords] addObject:[self loadTestingRecord:12 level:25]];
 	[[record friendRecords] addObject:[self loadTestingRecord:13 level:25]];
 	[[record friendRecords] addObject:[self loadTestingRecord:14 level:25]];

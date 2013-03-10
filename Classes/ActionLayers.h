@@ -105,6 +105,8 @@ typedef enum TurnType
 
 -(void) clearCreatureInfo;
 
+-(void) notifyEventListener;
+
 -(int) getTurnNumber;
 -(TurnType) getTurnType;
 -(void) showTurnInfo;

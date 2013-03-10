@@ -76,13 +76,16 @@
 		[attSprite setAnchorPoint:CGPointMake(0, 0)];
 		[attSprite setLocation:CGPointMake(nowX + 80, nowY + 10)];
 		[baseSprite addSprite:attSprite zOrder:3];
-		
+		[attSprite release];
+        
 		// Money
 		NSString *moneyStr = [NSString stringWithFormat:@"$ %05d", [self getPrice:item]];
 		FDSprite *moneySprite = [[FDSprite alloc] initWithString:moneyStr Size:9];	
 		[moneySprite setAnchorPoint:CGPointMake(0, 0)];
 		[moneySprite setLocation:CGPointMake(nowX + 80, nowY)];
 		[baseSprite addSprite:moneySprite zOrder:3];
+        [moneySprite release];
+        
 	}
 }
 

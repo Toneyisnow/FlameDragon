@@ -34,7 +34,7 @@
 	
 	def.magicDefenceRate = [stream readInt];
 	
-	return def;
+	return [def autorelease];
 }
 
 -(id) init

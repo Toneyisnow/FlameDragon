@@ -146,6 +146,7 @@
 		
 		FDFriend *tienuo = [[FDFriend alloc] initWithDefinition:7 Id:7];
 		[[field getFriendList] addObject:tienuo];
+        [tienuo release];
 	}
 	
 	[layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];

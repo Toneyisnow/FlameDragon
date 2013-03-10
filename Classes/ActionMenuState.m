@@ -168,8 +168,11 @@
 	}
 	else
 	{
-		[layers creatureEndTurn:currentFriend];
-
+        // Notify the event listener before ending turn
+		//[layers creatureEndTurn:currentFriend];
+        [layers appendToMainActivityMethod:@selector(notifyEventListener) Param1:nil Param2:nil Obj:layers];
+        [layers appendToMainActivityMethod:@selector(creatureEndTurn:) Param1:currentFriend Param2:nil Obj:layers];
+        
 		isFinished = TRUE;
 		shouldDispose = TRUE;
 	}
@@ -213,7 +216,10 @@
 	}
 	
 	[layers appendToMainActivityMethod:@selector(closeMenu) Param1:nil Param2:nil Obj:field];
-	[layers appendToMainActivityMethod:@selector(creatureEndTurn:) Param1:currentFriend Param2:nil Obj:layers];
+	
+    // Notify the event listener before ending turn
+    [layers appendToMainActivityMethod:@selector(notifyEventListener) Param1:nil Param2:nil Obj:layers];
+    [layers appendToMainActivityMethod:@selector(creatureEndTurn:) Param1:currentFriend Param2:nil Obj:layers];
 }
 
 

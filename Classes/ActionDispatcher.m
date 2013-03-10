@@ -144,7 +144,7 @@
 			[previousState resumeState];
 			
 			[self updateState];
-			//[state release];
+			[state release];
 		}
 	}
 	else if ([state getNextState] != nil) {

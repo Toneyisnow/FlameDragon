@@ -973,6 +973,11 @@
 	return record;
 }
 
+-(void) notifyEventListener {
+    
+    [eventListener isNotified];
+}
+
 -(void) showItemStatus:(FDCreature *)creature
 {
 	NSLog(@"Show creature item status");

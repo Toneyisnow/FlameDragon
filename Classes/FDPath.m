@@ -37,7 +37,7 @@
 
 +(id) pathWithPos1:(CGPoint)pos1 Pos2:(CGPoint)pos2
 {
-	return [[self alloc] initWithPos1:pos1 Pos2:pos2];
+	return [[[self alloc] initWithPos1:pos1 Pos2:pos2] autorelease];
 }
 
 
@@ -87,7 +87,7 @@
 	FDPath *newPath = [[FDPath alloc] init];
 	
 	if ([pointList count] == 0) {
-		return newPath;
+		return [newPath autorelease];
 	}
 	
 	FDPosition *current = [pointList objectAtIndex:0];

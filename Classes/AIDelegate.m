@@ -150,19 +150,18 @@
 	if ([creature getCreatureType] == CreatureType_Enemy)
 	{
 		terminateCandidates = [field getFriendList];
-		terminateCreature = [[field getFriendList] objectAtIndex:0];
+		// terminateCreature = [[field getFriendList] objectAtIndex:0];
 	}
 	else if ([creature getCreatureType] == CreatureType_Npc)
 	{
 		terminateCandidates = [field getEnemyList];
-		terminateCreature = [[field getEnemyList] objectAtIndex:0];
+		// terminateCreature = [[field getEnemyList] objectAtIndex:0];
 	}
 	
 	int candidateIndex = 0;
 	while (candidateIndex < [terminateCandidates count]-1 && ![creature isAbleToAttack:[terminateCandidates objectAtIndex:candidateIndex]]) {
 		candidateIndex ++;
 	}
-	
 	terminateCreature = [terminateCandidates objectAtIndex:candidateIndex];
 	
 	[disResolver resolveDistanceFrom:currentPos terminateAt:[field getObjectPos:terminateCreature]];

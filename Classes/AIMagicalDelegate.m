@@ -64,31 +64,35 @@
         }
 	}
     
-    if ([canMagicList count] == 0) {
-        NSLog(@"Didn't find candidate.");
-        [layers appendToCurrentActivityMethod:@selector(creaturePendAction:) Param1:creature Param2:nil];
-        return;
+    @try {
+        if ([canMagicList count] == 0) {
+            NSLog(@"Didn't find candidate.");
+            [layers appendToCurrentActivityMethod:@selector(creaturePendAction:) Param1:creature Param2:nil];
+            return;
+        }
+        
+        int magicIndex = [self chooseMagicFromCandidate:canMagicList];
+        MagicDefinition *selectedMagic = [canMagicList objectAtIndex:magicIndex];
+        FDCreature *selectedCandidate = [candidateList objectAtIndex:magicIndex];
+        
+        if (selectedMagic == nil || selectedCandidate == nil) {
+            NSLog(@"Didn't find candidate.");
+            [layers appendToCurrentActivityMethod:@selector(creaturePendAction:) Param1:creature Param2:nil];
+            return;
+        }
+        
+        // Use Magic
+        CGPoint position = [field getObjectPos:selectedCandidate];
+        [field setCursorTo:position];
+        
+        [layers magicFrom:creature TargetPos:position Id:selectedMagic.identifier];
+        // [layers appendToCurrentActivityMethod:@selector(creatureEndTurn:) Param1:creature Param2:nil];
+        
     }
-    
-    int magicIndex = [self chooseMagicFromCandidate:canMagicList];
-    MagicDefinition *selectedMagic = [canMagicList objectAtIndex:magicIndex];
-    FDCreature *selectedCandidate = [candidateList objectAtIndex:magicIndex];
-    
-    if (selectedMagic == nil || selectedCandidate == nil) {
-        NSLog(@"Didn't find candidate.");
-        [layers appendToCurrentActivityMethod:@selector(creaturePendAction:) Param1:creature Param2:nil];
-        return;
+    @finally {
+        [canMagicList release];
+        [candidateList release];
     }
-    
-	// Use Magic
-	CGPoint position = [field getObjectPos:selectedCandidate];
-	[field setCursorTo:position];
-	
-	[layers magicFrom:creature TargetPos:position Id:selectedMagic.identifier];
-    // [layers appendToCurrentActivityMethod:@selector(creatureEndTurn:) Param1:creature Param2:nil];
-    
-    [canMagicList release];
-    [candidateList release];
 }
 
 -(void) takePendAction

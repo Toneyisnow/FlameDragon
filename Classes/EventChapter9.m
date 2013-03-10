@@ -108,16 +108,11 @@
 
 -(void) laitingDead
 {
-	for (int i = 1; i <= 21; i++) {
-		[self showTalkMessage:9 conversation:2 sequence:i];
-	}
-	
 	FDCreature *laiting = [field getCreatureById:199];
 	FDFriend *friendLaiting = [[FDFriend alloc] initWithDefinition:13 Id:13];
 	friendLaiting.data.hpCurrent = 1;
 	[field addFriend:friendLaiting Position:[field getObjectPos:laiting]];
 	[friendLaiting release];
-	
 	
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50909 Id:201] autorelease] Position:CGPointMake( 2, 16)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50909 Id:202] autorelease] Position:CGPointMake(24, 16)];
@@ -134,6 +129,10 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50911 Id:211] autorelease] Position:CGPointMake(14,  1)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50911 Id:212] autorelease] Position:CGPointMake(12,  3)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50911 Id:213] autorelease] Position:CGPointMake(14,  3)];
+    
+    for (int i = 1; i <= 21; i++) {
+		[self showTalkMessage:9 conversation:2 sequence:i];
+	}
 }
 
 -(void) enemyClear

@@ -24,7 +24,7 @@
 		[def.sequence addObject:[NSNumber numberWithInt:num]];
 	}
 	
-	return def;
+	return [def autorelease];
 }
 
 -(id) init

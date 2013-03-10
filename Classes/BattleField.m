@@ -82,7 +82,8 @@
 		
 		FDTreasure *treasure = [[FDTreasure alloc] initWithType:type Item:itemId];
 		[self addObject:treasure Position:CGPointMake(posX, posY)];
-		
+		[treasure release];
+        
 		NSLog(@"Loaded treasure %d at (%d, %d).", itemId, posX, posY);
 	}
 	
@@ -252,8 +253,8 @@
 	[self removeAllIndicators];
 	[creature preMove:[self getObjectPos:creature]];
 	
-	CreatureType enemyType1;
-	CreatureType enemyType2;
+	CreatureType enemyType1 = CreatureType_Friend;
+	CreatureType enemyType2 = CreatureType_Friend;
 	
 	if ([creature getCreatureType] == CreatureType_Friend || [creature getCreatureType] == CreatureType_Npc)
 	{
@@ -828,22 +829,22 @@
 
 -(NSMutableArray *) searchMoveScope:(FDCreature *)creature
 {
-	CreatureType friendType1;
-	CreatureType friendType2;
-	CreatureType enemyType1;
-	CreatureType enemyType2;
+	CreatureType friendType1 = CreatureType_Friend;
+	CreatureType friendType2 = CreatureType_Npc;
+	// CreatureType enemyType1;
+	// CreatureType enemyType2;
 	
 	if ([creature getCreatureType] == CreatureType_Friend || [creature getCreatureType] == CreatureType_Npc)
 	{
 		friendType1 = CreatureType_Friend;
 		friendType2 = CreatureType_Npc;
-		enemyType1 = enemyType2 = CreatureType_Enemy;
+		// enemyType1 = enemyType2 = CreatureType_Enemy;
 	}
 	
 	if ([creature getCreatureType] == CreatureType_Enemy)
 	{
-		enemyType1 = CreatureType_Friend;
-		enemyType2 = CreatureType_Npc;
+		// enemyType1 = CreatureType_Friend;
+		// enemyType2 = CreatureType_Npc;
 		friendType1 = friendType2 = CreatureType_Enemy;
 	}
 	
@@ -880,7 +881,7 @@
 	for (int i = 1; i <= fieldWidth; i++) {
 		for (int j = 1; j <= fieldHeight; j++) {
 			
-			ScopeResistanceType resistance;
+			ScopeResistanceType resistance = ScopeResistance_Gap;
 			
 			ScopeResistanceType oldresistance = [map getX:i	Y:j];
 			if (oldresistance == ScopeResistance_Gap) {
