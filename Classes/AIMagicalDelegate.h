@@ -17,6 +17,7 @@
 -(NSMutableArray *) getAvailableMagic;
 -(void) takeMagicAction;
 -(void) takePendAction;
+-(void) takeAttackAction;
 
 -(FDCreature *) findAffensiveTarget:(MagicDefinition *)magic;
 -(FDCreature *) findDefensiveTarget:(MagicDefinition *)magic;

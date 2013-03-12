@@ -128,7 +128,7 @@
 
 -(CCScene *) loadTestingGame
 {
-	ChapterRecord *record = [ChapterRecord generateRecord:13 money:60000];
+	ChapterRecord *record = [ChapterRecord generateRecord:15 money:60000];
 	
 	[[record friendRecords] addObject:[self loadTestingRecord:1 level:28]];
 	[[record friendRecords] addObject:[self loadTestingRecord:2 level:28]];

@@ -56,6 +56,8 @@
 -(int) getId;
 -(int) getAnimationId;
 
+-(int) getMaximumLevel;
+
 -(NSString *) getRaceString;
 -(NSString *) getOccupationString;
 -(NSString *) getNameString;

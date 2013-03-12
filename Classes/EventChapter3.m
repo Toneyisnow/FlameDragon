@@ -15,7 +15,7 @@
 -(void) loadEvents
 {
 	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(round1_1)];
-	[self loadTurnEvent:TurnType_Enemy Turn:2 Action:@selector(round2)];
+	[self loadTurnEvent:TurnType_Enemy Turn:3 Action:@selector(round2)];
 	
 	[self loadDyingEvent:7 Action:@selector(tienuoDyingMessage)];
 	[self loadDyingEvent:40 Action:@selector(showBossDyingMessage)];

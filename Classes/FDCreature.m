@@ -215,7 +215,7 @@
 	data.ex += lastGainedExperience;
 	lastGainedExperience = 0;
 
-	BOOL levelUp = (data.ex >= 100);
+	BOOL levelUp = (data.ex >= 100) && (data.level < [definition getMaximumLevel]);
 	
 	if (levelUp) {
 		
@@ -250,7 +250,8 @@
 	data.dp += dpInc;
 	data.dx += dxInc;
 	if (magic != nil) {
-		[data.magicList addObject:[NSNumber numberWithInt:magic.identifier]];
+        [data addMagic:magic.identifier];
+		// [data.magicList addObject:[NSNumber numberWithInt:magic.identifier]];
 	}
 	
 	// NSString *message = [NSString stringWithFormat:@"等级上升了！#攻击力提升5#防御力提升3#速度提升4#"];

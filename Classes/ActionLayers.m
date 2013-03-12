@@ -577,9 +577,9 @@
 	}
 	
     // Check end turn
+    [self appendToCurrentActivityMethod:@selector(checkEndTurn) Param1:nil Param2:nil Obj:self];
+    
     [self appendToCurrentActivityMethod:@selector(isNotified) Param1:nil Param2:nil Obj:eventListener];
-	
-	[self appendToCurrentActivityMethod:@selector(checkEndTurn) Param1:nil Param2:nil Obj:self];
 }
 
 -(void) creaturePendAction:(FDCreature *)creature

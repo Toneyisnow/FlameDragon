@@ -109,8 +109,36 @@
 		[layers moveCreature:creature To:targetPos showMenu:FALSE];
 	}
 	
+    
+    
 	NSLog(@"End Pend Action;");
-	[layers appendToCurrentActivityMethod:@selector(creatureEndTurn:) Param1:creature Param2:nil];
+	[layers appendToCurrentActivityMethod:@selector(takeAttackAction) Param1:creature Param2:nil Obj:self];
+}
+
+-(void) takeAttackAction {
+    
+    BattleField *field = [[layers getFieldLayer] getField];
+    FDRange *range = [creature attackRange];
+	
+    FDCreature *attackTarget = nil;
+    
+    NSMutableArray *targetList = [NSMutableArray arrayWithArray:[field getFriendList]];
+    [targetList addObjectsFromArray:[field getNpcList]];
+    
+    for (FDCreature *target in targetList) {
+        if (target != nil && [creature isAbleToAttack:target]
+		&& (range != nil && [range containsValue:[field getDirectDistance:creature And:target]])) {
+            attackTarget = target;
+            break;
+        }
+    }
+	
+    if (attackTarget != nil) {
+		[layers appendToCurrentActivityMethod:@selector(attackFrom:Target:) Param1:creature Param2:attackTarget];
+	}
+	else {
+		[layers appendToCurrentActivityMethod:@selector(creatureEndTurn:) Param1:creature Param2:nil];
+	}
 }
 
 -(FDCreature *) findAffensiveTarget:(MagicDefinition *)magic

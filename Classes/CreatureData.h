@@ -98,6 +98,8 @@ typedef enum AIType {
 -(void) clearStatusProhibited;
 -(void) clearStatusFrozen;
 
+-(void) addMagic:(int)magicId;
+
 -(AttackItemDefinition *) getAttackItem;
 -(DefendItemDefinition *) getDefendItem;
 

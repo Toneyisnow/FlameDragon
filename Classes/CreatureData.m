@@ -415,6 +415,14 @@
 	statusFrozen = 0;
 }
 
+-(void) addMagic:(int)magicId
+{
+    if (![magicList containsObject:[NSNumber numberWithInt:magicId]])
+    {
+        [magicList addObject:[NSNumber numberWithInt:magicId]];
+    }
+}
+
 -(void) dealloc
 {
 	[itemList release];

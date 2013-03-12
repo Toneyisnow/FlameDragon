@@ -203,6 +203,15 @@
     return NO;
 }
 
+-(int) getMaximumLevel {
+    
+    if (race == 7) {
+        return 99;
+    }
+    
+    return 40;
+}
+
 -(void) dealloc
 {
 	[data release];
