@@ -65,6 +65,7 @@
 -(BOOL) canEquip:(int)itemCategory;
 -(BOOL) isMagicalCreature;
 -(BOOL) canFly;
+-(BOOL) isKnight;
 
 @property (nonatomic) int identifier;
 @property (nonatomic) int animationId;
