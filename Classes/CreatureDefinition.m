@@ -203,6 +203,14 @@
     return NO;
 }
 
+-(BOOL) isKnight {
+	if (occupation == 131 || occupation == 132) {
+		return YES;
+	}
+
+	return NO;
+}
+
 -(int) getMaximumLevel {
     
     if (race == 7) {
