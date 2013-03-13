@@ -35,7 +35,7 @@
 		}
 	
 	NSLog(@"Resolved Result count: %d", [result count]);
-	return result;
+	return [result autorelease];
 }
 
 -(void) walk:(CGPoint) pos WithMovePoint:(int)nowPoint
