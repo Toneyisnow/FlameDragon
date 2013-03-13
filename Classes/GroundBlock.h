@@ -18,6 +18,7 @@ typedef enum GroundBlockType {
 	GroundBlockTypeForest = 6
 } GroundBlockType;
 
+// DEPRECATED: This shoud be not used, use ScopeBlockType/PathBlockType instead
 typedef enum GroundBlockAccessType {
 
 	GroundBlockAccessTypeCanWalk = 0,
@@ -30,14 +31,21 @@ typedef enum GroundBlockAccessType {
 
 	int defencePoint;	// AP
 	int attackPoint;	// DP
+	
+	// DEPRECATED
 	GroundBlockAccessType accessType;		// 1:plain	2:blocked	3:can fly
+	
+	GroundBlockType blockType;
 }
 
 +(id) blockWithType:(GroundBlockType) blockType;
 
 // +(id) blockWithId:(int)i;	// 1: Plain  2: Forest 3: Chasm 4: Gap
 
+// DEPRECATED
 -(GroundBlockAccessType) getAccessType;
+
+-(GroupdBlockType) getBlockType;
 
 -(int) attackPoint;
 -(int) defencePoint;
