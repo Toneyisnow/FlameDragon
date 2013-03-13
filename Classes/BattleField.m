@@ -233,7 +233,7 @@
 -(void) prepareToMove:(FDCreature *)creature
 {
 	creature.hasMoved = FALSE;
-	NSMutableArray *unitList = [self searchMoveScope:creature];
+	NSMutableArray *unitList = [[self searchMoveScope:creature] retain];
 	
 	for(FDPosition *pos in unitList)
 	{
@@ -241,6 +241,7 @@
 		[self addObject:indicator Position:[pos posValue]];
 		[indicator release];
 	}
+	[unitList release];
 }
 
 -(void) moveCreature:(FDCreature *)creature To:(CGPoint)pos showMenu:(BOOL)willShowMenu
@@ -270,9 +271,9 @@
 	FDIntMap *map = nil;
     
     if ([creature canFly]) {
-        map = [[groundField getGroundMapForFly] clone];
+        map = [[groundField getGroundPathMapForFly] clone];
     } else {
-        map = [[groundField getGroundMapForGround] clone];
+        map = [[groundField getGroundPathMapForGround] clone];
     }
     
 	for (int i = 1; i <= fieldWidth; i++) {
@@ -849,35 +850,17 @@
 	}
 	
 	// Build Map
-	FDIntMap *map = [[FDIntMap alloc] initWidth:fieldWidth Height:fieldHeight];
-	
-	// Build by ground units
-	for (int i = 1; i <= fieldWidth; i++) {
-		for (int j = 1; j <= fieldHeight; j++) {
-			
-			ScopeResistanceType resistance;
-			
-			GroundBlock *block = [groundField blockAtX:i Y:j];
-			switch ([block getAccessType])
-			{
-				case GroundBlockAccessTypeCanWalk:
-					resistance = ScopeResistance_Plain;
-					break;
-				case GroundBlockAccessTypeCanFly:
-					resistance = ([creature canFly] ? ScopeResistance_Plain : ScopeResistance_Gap);
-					break;
-				case GroundBlockAccessTypeNone:
-					resistance = ScopeResistance_Gap;
-					break;
-				default:
-					resistance = ScopeResistance_Gap;
-					break;
-			}
-			[map setX:i Y:j Value: resistance];
-		}
-	}
-	
+	FDIntMap *map = nil;
+    if ([creature canFly]) {
+        map = [[groundField getGroundScopeMapForFly] clone];
+    } else if ([creature isKnight]) {
+	    map = [[groundField getGroundScopeMapForKnight] clone];	
+	} else {
+        map = [[groundField getGroundScopeMapForGround] clone];
+    }
+    
 	// Build by friends and enemies
+	/*
 	for (int i = 1; i <= fieldWidth; i++) {
 		for (int j = 1; j <= fieldHeight; j++) {
 			
@@ -912,6 +895,7 @@
 			[map setX:i Y:j Value: resistance];
 		}
 	}
+	*/
 	
 	// Build ZOC
 	for (int i = 1; i <= fieldWidth; i++) {
@@ -933,61 +917,54 @@
 			[map setX:i Y:j Value:ScopeResistance_Gap];
 			
 			// Set ZOC zone
-			if (i > 1)
-			{
-				ScopeResistanceType pos1type = [map getX:i-1 Y:j];
-				if (pos1type != ScopeResistance_Gap && pos1type != ScopeResistance_Skip) {
-					//NSLog(@"Set ZOC: %d, %d", i-1, j);
-					[map setX:i-1 Y:j Value:ScopeResistance_ZOC];
-				}
-				else {
-					[map setX:i-1 Y:j Value:ScopeResistance_Gap];
-				}
-			}
-			if (i < fieldWidth)
-			{
-				ScopeResistanceType pos1type = [map getX:i+1 Y:j];
-				if (pos1type != ScopeResistance_Gap && pos1type != ScopeResistance_Skip) {
-					//NSLog(@"Set ZOC: %d, %d", i+1, j);
-					[map setX:i+1 Y:j Value:ScopeResistance_ZOC];
-				}
-				else {
-					[map setX:i+1 Y:j Value:ScopeResistance_Gap];
-				}
-			}
-			if (j > 1)
-			{
-				ScopeResistanceType pos1type = [map getX:i Y:j-1];
-				if (pos1type != ScopeResistance_Gap && pos1type != ScopeResistance_Skip) {
-					//NSLog(@"Set ZOC: %d, %d", i, j-1);
-					[map setX:i Y:j-1 Value:ScopeResistance_ZOC];
-				}
-				else {
-					[map setX:i Y:j-1 Value:ScopeResistance_Gap];
-				}
-			}
-			if (j < fieldHeight) {
-				ScopeResistanceType pos1type = [map getX:i Y:j+1];
-				if (pos1type != ScopeResistance_Gap && pos1type != ScopeResistance_Skip) {
-					//NSLog(@"Set ZOC: %d, %d", i, j+1);
-					[map setX:i Y:j+1 Value:ScopeResistance_ZOC];
-				}
-				else {
-					[map setX:i Y:j+1 Value:ScopeResistance_Gap];
-				}
-			}
+			[self setScopeMapZOC:map X:i-1 Y:j];
+			[self setScopeMapZOC:map X:i+1 Y:j];
+			[self setScopeMapZOC:map X:i Y:j-1];
+			[self setScopeMapZOC:map X:i Y:j+1];
 		}
 	}
 	
 	CGPoint pos = [self getObjectPos:creature];
 	[map setX:pos.x Y:pos.y Value: ScopeResistance_Plain];
 	
-	
 	ScopeResolver *resolver = [[ScopeResolver alloc] initWithMap:map Width:fieldWidth Height:fieldHeight];
+	NSMutableArray *resultArray = [resolver resolveScopeFrom:[self getObjectPos:creature] min:0 max:creature.data.mv];
+	[resultArray retain];
+	[resolver release];
 	[map release];
-	[resolver autorelease];
+	
+	// Remove all of the Scopes that Already Occupied
+	int i = 0;
+	while (i < [resultArray count])
+	{
+		FDPosition *pos = [resultArray objectAtIndex:i];
+		FDCreature *c = [self getCreatureByPos:[pos posValue]];
+		
+		if (c != nil && c != creature)
+		{
+			[resultArray removeObject:pos];
+		}
+		else
+		{
+			i++;
+		}
+	}
+	
+	return [resultArray autorelease];
+}
 
-	return [resolver resolveScopeFrom:[self getObjectPos:creature] min:0 max:creature.data.mv];
+-(void) setScopeMapZOC:(FDIntMap *)map X:(int)x Y:(int)y
+{
+	if (x <= 0 || x > fieldWidth || y <= 0 || y > fieldHeight)
+	{
+		return;
+	}
+	
+	ScopeResistanceType pos1type = [map getX:x Y:y];
+	if (pos1type != ScopeResistance_Gap) {
+		//NSLog(@"Set ZOC: %d, %d", x, y);
+		[map setX:x Y:y Value:ScopeResistance_ZOC];
+	}
 }
 
 -(int) getDirectDistance:(FDCreature *)creature1 And:(FDCreature *)creature2
