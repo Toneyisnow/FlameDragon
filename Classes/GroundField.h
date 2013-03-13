@@ -18,9 +18,11 @@
 	
 	NSMutableDictionary *backgroundDic;
     
-    FDIntMap *groundMapForGround;
-    FDIntMap *groundMapForFly;
-    
+    	FDIntMap *groundPathMapForGround;
+    	FDIntMap *groundPathMapForFly;
+	FDIntMap *groundScopeMapForGround;
+	FDIntMap *groundScopeMapForFly;
+	FDIntMap *groundScopeMapForKnight;
 }
 
 -(id) initWithDefinitionStream:(FDFileStream *)fileStream;
@@ -31,7 +33,10 @@
 
 -(int) fightBackgroundIdAtX:(int)x Y:(int)y;
 
--(FDIntMap *) getGroundMapForGround;
--(FDIntMap *) getGroundMapForFly;
+-(FDIntMap *) getGroundPathMapForGround;
+-(FDIntMap *) getGroundPathMapForFly;
+-(FDIntMap *) getGroundScopeMapForGround;
+-(FDIntMap *) getGroundScopeMapForFly;
+-(FDIntMap *) getGroundScopeMapForKnight;
 
 @end
