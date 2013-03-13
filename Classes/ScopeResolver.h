@@ -9,6 +9,7 @@ typedef enum ScopeResistanceType
 	
 	ScopeResistance_Plain = 1,
 	ScopeResistance_Slow = 2,
+	ScopeResistance_VerySlow = 3,
 	ScopeResistance_Gap = -99,
 	ScopeResistance_Skip = -1,
 	ScopeResistance_ZOC = 99	// Currently it's not working
