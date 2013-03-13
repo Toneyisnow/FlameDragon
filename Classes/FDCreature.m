@@ -447,11 +447,15 @@
 }
 
 -(BOOL) canFly {
-    return [definition canFly];
+    	return [definition canFly];
 }
 
 -(BOOL) isNotFrozen {
-    return data.statusFrozen <= 0;
+    	return data.statusFrozen <= 0;
+}
+
+-(BOOL) isKnight {
+	return [definition isKnight];
 }
 
 -(void) dealloc
