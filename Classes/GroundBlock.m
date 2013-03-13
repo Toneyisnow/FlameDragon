@@ -22,6 +22,7 @@
 	self = [super init];
 	
 	accessType = type;
+        blockType = type;
 	attackPoint = ap;
 	defencePoint = dp;
 	
@@ -33,19 +34,19 @@
 {
 	switch (blockType) {
 		case GroundBlockTypeGround:
-			return [[[self alloc] initWithType:GroundBlockAccessTypeCanWalk AP:5 DP:0] autorelease];
-			break;
+			return [[[self alloc] initWithType:GroundBlockTypeGround AP:5 DP:0] autorelease];
 		case GroundBlockTypeForest:
-			return [[[self alloc] initWithType:GroundBlockAccessTypeCanWalk AP:-5 DP:10] autorelease];
-			break;
+			return [[[self alloc] initWithType:GroundBlockTypeForest AP:-5 DP:10] autorelease];
 		case GroundBlockTypeChasm:
-			return [[[self alloc] initWithType:GroundBlockAccessTypeCanFly AP:0 DP:0] autorelease];
-			break;
+			return [[[self alloc] initWithType:GroundBlockTypeChasm AP:0 DP:0] autorelease];
 		case GroundBlockTypeGap:
-			return [[[self alloc] initWithType:GroundBlockAccessTypeNone AP:0 DP:0] autorelease];
-			break;
+			return [[[self alloc] initWithType:GroundBlockTypeGap AP:0 DP:0] autorelease];
+		case GroundBlockTypeMarsh:
+			return [[[self alloc] initWithType:GroundBlockTypeMarsh AP:-5 DP:-5] autorelease];
+		case GroundBlockTypeBlackForest:
+			return [[[self alloc] initWithType:GroundBlockTypeBlackForest AP:-5 DP:-5] autorelease];
 		default:
-			break;
+           		return [[[self alloc] initWithType:GroundBlockTypeGround AP:5 DP:0] autorelease];
 	}
 	
 	return nil;
@@ -54,6 +55,11 @@
 -(GroundBlockAccessType) getAccessType
 {
 	return accessType;
+}
+
+-(GroundBlockType) getBlockType
+{
+	return blockType;
 }
 
 -(int) attackPoint
