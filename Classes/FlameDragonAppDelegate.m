@@ -17,6 +17,7 @@
 #import "DataDepot.h"
 #import "TitleScene.h"
 #import "GameOverScene.h"
+#import "FDAudioEngine.h"
 
 @implementation FlameDragonAppDelegate
 
@@ -133,10 +134,12 @@
 
 - (void)applicationWillResignActive:(UIApplication *)application {
 	[[CCDirector sharedDirector] pause];
+    [FDAudioEngine pauseAudio];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
 	[[CCDirector sharedDirector] resume];
+    [FDAudioEngine resumeAudio];
 }
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
@@ -145,10 +148,12 @@
 
 -(void) applicationDidEnterBackground:(UIApplication*)application {
 	[[CCDirector sharedDirector] stopAnimation];
+    [FDAudioEngine pauseAudio];
 }
 
 -(void) applicationWillEnterForeground:(UIApplication*)application {
 	[[CCDirector sharedDirector] startAnimation];
+    [FDAudioEngine resumeAudio];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

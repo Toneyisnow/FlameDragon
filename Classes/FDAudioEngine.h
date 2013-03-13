@@ -23,5 +23,7 @@ typedef enum AudioShopType {
 +(void) playBattleGroundMusic:(int)chapterId;
 +(void) stopMusic;
 
++(void) resumeAudio;
++(void) pauseAudio;
 
 @end

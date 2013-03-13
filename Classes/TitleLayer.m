@@ -93,8 +93,8 @@
 {
 	NSLog(@"onLoadGame");
 	
-	CCScene *scene = [self loadTestingGame];
-	// LoadingScene *scene = [LoadingScene node];
+	// CCScene *scene = [self loadTestingGame];
+	LoadingScene *scene = [LoadingScene node];
     
 	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];
     

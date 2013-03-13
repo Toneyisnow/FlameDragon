@@ -79,4 +79,12 @@
 }
 
 
++(void) resumeAudio {
+    [[SimpleAudioEngine sharedEngine] resumeBackgroundMusic];
+}
+
++(void) pauseAudio {
+    [[SimpleAudioEngine sharedEngine] pauseBackgroundMusic];
+}
+
 @end
