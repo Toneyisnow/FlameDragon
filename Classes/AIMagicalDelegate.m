@@ -47,7 +47,6 @@
 	
     NSMutableArray *canMagicList = [[NSMutableArray alloc] init];
     NSMutableArray *candidateList = [[NSMutableArray alloc] init];
-    FDCreature *candidate = nil;
     for (MagicDefinition *magic in magicList)
 	{
         FDCreature *candidate = nil;

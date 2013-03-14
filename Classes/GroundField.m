@@ -9,6 +9,7 @@
 #import "GroundField.h"
 #import "FDRect.h"
 #import "PathResolver.h"
+#import "ScopeResolver.h"
 
 @implementation GroundField
 
@@ -111,23 +112,24 @@
 	return self;
 }
 
--(FDIntMap *) getgroundPathMapForGround {
+
+-(FDIntMap *) getGroundPathMapForGround {
     return groundPathMapForGround;
 }
 
--(FDIntMap *) getgroundPathMapForFly {
+-(FDIntMap *) getGroundPathMapForFly {
     return groundPathMapForFly;
 }
 
--(FDIntMap *) getgroundScopeMapForGround {
+-(FDIntMap *) getGroundScopeMapForGround {
     return groundScopeMapForGround;
 }
 
--(FDIntMap *) getgroundScopeMapForFly {
+-(FDIntMap *) getGroundScopeMapForFly {
     return groundScopeMapForFly;
 }
 
--(FDIntMap *) getgroundScopeMapForKnight {
+-(FDIntMap *) getGroundScopeMapForKnight {
     return groundScopeMapForKnight;
 }
 

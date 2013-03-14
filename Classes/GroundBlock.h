@@ -45,7 +45,7 @@ typedef enum GroundBlockAccessType {
 // DEPRECATED
 -(GroundBlockAccessType) getAccessType;
 
--(GroupdBlockType) getBlockType;
+-(GroundBlockType) getBlockType;
 
 -(int) attackPoint;
 -(int) defencePoint;

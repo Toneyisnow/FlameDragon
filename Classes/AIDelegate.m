@@ -51,7 +51,7 @@
 		for (int j = 1; j <= fieldHeight; j++) {
 			
 			GroundBlock *block = [[field getGroundField] blockAtX:i Y:j];
-			switch ([block getAccessType])
+			switch ([block getBlockType])
 			{
 				case GroundBlockTypeGround:
 				case GroundBlockTypeForest:
