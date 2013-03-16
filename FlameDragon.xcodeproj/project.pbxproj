@@ -25,7 +25,6 @@
 		0213447C16DE821A00AB5D16 /* videoOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0213447916DE821A00AB5D16 /* videoOverlayView.m */; };
 		0213447E16DE82C200AB5D16 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0213447D16DE82C200AB5D16 /* MediaPlayer.framework */; };
 		0213448516DE930800AB5D16 /* Openning.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0213448416DE930800AB5D16 /* Openning.mp4 */; };
-		0213448816DE934800AB5D16 /* Title.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0213448716DE934800AB5D16 /* Title.wav */; };
 		0213CF9C156215FD004C061E /* ShoppingShowProductDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 0213CF9B156215FD004C061E /* ShoppingShowProductDialog.m */; };
 		0214952414AA0F0F00DBA2C1 /* Occupation.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0214952214AA0F0F00DBA2C1 /* Occupation.strings */; };
 		0214952514AA0F0F00DBA2C1 /* Race.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0214952314AA0F0F00DBA2C1 /* Race.strings */; };
@@ -335,6 +334,16 @@
 		0297DD28148BA325007F3E12 /* TalkMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0297DD27148BA325007F3E12 /* TalkMessage.m */; };
 		0297DEAD148E5273007F3E12 /* GameFormula.m in Sources */ = {isa = PBXBuildFile; fileRef = 0297DEAC148E5273007F3E12 /* GameFormula.m */; };
 		0297DFF1148FB8BE007F3E12 /* TurnInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0297DFF0148FB8BE007F3E12 /* TurnInfo.m */; };
+		02996C5F16F4485200FF2AE9 /* Chapter-21-Creature.dat  in Resources */ = {isa = PBXBuildFile; fileRef = 02996C5516F4485200FF2AE9 /* Chapter-21-Creature.dat  */; };
+		02996C6016F4485200FF2AE9 /* Chapter-22-Creature.dat  in Resources */ = {isa = PBXBuildFile; fileRef = 02996C5616F4485200FF2AE9 /* Chapter-22-Creature.dat  */; };
+		02996C6116F4485200FF2AE9 /* Chapter-23-Creature.dat  in Resources */ = {isa = PBXBuildFile; fileRef = 02996C5716F4485200FF2AE9 /* Chapter-23-Creature.dat  */; };
+		02996C6216F4485200FF2AE9 /* Chapter-24-Creature.dat  in Resources */ = {isa = PBXBuildFile; fileRef = 02996C5816F4485200FF2AE9 /* Chapter-24-Creature.dat  */; };
+		02996C6316F4485200FF2AE9 /* Chapter-25-Creature.dat  in Resources */ = {isa = PBXBuildFile; fileRef = 02996C5916F4485200FF2AE9 /* Chapter-25-Creature.dat  */; };
+		02996C6416F4485200FF2AE9 /* Chapter-26-Creature.dat  in Resources */ = {isa = PBXBuildFile; fileRef = 02996C5A16F4485200FF2AE9 /* Chapter-26-Creature.dat  */; };
+		02996C6516F4485200FF2AE9 /* Chapter-27-Creature.dat  in Resources */ = {isa = PBXBuildFile; fileRef = 02996C5B16F4485200FF2AE9 /* Chapter-27-Creature.dat  */; };
+		02996C6616F4485200FF2AE9 /* Chapter-28-Creature.dat  in Resources */ = {isa = PBXBuildFile; fileRef = 02996C5C16F4485200FF2AE9 /* Chapter-28-Creature.dat  */; };
+		02996C6716F4485200FF2AE9 /* Chapter-29-Creature.dat  in Resources */ = {isa = PBXBuildFile; fileRef = 02996C5D16F4485200FF2AE9 /* Chapter-29-Creature.dat  */; };
+		02996C6816F4485200FF2AE9 /* Chapter-30-Creature.dat  in Resources */ = {isa = PBXBuildFile; fileRef = 02996C5E16F4485200FF2AE9 /* Chapter-30-Creature.dat  */; };
 		029C61A7148FC2EE0054B260 /* TurnInfo.png in Resources */ = {isa = PBXBuildFile; fileRef = 029C61A6148FC2EE0054B260 /* TurnInfo.png */; };
 		029C625714910E660054B260 /* Creature.strings in Resources */ = {isa = PBXBuildFile; fileRef = 029C625614910E660054B260 /* Creature.strings */; };
 		029C626D149112040054B260 /* FDOperationActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 029C626C149112040054B260 /* FDOperationActivity.m */; };
@@ -4491,7 +4500,6 @@
 		0213447916DE821A00AB5D16 /* videoOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = videoOverlayView.m; path = CCVideoPlayer/videoOverlayView.m; sourceTree = "<group>"; };
 		0213447D16DE82C200AB5D16 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		0213448416DE930800AB5D16 /* Openning.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Openning.mp4; path = Video/Openning.mp4; sourceTree = "<group>"; };
-		0213448716DE934800AB5D16 /* Title.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = Title.wav; path = Audio/Title.wav; sourceTree = "<group>"; };
 		0213CF9A156215FD004C061E /* ShoppingShowProductDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingShowProductDialog.h; sourceTree = "<group>"; };
 		0213CF9B156215FD004C061E /* ShoppingShowProductDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingShowProductDialog.m; sourceTree = "<group>"; };
 		0214952214AA0F0F00DBA2C1 /* Occupation.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Occupation.strings; path = Strings/Occupation.strings; sourceTree = "<group>"; };
@@ -4940,6 +4948,16 @@
 		0297DEAC148E5273007F3E12 /* GameFormula.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameFormula.m; sourceTree = "<group>"; };
 		0297DFEF148FB8BE007F3E12 /* TurnInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurnInfo.h; sourceTree = "<group>"; };
 		0297DFF0148FB8BE007F3E12 /* TurnInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurnInfo.m; sourceTree = "<group>"; };
+		02996C5516F4485200FF2AE9 /* Chapter-21-Creature.dat  */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-21-Creature.dat "; path = "Data/Maps/Chapter-21-Creature.dat "; sourceTree = "<group>"; };
+		02996C5616F4485200FF2AE9 /* Chapter-22-Creature.dat  */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-22-Creature.dat "; path = "Data/Maps/Chapter-22-Creature.dat "; sourceTree = "<group>"; };
+		02996C5716F4485200FF2AE9 /* Chapter-23-Creature.dat  */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-23-Creature.dat "; path = "Data/Maps/Chapter-23-Creature.dat "; sourceTree = "<group>"; };
+		02996C5816F4485200FF2AE9 /* Chapter-24-Creature.dat  */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-24-Creature.dat "; path = "Data/Maps/Chapter-24-Creature.dat "; sourceTree = "<group>"; };
+		02996C5916F4485200FF2AE9 /* Chapter-25-Creature.dat  */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-25-Creature.dat "; path = "Data/Maps/Chapter-25-Creature.dat "; sourceTree = "<group>"; };
+		02996C5A16F4485200FF2AE9 /* Chapter-26-Creature.dat  */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-26-Creature.dat "; path = "Data/Maps/Chapter-26-Creature.dat "; sourceTree = "<group>"; };
+		02996C5B16F4485200FF2AE9 /* Chapter-27-Creature.dat  */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-27-Creature.dat "; path = "Data/Maps/Chapter-27-Creature.dat "; sourceTree = "<group>"; };
+		02996C5C16F4485200FF2AE9 /* Chapter-28-Creature.dat  */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-28-Creature.dat "; path = "Data/Maps/Chapter-28-Creature.dat "; sourceTree = "<group>"; };
+		02996C5D16F4485200FF2AE9 /* Chapter-29-Creature.dat  */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-29-Creature.dat "; path = "Data/Maps/Chapter-29-Creature.dat "; sourceTree = "<group>"; };
+		02996C5E16F4485200FF2AE9 /* Chapter-30-Creature.dat  */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-30-Creature.dat "; path = "Data/Maps/Chapter-30-Creature.dat "; sourceTree = "<group>"; };
 		029C61A6148FC2EE0054B260 /* TurnInfo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TurnInfo.png; path = Others/TurnInfo.png; sourceTree = "<group>"; };
 		029C625614910E660054B260 /* Creature.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Creature.strings; path = Strings/Creature.strings; sourceTree = "<group>"; };
 		029C626B149112040054B260 /* FDOperationActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDOperationActivity.h; sourceTree = "<group>"; };
@@ -9212,7 +9230,6 @@
 				0262184016E1DAD4009CE8DD /* ShopItem.mp3 */,
 				0262184116E1DAD4009CE8DD /* Title.mp3 */,
 				0262184216E1DAD4009CE8DD /* Village_1.mp3 */,
-				0213448716DE934800AB5D16 /* Title.wav */,
 			);
 			name = Audio;
 			sourceTree = "<group>";
@@ -10333,15 +10350,25 @@
 				02DB823116514A6F0081EC45 /* Chapter-20.dat */,
 				027EF6E816BEA1CC007DC970 /* Chapter-20-Creature.dat */,
 				02DB823216514A6F0081EC45 /* Chapter-21.dat */,
+				02996C5516F4485200FF2AE9 /* Chapter-21-Creature.dat  */,
 				02DB823316514A6F0081EC45 /* Chapter-22.dat */,
+				02996C5616F4485200FF2AE9 /* Chapter-22-Creature.dat  */,
 				02DB823416514A6F0081EC45 /* Chapter-23.dat */,
+				02996C5716F4485200FF2AE9 /* Chapter-23-Creature.dat  */,
 				02DB823516514A6F0081EC45 /* Chapter-24.dat */,
+				02996C5816F4485200FF2AE9 /* Chapter-24-Creature.dat  */,
 				02DB823616514A6F0081EC45 /* Chapter-25.dat */,
+				02996C5916F4485200FF2AE9 /* Chapter-25-Creature.dat  */,
 				02DB823716514A6F0081EC45 /* Chapter-26.dat */,
+				02996C5A16F4485200FF2AE9 /* Chapter-26-Creature.dat  */,
 				02DB823816514A6F0081EC45 /* Chapter-27.dat */,
+				02996C5B16F4485200FF2AE9 /* Chapter-27-Creature.dat  */,
 				02DB823916514A6F0081EC45 /* Chapter-28.dat */,
+				02996C5C16F4485200FF2AE9 /* Chapter-28-Creature.dat  */,
 				02DB823A16514A6F0081EC45 /* Chapter-29.dat */,
+				02996C5D16F4485200FF2AE9 /* Chapter-29-Creature.dat  */,
 				02DB823B16514A6F0081EC45 /* Chapter-30.dat */,
+				02996C5E16F4485200FF2AE9 /* Chapter-30-Creature.dat  */,
 				02DBA1EB16664E050081EC45 /* Chapter-99.dat */,
 			);
 			name = Maps;
@@ -16301,11 +16328,6 @@
 			children = (
 				0213448616DE933C00AB5D16 /* Audio */,
 				0213447F16DE843A00AB5D16 /* Video */,
-				02BA723114CA31AF0028C9E7 /* Icon-16.png */,
-				02BA723214CA31AF0028C9E7 /* Icon-32.png */,
-				02BA723314CA31AF0028C9E7 /* Icon-57.png */,
-				02BA723414CA31AF0028C9E7 /* IconFull.png */,
-				02BA722914CA2F240028C9E7 /* Icon.png */,
 				02733C1614A9CDFB00D0812F /* Title */,
 				027338B614A4529E00D0812F /* Dato */,
 				029C625214910E2B0054B260 /* Strings */,
@@ -16320,6 +16342,11 @@
 				027D550C14664495002C310F /* Icons */,
 				02759D3F154A72AB00853895 /* Village */,
 				E02BB762126CC1E0006E46A2 /* iTunesArtwork */,
+				02BA723114CA31AF0028C9E7 /* Icon-16.png */,
+				02BA723214CA31AF0028C9E7 /* Icon-32.png */,
+				02BA723314CA31AF0028C9E7 /* Icon-57.png */,
+				02BA723414CA31AF0028C9E7 /* IconFull.png */,
+				02BA722914CA2F240028C9E7 /* Icon.png */,
 				E02BB4FE126CA50F006E46A2 /* Icon@2x.png */,
 				E02BB4FF126CA50F006E46A2 /* Icon-Small@2x.png */,
 				E02BB500126CA50F006E46A2 /* Icon-Small.png */,
@@ -20718,7 +20745,6 @@
 				020C5A7B16D9C32A00AD0F53 /* Tai-15.png in Resources */,
 				0213447216DE727000AB5D16 /* Cursor-04.png in Resources */,
 				0213448516DE930800AB5D16 /* Openning.mp4 in Resources */,
-				0213448816DE934800AB5D16 /* Title.wav in Resources */,
 				0262184316E1DAD4009CE8DD /* Battle_1.mp3 in Resources */,
 				0262184416E1DAD4009CE8DD /* ShopAmor.mp3 in Resources */,
 				0262184516E1DAD4009CE8DD /* ShopBar.mp3 in Resources */,
@@ -20731,6 +20757,16 @@
 				0262185016E1E43D009CE8DD /* Battle_4.mp3 in Resources */,
 				0262185116E1E43D009CE8DD /* Battle_5.mp3 in Resources */,
 				02785B3E16E2DA640014E8F5 /* SecretIndicator-03.png in Resources */,
+				02996C5F16F4485200FF2AE9 /* Chapter-21-Creature.dat  in Resources */,
+				02996C6016F4485200FF2AE9 /* Chapter-22-Creature.dat  in Resources */,
+				02996C6116F4485200FF2AE9 /* Chapter-23-Creature.dat  in Resources */,
+				02996C6216F4485200FF2AE9 /* Chapter-24-Creature.dat  in Resources */,
+				02996C6316F4485200FF2AE9 /* Chapter-25-Creature.dat  in Resources */,
+				02996C6416F4485200FF2AE9 /* Chapter-26-Creature.dat  in Resources */,
+				02996C6516F4485200FF2AE9 /* Chapter-27-Creature.dat  in Resources */,
+				02996C6616F4485200FF2AE9 /* Chapter-28-Creature.dat  in Resources */,
+				02996C6716F4485200FF2AE9 /* Chapter-29-Creature.dat  in Resources */,
+				02996C6816F4485200FF2AE9 /* Chapter-30-Creature.dat  in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
