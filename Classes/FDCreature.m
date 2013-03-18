@@ -341,7 +341,9 @@
 	if (another == nil) {
 		return FALSE;
 	}
-	return (self.data.attackItemIndex >= 0) && [self.data calculatedAp] > [another.data calculatedDp];
+	return (self.data.attackItemIndex >= 0) 
+		&& [self.data calculatedAp] > [another.data calculatedDp]
+		&& another.data.aiType != AIType_UnNoticable;
 }
 
 -(BOOL) isItemListFull
@@ -456,6 +458,17 @@
 
 -(BOOL) isKnight {
 	return [definition isKnight];
+}
+
+-(BOOL) isNoticable {
+	return data.aiType != AIType_UnNoticable;
+}
+
+-(void) wokeUpByAttack {
+	
+	if (data.aiType == AiType_StandBy) {
+		data.aiType == AiType_Aggresive;
+	}
 }
 
 -(void) dealloc

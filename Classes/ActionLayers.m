@@ -353,6 +353,13 @@
 		}
 	}
 	
+	// Wake up if the AI is Idle
+	for (FDCreature *target in targets) {
+		if ([target getCreatureType] == CreatureType_Enemy || [target getCreatureType] == CreatureType_Npc) {
+			[target wokeUpByAttack];
+		}
+	}
+	
 	// Talk about experience/drop item
 	FDCreature *talkerFriend = nil;
 	FDCreature *target = ([targets count] > 0) ? [targets objectAtIndex:0] : nil;
