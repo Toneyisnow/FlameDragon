@@ -460,9 +460,13 @@
 	return [definition isKnight];
 }
 
+-(BOOL) isNoticable {
+	return data.aiType != AIType_UnNoticable;
+}
+
 -(void) wokeUpByAttack {
 	
-	if (data.aiType == AiType_Idle) {
+	if (data.aiType == AiType_StandBy) {
 		data.aiType == AiType_Aggresive;
 	}
 }
