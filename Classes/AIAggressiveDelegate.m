@@ -62,7 +62,9 @@
 	
 	FDRange *range = [creature attackRange];
 	
-	if (attackTarget != nil && [creature isAbleToAttack:attackTarget]
+	if (attackTarget != nil
+		&& [attackTarget isNoticable]
+		&& [creature isAbleToAttack:attackTarget]
 		&& (range != nil && [range containsValue:[field getDirectDistance:creature And:attackTarget]])) {
 		inAttackScope = TRUE;
 	}
