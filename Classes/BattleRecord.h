@@ -18,6 +18,7 @@
 	NSMutableArray *enemyRecords;
 	NSMutableArray *npcRecords;
 	NSMutableArray *deadCreatureRecords;
+	NSMutableArray *unsettledRecords;
 	
 	NSMutableArray *treasureRecords;
 	NSMutableArray *activeEventIds;
@@ -36,6 +37,7 @@
 -(NSMutableArray *) deadCreatureRecords;
 -(NSMutableArray *) treasureRecords;
 -(NSMutableArray *) activeEventIds;
+-(NSMutableArray *) unsettledRecords;
 
 @property (nonatomic, assign) int turnNo, money;
 @property (nonatomic, assign) BOOL withAllEvents;

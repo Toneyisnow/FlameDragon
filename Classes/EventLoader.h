@@ -24,7 +24,7 @@
 -(void) loadEvents;
 -(int) loadSingleEvent:(FDEventCondition *)condition Action:(SEL)action;
 
--(void) settleFriend:(int)creatureId At:(CGPoint)loc;
+-(void) settleFriend:(int)friendIndex At:(CGPoint)loc;
 
 -(int) loadTurnEvent:(TurnType) turnType Turn:(int)turnNum Action:(SEL)action;
 -(int) loadDieEvent:(int)creatureId Action:(SEL)action;

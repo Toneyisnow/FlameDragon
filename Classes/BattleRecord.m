@@ -22,6 +22,7 @@
 	enemyRecords = [[NSMutableArray alloc] init];
 	npcRecords = [[NSMutableArray alloc] init];
 	deadCreatureRecords = [[NSMutableArray alloc] init];
+	unsettledRecords = [[NSMutableArray alloc] init];
 	
 	treasureRecords = [[NSMutableArray alloc] init];
 	activeEventIds = [[NSMutableArray alloc] init];
@@ -75,6 +76,7 @@
 	[coder encodeObject:enemyRecords forKey:@"enemyRecords"];
 	[coder encodeObject:npcRecords forKey:@"npcRecords"];
 	[coder encodeObject:deadCreatureRecords forKey:@"deadCreatureRecords"];
+	[coder encodeObject:unsettledRecords forKey:@"unsettledRecords"];
 	[coder encodeObject:treasureRecords forKey:@"treasureRecords"];
 	[coder encodeObject:activeEventIds forKey:@"activeEventIds"];
 	
@@ -91,6 +93,7 @@
 	enemyRecords = (NSMutableArray *)[[coder decodeObjectForKey:@"enemyRecords"] retain];
 	npcRecords = (NSMutableArray *)[[coder decodeObjectForKey:@"npcRecords"] retain];
 	deadCreatureRecords = (NSMutableArray *)[[coder decodeObjectForKey:@"deadCreatureRecords"] retain];
+	unsettledRecords = (NSMutableArray *)[[coder decodeObjectForKey:@"unsettledRecords"] retain];
 	treasureRecords = (NSMutableArray *)[[coder decodeObjectForKey:@"treasureRecords"] retain];
 	activeEventIds = (NSMutableArray *)[[coder decodeObjectForKey:@"activeEventIds"] retain];
 	
@@ -113,6 +116,11 @@
 -(NSMutableArray *) deadCreatureRecords
 {
 	return deadCreatureRecords;
+}
+
+-(NSMutableArray *) unsettledRecords
+{
+	return unsettledRecords;
 }
 
 -(NSMutableArray *) treasureRecords

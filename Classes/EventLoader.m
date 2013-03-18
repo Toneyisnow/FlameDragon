@@ -116,14 +116,10 @@
 	[layers appendToCurrentActivity:talk];	
 }
 
--(void) settleFriend:(int)creatureId At:(CGPoint)loc
+-(void) settleFriend:(int)friendIndex At:(CGPoint)loc
 {
-	FDFriend *friend = (FDFriend *)[field getUnSettledCreatureById:creatureId];
-	if (friend != nil) {
-		[field addFriend:friend Position:loc];
-		[[field getUnsettledCreatureList] removeObject:friend];
-	}
-	
+    // Moving this method into ActionLayers to support selecting friends
+    [layers settleFriend:friendIndex At:loc];
 }
 
 -(void) setAiOfId:(int)creatureId EscapeTo:(CGPoint)pos

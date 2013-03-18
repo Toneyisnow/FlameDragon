@@ -51,19 +51,6 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "Classes/ActionLayers.m"
-         timestampString = "384135730.900141"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1142"
-         endingLineNumber = "1142"
-         landmarkName = "-showTestData"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "Classes/BattleField.m"
          timestampString = "384535233.599006"
          startingColumnNumber = "9223372036854775807"

@@ -53,6 +53,7 @@ typedef enum TurnType
 	IListener *enemyAiHandler;
 	IListener *npcAiHandler;
 	
+    NSMutableArray *selectedFriendList;
 }
 
 -(id) initWithField:(BattleFieldLayer *)fLayer Message:(MessageLayer *)mLayer;
@@ -91,6 +92,7 @@ typedef enum TurnType
 -(void) checkEndTurn;
 
 -(void) startNewGame:(ChapterRecord *)info;
+-(void) startNewGame:(ChapterRecord *)info withSelectedFriends:(NSMutableArray *)list;
 -(void) loadGame:(BattleRecord *)info; // withEvents:(BOOL)loadEvents;
 -(void) saveGame;
 -(void) runGame;
@@ -138,6 +140,8 @@ typedef enum TurnType
 -(void) setEventListener:(IListener *)listener;
 -(void) setEnemyAiHandler:(IListener *)listener;
 -(void) setNpcAiHandler:(IListener *)listener;
+
+-(void) settleFriend:(int)friendIndex At:(CGPoint)loc;
 
 -(void) showTestData;
 

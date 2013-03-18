@@ -56,6 +56,8 @@
 	sideBar = [[SideBar alloc] initWithField:field];
 	[sideBar show:messageLayer];
 	
+    selectedFriendList = nil;
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotificationUpdateSideBar:) name:@"LayerUpdateSideBar" object:nil];
     
 	return self;
@@ -777,11 +779,17 @@
 
 -(void) startNewGame:(ChapterRecord *)info
 {
-	//[field loadMapData:level];
+	[self startNewGame:info withSelectedFriends:nil];
+}
+
+-(void) startNewGame:(ChapterRecord *)info withSelectedFriends:(NSMutableArray *)list
+{
+    //[field loadMapData:level];
 	chapterId = info.chapterId;
 	turnNo = 0;
 	money = info.money;
-	
+    selectedFriendList = ((list != nil) ? [list retain] : nil);
+    
     // Stop previous background Music
     [FDAudioEngine stopMusic];
     
@@ -795,7 +803,7 @@
 		} else {
 			[[field getDeadCreatureList] addObject:creature];
 		}
-
+        
 		[creature release];
 	}
 	
@@ -852,6 +860,13 @@
 				break;
 		}
 		[[field getDeadCreatureList] addObject:creature];
+		[creature release];
+	}
+	
+    for(CreatureRecord *record in [info unsettledRecords])
+	{
+		FDFriend *creature = [[FDFriend alloc] initWithDefinition:record.definitionId Id:record.creatureId Data:record.data];
+        [[field getUnsettledCreatureList] addObject:creature];
 		[creature release];
 	}
 	
@@ -925,6 +940,12 @@
 		[[info deadCreatureRecords] addObject:record];
 	}
 	
+	for(FDCreature *creature in [field getUnsettledCreatureList])
+	{
+		CreatureRecord *record = [field generateCreatureRecord:creature];
+		[[info unsettledRecords] addObject:record];
+	}
+	
 	NSMutableArray *treasureList = [field getTreasureList];
 	for (FDTreasure *treasure in treasureList) {
 		TreasureRecord *record = [field generateTreasureRecord:treasure];
@@ -948,12 +969,19 @@
 	ChapterRecord *record = [[ChapterRecord alloc] initWithChapter:chapterId + 1];
 	record.money = money;
 	
-	for(FDCreature *creature in [field getFriendList])
+	for(FDCreature *creature in [field getUnsettledCreatureList])
 	{
 		CreatureRecord *r = [field generateCreatureRecord:creature];
 		[r.data recoverHealth];
 		[r.data clearAllStatus];
-		
+		[[record friendRecords] addObject:r];
+	}
+	
+    for(FDCreature *creature in [field getFriendList])
+	{
+		CreatureRecord *r = [field generateCreatureRecord:creature];
+		[r.data recoverHealth];
+		[r.data clearAllStatus];
 		[[record friendRecords] addObject:r];
 	}
 	
@@ -1136,6 +1164,22 @@
 -(void) setNpcAiHandler:(IListener *)listener
 {
 	npcAiHandler = [listener retain];
+}
+
+-(void) settleFriend:(int)friendIndex At:(CGPoint)loc {
+    
+    int creatureId;
+    if (selectedFriendList == nil || [selectedFriendList count] <= friendIndex) {
+        creatureId = friendIndex;
+    } else {
+        creatureId = [[selectedFriendList objectAtIndex:friendIndex] intValue];
+    }
+    
+    FDFriend *friend = (FDFriend *)[field getUnSettledCreatureById:creatureId];
+	if (friend != nil) {
+		[field addFriend:friend Position:loc];
+		[[field getUnsettledCreatureList] removeObject:friend];
+	}
 }
 
 -(void) showTestData
