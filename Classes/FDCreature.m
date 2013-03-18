@@ -458,6 +458,13 @@
 	return [definition isKnight];
 }
 
+-(void) wokeUpByAttack {
+	
+	if (data.aiType == AiType_Idle) {
+		data.aiType == AiType_Aggresive;
+	}
+}
+
 -(void) dealloc
 {
 	[data release];
