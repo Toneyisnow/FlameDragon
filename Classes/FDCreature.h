@@ -139,6 +139,7 @@ typedef enum ActionStatus {
 -(BOOL) canFly;
 -(BOOL) isNotFrozen;
 -(BOOL) isKnight;
+-(void) wokeUpByAttack;
 
 //-(void) removeItem:(int)index;
 
