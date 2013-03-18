@@ -151,6 +151,10 @@
 	FDCreature *candidate = nil;
 	for (FDCreature *c in candidateList) {
 		
+		if (![c isNoticable]) {
+			continue;	
+		}
+		
 		float distance = [field getDirectDistance:creature And:c];
 		
 		if (distance <= magic.effectScope + magic.effectRange) {
