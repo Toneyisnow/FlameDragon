@@ -15,9 +15,9 @@
 {
 	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(initialBattle)];
 	[self loadTurnEvent:TurnType_Friend Turn:5 Action:@selector(reinforcement)];
-	[self loadTurnEvent:TurnType_Friend Turn:7 Action:@selector(batch1)];
-	[self loadTurnEvent:TurnType_Friend Turn:10 Action:@selector(batch2)];
-	[self loadTurnEvent:TurnType_Friend Turn:20 Action:@selector(batch3)];
+	[self loadTurnEvent:TurnType_Friend Turn:6 Action:@selector(batch1)];
+	[self loadTurnEvent:TurnType_Friend Turn:9 Action:@selector(batch2)];
+	[self loadTurnEvent:TurnType_Friend Turn:18 Action:@selector(batch3)];
 
 	[self loadDieEvent:1 Action:@selector(gameOver)];
 	[self loadDieEvent:12 Action:@selector(gameOver)];
@@ -114,7 +114,8 @@
 	FDCreature *c12 = [field getCreatureById:12];
 	c901.data.statusFrozen = 255;
 	c12.data.statusFrozen = 255;
-	
+	[self setAiOfId:901 withType:AIType_UnNoticable];
+	[self setAiOfId:12 withType:AIType_UnNoticable];
 	
 	// Talk
 	for (int i = 1; i <= 12; i++) {
@@ -163,6 +164,9 @@
 		[self setAiOfId:i withType:AIType_Aggressive];
 	}
 	[self setAiOfId:199 withType:AIType_Aggressive];
+	
+	[sef setAiOfId:901 withType:AIType_StandBy];
+	[self setAiOfId:12 withType:AIType_StandBy];
 	
 	// Talk
 	[self showTalkMessage:10 conversation:5 sequence:1];
