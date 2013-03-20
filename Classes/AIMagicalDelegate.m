@@ -80,11 +80,29 @@
             return;
         }
         
-        // Use Magic
-        CGPoint position = [field getObjectPos:selectedCandidate];
-        [field setCursorTo:position];
+        // Locate the Magic Position
+        CGPoint magicPosition;
+	CGPoint candidatePosition = [field getObjectPos:selectedCandidate];
+	CGPoint creaturePosition = [field getObjectPos:creature];
+	int directX = (candidatePosition.x > creaturePosition.x) ? 1 : -1;
+	int directY = (candidatePosition.y > creaturePosition.y) ? 1 : -1;
+	int distanceX = [Common getAbs:candidatePosition.x - creaturePosition.x];
+	int distanceY = [Common getAbs:candidatePosition.y - creaturePosition.y];
+	
+	if (magic.effectScope >= distanceX + distanceY) {
+		magicPosition = candidatePosition;
+	} else if (magic.effectScope >= distanceX) {
+		int dy = (magic.effectScope - distanceX) * directY;
+		magicPosition = CGPointMake(candidatePosition.x, creaturePosition.y + dy);
+	} else {
+		int dx = mgaic.effectScope * directX;
+		magicPosition = CGPointMake(creaturePosition.x + dx, creaturePosition.y);
+	}
+
+	// Use Magic
+        [field setCursorTo:magicPosition];
         
-        [layers magicFrom:creature TargetPos:position Id:selectedMagic.identifier];
+        [layers magicFrom:creature TargetPos:magicPosition Id:selectedMagic.identifier];
         // [layers appendToCurrentActivityMethod:@selector(creatureEndTurn:) Param1:creature Param2:nil];
         
     }

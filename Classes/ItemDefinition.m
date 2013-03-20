@@ -33,6 +33,8 @@
 	return (identifier / 100 == 9);
 }
 
+// Deprecated
+/*
 -(int) getMoneyQuantity
 {
 	switch (identifier) {
@@ -47,6 +49,7 @@
 	}
 	return 0;
 }
+*/
 
 -(BOOL) isAttackItem
 {

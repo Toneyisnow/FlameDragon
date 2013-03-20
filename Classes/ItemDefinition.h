@@ -33,7 +33,10 @@ typedef enum ItemType
 +(id) readFromFile:(FDFileStream *)stream;
 -(NSString *) getAttributeString;
 -(BOOL) isMoney;
--(int) getMoneyQuantity;
+
+// Deprecated
+// -(int) getMoneyQuantity;
+
 -(BOOL) isAttackItem;
 -(BOOL) isDefendItem;
 
