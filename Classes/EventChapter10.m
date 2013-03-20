@@ -165,7 +165,7 @@
 	}
 	[self setAiOfId:199 withType:AIType_Aggressive];
 	
-	[sef setAiOfId:901 withType:AIType_StandBy];
+	[self setAiOfId:901 withType:AIType_StandBy];
 	[self setAiOfId:12 withType:AIType_StandBy];
 	
 	// Talk

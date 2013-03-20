@@ -4215,6 +4215,8 @@
 		02E42322160F397D0071FA29 /* Shop_Exit_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 02E42321160F397D0071FA29 /* Shop_Exit_0.png */; };
 		02E4232A160F3B3F0071FA29 /* Shop_MoneyBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 02E42329160F3B3F0071FA29 /* Shop_MoneyBar.png */; };
 		02E4232D160F3B920071FA29 /* Shopping2MoneyBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E4232C160F3B920071FA29 /* Shopping2MoneyBar.m */; };
+		02EF517A16F931BD00BF9671 /* Background-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 02EF517916F931BD00BF9671 /* Background-99.png */; };
+		02EF517C16F931DE00BF9671 /* Tai-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 02EF517B16F931DE00BF9671 /* Tai-99.png */; };
 		02F8403A14B8167F00665511 /* Magic.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02F8403914B8167F00665511 /* Magic.dat */; };
 		02F8415314B89BD900665511 /* Dato-000-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 02F8415214B89BD900665511 /* Dato-000-1.png */; };
 		02F8418314B9347C00665511 /* ConfirmButtonNo.png in Resources */ = {isa = PBXBuildFile; fileRef = 02F8418114B9347C00665511 /* ConfirmButtonNo.png */; };
@@ -8893,6 +8895,8 @@
 		02E42329160F3B3F0071FA29 /* Shop_MoneyBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Shop_MoneyBar.png; path = Others/Shop_MoneyBar.png; sourceTree = "<group>"; };
 		02E4232B160F3B920071FA29 /* Shopping2MoneyBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shopping2MoneyBar.h; sourceTree = "<group>"; };
 		02E4232C160F3B920071FA29 /* Shopping2MoneyBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shopping2MoneyBar.m; sourceTree = "<group>"; };
+		02EF517916F931BD00BF9671 /* Background-99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-99.png"; path = "Backgrounds/Background-99.png"; sourceTree = "<group>"; };
+		02EF517B16F931DE00BF9671 /* Tai-99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-99.png"; path = "Tais/Tai-99.png"; sourceTree = "<group>"; };
 		02F8403914B8167F00665511 /* Magic.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Magic.dat; path = Data/Magic.dat; sourceTree = "<group>"; };
 		02F8415214B89BD900665511 /* Dato-000-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Dato-000-1.png"; path = "Dato/Dato-000-1.png"; sourceTree = "<group>"; };
 		02F8418114B9347C00665511 /* ConfirmButtonNo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ConfirmButtonNo.png; path = Others/ConfirmButtonNo.png; sourceTree = "<group>"; };
@@ -10130,6 +10134,7 @@
 				020C5A7016D9C31500AD0F53 /* Background-13.png */,
 				020C5A7116D9C31500AD0F53 /* Background-14.png */,
 				020C5A7216D9C31500AD0F53 /* Background-15.png */,
+				02EF517916F931BD00BF9671 /* Background-99.png */,
 			);
 			name = Backgrounds;
 			sourceTree = "<group>";
@@ -10152,6 +10157,7 @@
 				020C5A7616D9C32A00AD0F53 /* Tai-13.png */,
 				020C5A7716D9C32A00AD0F53 /* Tai-14.png */,
 				020C5A7816D9C32A00AD0F53 /* Tai-15.png */,
+				02EF517B16F931DE00BF9671 /* Tai-99.png */,
 			);
 			name = Tais;
 			sourceTree = "<group>";
@@ -20767,6 +20773,8 @@
 				02996C6616F4485200FF2AE9 /* Chapter-28-Creature.dat  in Resources */,
 				02996C6716F4485200FF2AE9 /* Chapter-29-Creature.dat  in Resources */,
 				02996C6816F4485200FF2AE9 /* Chapter-30-Creature.dat  in Resources */,
+				02EF517A16F931BD00BF9671 /* Background-99.png in Resources */,
+				02EF517C16F931DE00BF9671 /* Tai-99.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -21148,7 +21156,7 @@
 					armv6,
 					armv7,
 				);
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Yi Sui";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yi Sui (74QF9MJWJZ)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -21164,7 +21172,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = FlameDragon;
-				PROVISIONING_PROFILE = "0D128355-AFC3-453F-BA75-DE748F8E6422";
+				PROVISIONING_PROFILE = "FE57999F-C1E2-455F-8E68-F55BCAF84287";
 				VALID_ARCHS = "armv6 armv7 armv7s";
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -21187,7 +21195,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Yi Sui";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yi Sui (74QF9MJWJZ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -21204,7 +21212,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = FlameDragon;
-				PROVISIONING_PROFILE = "0D128355-AFC3-453F-BA75-DE748F8E6422";
+				PROVISIONING_PROFILE = "FE57999F-C1E2-455F-8E68-F55BCAF84287";
 				VALID_ARCHS = "armv6 armv7 armv7s";
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -21218,7 +21226,7 @@
 					armv6,
 					armv7,
 				);
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Yi Sui";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yi Sui (74QF9MJWJZ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -21234,7 +21242,7 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = FlameDragon;
-				PROVISIONING_PROFILE = "0D128355-AFC3-453F-BA75-DE748F8E6422";
+				PROVISIONING_PROFILE = "FE57999F-C1E2-455F-8E68-F55BCAF84287";
 				VALID_ARCHS = "armv6 armv7 armv7s";
 				WARNING_CFLAGS = "-Wall";
 			};

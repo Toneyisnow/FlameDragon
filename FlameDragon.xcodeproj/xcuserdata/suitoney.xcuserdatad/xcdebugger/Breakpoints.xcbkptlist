@@ -129,7 +129,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "960"
          endingLineNumber = "960"
-         landmarkName = "-composeChapterRecord"
+         landmarkName = "-saveGame"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -272,7 +272,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "1035"
          endingLineNumber = "1035"
-         landmarkName = "-receiveNotificationUpdateSideBar:"
+         landmarkName = "-showItemStatusAsync:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -286,6 +286,19 @@
          startingLineNumber = "96"
          endingLineNumber = "96"
          landmarkName = "-takeTick"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Classes/TitleLayer.m"
+         timestampString = "385309463.730929"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "79"
+         endingLineNumber = "79"
+         landmarkName = "-onNewGame"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

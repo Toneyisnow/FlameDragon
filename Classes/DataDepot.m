@@ -138,6 +138,8 @@ static DataDepot *instance = nil;
 	for (int m = 0; m < creatureCount; m++) {
 		CreatureDefinition *def = [CreatureDefinition readFromFile:file];
 		[creatureDictionary setObject:def forKey:[NSNumber numberWithInt:[def getId]]];
+        
+        // NSLog(@"Creature %d Loaded.", def.identifier);
 	}
 	[file close];
 	NSLog(@"Loaded Creature Dictionary.");

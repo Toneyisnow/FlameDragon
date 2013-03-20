@@ -466,8 +466,8 @@
 
 -(void) wokeUpByAttack {
 	
-	if (data.aiType == AiType_StandBy) {
-		data.aiType == AiType_Aggresive;
+	if (data.aiType == AIType_StandBy) {
+		data.aiType = AIType_Aggressive;
 	}
 }
 

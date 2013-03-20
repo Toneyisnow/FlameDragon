@@ -142,6 +142,7 @@
 
 -(FDCreature *) findAffensiveTarget:(MagicDefinition *)magic
 {
+    NSLog(@"finding Affensive Target for %d, %d %d", magic.identifier, magic.effectScope, magic.effectRange);
 	BattleField *field = [[layers getFieldLayer] getField];
 	
 	NSMutableArray *candidateList = [[NSMutableArray alloc] init];
