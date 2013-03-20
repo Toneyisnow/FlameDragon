@@ -345,7 +345,7 @@
 					}
 				} else {
 					// Add money
-					money += [dropItem getMoneyQuantity];
+					money += [(MoneyItemDefinition *)dropItem quantity];
 				}
 			}
 		}
@@ -520,7 +520,7 @@
 	// If the treasure is money, add to money
 	if ([item isMoney]) {
 		// Add to money
-		money += [item getMoneyQuantity];
+		money += [(MoneyItemDefinition *)item quantity];
 		return;
 	}
 	else {
