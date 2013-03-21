@@ -4217,6 +4217,7 @@
 		02E4232D160F3B920071FA29 /* Shopping2MoneyBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E4232C160F3B920071FA29 /* Shopping2MoneyBar.m */; };
 		02EF517A16F931BD00BF9671 /* Background-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 02EF517916F931BD00BF9671 /* Background-99.png */; };
 		02EF517C16F931DE00BF9671 /* Tai-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 02EF517B16F931DE00BF9671 /* Tai-99.png */; };
+		02EF517D16FA0F4700BF9671 /* AIMagicalDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D4C637164B07AD00B9B407 /* AIMagicalDelegate.m */; };
 		02F8403A14B8167F00665511 /* Magic.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02F8403914B8167F00665511 /* Magic.dat */; };
 		02F8415314B89BD900665511 /* Dato-000-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 02F8415214B89BD900665511 /* Dato-000-1.png */; };
 		02F8418314B9347C00665511 /* ConfirmButtonNo.png in Resources */ = {isa = PBXBuildFile; fileRef = 02F8418114B9347C00665511 /* ConfirmButtonNo.png */; };
@@ -21107,6 +21108,7 @@
 				E02BB8AE126CC224006E46A2 /* TGAlib.m in Sources */,
 				E02BB8B0126CC224006E46A2 /* TransformUtils.m in Sources */,
 				E02BB8B4126CC224006E46A2 /* ZipUtils.m in Sources */,
+				02EF517D16FA0F4700BF9671 /* AIMagicalDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

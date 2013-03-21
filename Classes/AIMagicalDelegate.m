@@ -10,6 +10,7 @@
 #import "MagicDefinition.h"
 #import "DataDepot.h"
 #import "FDRandom.h"
+#import "Common.h"
 
 @implementation AIMagicalDelegate
 
@@ -89,13 +90,13 @@
 	int distanceX = [Common getAbs:candidatePosition.x - creaturePosition.x];
 	int distanceY = [Common getAbs:candidatePosition.y - creaturePosition.y];
 	
-	if (magic.effectScope >= distanceX + distanceY) {
+	if (selectedMagic.effectScope >= distanceX + distanceY) {
 		magicPosition = candidatePosition;
-	} else if (magic.effectScope >= distanceX) {
-		int dy = (magic.effectScope - distanceX) * directY;
+	} else if (selectedMagic.effectScope >= distanceX) {
+		int dy = (selectedMagic.effectScope - distanceX) * directY;
 		magicPosition = CGPointMake(candidatePosition.x, creaturePosition.y + dy);
 	} else {
-		int dx = mgaic.effectScope * directX;
+		int dx = selectedMagic.effectScope * directX;
 		magicPosition = CGPointMake(creaturePosition.x + dx, creaturePosition.y);
 	}
 

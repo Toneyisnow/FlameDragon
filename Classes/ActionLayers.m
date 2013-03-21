@@ -34,6 +34,7 @@
 #import "MagicalInformation.h"
 #import "MagicalScene.h"
 #import "FDAudioEngine.h"
+#import "MoneyItemDefinition.h"
 
 @implementation ActionLayers
 
