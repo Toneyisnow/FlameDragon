@@ -8,7 +8,7 @@
 
 
 "Title-18" = "第十八章  遥远的彼岸"; 
-"Condition-Lose" = "索尔死亡";
+"Condition-Lose" = "索尔或兰斯洛特或约拿死亡";
 "Condition-Win" = "黑暗骑士死亡";
 
 "18-01-001-Id" = "3";
