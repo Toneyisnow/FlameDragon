@@ -21,8 +21,6 @@
 	[self loadDieEvent:21 Action:@selector(gameOver)];
 	[self loadDieEvent:199 Action:@selector(enemyClear)];
 	
-	[self loadDyingEvent:199 Action:@selector(bossDyingMessage)];
-	
 	NSLog(@"Chapter18 events loaded.");
 }
 
