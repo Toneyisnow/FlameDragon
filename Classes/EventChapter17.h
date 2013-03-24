@@ -12,6 +12,7 @@
 
 @interface EventChapter17 : EventLoader {
 	
+	BOOL shouldRemoveMidi;
 }
 
 @end
