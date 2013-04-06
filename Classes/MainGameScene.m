@@ -23,8 +23,12 @@
 	return self;
 }
 
-
 -(void) loadWithInfo:(GameStartInfo *)info
+{
+    [self loadWithInfo:info withSelectedFriends:nil];
+}
+
+-(void) loadWithInfo:(GameStartInfo *)info withSelectedFriends:(NSMutableArray *)selectedList
 {
 	fieldLayer = [BattleFieldLayer node];
 	messageLayer = [MessageLayer node];
@@ -52,7 +56,7 @@
 	[eventLoader loadWithLayers:layers];
 	
 	if ([info isKindOfClass:[ChapterRecord class]]) {
-		[layers startNewGame:(ChapterRecord *)info];
+		[layers startNewGame:(ChapterRecord *)info withSelectedFriends:selectedList];
 	} else if ([info isKindOfClass:[BattleRecord class]]) {
 		[layers loadGame:(BattleRecord *)info];
 	}

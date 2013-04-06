@@ -143,6 +143,17 @@
 
 -(void) dealloc
 {
+    if (hpValue != nil) {
+        [hpValue removeFromLayer];
+        [hpValue release];
+        hpValue = nil;
+    }
+    
+    if (mpValue != nil) {
+        [mpValue removeFromLayer];
+        [mpValue release];
+        mpValue = nil;
+    }
 	
 	[hpBar release];
 	[mpBar release];

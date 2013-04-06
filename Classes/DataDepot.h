@@ -30,7 +30,7 @@
 	NSMutableDictionary *secretSequenceDictionary;
 	NSMutableDictionary *levelUpMagicDictionary;
 	NSMutableDictionary *transferDictionary;
-	
+	NSMutableArray *mandatoryPickedFriend;
 }
 
 +(DataDepot *) depot;
@@ -46,6 +46,7 @@
 -(void) loadSecretSequenceDictionary;
 -(void) loadLevelUpMagicDictionary;
 -(void) loadTransferDictionary;
+-(void) loadMandatoryPickedFriend;
 
 -(ItemDefinition *) getItemDefinition:(int)itemId;
 -(MagicDefinition *) getMagicDefinition:(int)magicId;
@@ -58,5 +59,6 @@
 -(MagicDefinition *) getLevelUpMagicDefinition:(int)creatureDefId atLeveL:(int)level;
 -(TransfersDefinition *) getTransfersDefinition:(int)creatureDefId;
 -(TransferDefinition *) getTransferDefinition:(int)transferId;
+-(NSMutableArray *) getMandatoryPickedFriend:(int)chapterId;
 
 @end

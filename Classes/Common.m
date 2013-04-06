@@ -62,4 +62,18 @@
 	return d1;
 }
 
++(BOOL) containInt:(int)num inArray:(NSMutableArray *)arr
+{
+    if (arr == nil) {
+        return NO;
+    }
+    
+    for (NSNumber *numObj in arr) {
+        if ([numObj intValue] == num) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
 @end

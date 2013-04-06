@@ -43,6 +43,7 @@ static DataDepot *instance = nil;
 	[self loadSecretSequenceDictionary];
 	[self loadLevelUpMagicDictionary];
 	[self loadTransferDictionary];
+    [self loadMandatoryPickedFriend];
 }
 
 -(void) loadItemDictionary
@@ -377,6 +378,39 @@ static DataDepot *instance = nil;
 	NSLog(@"Loaded Animation Dictionary.");
 }
 
+-(void) loadMandatoryPickedFriend {
+    
+    NSLog(@"Loading MandatoryPickedFriend.");
+
+    if (mandatoryPickedFriend != nil) {
+        [mandatoryPickedFriend release];
+        mandatoryPickedFriend = nil;
+    }
+    
+    mandatoryPickedFriend = [[NSMutableArray alloc] init];
+    NSMutableArray *arrayEmpty = [[NSMutableArray alloc] init];
+    NSMutableArray *arrayOne = [[NSMutableArray alloc] init];
+    NSMutableArray *arrayOneAndMidi = [[NSMutableArray alloc] init];
+    [arrayOne addObject:0];
+    [arrayOneAndMidi addObject:0];
+    [arrayOneAndMidi addObject:17];
+    
+    for (int i = 0; i < 30; i++) {
+        if (i < 15) {
+            [mandatoryPickedFriend addObject:arrayEmpty];
+        } else if (i == 16) {
+            [mandatoryPickedFriend addObject:arrayOneAndMidi];
+        } else {
+            [mandatoryPickedFriend addObject:arrayOne];
+        }
+    }
+    
+    [arrayEmpty release];
+    [arrayOne release];
+    [arrayOneAndMidi release];
+    
+    NSLog(@"Loaded MandatoryPickedFriend.");
+}
 
 -(ItemDefinition *) getItemDefinition:(int)itemId
 {
@@ -514,11 +548,25 @@ static DataDepot *instance = nil;
 	return nil;
 }
 
+-(NSMutableArray *) getMandatoryPickedFriend:(int)chapterId
+{
+    if (mandatoryPickedFriend == nil) {
+        return nil;
+    }
+    
+    return [mandatoryPickedFriend objectAtIndex:chapterId - 1];
+}
 
 -(void) dealloc
 {
+	if (itemDictionary != nil) {
+		[itemDictionary release];
+	}
 	
-	
+	if (mandatoryPickedFriend != nil) {
+        [mandatoryPickedFriend release];
+    }
+    
 	[super dealloc];
 }
 

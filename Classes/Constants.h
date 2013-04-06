@@ -25,4 +25,6 @@
 
 +(int) fightAnimationIntervalUnit;
 
++(int) maxPickedFriendCount;
+
 @end

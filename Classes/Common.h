@@ -23,4 +23,6 @@
 +(int) minBetween:(int)val1 and:(int)val2;
 +(double) getAbs:(double)d1;
 
++(BOOL) containInt:(int)num inArray:(NSMutableArray *)arr;
+
 @end

@@ -13,6 +13,7 @@
 #import "FDSlideAnimation.h"
 #import "ShoppingScene.h"
 #import "MainGameScene.h"
+#import "PickFriendScene.h"
 #import "BattleRecord.h"
 #import "FDAudioEngine.h"
 
@@ -48,6 +49,18 @@
 		case 13:return 3;
         case 14:return 3;
         case 15:return 3;
+		case 16:return 3;
+		case 17:return 3;
+		case 18:return 3;
+		case 19:return 3;
+		case 20:return 3;
+		case 21:return 3;
+		case 22:return 3;
+		case 23:return 3;
+		case 24:return 3;
+		case 25:return 3;
+		case 26:return 3;
+		case 27:return 3;
 		default: break;
 	}
 	
@@ -255,10 +268,23 @@
 	
 	NSLog(@"Do Exit");
 	
-	MainGameScene *mainGame = [MainGameScene node];
-	[mainGame loadWithInfo:chapterRecord];
-	
-	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:mainGame]];
+    CCScene *scene = nil;
+    if ([self needPickFriend:chapterRecord]) {
+        MainGameScene *mainGame = [MainGameScene node];
+        [mainGame loadWithInfo:chapterRecord];
+        scene = mainGame;
+    } else {
+        PickFriendScene *picking = [PickFriendScene node];
+        [picking loadWithRecord:chapterRecord];
+        scene = picking;
+    }
+    
+	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];
+}
+
+-(BOOL) needPickFriend:(ChapterRecord *) record {
+    
+    return ([[record friendRecords] count] > [Constants maxPickedFriendCount]);
 }
 
 -(void) dealloc

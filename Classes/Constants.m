@@ -46,4 +46,9 @@
 	return 110;
 }
 
++(int) maxPickedFriendCount
+{
+    return 16;
+}
+
 @end

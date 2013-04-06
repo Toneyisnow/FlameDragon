@@ -25,6 +25,7 @@
 }
 
 -(void) loadWithInfo:(GameStartInfo *)info;
+-(void) loadWithInfo:(GameStartInfo *)info withSelectedFriends:(NSMutableArray *)selectedList;
 
 
 @end

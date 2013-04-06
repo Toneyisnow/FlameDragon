@@ -55,4 +55,6 @@
 
 -(void) setPosition:(int)pos;
 
+-(BOOL) needPickFriend:(ChapterRecord *) record;
+
 @end
