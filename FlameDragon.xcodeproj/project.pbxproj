@@ -72,6 +72,36 @@
 		021BA1C81477789B00102DCE /* ActionLayers.m in Sources */ = {isa = PBXBuildFile; fileRef = 021BA1C71477789B00102DCE /* ActionLayers.m */; };
 		021BA226147782FE00102DCE /* MessageBox.png in Resources */ = {isa = PBXBuildFile; fileRef = 021BA225147782FE00102DCE /* MessageBox.png */; };
 		021BA2291477854E00102DCE /* FDTreasure.m in Sources */ = {isa = PBXBuildFile; fileRef = 021BA2281477854E00102DCE /* FDTreasure.m */; };
+		022ADC251710471900F15034 /* Tai-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC161710471900F15034 /* Tai-16.png */; };
+		022ADC261710471900F15034 /* Tai-17.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC171710471900F15034 /* Tai-17.png */; };
+		022ADC271710471900F15034 /* Tai-18.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC181710471900F15034 /* Tai-18.png */; };
+		022ADC281710471900F15034 /* Tai-19.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC191710471900F15034 /* Tai-19.png */; };
+		022ADC291710471900F15034 /* Tai-20.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC1A1710471900F15034 /* Tai-20.png */; };
+		022ADC2A1710471900F15034 /* Tai-21.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC1B1710471900F15034 /* Tai-21.png */; };
+		022ADC2B1710471900F15034 /* Tai-22.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC1C1710471900F15034 /* Tai-22.png */; };
+		022ADC2C1710471900F15034 /* Tai-23.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC1D1710471900F15034 /* Tai-23.png */; };
+		022ADC2D1710471900F15034 /* Tai-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC1E1710471900F15034 /* Tai-24.png */; };
+		022ADC2E1710471900F15034 /* Tai-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC1F1710471900F15034 /* Tai-25.png */; };
+		022ADC2F1710471900F15034 /* Tai-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC201710471900F15034 /* Tai-26.png */; };
+		022ADC301710471900F15034 /* Tai-27.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC211710471900F15034 /* Tai-27.png */; };
+		022ADC311710471900F15034 /* Tai-28.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC221710471900F15034 /* Tai-28.png */; };
+		022ADC321710471900F15034 /* Tai-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC231710471900F15034 /* Tai-29.png */; };
+		022ADC331710471900F15034 /* Tai-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC241710471900F15034 /* Tai-30.png */; };
+		022ADC431710475700F15034 /* Background-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC341710475700F15034 /* Background-16.png */; };
+		022ADC441710475700F15034 /* Background-17.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC351710475700F15034 /* Background-17.png */; };
+		022ADC451710475700F15034 /* Background-18.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC361710475700F15034 /* Background-18.png */; };
+		022ADC461710475700F15034 /* Background-19.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC371710475700F15034 /* Background-19.png */; };
+		022ADC471710475700F15034 /* Background-20.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC381710475700F15034 /* Background-20.png */; };
+		022ADC481710475700F15034 /* Background-21.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC391710475700F15034 /* Background-21.png */; };
+		022ADC491710475700F15034 /* Background-22.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC3A1710475700F15034 /* Background-22.png */; };
+		022ADC4A1710475700F15034 /* Background-23.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC3B1710475700F15034 /* Background-23.png */; };
+		022ADC4B1710475700F15034 /* Background-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC3C1710475700F15034 /* Background-24.png */; };
+		022ADC4C1710475700F15034 /* Background-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC3D1710475700F15034 /* Background-25.png */; };
+		022ADC4D1710475700F15034 /* Background-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC3E1710475700F15034 /* Background-26.png */; };
+		022ADC4E1710475700F15034 /* Background-27.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC3F1710475700F15034 /* Background-27.png */; };
+		022ADC4F1710475700F15034 /* Background-28.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC401710475700F15034 /* Background-28.png */; };
+		022ADC501710475700F15034 /* Background-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC411710475700F15034 /* Background-29.png */; };
+		022ADC511710475700F15034 /* Background-30.png in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC421710475700F15034 /* Background-30.png */; };
 		022D368B161484780020F816 /* Occupation.dat in Resources */ = {isa = PBXBuildFile; fileRef = 022D368A161484780020F816 /* Occupation.dat */; };
 		022D368E161487130020F816 /* OccupationDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 022D368D161487130020F816 /* OccupationDefinition.m */; };
 		022D37A51615DB0E0020F816 /* VillageShop-01-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 022D37A41615DB0D0020F816 /* VillageShop-01-5.png */; };
@@ -95,6 +125,8 @@
 		022D3C431625B6B50020F816 /* Dato-743-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 022D3C401625B6B50020F816 /* Dato-743-1.png */; };
 		022D3C711625C7CD0020F816 /* SecretIndicator-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 022D3C701625C7CD0020F816 /* SecretIndicator-02.png */; };
 		022D3C7F1625CA9F0020F816 /* EventChapter3.m in Sources */ = {isa = PBXBuildFile; fileRef = 022D3C7E1625CA9F0020F816 /* EventChapter3.m */; };
+		0239E57D16FDFCD100C8CEB0 /* PickFriendScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 0239E57C16FDFCD100C8CEB0 /* PickFriendScene.m */; };
+		0239E58016FDFFB600C8CEB0 /* PickFriendLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0239E57F16FDFFB600C8CEB0 /* PickFriendLayer.m */; };
 		023D07BE15CF82E700AD6FA6 /* SWScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D07B415CF82E700AD6FA6 /* SWScrollView.m */; };
 		023D0D6C1632E10300FBA4D2 /* MagicalInformation.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D0D6B1632E10300FBA4D2 /* MagicalInformation.m */; };
 		023D0D6F1632E7BD00FBA4D2 /* MagicalScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D0D6E1632E7BD00FBA4D2 /* MagicalScene.m */; };
@@ -465,6 +497,8 @@
 		02CB2FC416CF6EBA00C985C7 /* Cursor-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CB2FC316CF6EB900C985C7 /* Cursor-03.png */; };
 		02CB2FC616D4533000C985C7 /* Background-12.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CB2FC516D4533000C985C7 /* Background-12.png */; };
 		02CB2FC816D4534D00C985C7 /* Tai-12.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CB2FC716D4534D00C985C7 /* Tai-12.png */; };
+		02D0C6E216FC8EC300D48625 /* CCVideoPlayerImpliOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 0213447716DE821A00AB5D16 /* CCVideoPlayerImpliOS.m */; };
+		02D0C6E316FC8F9400D48625 /* libcocos2d libraries.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 506EE05E10304ED200A389B3 /* libcocos2d libraries.a */; };
 		02D308B715E2973900CA1799 /* Chapter-02.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02D308B615E2973900CA1799 /* Chapter-02.dat */; };
 		02D3094F15F6598F00CA1799 /* SpecialItemDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D3094E15F6598F00CA1799 /* SpecialItemDefinition.m */; };
 		02D3095A15FAC3AA00CA1799 /* ShoppingSelectAmorTargetDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D3095915FAC3AA00CA1799 /* ShoppingSelectAmorTargetDialog.m */; };
@@ -4217,7 +4251,6 @@
 		02E4232D160F3B920071FA29 /* Shopping2MoneyBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E4232C160F3B920071FA29 /* Shopping2MoneyBar.m */; };
 		02EF517A16F931BD00BF9671 /* Background-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 02EF517916F931BD00BF9671 /* Background-99.png */; };
 		02EF517C16F931DE00BF9671 /* Tai-99.png in Resources */ = {isa = PBXBuildFile; fileRef = 02EF517B16F931DE00BF9671 /* Tai-99.png */; };
-		02EF517D16FA0F4700BF9671 /* AIMagicalDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D4C637164B07AD00B9B407 /* AIMagicalDelegate.m */; };
 		02F8403A14B8167F00665511 /* Magic.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02F8403914B8167F00665511 /* Magic.dat */; };
 		02F8415314B89BD900665511 /* Dato-000-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 02F8415214B89BD900665511 /* Dato-000-1.png */; };
 		02F8418314B9347C00665511 /* ConfirmButtonNo.png in Resources */ = {isa = PBXBuildFile; fileRef = 02F8418114B9347C00665511 /* ConfirmButtonNo.png */; };
@@ -4247,7 +4280,6 @@
 		506EDB88102F4C4000A389B3 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 506EDB87102F4C4000A389B3 /* libz.dylib */; };
 		506EDBA5102F4C9F00A389B3 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 506EDBA4102F4C9F00A389B3 /* AVFoundation.framework */; };
 		506EDC31102F528A00A389B3 /* HelloWorldScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 506EDC30102F528A00A389B3 /* HelloWorldScene.m */; };
-		506EE1A91030508200A389B3 /* libcocos2d libraries.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 506EE05E10304ED200A389B3 /* libcocos2d libraries.a */; };
 		507ED63C11C638C6002ED3FC /* CDAudioManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 507ED63311C638C6002ED3FC /* CDAudioManager.h */; };
 		507ED63D11C638C6002ED3FC /* CDAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 507ED63411C638C6002ED3FC /* CDAudioManager.m */; };
 		507ED63E11C638C6002ED3FC /* CDConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 507ED63511C638C6002ED3FC /* CDConfig.h */; };
@@ -4465,16 +4497,6 @@
 		E0F80F60120A0182005866B8 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0F80F5F120A0182005866B8 /* RootViewController.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		506EE1A71030507B00A389B3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 506EE05D10304ED200A389B3;
-			remoteInfo = "cocos2d libraries";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		020759BD155CCECA009E75E9 /* ShoppingAmorDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingAmorDialog.h; sourceTree = "<group>"; };
 		020759BE155CCECA009E75E9 /* ShoppingAmorDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingAmorDialog.m; sourceTree = "<group>"; };
@@ -4574,6 +4596,36 @@
 		021BA225147782FE00102DCE /* MessageBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MessageBox.png; path = Others/MessageBox.png; sourceTree = "<group>"; };
 		021BA2271477854E00102DCE /* FDTreasure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDTreasure.h; sourceTree = "<group>"; };
 		021BA2281477854E00102DCE /* FDTreasure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDTreasure.m; sourceTree = "<group>"; };
+		022ADC161710471900F15034 /* Tai-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-16.png"; path = "Tais/Tai-16.png"; sourceTree = "<group>"; };
+		022ADC171710471900F15034 /* Tai-17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-17.png"; path = "Tais/Tai-17.png"; sourceTree = "<group>"; };
+		022ADC181710471900F15034 /* Tai-18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-18.png"; path = "Tais/Tai-18.png"; sourceTree = "<group>"; };
+		022ADC191710471900F15034 /* Tai-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-19.png"; path = "Tais/Tai-19.png"; sourceTree = "<group>"; };
+		022ADC1A1710471900F15034 /* Tai-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-20.png"; path = "Tais/Tai-20.png"; sourceTree = "<group>"; };
+		022ADC1B1710471900F15034 /* Tai-21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-21.png"; path = "Tais/Tai-21.png"; sourceTree = "<group>"; };
+		022ADC1C1710471900F15034 /* Tai-22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-22.png"; path = "Tais/Tai-22.png"; sourceTree = "<group>"; };
+		022ADC1D1710471900F15034 /* Tai-23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-23.png"; path = "Tais/Tai-23.png"; sourceTree = "<group>"; };
+		022ADC1E1710471900F15034 /* Tai-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-24.png"; path = "Tais/Tai-24.png"; sourceTree = "<group>"; };
+		022ADC1F1710471900F15034 /* Tai-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-25.png"; path = "Tais/Tai-25.png"; sourceTree = "<group>"; };
+		022ADC201710471900F15034 /* Tai-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-26.png"; path = "Tais/Tai-26.png"; sourceTree = "<group>"; };
+		022ADC211710471900F15034 /* Tai-27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-27.png"; path = "Tais/Tai-27.png"; sourceTree = "<group>"; };
+		022ADC221710471900F15034 /* Tai-28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-28.png"; path = "Tais/Tai-28.png"; sourceTree = "<group>"; };
+		022ADC231710471900F15034 /* Tai-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-29.png"; path = "Tais/Tai-29.png"; sourceTree = "<group>"; };
+		022ADC241710471900F15034 /* Tai-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-30.png"; path = "Tais/Tai-30.png"; sourceTree = "<group>"; };
+		022ADC341710475700F15034 /* Background-16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-16.png"; path = "Backgrounds/Background-16.png"; sourceTree = "<group>"; };
+		022ADC351710475700F15034 /* Background-17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-17.png"; path = "Backgrounds/Background-17.png"; sourceTree = "<group>"; };
+		022ADC361710475700F15034 /* Background-18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-18.png"; path = "Backgrounds/Background-18.png"; sourceTree = "<group>"; };
+		022ADC371710475700F15034 /* Background-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-19.png"; path = "Backgrounds/Background-19.png"; sourceTree = "<group>"; };
+		022ADC381710475700F15034 /* Background-20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-20.png"; path = "Backgrounds/Background-20.png"; sourceTree = "<group>"; };
+		022ADC391710475700F15034 /* Background-21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-21.png"; path = "Backgrounds/Background-21.png"; sourceTree = "<group>"; };
+		022ADC3A1710475700F15034 /* Background-22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-22.png"; path = "Backgrounds/Background-22.png"; sourceTree = "<group>"; };
+		022ADC3B1710475700F15034 /* Background-23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-23.png"; path = "Backgrounds/Background-23.png"; sourceTree = "<group>"; };
+		022ADC3C1710475700F15034 /* Background-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-24.png"; path = "Backgrounds/Background-24.png"; sourceTree = "<group>"; };
+		022ADC3D1710475700F15034 /* Background-25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-25.png"; path = "Backgrounds/Background-25.png"; sourceTree = "<group>"; };
+		022ADC3E1710475700F15034 /* Background-26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-26.png"; path = "Backgrounds/Background-26.png"; sourceTree = "<group>"; };
+		022ADC3F1710475700F15034 /* Background-27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-27.png"; path = "Backgrounds/Background-27.png"; sourceTree = "<group>"; };
+		022ADC401710475700F15034 /* Background-28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-28.png"; path = "Backgrounds/Background-28.png"; sourceTree = "<group>"; };
+		022ADC411710475700F15034 /* Background-29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-29.png"; path = "Backgrounds/Background-29.png"; sourceTree = "<group>"; };
+		022ADC421710475700F15034 /* Background-30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-30.png"; path = "Backgrounds/Background-30.png"; sourceTree = "<group>"; };
 		022D368A161484780020F816 /* Occupation.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Occupation.dat; path = Data/Occupation.dat; sourceTree = "<group>"; };
 		022D368C161487130020F816 /* OccupationDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OccupationDefinition.h; sourceTree = "<group>"; };
 		022D368D161487130020F816 /* OccupationDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OccupationDefinition.m; sourceTree = "<group>"; };
@@ -4604,6 +4656,10 @@
 		022D3C701625C7CD0020F816 /* SecretIndicator-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SecretIndicator-02.png"; path = "Village/SecretIndicator-02.png"; sourceTree = "<group>"; };
 		022D3C7D1625CA9F0020F816 /* EventChapter3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter3.h; sourceTree = "<group>"; };
 		022D3C7E1625CA9F0020F816 /* EventChapter3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter3.m; sourceTree = "<group>"; };
+		0239E57B16FDFCD100C8CEB0 /* PickFriendScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickFriendScene.h; sourceTree = "<group>"; };
+		0239E57C16FDFCD100C8CEB0 /* PickFriendScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickFriendScene.m; sourceTree = "<group>"; };
+		0239E57E16FDFFB600C8CEB0 /* PickFriendLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PickFriendLayer.h; sourceTree = "<group>"; };
+		0239E57F16FDFFB600C8CEB0 /* PickFriendLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PickFriendLayer.m; sourceTree = "<group>"; };
 		023D07B315CF82E700AD6FA6 /* SWScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWScrollView.h; path = tableView/SWScrollView.h; sourceTree = "<group>"; };
 		023D07B415CF82E700AD6FA6 /* SWScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWScrollView.m; path = tableView/SWScrollView.m; sourceTree = "<group>"; };
 		023D0D6A1632E10300FBA4D2 /* MagicalInformation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalInformation.h; sourceTree = "<group>"; };
@@ -9156,6 +9212,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02D0C6E316FC8F9400D48625 /* libcocos2d libraries.a in Frameworks */,
 				0213447E16DE82C200AB5D16 /* MediaPlayer.framework in Frameworks */,
 				DCCBF1B70F6022AE0040855A /* CoreGraphics.framework in Frameworks */,
 				DCCBF1B90F6022AE0040855A /* Foundation.framework in Frameworks */,
@@ -9166,7 +9223,6 @@
 				DC6640050F83B3EA000B3E49 /* OpenAL.framework in Frameworks */,
 				506EDB88102F4C4000A389B3 /* libz.dylib in Frameworks */,
 				506EDBA5102F4C9F00A389B3 /* AVFoundation.framework in Frameworks */,
-				506EE1A91030508200A389B3 /* libcocos2d libraries.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -9642,6 +9698,10 @@
 				02759D3D154A702600853895 /* VillageLayer.m */,
 				022D386C16171F470020F816 /* VillageLabel.h */,
 				022D386D16171F470020F816 /* VillageLabel.m */,
+				0239E57B16FDFCD100C8CEB0 /* PickFriendScene.h */,
+				0239E57C16FDFCD100C8CEB0 /* PickFriendScene.m */,
+				0239E57E16FDFFB600C8CEB0 /* PickFriendLayer.h */,
+				0239E57F16FDFFB600C8CEB0 /* PickFriendLayer.m */,
 			);
 			name = Scene;
 			sourceTree = "<group>";
@@ -10135,6 +10195,21 @@
 				020C5A7016D9C31500AD0F53 /* Background-13.png */,
 				020C5A7116D9C31500AD0F53 /* Background-14.png */,
 				020C5A7216D9C31500AD0F53 /* Background-15.png */,
+				022ADC341710475700F15034 /* Background-16.png */,
+				022ADC351710475700F15034 /* Background-17.png */,
+				022ADC361710475700F15034 /* Background-18.png */,
+				022ADC371710475700F15034 /* Background-19.png */,
+				022ADC381710475700F15034 /* Background-20.png */,
+				022ADC391710475700F15034 /* Background-21.png */,
+				022ADC3A1710475700F15034 /* Background-22.png */,
+				022ADC3B1710475700F15034 /* Background-23.png */,
+				022ADC3C1710475700F15034 /* Background-24.png */,
+				022ADC3D1710475700F15034 /* Background-25.png */,
+				022ADC3E1710475700F15034 /* Background-26.png */,
+				022ADC3F1710475700F15034 /* Background-27.png */,
+				022ADC401710475700F15034 /* Background-28.png */,
+				022ADC411710475700F15034 /* Background-29.png */,
+				022ADC421710475700F15034 /* Background-30.png */,
 				02EF517916F931BD00BF9671 /* Background-99.png */,
 			);
 			name = Backgrounds;
@@ -10158,6 +10233,21 @@
 				020C5A7616D9C32A00AD0F53 /* Tai-13.png */,
 				020C5A7716D9C32A00AD0F53 /* Tai-14.png */,
 				020C5A7816D9C32A00AD0F53 /* Tai-15.png */,
+				022ADC161710471900F15034 /* Tai-16.png */,
+				022ADC171710471900F15034 /* Tai-17.png */,
+				022ADC181710471900F15034 /* Tai-18.png */,
+				022ADC191710471900F15034 /* Tai-19.png */,
+				022ADC1A1710471900F15034 /* Tai-20.png */,
+				022ADC1B1710471900F15034 /* Tai-21.png */,
+				022ADC1C1710471900F15034 /* Tai-22.png */,
+				022ADC1D1710471900F15034 /* Tai-23.png */,
+				022ADC1E1710471900F15034 /* Tai-24.png */,
+				022ADC1F1710471900F15034 /* Tai-25.png */,
+				022ADC201710471900F15034 /* Tai-26.png */,
+				022ADC211710471900F15034 /* Tai-27.png */,
+				022ADC221710471900F15034 /* Tai-28.png */,
+				022ADC231710471900F15034 /* Tai-29.png */,
+				022ADC241710471900F15034 /* Tai-30.png */,
 				02EF517B16F931DE00BF9671 /* Tai-99.png */,
 			);
 			name = Tais;
@@ -16708,7 +16798,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				506EE1A81030507B00A389B3 /* PBXTargetDependency */,
 			);
 			name = FlameDragon;
 			productName = FlameDragon;
@@ -20776,6 +20865,36 @@
 				02996C6816F4485200FF2AE9 /* Chapter-30-Creature.dat  in Resources */,
 				02EF517A16F931BD00BF9671 /* Background-99.png in Resources */,
 				02EF517C16F931DE00BF9671 /* Tai-99.png in Resources */,
+				022ADC251710471900F15034 /* Tai-16.png in Resources */,
+				022ADC261710471900F15034 /* Tai-17.png in Resources */,
+				022ADC271710471900F15034 /* Tai-18.png in Resources */,
+				022ADC281710471900F15034 /* Tai-19.png in Resources */,
+				022ADC291710471900F15034 /* Tai-20.png in Resources */,
+				022ADC2A1710471900F15034 /* Tai-21.png in Resources */,
+				022ADC2B1710471900F15034 /* Tai-22.png in Resources */,
+				022ADC2C1710471900F15034 /* Tai-23.png in Resources */,
+				022ADC2D1710471900F15034 /* Tai-24.png in Resources */,
+				022ADC2E1710471900F15034 /* Tai-25.png in Resources */,
+				022ADC2F1710471900F15034 /* Tai-26.png in Resources */,
+				022ADC301710471900F15034 /* Tai-27.png in Resources */,
+				022ADC311710471900F15034 /* Tai-28.png in Resources */,
+				022ADC321710471900F15034 /* Tai-29.png in Resources */,
+				022ADC331710471900F15034 /* Tai-30.png in Resources */,
+				022ADC431710475700F15034 /* Background-16.png in Resources */,
+				022ADC441710475700F15034 /* Background-17.png in Resources */,
+				022ADC451710475700F15034 /* Background-18.png in Resources */,
+				022ADC461710475700F15034 /* Background-19.png in Resources */,
+				022ADC471710475700F15034 /* Background-20.png in Resources */,
+				022ADC481710475700F15034 /* Background-21.png in Resources */,
+				022ADC491710475700F15034 /* Background-22.png in Resources */,
+				022ADC4A1710475700F15034 /* Background-23.png in Resources */,
+				022ADC4B1710475700F15034 /* Background-24.png in Resources */,
+				022ADC4C1710475700F15034 /* Background-25.png in Resources */,
+				022ADC4D1710475700F15034 /* Background-26.png in Resources */,
+				022ADC4E1710475700F15034 /* Background-27.png in Resources */,
+				022ADC4F1710475700F15034 /* Background-28.png in Resources */,
+				022ADC501710475700F15034 /* Background-29.png in Resources */,
+				022ADC511710475700F15034 /* Background-30.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -21004,6 +21123,8 @@
 				0213447B16DE821A00AB5D16 /* CCVideoPlayerImpliOS.m in Sources */,
 				0213447C16DE821A00AB5D16 /* videoOverlayView.m in Sources */,
 				0262183B16E1D2AE009CE8DD /* FDAudioEngine.m in Sources */,
+				0239E57D16FDFCD100C8CEB0 /* PickFriendScene.m in Sources */,
+				0239E58016FDFFB600C8CEB0 /* PickFriendLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -21108,33 +21229,22 @@
 				E02BB8AE126CC224006E46A2 /* TGAlib.m in Sources */,
 				E02BB8B0126CC224006E46A2 /* TransformUtils.m in Sources */,
 				E02BB8B4126CC224006E46A2 /* ZipUtils.m in Sources */,
-				02EF517D16FA0F4700BF9671 /* AIMagicalDelegate.m in Sources */,
+				02D0C6E216FC8EC300D48625 /* CCVideoPlayerImpliOS.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		506EE1A81030507B00A389B3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 506EE05D10304ED200A389B3 /* cocos2d libraries */;
-			targetProxy = 506EE1A71030507B00A389B3 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		02BA71FB14CA286D0028C9E7 /* Distribution */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Yi Sui";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yi Sui";
 				GCC_C_LANGUAGE_STANDARD = c99;
-				"GCC_THUMB_SUPPORT[arch=armv6]" = YES;
+				"GCC_THUMB_SUPPORT[arch=armv6]" = NO;
 				"GCC_THUMB_SUPPORT[arch=armv7]" = YES;
 				GCC_UNROLL_LOOPS = YES;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
@@ -21142,8 +21252,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = NO;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0D128355-AFC3-453F-BA75-DE748F8E6422";
+				PROVISIONING_PROFILE = "147E891A-72AF-498C-A0BA-14A329A31527";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "147E891A-72AF-498C-A0BA-14A329A31527";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv6 armv7 armv7s";
@@ -21154,15 +21264,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yi Sui (74QF9MJWJZ)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yi Sui";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yi Sui";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FlameDragon_Prefix.pch;
+				GCC_THUMB_SUPPORT = NO;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -21174,8 +21283,9 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = FlameDragon;
-				PROVISIONING_PROFILE = "FE57999F-C1E2-455F-8E68-F55BCAF84287";
-				VALID_ARCHS = "armv6 armv7 armv7s";
+				PROVISIONING_PROFILE = "147E891A-72AF-498C-A0BA-14A329A31527";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "147E891A-72AF-498C-A0BA-14A329A31527";
+				VALID_ARCHS = "armv7 armv7s";
 				WARNING_CFLAGS = "-Wall";
 			};
 			name = Distribution;
@@ -21184,11 +21294,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yi Sui (74QF9MJWJZ)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_THUMB_SUPPORT = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = "cocos2d libraries";
+				PROVISIONING_PROFILE = "FE57999F-C1E2-455F-8E68-F55BCAF84287";
 				ZERO_LINK = NO;
 			};
 			name = Distribution;
@@ -21204,6 +21317,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FlameDragon_Prefix.pch;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = Resources/Info.plist;
@@ -21215,7 +21329,7 @@
 				);
 				PRODUCT_NAME = FlameDragon;
 				PROVISIONING_PROFILE = "FE57999F-C1E2-455F-8E68-F55BCAF84287";
-				VALID_ARCHS = "armv6 armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s";
 				WARNING_CFLAGS = "-Wall";
 			};
 			name = Debug;
@@ -21224,15 +21338,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yi Sui (74QF9MJWJZ)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yi Sui";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yi Sui";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = FlameDragon_Prefix.pch;
+				GCC_THUMB_SUPPORT = NO;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -21244,8 +21357,9 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = FlameDragon;
-				PROVISIONING_PROFILE = "FE57999F-C1E2-455F-8E68-F55BCAF84287";
-				VALID_ARCHS = "armv6 armv7 armv7s";
+				PROVISIONING_PROFILE = "147E891A-72AF-498C-A0BA-14A329A31527";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "147E891A-72AF-498C-A0BA-14A329A31527";
+				VALID_ARCHS = "armv7 armv7s";
 				WARNING_CFLAGS = "-Wall";
 			};
 			name = Release;
@@ -21254,12 +21368,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yi Sui (74QF9MJWJZ)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_THUMB_SUPPORT = YES;
+				"GCC_THUMB_SUPPORT[arch=armv6]" = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = "cocos2d libraries";
+				PROVISIONING_PROFILE = "FE57999F-C1E2-455F-8E68-F55BCAF84287";
 			};
 			name = Debug;
 		};
@@ -21267,11 +21385,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yi Sui (74QF9MJWJZ)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_THUMB_SUPPORT = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = "cocos2d libraries";
+				PROVISIONING_PROFILE = "FE57999F-C1E2-455F-8E68-F55BCAF84287";
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -21281,7 +21402,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Yi Sui";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DEBUG,
@@ -21290,12 +21411,13 @@
 				);
 				"GCC_THUMB_SUPPORT[arch=armv6]" = NO;
 				"GCC_THUMB_SUPPORT[arch=armv7]" = YES;
+				GCC_UNROLL_LOOPS = YES;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				ONLY_ACTIVE_ARCH = NO;
-				"PROVISIONING_PROFILE[sdk=*]" = "0D128355-AFC3-453F-BA75-DE748F8E6422";
+				"PROVISIONING_PROFILE[sdk=*]" = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv6 armv7 armv7s";
@@ -21306,22 +21428,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = (
-					armv6,
-					armv7,
-				);
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Yi Sui";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yi Sui";
 				GCC_C_LANGUAGE_STANDARD = c99;
-				"GCC_THUMB_SUPPORT[arch=armv6]" = YES;
+				"GCC_THUMB_SUPPORT[arch=armv6]" = NO;
 				"GCC_THUMB_SUPPORT[arch=armv7]" = YES;
 				GCC_UNROLL_LOOPS = YES;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PROVISIONING_PROFILE = "0D128355-AFC3-453F-BA75-DE748F8E6422";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0D128355-AFC3-453F-BA75-DE748F8E6422";
+				PROVISIONING_PROFILE = "147E891A-72AF-498C-A0BA-14A329A31527";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "147E891A-72AF-498C-A0BA-14A329A31527";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv6 armv7 armv7s";
@@ -21339,7 +21458,7 @@
 				02BA71FC14CA286D0028C9E7 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Distribution;
+			defaultConfigurationName = Debug;
 		};
 		506EE06410304F0100A389B3 /* Build configuration list for PBXNativeTarget "cocos2d libraries" */ = {
 			isa = XCConfigurationList;
@@ -21349,7 +21468,7 @@
 				02BA71FD14CA286D0028C9E7 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Distribution;
+			defaultConfigurationName = Debug;
 		};
 		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FlameDragon" */ = {
 			isa = XCConfigurationList;
@@ -21359,7 +21478,7 @@
 				02BA71FB14CA286D0028C9E7 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Distribution;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

@@ -95,7 +95,9 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "29"
-         endingLineNumber = "29">
+         endingLineNumber = "29"
+         landmarkName = "-takeAction"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
@@ -106,7 +108,9 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "46"
-         endingLineNumber = "46">
+         endingLineNumber = "46"
+         landmarkName = "-setParameter:"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
@@ -117,7 +121,9 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "46"
-         endingLineNumber = "46">
+         endingLineNumber = "46"
+         landmarkName = "-initComponents"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
