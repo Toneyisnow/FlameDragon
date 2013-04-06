@@ -8,7 +8,7 @@
 
 
 "Title-16" = "第十六章  冰原之战"; 
-"Condition-Lose" = "索尔死亡";
+"Condition-Lose" = "索尔或蜜蒂死亡";
 "Condition-Win" = "敌全灭";
 
 "16-01-001-Id" = "3";
