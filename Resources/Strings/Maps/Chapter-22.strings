@@ -8,7 +8,7 @@
 
 
 "Title-22" = "第二十二章  远古的呼唤"; 
-"Condition-Lose" = "索尔死亡";
+"Condition-Lose" = "索尔或希尔法死亡";
 "Condition-Win" = "敌全灭";
 
 "22-01-001-Id" = "1";
