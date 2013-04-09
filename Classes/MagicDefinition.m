@@ -31,7 +31,7 @@
 
 	int min = [stream readInt];
 	int max = [stream readInt];
-	def.quantityRange = [[FDRange alloc] initWithMin:min Max:max];
+	def.quantityRange = [[[FDRange alloc] initWithMin:min Max:max] autorelease];
 
 	def.hittingRate = [stream readInt];
 	def.effectScope = [stream readInt];

@@ -15,6 +15,8 @@
 
 @implementation PickFriendLayer
 
+@synthesize chapterRecord;
+
 -(id) init
 {
 	self = [super init];

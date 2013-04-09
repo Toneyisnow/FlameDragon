@@ -63,13 +63,14 @@
 		[nameSprite setAnchorPoint:CGPointMake(0, 0)];
 		[nameSprite setLocation:CGPointMake(nowX + 10, nowY)];
 		[baseSprite addSprite:nameSprite zOrder:3];
-		
+		[nameSprite release];
+        
 		// Attribute
 		FDSprite *attSprite = [[FDSprite alloc] initWithString:[item getAttributeString] Size:12];	
 		[attSprite setAnchorPoint:CGPointMake(0, 0)];
 		[attSprite setLocation:CGPointMake(nowX + 80, nowY)];
 		[baseSprite addSprite:attSprite zOrder:3];
-		
+		[attSprite release];
 	}
 	
 	return self;

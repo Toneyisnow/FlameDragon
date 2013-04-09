@@ -468,6 +468,7 @@
 	[ibox show:layer];
 	[layer setMessageBox:ibox];
 	[ibox autorelease];
+    [creature release];
 }
 
 -(void) onEquip_SelectedItem:(NSNumber *)num
@@ -565,6 +566,8 @@
 	[ibox show:layer];
 	[layer setMessageBox:ibox];
 	[ibox autorelease];
+    [creature release];
+    
 }
 
 -(void) onInfo_ShowMagics:(NSNumber *)num
@@ -578,6 +581,7 @@
 	[mbox show:layer];
 	[layer setMessageBox:mbox];
 	[mbox autorelease];
+    [creature release];
 }
 
 -(void) closeCurrentBox

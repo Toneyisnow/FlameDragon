@@ -77,6 +77,9 @@
 		[baseSprite addSprite:mpBar zOrder:1];
 	}
 	
+    [hpBar release];
+    [mpBar release];
+    
 	int statusX = 105;
 	int statusY = 13;
 	int statusDeltaX = 20;
@@ -110,7 +113,8 @@
 	FDSprite *sprite = [[FDSprite alloc] initWithString:str Size:16];
 	[sprite setAnchorPoint:CGPointMake(0, 0)];
 	[sprite setLocation:pos];
-	[baseSprite addSprite:sprite zOrder:1];	
+	[baseSprite addSprite:sprite zOrder:1];
+    [sprite release];
 }
 
 -(void) addInt:(int)value Dimen:(int)dimen Pos:(CGPoint) pos
@@ -131,6 +135,7 @@
 	[sprite setAnchorPoint:CGPointMake(0, 0)];
 	[sprite setLocation:pos];
 	[baseSprite addSprite:sprite zOrder:1];
+    [sprite release];
 }
 
 -(void) addStatusIcon:(NSString *)fileName Pos:(CGPoint) pos

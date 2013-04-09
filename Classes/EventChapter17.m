@@ -7,7 +7,7 @@
 //
 
 #import "EventChapter17.h"
-
+#import "FDDurationActivity.h"
 
 @implementation EventChapter17
 
@@ -135,7 +135,7 @@
 		}
 	}
 	
-	[layers appendToCurrentActivityMethod:@selector(enemyClear2) Param1:nil Param2:nil Obj:];
+	[layers appendToCurrentActivityMethod:@selector(enemyClear2) Param1:nil Param2:nil Obj:self];
 }
 
 -(void) enemyClear2

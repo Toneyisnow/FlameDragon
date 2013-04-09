@@ -270,13 +270,13 @@
 	
     CCScene *scene = nil;
     if ([self needPickFriend:chapterRecord]) {
-        MainGameScene *mainGame = [MainGameScene node];
-        [mainGame loadWithInfo:chapterRecord];
-        scene = mainGame;
-    } else {
         PickFriendScene *picking = [PickFriendScene node];
         [picking loadWithRecord:chapterRecord];
         scene = picking;
+    } else {
+        MainGameScene *mainGame = [MainGameScene node];
+        [mainGame loadWithInfo:chapterRecord];
+        scene = mainGame;
     }
     
 	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];

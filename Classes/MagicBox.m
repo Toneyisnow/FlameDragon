@@ -25,7 +25,7 @@
 	
 	operatingType = type;
 	baseSprite = [[[FDSpriteStore instance] sprite:@"ContainerBase.png"] retain];
-	creature = c;
+	creature = [c retain];
 	
 	datoBar = [[CreatureDato alloc] initWithAniDef:[[c getDefinition] getAnimationId]];
 	detailsBar = [[CreatureDetail alloc] initWithCreature:c];
@@ -51,7 +51,7 @@
 		[nameSprite setAnchorPoint:CGPointMake(0, 0)];
 		[nameSprite setLocation:CGPointMake(location.x, location.y)];
 		[baseSprite addSprite:nameSprite zOrder:1];
-		
+		[nameSprite release];
 		
 		// Attribute
 		NSString *attri = [NSString stringWithFormat:@"-MP %02d", def.mpCost];
@@ -59,6 +59,7 @@
 		[attSprite setAnchorPoint:CGPointMake(0, 0)];
 		[attSprite setLocation:CGPointMake(location.x + 50, location.y)];
 		[baseSprite addSprite:attSprite zOrder:1];
+        [attSprite release];
 	}
 }
 
@@ -157,7 +158,8 @@
 {
 	[datoBar release];
 	[detailsBar release];
-	
+	[creature release];
+    
 	[super dealloc];
 }
 

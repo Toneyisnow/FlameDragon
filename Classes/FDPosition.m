@@ -13,7 +13,7 @@
 
 +(id) positionX:(int)x Y:(int)y
 {
-	return [[self alloc] initX:x Y:y];
+	return [[[self alloc] initX:x Y:y] autorelease];
 }
 
 -(id) initWithPosition:(CGPoint)pos

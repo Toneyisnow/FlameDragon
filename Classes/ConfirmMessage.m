@@ -50,7 +50,8 @@
 	[prompt setAnchorPoint:CGPointMake(0, 0.5)];
 	[prompt setLocation:CGPointMake(10 + [dato size].width, 65)];
 	[baseSprite addSprite:prompt zOrder:1];
-	
+	[prompt release];
+    
 	// Button
 	FDSprite *buttonYes = [[FDSpriteStore instance] sprite:@"ConfirmButtonYes.png"];
 	[buttonYes setLocation:[self buttonYesLocation]];

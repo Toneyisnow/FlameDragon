@@ -113,7 +113,9 @@
 	[layers appendToCurrentActivityMethod:@selector(setCursorToObject:) Param1:creature Param2:nil Obj:field];
 	
 	FDTalkActivity *talk = [[FDTalkActivity alloc] initWithCreature:creature Message:talkMessage Layer:[layers getMessageLayer]];	
-	[layers appendToCurrentActivity:talk];	
+	[layers appendToCurrentActivity:talk];
+    [talk release];
+    
 }
 
 -(void) settleFriend:(int)friendIndex At:(CGPoint)loc

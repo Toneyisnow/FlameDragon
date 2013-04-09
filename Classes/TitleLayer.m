@@ -87,6 +87,8 @@
 	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:mainGame]];
     
     [FDAudioEngine stopMusic];
+    
+    [info release];
 }
 
 -(void) onLoadGame
@@ -179,7 +181,7 @@
     
 	[creature release];
 	
-	return r;
+	return [r autorelease];
 }
 
 -(void) moviePlaybackFinished {

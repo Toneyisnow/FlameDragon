@@ -7,7 +7,7 @@
 //
 
 #import "EventChapter20.h"
-
+#import "FDDurationActivity.h"
 
 @implementation EventChapter20
 

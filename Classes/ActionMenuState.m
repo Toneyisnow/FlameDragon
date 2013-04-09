@@ -190,7 +190,8 @@
 		NSString *msg = [NSString stringWithFormat:[FDLocalString message:3], item.name];
 		TalkMessage *talk = [[TalkMessage alloc] initWithCreature:currentFriend Message:msg];
 		[talk show:[layers getMessageLayer]];
-		
+		[talk release];
+        
 		if (![item isMoney] && [currentFriend isItemListFull])
 		{
 			ConfirmMessage *message = [[ConfirmMessage alloc] initWithType:ConfirmMessageType_ItemFull CreatureAniDefId:[[currentFriend getDefinition] getAnimationId]];
@@ -210,7 +211,8 @@
 		// Leave the treasure
 		TalkMessage *talk = [[TalkMessage alloc] initWithCreature:currentFriend Message:[FDLocalString message:2]];
 		[talk show:[layers getMessageLayer]];
-		
+		[talk release];
+        
 		isFinished = TRUE;
 		shouldDispose = TRUE;
 	}
@@ -235,6 +237,7 @@
 		// Put it back
 		TalkMessage *talk = [[TalkMessage alloc] initWithCreature:currentFriend Message:[FDLocalString message:7]];
 		[talk show:[layers getMessageLayer]];
+        [talk release];
 	}
 	
 	isFinished = TRUE;

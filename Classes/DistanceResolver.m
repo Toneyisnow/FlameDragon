@@ -117,6 +117,7 @@
 		NSNumber *lastValue = [distanceDic objectForKey:[nowPos hashKey]];
 		if ([lastValue floatValue] <= val)
 		{
+            [nowPos release];
 			return;
 		}
 	}
@@ -124,7 +125,7 @@
 	[distanceDic setObject:[NSNumber numberWithFloat:val] forKey:[nowPos hashKey]];
 	[posQueue addObject:nowPos];
 	
-	[nowPos autorelease];
+	[nowPos release];
 }
 
 -(void) dealloc

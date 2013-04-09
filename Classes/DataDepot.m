@@ -95,6 +95,8 @@ static DataDepot *instance = nil;
 	}
 	
 	[file close];
+    [file release];
+    
 	NSLog(@"Loaded Item Dictionary.");
 }
 
@@ -119,6 +121,8 @@ static DataDepot *instance = nil;
 	}
 	
 	[file close];
+    [file release];
+    
 	NSLog(@"Loaded Magic Dictionary.");	
 }
 
@@ -158,7 +162,8 @@ static DataDepot *instance = nil;
 		[baseInfoDict setObject:def forKey:[NSNumber numberWithInt:[def getId]]];
 	}
 	[file close];
-	
+	[file release];
+    
 	// Read enemy/NPC data
 	for (int level = 1; level <= 20; level++) {
 		NSString *levelDataFile = [NSString stringWithFormat:@"Chapter-%02d-Creature", level];
@@ -172,7 +177,8 @@ static DataDepot *instance = nil;
 		}
 		
 		[levelFile close];
-	}
+        [levelFile release];
+    }
 	
 	[baseInfoDict release];
 	NSLog(@"Loaded Leveled Creature Dictionary.");
@@ -198,7 +204,8 @@ static DataDepot *instance = nil;
 		[occupationDictionary setObject:def forKey:[NSNumber numberWithInt:def.occupationId]];
 	}
 	[file close];
-	
+	[file release];
+    
 	NSLog(@"Loaded Occupation Dictionary.");
 }
 
@@ -223,7 +230,8 @@ static DataDepot *instance = nil;
 	}
 	
 	[file close];
-	
+	[file release];
+    
 	NSLog(@"Loaded LevelUp Dictionary.");
 }
 
@@ -252,7 +260,8 @@ static DataDepot *instance = nil;
 	}
 	
 	[file close];
-	
+	[file release];
+    
 	NSLog(@"Loaded Shop Dictionary.");	
 }
 
@@ -278,7 +287,8 @@ static DataDepot *instance = nil;
 	}
 	
 	[file close];
-	
+	[file release];
+    
 	NSLog(@"Loaded SecretSequence Dictionary.");
 }
 
@@ -302,7 +312,8 @@ static DataDepot *instance = nil;
 	}
 	
 	[file close];
-	
+	[file release];
+    
 	NSLog(@"Loaded LevelUp Magic Dictionary.");
 }
 
@@ -375,7 +386,8 @@ static DataDepot *instance = nil;
 	
 	
 	[file close];
-	NSLog(@"Loaded Animation Dictionary.");
+	[file release];
+    NSLog(@"Loaded Animation Dictionary.");
 }
 
 -(void) loadMandatoryPickedFriend {
@@ -391,9 +403,9 @@ static DataDepot *instance = nil;
     NSMutableArray *arrayEmpty = [[NSMutableArray alloc] init];
     NSMutableArray *arrayOne = [[NSMutableArray alloc] init];
     NSMutableArray *arrayOneAndMidi = [[NSMutableArray alloc] init];
-    [arrayOne addObject:0];
-    [arrayOneAndMidi addObject:0];
-    [arrayOneAndMidi addObject:17];
+    [arrayOne addObject:[NSNumber numberWithInt:0]];
+    [arrayOneAndMidi addObject:[NSNumber numberWithInt:0]];
+    [arrayOneAndMidi addObject:[NSNumber numberWithInt:17]];
     
     for (int i = 0; i < 30; i++) {
         if (i < 15) {

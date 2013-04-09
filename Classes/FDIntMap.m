@@ -53,7 +53,7 @@
     FDIntMap *another = [[FDIntMap alloc] initWidth:width Height:height];
     
     memcpy([another getMap], map, width * height * sizeof(int));
-    return another;
+    return [another autorelease];
 }
 
 -(void) dealloc

@@ -25,6 +25,8 @@
 	[self addChild:[bg getSprite]];
 	// [bg addToLayer:self];
 	
+    [bg release];
+    
 	return self;
 }
 

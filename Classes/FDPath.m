@@ -117,7 +117,7 @@
 		[newPath addPos:current];
 	}
 	
-	return newPath;
+	return [newPath autorelease];
 }
 
 -(void) dealloc

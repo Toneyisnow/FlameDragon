@@ -32,6 +32,9 @@
 	
 	[baseSprite addSprite:chapterSprite zOrder:1];
 	[baseSprite addSprite:turnSprite zOrder:1];
+    
+    [chapterSprite release];
+    [turnSprite release];
 }
 
 -(void) setCondition:(int)chapterId
@@ -50,6 +53,9 @@
 	
 	[baseSprite addSprite:winCondition zOrder:1];
 	[baseSprite addSprite:loseCondition zOrder:1];
+    
+    [winCondition release];
+    [loseCondition release];
 }
 
 -(void) setFriendCount:(int)fCount EnemyCount:(int)eCount NpcCount:(int)nCount
@@ -65,6 +71,10 @@
 	[baseSprite addSprite:fSprite zOrder:1];
 	[baseSprite addSprite:eSprite zOrder:1];
 	[baseSprite addSprite:nSprite zOrder:1];
+    
+    [fSprite release];
+    [eSprite release];
+    [nSprite release];
 }
 
 -(void) setMoney:(int)quantity
@@ -72,6 +82,7 @@
 	FDSprite *quantitySprite = [[FDSprite alloc] initWithString:[NSString stringWithFormat:@"%08d", quantity] Size:10];
 	[quantitySprite setLocation:CGPointMake(90, 6)];
 	[baseSprite addSprite:quantitySprite zOrder:1];
+    [quantitySprite release];
 }
 
 /*

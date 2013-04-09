@@ -30,7 +30,7 @@
 	NSLog(@"initialBattle event triggered.");
 	
 	// Creatures
-	[self settleFriend:1 At:CGPointMake(11.37)];
+	[self settleFriend:1 At:CGPointMake(11,37)];
 	[self settleFriend:2 At:CGPointMake(13,37)];
 	[self settleFriend:3 At:CGPointMake(15,37)];
 	[self settleFriend:4 At:CGPointMake(12,38)];

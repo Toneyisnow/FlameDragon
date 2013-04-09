@@ -27,7 +27,7 @@
 	def.creatureLevel = [stream readInt];
 	def.magicId = [stream readInt];
 	
-	return def;
+	return [def autorelease];
 }
 
 -(NSNumber *) getKey

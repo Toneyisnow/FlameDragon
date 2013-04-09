@@ -25,7 +25,7 @@
 		[def.itemList addObject:[NSNumber numberWithInt:item]];
 	}
 	
-	return def;
+	return [def autorelease];
 }
 
 

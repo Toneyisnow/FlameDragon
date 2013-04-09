@@ -57,31 +57,34 @@
 	record.definitionId = friendId;
 	record.creatureType = CreatureType_Friend;
 	
-	record.data = [[CreatureData alloc] init];
-	record.data.level = 3;
-	record.data.hpMax = 100;
-	record.data.mpMax = 0;
+    CreatureData *cData = [[CreatureData alloc] init];
 	
-	record.data.hpCurrent = 100;
+    cData.level = 3;
+	cData.hpMax = 100;
+	cData.mpMax = 0;
+	
+	cData.hpCurrent = 100;
 	if (friendId == 3) {
-		record.data.hpCurrent = 0;
+		cData.hpCurrent = 0;
 	}
-	record.data.mpCurrent = 0;
-	record.data.ap = 10;
-	record.data.dp = 5;
-	record.data.mv = 4;
-	record.data.dx = 5;
-	record.data.ex = 10;
-	record.data.bodyStatus = BodyStatus_Normal;
+	cData.mpCurrent = 0;
+	cData.ap = 10;
+	cData.dp = 5;
+	cData.mv = 4;
+	cData.dx = 5;
+	cData.ex = 10;
+	cData.bodyStatus = BodyStatus_Normal;
 	
-	[record.data.itemList addObject:[NSNumber numberWithInt:221]];
-	[record.data.itemList addObject:[NSNumber numberWithInt:302]];
-	[record.data.itemList addObject:[NSNumber numberWithInt:302]];
+	[cData.itemList addObject:[NSNumber numberWithInt:221]];
+	[cData.itemList addObject:[NSNumber numberWithInt:302]];
+	[cData.itemList addObject:[NSNumber numberWithInt:302]];
 	
-	record.data.attackItemIndex = 0;
-	record.data.defendItemIndex = 1;
+	cData.attackItemIndex = 0;
+	cData.defendItemIndex = 1;
 	
-	
+	record.data = cData;
+    [cData release];
+    
 	return [record autorelease];
 }
 

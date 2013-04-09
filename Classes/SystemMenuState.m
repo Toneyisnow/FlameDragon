@@ -152,7 +152,8 @@
 		
 		TalkMessage *talk = [[TalkMessage alloc] initWithCreature:nil Message:[FDLocalString message:1]];
 		[talk show:[layers getMessageLayer]];
-		
+		[talk release];
+        
 		[layers appendToCurrentActivityMethod:@selector(closeMenu) Param1:nil Param2:nil Obj:field];
 		[layers appendToCurrentActivityMethod:@selector(endFriendTurn) Param1:nil Param2:nil Obj:layers];
 		
@@ -163,6 +164,7 @@
 		// Cancel
 		TalkMessage *talk = [[TalkMessage alloc] initWithCreature:nil Message:[FDLocalString message:2]];
 		[talk show:[layers getMessageLayer]];
+        [talk release];
 	}
 	
 	

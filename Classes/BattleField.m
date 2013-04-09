@@ -859,6 +859,8 @@
         map = [[groundField getGroundScopeMapForGround] clone];
     }
     
+    [map retain];
+    
 	// Build by friends and enemies
 	/*
 	for (int i = 1; i <= fieldWidth; i++) {
@@ -992,7 +994,7 @@
 
 -(NSMutableArray *) getEnemyInAttackScope:(FDCreature *)creature
 {
-	Class enemyClass;
+	Class enemyClass = [FDFriend class];
 	
 	if ([creature isKindOfClass:[FDFriend class]])
 	{
@@ -1032,8 +1034,7 @@
 
 -(NSMutableArray *) getNearByFriend:(FDCreature *)creature
 {
-	Class friendClass;
-	
+	Class friendClass = [FDEnemy class];	
 	if ([creature isKindOfClass:[FDFriend class]])
 	{
 		friendClass = [FDFriend class];

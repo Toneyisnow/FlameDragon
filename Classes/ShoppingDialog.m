@@ -122,6 +122,7 @@
 	FDSprite *label = [[FDSprite alloc] initWithString:str Size:16];
 	[label setLocation:location];
 	[baseSprite addSprite:label zOrder:1];
+    [label release];
 }
 
 -(void) clickedOn:(CGPoint)location

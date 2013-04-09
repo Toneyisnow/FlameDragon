@@ -187,7 +187,8 @@
 	
 	FDTalkActivity *talk = [[FDTalkActivity alloc] initWithCreature:nil Message:message Layer:[layers getMessageLayer]];
 	[layers appendToCurrentActivity:talk];
-	
+	[talk release];
+    
 	if (result == ConfirmMessageResult_Yes)
 	{
 		[field closeMenu];

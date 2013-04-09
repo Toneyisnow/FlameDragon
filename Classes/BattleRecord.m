@@ -47,7 +47,8 @@
 	
 	CreatureRecord *r1 = [[CreatureRecord alloc] initWithTestData];
 	[friendRecords addObject:r1];
-		
+    [r1 release];
+    
 	return self;
 }
 

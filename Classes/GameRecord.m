@@ -47,7 +47,7 @@
 {
 	if (![[NSFileManager defaultManager] fileExistsAtPath:fileName]) {
 		NSLog(@"Cannot find game state file, create a new instance.");
-		return [[self alloc] init];
+		return [[[self alloc] init] autorelease];
 	}
 	
 	NSLog(@"Loading game record from file [%@]", fileName);

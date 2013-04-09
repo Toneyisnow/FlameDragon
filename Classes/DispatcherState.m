@@ -67,7 +67,7 @@
 		return nil;
 	}
 	else {
-		return [[NSNull alloc] init];
+		return [[[NSNull alloc] init] autorelease];
 	}	
 }
 

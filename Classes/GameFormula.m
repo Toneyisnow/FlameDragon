@@ -138,7 +138,7 @@
 	MagicDefinition *magic = [[DataDepot depot] getMagicDefinition:magicId];
 	
 	if (magic == nil) {
-		return result;
+		return [result autorelease];
 	}
 	int totalExp = 0;
 	for (FDCreature *target in targetList) {

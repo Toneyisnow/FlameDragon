@@ -1006,7 +1006,7 @@
 	
 	[[record friendRecords] sortUsingSelector:@selector(compareRecords:)];
 	
-	return record;
+	return [record autorelease];
 }
 
 -(void) notifyEventListener {
@@ -1019,7 +1019,8 @@
 	NSLog(@"Show creature item status");
 	
 	ItemBox *ibox = [[ItemBox alloc] initWithCreature:creature Type:ItemOperatingType_ShowOnly];
-	[ibox show:messageLayer];	
+	[ibox show:messageLayer];
+    [ibox release];
 }
 
 -(void) showMagicStatus:(FDCreature *)creature
@@ -1027,7 +1028,8 @@
 	NSLog(@"Show creature magic status");
 	
 	MagicBox *box = [[MagicBox alloc] initWithCreature:creature Type:MagicOperatingType_ShowOnly];
-	[box show:messageLayer];	
+	[box show:messageLayer];
+    [box release];
 }
 
 -(void) showItemStatusAsync:(FDCreature *)creature

@@ -103,6 +103,7 @@
 	CreatureDefinition * baseDef = [dict objectForKey:[NSNumber numberWithInt:baseId]];
 	
 	if (baseDef == nil) {
+        [def release];
 		NSLog(@"Error Reading Creature File: Cannot find the base info with Id=%d", baseId);
 		return nil;
 	}

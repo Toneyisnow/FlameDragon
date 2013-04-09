@@ -129,7 +129,7 @@
 		
 		[baseSprite addSprite:msg zOrder:1];
 		[shownMessage addObject:msg];
-		
+		[msg release];
 	}
 }
 

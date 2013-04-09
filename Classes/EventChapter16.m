@@ -125,7 +125,7 @@
 -(void) batch2 {
 	
 	for (int i = 125; i <= 149; i++) {
-		[self setAiOfId:i withType:AIType_Aggresive];
+		[self setAiOfId:i withType:AIType_Aggressive];
 	}
 }
 
@@ -141,7 +141,7 @@
 		matchCriteria = NO;
 	}
 	
-	if ([layers getTurnNo] > 18) {
+	if ([layers getTurnNumber] > 18) {
 		matchCriteria = NO;
 	}
 	
@@ -166,5 +166,3 @@
 
 @end
 
-}
-}

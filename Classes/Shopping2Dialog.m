@@ -75,6 +75,7 @@
 	[label setLocation:location];
 	[label setAnchorPoint:CGPointMake(0, 0)];
 	[baseSprite addSprite:label zOrder:1];
+    [label release];
 }
 
 -(void) clickedOn:(CGPoint)location

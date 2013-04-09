@@ -26,12 +26,12 @@
 {
 	self = [super init];
 	
-	creature = c;
+	creature = [c retain];
 	baseSprite = [[[FDSpriteStore instance] sprite:@"ContainerBase.png"] retain];
 	[self initData];
 	
 	datoBar = [[CreatureDato alloc] initWithAniDef:[[c getDefinition] getAnimationId]];
-	detailsBar = [[CreatureDetail alloc] initWithCreature:c];
+	detailsBar = [[CreatureDetail alloc] initWithCreature:creature];
 	
 	operting = type;
 	
@@ -88,13 +88,14 @@
 		[nameSprite setAnchorPoint:CGPointMake(0, 0)];
 		[nameSprite setLocation:CGPointMake(location.x + 10, location.y)];
 		[baseSprite addSprite:nameSprite zOrder:3];
-		
+		[nameSprite release];
+        
 		// Attribute
 		FDSprite *attSprite = [[FDSprite alloc] initWithString:[def getAttributeString] Size:12];	
 		[attSprite setAnchorPoint:CGPointMake(0, 0)];
 		[attSprite setLocation:CGPointMake(location.x + 80, location.y)];
 		[baseSprite addSprite:attSprite zOrder:3];
-				
+		[attSprite release];
 		
 	}
 }
@@ -221,7 +222,7 @@
 {
 	[datoBar release];
 	[detailsBar release];
-	
+	[creature release];
 	[super dealloc];
 }
 
