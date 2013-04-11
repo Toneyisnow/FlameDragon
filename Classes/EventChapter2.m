@@ -190,7 +190,7 @@
 	
 	// Enemy
 	for (int iden = 21; iden <= 26; iden++) {
-		[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50203 Id:iden] autorelease] Position:CGPointMake(10, 21)];
+		[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50204 Id:iden] autorelease] Position:CGPointMake(10, 21)];
 	}
 	
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50203 Id:27] autorelease] Position:CGPointMake(3, 9)];
