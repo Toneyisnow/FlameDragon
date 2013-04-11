@@ -108,7 +108,9 @@
 	if (creature == nil) {
 		creature = [field getDeadCreatureById:[creatureIdStr intValue]];
 	}
-	
+	if (creature == nil) {
+		creature = [field getUnSettledCreatureById:[creatureIdStr intValue]];
+	}
 	
 	[layers appendToCurrentActivityMethod:@selector(setCursorToObject:) Param1:creature Param2:nil Obj:field];
 	

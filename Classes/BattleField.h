@@ -77,6 +77,8 @@
 -(int) getDirectDistance:(FDCreature *)creature1 And:(FDCreature *)creature2;
 -(int) getDirectDistancePos:(CGPoint)pos1 And:(CGPoint)pos2;
 
+-(FDCreature *) getCreatureThatCarriesItem:(int)itemId;
+
 -(void) takeTick:(int)synchronizeTick;
 
 -(FDSprite *) getSprite;

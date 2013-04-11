@@ -7,7 +7,7 @@
 //
 
 #import "GameStartInfo.h"
-
+#import "CreatureRecord.h"
 
 @interface ChapterRecord : GameStartInfo {
 
@@ -21,6 +21,7 @@
 +(ChapterRecord *) emptyRecord;
 +(ChapterRecord *) sampleRecord;
 +(ChapterRecord *) generateRecord:(int)chapter money:(int)m;
+-(CreatureRecord *) getCreatureThatCarriesItem:(int)itemId;
 
 @property (nonatomic, assign) int money;
 

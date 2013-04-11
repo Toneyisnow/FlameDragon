@@ -35,14 +35,19 @@
 
 -(void) onBuy
 {
-	
 	NSLog(@"onBuy");
 	[self updateMessage];
 	
-	// NSMutableArray *list = [self getProductList:chapterRecord.chapterId Type:DataDepotShopType_AmorShop];
 	ShopDefinition *shop = [[DataDepot depot] getShopDefinition:chapterRecord.chapterId Type:[self getShopType]];
 	
-	// Shopping2ShowProductDialog *dialog = [[Shopping2ShowProductDialog alloc] initWithList:shop.itemList];
+    // Fix Bug: If the user doesn't have Item 805, here will add one for Chapter 16
+    if (chapterRecord.chapterId == 16
+        && [self getShopType] == Shopping2Type_Item
+        && [chapterRecord getCreatureThatCarriesItem:805] == nil)
+    {
+        [shop.itemList addObject:[NSNumber numberWithInt:805]];
+    }
+    
 	Shopping2ShowItemsDialog *dialog = [[Shopping2ShowItemsDialog alloc] initWithItemList:shop.itemList pageIndex:0];
 	
 	[self showDialog:dialog Callback:@selector(onBuy_Selected:)];

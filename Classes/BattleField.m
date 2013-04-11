@@ -669,12 +669,16 @@
 	return nil;
 }
 
--(FDCreature *) getUnSettledCreatureById:(int)iden
+-(FDCreature *) getUnsettledCreatureById:(int)iden
 {
+    if (unsettledCreatureList == nil) {
+        return nil;
+    }
+    
 	for (FDCreature *cre in unsettledCreatureList)
 	{
 		if ([cre getIdentifier] == iden) {
-			return cre;
+            return cre;
 		}
 	}
 	return nil;
@@ -702,6 +706,25 @@
 		}
 	}
 	return nil;
+}
+
+-(FDCreature *) getCreatureThatCarriesItem:(int)itemId
+{
+    for (FDCreature *cre in friendList)
+	{
+		if ([cre.data hasItem:itemId]) {
+            return cre;
+		}
+	}
+    
+    for (FDCreature *cre in deadCreatureList)
+	{
+		if ([cre.data hasItem:itemId]) {
+            return cre;
+		}
+	}
+    
+    return nil;
 }
 
 -(bool) isInScope:(CGPoint)pos

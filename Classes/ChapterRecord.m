@@ -89,6 +89,21 @@
 	return friendRecords;
 }
 
+-(CreatureRecord *) getCreatureThatCarriesItem:(int)itemId
+{
+    if (friendRecords == nil) {
+        return nil;
+    }
+    
+    for (CreatureRecord *record in friendRecords) {
+        if ([record.data hasItem:itemId]) {
+            return record;
+        }
+    }
+    
+    return nil;
+}
+
 -(void) dealloc
 {
 	[friendRecords release];
