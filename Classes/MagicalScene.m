@@ -91,9 +91,7 @@
 }
 -(void) appendIdleAnimation
 {
-    [self appendMagicDisappear];
-    
-	FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:subjectIdleAni Sprite:subjectSprite];
+    FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:subjectIdleAni Sprite:subjectSprite];
 	[subjectAnimation addAnimation:ani];
 	[ani release];
 		
@@ -105,8 +103,8 @@
 -(void) appendSubjectAttackAnimation
 {
     FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:subjectAttackAni Sprite:subjectSprite];
-		//[ani onRenderFrame:@selector(onSubjectAttack:Tag:) Id:self];
-		//[ani setTagIndex:0];
+    [ani onRenderFrame:@selector(onSubjectAttack:Tag:) Id:self];
+    [ani setTagIndex:0];
     [subjectAnimation addAnimation:ani];
     [ani release];
 		
@@ -137,7 +135,9 @@
 -(void) onSubjectAttack:(FDFrameDefinition *)frame Tag:(NSNumber *)tagIndex
 {
 	FDFightFrameDefinition *fightFrame = (FDFightFrameDefinition *)frame;
-	AttackInformation *attackInfo = [[magicalInfo getInformations] objectAtIndex:tagIndex];
+    // id info = [magicalInfo getInformations];
+    
+	AttackInformation *attackInfo = [[magicalInfo getInformations] objectAtIndex:[tagIndex intValue]];
 	
 	if ([fightFrame isHitting]) {
 		

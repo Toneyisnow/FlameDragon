@@ -131,45 +131,6 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "Classes/ActionLayers.m"
-         timestampString = "388417834.038822"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "940"
-         endingLineNumber = "940"
-         landmarkName = "-saveGame"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Classes/GameFormula.m"
-         timestampString = "382417177.184692"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "231"
-         endingLineNumber = "231"
-         landmarkName = "+calculateAttackExp:Target:Info:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Classes/GameFormula.m"
-         timestampString = "382417177.1847459"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "222"
-         endingLineNumber = "222"
-         landmarkName = "+calculateAttackExp:Target:Info:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "Classes/Shopping2ChurchDialog.m"
          timestampString = "382684283.830827"
          startingColumnNumber = "9223372036854775807"
@@ -287,19 +248,6 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "Classes/ActionLayers.m"
-         timestampString = "383901682.408811"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "96"
-         endingLineNumber = "96"
-         landmarkName = "-takeTick"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "Classes/TitleLayer.m"
          timestampString = "385309463.730929"
          startingColumnNumber = "9223372036854775807"
@@ -323,16 +271,16 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "Classes/ActionLayers.m"
-         timestampString = "388417834.038822"
+         filePath = "Classes/MagicalScene.m"
+         timestampString = "388422052.914382"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1169"
-         endingLineNumber = "1169"
-         landmarkName = "-settleFriend:At:"
+         startingLineNumber = "140"
+         endingLineNumber = "140"
+         landmarkName = "-onSubjectAttack:Tag:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

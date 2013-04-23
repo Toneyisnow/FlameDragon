@@ -56,14 +56,14 @@
                                     itemFromNormalImage:[NSString stringWithFormat:@"Icon-%03d-02.png", creature.creatureId] selectedImage:NULL
                                     target:self selector:@selector(clickFriend:)];
         iconMenuItem.position = CGPointMake(posX, posY);
-        iconMenuItem.tag = creature.creatureId;
+        iconMenuItem.tag = i;
         iconMenuItem.anchorPoint = ccp(0, 0);
         
-        [selectedFlag addObject:[NSNumber numberWithBool:NO]];
-        
         if ([Common containInt:creature.creatureId inArray:mandatoryList]) {
+            [selectedFlag addObject:[NSNumber numberWithBool:YES]];
             [self setSelectedFlag:YES toItem:iconMenuItem];
         } else {
+            [selectedFlag addObject:[NSNumber numberWithBool:NO]];
             [self setSelectedFlag:NO toItem:iconMenuItem];
         }
         
@@ -120,7 +120,9 @@
     CCMenuItem *menu = (CCMenuItem *)sender;
     // int creatureIndex = menu.tag;
 
-    if ([Common containInt:menu.tag inArray:mandatoryList]) {
+    CreatureRecord *creature = [[chapterRecord friendRecords] objectAtIndex:menu.tag];
+    
+    if ([Common containInt:creature.creatureId inArray:mandatoryList]) {
         return;
     }
     
