@@ -35,7 +35,8 @@
 		if ([field isInScope:position])
 		{
 			FDCreature *creature = [field getCreatureByPos:position];
-			if ([creature isKindOfClass:[FDFriend class]]) {
+			if ([creature isKindOfClass:[FDFriend class]]
+                || [creature isKindOfClass:[FDNpc class]]) {
 			
 				[field removeAllIndicators];
 				[layers useItem:currentFriend ItemIndex:itemIndex Target:creature];

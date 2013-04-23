@@ -384,9 +384,20 @@ static DataDepot *instance = nil;
 		creatureAniId = [file readInt];
 	}
 	
-	
 	[file close];
 	[file release];
+    
+    
+    // Loading Magic Definition
+    file = [[FDFileStream alloc] initWithDataFile:@"MagicAnimation"];
+	[file open];
+    
+	AnimationDefinition *magicAni = [AnimationDefinition readMagicAnimationFromFile:file MagicId:0];
+    [animationDictionary setObject:magicAni forKey:[NSString stringWithFormat:@"%d-%d", 0, AnimationType_Magic]];
+    
+    [file close];
+	[file release];
+    
     NSLog(@"Loaded Animation Dictionary.");
 }
 
@@ -403,9 +414,9 @@ static DataDepot *instance = nil;
     NSMutableArray *arrayEmpty = [[NSMutableArray alloc] init];
     NSMutableArray *arrayOne = [[NSMutableArray alloc] init];
     NSMutableArray *arrayOneAndMidi = [[NSMutableArray alloc] init];
-    [arrayOne addObject:[NSNumber numberWithInt:0]];
-    [arrayOneAndMidi addObject:[NSNumber numberWithInt:0]];
-    [arrayOneAndMidi addObject:[NSNumber numberWithInt:17]];
+    [arrayOne addObject:[NSNumber numberWithInt:1]];
+    [arrayOneAndMidi addObject:[NSNumber numberWithInt:1]];
+    [arrayOneAndMidi addObject:[NSNumber numberWithInt:18]];
     
     for (int i = 0; i < 30; i++) {
         if (i < 15) {

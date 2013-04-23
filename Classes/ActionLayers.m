@@ -444,28 +444,6 @@
 	}
 }
 
-/*
--(void) magicFrom:(FDCreature *)creature Targets:(NSArray *)targets Id:(int)magicId
-{
-	NSLog(@"Magic from %d to %d enemies", [creature getIdentifier], [targets count]);
-	
-	MagicDefinition *magic = [[DataDepot depot] getMagicDefinition:magicId];
-	[creature updateMP:-magic.mpCost];
-	[creature updateHP:0];
-	
-	MagicalInformation *mInfo = [GameFormula dealWithMagic:magicId From:creature Target:targets Field:field];
-	
-	CGPoint pos = [field getObjectPos:creature];
-	int backgroundImageId = [field getBackgroundPicId:pos];
-	MagicalScene *scene = [[MagicalScene alloc] initWithMagic:magicId Subject:creature Targets:targets Information:mInfo Background:backgroundImageId];
-	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:0.5 scene:scene]];
-	
-	[scene start];	
-	
-	[scene setPostMethod:@selector(postFightAction:Targets:) param1:creature param2:targets Obj:self];
-}
-*/
-
 -(void) useItem:(FDCreature *)creature ItemIndex:(int)itemIndex Target:(FDCreature *)target
 {
 	NSLog(@"Use Item.");
@@ -474,8 +452,10 @@
 	UsableItemDefinition * itemDef = (UsableItemDefinition *)[[DataDepot depot] getItemDefinition:itemId];
 	[itemDef usedBy:target];
 	
-	[creature.data removeItem:itemIndex];
-	
+    if (!itemDef.isReusable) {
+        [creature.data removeItem:itemIndex];
+	}
+    
 	[self appendToMainActivityMethod:@selector(creatureActionDone:) Param1:creature Param2:nil Obj:self];
 }
 
@@ -1094,13 +1074,14 @@
 
 -(void) gameWin
 {
-	[self clearAllActivity];
+	// [self clearAllActivity]; // TODO: Bug for actiivy list
 	NSLog(@"Game Win.");
 	
 	//ChapterRecord *record = [ChapterRecord sampleRecord];
 	ChapterRecord *record = [self composeChapterRecord];
-	
-	if (chapterId < 15) {
+	[record retain];
+    
+	if (chapterId < 22) {
 		VillageScene *scene = [VillageScene node];
 		[scene loadWithRecord:record];
 		[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.5 scene:scene]];	
@@ -1108,6 +1089,8 @@
 		GameWinScene *scene = [GameWinScene node];
 		[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.5 scene:scene]];	
 	}
+    
+    [record release];
 }
 
 -(void) gameQuit
@@ -1179,13 +1162,18 @@
 -(void) settleFriend:(int)friendIndex At:(CGPoint)loc {
     
     int creatureId;
-    if (selectedFriendList == nil || [selectedFriendList count] <= friendIndex) {
+    if (selectedFriendList == nil) {
         creatureId = friendIndex;
     } else {
-        creatureId = [[selectedFriendList objectAtIndex:friendIndex] intValue];
+        
+        if (friendIndex <= [selectedFriendList count]) {
+            creatureId = [[selectedFriendList objectAtIndex:(friendIndex-1)] intValue];
+        } else {
+            return;
+        }
     }
     
-    FDFriend *friend = (FDFriend *)[field getUnSettledCreatureById:creatureId];
+    FDFriend *friend = (FDFriend *)[field getUnsettledCreatureById:creatureId];
 	if (friend != nil) {
 		[field addFriend:friend Position:loc];
 		[[field getUnsettledCreatureList] removeObject:friend];

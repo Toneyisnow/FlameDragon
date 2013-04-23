@@ -1,12 +1,12 @@
 //
-//  MagicalScene.m
+//  MagicalScene2.m
 //  FlameDragon
 //
 //  Created by sui toney on 12-10-20.
 //  Copyright 2012 ms. All rights reserved.
 //
 
-#import "MagicalScene.h"
+#import "MagicalScene2.h"
 #import "DataDepot.h"
 #import "FDSpriteStore.h"
 #import "FDWindow.h"
@@ -15,7 +15,7 @@
 #import "FDFreezeAnimation.h"
 #import "FDTransparencyFrameDefinition.h"
 
-@implementation MagicalScene
+@implementation MagicalScene2
 
 -(id) initWithMagic:(int)mId Subject:(FDCreature *)sub Targets:(NSArray *)tars Information:(MagicalInformation *)info Background:(int)backgroundImageId
 {
@@ -37,6 +37,9 @@
 	[subjectAttackAni retain];
 	[subjectIdleAni retain];
 	
+    magicAni = [[DataDepot depot] getAnimationDefinition:AnimationType_Magic Id:0];
+	[magicAni retain];
+    
     return self;
 }
 
@@ -46,7 +49,18 @@
 	updatedMp = FALSE;
 	[self schedule: @selector(step:)];
 	
-    	
+    // Magic
+    magicSprite = [[FDSpriteStore instance] sprite:@"Empty.png"];
+    [magicSprite addToLayer:layer];
+    [magicSprite retain];
+    
+    magicAppearAnimation = [[AnimationDefinition alloc] init];
+    [magicAppearAnimation addFrame:[FDTransparencyFrameDefinition frameWithOpaticy:255 Time:1]];
+    
+    magicDisappearAnimation = [[AnimationDefinition alloc] init];
+    [magicDisappearAnimation addFrame:[FDTransparencyFrameDefinition frameWithOpaticy:0 Time:1]];
+    
+	
 	// Subject
 	subjectSprite = [[FDSpriteStore instance] sprite:[NSString stringWithFormat:@"Fight-%03d-1-01.png", [[subject getDefinition] getAnimationId]]];
 	[subjectSprite addToLayer:layer];
@@ -83,6 +97,7 @@
 	 // Animation
 	 subjectAnimation = [[FDCombinedAnimation alloc] init];
 	 targetAnimation = [[FDCombinedAnimation alloc] init];
+	 magicAnimation = [[FDCombinedAnimation alloc] init];
     
 	 [self appendIdleAnimation];
 
@@ -100,10 +115,16 @@
 	ani = [[FDSlideAnimation alloc] initWithDefinition:targetIdleAni Sprite:targetSprite];
 	[targetAnimation addAnimation:ani];
 	[ani release];
+    
+    FDFreezeAnimation *aniMagic = [[FDFreezeAnimation alloc] initWithTickCount:([subjectAnimation getDuration] - [magicAnimation getDuration]) Sprite:magicSprite];
+    [magicAnimation addAnimation:aniMagic];
+    [aniMagic release];
 }
 	 
 -(void) appendSubjectAttackAnimation
 {
+    [self appendMagicDisappear];
+    
     FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:subjectAttackAni Sprite:subjectSprite];
 		//[ani onRenderFrame:@selector(onSubjectAttack:Tag:) Id:self];
 		//[ani setTagIndex:0];
@@ -115,6 +136,50 @@
         [targetAnimation addAnimation:ani];
         [ani release];
     }
+    
+    FDFreezeAnimation *aniMagic = [[FDFreezeAnimation alloc] initWithTickCount:([subjectAnimation getDuration] - [magicAnimation getDuration]) Sprite:magicSprite];
+    [magicAnimation addAnimation:aniMagic];
+    [aniMagic release];
+}
+
+-(void) appendMagicAppear
+{
+    FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:magicAppearAnimation Sprite:magicSprite];
+    [magicAnimation addAnimation:ani];
+    [ani release];
+}
+
+-(void) appendMagicDisappear
+{
+    FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:magicDisappearAnimation Sprite:magicSprite];
+    [magicAnimation addAnimation:ani];
+    [ani release];
+}
+
+-(void) appendMagicAnimation:(int)tag
+{
+    if (tag > 0) {
+        [self appendMagicDisappear];
+        
+    }
+    
+    [self appendMagicAppear];
+    
+    FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:magicAni Sprite:magicSprite];
+    [ani onRenderFrame:@selector(onSubjectAttack:Tag:) Id:self];
+    [ani setTagIndex:tag];
+    [magicAnimation addAnimation:ani];
+    [ani release];
+    
+    FDFreezeAnimation *aniTarget = [[FDFreezeAnimation alloc] initWithTickCount:([magicAnimation getDuration] - [targetAnimation getDuration]) Sprite:targetSprite];
+    [targetAnimation addAnimation:aniTarget];
+    [aniTarget release];
+    
+    FDFreezeAnimation *aniSubject = [[FDFreezeAnimation alloc] initWithTickCount:([magicAnimation getDuration] - [subjectAnimation getDuration]) Sprite:subjectSprite];
+    [subjectAnimation addAnimation:aniSubject];
+    [aniSubject release];
+    
+    
 }
 
 -(void) step: (ccTime) delta
@@ -168,9 +233,17 @@
 	[subjectAttackAni release];
 	[subjectIdleAni release];
 	[targetIdleAni release];
+	
+    [magicAni release];
+    [magicSprite release];
     
     [subjectAnimation release];
     [targetAnimation release];
+    [magicAnimation release];
+    
+    [magicAppearAnimation release];
+    [magicDisappearAnimation release];
+    
     
 	[super dealloc];
 }

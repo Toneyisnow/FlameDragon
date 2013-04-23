@@ -112,6 +112,9 @@
 		022ADC69171707DA00F15034 /* EventChapter28.m in Sources */ = {isa = PBXBuildFile; fileRef = 022ADC68171707D900F15034 /* EventChapter28.m */; };
 		022ADC6C171707EB00F15034 /* EventChapter29.m in Sources */ = {isa = PBXBuildFile; fileRef = 022ADC6B171707E900F15034 /* EventChapter29.m */; };
 		022ADC6F171707FC00F15034 /* EventChapter30.m in Sources */ = {isa = PBXBuildFile; fileRef = 022ADC6E171707FB00F15034 /* EventChapter30.m */; };
+		022ADC7417238C3200F15034 /* MagicAnimation.dat in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC7317238C3200F15034 /* MagicAnimation.dat */; };
+		022ADC771724455100F15034 /* FDMoveByAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 022ADC761724455000F15034 /* FDMoveByAnimation.m */; };
+		022ADC7A1726C01300F15034 /* MagicalScene2.m in Sources */ = {isa = PBXBuildFile; fileRef = 022ADC791726C01200F15034 /* MagicalScene2.m */; };
 		022D368B161484780020F816 /* Occupation.dat in Resources */ = {isa = PBXBuildFile; fileRef = 022D368A161484780020F816 /* Occupation.dat */; };
 		022D368E161487130020F816 /* OccupationDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 022D368D161487130020F816 /* OccupationDefinition.m */; };
 		022D37A51615DB0E0020F816 /* VillageShop-01-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 022D37A41615DB0D0020F816 /* VillageShop-01-5.png */; };
@@ -4656,6 +4659,12 @@
 		022ADC6B171707E900F15034 /* EventChapter29.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter29.m; sourceTree = "<group>"; };
 		022ADC6D171707F900F15034 /* EventChapter30.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter30.h; sourceTree = "<group>"; };
 		022ADC6E171707FB00F15034 /* EventChapter30.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter30.m; sourceTree = "<group>"; };
+		022ADC7317238C3200F15034 /* MagicAnimation.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = MagicAnimation.dat; path = Data/MagicAnimation.dat; sourceTree = "<group>"; };
+		022ADC751724454F00F15034 /* FDMoveByAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDMoveByAnimation.h; sourceTree = "<group>"; };
+		022ADC761724455000F15034 /* FDMoveByAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDMoveByAnimation.m; sourceTree = "<group>"; };
+		022ADC781726BFFB00F15034 /* MagicalScene2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalScene2.h; sourceTree = "<group>"; };
+		022ADC791726C01200F15034 /* MagicalScene2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalScene2.m; sourceTree = "<group>"; };
+		022ADC7B1726C52300F15034 /* LevelUpDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelUpDefinition.h; sourceTree = "<group>"; };
 		022D368A161484780020F816 /* Occupation.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Occupation.dat; path = Data/Occupation.dat; sourceTree = "<group>"; };
 		022D368C161487130020F816 /* OccupationDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OccupationDefinition.h; sourceTree = "<group>"; };
 		022D368D161487130020F816 /* OccupationDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OccupationDefinition.m; sourceTree = "<group>"; };
@@ -5116,7 +5125,6 @@
 		02BA6DEB14C082600028C9E7 /* GameOverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverLayer.h; sourceTree = "<group>"; };
 		02BA6DEC14C082600028C9E7 /* GameOverLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverLayer.m; sourceTree = "<group>"; };
 		02BA6EB814C7F2F70028C9E7 /* Levelup.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Levelup.dat; path = Data/Levelup.dat; sourceTree = "<group>"; };
-		02BA6EBA14C7F35E0028C9E7 /* LevelUpDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelUpDefinition.h; sourceTree = "<group>"; };
 		02BA6EBB14C7F35E0028C9E7 /* LevelUpDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelUpDefinition.m; sourceTree = "<group>"; };
 		02BA6EBE14C995E00028C9E7 /* Explode-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Explode-08.png"; path = "Animations/Explode-08.png"; sourceTree = "<group>"; };
 		02BA6F3A14C9A60A0028C9E7 /* CreatureDyingCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatureDyingCondition.h; sourceTree = "<group>"; };
@@ -9889,6 +9897,8 @@
 				021B9EAA146FECC400102DCE /* FDSyncedAnimation.m */,
 				023D0D731632F3D700FBA4D2 /* FDFreezeAnimation.h */,
 				023D0D741632F3D700FBA4D2 /* FDFreezeAnimation.m */,
+				022ADC751724454F00F15034 /* FDMoveByAnimation.h */,
+				022ADC761724455000F15034 /* FDMoveByAnimation.m */,
 				0297DAF5148259B0007F3E12 /* FDCombinedAnimation.h */,
 				0297DAF6148259B0007F3E12 /* FDCombinedAnimation.m */,
 			);
@@ -10156,7 +10166,7 @@
 				0297D786147D45CD007F3E12 /* MagicDefinition.m */,
 				0297D788147D5069007F3E12 /* CreatureDefinition.h */,
 				0297D789147D5069007F3E12 /* CreatureDefinition.m */,
-				02BA6EBA14C7F35E0028C9E7 /* LevelUpDefinition.h */,
+				022ADC7B1726C52300F15034 /* LevelUpDefinition.h */,
 				02BA6EBB14C7F35E0028C9E7 /* LevelUpDefinition.m */,
 				02B59FF616798AAC0066783F /* LevelUpMagicDefinition.h */,
 				02B59FF716798AAC0066783F /* LevelUpMagicDefinition.m */,
@@ -10197,6 +10207,8 @@
 				025DA9AF16301B2C00DD7C30 /* FightingScene.m */,
 				023D0D6D1632E7BD00FBA4D2 /* MagicalScene.h */,
 				023D0D6E1632E7BD00FBA4D2 /* MagicalScene.m */,
+				022ADC781726BFFB00F15034 /* MagicalScene2.h */,
+				022ADC791726C01200F15034 /* MagicalScene2.m */,
 				025DA9B116301C9400DD7C30 /* FightingInformation.h */,
 				025DA9B216301C9400DD7C30 /* FightingInformation.m */,
 				023D0D6A1632E10300FBA4D2 /* MagicalInformation.h */,
@@ -10428,6 +10440,7 @@
 				022D368A161484780020F816 /* Occupation.dat */,
 				022D37AC1615E8110020F816 /* SecretSequence.dat */,
 				027B6743167B191A00A730EF /* FightAnimation.dat */,
+				022ADC7317238C3200F15034 /* MagicAnimation.dat */,
 				028A977316CB3269003F8BB2 /* Transfer.dat */,
 			);
 			name = Data;
@@ -20945,6 +20958,7 @@
 				022ADC4F1710475700F15034 /* Background-28.png in Resources */,
 				022ADC501710475700F15034 /* Background-29.png in Resources */,
 				022ADC511710475700F15034 /* Background-30.png in Resources */,
+				022ADC7417238C3200F15034 /* MagicAnimation.dat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -21185,6 +21199,8 @@
 				022ADC69171707DA00F15034 /* EventChapter28.m in Sources */,
 				022ADC6C171707EB00F15034 /* EventChapter29.m in Sources */,
 				022ADC6F171707FC00F15034 /* EventChapter30.m in Sources */,
+				022ADC771724455100F15034 /* FDMoveByAnimation.m in Sources */,
+				022ADC7A1726C01300F15034 /* MagicalScene2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

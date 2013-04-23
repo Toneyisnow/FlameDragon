@@ -132,11 +132,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/ActionLayers.m"
-         timestampString = "384100255.339509"
+         timestampString = "388417834.038822"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "960"
-         endingLineNumber = "960"
+         startingLineNumber = "940"
+         endingLineNumber = "940"
          landmarkName = "-saveGame"
          landmarkType = "5">
       </FileBreakpoint>
@@ -275,11 +275,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/ActionLayers.m"
-         timestampString = "387213135.411044"
+         timestampString = "388417834.038822"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1037"
-         endingLineNumber = "1037"
+         startingLineNumber = "1017"
+         endingLineNumber = "1017"
          landmarkName = "-showItemStatusAsync:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -307,6 +307,32 @@
          startingLineNumber = "79"
          endingLineNumber = "79"
          landmarkName = "-onNewGame"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Classes/ChapterRecord.m"
+         timestampString = "387736064.460412"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "94"
+         endingLineNumber = "94"
+         landmarkName = "-getCreatureThatCarriesItem:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Classes/ActionLayers.m"
+         timestampString = "388417834.038822"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1169"
+         endingLineNumber = "1169"
+         landmarkName = "-settleFriend:At:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

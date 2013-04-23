@@ -20,7 +20,8 @@ typedef	enum AnimationType
 	AnimationType_Die,
 	AnimationType_FightIdle,
 	AnimationType_FightAttack,
-	AnimationType_FightSkill
+	AnimationType_FightSkill,
+    AnimationType_Magic
 	
 } AnimationType;
 
@@ -48,7 +49,7 @@ typedef	enum AnimationType
 +(id) dieAnimation:(int)i;
 
 +(id) readFightAnimationFromFile:(FDFileStream *)stream CreatureAniId:(int)creatureAniId Type:(AnimationType)aniType;
-
++(id) readMagicAnimationFromFile:(FDFileStream *)stream MagicId:(int)magicId;
 
 -(void) addFrame:(FDFrameDefinition *)frame;
 -(NSMutableArray *) getFrameArray;

@@ -36,8 +36,8 @@
     
     int startX = 10;
     int startY = 10;
-    int intervalX = 40;
-    int intervalY = 40;
+    int intervalX = 50;
+    int intervalY = 50;
     
     CCMenu *menu = [CCMenu menuWithItems:nil];
     menu.position = CGPointZero;
@@ -50,16 +50,18 @@
         int posX = startX + x * intervalX;
         int posY = startY + y * intervalY;
         
+        CreatureRecord *creature = [[chapterRecord friendRecords] objectAtIndex:i];
+        
         CCMenuItem *iconMenuItem = [CCMenuItemImage
-                                    itemFromNormalImage:[NSString stringWithFormat:@"Icon-%03d-02.png", i+1] selectedImage:NULL
+                                    itemFromNormalImage:[NSString stringWithFormat:@"Icon-%03d-02.png", creature.creatureId] selectedImage:NULL
                                     target:self selector:@selector(clickFriend:)];
         iconMenuItem.position = CGPointMake(posX, posY);
-        iconMenuItem.tag = i;
+        iconMenuItem.tag = creature.creatureId;
         iconMenuItem.anchorPoint = ccp(0, 0);
         
         [selectedFlag addObject:[NSNumber numberWithBool:NO]];
         
-        if ([Common containInt:i inArray:mandatoryList]) {
+        if ([Common containInt:creature.creatureId inArray:mandatoryList]) {
             [self setSelectedFlag:YES toItem:iconMenuItem];
         } else {
             [self setSelectedFlag:NO toItem:iconMenuItem];
@@ -122,12 +124,14 @@
         return;
     }
     
-    if ([self getPickedCount] >= [Constants maxPickedFriendCount]) {
+    // Enable or Disable the Button
+    BOOL selected = [[selectedFlag objectAtIndex:menu.tag] boolValue];
+    
+    if ([self getPickedCount] >= [Constants maxPickedFriendCount]
+        && !selected) {
         return;
     }
     
-    // Enable or Disable the Button
-    BOOL selected = [[selectedFlag objectAtIndex:menu.tag] boolValue];
     [self setSelectedFlag:!selected toItem:menu];
     
     [self refreshCountLabel];
@@ -158,9 +162,9 @@
     
     // Change the UI
     if (yesOrNo == YES) {
-        item.scaleX = item.scaleY = 1.5;
+        item.scaleX = item.scaleY = 2.0;
     } else {
-        item.scaleX = item.scaleY = 1.0;
+        item.scaleX = item.scaleY = 1.5;
     }
 }
 
@@ -174,7 +178,7 @@
         }
         
         if ([[selectedFlag objectAtIndex:i] boolValue] == YES) {
-            [selectedFriends addObject:[NSNumber numberWithInt:i]];
+            [selectedFriends addObject:[NSNumber numberWithInt:i+1]];
         }
     }
     

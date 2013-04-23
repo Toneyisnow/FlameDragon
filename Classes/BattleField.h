@@ -68,7 +68,7 @@
 
 -(FDCreature *) getCreatureById:(int)iden;
 -(FDCreature *) getDeadCreatureById:(int)iden;
--(FDCreature *) getUnSettledCreatureById:(int)iden;
+-(FDCreature *) getUnsettledCreatureById:(int)iden;
 
 -(CreatureRecord *) generateCreatureRecord:(FDCreature *)creature;
 -(TreasureRecord *) generateTreasureRecord:(FDTreasure *)treasure;

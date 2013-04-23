@@ -354,9 +354,8 @@
 
 -(BOOL) hasItem:(int)itemId
 {
-	for (int i = 0; i < [itemList count]; i++) {
-		NSNumber *num = [itemList objectAtIndex:i];
-		if (itemId == [num intValue]) {
+    for (NSNumber *num in itemList) {
+        if (itemId == [num intValue]) {
 			return TRUE;
 		}
 	}

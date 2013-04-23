@@ -14,6 +14,7 @@
 -(void) loadEvents
 {
 	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(initialBattle)];
+	[self loadTurnEvent:TurnType_Friend Turn:5 Action:@selector(npcStart)];
 	[self loadTurnEvent:TurnType_Friend Turn:8 Action:@selector(reinforcement)];
 	
 	[self loadDieEvent:1 Action:@selector(gameOver)];
@@ -92,11 +93,19 @@
 	// Add NPC
 	[field addNpc:[[[FDNpc alloc] initWithDefinition:20 Id:20] autorelease] Position:CGPointMake(23, 9)];
 	[field addNpc:[[[FDNpc alloc] initWithDefinition:21 Id:21] autorelease] Position:CGPointMake(23, 8)];
+    [self setAiOfId:20 withType:AIType_StandBy];
+    [self setAiOfId:21 withType:AIType_StandBy];
 	
 	// Talk
 	for (int i = 1; i <= 24; i++) {
 		[self showTalkMessage:18 conversation:1 sequence:i];
 	}
+}
+
+-(void) npcStart {
+   
+    [self setAiOfId:20 withType:AIType_Aggressive];
+    [self setAiOfId:21 withType:AIType_Aggressive];
 }
 
 -(void) reinforcement {

@@ -14,7 +14,7 @@
 -(void) loadEvents
 {
 	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(initialBattle)];
-	[self loadTurnEvent:TurnType_Friend Turn:8 Action:@selector(batch2)];
+	[self loadTurnEvent:TurnType_Friend Turn:7 Action:@selector(batch2)];
 	
 	[self loadDieEvent:1 Action:@selector(gameOver)];
 	[self loadDieEvent:18 Action:@selector(gameOver)];

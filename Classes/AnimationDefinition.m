@@ -169,6 +169,30 @@
 	return [aniDef autorelease];
 }
 
++(id) readMagicAnimationFromFile:(FDFileStream *)stream MagicId:(int)magicId
+{
+    AnimationDefinition *aniDef = [[AnimationDefinition alloc] init];
+	[aniDef setRepeatable:NO];
+    
+	NSString *spriteFile = [NSString stringWithFormat:@"Empty.png"];
+    int interval = 2 * [Constants fightAnimationIntervalUnit];
+    int soundId = 0;
+    
+	FDFightFrameDefinition *frame1 = [[FDFightFrameDefinition alloc] initFromFile:spriteFile Time:interval Sound:soundId Remote:NO Hitting:0.2];
+    FDFightFrameDefinition *frame2 = [[FDFightFrameDefinition alloc] initFromFile:spriteFile Time:interval Sound:soundId Remote:NO Hitting:0.2];
+    FDFightFrameDefinition *frame3 = [[FDFightFrameDefinition alloc] initFromFile:spriteFile Time:interval Sound:soundId Remote:NO Hitting:0.2];
+    FDFightFrameDefinition *frame4 = [[FDFightFrameDefinition alloc] initFromFile:spriteFile Time:interval Sound:soundId Remote:NO Hitting:0.2];
+    FDFightFrameDefinition *frame5 = [[FDFightFrameDefinition alloc] initFromFile:spriteFile Time:interval Sound:soundId Remote:NO Hitting:0.2];
+    
+    [aniDef addFrame:frame1];
+    [aniDef addFrame:frame2];
+    [aniDef addFrame:frame3];
+    [aniDef addFrame:frame4];
+    [aniDef addFrame:frame5];
+    
+    return [aniDef autorelease];
+}
+
 -(id) init
 {
 	self = [super init];

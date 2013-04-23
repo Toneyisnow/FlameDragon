@@ -13,9 +13,8 @@
 
 	int currentTick;
 	int freezeTick;
-
 }
 
--(id) initWithTickCount:(int)t;
+-(id) initWithTickCount:(int)t Sprite:(FDSprite *)c;
 
 @end

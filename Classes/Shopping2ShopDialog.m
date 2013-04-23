@@ -33,25 +33,46 @@
 	return DataDepotShopType_AmorShop;
 }
 
+-(NSMutableArray *) getShopItemList:(int)chapterId Type:(DataDepotShopType) shopType
+{
+    ShopDefinition *shop = [[DataDepot depot] getShopDefinition:chapterRecord.chapterId Type:[self getShopType]];
+	
+    NSMutableArray *itemList = [NSMutableArray arrayWithArray:shop.itemList];
+    // Fix Bug: If the user doesn't have Item 805, here will add one for Chapter 16-22
+    if (chapterRecord.chapterId >= 16
+        && chapterRecord.chapterId <= 22
+        && [self getShopType] == DataDepotShopType_ItemShop
+        && [chapterRecord getCreatureThatCarriesItem:805] == nil)
+    {
+        [itemList addObject:[NSNumber numberWithInt:805]];
+    }
+    return itemList;
+}
+
 -(void) onBuy
 {
 	NSLog(@"onBuy");
 	[self updateMessage];
 	
-	ShopDefinition *shop = [[DataDepot depot] getShopDefinition:chapterRecord.chapterId Type:[self getShopType]];
+	/*ShopDefinition *shop = [[DataDepot depot] getShopDefinition:chapterRecord.chapterId Type:[self getShopType]];
 	
+    NSMutableArray *itemList = [NSMutableArray arrayWithArray:shop.itemList];
+    //NSMutableArray *itemList = [[NSMutableArray alloc] init];
+    //[itemList addObjectsFromArray:shop.itemList];
     // Fix Bug: If the user doesn't have Item 805, here will add one for Chapter 16
     if (chapterRecord.chapterId == 16
-        && [self getShopType] == Shopping2Type_Item
+        && [self getShopType] == DataDepotShopType_ItemShop
         && [chapterRecord getCreatureThatCarriesItem:805] == nil)
     {
-        [shop.itemList addObject:[NSNumber numberWithInt:805]];
+        [itemList addObject:[NSNumber numberWithInt:805]];
     }
-    
-	Shopping2ShowItemsDialog *dialog = [[Shopping2ShowItemsDialog alloc] initWithItemList:shop.itemList pageIndex:0];
+    */
+    NSMutableArray *itemList = [self getShopItemList:chapterRecord.chapterId Type:[self getShopType]];
+	Shopping2ShowItemsDialog *dialog = [[Shopping2ShowItemsDialog alloc] initWithItemList:itemList pageIndex:0];
 	
 	[self showDialog:dialog Callback:@selector(onBuy_Selected:)];
 	[dialog release];
+    //[itemList release];
 }
 
 -(void) onBuy_Selected:(NSNumber *)num
@@ -73,9 +94,8 @@
 				break;
 		}
 		
-		ShopDefinition *shop = [[DataDepot depot] getShopDefinition:chapterRecord.chapterId Type:[self getShopType]];
-		
-		Shopping2ShowItemsDialog *dialog = [[Shopping2ShowItemsDialog alloc] initWithItemList:shop.itemList pageIndex:lastPageIndex];
+		NSMutableArray *itemList = [self getShopItemList:chapterRecord.chapterId Type:[self getShopType]];
+        Shopping2ShowItemsDialog *dialog = [[Shopping2ShowItemsDialog alloc] initWithItemList:itemList pageIndex:lastPageIndex];
 		[self showDialog:dialog Callback:@selector(onBuy_Selected:)];
 		[dialog release];
 		
@@ -84,8 +104,8 @@
 	
 	NSLog(@"onBuy_Selected : %d", selectedNum);
 	
-	ShopDefinition *shop = [[DataDepot depot] getShopDefinition:chapterRecord.chapterId Type:[self getShopType]];
-	NSNumber *itemId  = [shop.itemList objectAtIndex:selectedNum];
+	NSMutableArray *itemList = [self getShopItemList:chapterRecord.chapterId Type:[self getShopType]];
+	NSNumber *itemId  = [itemList objectAtIndex:selectedNum];
 	
 	lastSelectedItemIndex = [itemId intValue];
 	ItemDefinition *item = [[DataDepot depot] getItemDefinition:lastSelectedItemIndex];

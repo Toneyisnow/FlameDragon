@@ -12,13 +12,20 @@
 @implementation FDTransparencyFrameDefinition
 
 
--(id) initWithOpacity:(int)o Time:(int)t;
+-(id) initWithOpacity:(int)o Time:(int)t
 {
 	self = [super initWithTime:t];
 	
 	opacity = o;
 	
 	return self;
+}
+
++(id) frameWithOpaticy:(int)o Time:(int)t
+{
+    FDTransparencyFrameDefinition *frame = [[FDTransparencyFrameDefinition alloc] initWithOpacity:o Time:t];
+    
+    return [frame autorelease];
 }
 
 -(void) renderFrame:(FDSprite *)sprite

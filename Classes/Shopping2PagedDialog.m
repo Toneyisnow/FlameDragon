@@ -31,8 +31,8 @@
 	if (pageIndex > 0) {
 		
 		FDSprite *upSprite = [[FDSpriteStore instance] sprite: @"Arrow_up.png"];
-		//FDSprite *upSprite = [[FDSprite alloc] initWithString:@"A" Size:14];
-		CCMenuItemSprite* upMenu = [CCMenuItemSprite itemFromNormalSprite:[upSprite getSprite] selectedSprite:NULL target:self selector:@selector(clickedUp)];
+		[upSprite setScaleX:1.5 Y:1.5];
+        CCMenuItemSprite* upMenu = [CCMenuItemSprite itemFromNormalSprite:[upSprite getSprite] selectedSprite:NULL target:self selector:@selector(clickedUp)];
 		
 		upMenu.position = ccp(283, 57);
 		upMenu.anchorPoint = ccp(0, 0);
@@ -45,8 +45,8 @@
 	if (startIndex + max_item_count < [[self getShownList] count] ) {
 		
 		FDSprite *downSprite = [[FDSpriteStore instance] sprite: @"Arrow_down.png"];
-		//FDSprite *downSprite = [[FDSprite alloc] initWithString:@"V" Size:14];
-		CCMenuItemSprite* downMenu = [CCMenuItemSprite itemFromNormalSprite:[downSprite getSprite] selectedSprite:NULL target:self selector:@selector(clickedDown)];
+		[downSprite setScaleX:1.5 Y:1.5];
+        CCMenuItemSprite* downMenu = [CCMenuItemSprite itemFromNormalSprite:[downSprite getSprite] selectedSprite:NULL target:self selector:@selector(clickedDown)];
 		
 		downMenu.position = ccp(283, 10);
 		downMenu.anchorPoint = ccp(0, 0);

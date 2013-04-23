@@ -48,13 +48,13 @@
 	
 	// Creatures
 	
-	FDFriend *friend1 = (FDFriend *)[field getUnSettledCreatureById:1];
+	FDFriend *friend1 = (FDFriend *)[field getUnsettledCreatureById:1];
 	if (friend1 != nil) {
 		[field addFriend:friend1 Position:CGPointMake(27, 16)];
 		[[field getUnsettledCreatureList] removeObject:friend1];
 	}
 	
-	FDFriend *friend2 = (FDFriend *)[field getUnSettledCreatureById:2];
+	FDFriend *friend2 = (FDFriend *)[field getUnsettledCreatureById:2];
 	if (friend2 != nil) {
 		[field addFriend:friend2 Position:CGPointMake(27, 16)];
 		[[field getUnsettledCreatureList] removeObject:friend2];

@@ -11,12 +11,13 @@
 
 @implementation FDFreezeAnimation
 
--(id) initWithTickCount:(int)t
+-(id) initWithTickCount:(int)t Sprite:(FDSprite *)c
 {
 	self = [super init];
 	
 	freezeTick = t;
 	currentTick = 0;
+    
 	return self;
 }
 

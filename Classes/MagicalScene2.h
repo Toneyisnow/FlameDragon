@@ -1,5 +1,5 @@
 //
-//  MagicalScene.h
+//  MagicalScene2.h
 //  FlameDragon
 //
 //  Created by sui toney on 12-10-20.
@@ -11,7 +11,7 @@
 #import "MagicalInformation.h"
 #import "MagicDefinition.h"
 
-@interface MagicalScene : BattleScene {
+@interface MagicalScene2 : BattleScene {
 
 	MagicalInformation *magicalInfo;
 	MagicDefinition *magicDefinition;
@@ -22,13 +22,20 @@
 	// UI
 	FDSprite *subjectSprite;
 	FDSprite *targetSprite;
-	
+	FDSprite *magicSprite;
+    
 	AnimationDefinition *subjectAttackAni;
 	AnimationDefinition *subjectIdleAni;
 	FDCombinedAnimation *subjectAnimation;
 	
 	AnimationDefinition *targetIdleAni;
 	FDCombinedAnimation *targetAnimation;
+	
+    AnimationDefinition *magicAni;
+    FDCombinedAnimation *magicAnimation;
+    
+    AnimationDefinition *magicAppearAnimation;
+    AnimationDefinition *magicDisappearAnimation;
     
 	BOOL updatedMp;
 }

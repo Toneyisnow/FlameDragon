@@ -48,16 +48,16 @@
 	[self settleFriend:15 At:CGPointMake(39,24)];
 	[self settleFriend:16 At:CGPointMake(40,24)];
 	
-	if ([field getCreatureById:18] == nil) {
+	if ([field getCreatureById:18] == nil && [field getUnsettledCreatureById:18] == nil) {
 		// If Midi was not join, adding Midi Npc
-		[field addFriend:[[[FDFriend alloc] initWithDefinition:18 Id:18] autorelease] Position:CGPointMake(24,25)];
+		[field addFriend:[[[FDFriend alloc] initWithDefinition:18 Id:18] autorelease] Position:CGPointMake(24,35)];
 		shouldRemoveMidi = YES;
 	}
 	
 	// Add Enemies
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51703 Id:101] autorelease] Position:CGPointMake(18,30)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51703 Id:102] autorelease] Position:CGPointMake(30,30)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51703 Id:103] autorelease] Position:CGPointMake(15,24)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51703 Id:103 DropItem:103] autorelease] Position:CGPointMake(15,24)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51703 Id:104] autorelease] Position:CGPointMake(32,25)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51703 Id:105] autorelease] Position:CGPointMake(20,22)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51703 Id:106] autorelease] Position:CGPointMake(28,22)];
@@ -67,12 +67,12 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51705 Id:110] autorelease] Position:CGPointMake(23,28)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51705 Id:111] autorelease] Position:CGPointMake(24,28)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51705 Id:112] autorelease] Position:CGPointMake(25,28)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51705 Id:113] autorelease] Position:CGPointMake(14,21)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51705 Id:113 DropItem:103] autorelease] Position:CGPointMake(14,21)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51705 Id:114] autorelease] Position:CGPointMake(33,21)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51705 Id:115] autorelease] Position:CGPointMake(23,13)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51705 Id:116] autorelease] Position:CGPointMake(24,13)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51705 Id:117] autorelease] Position:CGPointMake(25,13)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51704 Id:118] autorelease] Position:CGPointMake(23,31)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51704 Id:118 DropItem:103] autorelease] Position:CGPointMake(23,31)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51704 Id:119] autorelease] Position:CGPointMake(26,31)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51704 Id:120] autorelease] Position:CGPointMake(22,26)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51704 Id:121] autorelease] Position:CGPointMake(26,26)];
@@ -81,7 +81,7 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51704 Id:124] autorelease] Position:CGPointMake(13,25)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51704 Id:125] autorelease] Position:CGPointMake(13,23)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51704 Id:126] autorelease] Position:CGPointMake(35,25)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51704 Id:127] autorelease] Position:CGPointMake(35,23)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51704 Id:127 DropItem:103] autorelease] Position:CGPointMake(35,23)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51704 Id:128] autorelease] Position:CGPointMake(21,17)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51704 Id:129] autorelease] Position:CGPointMake(27,17)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51704 Id:130] autorelease] Position:CGPointMake(24,15)];
@@ -91,7 +91,7 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51702 Id:134] autorelease] Position:CGPointMake(23,20)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51702 Id:135] autorelease] Position:CGPointMake(25,20)];
 	
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51701 Id:199] autorelease] Position:CGPointMake(24,19)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51701 Id:199 DropItem:117] autorelease] Position:CGPointMake(24,19)];
 	
 	// Talk
 	for (int i = 1; i <= 12; i++) {
@@ -150,7 +150,9 @@
 	
 	if (shouldRemoveMidi) {
 		FDCreature *midi = [field getCreatureById:18];
-		[[field getFriendList] removeObject:midi];
+        if (midi != nil) {
+            [[field getFriendList] removeObject:midi];
+        }
 	}
 	
 	[layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];

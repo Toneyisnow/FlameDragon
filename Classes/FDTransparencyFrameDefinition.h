@@ -15,6 +15,7 @@
 }
 
 -(id) initWithOpacity:(int)o Time:(int)t;
++(id) frameWithOpaticy:(int)o Time:(int)t;
 
 
 @end
