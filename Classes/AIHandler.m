@@ -11,6 +11,7 @@
 #import "AIMagicalDelegate.h"
 #import "AIEscapeDelegate.h"
 #import "AIStandByDelegate.h"
+#import "AIGuardDelegate.h"
 #import "FDEnemy.h"
 #import "FDFriend.h"
 #import "FDNpc.h"
@@ -105,6 +106,9 @@
 			break;
 		case AIType_StandBy:
 			delegate = [[AIStandByDelegate alloc] initWithCreature:creature Layers:layers];
+			break;
+		case AIType_Guard:
+			delegate = [[AIGuardDelegate alloc] initWithCreature:creature Layers:layers];
 			break;
 		default:
 			break;

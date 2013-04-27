@@ -111,7 +111,7 @@
 -(void) reinforcement {
 	
 	for (int i = 130; i <= 134; i++) {
-		[self setAiOfId:i withType:AIType_StandBy];
+		[self setAiOfId:i withType:AIType_Aggressive];
 	}
 	
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51803 Id:135] autorelease] Position:CGPointMake(7,3)];

@@ -104,9 +104,9 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51901 Id:199] autorelease] Position:CGPointMake(21,8)];
 	
 	for (int i = 117; i <= 146; i++) {
-		[self setAiOfId:i withType:AIType_StandBy];
+		[self setAiOfId:i withType:AIType_Guard];
 	}
-	[self setAiOfId:199 withType:AIType_StandBy];
+	[self setAiOfId:199 withType:AIType_Guard];
 	
 	// Talk
 	for (int i = 1; i <= 13; i++) {

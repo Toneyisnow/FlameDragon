@@ -251,8 +251,15 @@
 	data.dx += dxInc;
 	if (magic != nil) {
         [data addMagic:magic.identifier];
-		// [data.magicList addObject:[NSNumber numberWithInt:magic.identifier]];
 	}
+    
+    // Fix bug: If there is some magic from previous levels missing, add them
+    for (int level = 1; level < data.level; level++) {
+        MagicDefinition *m = [[DataDepot depot] getLevelUpMagicDefinition:[definition getId] atLeveL:level];
+        if (m != nil) {
+            [data addMagic:m.identifier];
+        }
+    }
 	
 	// NSString *message = [NSString stringWithFormat:@"等级上升了！#攻击力提升5#防御力提升3#速度提升4#"];
 	
@@ -458,6 +465,10 @@
 
 -(BOOL) isKnight {
 	return [definition isKnight];
+}
+
+-(BOOL) isMarshMonster {
+	return [definition isMarshMonster];
 }
 
 -(BOOL) isNoticable {

@@ -878,6 +878,8 @@
         map = [[groundField getGroundScopeMapForFly] clone];
     } else if ([creature isKnight]) {
 	    map = [[groundField getGroundScopeMapForKnight] clone];	
+	} else if ([creature isMarshMonster]) {
+	    map = [[groundField getGroundScopeMapForMarshMonster] clone];
 	} else {
         map = [[groundField getGroundScopeMapForGround] clone];
     }

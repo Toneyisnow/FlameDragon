@@ -236,11 +236,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/ActionLayers.m"
-         timestampString = "388417834.038822"
+         timestampString = "388770762.959145"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1017"
-         endingLineNumber = "1017"
+         startingLineNumber = "1002"
+         endingLineNumber = "1002"
          landmarkName = "-showItemStatusAsync:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -281,6 +281,19 @@
          startingLineNumber = "140"
          endingLineNumber = "140"
          landmarkName = "-onSubjectAttack:Tag:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Classes/ActionLayers.m"
+         timestampString = "388771648.052326"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "1150"
+         endingLineNumber = "1150"
+         landmarkName = "-settleFriend:At:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

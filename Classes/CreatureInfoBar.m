@@ -78,7 +78,12 @@
 		}
 		else if (hp > 0) {
 			[hpBar setOpacity:255];
-			[hpBar setScaleX:(float)hp/hpMax Y:1];
+            
+            float scaleX = (float)hp/hpMax;
+            if (scaleX < 0.005) {
+                scaleX = 0.005;
+            }
+			[hpBar setScaleX:scaleX Y:1];
 		}
 		
 		if (hpValue != nil) {

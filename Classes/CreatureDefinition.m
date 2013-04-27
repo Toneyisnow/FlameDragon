@@ -197,6 +197,10 @@
         return YES;
     }
     
+    if (race == 6 && identifier != 24) {
+        return YES;
+    }
+    
     if (race == 5) {
         return YES;
     }
@@ -210,6 +214,11 @@
 	}
 
 	return NO;
+}
+
+-(BOOL) isMarshMonster {
+    
+    return (identifier == 761);
 }
 
 -(int) getMaximumLevel {

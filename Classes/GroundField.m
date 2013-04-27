@@ -34,6 +34,7 @@
 	groundScopeMapForGround = [[FDIntMap alloc] initWidth:fieldSize.width Height:fieldSize.height];
 	groundScopeMapForFly = [[FDIntMap alloc] initWidth:fieldSize.width Height:fieldSize.height];
 	groundScopeMapForKnight = [[FDIntMap alloc] initWidth:fieldSize.width Height:fieldSize.height];
+	groundScopeMapForMarshMonster = [[FDIntMap alloc] initWidth:fieldSize.width Height:fieldSize.height];
 	
 	for (int j = 1; j <= fieldSize.height; j++) {
 		for (int i = 1; i <= fieldSize.width; i++) {
@@ -51,6 +52,7 @@
 					[groundScopeMapForGround setX:i Y:j Value: ScopeResistance_Plain];
 					[groundScopeMapForFly setX:i Y:j Value: ScopeResistance_Plain];
 					[groundScopeMapForKnight setX:i Y:j Value: ScopeResistance_Plain];
+					[groundScopeMapForMarshMonster setX:i Y:j Value: ScopeResistance_Gap];
 					break;
 				case GroundBlockTypeChasm:
 					[groundPathMapForGround setX:i Y:j Value: PathBlockType_Blocked];
@@ -58,13 +60,15 @@
 					[groundScopeMapForGround setX:i Y:j Value: ScopeResistance_Gap];
 					[groundScopeMapForFly setX:i Y:j Value: ScopeResistance_Plain];
 					[groundScopeMapForKnight setX:i Y:j Value: ScopeResistance_Gap];
+					[groundScopeMapForMarshMonster setX:i Y:j Value: ScopeResistance_Gap];
 					break;
 				case GroundBlockTypeMarsh:
-					[groundPathMapForGround setX:i Y:j Value: PathBlockType_Blocked];
-					[groundPathMapForFly setX:i Y:j Value: PathBlockType_Blocked];
+					[groundPathMapForGround setX:i Y:j Value: PathBlockType_Plain];
+					[groundPathMapForFly setX:i Y:j Value: PathBlockType_Plain];
 					[groundScopeMapForGround setX:i Y:j Value: ScopeResistance_Slow];
 					[groundScopeMapForFly setX:i Y:j Value: ScopeResistance_Plain];
 					[groundScopeMapForKnight setX:i Y:j Value: ScopeResistance_VerySlow];
+					[groundScopeMapForMarshMonster setX:i Y:j Value: ScopeResistance_Plain];
 					break;
 				case GroundBlockTypeGap:
 					[groundPathMapForGround setX:i Y:j Value: PathBlockType_Blocked];
@@ -72,6 +76,7 @@
 					[groundScopeMapForGround setX:i Y:j Value: ScopeResistance_Gap];
 					[groundScopeMapForFly setX:i Y:j Value: ScopeResistance_Gap];
 					[groundScopeMapForKnight setX:i Y:j Value: ScopeResistance_Gap];
+					[groundScopeMapForMarshMonster setX:i Y:j Value: ScopeResistance_Gap];
 					break;
 				case GroundBlockTypeForest:
 					[groundPathMapForGround setX:i Y:j Value: PathBlockType_Plain];
@@ -79,6 +84,7 @@
 					[groundScopeMapForGround setX:i Y:j Value: ScopeResistance_Plain];
 					[groundScopeMapForFly setX:i Y:j Value: ScopeResistance_Plain];
 					[groundScopeMapForKnight setX:i Y:j Value: ScopeResistance_Slow];
+					[groundScopeMapForMarshMonster setX:i Y:j Value: ScopeResistance_Gap];
 					break;
 				case GroundBlockTypeBlackForest:
 					[groundPathMapForGround setX:i Y:j Value: PathBlockType_Plain];
@@ -86,6 +92,7 @@
 					[groundScopeMapForGround setX:i Y:j Value: ScopeResistance_Plain];
 					[groundScopeMapForFly setX:i Y:j Value: ScopeResistance_Plain];
 					[groundScopeMapForKnight setX:i Y:j Value: ScopeResistance_Slow];
+					[groundScopeMapForMarshMonster setX:i Y:j Value: ScopeResistance_Gap];
 					break;
 				default:
 					[groundPathMapForGround setX:i Y:j Value: PathBlockType_Plain];
@@ -93,6 +100,7 @@
 					[groundScopeMapForGround setX:i Y:j Value: ScopeResistance_Plain];
 					[groundScopeMapForFly setX:i Y:j Value: ScopeResistance_Plain];
 					[groundScopeMapForKnight setX:i Y:j Value: ScopeResistance_Plain];
+					[groundScopeMapForMarshMonster setX:i Y:j Value: ScopeResistance_Gap];
 					break;
 			}
 		}
@@ -133,6 +141,10 @@
     return groundScopeMapForKnight;
 }
 
+-(FDIntMap *) getGroundScopeMapForMarshMonster {
+    return groundScopeMapForMarshMonster;
+}
+
 -(CGSize) fieldSize
 {
 	return fieldSize;
@@ -170,6 +182,7 @@
     [groundScopeMapForFly release];
     [groundScopeMapForGround release];
     [groundScopeMapForKnight release];
+    [groundScopeMapForMarshMonster release];
     
     [super dealloc];
     

@@ -38,6 +38,8 @@
 
 @implementation ActionLayers
 
+@synthesize currentActivity;
+
 -(id) initWithField:(BattleFieldLayer *)fLayer Message:(MessageLayer *)mLayer
 {
 	self = [super init];
@@ -95,46 +97,26 @@
         return;
     }
     
-    /*
-	for (FDActivity *activity in activityList) {
-		
-        [activity takeTick:synchronizeTick];
-		NSLog(@"Activity takeTick");
-		
-		if ([activityList count] == 0) {
-			break;
-		}
-		NSLog(@"Activity takeTick");
-		
-		if ([activity hasFinished]) {
-			
-			//[activity postActivity];
-			if ([activity getNext] != nil) {
-				[activityList addObject:[activity getNext]];
-			}
-			
-			[activityList removeObject:activity];
-		}
-	}
-    */
-    
     int index = 0;
     int endIndex = [activityList count];
     while (activityList != nil && index < endIndex) {
         
-        FDActivity *activity = [activityList objectAtIndex:index];
+        self.currentActivity = [activityList objectAtIndex:index];
         
-        [activity takeTick:synchronizeTick];
+        [self.currentActivity takeTick:synchronizeTick];
 		// NSLog(@"Activity takeTick");
 		
-		if ([activity hasFinished]) {
+		if ([self.currentActivity hasFinished]) {
 			
 			//[activity postActivity];
-			if ([activity getNext] != nil) {
-				[activityList addObject:[activity getNext]];
+			if ([self.currentActivity getNext] != nil) {
+				[activityList addObject:[self.currentActivity getNext]];
 			}
 			
-			[activityList removeObject:activity];
+            if ([activityList containsObject:self.currentActivity]) {
+                [activityList removeObject:self.currentActivity];
+            }
+            
             endIndex--;
 		} else {
             index++;
@@ -424,7 +406,7 @@
 	[creature updateMP:-magic.mpCost];
 	[creature updateHP:0];
 	
-	BOOL areBadGuys = ([creature getCreatureType] == CreatureType_Friend && (magic.magicType == MagicType_Attack || magic.magicType == MagicType_Offensive))
+	BOOL areBadGuys = (([creature getCreatureType] == CreatureType_Friend || [creature getCreatureType] == CreatureType_Npc) && (magic.magicType == MagicType_Attack || magic.magicType == MagicType_Offensive))
 					|| ([creature getCreatureType] == CreatureType_Enemy && (magic.magicType == MagicType_Recover || magic.magicType == MagicType_Defensive));
 	
 	NSMutableArray *targets = [field getCreaturesAt:position Range:magic.effectRange BadGuys:areBadGuys];
@@ -778,6 +760,9 @@
 	money = info.money;
     selectedFriendList = ((list != nil) ? [list retain] : nil);
     
+    if (selectedFriendList != nil) {
+        NSLog(@"Selected Friend List: %@", [list componentsJoinedByString:@";"]);
+    }
     // Stop previous background Music
     [FDAudioEngine stopMusic];
     
@@ -1066,7 +1051,7 @@
 
 -(void) gameOver
 {
-	// [self clearAllActivity];
+	[self clearAllActivity];
 	
 	GameOverScene *scene = [GameOverScene node];
 	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:0.5 scene:scene]];	
@@ -1074,7 +1059,7 @@
 
 -(void) gameWin
 {
-	// [self clearAllActivity]; // TODO: Bug for actiivy list
+	[self clearAllActivity];
 	NSLog(@"Game Win.");
 	
 	//ChapterRecord *record = [ChapterRecord sampleRecord];

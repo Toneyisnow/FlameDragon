@@ -115,6 +115,7 @@
 		022ADC7417238C3200F15034 /* MagicAnimation.dat in Resources */ = {isa = PBXBuildFile; fileRef = 022ADC7317238C3200F15034 /* MagicAnimation.dat */; };
 		022ADC771724455100F15034 /* FDMoveByAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 022ADC761724455000F15034 /* FDMoveByAnimation.m */; };
 		022ADC7A1726C01300F15034 /* MagicalScene2.m in Sources */ = {isa = PBXBuildFile; fileRef = 022ADC791726C01200F15034 /* MagicalScene2.m */; };
+		022ADC7E172C248800F15034 /* AIGuardDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 022ADC7D172C248500F15034 /* AIGuardDelegate.m */; };
 		022D368B161484780020F816 /* Occupation.dat in Resources */ = {isa = PBXBuildFile; fileRef = 022D368A161484780020F816 /* Occupation.dat */; };
 		022D368E161487130020F816 /* OccupationDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = 022D368D161487130020F816 /* OccupationDefinition.m */; };
 		022D37A51615DB0E0020F816 /* VillageShop-01-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 022D37A41615DB0D0020F816 /* VillageShop-01-5.png */; };
@@ -4665,6 +4666,8 @@
 		022ADC781726BFFB00F15034 /* MagicalScene2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MagicalScene2.h; sourceTree = "<group>"; };
 		022ADC791726C01200F15034 /* MagicalScene2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MagicalScene2.m; sourceTree = "<group>"; };
 		022ADC7B1726C52300F15034 /* LevelUpDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelUpDefinition.h; sourceTree = "<group>"; };
+		022ADC7C172C248200F15034 /* AIGuardDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIGuardDelegate.h; sourceTree = "<group>"; };
+		022ADC7D172C248500F15034 /* AIGuardDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIGuardDelegate.m; sourceTree = "<group>"; };
 		022D368A161484780020F816 /* Occupation.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Occupation.dat; path = Data/Occupation.dat; sourceTree = "<group>"; };
 		022D368C161487130020F816 /* OccupationDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OccupationDefinition.h; sourceTree = "<group>"; };
 		022D368D161487130020F816 /* OccupationDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OccupationDefinition.m; sourceTree = "<group>"; };
@@ -9537,6 +9540,8 @@
 				02D4C637164B07AD00B9B407 /* AIMagicalDelegate.m */,
 				02B59E5B167423230066783F /* AIStandByDelegate.h */,
 				02B59E5C167423230066783F /* AIStandByDelegate.m */,
+				022ADC7C172C248200F15034 /* AIGuardDelegate.h */,
+				022ADC7D172C248500F15034 /* AIGuardDelegate.m */,
 			);
 			name = AI;
 			sourceTree = "<group>";
@@ -21201,6 +21206,7 @@
 				022ADC6F171707FC00F15034 /* EventChapter30.m in Sources */,
 				022ADC771724455100F15034 /* FDMoveByAnimation.m in Sources */,
 				022ADC7A1726C01300F15034 /* MagicalScene2.m in Sources */,
+				022ADC7E172C248800F15034 /* AIGuardDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

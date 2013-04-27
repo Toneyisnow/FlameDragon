@@ -165,9 +165,14 @@
 	BattleField *field = [[layers getFieldLayer] getField];
 	
 	NSMutableArray *candidateList = [[NSMutableArray alloc] init];
-	[candidateList addObjectsFromArray:[field getFriendList]];
-	[candidateList addObjectsFromArray:[field getNpcList]];
-	
+    
+    if ([creature getCreatureType] == CreatureType_Enemy) {
+        [candidateList addObjectsFromArray:[field getFriendList]];
+        [candidateList addObjectsFromArray:[field getNpcList]];
+	} else {
+        [candidateList addObjectsFromArray:[field getEnemyList]];
+    }
+    
 	FDCreature *candidate = nil;
 	for (FDCreature *c in candidateList) {
 		
@@ -193,8 +198,14 @@
 	BattleField *field = [[layers getFieldLayer] getField];
 	
 	NSMutableArray *candidateList = [[NSMutableArray alloc] init];
-	[candidateList addObjectsFromArray:[field getEnemyList]];
 	
+    if ([creature getCreatureType] == CreatureType_Enemy) {
+        [candidateList addObjectsFromArray:[field getEnemyList]];
+    } else {
+        [candidateList addObjectsFromArray:[field getFriendList]];
+        [candidateList addObjectsFromArray:[field getNpcList]];
+    }
+    
 	FDCreature *candidate = nil;
 	for (FDCreature *c in candidateList) {
 		

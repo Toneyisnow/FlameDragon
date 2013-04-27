@@ -18,11 +18,12 @@
 	
 	NSMutableDictionary *backgroundDic;
     
-    	FDIntMap *groundPathMapForGround;
-    	FDIntMap *groundPathMapForFly;
+    FDIntMap *groundPathMapForGround;
+    FDIntMap *groundPathMapForFly;
 	FDIntMap *groundScopeMapForGround;
 	FDIntMap *groundScopeMapForFly;
 	FDIntMap *groundScopeMapForKnight;
+    FDIntMap *groundScopeMapForMarshMonster;
 }
 
 -(id) initWithDefinitionStream:(FDFileStream *)fileStream;
@@ -38,5 +39,6 @@
 -(FDIntMap *) getGroundScopeMapForGround;
 -(FDIntMap *) getGroundScopeMapForFly;
 -(FDIntMap *) getGroundScopeMapForKnight;
+-(FDIntMap *) getGroundScopeMapForMarshMonster;
 
 @end

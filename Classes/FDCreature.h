@@ -139,6 +139,7 @@ typedef enum ActionStatus {
 -(BOOL) canFly;
 -(BOOL) isNotFrozen;
 -(BOOL) isKnight;
+-(BOOL) isMarshMonster;
 -(BOOL) isNoticable;
 -(void) wokeUpByAttack;
 

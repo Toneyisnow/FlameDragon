@@ -23,6 +23,7 @@ typedef enum AIType {
 	AIType_Aggressive,
 	AIType_Escape,
 	AIType_StandBy,
+    AIType_Guard,
 	AIType_UnNoticable
 } AIType;
 

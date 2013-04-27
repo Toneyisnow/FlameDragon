@@ -67,6 +67,10 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52001 Id:69] autorelease] Position:CGPointMake(6,6)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52001 Id:70] autorelease] Position:CGPointMake(11,5)];
 	
+    for (int i = 51; i <= 70; i++) {
+		[self setAiOfId:i withType:AIType_Guard];
+	}
+	
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52002 Id:101] autorelease] Position:CGPointMake(11,30)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52002 Id:102] autorelease] Position:CGPointMake(16,19)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52008 Id:103] autorelease] Position:CGPointMake(13,20)];
@@ -103,7 +107,9 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52006 Id:134] autorelease] Position:CGPointMake(24,17)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52006 Id:135] autorelease] Position:CGPointMake(25,16)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52006 Id:136] autorelease] Position:CGPointMake(25,17)];
-	
+	[self setAiOfId:109 withType:AIType_StandBy];
+	[self setAiOfId:112 withType:AIType_StandBy];
+	[self setAiOfId:101 withType:AIType_Guard];
 	
 	// Add NPC
 	[field addNpc:[[[FDNpc alloc] initWithDefinition:23 Id:23] autorelease] Position:CGPointMake(22,13)];

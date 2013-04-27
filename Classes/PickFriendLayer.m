@@ -180,7 +180,9 @@
         }
         
         if ([[selectedFlag objectAtIndex:i] boolValue] == YES) {
-            [selectedFriends addObject:[NSNumber numberWithInt:i+1]];
+            
+            CreatureRecord *c = [[chapterRecord friendRecords] objectAtIndex:i];
+            [selectedFriends addObject:[NSNumber numberWithInt:c.creatureId]];
         }
     }
     

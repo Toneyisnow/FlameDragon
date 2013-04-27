@@ -54,7 +54,11 @@ typedef enum TurnType
 	IListener *npcAiHandler;
 	
     NSMutableArray *selectedFriendList;
+    
+    FDActivity *currentActivity;
 }
+
+@property (retain) FDActivity *currentActivity;
 
 -(id) initWithField:(BattleFieldLayer *)fLayer Message:(MessageLayer *)mLayer;
 

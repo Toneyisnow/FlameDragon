@@ -203,7 +203,7 @@
 	BOOL canRecover = FALSE;
 	for (int index = 0; index < [creature.data.itemList count]; index++) {
 		int itemId = [creature getItemId:index];
-		if (itemId == 101 || itemId == 102 || itemId == 103) {
+		if (itemId == 101 || itemId == 102 || itemId == 103 || itemId == 104) {
 			canRecover = TRUE;
 			break;
 		}
@@ -217,7 +217,7 @@
 	int itemIndex = -1;
 	for (int index = 0; index < [creature.data.itemList count]; index++) {
 		int itemId = [creature getItemId:index];
-		if (itemId == 101 || itemId == 102 || itemId == 103) {
+		if (itemId == 101 || itemId == 102 || itemId == 103 || itemId == 104) {
 			itemIndex = index;
 			break;
 		}
