@@ -73,6 +73,8 @@
 -(CreatureRecord *) generateCreatureRecord:(FDCreature *)creature;
 -(TreasureRecord *) generateTreasureRecord:(FDTreasure *)treasure;
 
+//-(void) setCreature:(FDCreature *)creature to:(CGPoint)position;
+
 -(BOOL) isNextTo:(FDCreature *)creature1 And:(FDCreature *)creature2;
 -(int) getDirectDistance:(FDCreature *)creature1 And:(FDCreature *)creature2;
 -(int) getDirectDistancePos:(CGPoint)pos1 And:(CGPoint)pos2;

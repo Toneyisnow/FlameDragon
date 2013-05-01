@@ -727,7 +727,7 @@
     return nil;
 }
 
--(bool) isInScope:(CGPoint)pos
+-(BOOL) isInScope:(CGPoint)pos
 {
 	for (FDBattleObject *obj in battleObjectList) {
 		if ([obj isKindOfClass:[FDScopeIndicator class]]
@@ -1055,6 +1055,24 @@
 	
 	return ((abs(pos1.x-pos2.x) == 1 && pos1.y == pos2.y)
 			|| (abs(pos1.y-pos2.y) == 1 && pos1.x == pos2.x));
+}
+
+-(BOOL) canLandedAt:(CGPoint)position forCreature:(FDCreature *)targetCreature
+{
+    if ([self getCreatureByPos:position] != nil)
+    {
+        return NO;
+    }
+    
+    GroundBlock *block = [groundField blockAtX:position.x Y:position.y];
+    
+    if ([block getBlockType] == GroundBlockTypeGap
+        || ([block getBlockType] == GroundBlockTypeChasm && ![targetCreature canFly]))
+    {
+        return NO;
+    }
+    
+    return YES;
 }
 
 -(NSMutableArray *) getNearByFriend:(FDCreature *)creature

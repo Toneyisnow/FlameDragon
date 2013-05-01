@@ -78,6 +78,7 @@ typedef enum TurnType
 -(void) exchangeItem:(FDCreature *)creature ItemIndex:(int)itemIndex Target:(FDCreature *)target ItemIndex:(int)backItemIndex;
 -(void) pickUpTreasure:(FDCreature *) creature;
 -(void) exchangeTreasure:(FDCreature *)creature withItem:(int)itemIndex;
+-(void) transferBy:(FDCreature *)currentFriend forCreature:(FDCreature *)targetCreature to:(CGPoint)position;
 
 -(void) showItemStatus:(FDCreature *)creature;
 -(void) showMagicStatus:(FDCreature *)creature;

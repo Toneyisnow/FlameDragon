@@ -27,6 +27,16 @@
 #import "EventChapter18.h"
 #import "EventChapter19.h"
 #import "EventChapter20.h"
+#import "EventChapter21.h"
+#import "EventChapter22.h"
+#import "EventChapter23.h"
+#import "EventChapter24.h"
+#import "EventChapter25.h"
+#import "EventChapter26.h"
+#import "EventChapter27.h"
+#import "EventChapter28.h"
+#import "EventChapter29.h"
+#import "EventChapter30.h"
 #import "EventChapter99.h"
 
 @implementation EventLoaderFactory
@@ -95,6 +105,36 @@
 		case 20:
 			loader = [[EventChapter20 alloc] init];
 			break;		
+		case 21:
+			loader = [[EventChapter21 alloc] init];
+			break;
+		case 22:
+			loader = [[EventChapter22 alloc] init];
+			break;
+		case 23:
+			loader = [[EventChapter23 alloc] init];
+			break;
+		case 24:
+			loader = [[EventChapter24 alloc] init];
+			break;
+		case 25:
+			loader = [[EventChapter25 alloc] init];
+			break;
+		case 26:
+			loader = [[EventChapter26 alloc] init];
+			break;
+		case 27:
+			loader = [[EventChapter27 alloc] init];
+			break;
+		case 28:
+			loader = [[EventChapter28 alloc] init];
+			break;
+		case 29:
+			loader = [[EventChapter29 alloc] init];
+			break;
+		case 30:
+			loader = [[EventChapter30 alloc] init];
+			break;
 		case 99:
 			loader = [[EventChapter99 alloc] init];
 			break;

@@ -28,7 +28,14 @@
 	NSLog(@"AIMagicalDelegate take action on creature %d", [creature getIdentifier]);
 	if (!creature.pendingAction) {
 		
-		[self takeMagicAction];
+        if ([self needAndCanRecover]) {
+            
+            [self selfRecover];
+            [layers appendToCurrentActivityMethod:@selector(creatureEndTurn:) Param1:creature Param2:nil];
+        } else {
+            
+            [self takeMagicAction];
+        }
 	} else {
 		
 		[self takePendAction];

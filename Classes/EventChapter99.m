@@ -51,6 +51,7 @@
 	
 	FDFriend *friend5 = [[FDFriend alloc] initWithDefinition:8 Id:8];
 	[field addFriend:friend5 Position:CGPointMake(10, 18)];
+    [friend5.data addMagic:501];
 	[friend5 release];
 	
 	/*

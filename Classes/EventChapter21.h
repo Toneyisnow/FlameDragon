@@ -6,8 +6,8 @@
 //
 //
 
-#import <Foundation/Foundation.h>
+#import "EventLoader.h"
 
-@interface EventChapter21 : NSObject
+@interface EventChapter21 : EventLoader
 
 @end

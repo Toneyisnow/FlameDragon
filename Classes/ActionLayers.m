@@ -1027,6 +1027,22 @@
 	[info release];	
 }
 
+-(void) transferBy:(FDCreature *)currentFriend forCreature:(FDCreature *)targetCreature to:(CGPoint)position {
+    
+    NSLog(@"Transfer %d by %d to pos (%f, %f)", [targetCreature getIdentifier], [currentFriend getIdentifier], position.x, position.y);
+	
+    MagicDefinition *magic = [[DataDepot depot] getMagicDefinition:501];
+    [currentFriend updateMP:-magic.mpCost];
+	
+    [targetCreature setLocation:[field convertPosToLoc:position]];
+    
+    NSMutableArray *targets = [[NSMutableArray alloc] init];
+    [targets addObject:targetCreature];
+    
+    [self appendToMainActivityMethod:@selector(postFightAction:Targets:) Param1:currentFriend Param2:targets Obj:self];
+    [targets release];
+}
+
 -(void) receiveNotificationUpdateSideBar:(NSNotification *)notification {
     
     CGPoint cursor = [field getCursorPos];

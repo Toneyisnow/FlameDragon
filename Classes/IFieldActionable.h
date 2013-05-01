@@ -71,7 +71,9 @@
 -(void) showConfirmMessage:(FDCreature *)creature MessageId:(int)messageId;
 
 // Helper function
--(bool) isInScope:(CGPoint)pos;
+-(BOOL) isInScope:(CGPoint)pos;
+
+-(BOOL) canLandedAt:(CGPoint)position forCreature:(FDCreature *)targetCreature;
 
 -(CGPoint) convertPosToLoc:(CGPoint)pos;
 -(CGPoint) convertLocToPos:(CGPoint)loc;

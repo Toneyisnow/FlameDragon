@@ -7,6 +7,7 @@
 //
 
 #import "SelectMagicTargetState.h"
+#import "SelectTransferPositionState.h"
 #import "FDEnemy.h"
 #import "DataDepot.h"
 
@@ -42,12 +43,21 @@
 													  BadGuys:(magic.magicType == MagicType_Attack || magic.magicType == MagicType_Offensive)];
 			if ([targetSet count] > 0) {
 				
-				[field removeAllIndicators];
+                [field removeAllIndicators];
                 [field setCursorSize:1];
-				[layers magicFrom:currentFriend TargetPos:position Id:magicId];
+                
+                // Special for Transfer Magic
+                if (magic.identifier == 501) {
+                
+                    nextState = [[SelectTransferPositionState alloc] initWithLayers:layers Friend:currentFriend Creature:[targetSet objectAtIndex:0]];
+                    
+                } else {
+                    
+                    [layers magicFrom:currentFriend TargetPos:position Id:magicId];
 				
-				isFinished = TRUE;
-				shouldDispose = TRUE;
+                    isFinished = TRUE;
+                    shouldDispose = TRUE;
+                }
 			}
 			else
 			{
