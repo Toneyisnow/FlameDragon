@@ -38,7 +38,7 @@
 			
 			nextState = [[ShowingMoveScopeState alloc] initWithLayers:layers Friend:(FDFriend *)creature];
 		}
-		else {
+		else if ([creature getDefinition].identifier != 761) {
 			// Show status
 			[layers showItemStatusAsync:creature];
 			if ([creature.data.magicList count] > 0) {

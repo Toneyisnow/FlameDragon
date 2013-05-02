@@ -1034,10 +1034,13 @@
     MagicDefinition *magic = [[DataDepot depot] getMagicDefinition:501];
     [currentFriend updateMP:-magic.mpCost];
 	
+    
     [targetCreature setLocation:[field convertPosToLoc:position]];
     
     NSMutableArray *targets = [[NSMutableArray alloc] init];
     [targets addObject:targetCreature];
+    
+    [GameFormula dealWithMagic:501 From:currentFriend Target:targets Field:field];
     
     [self appendToMainActivityMethod:@selector(postFightAction:Targets:) Param1:currentFriend Param2:targets Obj:self];
     [targets release];
