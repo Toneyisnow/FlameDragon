@@ -149,10 +149,19 @@
 	}
 	
 	if (shouldRemoveMidi) {
-		FDCreature *midi = [field getCreatureById:18];
-        if (midi != nil) {
-            [[field getFriendList] removeObject:midi];
-        }
+		
+		for (FDCreature *c in [field getFriendList]) {
+			if (c.identifier == 18) {
+				[[field getFriendList] removeObject:c];
+				break;
+			}
+		}
+		for (FDCreature *c in [field getDeadCreatureList]) {
+			if (c.identifier == 18) {
+				[[field getDeadCreatureList] removeObject:c];
+				break;
+			}
+		}
 	}
 	
 	[layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];
