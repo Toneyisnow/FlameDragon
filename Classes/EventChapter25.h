@@ -6,8 +6,12 @@
 //
 //
 
-#import <Foundation/Foundation.h>
+#import "EventHandler.h"
+#import "ActionLayers.h"
+#import "EventLoader.h"
 
-@interface EventChapter25 : NSObject
+@interface EventChapter25 : EventLoader {
+	
+}
 
 @end

@@ -225,7 +225,6 @@
 	else {
 		return nil;
 	}
-
 }
 
 -(NSString *) levelUp

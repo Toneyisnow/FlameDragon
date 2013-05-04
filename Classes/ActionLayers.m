@@ -346,7 +346,7 @@
 	// Talk about experience/drop item
 	FDCreature *talkerFriend = nil;
 	FDCreature *target = ([targets count] > 0) ? [targets objectAtIndex:0] : nil;
-	if (creature != nil && [creature isKindOfClass:[FDFriend class]] && creature.lastGainedExperience > 0 && creature.data.hpCurrent > 0)
+	if (creature != nil && [creature isKindOfClass:[FDFriend class]] && creature.data.hpCurrent > 0)
 	{
 		talkerFriend = creature;
 	}
@@ -357,19 +357,22 @@
 	
 	if (talkerFriend != nil) {
 	
-		NSString *message = [NSString stringWithFormat:[FDLocalString message:5], talkerFriend.lastGainedExperience];
-		FDTalkActivity *talk = [[FDTalkActivity alloc] initWithCreature:talkerFriend Message:message Layer:messageLayer];
-		[self appendToMainActivity:talk];
-		[talk release];
-		
-		NSString *levelUpMsg = [talkerFriend updateExpAndLevelUp];
-		if (levelUpMsg != nil) {
+        if (talkerFriend.data.level < [[talkerFriend getDefinition] getMaximumLevel]
+             && talkerFriend.lastGainedExperience > 0 ) {
+       
+            NSString *message = [NSString stringWithFormat:[FDLocalString message:5], talkerFriend.lastGainedExperience];
+            FDTalkActivity *talk = [[FDTalkActivity alloc] initWithCreature:talkerFriend Message:message Layer:messageLayer];
+            [self appendToMainActivity:talk];
+            [talk release];
+		 
+            NSString *levelUpMsg = [talkerFriend updateExpAndLevelUp];
+            if (levelUpMsg != nil) {
 			
-			TalkMessage *message = [[TalkMessage alloc] initWithCreature:talkerFriend Message:levelUpMsg];
-			[self appendToMainActivityMethod:@selector(show:) Param1:messageLayer Param2:nil Obj:message];
-			// [message show:messageLayer];
+                TalkMessage *message = [[TalkMessage alloc] initWithCreature:talkerFriend Message:levelUpMsg];
+                [self appendToMainActivityMethod:@selector(show:) Param1:messageLayer Param2:nil Obj:message];
+            }
 		}
-		
+        
 		for (ItemDefinition *dropItem in dropItemList) {
 			NSString *message = [NSString stringWithFormat:[FDLocalString message:21], dropItem.name];
 			FDTalkActivity *talk = [[FDTalkActivity alloc] initWithCreature:talkerFriend Message:message Layer:messageLayer];

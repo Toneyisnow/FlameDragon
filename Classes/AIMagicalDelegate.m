@@ -125,16 +125,18 @@
 	BattleField *field = [[layers getFieldLayer] getField];
 
 	NSLog(@"takePendAction");
-	FDCreature *target = [self findTarget];
-	if (target != nil) {
-		NSLog(@"target != nil");
-		CGPoint targetPos = [self generatePos:[field getObjectPos:target]];
-		NSLog(@"generated targetPos.");
-		[field setCursorTo:targetPos];
-		[layers moveCreature:creature To:targetPos showMenu:FALSE];
-	}
-	
     
+    // Only move when the HP is enough
+    if (creature.data.hpCurrent > creature.data.hpMax / 2) {
+        FDCreature *target = [self findTarget];
+        if (target != nil) {
+            NSLog(@"target != nil");
+            CGPoint targetPos = [self generatePos:[field getObjectPos:target]];
+            NSLog(@"generated targetPos.");
+            [field setCursorTo:targetPos];
+            [layers moveCreature:creature To:targetPos showMenu:FALSE];
+        }
+	}
     
 	NSLog(@"End Pend Action;");
 	[layers appendToCurrentActivityMethod:@selector(takeAttackAction) Param1:creature Param2:nil Obj:self];
@@ -147,8 +149,13 @@
 	
     FDCreature *attackTarget = nil;
     
-    NSMutableArray *targetList = [NSMutableArray arrayWithArray:[field getFriendList]];
-    [targetList addObjectsFromArray:[field getNpcList]];
+    NSMutableArray *targetList = [[NSMutableArray alloc] init];
+    if ([creature getCreatureType] == CreatureType_Enemy) {
+        [targetList addObjectsFromArray:[field getFriendList]];
+        [targetList addObjectsFromArray:[field getNpcList]];
+    } else {
+        [targetList addObjectsFromArray:[field getEnemyList]];
+    }
     
     for (FDCreature *target in targetList) {
         if (target != nil && [creature isAbleToAttack:target]
@@ -157,7 +164,8 @@
             break;
         }
     }
-	
+	[targetList release];
+    
     if (attackTarget != nil) {
 		[layers appendToCurrentActivityMethod:@selector(attackFrom:Target:) Param1:creature Param2:attackTarget];
 	}

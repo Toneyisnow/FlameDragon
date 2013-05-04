@@ -151,13 +151,13 @@
 	if (shouldRemoveMidi) {
 		
 		for (FDCreature *c in [field getFriendList]) {
-			if (c.identifier == 18) {
+			if ([c getIdentifier] == 18) {
 				[[field getFriendList] removeObject:c];
 				break;
 			}
 		}
 		for (FDCreature *c in [field getDeadCreatureList]) {
-			if (c.identifier == 18) {
+			if ([c getIdentifier] == 18) {
 				[[field getDeadCreatureList] removeObject:c];
 				break;
 			}

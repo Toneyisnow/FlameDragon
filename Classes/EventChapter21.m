@@ -13,13 +13,14 @@
 
 -(void) loadEvents
 {
-  [self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(initialBattle)];
+    [self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(initialBattle)];
 	[self loadTurnEvent:TurnType_Friend Turn:2 Action:@selector(round2)];
 	[self loadTurnEvent:TurnType_Friend Turn:4 Action:@selector(round4)];
 	[self loadTurnEvent:TurnType_Friend Turn:6 Action:@selector(round6)];
 	[self loadTurnEvent:TurnType_Friend Turn:8 Action:@selector(round8)];
 	
 	[self loadDieEvent:1 Action:@selector(gameOver)];
+	[self loadDieEvent:25 Action:@selector(gameOver)];
 	[self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
 	
 	[self loadDyingEvent:199 Action:@selector(bossDyingMessage)];
@@ -104,17 +105,19 @@
 	// Add NPC
 	[field addNpc:[[[FDNpc alloc] initWithDefinition:25 Id:25] autorelease] Position:CGPointMake(20,13)];
 	[field addNpc:[[[FDNpc alloc] initWithDefinition:26 Id:26] autorelease] Position:CGPointMake(22,13)];
-	[field addNpc:[[[FDNpc alloc] initWithDefinition:52110 Id:201] autorelease] Position:CGPointMake(18,13)];
-	[field addNpc:[[[FDNpc alloc] initWithDefinition:52110 Id:202] autorelease] Position:CGPointMake(19,12)];
-	[field addNpc:[[[FDNpc alloc] initWithDefinition:52110 Id:203] autorelease] Position:CGPointMake(19,14)];
-	[field addNpc:[[[FDNpc alloc] initWithDefinition:52110 Id:204] autorelease] Position:CGPointMake(20,12)];
-	[field addNpc:[[[FDNpc alloc] initWithDefinition:52110 Id:205] autorelease] Position:CGPointMake(20,14)];
-	[field addNpc:[[[FDNpc alloc] initWithDefinition:52110 Id:206] autorelease] Position:CGPointMake(21,12)];
-	[field addNpc:[[[FDNpc alloc] initWithDefinition:52110 Id:207] autorelease] Position:CGPointMake(21,14)];
-	[field addNpc:[[[FDNpc alloc] initWithDefinition:52110 Id:208] autorelease] Position:CGPointMake(22,13)];
+	[field addNpc:[[[FDNpc alloc] initWithDefinition:52110 Id:201] autorelease] Position:CGPointMake(19,13)];
+	[field addNpc:[[[FDNpc alloc] initWithDefinition:52110 Id:202] autorelease] Position:CGPointMake(20,12)];
+	[field addNpc:[[[FDNpc alloc] initWithDefinition:52110 Id:203] autorelease] Position:CGPointMake(20,14)];
+	[field addNpc:[[[FDNpc alloc] initWithDefinition:52110 Id:204] autorelease] Position:CGPointMake(21,12)];
+	[field addNpc:[[[FDNpc alloc] initWithDefinition:52110 Id:205] autorelease] Position:CGPointMake(21,14)];
+	[field addNpc:[[[FDNpc alloc] initWithDefinition:52110 Id:206] autorelease] Position:CGPointMake(22,12)];
+	[field addNpc:[[[FDNpc alloc] initWithDefinition:52110 Id:207] autorelease] Position:CGPointMake(22,14)];
+	[field addNpc:[[[FDNpc alloc] initWithDefinition:52110 Id:208] autorelease] Position:CGPointMake(23,13)];
 	
+    [self setAiOfId:25 withType:AIType_StandBy];
+    
 	// Talk
-	for (int i = 1; i <= 12; i++) {
+	for (int i = 1; i <= 17; i++) {
 		[self showTalkMessage:21 conversation:1 sequence:i];
 	}
 }
@@ -130,29 +133,70 @@
 
 -(void) round4
 {
+    [self setAiOfId:25 withType:AIType_Aggressive];
+    
+    [field addEnemy:[[[FDEnemy alloc] initWithDefinition:52104 Id:205] autorelease] Position:CGPointMake(2,2)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52104 Id:206] autorelease] Position:CGPointMake(40,2)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52104 Id:207] autorelease] Position:CGPointMake(2,39)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52104 Id:208] autorelease] Position:CGPointMake(40,39)];
+	
 }
 
 -(void) round6
 {
+    [field addEnemy:[[[FDEnemy alloc] initWithDefinition:52104 Id:209] autorelease] Position:CGPointMake(2,2)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52104 Id:210] autorelease] Position:CGPointMake(40,2)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52104 Id:211] autorelease] Position:CGPointMake(2,39)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52104 Id:212] autorelease] Position:CGPointMake(40,39)];
 }
 
 -(void) round8
 {
+    [field addEnemy:[[[FDEnemy alloc] initWithDefinition:52104 Id:213] autorelease] Position:CGPointMake(2,2)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52104 Id:214] autorelease] Position:CGPointMake(40,2)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52104 Id:215] autorelease] Position:CGPointMake(2,39)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52104 Id:216] autorelease] Position:CGPointMake(40,39)];
 }
 
 -(void) bossDyingMessage
 {
-	for (int i = 1; i <= 5; i++) {
-		[self showTalkMessage:10 conversation:3 sequence:i];
+	for (int i = 1; i <= 4; i++) {
+		[self showTalkMessage:21 conversation:3 sequence:i];
 	}
 }
 
 -(void) enemyClear
 {
-	for (int i = 1; i <= 35; i++) {
-		[self showTalkMessage:10 conversation:4 sequence:i];
+	for (int i = 5; i <= 14; i++) {
+		[self showTalkMessage:21 conversation:3 sequence:i];
 	}
 	
+    if ([self teamHasItem:117]
+        && [self teamHasItem:118]
+        && [self teamHasItem:119]
+        && [self teamHasItem:120]
+        && [self teamHasItem:121]
+        && [self teamHasItem:805]
+        )
+    {
+        [self teamConsumeItem:117];
+        [self teamConsumeItem:118];
+        [self teamConsumeItem:119];
+        [self teamConsumeItem:120];
+        [self teamConsumeItem:121];
+        [self teamConsumeItem:805];
+        
+        for (int i = 15; i <= 26; i++) {
+            [self showTalkMessage:21 conversation:3 sequence:i];
+        }
+        
+        
+    }
+    
+    for (int i = 27; i <= 29; i++) {
+        [self showTalkMessage:21 conversation:3 sequence:i];
+    }
+    
 	[layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];
 }
 

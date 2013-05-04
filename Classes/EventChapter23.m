@@ -13,7 +13,7 @@
 
 -(void) loadEvents
 {
-  [self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(initialBattle)];
+    [self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(initialBattle)];
 	[self loadTurnEvent:TurnType_Friend Turn:5 Action:@selector(reinforcement)];
 	[self loadTurnEvent:TurnType_Friend Turn:8 Action:@selector(reinforcement2)];
 

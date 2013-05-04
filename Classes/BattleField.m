@@ -802,6 +802,18 @@
 	return unsettledCreatureList;
 }
 
+-(int) getCalculatedEnemyCount
+{
+    int calculatedCount = 0;
+    for (FDCreature *c in enemyList) {
+        if ([c getDefinition].identifier == 761) {
+            continue;
+        }
+        calculatedCount ++;
+    }
+    return calculatedCount;
+}
+
 -(CreatureRecord *) generateCreatureRecord:(FDCreature *)creature
 {
 	CreatureRecord *record = [[CreatureRecord alloc] init];

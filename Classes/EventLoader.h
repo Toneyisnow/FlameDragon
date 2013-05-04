@@ -37,6 +37,9 @@
 -(void) setAiOfId:(int)creatureId EscapeTo:(CGPoint)pos;
 -(void) setAiOfId:(int)creatureId withType:(AIType) type;
 
+-(BOOL) teamHasItem:(int)itemId;
+-(void) teamConsumeItem:(int)itemId;
+
 -(void) gameOver;
 
 @end

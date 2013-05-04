@@ -165,7 +165,7 @@ static DataDepot *instance = nil;
 	[file release];
     
 	// Read enemy/NPC data
-	for (int level = 1; level <= 20; level++) {
+	for (int level = 1; level <= 30; level++) {
 		NSString *levelDataFile = [NSString stringWithFormat:@"Chapter-%02d-Creature", level];
 		FDFileStream *levelFile = [[FDFileStream alloc] initWithDataFile:levelDataFile Ext:@"dat"];
 		[levelFile open];
@@ -174,6 +174,7 @@ static DataDepot *instance = nil;
 		for (int m = 0; m < leveledCreatureCount; m++) {
 			CreatureDefinition *def = [CreatureDefinition readFromFile:levelFile BaseInfo:baseInfoDict];
 			[creatureDictionary setObject:def forKey:[NSNumber numberWithInt:[def getId]]];
+            // NSLog(@"Read Creature %d from Dictionary.", [def getId]);
 		}
 		
 		[levelFile close];

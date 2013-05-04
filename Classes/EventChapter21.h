@@ -6,8 +6,12 @@
 //
 //
 
+#import "EventHandler.h"
+#import "ActionLayers.h"
 #import "EventLoader.h"
 
-@interface EventChapter21 : EventLoader
+@interface EventChapter21 : EventLoader {
+	
+}
 
 @end

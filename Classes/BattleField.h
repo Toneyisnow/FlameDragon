@@ -63,6 +63,7 @@
 -(NSMutableArray *) getNpcList;
 -(NSMutableArray *) getDeadCreatureList;
 -(NSMutableArray *) getUnsettledCreatureList;
+-(int) getCalculatedEnemyCount;
 
 -(NSMutableArray *) getTreasureList;
 

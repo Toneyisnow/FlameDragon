@@ -145,6 +145,37 @@
 	}
 }
 
+-(BOOL) teamHasItem:(int)itemId
+{
+    for (FDCreature *c in [field getFriendList]) {
+        if ([c.data hasItem:itemId]) {
+            return YES;
+        }
+    }
+    for (FDCreature *c in [field getDeadCreatureList]) {
+        if ([c.data hasItem:itemId]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+-(void) teamConsumeItem:(int)itemId
+{
+    for (FDCreature *c in [field getFriendList]) {
+        if ([c.data hasItem:itemId]) {
+            [c.data removeItem:itemId];
+            return;
+        }
+    }
+    for (FDCreature *c in [field getDeadCreatureList]) {
+        if ([c.data hasItem:itemId]) {
+            [c.data removeItem:itemId];
+            return;
+        }
+    }
+}
+
 -(void) gameOver
 {
 	[layers gameOver];

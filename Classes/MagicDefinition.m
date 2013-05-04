@@ -143,6 +143,9 @@
 		case 404:
 		case 405:
 			return 4;
+		case 407:
+		case 408:
+			return 3;
 		case 501:
 			return 10;
 		default:

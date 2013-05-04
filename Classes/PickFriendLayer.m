@@ -34,8 +34,8 @@
     
     mandatoryList = [[DataDepot depot] getMandatoryPickedFriend:chapterRecord.chapterId];
     
-    int startX = 10;
-    int startY = 10;
+    int startX = 30;
+    int startY = 250;
     int intervalX = 50;
     int intervalY = 50;
     
@@ -48,7 +48,7 @@
         int y = i / 8;
         
         int posX = startX + x * intervalX;
-        int posY = startY + y * intervalY;
+        int posY = startY - y * intervalY;
         
         CreatureRecord *creature = [[chapterRecord friendRecords] objectAtIndex:i];
         
@@ -57,7 +57,7 @@
                                     target:self selector:@selector(clickFriend:)];
         iconMenuItem.position = CGPointMake(posX, posY);
         iconMenuItem.tag = i;
-        iconMenuItem.anchorPoint = ccp(0, 0);
+        iconMenuItem.anchorPoint = ccp(0.5, 0.5);
         
         if ([Common containInt:creature.creatureId inArray:mandatoryList]) {
             [selectedFlag addObject:[NSNumber numberWithBool:YES]];
@@ -73,13 +73,15 @@
     CCMenuItem *okButton = [CCMenuItemImage
                                 itemFromNormalImage:@"ConfirmButtonYes.png" selectedImage:NULL
                                 target:self selector:@selector(clickOk:)];
-    okButton.position = CGPointMake(300, 200);
+    okButton.position = CGPointMake(350, 20);
+    okButton.scale = 1.5;
     [menu addChild:okButton];
     
     CCMenuItem *cancelButton = [CCMenuItemImage
                             itemFromNormalImage:@"ConfirmButtonNo.png" selectedImage:NULL
                             target:self selector:@selector(clickCancel:)];
-    cancelButton.position = CGPointMake(340, 200);
+    cancelButton.position = CGPointMake(420, 20);
+    cancelButton.scale = 1.5;
     [menu addChild:cancelButton];
     
     [self addChild:menu];
@@ -95,9 +97,9 @@
         [countSprite release];
     }
     
-    NSString *countString = [NSString stringWithFormat:@"%02d / %02d", [self getPickedCount], [Constants maxPickedFriendCount]];
-    countSprite = [[FDSprite alloc] initWithString:countString Size:14];
-    [countSprite setLocation:CGPointMake(178, 10)];
+    NSString *countString = [NSString stringWithFormat:[FDLocalString message:71], [self getPickedCount], [Constants maxPickedFriendCount]];
+    countSprite = [[FDSprite alloc] initWithString:countString Size:18];
+    [countSprite setLocation:CGPointMake(120, 300)];
     [self addChild:[countSprite getSprite]];
 }
 
@@ -166,7 +168,7 @@
     if (yesOrNo == YES) {
         item.scaleX = item.scaleY = 2.0;
     } else {
-        item.scaleX = item.scaleY = 1.5;
+        item.scaleX = item.scaleY = 1.3;
     }
 }
 

@@ -33,7 +33,7 @@
 			teamCount = [[field getNpcList] count];
 			break;
 		case CreatureType_Enemy:
-			teamCount = [[field getEnemyList] count];
+			teamCount = [field getCalculatedEnemyCount];
 			break;
 		default:
 			break;
