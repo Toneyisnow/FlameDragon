@@ -27,7 +27,7 @@
     curSize = size;
     
     NSString *fileName = [NSString stringWithFormat:@"Cursor-%02d.png",size];
-    NSLog(@"Set Cursor file = %@", fileName);
+    CCLOG(@"Set Cursor file = %@", fileName);
     
     FDImage *image = [[FDSpriteStore instance] image:fileName];
 	[sprite setImage:image ChangeSize:YES];

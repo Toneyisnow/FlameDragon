@@ -76,7 +76,7 @@
 
 -(void) onNewGame
 {
-	NSLog(@"onNewGame");
+	CCLOG(@"onNewGame");
 	
 	GameStartInfo *info = [[ChapterRecord alloc] initWithChapter:1];
     //GameStartInfo *info = [[ChapterRecord alloc] initWithChapter:99];
@@ -93,7 +93,7 @@
 
 -(void) onLoadGame
 {
-	NSLog(@"onLoadGame");
+	CCLOG(@"onLoadGame");
 	
 	// CCScene *scene = [self loadTestingGame];
 	LoadingScene *scene = [LoadingScene node];
@@ -105,7 +105,7 @@
 
 -(void) onContinueGame
 {
-	NSLog(@"onContinueGame");
+	CCLOG(@"onContinueGame");
 	
     [FDAudioEngine stopMusic];
     

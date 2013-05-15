@@ -37,7 +37,7 @@
 
 -(void) onExit:(id)returnedObject
 {
-	NSLog(@"onExit");
+	CCLOG(@"onExit");
 
 	[self close];
 	
@@ -92,7 +92,7 @@
 
 -(void) clickedViewOn:(id)sender
 {
-	NSLog(@"Clicked from sender : %@", sender);
+	CCLOG(@"Clicked from sender : %@", sender);
 	
 	CCMenuItem *menu = (CCMenuItem *)sender;
 	

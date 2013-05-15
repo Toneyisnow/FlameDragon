@@ -19,7 +19,7 @@
 	
 	if (t <= 0)
 	{
-		NSLog(@"Cannot init FDFrameDefinition: Time should be greater than 0.");
+		CCLOG(@"Cannot init FDFrameDefinition: Time should be greater than 0.");
 	}
 	
 	tickCount = t / [Constants tickLength];

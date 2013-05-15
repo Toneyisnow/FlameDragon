@@ -20,7 +20,7 @@
 
 -(void) takeAction
 {
-	NSLog(@"AIStandByDelegate take action on creature %d", [creature getIdentifier]);
+	CCLOG(@"AIStandByDelegate take action on creature %d", [creature getIdentifier]);
 	
 	[layers appendToCurrentActivityMethod:@selector(creatureEndTurn:) Param1:creature Param2:nil];	
 }

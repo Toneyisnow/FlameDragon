@@ -117,7 +117,7 @@
 
 -(void) clickFriend :(id)sender
 {
-    NSLog(@"Clicked from sender: %@", sender);
+    CCLOG(@"Clicked from sender: %@", sender);
         
     CCMenuItem *menu = (CCMenuItem *)sender;
     // int creatureIndex = menu.tag;
@@ -144,7 +144,7 @@
 -(void) clickOk :(id)sender
 {
     if ([self getPickedCount] != [Constants maxPickedFriendCount]) {
-        NSLog(@"The Picked Count (%d) is not fit to MaxPickecFriendCount (%d).", [self getPickedCount], [Constants maxPickedFriendCount]);
+        CCLOG(@"The Picked Count (%d) is not fit to MaxPickecFriendCount (%d).", [self getPickedCount], [Constants maxPickedFriendCount]);
         return;
     }
     

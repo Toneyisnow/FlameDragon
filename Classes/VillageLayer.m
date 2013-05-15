@@ -127,7 +127,7 @@
 	CGPoint clickedLoc = [[CCDirector sharedDirector] convertToGL:location];
 	
 	if (confirmExit != nil) {
-		NSLog(@"Clicked with Confirm Message Appeared");
+		CCLOG(@"Clicked with Confirm Message Appeared");
 		[confirmExit clickedOn:clickedLoc];
 		return;
 	}
@@ -161,7 +161,7 @@
 
 -(void) setPosition:(int)pos
 {
-	NSLog(@"Set Position : %d", pos);
+	CCLOG(@"Set Position : %d", pos);
 	
 	currentPosition = pos;
 	[cursor setLocation:[FDWindow villageLocation:currentPosition villageImageId:[self getVillageImageId]]];	
@@ -181,7 +181,7 @@
 		[secretIndicator getSprite].visible = FALSE;
 		secretIndex = 0;
 	}
-	NSLog(@"Secret Index: %d.", secretIndex);
+	CCLOG(@"Secret Index: %d.", secretIndex);
 	
 	if (secretIndex >= [secretSequence totalLength]) {
 		currentPosition = 5;		
@@ -192,7 +192,7 @@
 
 -(void) clickEnter
 {
-	NSLog(@"Click Enter");
+	CCLOG(@"Click Enter");
 	secretIndex = 0;
 	
 	if (currentPosition == 0) {
@@ -204,7 +204,7 @@
 
 -(void) clickLeft
 {
-	NSLog(@"Click Left");
+	CCLOG(@"Click Left");
 	
 	currentPosition = (currentPosition + 4) % 5;
 	[cursor setLocation:[FDWindow villageLocation:currentPosition villageImageId:[self getVillageImageId]]];
@@ -212,7 +212,7 @@
 
 -(void) clickRight
 {
-	NSLog(@"Click Right");
+	CCLOG(@"Click Right");
 	
 	currentPosition = (currentPosition + 1) % 5;
 	[cursor setLocation:[FDWindow villageLocation:currentPosition villageImageId:[self getVillageImageId]]];
@@ -265,7 +265,7 @@
 		return;
 	}
 	
-	NSLog(@"Do Exit");
+	CCLOG(@"Do Exit");
 	
     CCScene *scene = nil;
     if ([self needPickFriend:chapterRecord]) {

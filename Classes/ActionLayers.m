@@ -104,7 +104,7 @@
         self.currentActivity = [activityList objectAtIndex:index];
         
         [self.currentActivity takeTick:synchronizeTick];
-		// NSLog(@"Activity takeTick");
+		// CCLOG(@"Activity takeTick");
 		
 		if ([self.currentActivity hasFinished]) {
 			
@@ -253,13 +253,13 @@
 
 -(void) attackFrom:(FDCreature *)creature Target:(FDCreature *)target
 {
-	NSLog(@"Attack from %d to %d.", [creature getIdentifier], [target getIdentifier]);
+	CCLOG(@"Attack from %d to %d.", [creature getIdentifier], [target getIdentifier]);
 	
 	BOOL fightBack = [field isNextTo:creature And:target] && [target canFightBack];
 	FightingInformation *fightingInfo = [GameFormula dealWithAttack:creature Target:target Field:field fightBack:fightBack];
 	[fightingInfo retain];
 	
-	NSLog(@"fightingInfo attack1: %d %d", [[fightingInfo getAttackInfo1] getBefore], [[fightingInfo getAttackInfo1] getAfter]);
+	CCLOG(@"fightingInfo attack1: %d %d", [[fightingInfo getAttackInfo1] getBefore], [[fightingInfo getAttackInfo1] getAfter]);
 	
 	CGPoint pos = [field getObjectPos:creature];
 	int backgroundImageId = [field getBackgroundPicId:pos];
@@ -276,7 +276,7 @@
 
 -(void) postFightAction:(FDCreature *)creature Targets:(NSMutableArray *)targets
 {
-	NSLog(@"Post Method for attacking.");
+	CCLOG(@"Post Method for attacking.");
 	
 	[targets retain];
 	NSMutableArray *dropItemList = [[NSMutableArray alloc] init];
@@ -308,7 +308,7 @@
 	//[self appendToCurrentActivityMethod:@selector(isNotified) Param1:nil Param2:nil Obj:eventListener];
 	// [eventListener isNotified];
 	
-	NSLog(@"Analyse dead complete.");
+	CCLOG(@"Analyse dead complete.");
 	
 	// Drop Item
 	BOOL cannotCarryMore = FALSE;
@@ -387,12 +387,12 @@
 		}
 	}
 	
-    NSLog(@"Notify.");
+    CCLOG(@"Notify.");
     
     // Check whether the important game event is triggered
     [self appendToMainActivityMethod:@selector(isNotified) Param1:nil Param2:nil Obj:eventListener];
 
-	NSLog(@"End turn.");
+	CCLOG(@"End turn.");
 	
 	//End turn
 	[self appendToMainActivityMethod:@selector(creatureActionDone:) Param1:creature Param2:nil Obj:self];
@@ -403,7 +403,7 @@
 
 -(void) magicFrom:(FDCreature *)creature TargetPos:(CGPoint)position Id:(int)magicId
 {
-	NSLog(@"Magic %d from %d to pos (%f, %f)", magicId, [creature getIdentifier], position.x, position.y);
+	CCLOG(@"Magic %d from %d to pos (%f, %f)", magicId, [creature getIdentifier], position.x, position.y);
 	
 	MagicDefinition *magic = [[DataDepot depot] getMagicDefinition:magicId];
 	[creature updateMP:-magic.mpCost];
@@ -413,7 +413,7 @@
 					|| ([creature getCreatureType] == CreatureType_Enemy && (magic.magicType == MagicType_Recover || magic.magicType == MagicType_Defensive));
 	
 	NSMutableArray *targets = [field getCreaturesAt:position Range:magic.effectRange BadGuys:areBadGuys];
-	NSLog(@"Target Creature count: %d", [targets count]);
+	CCLOG(@"Target Creature count: %d", [targets count]);
 	
 	MagicalInformation *mInfo = [GameFormula dealWithMagic:magicId From:creature Target:targets Field:field];
 	
@@ -431,7 +431,7 @@
 
 -(void) useItem:(FDCreature *)creature ItemIndex:(int)itemIndex Target:(FDCreature *)target
 {
-	NSLog(@"Use Item.");
+	CCLOG(@"Use Item.");
 	
 	int itemId = [creature getItemId:itemIndex];
 	UsableItemDefinition * itemDef = (UsableItemDefinition *)[[DataDepot depot] getItemDefinition:itemId];
@@ -446,7 +446,7 @@
 
 -(void) giveItem:(FDCreature *)creature ItemIndex:(int)itemIndex Target:(FDCreature *)target
 {
-	NSLog(@"Gave Item.");
+	CCLOG(@"Gave Item.");
 	
 	int itemId = [creature getItemId:itemIndex];
 	
@@ -458,7 +458,7 @@
 
 -(void) exchangeItem:(FDCreature *)creature ItemIndex:(int)itemIndex Target:(FDCreature *)target ItemIndex:(int)backItemIndex
 {
-	NSLog(@"Exchange Item.");
+	CCLOG(@"Exchange Item.");
 	
 	int itemId = [creature getItemId:itemIndex];
 	int backItemId = [target getItemId:backItemIndex];
@@ -480,7 +480,7 @@
 		return;
 	}
 	
-	NSLog(@"Creature picked up the treasure.");
+	CCLOG(@"Creature picked up the treasure.");
 	
 	[treasure setOpened];
 	ItemDefinition *item = [treasure getItem];
@@ -505,7 +505,7 @@
 		return;
 	}
 	
-	NSLog(@"Exchange picked up the treasure.");
+	CCLOG(@"Exchange picked up the treasure.");
 	
 	ItemDefinition *item = [treasure getItem];
 
@@ -530,13 +530,13 @@
 
 -(void) creatureEndTurn:(FDCreature *)creature
 {
-	NSLog(@"End turn for creature %d", [creature getIdentifier]);
+	CCLOG(@"End turn for creature %d", [creature getIdentifier]);
 	
 	// Recover some HP
 	if (!creature.hasMoved && !creature.hasActioned) {
 		int recoverHp = [GameFormula recoverHpFromRest:creature];
 		
-		NSLog(@"Recover HP %d for creature.", recoverHp);
+		CCLOG(@"Recover HP %d for creature.", recoverHp);
 		[creature updateHP:recoverHp];
 	}
 	
@@ -559,7 +559,7 @@
 
 -(void) creaturePendAction:(FDCreature *)creature
 {
-	NSLog(@"Pend Action for creature %d", [creature getIdentifier]);
+	CCLOG(@"Pend Action for creature %d", [creature getIdentifier]);
 	
 	[creature pendAction];
 	
@@ -575,7 +575,7 @@
 
 -(void) checkEndTurn
 {
-	NSLog(@"Checking End Turn...");
+	CCLOG(@"Checking End Turn...");
 	
 	if (turnType == TurnType_Friend)
 	{
@@ -608,16 +608,16 @@
 
 -(void) startFriendTurn
 {
-	NSLog(@"Start Friend Turn");
+	CCLOG(@"Start Friend Turn");
 	
 	turnType = TurnType_Friend;
 	
 	// reset all creatures
 	[field startNewTurn];
 	
-	NSLog(@"Stared NewTurn %d", [self isInteractiveBusy]);
+	CCLOG(@"Stared NewTurn %d", [self isInteractiveBusy]);
 	if ([self isInteractiveBusy]) {
-		NSLog(@"isInteractiveBusy");
+		CCLOG(@"isInteractiveBusy");
 	}
 	
 	// Show the turn Number
@@ -636,7 +636,7 @@
 
 -(void) endFriendTurn
 {
-	NSLog(@"End Friend Turn");
+	CCLOG(@"End Friend Turn");
 	
 	// End all friends
 	for (FDCreature *friend in [field getFriendList]) {
@@ -657,7 +657,7 @@
 
 -(void) startNpcTurn
 {
-	NSLog(@"Start Npc Turn");
+	CCLOG(@"Start Npc Turn");
 
 	turnType = TurnType_NPC;
 
@@ -681,7 +681,7 @@
 
 -(void) endNpcTurn
 {
-	NSLog(@"End Npc Turn");
+	CCLOG(@"End Npc Turn");
 	
 	// End all Npcs
 	for (FDCreature *npc in [field getNpcList]) {
@@ -701,7 +701,7 @@
 
 -(void) startEnemyTurn
 {
-	NSLog(@"Start Enemy Turn");
+	CCLOG(@"Start Enemy Turn");
 
 	turnType = TurnType_Enemy;
 	
@@ -724,7 +724,7 @@
 
 -(void) endEnemyTurn
 {
-	NSLog(@"End Enemy Turn");
+	CCLOG(@"End Enemy Turn");
 
 	// End all enemies
 	for (FDCreature *enemy in [field getEnemyList]) {
@@ -764,7 +764,7 @@
     selectedFriendList = ((list != nil) ? [list retain] : nil);
     
     if (selectedFriendList != nil) {
-        NSLog(@"Selected Friend List: %@", [list componentsJoinedByString:@";"]);
+        CCLOG(@"Selected Friend List: %@", [list componentsJoinedByString:@";"]);
     }
     // Stop previous background Music
     [FDAudioEngine stopMusic];
@@ -886,7 +886,7 @@
 
 -(void) saveGame
 {
-	NSLog(@"Saving Game");
+	CCLOG(@"Saving Game");
 	
 	BattleRecord *info = [[BattleRecord alloc] initWithChapter:chapterId];
 	info.turnNo = turnNo;
@@ -984,7 +984,7 @@
 
 -(void) showItemStatus:(FDCreature *)creature
 {
-	NSLog(@"Show creature item status");
+	CCLOG(@"Show creature item status");
 	
 	ItemBox *ibox = [[ItemBox alloc] initWithCreature:creature Type:ItemOperatingType_ShowOnly];
 	[ibox show:messageLayer];
@@ -993,7 +993,7 @@
 
 -(void) showMagicStatus:(FDCreature *)creature
 {
-	NSLog(@"Show creature magic status");
+	CCLOG(@"Show creature magic status");
 	
 	MagicBox *box = [[MagicBox alloc] initWithCreature:creature Type:MagicOperatingType_ShowOnly];
 	[box show:messageLayer];
@@ -1032,7 +1032,7 @@
 
 -(void) transferBy:(FDCreature *)currentFriend forCreature:(FDCreature *)targetCreature to:(CGPoint)position {
     
-    NSLog(@"Transfer %d by %d to pos (%f, %f)", [targetCreature getIdentifier], [currentFriend getIdentifier], position.x, position.y);
+    CCLOG(@"Transfer %d by %d to pos (%f, %f)", [targetCreature getIdentifier], [currentFriend getIdentifier], position.x, position.y);
 	
     MagicDefinition *magic = [[DataDepot depot] getMagicDefinition:501];
     [currentFriend updateMP:-magic.mpCost];
@@ -1052,7 +1052,7 @@
 -(void) receiveNotificationUpdateSideBar:(NSNotification *)notification {
     
     CGPoint cursor = [field getCursorPos];
-    NSLog(@"Notification Received. (%f, %f)", cursor.x, cursor.y);
+    CCLOG(@"Notification Received. (%f, %f)", cursor.x, cursor.y);
     
     @try {
         
@@ -1082,13 +1082,13 @@
 -(void) gameWin
 {
 	[self clearAllActivity];
-	NSLog(@"Game Win.");
+	CCLOG(@"Game Win.");
 	
 	//ChapterRecord *record = [ChapterRecord sampleRecord];
 	ChapterRecord *record = [self composeChapterRecord];
 	[record retain];
     
-	if (chapterId < 22) {
+	if (chapterId < 21) {
 		VillageScene *scene = [VillageScene node];
 		[scene loadWithRecord:record];
 		[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.5 scene:scene]];	
@@ -1102,7 +1102,7 @@
 
 -(void) gameQuit
 {
-	NSLog(@"Game Quit.");
+	CCLOG(@"Game Quit.");
 	
 	[self clearAllActivity];
 	
@@ -1192,7 +1192,7 @@
 	FDActivity *a = [activityList objectAtIndex:[activityList count]-1];
 	while (a !=nil) {
 		
-		//NSLog([a debugInfo]);
+		//CCLOG([a debugInfo]);
 		a = [a getNext];
 	}
 }

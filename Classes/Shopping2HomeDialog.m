@@ -184,7 +184,7 @@
 
 -(void) onSell
 {
-	NSLog(@"onSell");
+	CCLOG(@"onSell");
 	[self updateMessage];
 	
 	lastPageIndex = 0;
@@ -271,7 +271,7 @@
 	// Sell the item
 	[self doSellItem];
 	
-	NSLog(@"Item Sold");
+	CCLOG(@"Item Sold");
 	
 }
 
@@ -290,7 +290,7 @@
 
 -(void) onGiveItem
 {
-	NSLog(@"onGiveItem");
+	CCLOG(@"onGiveItem");
 	[self updateMessage];
 	
 	NSString *message = [FDLocalString message:58];
@@ -410,7 +410,7 @@
 	
 	// Item Given.
 	[self doGiveItem:selectedNum];
-	NSLog(@"Item is given");
+	CCLOG(@"Item is given");
 	
 	[self onGiveItem];
 }
@@ -429,7 +429,7 @@
 
 -(void) onEquip
 {
-	NSLog(@"onEquip");
+	CCLOG(@"onEquip");
 	[self updateMessage];
 	
 	lastPageIndex = 0;
@@ -461,7 +461,7 @@
 	CreatureRecord *record = [[chapterRecord friendRecords] objectAtIndex:selectedNum];	
 	FDFriend *creature = [[FDFriend alloc] initWithDefinition:record.definitionId Id:record.creatureId Data:record.data];
 
-	NSLog(@"Creature equip items: %d %d", creature.data.attackItemIndex, creature.data.defendItemIndex);
+	CCLOG(@"Creature equip items: %d %d", creature.data.attackItemIndex, creature.data.defendItemIndex);
 	
 	ItemBox *ibox = [[ItemBox alloc] initWithCreature:creature Type:ItemOperatingType_Equip];
 	[ibox setCallback:self Method:@selector(onEquip_SelectedItem:)];
@@ -496,7 +496,7 @@
 
 -(void) doEquip
 {
-	NSLog(@"do Equip for user %d item %d", lastSelectedCreatureIndex, lastSelectedItemIndex);
+	CCLOG(@"do Equip for user %d item %d", lastSelectedCreatureIndex, lastSelectedItemIndex);
 	
 	CreatureRecord *record = [[chapterRecord friendRecords] objectAtIndex:lastSelectedCreatureIndex];	
 	NSNumber *itemId = [record.data.itemList objectAtIndex:lastSelectedItemIndex];
@@ -518,7 +518,7 @@
 
 -(void) onInfo
 {
-	NSLog(@"onInfo");
+	CCLOG(@"onInfo");
 	[self setMessage:[FDLocalString message:52]];
 	
 	lastPageIndex = 0;
@@ -532,7 +532,7 @@
 	// First close that ibox
 	//[self closeCurrentBox]; 
 	
-	NSLog(@"onInfo_ShowItems:%d", [num intValue]);
+	CCLOG(@"onInfo_ShowItems:%d", [num intValue]);
 	
 	int selectedNum = [num intValue];
 	

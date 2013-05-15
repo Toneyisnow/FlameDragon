@@ -53,7 +53,7 @@
 
 -(void) onSaveGame
 {
-	NSLog(@"onSaveGame");
+	CCLOG(@"onSaveGame");
 	ShoppingRecordDialog *dialog = [[ShoppingRecordDialog alloc] initFrom:self];
 	[dialog setSelectedCallback:self Method:@selector(confirmSaveGame:)];
 	[self onPush:dialog];
@@ -62,7 +62,7 @@
 
 -(void) onLoadGame
 {
-	NSLog(@"onLoadGame");
+	CCLOG(@"onLoadGame");
 	ShoppingRecordDialog *dialog = [[ShoppingRecordDialog alloc] initFrom:self];
 	[dialog setSelectedCallback:self Method:@selector(confirmLoadGame:)];
 	[self onPush:dialog];
@@ -71,7 +71,7 @@
 
 -(void) onExitGame
 {
-	NSLog(@"onExitGame");
+	CCLOG(@"onExitGame");
 
 	NSString *msg = [FDLocalString message:56];
 	ShoppingConfirmDialog *dialog = [[ShoppingConfirmDialog alloc] initWithMessage:msg From:self];
@@ -83,7 +83,7 @@
 
 -(void) confirmSaveGame:(NSNumber *)indexObj
 {
-	NSLog(@"confirmSaveGame");
+	CCLOG(@"confirmSaveGame");
 	
 	int index = [indexObj intValue];
 	
@@ -102,7 +102,7 @@
 
 -(void) doSaveGame:(NSNumber *)indexObj
 {
-	NSLog(@"Do Save Game.");
+	CCLOG(@"Do Save Game.");
 	
 	int index = [indexObj intValue];
 	
@@ -111,7 +111,7 @@
 	[record setChapterRecord:chapterRecord Index:index];
 	[record saveRecord];
 	
-	NSLog(@"Game is Saved.");
+	CCLOG(@"Game is Saved.");
 	
 	NSString *msg = [FDLocalString message:52];
 	ShoppingMessageDialog *dialog = [[ShoppingMessageDialog alloc] initWithMessage:msg From:self];
@@ -143,7 +143,7 @@
 
 -(void) doLoadGame:(NSNumber *)indexObj
 {
-	NSLog(@"Do Load Game.");
+	CCLOG(@"Do Load Game.");
 	
 	bool confirmed = [indexObj boolValue];
 	

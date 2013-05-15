@@ -24,7 +24,7 @@
 {
 	self = [super initWithCreature:c Layers:l];
 	
-	[self initDistanceResolver];
+	//[self initDistanceResolver:c];
 	attackTarget = nil;
 	
 	return self;
@@ -32,7 +32,7 @@
 
 -(void) takeAction
 {
-	NSLog(@"AIAggressiveDelegate take action on creature %d", [creature getIdentifier]);
+	CCLOG(@"AIAggressiveDelegate take action on creature %d", [creature getIdentifier]);
 	
 	BattleField *field = [[layers getFieldLayer] getField];
 		
@@ -50,7 +50,6 @@
 		[layers appendToCurrentActivityMethod:@selector(searchAttackTarget) Param1:nil Param2:nil Obj:self];
 	}
 }
-
 
 -(void) searchAttackTarget
 {
@@ -107,7 +106,7 @@
 
 -(void) dealloc 
 {
-	[disResolver release];
+	//[disResolver release];
 	[super dealloc];
  }
 @end

@@ -69,7 +69,7 @@
 		[object performSelector:postMethod withObject:obj1 withObject:obj2];
 	}
 	else {
-		NSLog(@"Cannot do post Activity: post Method cannot be found.");
+		CCLOG(@"Cannot do post Activity: post Method cannot be found.");
 	}
 
 }

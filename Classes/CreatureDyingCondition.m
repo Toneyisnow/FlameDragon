@@ -34,7 +34,7 @@
 	FDCreature *creature = [field getCreatureById:creatureId];
 	
 	if (creature != nil && creature.data.hpCurrent <= 0) {
-		NSLog(@"Creature Dying Condition is matched.");
+		CCLOG(@"Creature Dying Condition is matched.");
 		return TRUE;
 	}
 	

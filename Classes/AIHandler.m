@@ -47,7 +47,7 @@
 
 -(void) isNotified
 {
-	NSLog(@"Enemy AI Handler is notified.");
+	CCLOG(@"Enemy AI Handler is notified.");
 	
 	// find a creature and take action on it
 	FDCreature *selectedCreature = nil;
@@ -79,11 +79,11 @@
 	
 	if (selectedCreature == nil) {
 		
-		NSLog(@"Didn't find creature to operate.");
+		CCLOG(@"Didn't find creature to operate.");
 		return;
 	}
 	
-	NSLog(@"Select creature to operate.");
+	CCLOG(@"Select creature to operate.");
 	[self runAiDelegate:selectedCreature];
 }
 

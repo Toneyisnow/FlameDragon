@@ -48,7 +48,7 @@ static DataDepot *instance = nil;
 
 -(void) loadItemDictionary
 {
-	NSLog(@"Loading Item Dictionary.");
+	CCLOG(@"Loading Item Dictionary.");
 	
 	if (itemDictionary != nil) {
 		[itemDictionary release];
@@ -97,12 +97,12 @@ static DataDepot *instance = nil;
 	[file close];
     [file release];
     
-	NSLog(@"Loaded Item Dictionary.");
+	CCLOG(@"Loaded Item Dictionary.");
 }
 
 -(void) loadMagicDictionary
 {
-	NSLog(@"Loading Magic Dictionary.");
+	CCLOG(@"Loading Magic Dictionary.");
 	
 	if (magicDictionary != nil) {
 		[magicDictionary release];
@@ -123,12 +123,12 @@ static DataDepot *instance = nil;
 	[file close];
     [file release];
     
-	NSLog(@"Loaded Magic Dictionary.");	
+	CCLOG(@"Loaded Magic Dictionary.");	
 }
 
 -(void) loadCreatureDictionary
 {
-	NSLog(@"Loading Creature Dictionary.");
+	CCLOG(@"Loading Creature Dictionary.");
 	
 	if (creatureDictionary != nil) {
 		[creatureDictionary release];
@@ -144,14 +144,14 @@ static DataDepot *instance = nil;
 		CreatureDefinition *def = [CreatureDefinition readFromFile:file];
 		[creatureDictionary setObject:def forKey:[NSNumber numberWithInt:[def getId]]];
         
-        // NSLog(@"Creature %d Loaded.", def.identifier);
+        // CCLOG(@"Creature %d Loaded.", def.identifier);
 	}
 	[file close];
-	NSLog(@"Loaded Creature Dictionary.");
+	CCLOG(@"Loaded Creature Dictionary.");
 	
 	
 	// Read base data for enemies
-	NSLog(@"Loading Leveled Creature Dictionary.");
+	CCLOG(@"Loading Leveled Creature Dictionary.");
 	file = [[FDFileStream alloc] initWithDataFile:@"LeveledCreature" Ext:@"dat"];
 	[file open];
 	
@@ -174,7 +174,7 @@ static DataDepot *instance = nil;
 		for (int m = 0; m < leveledCreatureCount; m++) {
 			CreatureDefinition *def = [CreatureDefinition readFromFile:levelFile BaseInfo:baseInfoDict];
 			[creatureDictionary setObject:def forKey:[NSNumber numberWithInt:[def getId]]];
-            // NSLog(@"Read Creature %d from Dictionary.", [def getId]);
+            // CCLOG(@"Read Creature %d from Dictionary.", [def getId]);
 		}
 		
 		[levelFile close];
@@ -182,12 +182,12 @@ static DataDepot *instance = nil;
     }
 	
 	[baseInfoDict release];
-	NSLog(@"Loaded Leveled Creature Dictionary.");
+	CCLOG(@"Loaded Leveled Creature Dictionary.");
 }
 
 -(void) loadOccupationDictionary
 {
-	NSLog(@"Loading Occupation Dictionary.");
+	CCLOG(@"Loading Occupation Dictionary.");
 	
 	if (occupationDictionary != nil) {
 		[occupationDictionary release];
@@ -207,12 +207,12 @@ static DataDepot *instance = nil;
 	[file close];
 	[file release];
     
-	NSLog(@"Loaded Occupation Dictionary.");
+	CCLOG(@"Loaded Occupation Dictionary.");
 }
 
 -(void) loadLevelUpDictionary
 {
-	NSLog(@"Loading LevelUp Dictionary.");
+	CCLOG(@"Loading LevelUp Dictionary.");
 	
 	if (levelUpDictionary != nil) {
 		[levelUpDictionary release];
@@ -233,12 +233,12 @@ static DataDepot *instance = nil;
 	[file close];
 	[file release];
     
-	NSLog(@"Loaded LevelUp Dictionary.");
+	CCLOG(@"Loaded LevelUp Dictionary.");
 }
 
 -(void) loadShopDictionary
 {
-	NSLog(@"Loading Shop Dictionary.");
+	CCLOG(@"Loading Shop Dictionary.");
 
 	if (shopDictionary != nil) {
 		[shopDictionary release];
@@ -263,12 +263,12 @@ static DataDepot *instance = nil;
 	[file close];
 	[file release];
     
-	NSLog(@"Loaded Shop Dictionary.");	
+	CCLOG(@"Loaded Shop Dictionary.");	
 }
 
 -(void) loadSecretSequenceDictionary
 {
-	NSLog(@"Loading SecretSequence Dictionary.");
+	CCLOG(@"Loading SecretSequence Dictionary.");
 	
 	if (secretSequenceDictionary != nil) {
 		[secretSequenceDictionary release];
@@ -290,12 +290,12 @@ static DataDepot *instance = nil;
 	[file close];
 	[file release];
     
-	NSLog(@"Loaded SecretSequence Dictionary.");
+	CCLOG(@"Loaded SecretSequence Dictionary.");
 }
 
 -(void) loadLevelUpMagicDictionary
 {
-	NSLog(@"Loading LevelUp Magic Dictionary.");
+	CCLOG(@"Loading LevelUp Magic Dictionary.");
 	
 	if (levelUpMagicDictionary != nil) {
 		[levelUpMagicDictionary release];
@@ -315,12 +315,12 @@ static DataDepot *instance = nil;
 	[file close];
 	[file release];
     
-	NSLog(@"Loaded LevelUp Magic Dictionary.");
+	CCLOG(@"Loaded LevelUp Magic Dictionary.");
 }
 
 -(void) loadTransferDictionary
 {
-	NSLog(@"Loading Transfer Dictionary.");
+	CCLOG(@"Loading Transfer Dictionary.");
 	
 	if (transferDictionary != nil) {
 		[transferDictionary release];
@@ -335,18 +335,18 @@ static DataDepot *instance = nil;
 	for (int m = 0; m < transferCount; m++) {
 		TransfersDefinition * def = [TransfersDefinition readFromFile:file];
 		
-		// NSLog(@"Loaded Transfer Id = %d", def.creatureDefId);
+		// CCLOG(@"Loaded Transfer Id = %d", def.creatureDefId);
 		[transferDictionary setObject:def forKey:[NSNumber numberWithInt:def.creatureDefId]];
 	}
 	[file close];
 	[file release];
 	
-	NSLog(@"Loaded Transfer Dictionary.");
+	CCLOG(@"Loaded Transfer Dictionary.");
 }
 
 -(void) loadAnimationDictionary
 {
-	NSLog(@"Loading Animation Dictionary.");
+	CCLOG(@"Loading Animation Dictionary.");
 	
 	if (animationDictionary != nil) {
 		[animationDictionary release];
@@ -361,7 +361,7 @@ static DataDepot *instance = nil;
 	int creatureAniId = [file readInt];
 	while (creatureAniId > 0) {
 	
-		// NSLog(@"Load Animation for AniId %d", creatureAniId);
+		// CCLOG(@"Load Animation for AniId %d", creatureAniId);
 		int aniCount = [file readInt];
 		
 		// Idle Animation
@@ -399,12 +399,12 @@ static DataDepot *instance = nil;
     [file close];
 	[file release];
     
-    NSLog(@"Loaded Animation Dictionary.");
+    CCLOG(@"Loaded Animation Dictionary.");
 }
 
 -(void) loadMandatoryPickedFriend {
     
-    NSLog(@"Loading MandatoryPickedFriend.");
+    CCLOG(@"Loading MandatoryPickedFriend.");
 
     if (mandatoryPickedFriend != nil) {
         [mandatoryPickedFriend release];
@@ -433,7 +433,7 @@ static DataDepot *instance = nil;
     [arrayOne release];
     [arrayOneAndMidi release];
     
-    NSLog(@"Loaded MandatoryPickedFriend.");
+    CCLOG(@"Loaded MandatoryPickedFriend.");
 }
 
 -(ItemDefinition *) getItemDefinition:(int)itemId
@@ -441,7 +441,7 @@ static DataDepot *instance = nil;
 	ItemDefinition *def = [itemDictionary objectForKey:[NSNumber numberWithInt:itemId]];
 	
 	if (def == nil) {
-		NSLog(@"DataDepot Error: Cannot find ItemId=%d", itemId);
+		CCLOG(@"DataDepot Error: Cannot find ItemId=%d", itemId);
 		return nil;
 	}
 	return def;
@@ -452,7 +452,7 @@ static DataDepot *instance = nil;
 	MagicDefinition *def = [magicDictionary objectForKey:[NSNumber numberWithInt:magicId]];
 	
 	if (def == nil) {
-		NSLog(@"DataDepot Error: Cannot find MagicId=%d", magicId);
+		CCLOG(@"DataDepot Error: Cannot find MagicId=%d", magicId);
 		return nil;
 	}
 	return def;
@@ -463,7 +463,7 @@ static DataDepot *instance = nil;
 	CreatureDefinition *def = [creatureDictionary objectForKey:[NSNumber numberWithInt:creatureDefId]];
 	
 	if (def == nil) {
-		NSLog(@"DataDepot Error: Cannot find CreatureDefId=%d", creatureDefId);
+		CCLOG(@"DataDepot Error: Cannot find CreatureDefId=%d", creatureDefId);
 		return nil;
 	}
 	return def;
@@ -474,7 +474,7 @@ static DataDepot *instance = nil;
 	LevelUpDefinition *def = [levelUpDictionary objectForKey:[NSNumber numberWithInt:creatureDefId]];
 	
 	if (def == nil) {
-		NSLog(@"DataDepot Error: Cannot find LevelUp Information with CreatureDefId=%d", creatureDefId);
+		CCLOG(@"DataDepot Error: Cannot find LevelUp Information with CreatureDefId=%d", creatureDefId);
 		return nil;
 	}
 	return def;
@@ -487,7 +487,7 @@ static DataDepot *instance = nil;
 	ShopDefinition *def = [shopDictionary objectForKey:[NSNumber numberWithInt:key]];
 	
 	if (def == nil) {
-		NSLog(@"DataDepot Error: Cannot find Shop chapterId=%d shopType=%d", chapterId, shopType);
+		CCLOG(@"DataDepot Error: Cannot find Shop chapterId=%d shopType=%d", chapterId, shopType);
 		return nil;
 	}
 	return def;
@@ -498,7 +498,7 @@ static DataDepot *instance = nil;
 	OccupationDefinition *def = [occupationDictionary objectForKey:[NSNumber numberWithInt:occupationId]];
 	
 	if (def == nil) {
-		NSLog(@"DataDepot Error: Cannot find OccupationId=%d", occupationId);
+		CCLOG(@"DataDepot Error: Cannot find OccupationId=%d", occupationId);
 		return nil;
 	}
 	return def;
@@ -509,7 +509,7 @@ static DataDepot *instance = nil;
 	SecretSequenceDefinition *def = [secretSequenceDictionary objectForKey:[NSNumber numberWithInt:chapterId]];
 	
 	if (def == nil) {
-		NSLog(@"DataDepot Error: Cannot find SecretSequence for ChapterId=%d", chapterId);
+		CCLOG(@"DataDepot Error: Cannot find SecretSequence for ChapterId=%d", chapterId);
 		return nil;
 	}
 	return def;
@@ -549,7 +549,7 @@ static DataDepot *instance = nil;
 	TransfersDefinition *def = [transferDictionary objectForKey:[NSNumber numberWithInt:creatureDefId]];
 	
 	if (def == nil) {
-		NSLog(@"DataDepot Error: Cannot find TransfersDefinition for CreatureDefId=%d", creatureDefId);
+		CCLOG(@"DataDepot Error: Cannot find TransfersDefinition for CreatureDefId=%d", creatureDefId);
 		return nil;
 	}
 	return def;

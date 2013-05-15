@@ -13,16 +13,16 @@
 
 @interface AIDelegate : NSObject {
 
-	DistanceResolver *disResolver;
+	// DistanceResolver *disResolver;
 
 	FDCreature *creature;
 	ActionLayers *layers;
 }
 
 -(id) initWithCreature:(FDCreature *)c Layers:(ActionLayers *)layers;
--(void) initDistanceResolver;
+// -(void) initDistanceResolver:(FDCreature *)c;
 -(CGPoint) generatePos:(CGPoint)targetPos;
-//-(CGPoint) generatePos:(CGPoint)targetPos forAttack:(BOOL)attackOnly;
+// -(CGPoint) generatePos:(CGPoint)targetPos forAttack:(BOOL)attackOnly;
 -(void) setParameter:(id)param;
 
 -(void) takeAction;

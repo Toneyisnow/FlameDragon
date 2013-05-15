@@ -91,7 +91,7 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51702 Id:134] autorelease] Position:CGPointMake(23,20)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51702 Id:135] autorelease] Position:CGPointMake(25,20)];
 	
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51701 Id:199 DropItem:117] autorelease] Position:CGPointMake(24,19)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51701 Id:199 DropItem:120] autorelease] Position:CGPointMake(24,19)];
 	
 	// Talk
 	for (int i = 1; i <= 12; i++) {

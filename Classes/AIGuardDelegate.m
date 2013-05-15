@@ -18,7 +18,7 @@
 
 -(void) takeAction
 {
-	NSLog(@"AIGuardDelegate take action on creature %d", [creature getIdentifier]);
+	CCLOG(@"AIGuardDelegate take action on creature %d", [creature getIdentifier]);
 	
 	BattleField *field = [[layers getFieldLayer] getField];
     

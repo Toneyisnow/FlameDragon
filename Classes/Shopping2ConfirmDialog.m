@@ -54,11 +54,11 @@
 	//NSLog(@"Yes Button location: %f, %f", [self buttonYesLocation].x, [self buttonYesLocation].y);
 	
 	if ([self hasClickedOnYes:adjustedInnerLoc]) {
-		NSLog(@"clicked Yes.");
+		CCLOG(@"clicked Yes.");
 		[self onExit:[NSNumber numberWithInt:1]];
 	}
 	else if ([self hasClickedOnNo:adjustedInnerLoc]) {
-		NSLog(@"clicked No.");
+		CCLOG(@"clicked No.");
 		[self onExit:[NSNumber numberWithInt:0]];
 	}
 }

@@ -18,14 +18,14 @@
 {
 	self = [super initWithCreature:c Layers:l];
 	
-	[self initDistanceResolver];
+	//[self initDistanceResolver:c];
 	
 	return self;
 }
 
 -(void) takeAction
 {
-	NSLog(@"AIMagicalDelegate take action on creature %d", [creature getIdentifier]);
+	CCLOG(@"AIMagicalDelegate take action on creature %d", [creature getIdentifier]);
 	if (!creature.pendingAction) {
 		
         if ([self needAndCanRecover]) {
@@ -73,7 +73,7 @@
     
     @try {
         if ([canMagicList count] == 0) {
-            NSLog(@"Didn't find candidate.");
+            CCLOG(@"Didn't find candidate.");
             [layers appendToCurrentActivityMethod:@selector(creaturePendAction:) Param1:creature Param2:nil];
             return;
         }
@@ -83,7 +83,7 @@
         FDCreature *selectedCandidate = [candidateList objectAtIndex:magicIndex];
         
         if (selectedMagic == nil || selectedCandidate == nil) {
-            NSLog(@"Didn't find candidate.");
+            CCLOG(@"Didn't find candidate.");
             [layers appendToCurrentActivityMethod:@selector(creaturePendAction:) Param1:creature Param2:nil];
             return;
         }
@@ -124,21 +124,21 @@
 {
 	BattleField *field = [[layers getFieldLayer] getField];
 
-	NSLog(@"takePendAction");
+	CCLOG(@"takePendAction");
     
     // Only move when the HP is enough
     if (creature.data.hpCurrent > creature.data.hpMax / 2) {
         FDCreature *target = [self findTarget];
         if (target != nil) {
-            NSLog(@"target != nil");
+            CCLOG(@"target != nil");
             CGPoint targetPos = [self generatePos:[field getObjectPos:target]];
-            NSLog(@"generated targetPos.");
+            CCLOG(@"generated targetPos.");
             [field setCursorTo:targetPos];
             [layers moveCreature:creature To:targetPos showMenu:FALSE];
         }
 	}
     
-	NSLog(@"End Pend Action;");
+	CCLOG(@"End Pend Action;");
 	[layers appendToCurrentActivityMethod:@selector(takeAttackAction) Param1:creature Param2:nil Obj:self];
 }
 
@@ -176,7 +176,7 @@
 
 -(FDCreature *) findAffensiveTarget:(MagicDefinition *)magic
 {
-    NSLog(@"finding Affensive Target for %d, %d %d", magic.identifier, magic.effectScope, magic.effectRange);
+    CCLOG(@"finding Affensive Target for %d, %d %d", magic.identifier, magic.effectScope, magic.effectRange);
 	BattleField *field = [[layers getFieldLayer] getField];
 	
 	NSMutableArray *candidateList = [[NSMutableArray alloc] init];

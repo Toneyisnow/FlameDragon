@@ -37,7 +37,7 @@
 	[super show:layer];
 	
 	[self drawAmout:chapterRecord.money];
-	NSLog(@"Money Bar Shown.");
+	CCLOG(@"Money Bar Shown.");
 	
 	parentLayer = layer;
 }

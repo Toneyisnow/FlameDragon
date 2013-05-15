@@ -22,12 +22,12 @@
 	
 	[self loadDyingEvent:199 Action:@selector(bossDyingMessage)];
 	
-	NSLog(@"Chapter12 events loaded.");
+	CCLOG(@"Chapter12 events loaded.");
 }
 
 -(void) initialBattle
 {
-	NSLog(@"initialBattle event triggered.");
+	CCLOG(@"initialBattle event triggered.");
 	
 	// Creatures
 	[self settleFriend:1 At:CGPointMake(16, 45)];

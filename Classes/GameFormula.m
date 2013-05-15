@@ -90,7 +90,7 @@
 	
 	if (isHit)
 	{
-		NSLog(@"GameFormula: isHit");
+		CCLOG(@"GameFormula: isHit");
 		
 		CGPoint creaturePos = [field getObjectPos:creature];
 		GroundBlock *creatureBlock = [[field getGroundField] blockAtX:creaturePos.x Y:creaturePos.y];
@@ -108,7 +108,7 @@
 			reduceHp *= 2;
 		}
 		
-		NSLog(@"Reduce HP: (%d - %d) %d", attackMin, attackMax, reduceHp);
+		CCLOG(@"Reduce HP: (%d - %d) %d", attackMin, attackMax, reduceHp);
 		
 		// Poisoned
 		AttackItemDefinition *weapon = [creature.data getAttackItem];
@@ -122,7 +122,7 @@
 	}
 	else
 	{
-		NSLog(@"GameFormula: not Hit");
+		CCLOG(@"GameFormula: not Hit");
 		reduceHp = 0;
 	}
 
@@ -166,7 +166,7 @@
 	
 	if (isHit)
 	{
-		NSLog(@"GameFormula: Magic is Hit");
+		CCLOG(@"GameFormula: Magic is Hit");
 		
 		OccupationDefinition *occu = [[DataDepot depot] getOccupationDefinition:[target getDefinition].occupation];
 		double rate = 1.0;
@@ -194,11 +194,11 @@
 				break;
 		}
 		
-		NSLog(@"Reduce HP: (%d - %d) %d", [magic.quantityRange min], [magic.quantityRange max], reduceHp);
+		CCLOG(@"Reduce HP: (%d - %d) %d", [magic.quantityRange min], [magic.quantityRange max], reduceHp);
 	}
 	else
 	{
-		NSLog(@"GameFormula: not Hit");
+		CCLOG(@"GameFormula: not Hit");
 		reduceHp = 0;
 	}
 	
@@ -212,14 +212,14 @@
 +(int) calculateAttackExp:(FDCreature *)creature Target:(FDCreature *)target Info:(AttackInformation *)info
 {
 	if (creature == nil || target == nil || info == nil) {
-		NSLog(@"Error in calculateAttackExp: object is nil.");
+		CCLOG(@"Error in calculateAttackExp: object is nil.");
 		return 0;
 	}
 	
 	// Calculate the experience
 	double calculatedHp = 0;
 	
-	NSLog(@"Info: %d, %d", [info getBefore], [info getAfter]);
+	CCLOG(@"Info: %d, %d", [info getBefore], [info getAfter]);
 	if (target.data.hpCurrent <= 0) {
 		calculatedHp = target.data.hpMax;
 	} else {
@@ -229,7 +229,7 @@
 		
 		calculatedHp = [Common getAbs:(double)([info getBefore] - after)];
 	}
-	NSLog(@"Calculcated HP: %f", calculatedHp);
+	CCLOG(@"Calculcated HP: %f", calculatedHp);
 	
 	double exp = 0;
     int targetLevel = [GameFormula getCalculatedLevel:target];
@@ -242,7 +242,7 @@
 	}
 
 	
-	NSLog(@"Experience got %d.", (int)exp);
+	CCLOG(@"Experience got %d.", (int)exp);
 	return (int)exp;
 }
 
@@ -251,7 +251,7 @@
 	MagicDefinition *magic = (MagicDefinition *)obj;
 	
 	if (creature == nil || target == nil || magic == nil) {
-		NSLog(@"Error in calculateMagicExp: object is nil.");
+		CCLOG(@"Error in calculateMagicExp: object is nil.");
 		return 0;
 	}
 	
@@ -259,7 +259,7 @@
     int creatureLevel = [GameFormula getCalculatedLevel:creature];
     double exp = [magic baseExperience] * targetLevel / creatureLevel;
 	
-	NSLog(@"Experience got %d.", (int)exp);
+	CCLOG(@"Experience got %d.", (int)exp);
 	return (int)exp;
 }
 

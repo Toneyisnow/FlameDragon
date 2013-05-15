@@ -63,7 +63,7 @@
 	def.data.attackItemIndex = -1;
 	def.data.defendItemIndex = -1;
 	
-	// NSLog(@"Creature %d Loaded.", def.identifier);
+	// CCLOG(@"Creature %d Loaded.", def.identifier);
 	
 	return [def autorelease];
 }
@@ -104,7 +104,7 @@
 	
 	if (baseDef == nil) {
         [def release];
-		NSLog(@"Error Reading Creature File: Cannot find the base info with Id=%d", baseId);
+		CCLOG(@"Error Reading Creature File: Cannot find the base info with Id=%d", baseId);
 		return nil;
 	}
 	

@@ -153,7 +153,7 @@
 	
 	if ([creatureAnimation hasFinished] && [targetAnimation hasFinished]) {
 		
-		NSLog(@"Close this scene.");
+		CCLOG(@"Close this scene.");
 		[[CCDirector sharedDirector] popScene];
 
 		// Perform post method

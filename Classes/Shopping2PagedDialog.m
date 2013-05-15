@@ -15,13 +15,13 @@
 
 -(void) initializeWithList:(NSMutableArray *)iList pageIndex:(int)pIndex
 {
-	NSLog(@"Paged Dialog inited. %d, %d", [iList count], pIndex);
+	CCLOG(@"Paged Dialog inited. %d, %d", [iList count], pIndex);
 	
 	pageIndex = pIndex;
 	itemList = [iList retain];
 
 	int max_item_count = [self getMaxItemCount];
-	NSLog(@"Item Count: %d", [itemList count]);
+	CCLOG(@"Item Count: %d", [itemList count]);
 
 	int startIndex = pageIndex * max_item_count;
 

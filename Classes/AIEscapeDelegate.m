@@ -17,7 +17,7 @@
 {
 	self = [super initWithCreature:c Layers:l];
 	
-	[self initDistanceResolver];
+	//[self initDistanceResolver:c];
 
 	self.escapePosition = [[FDPosition alloc] initX:0 Y:0];
 	
@@ -26,8 +26,8 @@
 
 -(void) takeAction
 {
-	NSLog(@"AIEscapeDelegate take action on creature %d", [creature getIdentifier]);
-	NSLog(@"Escape to point :(%f, %f)", [escapePosition posValue].x, [escapePosition posValue].y);
+	CCLOG(@"AIEscapeDelegate take action on creature %d", [creature getIdentifier]);
+	CCLOG(@"Escape to point :(%f, %f)", [escapePosition posValue].x, [escapePosition posValue].y);
 	
 	BattleField *field = [[layers getFieldLayer] getField];
 	CGPoint targetPos = [self generatePos:[escapePosition posValue]];
@@ -42,7 +42,7 @@
 {
 	self.escapePosition = (FDPosition *)param;
 	
-	NSLog(@"Parameter for EscapeDelegate is set.[%d, %d]", self.escapePosition.x, self.escapePosition.y);
+	CCLOG(@"Parameter for EscapeDelegate is set.[%d, %d]", self.escapePosition.x, self.escapePosition.y);
 	
 }
 

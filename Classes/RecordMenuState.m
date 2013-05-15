@@ -213,7 +213,7 @@
 		if (result == 1) {
 			
 			// TODO: Load Game
-			NSLog(@"Load Game.");
+			CCLOG(@"Load Game.");
 			
 			isFinished = TRUE;
 			shouldDispose = TRUE;
@@ -227,7 +227,7 @@
 		if (result == 1) {
 			
 			// TODO: Save Game
-			NSLog(@"Save Game.");
+			CCLOG(@"Save Game.");
 			
 			isFinished = TRUE;
 			shouldDispose = TRUE;
@@ -241,7 +241,7 @@
 		if (result == 1) {
 			
 			// TODO: Quit Game
-			NSLog(@"Quit Game.");
+			CCLOG(@"Quit Game.");
 			
 			isFinished = TRUE;
 			shouldDispose = TRUE;

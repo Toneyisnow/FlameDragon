@@ -23,7 +23,7 @@
 	[coder encodeInt:itemId forKey:@"itemId"];
 	[coder encodeBool:hasOpened forKey:@"hasOpened"];
 	
-	NSLog(@"Encoded TreasureRecord for Location=(%f, %f)", location.x, location.y);
+	CCLOG(@"Encoded TreasureRecord for Location=(%f, %f)", location.x, location.y);
 }
 
 -(id) initWithCoder:(NSCoder *)coder {

@@ -43,19 +43,19 @@
 			continue;
 		}
 		
-		NSLog(@"Found Transfer List for CreatureDef %d", [creatureDef getId]);
+		CCLOG(@"Found Transfer List for CreatureDef %d", [creatureDef getId]);
 		
 		for (int m = 0; m < [transferDef totalCount]; m++) {
 			TransferDefinition *def = [transferDef getTransfer:m];
 			
 			if (def.requireItemId == 0 || [record.data hasItem:def.requireItemId]) {
-				NSLog(@"Adding Transfer Id=%d to list.", def.transferId);
+				CCLOG(@"Adding Transfer Id=%d to list.", def.transferId);
 				[transferList addObject:def];
 			}
 		}
 	}
 	
-	NSLog(@"Available Transfer Count: %d", [transferList count]);
+	CCLOG(@"Available Transfer Count: %d", [transferList count]);
 	
 	for (int i = 0; i + startIndex < [transferList count] && i < max_item_count; i++)
 	{

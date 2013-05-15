@@ -28,7 +28,7 @@
 	
 	pool = [[NSAutoreleasePool alloc] init];
 	fileName = fName;
-	// NSLog(@"Load File %@", fileName);
+	// CCLOG(@"Load File %@", fileName);
 	// fileContent = [NSString stringWithContentsOfFile: fileName];
 
 	return self;
@@ -41,7 +41,7 @@
 	stream = fopen(cFileName, "rt");
 	if(stream == nil)
 	{
-		NSLog(@"Cannot open file %@.", fileName);
+		CCLOG(@"Cannot open file %@.", fileName);
 	}
 	
 }
@@ -56,7 +56,7 @@
 -(int) readInt
 {
 	if (stream == nil) {
-		NSLog(@"Cannot read int from stream. The stream is not opened.");
+		CCLOG(@"Cannot read int from stream. The stream is not opened.");
 		return 0;
 	}
 	
@@ -76,7 +76,7 @@
 -(NSString *) readString
 {
 	if (stream == nil) {
-		NSLog(@"Cannot read int from stream. The stream is not opened.");
+		CCLOG(@"Cannot read int from stream. The stream is not opened.");
 		return nil;
 	}
 	

@@ -32,7 +32,7 @@
 -(void) show:(CCLayer *)l
 {
 	
-	NSLog(@"Show confirm message");
+	CCLOG(@"Show confirm message");
 	
 	layer = (FDLayer *)l;
 	[super show:layer];

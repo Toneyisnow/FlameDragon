@@ -35,7 +35,7 @@
 			return [self dieAnimation:i];
 			break;
 		default:
-			NSLog(@"Cannot generate animation with type=%d identity=%d, this animation must be generated from file.", t, i);
+			CCLOG(@"Cannot generate animation with type=%d identity=%d, this animation must be generated from file.", t, i);
 			return nil;
 			break;
 	}

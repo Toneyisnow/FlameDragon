@@ -39,61 +39,69 @@
 {
 	
 }
-
--(void) initDistanceResolver
+/*
+-(void) initDistanceResolver:(FDCreature *)c
 {
 	BattleField *field = [[layers getFieldLayer] getField];	
 	int fieldHeight = [field mapSize].height;
 	int fieldWidth = [field mapSize].width;
 	
-	FDIntMap *map = [[FDIntMap alloc] initWidth:fieldWidth Height:fieldHeight];
-	for (int i = 1; i <= fieldWidth; i++) {
-		for (int j = 1; j <= fieldHeight; j++) {
-			
-			GroundBlock *block = [[field getGroundField] blockAtX:i Y:j];
-			switch ([block getBlockType])
-			{
-				case GroundBlockTypeGround:
-				case GroundBlockTypeForest:
-					[map setX:i Y:j Value: PathBlockType_Plain];
-					break;
-				case GroundBlockTypeChasm:
-					// If creature can fly
-					if (FALSE) {
-						[map setX:i Y:j Value: PathBlockType_Plain];
-					}
-					else {
-						[map setX:i Y:j Value: PathBlockType_Blocked];
-					}
-					break;
-				case GroundBlockTypeGap:
-					[map setX:i Y:j Value: PathBlockType_Blocked];
-					break;
-				default:
-					break;
-			}
-		}
-	}
+    FDIntMap *map = nil;
+    
+    if ([c canFly])
+    {
+        map = [[field getGroundField] getGroundScopeMapForFly];
+    }
+    else if ([c isKnight])
+    {
+        map = [[field getGroundField] getGroundScopeMapForKnight];
+    }
+    else if ([c isKnight])
+    {
+        map = [[field getGroundField] getGroundScopeMapForMarshMonster];
+    }
+    else
+    {
+        map = [[field getGroundField] getGroundScopeMapForGround];
+    }
+    
 	disResolver = [[DistanceResolver alloc] initWithMap:map Width:fieldWidth Height:fieldHeight];
-	
-	[map release];
-}
-/*
--(CGPoint) generatePos:(CGPoint)targetPos
-{
-	return [self generatePos:targetPos forAttack:TRUE];
 }
 */
+-(FDIntMap *) getGroundMap:(FDCreature *)c
+{
+    BattleField *field = [[layers getFieldLayer] getField];
+	
+    if ([c canFly])
+    {
+        return [[field getGroundField] getGroundScopeMapForFly];
+    }
+    else if ([c isKnight])
+    {
+        return [[field getGroundField] getGroundScopeMapForKnight];
+    }
+    else if ([c isKnight])
+    {
+        return [[field getGroundField] getGroundScopeMapForMarshMonster];
+    }
+    
+    return [[field getGroundField] getGroundScopeMapForGround];
+}
+
 -(CGPoint) generatePos:(CGPoint)targetPos // forAttack:(BOOL)attackOnly
 {
-	
-	NSLog(@"generatePos: target Pos: %f, %f", targetPos.x, targetPos.y);
+	CCLOG(@"generatePos: target Pos: %f, %f", targetPos.x, targetPos.y);
 	
 	BattleField *field = [[layers getFieldLayer] getField];
+	int fieldHeight = [field mapSize].height;
+	int fieldWidth = [field mapSize].width;
 	
-	//[disResolver resolveDistanceFrom:targetPos terminateAt:CGPointMake(1, 1)];
 	CGPoint originPos = [field getObjectPos:creature];
-	[disResolver resolveDistanceFrom:targetPos terminateAt:originPos];
+	
+    FDIntMap *map = [self getGroundMap:creature];
+    DistanceResolver *disResolver = [[DistanceResolver alloc] initWithMap:map Width:fieldWidth Height:fieldHeight];
+
+    [disResolver resolveDistanceFrom:targetPos terminateAt:originPos];
 	
 	// Find the scope
 	float bestDistance = 999;
@@ -102,8 +110,6 @@
 	
 	FDPosition *finalPos = [FDPosition positionX:originPos.x Y:originPos.y];
 	NSMutableArray *scopeArray = [field searchMoveScope:creature];
-	
-	//FDRange *range = [creature attackRange];
 	
 	FDRange *range = nil;
 	if ([field getCreatureByPos:targetPos] != nil) {
@@ -134,28 +140,29 @@
 		}
 	}
 	
-	NSLog(@"Get Target Pos: %f, %f", [finalPos posValue].x, [finalPos posValue].y);
-	
+	CCLOG(@"Get Target Pos: %f, %f", [finalPos posValue].x, [finalPos posValue].y);
+    [disResolver release];
+    
 	return [finalPos posValue];
 }
-
 
 -(FDCreature *) findTarget
 {
 	BattleField *field = [[layers getFieldLayer] getField];	
+	int fieldHeight = [field mapSize].height;
+	int fieldWidth = [field mapSize].width;
 	CGPoint currentPos = [field getObjectPos:creature];
 	
 	FDCreature *terminateCreature = nil;
-	NSMutableArray *terminateCandidates = nil;
+	NSMutableArray *terminateCandidates = [[NSMutableArray alloc] init];
 	if ([creature getCreatureType] == CreatureType_Enemy)
 	{
-		terminateCandidates = [field getFriendList];
-		// terminateCreature = [[field getFriendList] objectAtIndex:0];
+		[terminateCandidates addObjectsFromArray:[field getFriendList]];
+        [terminateCandidates addObjectsFromArray:[field getNpcList]];
 	}
 	else if ([creature getCreatureType] == CreatureType_Npc)
 	{
-		terminateCandidates = [field getEnemyList];
-		// terminateCreature = [[field getEnemyList] objectAtIndex:0];
+		[terminateCandidates addObjectsFromArray:[field getEnemyList]];
 	}
 	
 	int candidateIndex = 0;
@@ -163,22 +170,15 @@
 		candidateIndex ++;
 	}
 	terminateCreature = [terminateCandidates objectAtIndex:candidateIndex];
-	
+	 
+    FDIntMap *map = [self getGroundMap:creature];
+    DistanceResolver *disResolver = [[DistanceResolver alloc] initWithMap:map Width:fieldWidth Height:fieldHeight];
 	[disResolver resolveDistanceFrom:currentPos terminateAt:[field getObjectPos:terminateCreature]];
 	
 	float minDistance = 999;
 	FDCreature *finalTarget = terminateCreature;
 	
-	NSMutableArray *candidateList = [[NSMutableArray alloc] init];
-	if ([creature getCreatureType] == CreatureType_Enemy) {
-		[candidateList addObjectsFromArray:[field getFriendList]];
-		[candidateList addObjectsFromArray:[field getNpcList]];
-	}
-	else if ([creature getCreatureType] == CreatureType_Npc) {
-		[candidateList addObjectsFromArray:[field getEnemyList]];
-	}
-	
-	for (FDCreature *c in candidateList) {
+	for (FDCreature *c in terminateCandidates) {
 		
 		float distance = [disResolver getDistanceTo:[field getObjectPos:c]];
 		if (distance < minDistance && [creature isAbleToAttack:c]) {
@@ -186,9 +186,9 @@
 			finalTarget = c;
 		}
 	}
-	[candidateList release];
-	
-	NSLog(@"Find target: %d", [finalTarget getIdentifier]);
+	[terminateCandidates release];
+    
+	CCLOG(@"Find target: %d", [finalTarget getIdentifier]);
 	
 	return finalTarget;
 }
@@ -232,6 +232,16 @@
 	[itemDef usedBy:creature];
 	
 	[creature.data removeItem:itemIndex];
+}
+
+-(void) dealloc
+{
+    /*if (disResolver != nil) {
+        [disResolver release];
+    }
+    */
+    
+    [super dealloc];
 }
 
 @end

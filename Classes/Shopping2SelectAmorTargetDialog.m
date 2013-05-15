@@ -40,15 +40,15 @@
 		CreatureRecord *record = [itemList objectAtIndex:i];
 		CreatureDefinition *creatureDef = [[DataDepot depot] getCreatureDefinition: record.definitionId];
 		
-		NSLog(@"Creathre %d try equip %d.", i, itemId);
+		CCLOG(@"Creathre %d try equip %d.", i, itemId);
 		if ([creatureDef canEquip:itemId]) {
 			
-			NSLog(@"Passed. occu=%d", creatureDef.occupation);
+			CCLOG(@"Passed. occu=%d", creatureDef.occupation);
 			[suitableFriends addObject:[NSNumber numberWithInt:i]];
 		}
 	}
 	
-	NSLog(@"Suitable Friend Count: %d", [suitableFriends count]);
+	CCLOG(@"Suitable Friend Count: %d", [suitableFriends count]);
 	
 	for (int i = 0; i + startIndex < [suitableFriends count] && i < max_item_count; i++)
 	{
@@ -115,7 +115,7 @@
 	/*
 	int selected = 0;
 	
-	NSLog(@"Select Target Index %d", selected);	
+	CCLOG(@"Select Target Index %d", selected);	
 	id returnedObject = [NSNumber numberWithInt:selected];
 	[self onExit:returnedObject];
 	 */

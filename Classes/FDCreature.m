@@ -64,8 +64,8 @@
 	hpPrevious = data.hpCurrent;
 	mpPrevious = data.mpCurrent;
 	
-	NSLog(@"Loaded Item List, Count=%d", [data.itemList count]);
-	NSLog(@"Loaded Magic List, Count=%d", [data.magicList count]);
+	CCLOG(@"Loaded Item List, Count=%d", [data.itemList count]);
+	CCLOG(@"Loaded Magic List, Count=%d", [data.magicList count]);
 	
 		
 	// TODO: this should be updated
@@ -121,7 +121,7 @@
 
 -(void) updateAnimation
 {
-	// NSLog(@"update Animation");
+	// CCLOG(@"update Animation");
 	
 	if (currentAnimation != nil) {
 		[currentAnimation release];
@@ -152,7 +152,7 @@
 
 -(void) takeTick:(int)synchronizedTick
 {
-	//NSLog(@"Creature take tick.");
+	//CCLOG(@"Creature take tick.");
 	if (actionStatus == ActionStatus_Dead) {
 	
 		// If dead, no need to have animation, the Die Activity will handle that
@@ -362,7 +362,7 @@
 -(void) removeItem:(int)index
 {
 	if (index >= [data.itemList count]) {
-		NSLog(@"Cannot remove item, the index %d is out of range (count=%d)", index, [data.itemList count]);
+		CCLOG(@"Cannot remove item, the index %d is out of range (count=%d)", index, [data.itemList count]);
 	}
 	[data.itemList removeObjectAtIndex:index];
 	
@@ -387,7 +387,7 @@
 
 -(void) equipEquipment:(int) index
 {
-	NSLog(@"Equip equipment %d", index);
+	CCLOG(@"Equip equipment %d", index);
 	
 	if (index >= [data.itemList count]) {
 		return;
@@ -411,7 +411,7 @@
 
 -(void) dropItem:(int) index
 {
-	NSLog(@"Drop Item %d", index);
+	CCLOG(@"Drop Item %d", index);
 	
 	
 	[data removeItem:index];

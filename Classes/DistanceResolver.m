@@ -1,5 +1,6 @@
 #import "DistanceResolver.h"
 #import "Common.h"
+#import "ScopeResolver.h"
 
 @implementation DistanceResolver
 
@@ -52,7 +53,7 @@
 -(float) getDistanceTo:(CGPoint)pos
 {
 	if (distanceDic == nil) {
-		NSLog(@"Cannot get distance, distanceDic is nil. Should call resolveDistanceFrom first.");
+		CCLOG(@"Cannot get distance, distanceDic is nil. Should call resolveDistanceFrom first.");
 		return 0;
 	}
 	
@@ -83,8 +84,6 @@
 -(void) walk:(FDPosition *)pos
 {
 	// NSLog(@"Walk Pos :(%d, %d)", [pos x], [pos y]);
-	
-	
 	NSNumber *valObj = [distanceDic objectForKey:[pos hashKey]];
 	if (valObj == nil) {
 		return;
@@ -122,18 +121,31 @@
 		}
 	}
 	
-	[distanceDic setObject:[NSNumber numberWithFloat:val] forKey:[nowPos hashKey]];
-	[posQueue addObject:nowPos];
-	
+    if ([blockMap getX:pos.x Y:pos.y] == ScopeResistance_Plain) {
+        [distanceDic setObject:[NSNumber numberWithFloat:val] forKey:[nowPos hashKey]];
+        [posQueue addObject:nowPos];
+	}
+    else {
+        [distanceDic setObject:[NSNumber numberWithFloat:999] forKey:[nowPos hashKey]];
+    }
+    
 	[nowPos release];
 }
 
 -(void) dealloc
 {
-	[blockMap release];
-	[distanceDic release];
-	[posQueue release];
-	
+    if (blockMap != nil) {
+        [blockMap release];
+	}
+    
+    if (distanceDic != nil) {
+        [distanceDic release];
+    }
+    
+    if (posQueue != nil) {
+        [posQueue release];
+	}
+    
 	[super dealloc];
 }
 

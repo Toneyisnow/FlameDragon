@@ -21,7 +21,7 @@
 	self = [super initWithBackgroundImageId:backgroundImageId];
 	
 	if (sub == nil || tar == nil || info == nil) {
-		NSLog(@"FightingScene init error: parameter is nil");
+		CCLOG(@"FightingScene init error: parameter is nil");
 		return self;
 	}
 	

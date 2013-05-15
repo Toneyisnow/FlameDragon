@@ -41,7 +41,7 @@
 
 -(void) onRevive
 {
-	NSLog(@"onRevive");
+	CCLOG(@"onRevive");
 	[self updateMessage];
 	
 	BOOL hasDeadFriend = FALSE;
@@ -216,7 +216,7 @@
     TransferDefinition *transfer = [[DataDepot depot] getTransferDefinition:lastSelectedItemIndex];
 	
 	if (transfer == nil) {
-		NSLog(@"Error:Did not find the Transfer with Id = %d to transfer.", transfer.transferId);
+		CCLOG(@"Error:Did not find the Transfer with Id = %d to transfer.", transfer.transferId);
 		return;
 	}
 	
@@ -229,14 +229,14 @@
 	}
 	
 	if (friend == nil) {
-		NSLog(@"Error:Did not find the Friend with DefinitionId = %d to transfer.", transfer.fromCreatureDefId);
+		CCLOG(@"Error:Did not find the Friend with DefinitionId = %d to transfer.", transfer.fromCreatureDefId);
 		return;
 	}
 	
 	if (transfer.requireItemId != 0) {
 		
 		if (![friend.data hasItem:transfer.requireItemId]) {
-			NSLog(@"Error:The Creature %d doesn't have the item that support this transfer %d.", friend.creatureId, transfer.requireItemId);
+			CCLOG(@"Error:The Creature %d doesn't have the item that support this transfer %d.", friend.creatureId, transfer.requireItemId);
 			return;
 		}
 		

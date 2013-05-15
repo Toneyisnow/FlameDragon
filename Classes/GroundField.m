@@ -19,7 +19,7 @@
 	self = [super init];
 	
 	if (fileStream == nil) {
-		NSLog(@"Initialize GroundField failed: File Stream is nil.");
+		CCLOG(@"Initialize GroundField failed: File Stream is nil.");
 		return nil;
 	}
 	
@@ -115,7 +115,7 @@
 	[backgroundDic setObject:rect forKey:[NSNumber numberWithInt:1]];
 	[rect release];
 	
-	NSLog(@"Ground Field Loaded. w=%d h=%d", width, height);
+	CCLOG(@"Ground Field Loaded. w=%d h=%d", width, height);
     
 	return self;
 }

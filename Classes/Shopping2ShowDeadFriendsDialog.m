@@ -39,7 +39,7 @@
 		}
 	}
 	
-	NSLog(@"Dead Friend Count: %d", [deadFriends count]);
+	CCLOG(@"Dead Friend Count: %d", [deadFriends count]);
 	
 	for (int i = 0; i + startIndex < [deadFriends count] && i < max_item_count; i++)
 	{
@@ -87,7 +87,7 @@
 	 
 	 int selected = 0;
 	 
-	 NSLog(@"Select Friend Index %d", selected);	
+	 CCLOG(@"Select Friend Index %d", selected);	
 	 id returnedObject = [NSNumber numberWithInt:selected];
 	 [self onExit:returnedObject];
 	 

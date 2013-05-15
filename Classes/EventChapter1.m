@@ -34,13 +34,13 @@
 	[self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
 	//[self loadGameOverEvent];
 	
-	NSLog(@"Chapter1 events loaded.");
+	CCLOG(@"Chapter1 events loaded.");
 	
 }
 
 -(void) round1_1
 {
-	NSLog(@"Event round1 triggered.");
+	CCLOG(@"Event round1 triggered.");
 	
 	// Creatures
 	FDFriend *friend1 = [[FDFriend alloc] initWithDefinition:1 Id:1];
@@ -188,7 +188,7 @@
 
 -(void) round3
 {
-	NSLog(@"Event round3 triggered.");
+	CCLOG(@"Event round3 triggered.");
 	
 	FDFriend *friend5 = [[FDFriend alloc] initWithDefinition:5 Id:5];
 	[field addFriend:friend5 Position:CGPointMake(12, 12)];
@@ -209,7 +209,7 @@
 
 -(void) round4
 {
-	NSLog(@"Event round4 triggered. Enemy.");
+	CCLOG(@"Event round4 triggered. Enemy.");
 	
 	[layers appendToCurrentActivityMethod:@selector(setCursorObjTo:) Param1:[FDPosition positionX:23 Y:23] Param2:nil Obj:field];
 	
@@ -250,7 +250,7 @@
 
 -(void) round5_Boss
 {
-	NSLog(@"Event round5 triggered. Boss.");
+	CCLOG(@"Event round5 triggered. Boss.");
 	
 	FDEnemy *enemy1 = [[FDEnemy alloc] initWithDefinition:50101 Id:25];
 	[field addEnemy:enemy1 Position:CGPointMake(1, 22)];
@@ -296,7 +296,7 @@
 
 -(void) round6_Npc
 {
-	NSLog(@"Event round6 triggered. Npc.");
+	CCLOG(@"Event round6 triggered. Npc.");
 	
 	FDNpc *npc1 = [[FDNpc alloc] initWithDefinition:50103 Id:31];
 	[field addNpc:npc1 Position:CGPointMake(24, 15)];
@@ -341,7 +341,7 @@
 
 -(void) hanuoDie
 {
-	NSLog(@"Hanuo Die Triggered.");
+	CCLOG(@"Hanuo Die Triggered.");
 	
 	
 	// Hawate convert to Npc

@@ -137,7 +137,7 @@
 	
 	// Resolve the multi touch issue
 	touchCount ++;
-	NSLog(@"++ touchCount: %d", touchCount);
+	CCLOG(@"++ touchCount: %d", touchCount);
 	if (touchCount > 1) {
 		return;
 	}
@@ -161,7 +161,7 @@
 	
 	// Resolve the multi touch issue
 	touchCount --;
-	NSLog(@"-- touchCount: %d", touchCount);
+	CCLOG(@"-- touchCount: %d", touchCount);
 	if (touchCount > 0) {
 		return;
 	}
@@ -173,7 +173,7 @@
 		return;
 	}
 	
-	NSLog(@"Clicked end;");
+	CCLOG(@"Clicked end;");
 	
 	touchHandled = FALSE;
 	
@@ -224,7 +224,7 @@
 
 -(void) clickEnter
 {
-	NSLog(@"Click Enter");
+	CCLOG(@"Click Enter");
 	
 }
 

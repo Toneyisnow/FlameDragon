@@ -70,7 +70,7 @@
 	fieldWidth  = [groundField fieldSize].width;
 	fieldHeight = [groundField fieldSize].height;
 	
-	NSLog(@"Field Width:%d Height:%d", fieldWidth, fieldHeight);
+	CCLOG(@"Field Width:%d Height:%d", fieldWidth, fieldHeight);
 	
 	// Load Treasure
 	int treasureCount = [fileStream readInt];
@@ -84,7 +84,7 @@
 		[self addObject:treasure Position:CGPointMake(posX, posY)];
 		[treasure release];
         
-		NSLog(@"Loaded treasure %d at (%d, %d).", itemId, posX, posY);
+		CCLOG(@"Loaded treasure %d at (%d, %d).", itemId, posX, posY);
 	}
 	
 	[fileStream close];
@@ -172,7 +172,7 @@
 	[groundImage removeSprite:[obj getSprite]];
 	[battleObjectList removeObject:obj];
 	
-	// NSLog(@" Removed object. Friend=%d Enemy=%d Npc=%d All=%d", [friendList count], [enemyList count], [npcList count], [battleObjectList count]);
+	// CCLOG(@" Removed object. Friend=%d Enemy=%d Npc=%d All=%d", [friendList count], [enemyList count], [npcList count], [battleObjectList count]);
 	
 }
 
@@ -309,12 +309,12 @@
 
 -(void) showMenu:(int)menuId At:(CGPoint)pos
 {
-	NSLog(@"Showing menu %d at position (%f, %f)", menuId, pos.x, pos.y);
+	CCLOG(@"Showing menu %d at position (%f, %f)", menuId, pos.x, pos.y);
 	
 	FDCreature *creature = [self getCreatureByPos:pos];
 
 	if ((menuId == 1 || menuId == 2) && creature == nil) {
-		NSLog(@"Error: Showing menu with nil creature");
+		CCLOG(@"Error: Showing menu with nil creature");
 		return;
 	}
 	
@@ -604,7 +604,7 @@
 	}
 	
 	if (dx != 0 || dy != 0) {
-		NSLog(@"Set Cursor, dx=%f, dy=%f", dx, dy);
+		CCLOG(@"Set Cursor, dx=%f, dy=%f", dx, dy);
 	}
 	
 	CGPoint mapLoc = [self getMapLocation];
@@ -806,7 +806,7 @@
 {
     int calculatedCount = 0;
     for (FDCreature *c in enemyList) {
-        if ([c getDefinition].identifier == 761) {
+        if ([c getDefinition].identifier == 52001) {
             continue;
         }
         calculatedCount ++;
@@ -921,12 +921,12 @@
 			{
 				if (c == creature)
 				{
-					// NSLog(@"Got itself in search scope");
+					// CCLOG(@"Got itself in search scope");
 					resistance = ScopeResistance_Plain;
 				}
 				else
 				{
-					// NSLog(@"Got friend in search scope");
+					// CCLOG(@"Got friend in search scope");
 					resistance = ScopeResistance_Skip;
 				}
 			}
@@ -952,7 +952,7 @@
 				continue;
 			}
 			
-			// NSLog(@"Got enemy in search scope for ZOC");
+			// CCLOG(@"Got enemy in search scope for ZOC");
 			[map setX:i Y:j Value:ScopeResistance_Gap];
 			
 			// Set ZOC zone
@@ -1001,7 +1001,7 @@
 	
 	ScopeResistanceType pos1type = [map getX:x Y:y];
 	if (pos1type != ScopeResistance_Gap) {
-		//NSLog(@"Set ZOC: %d, %d", x, y);
+		//CCLOG(@"Set ZOC: %d, %d", x, y);
 		[map setX:x Y:y Value:ScopeResistance_ZOC];
 	}
 }
@@ -1169,7 +1169,7 @@
 	for (FDBattleObject *obj in battleObjectList) {
 		
 		CGPoint pos1 = [self getObjectPos:obj];
-		NSLog(@"Object Identifier: %@ (%f, %f)", [obj class], pos1.x, pos1.y);
+		CCLOG(@"Object Identifier: %@ (%f, %f)", [obj class], pos1.x, pos1.y);
 		
 	}
 	

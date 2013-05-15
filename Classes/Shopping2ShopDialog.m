@@ -38,20 +38,28 @@
     ShopDefinition *shop = [[DataDepot depot] getShopDefinition:chapterRecord.chapterId Type:[self getShopType]];
 	
     NSMutableArray *itemList = [NSMutableArray arrayWithArray:shop.itemList];
-    // Fix Bug: If the user doesn't have Item 805, here will add one for Chapter 16-22
-    if (chapterRecord.chapterId >= 16
+    // Fix Bug: If the user doesn't have Item 805, here will add one for Chapter 11-22
+    if (chapterRecord.chapterId >= 11
         && chapterRecord.chapterId <= 22
         && [self getShopType] == DataDepotShopType_ItemShop
         && [chapterRecord getCreatureThatCarriesItem:805] == nil)
     {
         [itemList addObject:[NSNumber numberWithInt:805]];
     }
+    // Fix Bug: If the user doesn't have Item 120, here will add one for Chapter 17-22
+    if (chapterRecord.chapterId >= 17
+        && chapterRecord.chapterId <= 22
+        && [self getShopType] == DataDepotShopType_ItemShop
+        && [chapterRecord getCreatureThatCarriesItem:120] == nil)
+    {
+        [itemList addObject:[NSNumber numberWithInt:120]];
+    }
     return itemList;
 }
 
 -(void) onBuy
 {
-	NSLog(@"onBuy");
+	CCLOG(@"onBuy");
 	[self updateMessage];
 	
 	/*ShopDefinition *shop = [[DataDepot depot] getShopDefinition:chapterRecord.chapterId Type:[self getShopType]];
@@ -102,7 +110,7 @@
 		return;
 	} 
 	
-	NSLog(@"onBuy_Selected : %d", selectedNum);
+	CCLOG(@"onBuy_Selected : %d", selectedNum);
 	
 	NSMutableArray *itemList = [self getShopItemList:chapterRecord.chapterId Type:[self getShopType]];
 	NSNumber *itemId  = [itemList objectAtIndex:selectedNum];
@@ -204,7 +212,7 @@
 	// Buy that amor
 	[self doBuyItem:(selectedNum == 1)];
 	
-	NSLog(@"Amor Bought");
+	CCLOG(@"Amor Bought");
 }
 
 -(void) onBuyItem_Done:(NSNumber *)num
@@ -260,7 +268,7 @@
 	// Buy that amor
 	ItemDefinition *item = [[DataDepot depot] getItemDefinition:lastSelectedItemIndex];
 	if (item == nil) {
-		NSLog(@"Item Error: doBuyItem Failed. Cannot find item with index %d.", lastSelectedItemIndex);
+		CCLOG(@"Item Error: doBuyItem Failed. Cannot find item with index %d.", lastSelectedItemIndex);
 		return;
 	}
 	

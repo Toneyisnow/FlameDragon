@@ -37,7 +37,7 @@
 
 -(void) onSaveGame
 {
-	NSLog(@"onSaveGame");
+	CCLOG(@"onSaveGame");
 	[self updateMessage];
 	
 	Shopping2RecordDialog *dialog = [[Shopping2RecordDialog alloc] init];
@@ -47,7 +47,7 @@
 
 -(void) onLoadGame
 {
-	NSLog(@"onLoadGame");
+	CCLOG(@"onLoadGame");
 	[self updateMessage];
 	
 	Shopping2RecordDialog *dialog = [[Shopping2RecordDialog alloc] init];
@@ -57,7 +57,7 @@
 
 -(void) onExitGame
 {
-	NSLog(@"onExitGame");
+	CCLOG(@"onExitGame");
 	[self updateMessage];
 	
 	NSString *msg = [FDLocalString confirm:53];
@@ -69,7 +69,7 @@
 
 -(void) confirmSaveGame:(NSNumber *)indexObj
 {
-	NSLog(@"confirmSaveGame");
+	CCLOG(@"confirmSaveGame");
 	
 	int index = [indexObj intValue];
 	if (index < 0) {
@@ -104,14 +104,14 @@
 		return;
 	}
 		
-	NSLog(@"Do Save Game.");
+	CCLOG(@"Do Save Game.");
 	
 	GameRecord *record = [GameRecord readFromSavedFile];
 	
 	[record setChapterRecord:chapterRecord Index:lastSelectedItemIndex];
 	[record saveRecord];
 	
-	NSLog(@"Game is Saved.");
+	CCLOG(@"Game is Saved.");
 	
 	NSString *msg = [FDLocalString message:57];
 	Shopping2MessageDialog *dialog = [[Shopping2MessageDialog alloc] initWithMessage:msg];
@@ -149,7 +149,7 @@
 
 -(void) doLoadGame:(NSNumber *)indexObj
 {
-	NSLog(@"Do Load Game.");
+	CCLOG(@"Do Load Game.");
 	
 	int confirmed = [indexObj intValue];
 	

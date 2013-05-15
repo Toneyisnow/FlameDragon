@@ -34,13 +34,13 @@
 			}
 		}
 	
-	NSLog(@"Resolved Result count: %d", [result count]);
+	CCLOG(@"Resolved Result count: %d", [result count]);
 	return [result autorelease];
 }
 
 -(void) walk:(CGPoint) pos WithMovePoint:(int)nowPoint
 {
-	// NSLog(@"Walk Pos: %f, %f  point:%d", pos.x, pos.y, nowPoint);
+	// CCLOG(@"Walk Pos: %f, %f  point:%d", pos.x, pos.y, nowPoint);
 	
 	if (nowPoint <= 0)
 	{
@@ -64,7 +64,7 @@
 	
 	int leftPoint = nowPoint - abs([resistanceMap getX:pos.x Y:pos.y]);
 	
-	// NSLog(@"Set walked Map: x=%f y=%f value:%d", pos.x, pos.y, leftPoint);
+	// CCLOG(@"Set walked Map: x=%f y=%f value:%d", pos.x, pos.y, leftPoint);
 	
 	//[self setWalkedMapX:pos.x Y:pos.y Value:nowPoint];
 	

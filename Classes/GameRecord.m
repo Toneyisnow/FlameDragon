@@ -46,13 +46,13 @@
 +(id) readFromSavedFile:(NSString *)fileName
 {
 	if (![[NSFileManager defaultManager] fileExistsAtPath:fileName]) {
-		NSLog(@"Cannot find game state file, create a new instance.");
+		CCLOG(@"Cannot find game state file, create a new instance.");
 		return [[[self alloc] init] autorelease];
 	}
 	
-	NSLog(@"Loading game record from file [%@]", fileName);
+	CCLOG(@"Loading game record from file [%@]", fileName);
 	GameRecord *record = [[NSKeyedUnarchiver unarchiveObjectWithFile:fileName] retain];
-	NSLog(@"Loaded game record from file [%@]", fileName);
+	CCLOG(@"Loaded game record from file [%@]", fileName);
 	
 	return [record autorelease];
 }
@@ -85,7 +85,7 @@
 -(void) saveRecord:(NSString *)fileName
 {
 	[fileName retain];
-	NSLog(@"Saving game record to:%@", fileName);
+	CCLOG(@"Saving game record to:%@", fileName);
 	NSFileManager *fm = [NSFileManager defaultManager];
 	if ([fm fileExistsAtPath:fileName]) {
 		NSError *myerror;
@@ -102,7 +102,7 @@
 	[coder encodeObject:battleRecord forKey:@"battleRecord"];
 	[coder encodeObject:chapterRecords forKey:@"chapterRecords"];
 	
-	NSLog(@"Encoded Finished");
+	CCLOG(@"Encoded Finished");
 }
 
 -(id) initWithCoder:(NSCoder *)coder {

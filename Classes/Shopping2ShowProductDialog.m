@@ -23,7 +23,7 @@
 	intervalY = 25;
 	
 	itemCount = [list count];
-	NSLog(@"Product Count: %d", itemCount);
+	CCLOG(@"Product Count: %d", itemCount);
 	
 	for(int i = 0; i < itemCount; i++)
 	{
@@ -89,7 +89,7 @@
 		if (innnerLocation.x > nowX - 20 && innnerLocation.x < nowX + 80
 			&& innnerLocation.y > nowY - 10 && innnerLocation.y < nowY + 10) {
 			
-			NSLog(@"Select Product Item Index: %d", i);	
+			CCLOG(@"Select Product Item Index: %d", i);	
 			id returnedObject = [NSNumber numberWithInt:i];
 			[self onExit:returnedObject];
 			
