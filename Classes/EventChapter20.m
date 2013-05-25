@@ -112,7 +112,7 @@
 	[self setAiOfId:101 withType:AIType_Guard];
 	
 	// Add NPC
-	[field addNpc:[[[FDNpc alloc] initWithDefinition:23 Id:23] autorelease] Position:CGPointMake(22,13)];
+	[field addFriend:[[[FDFriend alloc] initWithDefinition:23 Id:23] autorelease] Position:CGPointMake(22,13)];
 	[field addNpc:[[[FDNpc alloc] initWithDefinition:52009 Id:201] autorelease] Position:CGPointMake(20,13)];
 	[field addNpc:[[[FDNpc alloc] initWithDefinition:52009 Id:202] autorelease] Position:CGPointMake(21,12)];
 	[field addNpc:[[[FDNpc alloc] initWithDefinition:52009 Id:203] autorelease] Position:CGPointMake(21,14)];
@@ -139,9 +139,7 @@
 
 -(void) enemyClear2
 {
-	[field addFriend:[[[FDFriend alloc] initWithDefinition:23 Id:23] autorelease] Position:CGPointZero];
-	
-    if ([layers getTurnNumber] <= 15)
+	if ([layers getTurnNumber] <= 15)
     {
         // Dakesai Appear
         [field addFriend:[[[FDFriend alloc] initWithDefinition:24 Id:24] autorelease] Position:CGPointMake(26,40)];

@@ -148,10 +148,23 @@
 		023D0D721632E88B00FBA4D2 /* BattleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D0D711632E88B00FBA4D2 /* BattleScene.m */; };
 		023D0D751632F3D700FBA4D2 /* FDFreezeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D0D741632F3D700FBA4D2 /* FDFreezeAnimation.m */; };
 		023D34AA152834A3002D3EFD /* EventChapter2.m in Sources */ = {isa = PBXBuildFile; fileRef = 023D34A9152834A3002D3EFD /* EventChapter2.m */; };
+		023E015D17452F2800118EED /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 023E015B17452F2700118EED /* Default-568h@2x.png */; };
+		023E015E17452F2800118EED /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 023E015C17452F2800118EED /* Default@2x.png */; };
 		024577AE1636CE8300C5F47D /* Chapter-04.strings in Resources */ = {isa = PBXBuildFile; fileRef = 024577AD1636CE8300C5F47D /* Chapter-04.strings */; };
 		02542C4E155D4C5B0050FEC8 /* ShoppingItemDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02542C4D155D4C5B0050FEC8 /* ShoppingItemDialog.m */; };
 		02542C51155D4C670050FEC8 /* ShoppingBarDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02542C50155D4C670050FEC8 /* ShoppingBarDialog.m */; };
 		02542C54155D4C700050FEC8 /* ShoppingChurchDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 02542C53155D4C700050FEC8 /* ShoppingChurchDialog.m */; };
+		0257BBBE17507DFF0080B5E9 /* Fight-105-2-06.png in Resources */ = {isa = PBXBuildFile; fileRef = 0257BBBB17507DFF0080B5E9 /* Fight-105-2-06.png */; };
+		0257BBBF17507DFF0080B5E9 /* Fight-105-2-07.png in Resources */ = {isa = PBXBuildFile; fileRef = 0257BBBC17507DFF0080B5E9 /* Fight-105-2-07.png */; };
+		0257BBC017507DFF0080B5E9 /* Fight-105-2-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 0257BBBD17507DFF0080B5E9 /* Fight-105-2-08.png */; };
+		0257BBC917508FBE0080B5E9 /* Chapter-24.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0257BBC117508FBD0080B5E9 /* Chapter-24.strings */; };
+		0257BBCA17508FBE0080B5E9 /* Chapter-25.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0257BBC217508FBD0080B5E9 /* Chapter-25.strings */; };
+		0257BBCB17508FBE0080B5E9 /* Chapter-26.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0257BBC317508FBD0080B5E9 /* Chapter-26.strings */; };
+		0257BBCC17508FBE0080B5E9 /* Chapter-27.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0257BBC417508FBD0080B5E9 /* Chapter-27.strings */; };
+		0257BBCD17508FBE0080B5E9 /* Chapter-28.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0257BBC517508FBD0080B5E9 /* Chapter-28.strings */; };
+		0257BBCE17508FBE0080B5E9 /* Chapter-29.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0257BBC617508FBD0080B5E9 /* Chapter-29.strings */; };
+		0257BBCF17508FBE0080B5E9 /* Chapter-30.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0257BBC717508FBD0080B5E9 /* Chapter-30.strings */; };
+		0257BBD017508FBE0080B5E9 /* Chapter-31.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0257BBC817508FBE0080B5E9 /* Chapter-31.strings */; };
 		025DA50816284FDD00DD7C30 /* Chapter-03.strings in Resources */ = {isa = PBXBuildFile; fileRef = 025DA50716284FDD00DD7C30 /* Chapter-03.strings */; };
 		025DA92F162C4DE000DD7C30 /* Shopping2AmorDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 025DA92E162C4DE000DD7C30 /* Shopping2AmorDialog.m */; };
 		025DA9B016301B2C00DD7C30 /* FightingScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 025DA9AF16301B2C00DD7C30 /* FightingScene.m */; };
@@ -3048,9 +3061,6 @@
 		02DB9B38165346070081EC45 /* Fight-205-2-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB92C2165346020081EC45 /* Fight-205-2-03.png */; };
 		02DB9B39165346070081EC45 /* Fight-205-2-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB92C3165346020081EC45 /* Fight-205-2-04.png */; };
 		02DB9B3A165346070081EC45 /* Fight-205-2-05.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB92C4165346020081EC45 /* Fight-205-2-05.png */; };
-		02DB9B3B165346070081EC45 /* Fight-205-2-06.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB92C5165346020081EC45 /* Fight-205-2-06.png */; };
-		02DB9B3C165346070081EC45 /* Fight-205-2-07.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB92C6165346020081EC45 /* Fight-205-2-07.png */; };
-		02DB9B3D165346070081EC45 /* Fight-205-2-08.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB92C7165346020081EC45 /* Fight-205-2-08.png */; };
 		02DB9B3E165346070081EC45 /* Fight-206-1-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB92C9165346020081EC45 /* Fight-206-1-01.png */; };
 		02DB9B3F165346070081EC45 /* Fight-206-1-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB92CA165346020081EC45 /* Fight-206-1-02.png */; };
 		02DB9B40165346070081EC45 /* Fight-206-1-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02DB92CB165346020081EC45 /* Fight-206-1-03.png */; };
@@ -4717,6 +4727,8 @@
 		023D0D741632F3D700FBA4D2 /* FDFreezeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDFreezeAnimation.m; sourceTree = "<group>"; };
 		023D34A8152834A3002D3EFD /* EventChapter2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventChapter2.h; sourceTree = "<group>"; };
 		023D34A9152834A3002D3EFD /* EventChapter2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventChapter2.m; sourceTree = "<group>"; };
+		023E015B17452F2700118EED /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		023E015C17452F2800118EED /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		024577AD1636CE8300C5F47D /* Chapter-04.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-04.strings"; path = "Strings/Maps/Chapter-04.strings"; sourceTree = "<group>"; };
 		02542C4C155D4C5B0050FEC8 /* ShoppingItemDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingItemDialog.h; sourceTree = "<group>"; };
 		02542C4D155D4C5B0050FEC8 /* ShoppingItemDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingItemDialog.m; sourceTree = "<group>"; };
@@ -4724,6 +4736,17 @@
 		02542C50155D4C670050FEC8 /* ShoppingBarDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingBarDialog.m; sourceTree = "<group>"; };
 		02542C52155D4C700050FEC8 /* ShoppingChurchDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingChurchDialog.h; sourceTree = "<group>"; };
 		02542C53155D4C700050FEC8 /* ShoppingChurchDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingChurchDialog.m; sourceTree = "<group>"; };
+		0257BBBB17507DFF0080B5E9 /* Fight-105-2-06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-105-2-06.png"; sourceTree = "<group>"; };
+		0257BBBC17507DFF0080B5E9 /* Fight-105-2-07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-105-2-07.png"; sourceTree = "<group>"; };
+		0257BBBD17507DFF0080B5E9 /* Fight-105-2-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-105-2-08.png"; sourceTree = "<group>"; };
+		0257BBC117508FBD0080B5E9 /* Chapter-24.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-24.strings"; path = "Strings/Maps/Chapter-24.strings"; sourceTree = "<group>"; };
+		0257BBC217508FBD0080B5E9 /* Chapter-25.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-25.strings"; path = "Strings/Maps/Chapter-25.strings"; sourceTree = "<group>"; };
+		0257BBC317508FBD0080B5E9 /* Chapter-26.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-26.strings"; path = "Strings/Maps/Chapter-26.strings"; sourceTree = "<group>"; };
+		0257BBC417508FBD0080B5E9 /* Chapter-27.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-27.strings"; path = "Strings/Maps/Chapter-27.strings"; sourceTree = "<group>"; };
+		0257BBC517508FBD0080B5E9 /* Chapter-28.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-28.strings"; path = "Strings/Maps/Chapter-28.strings"; sourceTree = "<group>"; };
+		0257BBC617508FBD0080B5E9 /* Chapter-29.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-29.strings"; path = "Strings/Maps/Chapter-29.strings"; sourceTree = "<group>"; };
+		0257BBC717508FBD0080B5E9 /* Chapter-30.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-30.strings"; path = "Strings/Maps/Chapter-30.strings"; sourceTree = "<group>"; };
+		0257BBC817508FBE0080B5E9 /* Chapter-31.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-31.strings"; path = "Strings/Maps/Chapter-31.strings"; sourceTree = "<group>"; };
 		025DA50716284FDD00DD7C30 /* Chapter-03.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-03.strings"; path = "Strings/Maps/Chapter-03.strings"; sourceTree = "<group>"; };
 		025DA92D162C4DE000DD7C30 /* Shopping2AmorDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shopping2AmorDialog.h; sourceTree = "<group>"; };
 		025DA92E162C4DE000DD7C30 /* Shopping2AmorDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shopping2AmorDialog.m; sourceTree = "<group>"; };
@@ -7775,9 +7798,6 @@
 		02DB92C2165346020081EC45 /* Fight-205-2-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-205-2-03.png"; sourceTree = "<group>"; };
 		02DB92C3165346020081EC45 /* Fight-205-2-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-205-2-04.png"; sourceTree = "<group>"; };
 		02DB92C4165346020081EC45 /* Fight-205-2-05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-205-2-05.png"; sourceTree = "<group>"; };
-		02DB92C5165346020081EC45 /* Fight-205-2-06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-205-2-06.png"; sourceTree = "<group>"; };
-		02DB92C6165346020081EC45 /* Fight-205-2-07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-205-2-07.png"; sourceTree = "<group>"; };
-		02DB92C7165346020081EC45 /* Fight-205-2-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-205-2-08.png"; sourceTree = "<group>"; };
 		02DB92C9165346020081EC45 /* Fight-206-1-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-206-1-01.png"; sourceTree = "<group>"; };
 		02DB92CA165346020081EC45 /* Fight-206-1-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-206-1-02.png"; sourceTree = "<group>"; };
 		02DB92CB165346020081EC45 /* Fight-206-1-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-206-1-03.png"; sourceTree = "<group>"; };
@@ -10830,6 +10850,14 @@
 				02DBA1CB16664CFF0081EC45 /* Chapter-21.strings */,
 				02DBA1CC16664CFF0081EC45 /* Chapter-22.strings */,
 				02DBA1CD16664CFF0081EC45 /* Chapter-23.strings */,
+				0257BBC117508FBD0080B5E9 /* Chapter-24.strings */,
+				0257BBC217508FBD0080B5E9 /* Chapter-25.strings */,
+				0257BBC317508FBD0080B5E9 /* Chapter-26.strings */,
+				0257BBC417508FBD0080B5E9 /* Chapter-27.strings */,
+				0257BBC517508FBD0080B5E9 /* Chapter-28.strings */,
+				0257BBC617508FBD0080B5E9 /* Chapter-29.strings */,
+				0257BBC717508FBD0080B5E9 /* Chapter-30.strings */,
+				0257BBC817508FBE0080B5E9 /* Chapter-31.strings */,
 				02DBA1DA16664DC50081EC45 /* Chapter-99.strings */,
 			);
 			name = Maps;
@@ -14163,6 +14191,9 @@
 				02DB9192165346020081EC45 /* Fight-105-2-03.png */,
 				02DB9193165346020081EC45 /* Fight-105-2-04.png */,
 				02DB9194165346020081EC45 /* Fight-105-2-05.png */,
+				0257BBBB17507DFF0080B5E9 /* Fight-105-2-06.png */,
+				0257BBBC17507DFF0080B5E9 /* Fight-105-2-07.png */,
+				0257BBBD17507DFF0080B5E9 /* Fight-105-2-08.png */,
 			);
 			name = 105;
 			path = Fights/105;
@@ -14579,9 +14610,6 @@
 				02DB92C2165346020081EC45 /* Fight-205-2-03.png */,
 				02DB92C3165346020081EC45 /* Fight-205-2-04.png */,
 				02DB92C4165346020081EC45 /* Fight-205-2-05.png */,
-				02DB92C5165346020081EC45 /* Fight-205-2-06.png */,
-				02DB92C6165346020081EC45 /* Fight-205-2-07.png */,
-				02DB92C7165346020081EC45 /* Fight-205-2-08.png */,
 			);
 			name = 205;
 			path = Fights/205;
@@ -16523,6 +16551,8 @@
 				E02BB501126CA50F006E46A2 /* Icon-Small-50.png */,
 				E02BB502126CA50F006E46A2 /* Icon-72.png */,
 				50F414EC1069373D002A0D5E /* Default.png */,
+				023E015B17452F2700118EED /* Default-568h@2x.png */,
+				023E015C17452F2800118EED /* Default@2x.png */,
 				50F414ED1069373D002A0D5E /* fps_images.png */,
 				50F414EF1069373D002A0D5E /* Info.plist */,
 			);
@@ -19623,9 +19653,6 @@
 				02DB9B38165346070081EC45 /* Fight-205-2-03.png in Resources */,
 				02DB9B39165346070081EC45 /* Fight-205-2-04.png in Resources */,
 				02DB9B3A165346070081EC45 /* Fight-205-2-05.png in Resources */,
-				02DB9B3B165346070081EC45 /* Fight-205-2-06.png in Resources */,
-				02DB9B3C165346070081EC45 /* Fight-205-2-07.png in Resources */,
-				02DB9B3D165346070081EC45 /* Fight-205-2-08.png in Resources */,
 				02DB9B3E165346070081EC45 /* Fight-206-1-01.png in Resources */,
 				02DB9B3F165346070081EC45 /* Fight-206-1-02.png in Resources */,
 				02DB9B40165346070081EC45 /* Fight-206-1-03.png in Resources */,
@@ -20969,6 +20996,19 @@
 				02746278173400F800EDBF3B /* Chapter-28-Creature.dat in Resources */,
 				02746279173400F800EDBF3B /* Chapter-29-Creature.dat in Resources */,
 				0274627A173400F800EDBF3B /* Chapter-30-Creature.dat in Resources */,
+				023E015D17452F2800118EED /* Default-568h@2x.png in Resources */,
+				023E015E17452F2800118EED /* Default@2x.png in Resources */,
+				0257BBBE17507DFF0080B5E9 /* Fight-105-2-06.png in Resources */,
+				0257BBBF17507DFF0080B5E9 /* Fight-105-2-07.png in Resources */,
+				0257BBC017507DFF0080B5E9 /* Fight-105-2-08.png in Resources */,
+				0257BBC917508FBE0080B5E9 /* Chapter-24.strings in Resources */,
+				0257BBCA17508FBE0080B5E9 /* Chapter-25.strings in Resources */,
+				0257BBCB17508FBE0080B5E9 /* Chapter-26.strings in Resources */,
+				0257BBCC17508FBE0080B5E9 /* Chapter-27.strings in Resources */,
+				0257BBCD17508FBE0080B5E9 /* Chapter-28.strings in Resources */,
+				0257BBCE17508FBE0080B5E9 /* Chapter-29.strings in Resources */,
+				0257BBCF17508FBE0080B5E9 /* Chapter-30.strings in Resources */,
+				0257BBD017508FBE0080B5E9 /* Chapter-31.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

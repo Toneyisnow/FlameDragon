@@ -103,8 +103,8 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52101 Id:199] autorelease] Position:CGPointMake(21,33)];
 	
 	// Add NPC
-	[field addNpc:[[[FDNpc alloc] initWithDefinition:25 Id:25] autorelease] Position:CGPointMake(20,13)];
-	[field addNpc:[[[FDNpc alloc] initWithDefinition:26 Id:26] autorelease] Position:CGPointMake(22,13)];
+	[field addFriend:[[[FDFriend alloc] initWithDefinition:25 Id:25] autorelease] Position:CGPointMake(20,13)];
+	[field addFriend:[[[FDFriend alloc] initWithDefinition:26 Id:26] autorelease] Position:CGPointMake(22,13)];
 	[field addNpc:[[[FDNpc alloc] initWithDefinition:52110 Id:201] autorelease] Position:CGPointMake(19,13)];
 	[field addNpc:[[[FDNpc alloc] initWithDefinition:52110 Id:202] autorelease] Position:CGPointMake(20,12)];
 	[field addNpc:[[[FDNpc alloc] initWithDefinition:52110 Id:203] autorelease] Position:CGPointMake(20,14)];
@@ -114,8 +114,6 @@
 	[field addNpc:[[[FDNpc alloc] initWithDefinition:52110 Id:207] autorelease] Position:CGPointMake(22,14)];
 	[field addNpc:[[[FDNpc alloc] initWithDefinition:52110 Id:208] autorelease] Position:CGPointMake(23,13)];
 	
-    [self setAiOfId:25 withType:AIType_StandBy];
-    
 	// Talk
 	for (int i = 1; i <= 17; i++) {
 		[self showTalkMessage:21 conversation:1 sequence:i];
@@ -186,11 +184,11 @@
         [self teamConsumeItem:121];
         [self teamConsumeItem:805];
         
+        [self addItemToTeam:814];
+        
         for (int i = 15; i <= 26; i++) {
             [self showTalkMessage:21 conversation:3 sequence:i];
         }
-        
-        
     }
     
     for (int i = 27; i <= 29; i++) {

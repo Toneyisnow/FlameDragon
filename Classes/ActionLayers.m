@@ -63,6 +63,8 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotificationUpdateSideBar:) name:@"LayerUpdateSideBar" object:nil];
     
+    gameTernimated = NO;
+    
 	return self;
 }
 
@@ -101,11 +103,19 @@
     int endIndex = [activityList count];
     while (activityList != nil && index < endIndex) {
         
+        if (index >= [activityList count]) {
+            break;
+        }
+            
         self.currentActivity = [activityList objectAtIndex:index];
         
         [self.currentActivity takeTick:synchronizeTick];
 		// CCLOG(@"Activity takeTick");
 		
+        if (gameTernimated) {
+            break;
+        }
+        
 		if ([self.currentActivity hasFinished]) {
 			
 			//[activity postActivity];
@@ -144,6 +154,7 @@
 -(void) clearAllActivity
 {
 	[activityList removeAllObjects];
+    gameTernimated = YES;
 }
 
 -(void) appendToCurrentActivity:(FDActivity *)activity

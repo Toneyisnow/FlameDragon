@@ -279,13 +279,7 @@
 	
 	if (isAllNpcSaved) {
 		// Add a power drink
-		for (int i = 1; i <= 5; i++) {
-			FDCreature *creature = [field getCreatureById:i];
-			if (![creature isItemListFull]) {
-				[creature addItem:113];
-				break;
-			}
-		}
+        [self addItemToTeam:113];
 	}
 	
 	[self showTalkMessage:2 conversation:3 sequence:(isAllNpcSaved ? 101 : 1)];

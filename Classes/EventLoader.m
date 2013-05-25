@@ -176,6 +176,16 @@
     }
 }
 
+-(void) addItemToTeam:(int)itemId
+{
+    for (FDCreature *creature in [field getFriendList]) {
+        if (![creature isItemListFull]) {
+            [creature addItem:itemId];
+            break;
+        }
+    }
+}
+
 -(void) gameOver
 {
 	[layers gameOver];

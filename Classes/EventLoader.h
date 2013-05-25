@@ -40,6 +40,8 @@
 -(BOOL) teamHasItem:(int)itemId;
 -(void) teamConsumeItem:(int)itemId;
 
+-(void) addItemToTeam:(int)itemId;
+
 -(void) gameOver;
 
 @end

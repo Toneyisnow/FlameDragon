@@ -56,6 +56,8 @@ typedef enum TurnType
     NSMutableArray *selectedFriendList;
     
     FDActivity *currentActivity;
+    
+    BOOL gameTernimated;
 }
 
 @property (retain) FDActivity *currentActivity;
