@@ -14,11 +14,13 @@
 	
 	NSMutableArray *animationList;
 	int aniIndex;
+    BOOL animationSwitched;
 	
 }
 
 -(void) addAnimation:(FDAnimation *)ani;
 
+-(BOOL) isAnimationSwitched;
 
 
 @end

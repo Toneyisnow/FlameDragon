@@ -54,6 +54,11 @@
     [friend5.data addMagic:501];
 	[friend5 release];
 	
+    for (int i=0; i<30; i++) {
+        [friend2 levelUp];
+        friend2.data.mpCurrent = friend2.data.mpMax;
+    }
+    
 	/*
 	FDFriend *friend16 = [[FDFriend alloc] initWithDefinition:1016 Id:6];
 	[field addFriend:friend16 Position:CGPointMake(9, 18)];

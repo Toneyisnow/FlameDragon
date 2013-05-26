@@ -22,6 +22,7 @@
 }
 
 -(id) initWithDefinition:(AnimationDefinition *)def Sprite:(FDSprite *)c;
+-(id) initWithSprite:(FDSprite *)c;
 
 -(void) setTagIndex:(int)t;
 

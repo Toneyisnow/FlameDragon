@@ -13,7 +13,7 @@
 
 -(id) initWithTickCount:(int)t Sprite:(FDSprite *)c
 {
-	self = [super init];
+	self = [super initWithSprite:c];
 	
 	freezeTick = t;
 	currentTick = 0;

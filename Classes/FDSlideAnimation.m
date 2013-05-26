@@ -64,6 +64,8 @@
 
 -(void) reset
 {
+    [super reset];
+    
 	currentTick = 0;
 	currentFrameIndex = 0;
 }

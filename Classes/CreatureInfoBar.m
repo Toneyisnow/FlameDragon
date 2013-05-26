@@ -22,8 +22,6 @@
 	
 	clickedLocation = location;
 	
-	creature = c;
-	
 	//FDSprite *creatureName = [[FDSprite alloc] init];
 	//FDSprite *creatureLevel = [[FDSprite alloc] init];
 	
@@ -41,31 +39,46 @@
 	[mpBar setLocation:CGPointMake(29, 11)];
 	
 	hpValue = mpValue = nil;
-	
-	FDSprite *name = [[FDSprite alloc] initWithString:[creature getName] Size:18];
-	[name setLocation:CGPointMake(5, 43)];
-	[name setAnchorPoint:CGPointMake(0, 0.5)];
-	
-	NSLog(@"Level: %d", creature.data.level);
-	NSString *levelStr = (creature.data.level < 100) ? [NSString stringWithFormat:@"LV %02d", creature.data.level] : @"LV ??";
-	FDSprite *level = [[FDSprite alloc] initWithString:levelStr Size:10];
-	[level setLocation:CGPointMake(159, 45)];
-	
 
 	//[self addSprite:creatureName zOrder:1];
 	//[self addSprite:creatureLevel zOrder:1];
 	[baseSprite addSprite:hpBar zOrder:1];
 	[baseSprite addSprite:mpBar zOrder:1];
-	[baseSprite addSprite:name zOrder:1];
-	[baseSprite addSprite:level zOrder:1];
 	
-	[name release];
-	[level release];
-	
-	[self setHp:creature.data.hpCurrent Mp:creature.data.mpCurrent];
-	
+    nameSprite = levelSprite = nil;
+    
+	[self setCreature:c];
 	
 	return self;
+}
+
+-(void) setCreature:(FDCreature *)c
+{
+    creature = c;
+    
+    if (nameSprite != nil) {
+        [nameSprite removeFromLayer];
+        [nameSprite release];
+    }
+    
+    if (levelSprite != nil) {
+        [levelSprite removeFromLayer];
+        [levelSprite release];
+    }
+    
+	nameSprite = [[FDSprite alloc] initWithString:[creature getName] Size:18];
+	[nameSprite setLocation:CGPointMake(5, 43)];
+	[nameSprite setAnchorPoint:CGPointMake(0, 0.5)];
+	
+	//NSLog(@"Level: %d", creature.data.level);
+	NSString *levelStr = (creature.data.level < 100) ? [NSString stringWithFormat:@"LV %02d", creature.data.level] : @"LV ??";
+	levelSprite = [[FDSprite alloc] initWithString:levelStr Size:10];
+	[levelSprite setLocation:CGPointMake(159, 45)];
+	
+	[baseSprite addSprite:nameSprite zOrder:1];
+	[baseSprite addSprite:levelSprite zOrder:1];
+    
+    [self setHp:creature.data.hpCurrent Mp:creature.data.mpCurrent];
 }
 
 -(void) setHp:(int)hp Mp:(int)mp
@@ -121,7 +134,6 @@
 		[mpValue setLocation:CGPointMake(178, 11)];
 		[baseSprite addSprite:mpValue zOrder:1];
 	}
-	
 }
 
 -(void) show:(CCLayer *)l
@@ -160,6 +172,16 @@
         mpValue = nil;
     }
 	
+    if (nameSprite != nil) {
+        [baseSprite removeSprite:nameSprite];
+        [nameSprite release];
+    }
+    
+    if (levelSprite != nil) {
+        [baseSprite removeSprite:levelSprite];
+        [levelSprite release];
+    }
+    
 	[hpBar release];
 	[mpBar release];
 	[baseSprite release];

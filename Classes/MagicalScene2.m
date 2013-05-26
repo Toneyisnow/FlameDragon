@@ -14,6 +14,7 @@
 #import "FDFightFrameDefinition.h"
 #import "FDFreezeAnimation.h"
 #import "FDTransparencyFrameDefinition.h"
+#import "FDMoveByAnimation.h"
 
 @implementation MagicalScene2
 
@@ -22,7 +23,7 @@
 	self = [super initWithBackgroundImageId:backgroundImageId];
 	
 	if (sub == nil || tars == nil || info == nil) {
-		NSLog(@"MagicalScene init error: parameter is nil");
+		CCLOG(@"MagicalScene init error: parameter is nil");
 		return self;
 	}
 	
@@ -32,12 +33,13 @@
 	magicDefinition = [[DataDepot depot] getMagicDefinition:mId];
 	[magicDefinition retain];
 	
-	subjectAttackAni = [[DataDepot depot] getAnimationDefinition:AnimationType_FightAttack Id:[[subject getDefinition] getAnimationId]];
+	subjectAttackAni = [[DataDepot depot] getAnimationDefinition:AnimationType_FightSkill Id:[[subject getDefinition] getAnimationId]];
 	subjectIdleAni = [[DataDepot depot] getAnimationDefinition:AnimationType_FightIdle Id:[[subject getDefinition] getAnimationId]];
 	[subjectAttackAni retain];
 	[subjectIdleAni retain];
 	
-    magicAni = [[DataDepot depot] getAnimationDefinition:AnimationType_Magic Id:0];
+    
+    magicAni = [[DataDepot depot] getMagicAnimationDefinition:101 isBadGuy:([subject getCreatureType]==CreatureType_Enemy)];
 	[magicAni retain];
     
     return self;
@@ -47,6 +49,10 @@
 {
 	tickCount = 0;
 	updatedMp = FALSE;
+    showingMagic = NO;
+    switchingTarget = NO;
+    currentTargetIndex = 0;
+    
 	[self schedule: @selector(step:)];
 	
     // Magic
@@ -54,13 +60,6 @@
     [magicSprite addToLayer:layer];
     [magicSprite retain];
     
-    magicAppearAnimation = [[AnimationDefinition alloc] init];
-    [magicAppearAnimation addFrame:[FDTransparencyFrameDefinition frameWithOpaticy:255 Time:1]];
-    
-    magicDisappearAnimation = [[AnimationDefinition alloc] init];
-    [magicDisappearAnimation addFrame:[FDTransparencyFrameDefinition frameWithOpaticy:0 Time:1]];
-    
-	
 	// Subject
 	subjectSprite = [[FDSpriteStore instance] sprite:[NSString stringWithFormat:@"Fight-%03d-1-01.png", [[subject getDefinition] getAnimationId]]];
 	[subjectSprite addToLayer:layer];
@@ -76,6 +75,7 @@
 	
 	// Target
 	FDCreature *target = [targetList objectAtIndex:0];
+	FDCreature *lasttarget = [targetList lastObject];
 	AttackInformation *aInfo = [[magicalInfo getInformations] objectAtIndex:0];
 	
 	targetSprite = [[FDSpriteStore instance] sprite:[NSString stringWithFormat:@"Fight-%03d-1-01.png", [[target getDefinition] getAnimationId]]];
@@ -93,42 +93,65 @@
 	// Target Animation
 	targetIdleAni = [[DataDepot depot] getAnimationDefinition:AnimationType_FightIdle Id:[[target getDefinition] getAnimationId]];
 	[targetIdleAni retain];	
-	 
+    lasttargetIdleAni = [[DataDepot depot] getAnimationDefinition:AnimationType_FightIdle Id:[[lasttarget getDefinition] getAnimationId]];
+	[lasttargetIdleAni retain];
+    
 	 // Animation
 	 subjectAnimation = [[FDCombinedAnimation alloc] init];
 	 targetAnimation = [[FDCombinedAnimation alloc] init];
-	 magicAnimation = [[FDCombinedAnimation alloc] init];
+     lasttargetAnimation = [[FDCombinedAnimation alloc] init];
+    magicAnimation = [[FDSlideAnimation alloc] initWithDefinition:magicAni Sprite:magicSprite];
+    [magicAnimation onRenderFrame:@selector(onMagicAttack:Tag:) Id:self];
+	
+    targetSwitchAnimation = [[FDCombinedAnimation alloc] init];
     
-	 [self appendIdleAnimation];
+    FDMoveByAnimation *a1 = [[FDMoveByAnimation alloc] initWithDelta:CGPointMake(-240, 0) WithTick:20 Sprite:targetSprite];
+    FDMoveByAnimation *a2 = [[FDMoveByAnimation alloc] initWithDelta:CGPointMake(240, 0) WithTick:20 Sprite:targetSprite];
+    
+    if ([subject getCreatureType] == CreatureType_Enemy) {
+        [targetSwitchAnimation addAnimation:a2];
+        [targetSwitchAnimation addAnimation:a1];
+    } else {
+        [targetSwitchAnimation addAnimation:a1];
+        [targetSwitchAnimation addAnimation:a2];
+    }
+    [a1 release];
+    [a2 release];
+    
+    [self appendIdleAnimation];
 
-	 [self appendSubjectAttackAnimation];
+    [self appendSubjectAttackAnimation];
+    
+    [self appendLastIdleAnimation];
 	 
 }
 -(void) appendIdleAnimation
 {
-    [self appendMagicDisappear];
-    
-	FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:subjectIdleAni Sprite:subjectSprite];
+    FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:subjectIdleAni Sprite:subjectSprite];
 	[subjectAnimation addAnimation:ani];
 	[ani release];
 		
 	ani = [[FDSlideAnimation alloc] initWithDefinition:targetIdleAni Sprite:targetSprite];
 	[targetAnimation addAnimation:ani];
 	[ani release];
-    
-    FDFreezeAnimation *aniMagic = [[FDFreezeAnimation alloc] initWithTickCount:([subjectAnimation getDuration] - [magicAnimation getDuration]) Sprite:magicSprite];
-    [magicAnimation addAnimation:aniMagic];
-    [aniMagic release];
 }
-	 
+
+-(void) appendLastIdleAnimation
+{
+    FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:subjectIdleAni Sprite:subjectSprite];
+	[subjectAnimation addAnimation:ani];
+	[ani release];
+    
+	ani = [[FDSlideAnimation alloc] initWithDefinition:lasttargetIdleAni Sprite:targetSprite];
+	[lasttargetAnimation addAnimation:ani];
+	[ani release];
+}
+
 -(void) appendSubjectAttackAnimation
 {
-    [self appendMagicDisappear];
-    
     FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:subjectAttackAni Sprite:subjectSprite];
-		//[ani onRenderFrame:@selector(onSubjectAttack:Tag:) Id:self];
-		//[ani setTagIndex:0];
-    [subjectAnimation addAnimation:ani];
+    [ani onRenderFrame:@selector(onSubjectAttack:Tag:) Id:self];
+	[subjectAnimation addAnimation:ani];
     [ani release];
 		
     while ([targetAnimation getDuration] < [subjectAnimation getDuration]) {
@@ -136,50 +159,6 @@
         [targetAnimation addAnimation:ani];
         [ani release];
     }
-    
-    FDFreezeAnimation *aniMagic = [[FDFreezeAnimation alloc] initWithTickCount:([subjectAnimation getDuration] - [magicAnimation getDuration]) Sprite:magicSprite];
-    [magicAnimation addAnimation:aniMagic];
-    [aniMagic release];
-}
-
--(void) appendMagicAppear
-{
-    FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:magicAppearAnimation Sprite:magicSprite];
-    [magicAnimation addAnimation:ani];
-    [ani release];
-}
-
--(void) appendMagicDisappear
-{
-    FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:magicDisappearAnimation Sprite:magicSprite];
-    [magicAnimation addAnimation:ani];
-    [ani release];
-}
-
--(void) appendMagicAnimation:(int)tag
-{
-    if (tag > 0) {
-        [self appendMagicDisappear];
-        
-    }
-    
-    [self appendMagicAppear];
-    
-    FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:magicAni Sprite:magicSprite];
-    [ani onRenderFrame:@selector(onSubjectAttack:Tag:) Id:self];
-    [ani setTagIndex:tag];
-    [magicAnimation addAnimation:ani];
-    [ani release];
-    
-    FDFreezeAnimation *aniTarget = [[FDFreezeAnimation alloc] initWithTickCount:([magicAnimation getDuration] - [targetAnimation getDuration]) Sprite:targetSprite];
-    [targetAnimation addAnimation:aniTarget];
-    [aniTarget release];
-    
-    FDFreezeAnimation *aniSubject = [[FDFreezeAnimation alloc] initWithTickCount:([magicAnimation getDuration] - [subjectAnimation getDuration]) Sprite:subjectSprite];
-    [subjectAnimation addAnimation:aniSubject];
-    [aniSubject release];
-    
-    
 }
 
 -(void) step: (ccTime) delta
@@ -187,10 +166,25 @@
 	// NSLog(@"Scene tick");
 	tickCount ++;
 	
+    if (showingMagic) {
+        [self tickMagic];
+        return;
+    }
+    
+    if (switchingTarget) {
+        [self tickSwitching];
+        return;
+    }
+    
 	[subjectAnimation takeTick:tickCount];
-	[targetAnimation takeTick:tickCount];
+    
+    if (currentTargetIndex < [targetList count] - 1) {
+        [targetAnimation takeTick:tickCount];
+    } else {
+        [lasttargetAnimation takeTick:tickCount];
+    }
 	
-	if ([subjectAnimation hasFinished] && [targetAnimation hasFinished]) {
+	if ([subjectAnimation hasFinished] && [lasttargetAnimation hasFinished]) {
 		
 		[[CCDirector sharedDirector] popScene];
 		
@@ -199,20 +193,92 @@
 	}
 }
 
+-(void) tickMagic {
+    
+    [magicAnimation takeTick:tickCount];
+    if ([magicAnimation hasFinished]) {
+        
+        showingMagic = NO;
+        
+        if (currentTargetIndex < [targetList count] - 1) {
+            
+            [targetSwitchAnimation reset];
+            switchingTarget = YES;
+        } else {
+            switchingTarget = NO;
+        }
+    }
+}
+
+-(void) tickSwitching {
+    
+    [targetSwitchAnimation takeTick:tickCount];
+    
+    if ([targetSwitchAnimation hasFinished]) {
+        
+        CCLOG(@"Switch Finished.");
+        
+        switchingTarget = NO;
+        
+        [magicAnimation reset];
+        showingMagic = YES;
+        return;
+    }
+    
+    if ([targetSwitchAnimation isAnimationSwitched]) {
+        
+        CCLOG(@"AnimationSwitched");
+        // Update the Target Index
+        currentTargetIndex++;
+        
+        if (currentTargetIndex < [targetList count]) {
+            
+            // Update Target Sprite
+            FDCreature *target = [targetList objectAtIndex:currentTargetIndex];
+            FDImage *image = [[FDSpriteStore instance] image:[NSString stringWithFormat:@"Fight-%03d-1-01.png", [[target getDefinition] getAnimationId]]];
+            [targetSprite setImage:image];
+            
+            // Update Target Bar
+            AttackInformation *aInfo = [[magicalInfo getInformations] objectAtIndex:currentTargetIndex];
+            
+            [targetBar setCreature:target];
+            [targetBar setHp:[aInfo getBefore] Mp:target.data.mpCurrent];
+        }
+    }
+}
+
 -(void) onSubjectAttack:(FDFrameDefinition *)frame Tag:(NSNumber *)tagIndex
 {
+    // This should only be called once during the animation, that means the Subject Animation
+    // should have only one frame with 100 defined
+    if (updatedMp) {
+        return;
+    }
+    
 	FDFightFrameDefinition *fightFrame = (FDFightFrameDefinition *)frame;
-	AttackInformation *attackInfo = [[magicalInfo getInformations] objectAtIndex:tagIndex];
-	
 	if ([fightFrame isHitting]) {
 		
 		[self updateMp];
-		int nowValue = [attackInfo getBefore] - ([attackInfo getBefore] - [attackInfo getAfter]) * [fightFrame getHittingRate];
-			if (nowValue < 0)
-				nowValue = 0;
-			
-			[targetBar setHp:nowValue Mp:-1];
-		}
+        
+        // Init magic
+        [magicAnimation reset];
+        showingMagic = YES;
+    }
+}
+
+-(void) onMagicAttack:(FDFrameDefinition *)frame Tag:(NSNumber *)tagIndex
+{
+    FDFightFrameDefinition *fightFrame = (FDFightFrameDefinition *)frame;
+	AttackInformation *attackInfo = [[magicalInfo getInformations] objectAtIndex:currentTargetIndex];
+	
+	if ([fightFrame isHitting]) {
+    
+        int nowValue = [attackInfo getBefore] - ([attackInfo getBefore] - [attackInfo getAfter]) * [fightFrame getHittingRate];
+        if (nowValue < 0)
+            nowValue = 0;
+        
+        [targetBar setHp:nowValue Mp:-1];
+    }
 }
 
 -(void) updateMp
@@ -233,20 +299,18 @@
 	[subjectAttackAni release];
 	[subjectIdleAni release];
 	[targetIdleAni release];
-	
+	[lasttargetIdleAni release];
+    
     [magicAni release];
     [magicSprite release];
     
     [subjectAnimation release];
     [targetAnimation release];
+    [lasttargetAnimation release];
     [magicAnimation release];
-    
-    [magicAppearAnimation release];
-    [magicDisappearAnimation release];
-    
-    
+    [targetSwitchAnimation release];
+        
 	[super dealloc];
 }
-	 
 	 
 @end

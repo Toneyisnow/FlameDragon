@@ -95,8 +95,8 @@
 {
 	CCLOG(@"onLoadGame");
 	
-	// CCScene *scene = [self loadTestingGame];
-	LoadingScene *scene = [LoadingScene node];
+	//CCScene *scene = [self loadTestingGame];
+    LoadingScene *scene = [LoadingScene node];
     
 	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];
     
@@ -130,7 +130,7 @@
 
 -(CCScene *) loadTestingGame
 {
-	ChapterRecord *record = [ChapterRecord generateRecord:15 money:60000];
+	ChapterRecord *record = [ChapterRecord generateRecord:16 money:60000];
 	
 	[[record friendRecords] addObject:[self loadTestingRecord:1 level:28]];
 	[[record friendRecords] addObject:[self loadTestingRecord:2 level:28]];

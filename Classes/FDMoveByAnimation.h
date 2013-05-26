@@ -8,9 +8,16 @@
 
 #import "cocos2d.h"
 #import "FDAnimation.h"
+#import "FDSprite.h"
 
 @interface FDMoveByAnimation : FDAnimation {
     
+    int currentTick;
+    int totalTick;
+    CGPoint originalLocation;
+    CGPoint deltaLocation;
+    
+    BOOL animationStarted;
 }
 
 -(id) initWithDelta:(CGPoint)pos WithTick:(int)tick Sprite:(FDSprite *)c;

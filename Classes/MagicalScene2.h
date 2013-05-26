@@ -10,6 +10,7 @@
 #import "BattleScene.h"
 #import "MagicalInformation.h"
 #import "MagicDefinition.h"
+#import "FDSlideAnimation.h"
 
 @interface MagicalScene2 : BattleScene {
 
@@ -29,20 +30,29 @@
 	FDCombinedAnimation *subjectAnimation;
 	
 	AnimationDefinition *targetIdleAni;
+	AnimationDefinition *lasttargetIdleAni;
 	FDCombinedAnimation *targetAnimation;
+	FDCombinedAnimation *lasttargetAnimation;
+	FDCombinedAnimation *targetSwitchAnimation;
 	
+    
     AnimationDefinition *magicAni;
-    FDCombinedAnimation *magicAnimation;
+    FDSlideAnimation *magicAnimation;
     
     AnimationDefinition *magicAppearAnimation;
     AnimationDefinition *magicDisappearAnimation;
     
 	BOOL updatedMp;
+    
+    BOOL showingMagic;
+    BOOL switchingTarget;
+    
+    int currentTargetIndex;
 }
 
 -(id) initWithMagic:(int)mId Subject:(FDCreature *)sub Targets:(NSArray *)tars Information:(MagicalInformation *)info Background:(int)backgroundImageId;
 
--(void) appendIdleAnimation;
+-(void) appendIdleAnimation:(AnimationDefinition *)def;
 -(void) appendSubjectAttackAnimation;
 
 -(void) updateMp;

@@ -393,8 +393,11 @@ static DataDepot *instance = nil;
     file = [[FDFileStream alloc] initWithDataFile:@"MagicAnimation"];
 	[file open];
     
-	AnimationDefinition *magicAni = [AnimationDefinition readMagicAnimationFromFile:file MagicId:0];
-    [animationDictionary setObject:magicAni forKey:[NSString stringWithFormat:@"%d-%d", 0, AnimationType_Magic]];
+	AnimationDefinition *magicAni = [AnimationDefinition readMagicAnimationFromFile:file MagicAniId:1011];
+    [animationDictionary setObject:magicAni forKey:[NSString stringWithFormat:@"%d-%d", 1011, AnimationType_Magic]];
+    
+    magicAni = [AnimationDefinition readMagicAnimationFromFile:file MagicAniId:1012];
+    [animationDictionary setObject:magicAni forKey:[NSString stringWithFormat:@"%d-%d", 1012, AnimationType_Magic]];
     
     [file close];
 	[file release];
@@ -542,6 +545,12 @@ static DataDepot *instance = nil;
 	}
 	
 	return [animationDictionary objectForKey:key];
+}
+
+-(AnimationDefinition *) getMagicAnimationDefinition:(int)magicId isBadGuy:(BOOL)isBad
+{
+    int magicAniId = [AnimationDefinition getMagicAnimationId:magicId isBadGuy:isBad];
+    return [self getAnimationDefinition:AnimationType_Magic Id:magicAniId];
 }
 
 -(TransfersDefinition *) getTransfersDefinition:(int)creatureDefId

@@ -37,6 +37,19 @@
 	return self;
 }
 
+-(id) initWithSprite:(FDSprite *)c
+{
+	self = [super init];
+	
+    definition = nil;
+	sprite = c;
+	finished = FALSE;
+	
+	[self reset];
+	
+	return self;
+}
+
 -(void) takeTick:(int)synchronizeTick
 {
 }
@@ -59,12 +72,15 @@
 
 -(void) reset
 {
+    finished = NO;
 }
 
 -(void) dealloc
 {
-	[definition release];
-	
+	if (definition != nil) {
+        [definition release];
+	}
+        
 	[super dealloc];
 }
 

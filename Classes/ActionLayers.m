@@ -33,6 +33,7 @@
 #import "FightingScene.h"
 #import "MagicalInformation.h"
 #import "MagicalScene.h"
+#import "MagicalScene2.h"
 #import "FDAudioEngine.h"
 #import "MoneyItemDefinition.h"
 
@@ -431,7 +432,7 @@
 	if (magic.magicType == MagicType_Attack) {
 		CGPoint pos = [field getObjectPos:creature];
 		int backgroundImageId = [field getBackgroundPicId:pos];
-		MagicalScene *scene = [[MagicalScene alloc] initWithMagic:magicId Subject:creature Targets:targets Information:mInfo Background:backgroundImageId];
+		MagicalScene2 *scene = [[MagicalScene2 alloc] initWithMagic:magicId Subject:creature Targets:targets Information:mInfo Background:backgroundImageId];
 		[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:0.5 scene:scene]];
 		[scene start];	
 		[scene setPostMethod:@selector(postFightAction:Targets:) param1:creature param2:targets Obj:self];

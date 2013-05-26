@@ -47,6 +47,8 @@
 		totalTick += currentframe.tickCount;
 		
 	}
+    
+    [super reset];
 }
 
 @end

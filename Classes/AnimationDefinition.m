@@ -169,7 +169,7 @@
 	return [aniDef autorelease];
 }
 
-+(id) readMagicAnimationFromFile:(FDFileStream *)stream MagicId:(int)magicId
++(id) readMagicAnimationFromFile:(FDFileStream *)stream MagicAniId:(int)magicAniId
 {
     AnimationDefinition *aniDef = [[AnimationDefinition alloc] init];
 	[aniDef setRepeatable:NO];
@@ -179,10 +179,10 @@
     int soundId = 0;
     
 	FDFightFrameDefinition *frame1 = [[FDFightFrameDefinition alloc] initFromFile:spriteFile Time:interval Sound:soundId Remote:NO Hitting:0.2];
-    FDFightFrameDefinition *frame2 = [[FDFightFrameDefinition alloc] initFromFile:spriteFile Time:interval Sound:soundId Remote:NO Hitting:0.2];
-    FDFightFrameDefinition *frame3 = [[FDFightFrameDefinition alloc] initFromFile:spriteFile Time:interval Sound:soundId Remote:NO Hitting:0.2];
-    FDFightFrameDefinition *frame4 = [[FDFightFrameDefinition alloc] initFromFile:spriteFile Time:interval Sound:soundId Remote:NO Hitting:0.2];
-    FDFightFrameDefinition *frame5 = [[FDFightFrameDefinition alloc] initFromFile:spriteFile Time:interval Sound:soundId Remote:NO Hitting:0.2];
+    FDFightFrameDefinition *frame2 = [[FDFightFrameDefinition alloc] initFromFile:spriteFile Time:interval Sound:soundId Remote:NO Hitting:0.4];
+    FDFightFrameDefinition *frame3 = [[FDFightFrameDefinition alloc] initFromFile:spriteFile Time:interval Sound:soundId Remote:NO Hitting:0.6];
+    FDFightFrameDefinition *frame4 = [[FDFightFrameDefinition alloc] initFromFile:spriteFile Time:interval Sound:soundId Remote:NO Hitting:0.8];
+    FDFightFrameDefinition *frame5 = [[FDFightFrameDefinition alloc] initFromFile:spriteFile Time:interval Sound:soundId Remote:NO Hitting:1.0];
     
     [aniDef addFrame:frame1];
     [aniDef addFrame:frame2];
@@ -191,6 +191,12 @@
     [aniDef addFrame:frame5];
     
     return [aniDef autorelease];
+}
+
++(int) getMagicAnimationId:(int)magicId isBadGuy:(BOOL)bad
+{
+    int ind = (bad) ? 2 : 1;
+    return magicId * 10 + ind;
 }
 
 -(id) init

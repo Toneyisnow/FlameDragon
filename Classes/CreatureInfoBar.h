@@ -20,10 +20,14 @@
 	FDSprite *hpValue;
 	FDSprite *mpValue;
 	
+    FDSprite *nameSprite;
+    FDSprite *levelSprite;
+    
 	CGPoint clickedLocation;
 }
 
 -(id) initWithCreature:(FDCreature *)c ClickedOn:(CGPoint)location;
+-(void) setCreature:(FDCreature *)c;
 
 -(void) setHp:(int)hp Mp:(int)mp;
 

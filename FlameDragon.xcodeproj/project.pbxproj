@@ -165,6 +165,9 @@
 		0257BBCE17508FBE0080B5E9 /* Chapter-29.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0257BBC617508FBD0080B5E9 /* Chapter-29.strings */; };
 		0257BBCF17508FBE0080B5E9 /* Chapter-30.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0257BBC717508FBD0080B5E9 /* Chapter-30.strings */; };
 		0257BBD017508FBE0080B5E9 /* Chapter-31.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0257BBC817508FBE0080B5E9 /* Chapter-31.strings */; };
+		0257BBD417509F7F0080B5E9 /* Fight-748-2-17.png in Resources */ = {isa = PBXBuildFile; fileRef = 0257BBD117509F7F0080B5E9 /* Fight-748-2-17.png */; };
+		0257BBD517509F7F0080B5E9 /* Fight-748-2-18.png in Resources */ = {isa = PBXBuildFile; fileRef = 0257BBD217509F7F0080B5E9 /* Fight-748-2-18.png */; };
+		0257BBD617509F7F0080B5E9 /* Fight-748-2-19.png in Resources */ = {isa = PBXBuildFile; fileRef = 0257BBD317509F7F0080B5E9 /* Fight-748-2-19.png */; };
 		025DA50816284FDD00DD7C30 /* Chapter-03.strings in Resources */ = {isa = PBXBuildFile; fileRef = 025DA50716284FDD00DD7C30 /* Chapter-03.strings */; };
 		025DA92F162C4DE000DD7C30 /* Shopping2AmorDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 025DA92E162C4DE000DD7C30 /* Shopping2AmorDialog.m */; };
 		025DA9B016301B2C00DD7C30 /* FightingScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 025DA9AF16301B2C00DD7C30 /* FightingScene.m */; };
@@ -4747,6 +4750,9 @@
 		0257BBC617508FBD0080B5E9 /* Chapter-29.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-29.strings"; path = "Strings/Maps/Chapter-29.strings"; sourceTree = "<group>"; };
 		0257BBC717508FBD0080B5E9 /* Chapter-30.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-30.strings"; path = "Strings/Maps/Chapter-30.strings"; sourceTree = "<group>"; };
 		0257BBC817508FBE0080B5E9 /* Chapter-31.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-31.strings"; path = "Strings/Maps/Chapter-31.strings"; sourceTree = "<group>"; };
+		0257BBD117509F7F0080B5E9 /* Fight-748-2-17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-748-2-17.png"; sourceTree = "<group>"; };
+		0257BBD217509F7F0080B5E9 /* Fight-748-2-18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-748-2-18.png"; sourceTree = "<group>"; };
+		0257BBD317509F7F0080B5E9 /* Fight-748-2-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-748-2-19.png"; sourceTree = "<group>"; };
 		025DA50716284FDD00DD7C30 /* Chapter-03.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-03.strings"; path = "Strings/Maps/Chapter-03.strings"; sourceTree = "<group>"; };
 		025DA92D162C4DE000DD7C30 /* Shopping2AmorDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shopping2AmorDialog.h; sourceTree = "<group>"; };
 		025DA92E162C4DE000DD7C30 /* Shopping2AmorDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shopping2AmorDialog.m; sourceTree = "<group>"; };
@@ -15941,6 +15947,9 @@
 				02DB966C165346040081EC45 /* Fight-748-2-14.png */,
 				02DB966D165346040081EC45 /* Fight-748-2-15.png */,
 				02DB966E165346040081EC45 /* Fight-748-2-16.png */,
+				0257BBD117509F7F0080B5E9 /* Fight-748-2-17.png */,
+				0257BBD217509F7F0080B5E9 /* Fight-748-2-18.png */,
+				0257BBD317509F7F0080B5E9 /* Fight-748-2-19.png */,
 			);
 			name = 748;
 			path = Fights/748;
@@ -21009,6 +21018,9 @@
 				0257BBCE17508FBE0080B5E9 /* Chapter-29.strings in Resources */,
 				0257BBCF17508FBE0080B5E9 /* Chapter-30.strings in Resources */,
 				0257BBD017508FBE0080B5E9 /* Chapter-31.strings in Resources */,
+				0257BBD417509F7F0080B5E9 /* Fight-748-2-17.png in Resources */,
+				0257BBD517509F7F0080B5E9 /* Fight-748-2-18.png in Resources */,
+				0257BBD617509F7F0080B5E9 /* Fight-748-2-19.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

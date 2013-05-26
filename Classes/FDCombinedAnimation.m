@@ -29,7 +29,8 @@
 
 -(void) takeTick:(int)synchronizeTick
 {
-	
+	animationSwitched = NO;
+    
 	if ([animationList count] <= 0) {
 		return;
 	}
@@ -47,8 +48,18 @@
 	
 	if ([currentAni hasFinished]) {
 		aniIndex ++;
+        
+        if (aniIndex < [animationList count])
+        {
+            animationSwitched = YES;
+        }
 	}
 
+}
+
+-(BOOL) isAnimationSwitched
+{
+    return animationSwitched;
 }
 
 -(int) getDuration
@@ -60,6 +71,11 @@
 	return total;
 }
 
+-(void)reset
+{
+    [super reset];
+    aniIndex = 0;
+}
 -(void) dealloc
 {
 	

@@ -49,7 +49,9 @@ typedef	enum AnimationType
 +(id) dieAnimation:(int)i;
 
 +(id) readFightAnimationFromFile:(FDFileStream *)stream CreatureAniId:(int)creatureAniId Type:(AnimationType)aniType;
-+(id) readMagicAnimationFromFile:(FDFileStream *)stream MagicId:(int)magicId;
++(id) readMagicAnimationFromFile:(FDFileStream *)stream MagicAniId:(int)magicId;
+
++(int) getMagicAnimationId:(int)magicId isBadGuy:(BOOL)bad;
 
 -(void) addFrame:(FDFrameDefinition *)frame;
 -(NSMutableArray *) getFrameArray;

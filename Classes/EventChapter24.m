@@ -54,8 +54,8 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52402 Id:104] autorelease] Position:CGPointMake(33,29)];
 	
 	// Talk
-	for (int i = 1; i <= 17; i++) {
-		[self showTalkMessage:20 conversation:1 sequence:i];
+	for (int i = 1; i <= 14; i++) {
+		[self showTalkMessage:24 conversation:1 sequence:i];
 	}
 }
 
@@ -139,28 +139,11 @@
 
 -(void) enemyClear
 {
-	for (int i = 1; i <= 13; i++) {
-		[self showTalkMessage:20 conversation:2 sequence:i];
+	for (int i = 1; i <= 11; i++) {
+		[self showTalkMessage:24 conversation:2 sequence:i];
 	}
 	
-	[layers appendToCurrentActivityMethod:@selector(enemyClear2) Param1:nil Param2:nil Obj:self];
-}
-
--(void) enemyClear2
-{
-	if ([layers getTurnNumber] <= 15)
-    {
-        // Dakesai Appear
-        [field addFriend:[[[FDFriend alloc] initWithDefinition:24 Id:24] autorelease] Position:CGPointMake(26,40)];
-        [layers moveCreatureId:24 To:CGPointMake(26,37) showMenu:FALSE];
-        [layers appendToCurrentActivity:[[[FDDurationActivity alloc] initWithDuration:0.5] autorelease]];
-        
-        for (int i = 1; i <= 16; i++) {
-            [self showTalkMessage:20 conversation:3 sequence:i];
-        }
-	}
-    
-    [layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];
+	[layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil Obj:self];
 }
 
 @end

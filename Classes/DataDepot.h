@@ -52,6 +52,7 @@
 -(MagicDefinition *) getMagicDefinition:(int)magicId;
 -(CreatureDefinition *) getCreatureDefinition:(int)creatureDefId;
 -(AnimationDefinition *) getAnimationDefinition:(AnimationType)type Id:(int)aniId;
+-(AnimationDefinition *) getMagicAnimationDefinition:(int)magicId isBadGuy:(BOOL)isBad;
 -(LevelUpDefinition *) getLevelUpDefinition:(int)creatureDefId;
 -(ShopDefinition *) getShopDefinition:(int)chapterId Type:(DataDepotShopType)shopType;
 -(OccupationDefinition *) getOccupationDefinition:(int)occupationId;
