@@ -51,7 +51,7 @@
 
 -(void) show:(CCLayer *)layer
 {
-	[baseSprite setLocation:[self getPosRight]];
+	[super setLocation:[self getPosRight]];
 	[super show:layer];
 }
 

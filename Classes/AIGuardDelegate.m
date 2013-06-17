@@ -32,7 +32,7 @@
     
     BOOL guardHoldPosition = YES;
     for (FDCreature *c in arr) {
-        if ([field getDirectDistance:creature And:c] <= 5) {
+        if ([field getDirectDistance:creature And:c] <= creature.data.mv + 1) {
             guardHoldPosition = NO;
             break;
         }

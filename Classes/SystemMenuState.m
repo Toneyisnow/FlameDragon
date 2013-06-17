@@ -166,8 +166,6 @@
 		[talk show:[layers getMessageLayer]];
         [talk release];
 	}
-	
-	
 }
 
 @end

@@ -7,27 +7,30 @@
 //
 
 #import "VillageScene.h"
-
+#import "DataDepot.h"
+#import "VillageNonLayer.h"
 
 @implementation VillageScene
 
 @synthesize mainLayer;
 
--(id) init
+-(void) loadWithRecord:(ChapterRecord *) record
 {
-	self = [super init];
-	
-	mainLayer = [VillageLayer node];
+    ShopDefinition *shop = [[DataDepot depot] getShopDefinition:record.chapterId Type:DataDepotShopType_AmorShop];
+ 
+    if (shop != nil)
+    {
+        mainLayer = [VillageLayer node];
+    }
+    else
+    {
+        mainLayer = [VillageNonLayer node];
+    }
+    
 	mainLayer.isTouchEnabled = TRUE;
-	//[self initLayer];
 	
 	[self addChild:mainLayer];
 	
-	return self;
-}
-
--(void) loadWithRecord:(ChapterRecord *) record
-{
 	[mainLayer loadWithRecord:record];
 	[self schedule: @selector(step:)];
 }

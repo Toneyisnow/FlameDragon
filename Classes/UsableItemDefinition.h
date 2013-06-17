@@ -20,10 +20,10 @@ typedef enum UsableItemType
 	UsableItemType_Dp = 8,
 	UsableItemType_Mv = 9,
 	UsableItemType_Dx = 10,
-	UsableItemType_Ukn1 = 11,
-	UsableItemType_Ukn2 = 12,
-	UsableItemType_Ukn3 = 13,
-	UsableItemType_Ukn4 = 14
+	UsableItemType_EyeStar = 11,
+	UsableItemType_EyeDark = 12,
+	UsableItemType_EyeIce = 13,
+	UsableItemType_EyeFire = 14
 	
 	
 } UsableItemType;

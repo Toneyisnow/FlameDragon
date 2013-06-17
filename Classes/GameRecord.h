@@ -20,6 +20,8 @@
 +(id) readFromSavedFile:(NSString *)fileName;
 -(void) saveRecord;
 -(void) saveRecord:(NSString *)fileName;
++(void) backupRecord:(NSString *)fileName;
++(void) restoreRecord:(NSString *)fileName;
 
 -(void) setBattleRecord:(BattleRecord *)info;
 -(void) setChapterRecord:(ChapterRecord *)info Index:(int)index;

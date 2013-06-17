@@ -23,6 +23,11 @@
 	return self;
 }
 
+-(id) initWithRect:(CGRect) rect
+{
+    return [self initWithX:rect.origin.x Y:rect.origin.y Width:rect.size.width Height:rect.size.height];
+}
+
 -(BOOL) isIn:(CGPoint)pos
 {
 	return (pos.x >= posX && pos.x <= posX + width - 1 && pos.y >= posY && pos.y <= posY + height -1);

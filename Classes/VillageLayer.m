@@ -19,8 +19,6 @@
 
 @implementation VillageLayer
 
-@synthesize chapterRecord;
-
 -(id) init
 {
 	self = [super init];
@@ -74,8 +72,8 @@
 
 -(void) loadWithRecord:(ChapterRecord *)record
 {
-	self.chapterRecord = record;
-	
+	[super loadWithRecord:record];
+    
 	NSString *bgFileName = [NSString stringWithFormat:@"Village-%02d.png", [self getVillageImageId]];
 		
 	FDSprite *bg = [[FDSpriteStore instance] sprite:bgFileName];
@@ -93,7 +91,7 @@
 	
 	currentPosition = 1;
     
-    int cursorDefId = [[[chapterRecord friendRecords] objectAtIndex:0] definitionId];
+    int cursorDefId = [[[super.chapterRecord friendRecords] objectAtIndex:0] definitionId];
 	cursor = [[FDSpriteStore instance] sprite:[NSString stringWithFormat:@"Icon-%03d-01.png", cursorDefId]];
 	AnimationDefinition *animationDef = [AnimationDefinition idleAnimation:cursorDefId];
 	cursorAnimation = [[FDSlideAnimation alloc] initWithDefinition:animationDef Sprite:cursor];
@@ -267,43 +265,7 @@
 	
 	CCLOG(@"Do Exit");
 	
-    CCScene *scene = nil;
-    if ([self needPickFriend:chapterRecord]) {
-        PickFriendScene *picking = [PickFriendScene node];
-        [picking loadWithRecord:chapterRecord];
-        scene = picking;
-    } else if ([self needAutoPickFriend:chapterRecord]) {
-        
-        NSMutableArray *selectedFriends = [[NSMutableArray alloc] init];
-        for (int i = 0; i < [[chapterRecord friendRecords] count]; i++) {
-            CreatureRecord *c = [[chapterRecord friendRecords] objectAtIndex:i];
-            [selectedFriends addObject:[NSNumber numberWithInt:c.creatureId]];
-        }
-        
-        MainGameScene *mainGame = [MainGameScene node];
-        [mainGame loadWithInfo:chapterRecord withSelectedFriends:selectedFriends];
-        scene = mainGame;
-        [selectedFriends release];
-        
-    } else {
-        MainGameScene *mainGame = [MainGameScene node];
-        [mainGame loadWithInfo:chapterRecord];
-        scene = mainGame;
-    }
-    
-	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];
-}
-
--(BOOL) needPickFriend:(ChapterRecord *) record {
-    
-    return ([[record friendRecords] count] > [Constants maxPickedFriendCount]);
-}
-
--(BOOL) needAutoPickFriend:(ChapterRecord *) record {
-
-    CreatureRecord *cRecord = [[record friendRecords] lastObject];
-    
-    return (cRecord.creatureId > [Constants maxPickedFriendCount]);
+    [self doExit];
 }
 
 -(void) dealloc

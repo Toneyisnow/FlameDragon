@@ -12,7 +12,6 @@
 @interface SelectAttackTargetState : DispatcherState {
 
 	FDFriend *currentFriend;
-
 }
 
 -(id) initWithLayers:(ActionLayers *)ls Friend:(FDFriend *)frien;

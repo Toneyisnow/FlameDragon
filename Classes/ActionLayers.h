@@ -121,6 +121,8 @@ typedef enum TurnType
 -(void) showTurnInfo;
 -(void) showChapterInfo;
 
+-(void) updateSideBarLocation:(CGPoint)loc;
+
 -(void) postFightAction:(FDCreature *)creature Targets:(NSMutableArray *)targets;
 
 -(void) appendNewActivity:(FDActivity *)activity;

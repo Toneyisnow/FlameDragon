@@ -22,6 +22,7 @@
 
 +(MagicalInformation *) dealWithMagic:(int)magicId From:(FDCreature *)subject Target:(NSArray *)targetList Field:(BattleField *)field;
 +(AttackInformation *) magicWithId:(id)magic From:(FDCreature *)creature To:(FDCreature *)target Field:(BattleField *)field;
++(AttackInformation *) magicWithIntId:(int)magicId From:(FDCreature *)creature To:(FDCreature *)target Field:(BattleField *)field;
 
 +(int) calculateAttackExp:(FDCreature *)creature Target:(FDCreature *)target Info:(AttackInformation *)info;
 +(int) calculateMagicExp:(FDCreature *)creature Target:(FDCreature *)target Magic:(id)magic;

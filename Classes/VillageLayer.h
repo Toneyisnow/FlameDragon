@@ -11,14 +11,12 @@
 #import "FDAnimation.h"
 #import "FDSprite.h"
 #import "ConfirmMessage.h"
-#import "FDLayer.h"
+#import "VillageCommonLayer.h"
 #import "SecretSequenceDefinition.h"
 #import "VillageLabel.h"
 
-@interface VillageLayer : FDLayer {
+@interface VillageLayer : VillageCommonLayer {
 
-	ChapterRecord *chapterRecord;
-	
 	FDAnimation *cursorAnimation;
 	FDSprite *cursor;
 	
@@ -33,12 +31,6 @@
 
 	VillageLabel *villageLabel;
 }
-
-@property (retain) ChapterRecord *chapterRecord;
-
--(void) loadWithRecord:(ChapterRecord *) record;
-
--(void) takeTick;
 
 -(int) getVillageImageId;
 
@@ -55,6 +47,5 @@
 
 -(void) setPosition:(int)pos;
 
--(BOOL) needPickFriend:(ChapterRecord *) record;
 
 @end

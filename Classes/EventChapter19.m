@@ -17,6 +17,10 @@
 	[self loadTurnEvent:TurnType_Friend Turn:4 Action:@selector(batch2)];
 	[self loadTurnEvent:TurnType_Friend Turn:8 Action:@selector(batch3)];
 
+    [self loadPositionEvent:151 AtPosition:CGPointMake(25,5) Action:@selector(onEscaped1)];
+	[self loadPositionEvent:152 AtPosition:CGPointMake(25,4) Action:@selector(onEscaped2)];
+	[self loadPositionEvent:153 AtPosition:CGPointMake(6,2) Action:@selector(onEscaped3)];
+	
 	[self loadDieEvent:1 Action:@selector(gameOver)];
 	[self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
 	
@@ -77,37 +81,41 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51904 Id:122] autorelease] Position:CGPointMake(20,21)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51904 Id:123] autorelease] Position:CGPointMake(21,20)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51904 Id:124] autorelease] Position:CGPointMake(22,21)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51906 Id:125] autorelease] Position:CGPointMake(10,18)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51906 Id:126] autorelease] Position:CGPointMake(11,20)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51906 Id:127] autorelease] Position:CGPointMake(12,18)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51905 Id:128] autorelease] Position:CGPointMake(13,14)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51905 Id:129] autorelease] Position:CGPointMake(14,13)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51905 Id:130] autorelease] Position:CGPointMake(15,14)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51905 Id:125] autorelease] Position:CGPointMake(13,14)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51905 Id:126] autorelease] Position:CGPointMake(14,13)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51905 Id:127] autorelease] Position:CGPointMake(15,14)];
 	
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51902 Id:131] autorelease] Position:CGPointMake(19,11)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51902 Id:132] autorelease] Position:CGPointMake(17,6)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51908 Id:133] autorelease] Position:CGPointMake(6,9)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51908 Id:134] autorelease] Position:CGPointMake(24,11)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51908 Id:135] autorelease] Position:CGPointMake(24,5)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51903 Id:136] autorelease] Position:CGPointMake(20,7)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51903 Id:137] autorelease] Position:CGPointMake(22,7)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51903 Id:138] autorelease] Position:CGPointMake(20,9)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51903 Id:139] autorelease] Position:CGPointMake(22,9)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51905 Id:140] autorelease] Position:CGPointMake(5,8)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51905 Id:141] autorelease] Position:CGPointMake(6,7)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51905 Id:142] autorelease] Position:CGPointMake(7,8)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51905 Id:143] autorelease] Position:CGPointMake(21,5)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51905 Id:144] autorelease] Position:CGPointMake(21,11)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51907 Id:145] autorelease] Position:CGPointMake(18,8)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51907 Id:146] autorelease] Position:CGPointMake(24,8)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51902 Id:128] autorelease] Position:CGPointMake(19,11)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51902 Id:129] autorelease] Position:CGPointMake(17,6)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51908 Id:130] autorelease] Position:CGPointMake(6,9)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51908 Id:131] autorelease] Position:CGPointMake(24,11)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51908 Id:132] autorelease] Position:CGPointMake(24,5)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51903 Id:133] autorelease] Position:CGPointMake(20,7)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51903 Id:134] autorelease] Position:CGPointMake(22,7)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51903 Id:135] autorelease] Position:CGPointMake(20,9)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51903 Id:136] autorelease] Position:CGPointMake(22,9)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51905 Id:137] autorelease] Position:CGPointMake(5,8)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51905 Id:138] autorelease] Position:CGPointMake(6,7)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51905 Id:139] autorelease] Position:CGPointMake(7,8)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51905 Id:140] autorelease] Position:CGPointMake(21,5)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51905 Id:141] autorelease] Position:CGPointMake(21,11)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51907 Id:142] autorelease] Position:CGPointMake(18,8)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51907 Id:143] autorelease] Position:CGPointMake(24,8)];
 	
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51901 Id:199] autorelease] Position:CGPointMake(21,8)];
 	
-	for (int i = 117; i <= 146; i++) {
+    [field addEnemy:[[[FDEnemy alloc] initWithDefinition:51906 Id:151] autorelease] Position:CGPointMake(10,18)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51906 Id:152] autorelease] Position:CGPointMake(11,20)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51906 Id:153] autorelease] Position:CGPointMake(12,18)];
+	
+    for (int i = 117; i <= 143; i++) {
 		[self setAiOfId:i withType:AIType_Guard];
 	}
 	[self setAiOfId:199 withType:AIType_Guard];
-	
+	[self setAiOfId:151 withType:AIType_Guard];
+    [self setAiOfId:152 withType:AIType_Guard];
+    [self setAiOfId:153 withType:AIType_Guard];
+    
 	// Talk
 	for (int i = 1; i <= 13; i++) {
 		[self showTalkMessage:19 conversation:1 sequence:i];
@@ -116,17 +124,36 @@
 
 -(void) batch2 {
 
-	for (int i = 117; i <= 130; i++) {
+    [self setAiOfId:151 getTreasure:CGPointMake(22,24) EscapeTo:CGPointMake(25, 5)];
+    [self setAiOfId:152 getTreasure:CGPointMake(14, 2) EscapeTo:CGPointMake(25, 4)];
+    [self setAiOfId:153 getTreasure:CGPointMake( 1,12) EscapeTo:CGPointMake( 6, 2)];
+    
+	for (int i = 117; i <= 127; i++) {
 		[self setAiOfId:i withType:AIType_Aggressive];
 	}
 }
 
 -(void) batch3 {
 
-	for (int i = 131; i <= 146; i++) {
+	for (int i = 128; i <= 143; i++) {
 		[self setAiOfId:i withType:AIType_Aggressive];
 	}
 	[self setAiOfId:199 withType:AIType_Aggressive];
+}
+
+-(void) onEscaped1
+{
+    [self removeCreature:151];
+}
+
+-(void) onEscaped2
+{
+    [self removeCreature:152];
+}
+
+-(void) onEscaped3
+{
+    [self removeCreature:153];
 }
 
 -(void) bossDyingMessage

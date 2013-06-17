@@ -236,25 +236,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/ActionLayers.m"
-         timestampString = "391186192.2732"
+         timestampString = "393097795.756201"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1017"
-         endingLineNumber = "1017"
-         landmarkName = "-showItemStatusAsync:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Classes/TitleLayer.m"
-         timestampString = "385309463.730929"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "79"
-         endingLineNumber = "79"
-         landmarkName = "-onNewGame"
+         startingLineNumber = "1059"
+         endingLineNumber = "1059"
+         landmarkName = "-pickUpTreasure:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -288,12 +275,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/ActionLayers.m"
-         timestampString = "391186192.2732"
+         timestampString = "393097795.756201"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1184"
-         endingLineNumber = "1184"
-         landmarkName = "-settleFriend:At:"
+         startingLineNumber = "1226"
+         endingLineNumber = "1226"
+         landmarkName = "-pickUpTreasure:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

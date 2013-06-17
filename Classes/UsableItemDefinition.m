@@ -9,6 +9,7 @@
 #import "UsableItemDefinition.h"
 #import "FDCreature.h"
 #import "FDLocalString.h"
+#import "GameFormula.h"
 
 @implementation UsableItemDefinition
 
@@ -77,10 +78,22 @@
 		case UsableItemType_Mv:
 			creature.data.mv += quantity;
 			break;
-		default:
+		case UsableItemType_EyeStar:
+            creature.data.statusEnhanceDx = quantity;
+            break;
+        case UsableItemType_EyeDark:
+            // This can only used to enemies
+            [GameFormula magicWithIntId:303 From:nil To:creature Field:nil];
+            break;
+        case UsableItemType_EyeIce:
+            creature.data.statusEnhanceDp = quantity;
+            break;
+        case UsableItemType_EyeFire:
+            creature.data.statusEnhanceAp = quantity;
+            break;
+        default:
 			break;
 	}
-
 }
 
 -(NSString *) getAttributeString

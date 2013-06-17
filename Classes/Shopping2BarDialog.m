@@ -66,7 +66,6 @@
 	[dialog release];
 }
 
-
 -(void) confirmSaveGame:(NSNumber *)indexObj
 {
 	CCLOG(@"confirmSaveGame");

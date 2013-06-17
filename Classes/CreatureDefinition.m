@@ -218,7 +218,7 @@
 
 -(BOOL) isMarshMonster {
     
-    return (identifier == 761);
+    return (identifier == 761 || identifier == 52001);
 }
 
 -(int) getMaximumLevel {

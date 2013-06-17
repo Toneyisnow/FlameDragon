@@ -174,7 +174,7 @@
 			villagePos = 1;
 			break;
 	}
-	[scene.mainLayer setPosition:villagePos];
+	[(VillageLayer *)scene.mainLayer setPosition:villagePos];
 }
 
 -(void) pushDialog:(ShoppingDialog *)dialog

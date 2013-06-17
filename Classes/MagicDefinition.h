@@ -29,6 +29,7 @@ typedef enum MagicType
 	int effectRange;	// 
 	int hittingRate;
 	int mpCost;
+    int allowAfterMove;
     int aiConsiderRate;
 	FDRange *quantityRange;
 }
@@ -43,6 +44,8 @@ typedef enum MagicType
 
 -(BOOL) hasAnimation;
 
+-(BOOL) canFireAfterMove;
+
 @property (nonatomic, retain) NSString *name;
 @property (nonatomic) MagicType magicType;
 
@@ -51,6 +54,8 @@ typedef enum MagicType
 @property (nonatomic) int effectRange;
 @property (nonatomic) int hittingRate;
 @property (nonatomic) int mpCost;
+@property (nonatomic) int allowAfterMove;
+
 @property (nonatomic) int aiConsiderRate;
 
 @property (nonatomic, retain) FDRange *quantityRange;

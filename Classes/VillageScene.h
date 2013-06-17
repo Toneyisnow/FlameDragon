@@ -12,10 +12,10 @@
 
 @interface VillageScene : CCScene {
 
-	VillageLayer *mainLayer;
+	VillageCommonLayer *mainLayer;
 }
 
-@property (readonly) VillageLayer *mainLayer;
+@property (readonly) VillageCommonLayer *mainLayer;
 
 //-(void) setChapter:(int)chapter;
 

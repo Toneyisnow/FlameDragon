@@ -93,9 +93,10 @@
 	// Add NPC
 	[field addNpc:[[[FDNpc alloc] initWithDefinition:20 Id:20] autorelease] Position:CGPointMake(23, 9)];
 	[field addNpc:[[[FDNpc alloc] initWithDefinition:21 Id:21] autorelease] Position:CGPointMake(23, 8)];
-    [self setAiOfId:20 withType:AIType_StandBy];
-    [self setAiOfId:21 withType:AIType_StandBy];
-	
+    
+    [self setAiOfId:20 EscapeTo:CGPointMake(7,9)];
+	[self setAiOfId:21 EscapeTo:CGPointMake(7,9)];
+    
 	// Talk
 	for (int i = 1; i <= 24; i++) {
 		[self showTalkMessage:18 conversation:1 sequence:i];

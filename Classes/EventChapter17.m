@@ -15,6 +15,7 @@
 {
 	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(initialBattle)];
 	[self loadTurnEvent:TurnType_Friend Turn:4 Action:@selector(reinforcement)];
+	[self loadTurnEvent:TurnType_Friend Turn:15 Action:@selector(round2)];
 	
 	[self loadDieEvent:1 Action:@selector(gameOver)];
 	[self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
@@ -93,6 +94,16 @@
 	
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51701 Id:199 DropItem:120] autorelease] Position:CGPointMake(24,19)];
 	
+    for (int i = 101; i <= 107; i++) {
+        [self setAiOfId:i withType:AIType_Guard];
+    }
+    
+    for (int i = 118; i <= 135; i++) {
+        [self setAiOfId:i withType:AIType_Guard];
+    }
+    [self setAiOfId:199 withType:AIType_Guard];
+    
+    
 	// Talk
 	for (int i = 1; i <= 12; i++) {
 		[self showTalkMessage:17 conversation:1 sequence:i];
@@ -114,6 +125,19 @@
 	for (int i = 1; i <= 3; i++) {
 		[self showTalkMessage:17 conversation:2 sequence:i];
 	}
+}
+
+-(void) round2
+{
+    for (int i = 101; i <= 107; i++) {
+        [self setAiOfId:i withType:AIType_Aggressive];
+    }
+    
+    for (int i = 118; i <= 135; i++) {
+        [self setAiOfId:i withType:AIType_Aggressive];
+    }
+    
+    [self setAiOfId:199 withType:AIType_Aggressive];
 }
 
 -(void) bossDyingMessage

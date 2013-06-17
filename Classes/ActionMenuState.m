@@ -33,7 +33,9 @@
 
 -(void) clickedOn:(CGPoint)location
 {
-	CGPoint position = [field convertLocToPos:[field getMapLocationbyScreen:location]];
+	[layers updateSideBarLocation:location];
+    
+    CGPoint position = [field convertLocToPos:[field getMapLocationbyScreen:location]];
 	
 	FDMenuItem *menuItem = [field getMenuItemByPos:position];
 	

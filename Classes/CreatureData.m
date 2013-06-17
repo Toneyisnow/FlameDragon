@@ -9,6 +9,7 @@
 #import "CreatureData.h"
 #import "FDPosition.h"
 #import "DataDepot.h"
+#import "AITreasureParam.h"
 
 @implementation CreatureData
 
@@ -109,7 +110,14 @@
 	[coder encodeInt:statusFrozen forKey:@"statusFrozen"];
 	
 	[coder encodeInt:aiType forKey:@"aiType"];
-	[coder encodeCGPoint:[(FDPosition *)aiParam posValue] forKey:@"aiParam"];
+    
+    if ([aiParam isKindOfClass:[FDPosition class]]) {
+        [coder encodeCGPoint:[(FDPosition *)aiParam posValue] forKey:@"aiParam"];
+    }
+    else if ([aiParam isKindOfClass:[AITreasureParam class]]) {
+        [coder encodeCGPoint:[(AITreasureParam *)aiParam getTreasurePosition] forKey:@"aiParam_tPos"];
+        [coder encodeCGPoint:[(AITreasureParam *)aiParam getEscapePosition] forKey:@"aiParam_ePos"];
+    }
 	[coder encodeInt:attackItemIndex forKey:@"attackItemIndex"];
     [coder encodeInt:defendItemIndex forKey:@"defendItemIndex"];
     
@@ -142,7 +150,19 @@
 	statusProhibited =  [coder decodeIntForKey:@"statusProhibited"];
 	
     aiType = [coder decodeIntForKey:@"aiType"];
-	self.aiParam = [FDPosition position:[coder decodeCGPointForKey:@"aiParam"]];
+    
+    if ([coder containsValueForKey:@"aiParam"])
+    {
+        self.aiParam = [FDPosition position:[coder decodeCGPointForKey:@"aiParam"]];
+    }
+    else if ([coder containsValueForKey:@"aiParam_tPos"])
+    {
+        CGPoint tPos = [coder decodeCGPointForKey:@"aiParam_tPos"];
+        CGPoint ePos = [coder decodeCGPointForKey:@"aiParam_ePos"];
+        AITreasureParam *param = [[AITreasureParam alloc] initWithTreasurePos:tPos escapeTo:ePos];
+        self.aiParam = param;
+        [param release];
+    }
 	itemList = [[coder decodeObjectForKey:@"itemList"] retain];
 	magicList = [[coder decodeObjectForKey:@"magicList"] retain];
 	attackItemIndex = [coder decodeIntForKey:@"attackItemIndex"];

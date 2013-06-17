@@ -14,7 +14,7 @@
 
 @synthesize name;
 @synthesize magicType;
-@synthesize identifier, effectScope, effectRange, hittingRate, mpCost, aiConsiderRate;
+@synthesize identifier, effectScope, effectRange, hittingRate, mpCost, allowAfterMove, aiConsiderRate;
 @synthesize quantityRange;
 
 +(id) readFromFile:(FDFileStream *)stream
@@ -37,6 +37,7 @@
 	def.effectScope = [stream readInt];
 	def.effectRange = [stream readInt];
 	def.mpCost = [stream readInt];
+    def.allowAfterMove = [stream readInt];
 	def.aiConsiderRate = [stream readInt];
     
 	return [def autorelease];
@@ -159,5 +160,9 @@
 	return magicType == MagicType_Attack;
 }
 
+-(BOOL) canFireAfterMove
+{
+    return allowAfterMove > 0;
+}
 
 @end

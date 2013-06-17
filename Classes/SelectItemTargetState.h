@@ -17,5 +17,6 @@
 
 }
 -(id) initWithLayers:(ActionLayers *)ls Friend:(FDFriend *)frien ItemIndex:(int)m;
+-(BOOL) canApplyItemOnCreature:(FDCreature *)creature;
 
 @end

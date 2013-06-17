@@ -16,6 +16,9 @@
 	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(initialBattle)];
 	[self loadTurnEvent:TurnType_Friend Turn:7 Action:@selector(batch2)];
 	
+    [self loadPositionEvent:150 AtPosition:CGPointMake(40,40) Action:@selector(onEscaped1)];
+	[self loadPositionEvent:151 AtPosition:CGPointMake(40,40) Action:@selector(onEscaped2)];
+    
 	[self loadDieEvent:1 Action:@selector(gameOver)];
 	[self loadDieEvent:18 Action:@selector(gameOver)];
 	[self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
@@ -105,6 +108,9 @@
 		[self setAiOfId:i withType:AIType_StandBy];
 	}
 	
+    [self setAiOfId:150 getTreasure:CGPointMake(18,37) EscapeTo:CGPointMake(40,40)];
+    [self setAiOfId:151 getTreasure:CGPointMake(31,29) EscapeTo:CGPointMake(40,40)];
+    
 	// Add NPC
 	[field addNpc:[[[FDNpc alloc] initWithDefinition:18 Id:18] autorelease] Position:CGPointMake(23,21)];
 	[field addNpc:[[[FDNpc alloc] initWithDefinition:51607 Id:201] autorelease] Position:CGPointMake(22,21)];
@@ -127,6 +133,15 @@
 	for (int i = 125; i <= 149; i++) {
 		[self setAiOfId:i withType:AIType_Aggressive];
 	}
+}
+
+-(void) onEscaped1
+{
+    [self removeCreature:150];
+}
+-(void) onEscaped2
+{
+    [self removeCreature:151];
 }
 
 -(void) enemyClear

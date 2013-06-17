@@ -51,9 +51,25 @@
 	}
 	
 	CCLOG(@"Loading game record from file [%@]", fileName);
-	GameRecord *record = [[NSKeyedUnarchiver unarchiveObjectWithFile:fileName] retain];
-	CCLOG(@"Loaded game record from file [%@]", fileName);
-	
+	GameRecord *record = nil;
+    
+    @try {
+        record = [[NSKeyedUnarchiver unarchiveObjectWithFile:fileName] retain];
+        CCLOG(@"Loaded game record from file [%@]", fileName);
+    }
+    @catch (NSException *exception) {
+        CCLOG(@"Error: Loaded game record from file [%@] error: [%@]", fileName, [exception reason]);
+    }
+    @finally {
+        
+    }
+    
+    if (record == nil) {
+        [GameRecord restoreRecord:fileName];
+        record = [[NSKeyedUnarchiver unarchiveObjectWithFile:fileName] retain];
+        CCLOG(@"Loaded game record from file [%@]", fileName);
+    }
+    
 	return [record autorelease];
 }
 
@@ -85,16 +101,26 @@
 -(void) saveRecord:(NSString *)fileName
 {
 	[fileName retain];
-	CCLOG(@"Saving game record to:%@", fileName);
+    
+    CCLOG(@"Saving game record to: %@", fileName);
+    
 	NSFileManager *fm = [NSFileManager defaultManager];
-	if ([fm fileExistsAtPath:fileName]) {
-		NSError *myerror;
-		[fm removeItemAtPath:fileName error:&myerror];
+	NSError *myerror;
+    if ([fm fileExistsAtPath:fileName]) {
+        [GameRecord backupRecord:fileName];
+        [fm removeItemAtPath:fileName error:&myerror];
+    }
+	
+    @try
+    {
+        [NSKeyedArchiver archiveRootObject:self toFile:fileName];
 	}
-	
-	[NSKeyedArchiver archiveRootObject:self toFile:fileName];
-	
-	[fileName release];
+    @catch (NSException *ex) {
+        CCLOG(@"Error: %@", [ex reason]);
+    }
+    @finally {
+        [fileName release];
+    }
 }
 
 -(void) encodeWithCoder:(NSCoder *)coder {
@@ -111,6 +137,35 @@
     battleRecord = [[coder decodeObjectForKey:@"battleRecord"] retain];
 	chapterRecords = [[coder decodeObjectForKey:@"chapterRecords"] retain];
     return self;
+}
+
++(void) backupRecord:(NSString *)fileName {
+
+    NSError *myerror;
+    NSString *backupFileName = [NSString stringWithFormat:@"%@.bak", fileName];
+    CCLOG(@"Backing up game record to: %@", backupFileName);
+    
+    NSFileManager *fm = [NSFileManager defaultManager];
+    
+    if ([fm fileExistsAtPath:backupFileName]) {
+       [fm removeItemAtPath:backupFileName error:&myerror];
+    }
+    [fm copyItemAtPath:fileName toPath:backupFileName error:&myerror];
+}
+
++(void) restoreRecord:(NSString *)fileName {
+    
+    NSError *myerror;
+    NSString *backupFileName = [NSString stringWithFormat:@"%@.bak", fileName];
+    CCLOG(@"Restoring game record from: %@", backupFileName);
+    
+    NSFileManager *fm = [NSFileManager defaultManager];
+    
+    if ([fm fileExistsAtPath:fileName]) {
+        [fm removeItemAtPath:fileName error:&myerror];
+    }
+    
+    [fm copyItemAtPath:backupFileName toPath:fileName error:&myerror];
 }
 
 -(void) dealloc

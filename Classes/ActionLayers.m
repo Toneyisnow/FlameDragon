@@ -36,6 +36,8 @@
 #import "MagicalScene2.h"
 #import "FDAudioEngine.h"
 #import "MoneyItemDefinition.h"
+#import "FDWindow.h"
+#import "FDRect.h"
 
 @implementation ActionLayers
 
@@ -211,6 +213,19 @@
 	}
 }
 
+-(void) updateSideBarLocation:(CGPoint)loc
+{
+    FDRect *rect = [[FDRect alloc] initWithRect:[FDWindow leftWindow]];
+    if ([rect isIn:loc])
+    {
+        [sideBar setLocation:[sideBar getPosRight]];
+    }
+    else
+    {
+        [sideBar setLocation:[sideBar getPosLeft]];
+    }
+}
+
 -(void) moveCreatureId:(int)creatureId To:(CGPoint)pos showMenu:(BOOL)willShowMenu
 {
 	FDCreature *creature = [field getCreatureById:creatureId];
@@ -291,9 +306,8 @@
 	CCLOG(@"Post Method for attacking.");
 	
 	[targets retain];
-	NSMutableArray *dropItemList = [[NSMutableArray alloc] init];
 	
-	// Check whether the important game event is triggered
+    // Check whether the important game event is triggered
 	[eventListener isNotified];
 
 	if (creature.data.hpCurrent <= 0) {
@@ -323,8 +337,10 @@
 	CCLOG(@"Analyse dead complete.");
 	
 	// Drop Item
+	NSMutableArray *dropItemList = [[NSMutableArray alloc] init];
 	BOOL cannotCarryMore = FALSE;
-	for (FDCreature *target in targets) {
+    
+    for (FDCreature *target in targets) {
 		
 		if ([target getCreatureType] == CreatureType_Enemy && target.data.hpCurrent <= 0) {
 			
@@ -347,6 +363,28 @@
 			}
 		}
 	}
+	
+    if ([creature getCreatureType] == CreatureType_Enemy && creature.data.hpCurrent <= 0)
+    {
+        FDEnemy *enemy = (FDEnemy *)creature;
+        FDCreature *target = [targets objectAtIndex:0];
+        ItemDefinition *dropItem = [[DataDepot depot] getItemDefinition:[enemy getDropItem]];
+        if (dropItem != nil) {
+            [dropItemList addObject:dropItem];
+            
+            if (![dropItem isMoney]) {
+                // Add item
+                if ([target isItemListFull]) {
+                    cannotCarryMore = TRUE;
+                } else {
+                    [target.data.itemList addObject:[NSNumber numberWithInt:dropItem.identifier]];
+                }
+            } else {
+                // Add money
+                money += [(MoneyItemDefinition *)dropItem quantity];
+            }
+        }
+    }
 	
 	// Wake up if the AI is Idle
 	for (FDCreature *target in targets) {
@@ -498,13 +536,17 @@
 	ItemDefinition *item = [treasure getItem];
 	
 	// If the treasure is money, add to money
-	if ([item isMoney]) {
+	if ([item isMoney] && [creature getCreatureType] == CreatureType_Friend) {
 		// Add to money
 		money += [(MoneyItemDefinition *)item quantity];
 		return;
 	}
 	else {
 		[creature.data.itemList addObject:[NSNumber numberWithInt:item.identifier]];
+        
+        if ([creature getCreatureType] == CreatureType_Enemy) {
+            [(FDEnemy *)creature setDropItem:item.identifier];
+        }
 	}
 }
 

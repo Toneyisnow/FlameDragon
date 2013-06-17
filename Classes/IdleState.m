@@ -21,9 +21,10 @@
 
 -(void) clickedOn:(CGPoint)location
 {
+    [layers updateSideBarLocation:location];
+    
 	CGPoint position = [field convertLocToPos:[field getMapLocationbyScreen:location]];
-	
-	
+		
 	FDCreature *creature = [field getCreatureByPos:position];
 	
     if (creature != nil)
@@ -38,7 +39,7 @@
 			
 			nextState = [[ShowingMoveScopeState alloc] initWithLayers:layers Friend:(FDFriend *)creature];
 		}
-		else if ([creature getDefinition].identifier != 52001) {
+		else if (![creature isMarshMonster]) {
 			// Show status
 			[layers showItemStatusAsync:creature];
 			if ([creature.data.magicList count] > 0) {

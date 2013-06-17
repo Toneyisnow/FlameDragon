@@ -15,6 +15,10 @@
 {
 	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(initialBattle)];
 
+    [self loadPositionEvent:108 AtPosition:CGPointMake(35, 5) Action:@selector(onEscaped1)];
+	[self loadPositionEvent:119 AtPosition:CGPointMake(23,45) Action:@selector(onEscaped2)];
+    [self loadPositionEvent:115 AtPosition:CGPointMake(10,45) Action:@selector(onEscaped3)];
+    
 	[self loadDieEvent:1 Action:@selector(gameOver)];
 	[self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
 	
@@ -68,6 +72,10 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51102 Id:124] autorelease] Position:CGPointMake(14,44)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51102 Id:125] autorelease] Position:CGPointMake(28,42)];
 	
+    [self setAiOfId:108 getTreasure:CGPointMake(28,21) EscapeTo:CGPointMake(35, 5)];
+    [self setAiOfId:119 getTreasure:CGPointMake( 1,32) EscapeTo:CGPointMake(23,45)];
+    [self setAiOfId:115 getTreasure:CGPointMake(19,38) EscapeTo:CGPointMake(10,45)];
+    
 	// Talk
 	[layers appendToCurrentActivity:[[[FDDurationActivity alloc] initWithDuration:1.0] autorelease]];
 	for (int i = 1; i <= 12; i++) {
@@ -87,6 +95,21 @@
 	for (int i = 13; i <= 25; i++) {
 		[self showTalkMessage:11 conversation:1 sequence:i];
 	}
+}
+
+-(void) onEscaped1
+{
+    [self removeCreature:108];
+}
+
+-(void) onEscaped2
+{
+    [self removeCreature:119];
+}
+
+-(void) onEscaped3
+{
+    [self removeCreature:115];
 }
 
 -(void) enemyClear

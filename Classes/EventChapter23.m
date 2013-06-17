@@ -49,7 +49,17 @@
 	[field addFriend:[[[FDFriend alloc] initWithDefinition:28 Id:28] autorelease] Position:CGPointMake(20,31)];
 	[field addFriend:[[[FDFriend alloc] initWithDefinition:29 Id:29] autorelease] Position:CGPointMake(22,31)];
 	
-	// Add Enemies
+	// Talk
+	for (int i = 1; i <= 25; i++) {
+		[self showTalkMessage:23 conversation:1 sequence:i];
+	}
+    
+	[layers appendToCurrentActivityMethod:@selector(initialBattle2) Param1:nil Param2:nil Obj:self];
+}
+
+-(void) initialBattle2
+{
+    // Add Enemies
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52302 Id:101] autorelease] Position:CGPointMake(18,30)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52302 Id:102] autorelease] Position:CGPointMake(24,30)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52302 Id:103] autorelease] Position:CGPointMake(15,22)];
@@ -75,9 +85,9 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52308 Id:123] autorelease] Position:CGPointMake(22,20)];
 	
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52301 Id:199] autorelease] Position:CGPointMake(21,18)];
-	
-	// Talk
-	for (int i = 1; i <= 12; i++) {
+    
+    // Talk
+	for (int i = 26; i <= 30; i++) {
 		[self showTalkMessage:23 conversation:1 sequence:i];
 	}
 }

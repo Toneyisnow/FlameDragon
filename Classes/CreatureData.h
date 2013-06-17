@@ -24,7 +24,8 @@ typedef enum AIType {
 	AIType_Escape,
 	AIType_StandBy,
     AIType_Guard,
-	AIType_UnNoticable
+	AIType_UnNoticable,
+    AIType_Treasure
 } AIType;
 
 //

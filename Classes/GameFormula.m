@@ -157,6 +157,13 @@
 	return [result autorelease];
 }
 
++(AttackInformation *) magicWithIntId:(int)magicId From:(FDCreature *)creature To:(FDCreature *)target Field:(BattleField *)field
+{
+    MagicDefinition *magic = [[DataDepot depot] getMagicDefinition:magicId];
+    
+    return [self magicWithId:magic From:creature To:target Field:field];
+}
+
 +(AttackInformation *) magicWithId:(id)obj From:(FDCreature *)creature To:(FDCreature *)target Field:(BattleField *)field
 {
 	MagicDefinition *magic = (MagicDefinition *)obj;
@@ -349,7 +356,7 @@
 {
 	if (creature == nil) return;
 	
-	int roundCount = [FDRandom from:2 to:4];
+	int roundCount = [FDRandom from:20 to:25];
 	creature.data.statusPoisoned = roundCount;
 }
 

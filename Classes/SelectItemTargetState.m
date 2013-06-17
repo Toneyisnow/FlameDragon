@@ -35,8 +35,7 @@
 		if ([field isInScope:position])
 		{
 			FDCreature *creature = [field getCreatureByPos:position];
-			if ([creature isKindOfClass:[FDFriend class]]
-                || [creature isKindOfClass:[FDNpc class]]) {
+			if ([self canApplyItemOnCreature:creature]) {
 			
 				[field removeAllIndicators];
 				[layers useItem:currentFriend ItemIndex:itemIndex Target:creature];
@@ -51,6 +50,19 @@
 			shouldDispose = TRUE;
 		}
 	}
+}
+
+-(BOOL) canApplyItemOnCreature:(FDCreature *)creature
+{
+    NSNumber *itemId = [currentFriend.data.itemList objectAtIndex:itemIndex];
+     
+    // Special Case: only for Dark Eye, it should be used for Enemies
+    if ([itemId intValue] == 119) {
+        return ([creature getCreatureType] == CreatureType_Enemy);
+    }
+    
+   return ([creature getCreatureType] == CreatureType_Friend)
+        || ([creature getCreatureType] == CreatureType_Npc);
 }
 
 -(void) pressLeft

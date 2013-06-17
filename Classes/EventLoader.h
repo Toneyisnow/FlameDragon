@@ -36,11 +36,13 @@
 
 -(void) setAiOfId:(int)creatureId EscapeTo:(CGPoint)pos;
 -(void) setAiOfId:(int)creatureId withType:(AIType) type;
+-(void) setAiOfId:(int)creatureId getTreasure:(CGPoint)tPos EscapeTo:(CGPoint)ePos;
 
 -(BOOL) teamHasItem:(int)itemId;
 -(void) teamConsumeItem:(int)itemId;
 
 -(void) addItemToTeam:(int)itemId;
+-(void) removeCreature:(int)cId;
 
 -(void) gameOver;
 

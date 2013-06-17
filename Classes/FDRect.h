@@ -18,6 +18,7 @@
 }
 
 -(id) initWithX:(int)x Y:(int)y Width:(int)w Height:(int)h;
+-(id) initWithRect:(CGRect) rect;
 
 -(BOOL) isIn:(CGPoint)pos;
 

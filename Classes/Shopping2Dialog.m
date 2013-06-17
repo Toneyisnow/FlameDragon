@@ -42,8 +42,11 @@
 	[self close];
 	
 	// Close dialog
-	[(Shopping2Layer *)parentLayer setDialog:nil];
-	
+    if ([parentLayer isKindOfClass:[Shopping2Layer class]])
+    {
+        [(Shopping2Layer *)parentLayer setDialog:nil];
+    }
+
 	if (selectedCallback != nil) {
 		[selectedCallback performSelector:selectedMethod withObject:returnedObject];
 	}

@@ -20,6 +20,7 @@
 #import "CreatureDyingCondition.h"
 #import "TeamEliminatedCondition.h"
 #import "ArrivePositionCondition.h"
+#import "AITreasureParam.h"
 
 @implementation EventLoader
 
@@ -136,6 +137,19 @@
 	}
 }
 
+-(void) setAiOfId:(int)creatureId getTreasure:(CGPoint)tPos EscapeTo:(CGPoint)ePos
+{
+	FDCreature *creature = [field getCreatureById:creatureId];
+	
+	if (creature != nil) {
+		creature.data.aiType = AIType_Treasure;
+        
+        AITreasureParam *param = [[AITreasureParam alloc] initWithTreasurePos:tPos escapeTo:ePos];
+		creature.data.aiParam = param;
+        [param release];
+	}
+}
+
 -(void) setAiOfId:(int)creatureId withType:(AIType) type
 {
 	FDCreature *creature = [field getCreatureById:creatureId];
@@ -184,6 +198,14 @@
             break;
         }
     }
+}
+
+-(void) removeCreature:(int)cId
+{
+    FDCreature *c = [field getCreatureById:cId];
+	if (c != nil) {
+		[field removeObject:c];
+	}
 }
 
 -(void) gameOver

@@ -168,6 +168,8 @@
 		0257BBD417509F7F0080B5E9 /* Fight-748-2-17.png in Resources */ = {isa = PBXBuildFile; fileRef = 0257BBD117509F7F0080B5E9 /* Fight-748-2-17.png */; };
 		0257BBD517509F7F0080B5E9 /* Fight-748-2-18.png in Resources */ = {isa = PBXBuildFile; fileRef = 0257BBD217509F7F0080B5E9 /* Fight-748-2-18.png */; };
 		0257BBD617509F7F0080B5E9 /* Fight-748-2-19.png in Resources */ = {isa = PBXBuildFile; fileRef = 0257BBD317509F7F0080B5E9 /* Fight-748-2-19.png */; };
+		0257BBD9176DB2AB0080B5E9 /* VillageNonLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0257BBD8176DB2AA0080B5E9 /* VillageNonLayer.m */; };
+		0257BBDC176DCF1A0080B5E9 /* VillageCommonLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0257BBDB176DCF180080B5E9 /* VillageCommonLayer.m */; };
 		025DA50816284FDD00DD7C30 /* Chapter-03.strings in Resources */ = {isa = PBXBuildFile; fileRef = 025DA50716284FDD00DD7C30 /* Chapter-03.strings */; };
 		025DA92F162C4DE000DD7C30 /* Shopping2AmorDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 025DA92E162C4DE000DD7C30 /* Shopping2AmorDialog.m */; };
 		025DA9B016301B2C00DD7C30 /* FightingScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 025DA9AF16301B2C00DD7C30 /* FightingScene.m */; };
@@ -528,6 +530,8 @@
 		02CB2FC416CF6EBA00C985C7 /* Cursor-03.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CB2FC316CF6EB900C985C7 /* Cursor-03.png */; };
 		02CB2FC616D4533000C985C7 /* Background-12.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CB2FC516D4533000C985C7 /* Background-12.png */; };
 		02CB2FC816D4534D00C985C7 /* Tai-12.png in Resources */ = {isa = PBXBuildFile; fileRef = 02CB2FC716D4534D00C985C7 /* Tai-12.png */; };
+		02CB7107176E2310008A20C2 /* AITreasureDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB7106176E2310008A20C2 /* AITreasureDelegate.m */; };
+		02CB710A176E23A3008A20C2 /* AITreasureParam.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CB7109176E23A3008A20C2 /* AITreasureParam.m */; };
 		02D0C6E216FC8EC300D48625 /* CCVideoPlayerImpliOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 0213447716DE821A00AB5D16 /* CCVideoPlayerImpliOS.m */; };
 		02D0C6E316FC8F9400D48625 /* libcocos2d libraries.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 506EE05E10304ED200A389B3 /* libcocos2d libraries.a */; };
 		02D308B715E2973900CA1799 /* Chapter-02.dat in Resources */ = {isa = PBXBuildFile; fileRef = 02D308B615E2973900CA1799 /* Chapter-02.dat */; };
@@ -4753,6 +4757,10 @@
 		0257BBD117509F7F0080B5E9 /* Fight-748-2-17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-748-2-17.png"; sourceTree = "<group>"; };
 		0257BBD217509F7F0080B5E9 /* Fight-748-2-18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-748-2-18.png"; sourceTree = "<group>"; };
 		0257BBD317509F7F0080B5E9 /* Fight-748-2-19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Fight-748-2-19.png"; sourceTree = "<group>"; };
+		0257BBD7176DB2A90080B5E9 /* VillageNonLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VillageNonLayer.h; sourceTree = "<group>"; };
+		0257BBD8176DB2AA0080B5E9 /* VillageNonLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VillageNonLayer.m; sourceTree = "<group>"; };
+		0257BBDA176DCF170080B5E9 /* VillageCommonLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VillageCommonLayer.h; sourceTree = "<group>"; };
+		0257BBDB176DCF180080B5E9 /* VillageCommonLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VillageCommonLayer.m; sourceTree = "<group>"; };
 		025DA50716284FDD00DD7C30 /* Chapter-03.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = "Chapter-03.strings"; path = "Strings/Maps/Chapter-03.strings"; sourceTree = "<group>"; };
 		025DA92D162C4DE000DD7C30 /* Shopping2AmorDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shopping2AmorDialog.h; sourceTree = "<group>"; };
 		025DA92E162C4DE000DD7C30 /* Shopping2AmorDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shopping2AmorDialog.m; sourceTree = "<group>"; };
@@ -5247,6 +5255,10 @@
 		02CB2FC316CF6EB900C985C7 /* Cursor-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cursor-03.png"; path = "Others/Cursor-03.png"; sourceTree = "<group>"; };
 		02CB2FC516D4533000C985C7 /* Background-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Background-12.png"; path = "Backgrounds/Background-12.png"; sourceTree = "<group>"; };
 		02CB2FC716D4534D00C985C7 /* Tai-12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-12.png"; path = "Tais/Tai-12.png"; sourceTree = "<group>"; };
+		02CB7105176E2310008A20C2 /* AITreasureDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AITreasureDelegate.h; sourceTree = "<group>"; };
+		02CB7106176E2310008A20C2 /* AITreasureDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AITreasureDelegate.m; sourceTree = "<group>"; };
+		02CB7108176E23A2008A20C2 /* AITreasureParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AITreasureParam.h; sourceTree = "<group>"; };
+		02CB7109176E23A3008A20C2 /* AITreasureParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AITreasureParam.m; sourceTree = "<group>"; };
 		02D308B615E2973900CA1799 /* Chapter-02.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-02.dat"; path = "Data/Maps/Chapter-02.dat"; sourceTree = "<group>"; };
 		02D3094D15F6598F00CA1799 /* SpecialItemDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialItemDefinition.h; sourceTree = "<group>"; };
 		02D3094E15F6598F00CA1799 /* SpecialItemDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialItemDefinition.m; sourceTree = "<group>"; };
@@ -9573,6 +9585,10 @@
 				02B59E5C167423230066783F /* AIStandByDelegate.m */,
 				022ADC7C172C248200F15034 /* AIGuardDelegate.h */,
 				022ADC7D172C248500F15034 /* AIGuardDelegate.m */,
+				02CB7105176E2310008A20C2 /* AITreasureDelegate.h */,
+				02CB7106176E2310008A20C2 /* AITreasureDelegate.m */,
+				02CB7108176E23A2008A20C2 /* AITreasureParam.h */,
+				02CB7109176E23A3008A20C2 /* AITreasureParam.m */,
 			);
 			name = AI;
 			sourceTree = "<group>";
@@ -9768,8 +9784,12 @@
 				02BA6F7814C9AF9D0028C9E7 /* GameWinLayer.m */,
 				02759D39154A6FEA00853895 /* VillageScene.h */,
 				02759D3A154A6FEA00853895 /* VillageScene.m */,
+				0257BBDA176DCF170080B5E9 /* VillageCommonLayer.h */,
+				0257BBDB176DCF180080B5E9 /* VillageCommonLayer.m */,
 				02759D3C154A702600853895 /* VillageLayer.h */,
 				02759D3D154A702600853895 /* VillageLayer.m */,
+				0257BBD7176DB2A90080B5E9 /* VillageNonLayer.h */,
+				0257BBD8176DB2AA0080B5E9 /* VillageNonLayer.m */,
 				022D386C16171F470020F816 /* VillageLabel.h */,
 				022D386D16171F470020F816 /* VillageLabel.m */,
 				0239E57B16FDFCD100C8CEB0 /* PickFriendScene.h */,
@@ -21265,6 +21285,10 @@
 				022ADC7A1726C01300F15034 /* MagicalScene2.m in Sources */,
 				022ADC7E172C248800F15034 /* AIGuardDelegate.m in Sources */,
 				022ADC81173029CD00F15034 /* SelectTransferPositionState.m in Sources */,
+				0257BBD9176DB2AB0080B5E9 /* VillageNonLayer.m in Sources */,
+				0257BBDC176DCF1A0080B5E9 /* VillageCommonLayer.m in Sources */,
+				02CB7107176E2310008A20C2 /* AITreasureDelegate.m in Sources */,
+				02CB710A176E23A3008A20C2 /* AITreasureParam.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -21451,6 +21475,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Yi Sui (74QF9MJWJZ)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Yi Sui (74QF9MJWJZ)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -21468,7 +21493,8 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = FlameDragon;
-				PROVISIONING_PROFILE = "FE57999F-C1E2-455F-8E68-F55BCAF84287";
+				PROVISIONING_PROFILE = "05A4A3C2-EDCF-4731-806C-0E45B337E5E1";
+				"PROVISIONING_PROFILE[sdk=*]" = "05A4A3C2-EDCF-4731-806C-0E45B337E5E1";
 				VALID_ARCHS = "armv7 armv7s";
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -21542,6 +21568,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = (

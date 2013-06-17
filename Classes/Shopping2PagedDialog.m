@@ -11,8 +11,6 @@
 
 @implementation Shopping2PagedDialog
 
-
-
 -(void) initializeWithList:(NSMutableArray *)iList pageIndex:(int)pIndex
 {
 	CCLOG(@"Paged Dialog inited. %d, %d", [iList count], pIndex);

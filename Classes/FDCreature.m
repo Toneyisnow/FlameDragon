@@ -71,20 +71,19 @@
 	// TODO: this should be updated
 	//attackRange = [[FDRange alloc] initWithMin:1 Max:[definition attackRange]];
 	
-	if (data.attackItemIndex < 0 || data.defendItemIndex < 0)
-	{
-	for (int i = 0;i < [data.itemList count]; i++) {
+	if (dat == nil && (data.attackItemIndex < 0 || data.defendItemIndex < 0)) {
+        for (int i = 0;i < [data.itemList count]; i++) {
 		
-		int itemId = [[data.itemList objectAtIndex:i] intValue];
-		ItemDefinition *def = [[DataDepot depot] getItemDefinition:itemId];
+            int itemId = [[data.itemList objectAtIndex:i] intValue];
+            ItemDefinition *def = [[DataDepot depot] getItemDefinition:itemId];
 		
-		if (data.attackItemIndex < 0 && [def isKindOfClass:[AttackItemDefinition class]]) {
-			data.attackItemIndex = i;
-		}
-		if (data.defendItemIndex < 0 && [def isKindOfClass:[DefendItemDefinition class]]) {
-			data.defendItemIndex = i;
-		}
-	}
+            if (data.attackItemIndex < 0 && [def isKindOfClass:[AttackItemDefinition class]]) {
+                data.attackItemIndex = i;
+            }
+            if (data.defendItemIndex < 0 && [def isKindOfClass:[DefendItemDefinition class]]) {
+                data.defendItemIndex = i;
+            }
+        }
 	}
 	// By default the AI will be
 	if (dat == nil) {
@@ -451,7 +450,24 @@
 
 -(BOOL) canFireMagic
 {
-	return ([data.magicList count] > 0) && !hasMoved && (data.statusProhibited <= 0);
+    if ([data.magicList count] <= 0 || data.statusProhibited > 0)
+    {
+        return NO;
+    }
+    
+    if (!hasMoved)
+    {
+        return YES;
+    }
+    
+    for (NSNumber *magicId in data.magicList) {
+        MagicDefinition  *magic = [[DataDepot depot] getMagicDefinition:magicId];
+        if ([magic canFireAfterMove])
+        {
+            return YES;
+        }
+    }
+    return NO;
 }
 
 -(BOOL) canFly {

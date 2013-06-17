@@ -12,6 +12,8 @@
 #import "AIEscapeDelegate.h"
 #import "AIStandByDelegate.h"
 #import "AIGuardDelegate.h"
+#import "AITreasureDelegate.h"
+#import "AITreasureParam.h"
 #import "FDEnemy.h"
 #import "FDFriend.h"
 #import "FDNpc.h"
@@ -109,6 +111,10 @@
 			break;
 		case AIType_Guard:
 			delegate = [[AIGuardDelegate alloc] initWithCreature:creature Layers:layers];
+			break;
+		case AIType_Treasure:
+			delegate = [[AITreasureDelegate alloc] initWithCreature:creature Layers:layers];
+            [delegate setParameter:creature.data.aiParam];
 			break;
 		default:
 			break;
