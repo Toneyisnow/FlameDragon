@@ -36,8 +36,8 @@
 
 -(void) doAction
 {
-	[object performSelector:method];
 	isActivated = FALSE;
+	[object performSelector:method];
 }
 
 -(BOOL) isActiveEvent
@@ -46,6 +46,11 @@
 }
 
 -(void) deactivate
+{
+	isActivated = FALSE;
+}
+
+-(void) reactivate
 {
 	isActivated = FALSE;
 }

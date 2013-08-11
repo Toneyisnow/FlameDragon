@@ -67,6 +67,7 @@
 -(BOOL) canFly;
 -(BOOL) isKnight;
 -(BOOL) isMarshMonster;
+-(BOOL) isDragon;
 
 @property (nonatomic) int identifier;
 @property (nonatomic) int animationId;

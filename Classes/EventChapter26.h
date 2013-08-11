@@ -12,6 +12,7 @@
 
 @interface EventChapter26 : EventLoader {
 	
+    FDEvent *eventWode;
 }
 
 @end

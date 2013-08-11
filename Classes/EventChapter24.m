@@ -139,11 +139,13 @@
 
 -(void) enemyClear
 {
-	for (int i = 1; i <= 11; i++) {
+	[layers gameCleared];
+    
+    for (int i = 1; i <= 11; i++) {
 		[self showTalkMessage:24 conversation:2 sequence:i];
 	}
 	
-	[layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil Obj:self];
+	[layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];
 }
 
 @end

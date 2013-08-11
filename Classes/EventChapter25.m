@@ -155,18 +155,20 @@
 
 -(void) onSword
 {
-    [field addEnemy:[[[FDEnemy alloc] initWithDefinition:52509 Id:301 DropItem:297] autorelease] Position:CGPointMake(11,8)];
+    [field addEnemy:[[[FDEnemy alloc] initWithDefinition:52509 Id:301 DropItem:297] autorelease] Position:CGPointMake(11,1)];
 }
 
 -(void) enemyClear
 {
-    [field addFriend:[[[FDFriend alloc] initWithDefinition:31 Id:31] autorelease] Position:CGPointMake(11,25)];
+    [layers gameCleared];
+    
+    [field addFriend:[[[FDFriend alloc] initWithDefinition:31 Id:31] autorelease] Position:CGPointMake(1,34)];
     
 	for (int i = 1; i <= 18; i++) {
 		[self showTalkMessage:25 conversation:4 sequence:i];
 	}
 	
-	[layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil Obj:self];
+	[layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];
 }
 
 @end

@@ -483,7 +483,11 @@
 }
 
 -(BOOL) isMarshMonster {
-	return [definition isMarshMonster];
+    return [definition isMarshMonster];
+}
+
+-(BOOL) isInvisible {
+	return [definition isMarshMonster] || [definition isDragon];
 }
 
 -(BOOL) isNoticable {

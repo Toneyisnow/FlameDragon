@@ -39,7 +39,7 @@
 			
 			nextState = [[ShowingMoveScopeState alloc] initWithLayers:layers Friend:(FDFriend *)creature];
 		}
-		else if (![creature isMarshMonster]) {
+		else if (![creature isInvisible]) {
 			// Show status
 			[layers showItemStatusAsync:creature];
 			if ([creature.data.magicList count] > 0) {

@@ -241,7 +241,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "1059"
          endingLineNumber = "1059"
-         landmarkName = "-pickUpTreasure:"
+         landmarkName = "-showItemStatusAsync:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -280,7 +280,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "1226"
          endingLineNumber = "1226"
-         landmarkName = "-pickUpTreasure:"
+         landmarkName = "-settleFriend:At:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

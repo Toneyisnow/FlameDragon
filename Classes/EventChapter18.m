@@ -146,7 +146,9 @@
 
 -(void) enemyClear
 {
-	FDCreature *lanNpc = [field getCreatureById:20];
+	[layers gameCleared];
+    
+    FDCreature *lanNpc = [field getCreatureById:20];
 	FDFriend *lan = [[FDFriend alloc] initWithDefinition:20 Id:20];
 	[field addFriend:lan Position:[field getObjectPos:lanNpc]];
 	[lan release];

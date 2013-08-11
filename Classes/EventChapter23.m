@@ -14,13 +14,15 @@
 -(void) loadEvents
 {
     [self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(initialBattle)];
-	[self loadTurnEvent:TurnType_Friend Turn:5 Action:@selector(reinforcement)];
-	[self loadTurnEvent:TurnType_Friend Turn:8 Action:@selector(reinforcement2)];
+	[self loadTurnEvent:TurnType_Friend Turn:15 Action:@selector(reinforcement)];
+	[self loadTurnEvent:TurnType_Friend Turn:18 Action:@selector(reinforcement2)];
 
 	[self loadDieEvent:1 Action:@selector(gameOver)];
 	[self loadDieEvent:25 Action:@selector(gameOver)];
-	[self loadDieEvent:199 Action:@selector(enemyClear)];
+	[self loadDyingEvent:199 Action:@selector(bossDead)];
 	
+    [self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
+    
 	NSLog(@"Chapter23 events loaded.");
 }
 
@@ -126,10 +128,78 @@
 	
 }
 
+-(void) bossDead
+{
+    [self showTalkMessage:23 conversation:2 sequence:1];
+}
+
 -(void) enemyClear
 {
-	
+	[layers gameCleared];
+    
+    for (int i = 2; i <= 5; i++) {
+		[self showTalkMessage:23 conversation:2 sequence:i];
+	}
+
+    // Check Kalisi join
+    if ([self teamHasItem:814])
+    {
+        for (int i = 6; i <= 12; i++) {
+            [self showTalkMessage:23 conversation:2 sequence:i];
+        }
+    }
+    else
+    {
+        for (int i = 13; i <= 16; i++) {
+            [self showTalkMessage:23 conversation:2 sequence:i];
+        }
+        [layers appendToCurrentActivityMethod:@selector(removeKalisi) Param1:nil Param2:nil Obj:self];
+    }
+    
+    [self showTalkMessage:23 conversation:2 sequence:17];
+    
+    FDCreature *midi = [field getCreatureById:18];
+    if (midi == nil)
+    {
+        midi = [field getDeadCreatureById:18];
+    }
+    
+    // Check Luodeman join
+    if ([layers getTurnNumber] > 15) {
+        for (int i = 28; i <= 30; i++) {
+            [self showTalkMessage:23 conversation:2 sequence:i];
+        }
+        [layers appendToCurrentActivityMethod:@selector(removeLuodeman) Param1:nil Param2:nil Obj:self];
+    }
+    else if (midi != nil && midi.data.level < 25)
+    {
+        for (int i = 18; i <= 27; i++) {
+            [self showTalkMessage:23 conversation:2 sequence:i];
+        }
+        [layers appendToCurrentActivityMethod:@selector(removeLuodeman) Param1:nil Param2:nil Obj:self];
+    }
+    else
+    {
+        for (int i = 32; i <= 36; i++) {
+            [self showTalkMessage:23 conversation:2 sequence:i];
+        }
+    }
+    
+    for (int i = 37; i <= 51; i++) {
+        [self showTalkMessage:23 conversation:2 sequence:i];
+    }
+    
 	[layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];
+}
+
+-(void) removeKalisi
+{
+    [self removeFriend:28];
+}
+
+-(void) removeLuodeman
+{
+    [self removeFriend:29];
 }
 
 @end

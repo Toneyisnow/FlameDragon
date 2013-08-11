@@ -130,26 +130,11 @@
 
 -(CCScene *) loadTestingGame
 {
-	ChapterRecord *record = [ChapterRecord generateRecord:23 money:60000];
+	ChapterRecord *record = [ChapterRecord generateRecord:22 money:60000];
 	
-	[[record friendRecords] addObject:[self loadTestingRecord:1 level:28]];
-	[[record friendRecords] addObject:[self loadTestingRecord:2 level:28]];
-	[[record friendRecords] addObject:[self loadTestingRecord:3 level:28]];
-	[[record friendRecords] addObject:[self loadTestingRecord:4 level:22]];
-	[[record friendRecords] addObject:[self loadTestingRecord:5 level:22]];
-	[[record friendRecords] addObject:[self loadTestingRecord:6 level:22]];
-	[[record friendRecords] addObject:[self loadTestingRecord:7 level:22]];
-	[[record friendRecords] addObject:[self loadTestingRecord:8 level:22]];
-	[[record friendRecords] addObject:[self loadTestingRecord:9 level:22]];
-	[[record friendRecords] addObject:[self loadTestingRecord:10 level:22]];
-	[[record friendRecords] addObject:[self loadTestingRecord:11 level:25]];
-    
-	[[record friendRecords] addObject:[self loadTestingRecord:12 level:25]];
-	[[record friendRecords] addObject:[self loadTestingRecord:13 level:25]];
-	[[record friendRecords] addObject:[self loadTestingRecord:14 level:25]];
-	[[record friendRecords] addObject:[self loadTestingRecord:15 level:25]];
-	[[record friendRecords] addObject:[self loadTestingRecord:16 level:25]];
-	[[record friendRecords] addObject:[self loadTestingRecord:17 level:25]];
+    for (int i = 1; i <= 27; i++) {
+        [[record friendRecords] addObject:[self loadTestingRecord:i level:99]];
+	}
 	
 	VillageScene *scene = [VillageScene node];
 	[scene loadWithRecord:record];

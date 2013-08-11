@@ -105,20 +105,26 @@
 	NSString *talkMessage = [FDLocalString chapter:charId conversation:converId sequence:sequenceId];
 	NSString *creatureIdStr = [FDLocalString chapterCreature:charId conversation:converId sequence:sequenceId];
 	
-	FDCreature *creature = [field getCreatureById:[creatureIdStr intValue]];
+    int creatureId = [creatureIdStr intValue];
+	
+    [self showTalkMessage:talkMessage creature:creatureId];
+}
+
+-(void) showTalkMessage:(NSString *)talkMessage creature:(int)creatureId
+{
+    FDCreature *creature = [field getCreatureById:creatureId];
 	if (creature == nil) {
-		creature = [field getDeadCreatureById:[creatureIdStr intValue]];
+		creature = [field getDeadCreatureById:creatureId];
 	}
 	if (creature == nil) {
-		creature = [field getUnsettledCreatureById:[creatureIdStr intValue]];
+		creature = [field getUnsettledCreatureById:creatureId];
 	}
 	
 	[layers appendToCurrentActivityMethod:@selector(setCursorToObject:) Param1:creature Param2:nil Obj:field];
 	
-	FDTalkActivity *talk = [[FDTalkActivity alloc] initWithCreature:creature Message:talkMessage Layer:[layers getMessageLayer]];	
+	FDTalkActivity *talk = [[FDTalkActivity alloc] initWithCreature:creature Message:talkMessage Layer:[layers getMessageLayer]];
 	[layers appendToCurrentActivity:talk];
     [talk release];
-    
 }
 
 -(void) settleFriend:(int)friendIndex At:(CGPoint)loc
@@ -178,13 +184,13 @@
 {
     for (FDCreature *c in [field getFriendList]) {
         if ([c.data hasItem:itemId]) {
-            [c.data removeItem:itemId];
+            [c.data removeItemWithId:itemId];
             return;
         }
     }
     for (FDCreature *c in [field getDeadCreatureList]) {
         if ([c.data hasItem:itemId]) {
-            [c.data removeItem:itemId];
+            [c.data removeItemWithId:itemId];
             return;
         }
     }
@@ -197,6 +203,24 @@
             [creature addItem:itemId];
             break;
         }
+    }
+}
+
+-(void) enemyClear
+{
+    
+}
+
+-(void) removeFriend:(int) cId
+{
+    FDCreature *c = [field getCreatureById:cId];
+    if (c != nil) {
+        [[field getFriendList] removeObject:c];
+    }
+    
+    FDCreature *d = [field getDeadCreatureById:cId];
+    if (d != nil) {
+        [[field getDeadCreatureList] removeObject:d];
     }
 }
 

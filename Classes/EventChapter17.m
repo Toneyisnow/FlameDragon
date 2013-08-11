@@ -149,7 +149,9 @@
 
 -(void) enemyClear
 {
-	if (!shouldRemoveMidi) {
+	[layers gameCleared];
+    
+    if (!shouldRemoveMidi) {
 		for (int i = 1; i <= 4; i++) {
 			[self showTalkMessage:17 conversation:4 sequence:i];
 		}

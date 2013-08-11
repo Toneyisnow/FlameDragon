@@ -151,15 +151,7 @@
 
 -(void) removeLaiting
 {
-	FDCreature *f13 = [field getCreatureById:13];
-    if (f13 != nil) {
-        [[field getFriendList] removeObject:f13];
-    }
-        
-    FDCreature *d13 = [field getDeadCreatureById:13];
-    if (d13 != nil) {
-        [[field getDeadCreatureList] removeObject:d13];
-    }
+    [self removeFriend:13];
 }
 
 

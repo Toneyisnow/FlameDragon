@@ -15,6 +15,7 @@
 {
 	self = [super init];
 	
+    // If creatureId equals 0, means all of the creatures
 	creatureId = c;
 	eventPosition = pos;
 	
@@ -26,7 +27,7 @@
 	BattleField *field = [[layers getFieldLayer] getField];
 	
 	FDCreature *creature = [field getCreatureByPos:eventPosition];
-	if (creature != nil && [creature getIdentifier] == creatureId) {
+	if (creature != nil && (creatureId == 0 || [creature getIdentifier] == creatureId)) {
 		return TRUE;
 	}
 

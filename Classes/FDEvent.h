@@ -31,6 +31,7 @@
 -(void) doAction;
 
 -(void) deactivate;
+-(void) reactivate;
 -(BOOL) isActiveEvent;
 
 -(void) setDependentEvent:(FDEvent *)event;

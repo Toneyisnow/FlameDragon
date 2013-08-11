@@ -146,7 +146,9 @@
 
 -(void) enemyClear
 {
-	BOOL matchCriteria = YES;
+	[layers gameCleared];
+    
+    BOOL matchCriteria = YES;
 	FDCreature *suoer = [field getCreatureById:1];
 	if (suoer.data.hpMax < 320) {
 		matchCriteria = NO;

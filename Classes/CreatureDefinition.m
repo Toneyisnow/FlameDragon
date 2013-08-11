@@ -221,6 +221,10 @@
     return (identifier == 761 || identifier == 52001);
 }
 
+-(BOOL) isDragon {
+    return (identifier == 52509);
+}
+
 -(int) getMaximumLevel {
     
     if (race == 7) {

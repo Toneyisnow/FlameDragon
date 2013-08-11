@@ -33,6 +33,7 @@
 -(int) loadPositionEvent:(int)creatureId AtPosition:(CGPoint)pos Action:(SEL)action;
 
 -(void) showTalkMessage:(int)charId conversation:(int)converId sequence:(int)sequenceId;
+-(void) showTalkMessage:(NSString *)talkMessage creature:(int)creatureId;
 
 -(void) setAiOfId:(int)creatureId EscapeTo:(CGPoint)pos;
 -(void) setAiOfId:(int)creatureId withType:(AIType) type;
@@ -43,6 +44,7 @@
 
 -(void) addItemToTeam:(int)itemId;
 -(void) removeCreature:(int)cId;
+-(void) removeFriend:(int) cId;
 
 -(void) gameOver;
 

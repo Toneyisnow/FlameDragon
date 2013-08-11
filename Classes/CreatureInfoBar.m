@@ -129,7 +129,7 @@
 		}
 	
 		// Show the value
-		NSString *mpString = (creature.data.hpCurrent < 1000) ? [NSString stringWithFormat:@"%03d", mp] : @"???";
+		NSString *mpString = (creature.data.mpCurrent < 1000) ? [NSString stringWithFormat:@"%03d", mp] : @"???";
 		mpValue = [[FDSprite alloc] initWithString:mpString Size:10];
 		[mpValue setLocation:CGPointMake(178, 11)];
 		[baseSprite addSprite:mpValue zOrder:1];

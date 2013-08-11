@@ -69,6 +69,7 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52204 Id:117] autorelease] Position:CGPointMake(24,9)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52204 Id:118] autorelease] Position:CGPointMake(22,19)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52204 Id:119 DropItem:902] autorelease] Position:CGPointMake(23,19)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52204 Id:120] autorelease] Position:CGPointMake(24,19)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52205 Id:120] autorelease] Position:CGPointMake(15,28)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52205 Id:121] autorelease] Position:CGPointMake(31,28)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52205 Id:122] autorelease] Position:CGPointMake(22,22)];
@@ -101,9 +102,20 @@
 	
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52201 Id:199 DropItem:344] autorelease] Position:CGPointMake(23,17)];
 	
-	// Add NPC
-	[field addNpc:[[[FDNpc alloc] initWithDefinition:901 Id:901] autorelease] Position:CGPointMake(25, 9)];
-	
+    for (int i = 105; i <= 108; i++) {
+        [self setAiOfId:i withType:AIType_Guard];
+    }
+    for (int i = 118; i <= 120; i++) {
+        [self setAiOfId:i withType:AIType_Guard];
+    }
+    for (int i = 126; i <= 134; i++) {
+        [self setAiOfId:i withType:AIType_Guard];
+    }
+    for (int i = 143; i <= 148; i++) {
+        [self setAiOfId:i withType:AIType_Guard];
+    }
+    [self setAiOfId:199 withType:AIType_Guard];
+    
 	// Talk
 	for (int i = 1; i <= 11; i++) {
 		[self showTalkMessage:22 conversation:1 sequence:i];
@@ -112,17 +124,17 @@
 
 -(void) reinforcement
 {
-	// Talk
-	for (int i = 1; i <= 3; i++) {
-		[self showTalkMessage:22 conversation:2 sequence:i];
-	}
-	
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52209 Id:201] autorelease] Position:CGPointMake(2,42)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52209 Id:202] autorelease] Position:CGPointMake(3,41)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52209 Id:203] autorelease] Position:CGPointMake(4,42)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52209 Id:204] autorelease] Position:CGPointMake(42,42)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52209 Id:205] autorelease] Position:CGPointMake(43,41)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52209 Id:206] autorelease] Position:CGPointMake(44,42)];
+    
+    // Talk
+	for (int i = 1; i <= 3; i++) {
+		[self showTalkMessage:22 conversation:2 sequence:i];
+	}
 }
 
 -(void) reinforcement2
@@ -153,7 +165,15 @@
 
 -(void) enemyClear
 {
-	for (int i = 2; i <= 14; i++) {
+	[layers gameCleared];
+    
+    // Add transfer gun to xierfa
+    FDCreature *xierfa = [field getCreatureById:25];
+    if (xierfa != nil) {
+        [xierfa.data addItem:263];
+    }
+    
+    for (int i = 2; i <= 14; i++) {
 		[self showTalkMessage:22 conversation:4 sequence:i];
 	}
 	
