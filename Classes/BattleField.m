@@ -283,9 +283,16 @@
 			if (c != nil && ([c getCreatureType] == enemyType1 || [c getCreatureType] == enemyType2))
 			{
 				[map setX:i Y:j Value: PathBlockType_Blocked];
+				[map setX:i+1 Y:j Value: PathBlockType_Blocked];
+				[map setX:i-1 Y:j Value: PathBlockType_Blocked];
+				[map setX:i Y:j+1 Value: PathBlockType_Blocked];
+				[map setX:i Y:j-1 Value: PathBlockType_Blocked];
+				
 			}
 		}
 	}
+	
+	[map setX:pos.x Y:pos.y Value: PathBlockType_Blocked];
 	
 	PathResolver *resolver = [[PathResolver alloc] initWithMap:map Width:fieldWidth Height:fieldHeight];
 	
