@@ -92,7 +92,7 @@
 			[target.data clearStatusFrozen];
 			break;
 		case 406:
-			target.hasMoved = target.hasActioned = FALSE;
+			[target startTurn];
 			break;
 		case 407:
 			[GameFormula actionedByEnhanceAp:target];
