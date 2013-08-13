@@ -71,8 +71,8 @@
 
 -(int) getPoisonRate
 {
-	// Cui Du Dao
-	if (identifier == 214) {
+	// Cui Du Dao, Hei An Jian, Hei An Gong
+	if (identifier == 214 || identifier == 205 || identifier == 247) {
 		return 30;
 	}
 	
