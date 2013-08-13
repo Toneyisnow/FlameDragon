@@ -40,8 +40,9 @@
 			MagicDefinition *magic = [[DataDepot depot] getMagicDefinition:magicId];
 			
 			NSMutableArray *targetSet = [field getCreaturesAt:position Range:magic.effectRange 
-													  BadGuys:(magic.magicType == MagicType_Attack || magic.magicType == MagicType_Offensive)];
-			if ([targetSet count] > 0) {
+											  BadGuys:(magic.magicType == MagicType_Attack || magic.magicType == MagicType_Offensive)];
+			// Transport magic cannot tranport himself/herself
+			if ([targetSet count] > 0 && !(magic.identifier == 501 && [[targetSet objectAt:0] getIdentifier] == [currentFriend getIdentifier])) {
 				
                 [field removeAllIndicators];
                 [field setCursorSize:1];
