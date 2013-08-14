@@ -28,7 +28,7 @@
 	[self loadDieEvent:1 Action:@selector(gameOver)];
 	[self loadDieEvent:2 Action:@selector(gameOver)];
 	[self loadDieEvent:31 Action:@selector(gameOver)];
-	[self loadDieEvent:139 Action:@selector(bossDead)];
+	[self loadDyingEvent:139 Action:@selector(bossDead)];
 	
     eventWode = [self loadPositionEvent:0 AtPosition:CGPointMake(2,47) Action:@selector(onWode)];
 	
@@ -93,7 +93,7 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52610 Id:129] autorelease] Position:CGPointMake(3,19)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52610 Id:130] autorelease] Position:CGPointMake(4,18)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52610 Id:131] autorelease] Position:CGPointMake(2,18)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52610 Id:132] autorelease] Position:CGPointMake(2,17)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52610 Id:132] autorelease] Position:CGPointMake(3,17)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52610 Id:133] autorelease] Position:CGPointMake(29,19)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52610 Id:134] autorelease] Position:CGPointMake(28,18)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52610 Id:135] autorelease] Position:CGPointMake(30,18)];

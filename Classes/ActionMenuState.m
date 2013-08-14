@@ -258,7 +258,7 @@
 {
 	int itemIndex = [num intValue];
 	
-	if (itemIndex > 0) {
+	if (itemIndex >= 0) {
 		[layers exchangeTreasure:currentFriend withItem:itemIndex];
 	}
 	

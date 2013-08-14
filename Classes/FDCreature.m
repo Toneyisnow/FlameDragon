@@ -320,7 +320,7 @@
 
 -(BOOL) canAttack
 {
-	if ([self getItemId:data.attackItemIndex] > 0) {
+	if ([self getItemId:data.attackItemIndex] > 0 && data.statusFrozen == 0) {
 		return TRUE;
 	}
 	
@@ -461,12 +461,13 @@
     }
     
     for (NSNumber *magicId in data.magicList) {
-        MagicDefinition  *magic = [[DataDepot depot] getMagicDefinition:magicId];
+        MagicDefinition  *magic = [[DataDepot depot] getMagicDefinition:[magicId intValue]];
         if ([magic canFireAfterMove])
         {
             return YES;
         }
     }
+    
     return NO;
 }
 

@@ -21,6 +21,8 @@
 	[self loadTeamEvent:CreatureType_Npc Action:@selector(gameOver)];
 	[self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
 	
+    [self loadPositionEvent:125 AtPosition:CGPointMake(25,1) Action:@selector(onEscaped)];
+	
 	[self loadPositionEvent:1 AtPosition:CGPointMake(25,6) Action:@selector(onHeroBadge)];
 	
 	NSLog(@"Chapter13 events loaded.");
@@ -73,7 +75,7 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51302 Id:122 DropItem:803] autorelease] Position:CGPointMake(36,17)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51302 Id:123] autorelease] Position:CGPointMake(37,19)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51302 Id:124] autorelease] Position:CGPointMake(39,16)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51302 Id:125] autorelease] Position:CGPointMake(10,3)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51302 Id:125 DropItem:802] autorelease] Position:CGPointMake(10,3)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51302 Id:126] autorelease] Position:CGPointMake(40,10)];
 	
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51303 Id:127] autorelease] Position:CGPointMake(31,17)];
@@ -84,6 +86,8 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51303 Id:132] autorelease] Position:CGPointMake(39,21)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51303 Id:133] autorelease] Position:CGPointMake(34,25)];
 	
+    [self setAiOfId:125 getTreasure:CGPointMake(6,4) EscapeTo:CGPointMake(25,1)];
+    
 	
 	// Add NPC
 	[field addNpc:[[[FDNpc alloc] initWithDefinition:51305 Id:51] autorelease] Position:CGPointMake(20,15)];
@@ -122,6 +126,11 @@
 	{
 		[suoer addItem:811];
 	}
+}
+
+-(void) onEscaped
+{
+    [self removeCreature:125];
 }
 
 -(void) hawateAppear

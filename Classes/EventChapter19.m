@@ -15,6 +15,7 @@
 {
 	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(initialBattle)];
 	[self loadTurnEvent:TurnType_Friend Turn:4 Action:@selector(batch2)];
+	[self loadTurnEvent:TurnType_Friend Turn:6 Action:@selector(banaAppear)];
 	[self loadTurnEvent:TurnType_Friend Turn:8 Action:@selector(batch3)];
 
     [self loadPositionEvent:151 AtPosition:CGPointMake(25,5) Action:@selector(onEscaped1)];
@@ -117,9 +118,22 @@
     [self setAiOfId:153 withType:AIType_Guard];
     
 	// Talk
-	for (int i = 1; i <= 13; i++) {
+	for (int i = 1; i <= 8; i++) {
 		[self showTalkMessage:19 conversation:1 sequence:i];
 	}
+}
+
+-(void) banaAppear
+{
+    FDFriend *banaLong = [[FDFriend alloc] initWithDefinition:22 Id:22];
+    [field addFriend:banaLong Position:CGPointMake(4,45)];
+	[layers moveCreature:banaLong To:CGPointMake(4, 40) showMenu:FALSE];
+    
+    for (int i = 9; i <= 13; i++) {
+		[self showTalkMessage:19 conversation:1 sequence:i];
+	}
+    
+	[banaLong release];
 }
 
 -(void) batch2 {
