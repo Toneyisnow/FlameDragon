@@ -158,22 +158,22 @@
 -(void) round2
 {
 	for (int i = 118; i <= 146; i++) {
-		[self setAiOfId:i withType:AIype_Aggressive];
+		[self setAiOfId:i withType:AIType_Aggressive];
 	}
 }
 -(void) round3
 {
 	for (int i = 147; i <= 163; i++) {
-		[self setAiOfId:i withType:AIype_Aggressive];
+		[self setAiOfId:i withType:AIType_Aggressive];
 	}
-	[self setAiOfId:201 withType:AIype_Aggressive];
-	[self setAiOfId:202 withType:AIype_Aggressive];
-	[self setAiOfId:203 withType:AIype_Aggressive];
+	[self setAiOfId:201 withType:AIType_Aggressive];
+	[self setAiOfId:202 withType:AIType_Aggressive];
+	[self setAiOfId:203 withType:AIType_Aggressive];
 }
 -(void) round4
 {
 	for (int i = 166; i <= 179; i++) {
-		[self setAiOfId:i withType:AIype_Aggressive];
+		[self setAiOfId:i withType:AIType_Aggressive];
 	}
 }
 
@@ -191,7 +191,7 @@
 		bossLeft ++;
 	}
 	
-	if (bossDeadCount > 1) {
+	if (bossLeft > 1) {
 		[self showTalkMessage:27 conversation:2 sequence:1];
 	} else {
 		[self showTalkMessage:27 conversation:3 sequence:1];

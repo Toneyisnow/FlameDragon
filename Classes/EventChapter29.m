@@ -7,7 +7,7 @@
 //
 
 #import "EventChapter29.h"
-
+#import "FDDurationActivity.h"
 
 @implementation EventChapter29
 
@@ -191,7 +191,7 @@
 		[self showTalkMessage:29 conversation:4 sequence:i];
 	}
 	
-	FDCreature *boss = [FDEnemy alloc] initWithDefinition:52901 Id:999];
+	FDCreature *boss = [[FDEnemy alloc] initWithDefinition:52901 Id:999];
 	[field addEnemy:boss Position:CGPointMake(16,1)];
 	[layers moveCreature:boss To:CGPointMake(16,5) showMenu:FALSE];
 	[boss release];

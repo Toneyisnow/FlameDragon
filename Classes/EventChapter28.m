@@ -121,16 +121,16 @@
 -(void) round2
 {
 	for (int i = 117; i <= 133; i++) {
-		[self setAiOfId:i withType:AIype_Aggressive];
+		[self setAiOfId:i withType:AIType_Aggressive];
 	}
 }
 -(void) round3
 {
 	for (int i = 134; i <= 142; i++) {
-		[self setAiOfId:i withType:AIype_Aggressive];
+		[self setAiOfId:i withType:AIType_Aggressive];
 	}
-	[self setAiOfId:201 withType:AIype_Aggressive];
-	[self setAiOfId:202 withType:AIype_Aggressive];
+	[self setAiOfId:201 withType:AIType_Aggressive];
+	[self setAiOfId:202 withType:AIType_Aggressive];
 }
 
 -(void) bossDyingMessage

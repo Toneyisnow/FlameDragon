@@ -54,13 +54,13 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/BattleField.m"
-         timestampString = "384535233.599006"
+         timestampString = "398332797.226986"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "470"
-         endingLineNumber = "470"
-         landmarkName = "@implementation BattleField"
-         landmarkType = "3">
+         startingLineNumber = "472"
+         endingLineNumber = "472"
+         landmarkName = "-selectMagicTarget:MagicIndex:"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"

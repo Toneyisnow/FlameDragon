@@ -292,7 +292,9 @@
 		}
 	}
 	
-	[map setX:pos.x Y:pos.y Value: PathBlockType_Blocked];
+    CGPoint nowPos = [self getObjectPos:creature];
+	[map setX:nowPos.x Y:nowPos.y Value: PathBlockType_Plain];
+	[map setX:pos.x Y:pos.y Value: PathBlockType_Plain];
 	
 	PathResolver *resolver = [[PathResolver alloc] initWithMap:map Width:fieldWidth Height:fieldHeight];
 	

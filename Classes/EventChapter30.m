@@ -150,16 +150,21 @@
 
 -(void) checkRound5 {
 	
-	if ([self currentRoundEnemyEliminated]) {
-		
-		FDCreature *boss = [field getCreatureById:999];
-		[boss setPosition:CGPointMake(22,20)];
+	for (FDCreature *enemy in [field getEnemyList]) {
+		CGPoint pos = [field getObjectPos:enemy];
+		if (pos.y > 15) {
+			return;
+		}
 	}
+    
+    FDCreature *boss = [field getCreatureById:999];
+    [boss setPosition:CGPointMake(22,20)];
+	
 }
 
 -(void) checkRound:(int)num {
 
-	foreach (FDCreature *enemy in [field getEnemyList]) {
+	for (FDCreature *enemy in [field getEnemyList]) {
 		CGPoint pos = [field getObjectPos:enemy];
 		if (pos.y > 15) {
 			return;
