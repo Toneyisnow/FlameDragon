@@ -30,7 +30,7 @@ typedef enum ScopeResistanceType
 -(id) initWithMap:(FDIntMap *)map Width:(int)w Height:(int)h;
 
 -(NSMutableArray *) resolveScopeFrom:(CGPoint)pos min:(int)min max:(int)movePoint;		// Array of FDPosition
-
+-(NSMutableArray *) resolveScopeFrom:(CGPoint)pos min:(int)min max:(int)movePoint isCross:(BOOL)isCross;		// Array of
 -(void) walk:(CGPoint) pos WithMovePoint:(int)nowPoint;
 
 //-(int) resistanceX:(int)x Y:(int)y;

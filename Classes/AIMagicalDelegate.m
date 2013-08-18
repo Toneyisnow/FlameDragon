@@ -2,30 +2,21 @@
 //  AIMagicalDelegate.m
 //  FlameDragon
 //
-//  Created by sui toney on 12-11-8.
-//  Copyright 2012 ms. All rights reserved.
+//  Created by sui toney on 13-8-17.
+//
 //
 
 #import "AIMagicalDelegate.h"
-#import "MagicDefinition.h"
+#import "Common.h"
 #import "DataDepot.h"
 #import "FDRandom.h"
-#import "Common.h"
 
 @implementation AIMagicalDelegate
 
--(id) initWithCreature:(FDCreature *)c Layers:(ActionLayers *)l
-{
-	self = [super initWithCreature:c Layers:l];
-	
-	//[self initDistanceResolver:c];
-	
-	return self;
-}
 
 -(void) takeAction
 {
-	CCLOG(@"AIMagicalDelegate take action on creature %d", [creature getIdentifier]);
+	CCLOG(@"AIMagicalAggressiveDelegate take action on creature %d", [creature getIdentifier]);
 	if (!creature.pendingAction) {
 		
         if ([self needAndCanRecover]) {
@@ -40,6 +31,11 @@
 		
 		[self takePendAction];
 	}
+}
+
+-(void) takePendAction
+{
+    // Implement in sub class
 }
 
 -(void) takeMagicAction
@@ -64,7 +60,7 @@
         else if (magic.magicType == MagicType_Recover || magic.magicType == MagicType_Defensive) {
             candidate = [self findDefensiveTarget:magic];
         }
-	
+        
         if (candidate != nil) {
             [canMagicList addObject:magic];
             [candidateList addObject:candidate];
@@ -90,88 +86,31 @@
         
         // Locate the Magic Position
         CGPoint magicPosition;
-	CGPoint candidatePosition = [field getObjectPos:selectedCandidate];
-	CGPoint creaturePosition = [field getObjectPos:creature];
-	int directX = (candidatePosition.x > creaturePosition.x) ? 1 : -1;
-	int directY = (candidatePosition.y > creaturePosition.y) ? 1 : -1;
-	int distanceX = [Common getAbs:candidatePosition.x - creaturePosition.x];
-	int distanceY = [Common getAbs:candidatePosition.y - creaturePosition.y];
-	
-	if (selectedMagic.effectScope >= distanceX + distanceY) {
-		magicPosition = candidatePosition;
-	} else if (selectedMagic.effectScope >= distanceX) {
-		int dy = (selectedMagic.effectScope - distanceX) * directY;
-		magicPosition = CGPointMake(candidatePosition.x, creaturePosition.y + dy);
-	} else {
-		int dx = selectedMagic.effectScope * directX;
-		magicPosition = CGPointMake(creaturePosition.x + dx, creaturePosition.y);
-	}
-
-	// Use Magic
+        CGPoint candidatePosition = [field getObjectPos:selectedCandidate];
+        CGPoint creaturePosition = [field getObjectPos:creature];
+        int directX = (candidatePosition.x > creaturePosition.x) ? 1 : -1;
+        int directY = (candidatePosition.y > creaturePosition.y) ? 1 : -1;
+        int distanceX = [Common getAbs:candidatePosition.x - creaturePosition.x];
+        int distanceY = [Common getAbs:candidatePosition.y - creaturePosition.y];
+        
+        if (selectedMagic.effectScope >= distanceX + distanceY) {
+            magicPosition = candidatePosition;
+        } else if (selectedMagic.effectScope >= distanceX) {
+            int dy = (selectedMagic.effectScope - distanceX) * directY;
+            magicPosition = CGPointMake(candidatePosition.x, creaturePosition.y + dy);
+        } else {
+            int dx = selectedMagic.effectScope * directX;
+            magicPosition = CGPointMake(creaturePosition.x + dx, creaturePosition.y);
+        }
+        
+        // Use Magic
         [field setCursorTo:magicPosition];
-        
         [layers magicFrom:creature TargetPos:magicPosition Id:selectedMagic.identifier];
-        // [layers appendToCurrentActivityMethod:@selector(creatureEndTurn:) Param1:creature Param2:nil];
-        
     }
     @finally {
         [canMagicList release];
         [candidateList release];
     }
-}
-
--(void) takePendAction
-{
-	BattleField *field = [[layers getFieldLayer] getField];
-
-	CCLOG(@"takePendAction");
-    
-    // Only move when the HP is enough
-    if (creature.data.hpCurrent > creature.data.hpMax / 2) {
-        FDCreature *target = [self findTarget];
-        if (target != nil) {
-            CCLOG(@"target != nil");
-            CGPoint targetPos = [self generatePos:[field getObjectPos:target]];
-            CCLOG(@"generated targetPos.");
-            [field setCursorTo:targetPos];
-            [layers moveCreature:creature To:targetPos showMenu:FALSE];
-        }
-	}
-    
-	CCLOG(@"End Pend Action;");
-	[layers appendToCurrentActivityMethod:@selector(takeAttackAction) Param1:creature Param2:nil Obj:self];
-}
-
--(void) takeAttackAction {
-    
-    BattleField *field = [[layers getFieldLayer] getField];
-    FDRange *range = [creature attackRange];
-	
-    FDCreature *attackTarget = nil;
-    
-    NSMutableArray *targetList = [[NSMutableArray alloc] init];
-    if ([creature getCreatureType] == CreatureType_Enemy) {
-        [targetList addObjectsFromArray:[field getFriendList]];
-        [targetList addObjectsFromArray:[field getNpcList]];
-    } else {
-        [targetList addObjectsFromArray:[field getEnemyList]];
-    }
-    
-    for (FDCreature *target in targetList) {
-        if (target != nil && [creature isAbleToAttack:target]
-		&& (range != nil && [range containsValue:[field getDirectDistance:creature And:target]])) {
-            attackTarget = target;
-            break;
-        }
-    }
-	[targetList release];
-    
-    if (attackTarget != nil) {
-		[layers appendToCurrentActivityMethod:@selector(attackFrom:Target:) Param1:creature Param2:attackTarget];
-	}
-	else {
-		[layers appendToCurrentActivityMethod:@selector(creatureEndTurn:) Param1:creature Param2:nil];
-	}
 }
 
 -(FDCreature *) findAffensiveTarget:(MagicDefinition *)magic
@@ -189,15 +128,17 @@
     }
     
 	FDCreature *candidate = nil;
+    CGPoint creaturePos = [field getObjectPos:creature];
 	for (FDCreature *c in candidateList) {
 		
 		if (![c isNoticable]) {
-			continue;	
+			continue;
 		}
 		
 		float distance = [field getDirectDistance:creature And:c];
-		
-		if (distance <= magic.effectScope + magic.effectRange) {
+		CGPoint cPos = [field getObjectPos:c];
+        
+		if (distance <= magic.effectScope + magic.effectRange && (!magic.isCross || cPos.x == creaturePos.x || cPos.y == creaturePos.y)) {
 			if (candidate == nil || candidate.data.hpCurrent > c.data.hpCurrent) {
 				candidate = c;
 			}
@@ -222,11 +163,13 @@
     }
     
 	FDCreature *candidate = nil;
+	CGPoint creaturePos = [field getObjectPos:creature];
 	for (FDCreature *c in candidateList) {
 		
 		float distance = [field getDirectDistance:creature And:c];
-		
-		if (distance <= magic.effectScope + magic.effectRange) {
+		CGPoint cPos = [field getObjectPos:c];
+        
+		if (distance <= magic.effectScope + magic.effectRange && (!magic.isCross || cPos.x == creaturePos.x || cPos.y == creaturePos.y)) {
 			if ([magic hasDefensiveEffectOn:c] && c.data.hpCurrent < c.data.hpMax && (candidate == nil || candidate.data.hpCurrent > c.data.hpCurrent)) {
 				candidate = c;
 			}
@@ -248,7 +191,7 @@
 	for (int index = [creature.data.magicList count] - 1; index >= 0; index--) {
 		NSNumber *magicId = [creature.data.magicList objectAtIndex:index];
 		MagicDefinition *magic = [[DataDepot depot] getMagicDefinition:[magicId intValue]];
-	
+        
 		if (magic == nil) {
 			continue;
 		}
@@ -279,6 +222,5 @@
     }
     return 0;
 }
-
 
 @end

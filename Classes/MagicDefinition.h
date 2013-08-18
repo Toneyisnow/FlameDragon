@@ -32,6 +32,7 @@ typedef enum MagicType
     int allowAfterMove;
     int aiConsiderRate;
 	FDRange *quantityRange;
+    BOOL isCross;
 }
 
 +(id) readFromFile:(FDFileStream *)stream;
@@ -55,6 +56,7 @@ typedef enum MagicType
 @property (nonatomic) int hittingRate;
 @property (nonatomic) int mpCost;
 @property (nonatomic) int allowAfterMove;
+@property (nonatomic) BOOL isCross;
 
 @property (nonatomic) int aiConsiderRate;
 

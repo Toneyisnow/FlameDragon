@@ -54,9 +54,16 @@
     [friend5.data addMagic:501];
 	[friend5 release];
 	
+    FDFriend *friend18 = [[FDFriend alloc] initWithDefinition:18 Id:18];
+	[field addFriend:friend18 Position:CGPointMake(14, 18)];
+	[friend18 release];
+	
     for (int i=0; i<30; i++) {
         [friend2 levelUp];
         friend2.data.mpCurrent = friend2.data.mpMax;
+        
+        [friend18 levelUp];
+        friend18.data.mpCurrent = friend2.data.mpMax;
     }
     
     [friend2.data.itemList addObject:[NSNumber numberWithInt:117]];
@@ -105,8 +112,8 @@
 	[field addEnemy: enemy5 Position:CGPointMake(6, 17)];
 	[enemy5 release];
 	
-	FDEnemy *enemy6 = [[FDEnemy alloc] initWithDefinition:51001 Id:16 DropItem:102];
-	//[field addEnemy: enemy6 Position:CGPointMake(5, 18)];
+	FDEnemy *enemy6 = [[FDEnemy alloc] initWithDefinition:52905 Id:16 DropItem:102];
+	[field addEnemy: enemy6 Position:CGPointMake(5, 18)];
 	[enemy6 release];
 	
 	[self setAiOfId:13 withType:AIType_StandBy];

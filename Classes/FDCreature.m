@@ -87,7 +87,12 @@
 	}
 	// By default the AI will be
 	if (dat == nil) {
-		data.aiType = AIType_Aggressive;
+        
+        if (definition.occupation == 154 || definition.occupation == 155 || definition.identifier == 747) {
+            data.aiType = AIType_Defensive;
+        } else {
+            data.aiType = AIType_Aggressive;
+        }
 	}
 	
 	lastGainedExperience = 0;
@@ -335,7 +340,7 @@
 	
 	if (item != nil && [item isKindOfClass:[AttackItemDefinition class]]) {
 		AttackItemDefinition *aItem = (AttackItemDefinition *)item;
-		return [self canAttack] && (aItem.itemCategory != 4);
+		return [self canAttack] && ([aItem.attackRange min] == 1);
 	}
 	
 	return FALSE;

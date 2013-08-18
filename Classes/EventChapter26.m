@@ -30,8 +30,10 @@
 	[self loadDieEvent:31 Action:@selector(gameOver)];
 	[self loadDyingEvent:139 Action:@selector(bossDead)];
 	
-    eventWode = [self loadPositionEvent:0 AtPosition:CGPointMake(2,47) Action:@selector(onWode)];
-	
+    for(int i = 1;i <= 31; i++) {
+        [self loadPositionEvent:i AtPosition:CGPointMake(2,47) Action:@selector(onWode)];
+	}
+    
     [self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
 	
 	NSLog(@"Chapter26 events loaded.");
@@ -252,10 +254,6 @@
     {
         NSString *talkMessage = [FDLocalString chapter:26 conversation:2 sequence:1];
         [self showTalkMessage:talkMessage creature:[creature getIdentifier]];
-        
-        if (eventWode != nil) {
-            [eventWode reactivate];
-        }
     }
 }
 

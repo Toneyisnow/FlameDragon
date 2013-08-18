@@ -55,6 +55,7 @@
 
 -(void) reset
 {
+    [super reset];
 	currentTick = 0;
 }
 

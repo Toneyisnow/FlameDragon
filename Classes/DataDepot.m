@@ -415,26 +415,26 @@ static DataDepot *instance = nil;
     }
     
     mandatoryPickedFriend = [[NSMutableArray alloc] init];
-    NSMutableArray *arrayEmpty = [[NSMutableArray alloc] init];
-    NSMutableArray *arrayOne = [[NSMutableArray alloc] init];
-    NSMutableArray *arrayOneAndMidi = [[NSMutableArray alloc] init];
-    [arrayOne addObject:[NSNumber numberWithInt:1]];
-    [arrayOneAndMidi addObject:[NSNumber numberWithInt:1]];
-    [arrayOneAndMidi addObject:[NSNumber numberWithInt:18]];
     
-    for (int i = 0; i < 30; i++) {
-        if (i < 15) {
-            [mandatoryPickedFriend addObject:arrayEmpty];
-        } else if (i == 16) {
-            [mandatoryPickedFriend addObject:arrayOneAndMidi];
-        } else {
-            [mandatoryPickedFriend addObject:arrayOne];
+    FDFileStream *file = [[FDFileStream alloc] initWithDataFile:@"MandatoryFriend" Ext:@"dat"];
+	[file open];
+	
+	int sceneCount = [file readInt];
+	for (int m = 0; m < sceneCount; m++) {
+        
+        [file readInt];
+        int count = [file readInt];
+        NSMutableArray *arr = [[NSMutableArray alloc] init];
+        
+        for (int i=0; i<count; i++) {
+            int val = [file readInt];
+            [arr addObject:[NSNumber numberWithInt:val]];
         }
-    }
-    
-    [arrayEmpty release];
-    [arrayOne release];
-    [arrayOneAndMidi release];
+		[mandatoryPickedFriend addObject:arr];
+        [arr release];
+	}
+	[file close];
+	[file release];
     
     CCLOG(@"Loaded MandatoryPickedFriend.");
 }

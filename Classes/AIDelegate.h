@@ -24,10 +24,15 @@
 -(CGPoint) generatePos:(CGPoint)targetPos;
 // -(CGPoint) generatePos:(CGPoint)targetPos forAttack:(BOOL)attackOnly;
 -(void) setParameter:(id)param;
+-(FDIntMap *) getGroundMap:(FDCreature *)c;
 
 -(void) takeAction;
 -(FDCreature *) findTarget;
 -(BOOL) needAndCanRecover;
+-(BOOL) needRecover;
+-(BOOL) canRecover;
+-(int) getRecoverItemIndex;
+
 -(void) selfRecover;
 
 @end

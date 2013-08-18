@@ -187,7 +187,6 @@
 	if ([subjectAnimation hasFinished] && [lasttargetAnimation hasFinished]) {
 		
 		[[CCDirector sharedDirector] popScene];
-		
 		// Perform post method
 		[object performSelector:postMethod withObject:obj1 withObject:obj2];
 	}

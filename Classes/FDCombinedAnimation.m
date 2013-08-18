@@ -43,14 +43,12 @@
 	}
 	
 	FDAnimation *currentAni = [animationList objectAtIndex:aniIndex];
-	
 	[currentAni takeTick:synchronizeTick];
 	
 	if ([currentAni hasFinished]) {
 		aniIndex ++;
         
-        if (aniIndex < [animationList count])
-        {
+        if (aniIndex < [animationList count]) {
             animationSwitched = YES;
         }
 	}
@@ -75,11 +73,13 @@
 {
     [super reset];
     aniIndex = 0;
+    
+    for (FDAnimation *ani in animationList) {
+		[ani reset];
+	}
 }
 -(void) dealloc
 {
-	
-	
 	[super dealloc];
 }
 

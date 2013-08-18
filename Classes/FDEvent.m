@@ -52,7 +52,7 @@
 
 -(void) reactivate
 {
-	isActivated = FALSE;
+	isActivated = TRUE;
 }
 
 -(void) setDependentEvent:(FDEvent *)event

@@ -24,6 +24,7 @@
 -(void) addEvent:(FDEvent *)event;
 
 -(void) deactivateEvent:(int)eventId;
+-(void) reactivateEvent:(int)eventId;
 
 -(void) setInitialEvent:(FDEvent *)event;
 

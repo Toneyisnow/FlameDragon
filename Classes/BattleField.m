@@ -457,8 +457,10 @@
 	int magicId = [[creature.data.magicList objectAtIndex:magicIndex] intValue];
 	MagicDefinition * magic = [[DataDepot depot] getMagicDefinition:magicId];
 	FDRange *scope = [[FDRange alloc] initWithMin:0 Max:magic.effectScope];
-	
-	NSMutableArray *scopeList = [self searchActionScope:[self getObjectPos:creature] Range:scope];
+    
+    
+	NSMutableArray *scopeList = [self searchActionScope:[self getObjectPos:creature] Range:scope IsCross:magic.isCross];
+    
 	
 	for(FDPosition *pos in scopeList)
 	{
@@ -850,9 +852,9 @@
 
 ////////////////// END IFieldActionable ///////////////////
 
--(NSMutableArray *) searchActionScope:(CGPoint)pos Range:(FDRange *)range
+-(NSMutableArray *) searchActionScope:(CGPoint)pos Range:(FDRange *)range IsCross:(BOOL)isCross
 {
-	if (range == nil) {
+    if (range == nil) {
 		return nil;
 	}
 	
@@ -869,7 +871,12 @@
 	[map release];
 	[resolver autorelease];
 	
-	return [resolver resolveScopeFrom:pos min:[range min] max:[range max]];
+	return [resolver resolveScopeFrom:pos min:[range min] max:[range max] isCross:isCross];
+}
+
+-(NSMutableArray *) searchActionScope:(CGPoint)pos Range:(FDRange *)range
+{
+	return [self searchActionScope:pos Range:range IsCross:FALSE];
 }
 
 -(NSMutableArray *) searchMoveScope:(FDCreature *)creature
@@ -1173,15 +1180,53 @@
 	return [result autorelease];
 }
 
+-(NSMutableArray *) getCreaturesAt:(CGPoint)position ToDirection:(CGPoint)pos Range:(int)ran BadGuys:(BOOL)areGadGuys
+{
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+	
+    int dx;
+    int dy;
+    
+    if (pos.x < position.x) {
+        dx = -1;
+    } else if (pos.x > position.x) {
+        dx = 1;
+    } else {
+        dx = 0;
+    }
+    
+    if (pos.y < position.y) {
+        dy = -1;
+    } else if (pos.y > position.y) {
+        dy = 1;
+    } else {
+        dy = 0;
+    }
+    
+    CGPoint curPos = position;
+    for (int i = 0; i < ran; i++) {
+        curPos = CGPointMake(curPos.x+dx, curPos.y+dy);
+        FDCreature *c = [self getCreatureByPos:curPos];
+		if (c == nil) {
+			continue;
+		}
+		if ((areGadGuys && [c getCreatureType] == CreatureType_Enemy)
+            || (!areGadGuys && ([c getCreatureType] == CreatureType_Friend ||[c getCreatureType] == CreatureType_Npc))
+            ) {
+			[result addObject:c];
+		}
+    }
+    
+    return [result autorelease];
+}
+
 -(void) showTestData
 {
 	for (FDBattleObject *obj in battleObjectList) {
 		
 		CGPoint pos1 = [self getObjectPos:obj];
 		CCLOG(@"Object Identifier: %@ (%f, %f)", [obj class], pos1.x, pos1.y);
-		
 	}
-	
 }
 
 -(void) dealloc

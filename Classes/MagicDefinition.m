@@ -16,17 +16,14 @@
 @synthesize magicType;
 @synthesize identifier, effectScope, effectRange, hittingRate, mpCost, allowAfterMove, aiConsiderRate;
 @synthesize quantityRange;
+@synthesize isCross;
 
 +(id) readFromFile:(FDFileStream *)stream
 {
 	MagicDefinition * def = [[MagicDefinition alloc] init];
 	
 	def.identifier = [stream readInt];
-	
-	//NSString *idStr = [NSString stringWithFormat:@"%03d", def.identifier];
-	//def.name = NSLocalizedStringFromTable (idStr, @"Magic", @"comment");
 	def.name = [FDLocalString magic:def.identifier];
-	
 	def.magicType = [stream readInt];
 
 	int min = [stream readInt];
@@ -39,10 +36,15 @@
 	def.mpCost = [stream readInt];
     def.allowAfterMove = [stream readInt];
 	def.aiConsiderRate = [stream readInt];
+    def.isCross = FALSE;
+    
+    if (def.effectScope < 0) {
+        def.effectScope = -def.effectScope;
+        def.isCross = TRUE;
+    }
     
 	return [def autorelease];
 }
-
 
 -(void) takeOffensiveEffect:(id)obj
 {

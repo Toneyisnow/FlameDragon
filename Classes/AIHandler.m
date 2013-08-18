@@ -8,10 +8,13 @@
 
 #import "AIHandler.h"
 #import "AIAggressiveDelegate.h"
-#import "AIMagicalDelegate.h"
+#import "AIMagicalAggressiveDelegate.h"
+#import "AIDefensiveDelegate.h"
+#import "AIMagicalDefensiveDelegate.h"
+#import "AIGuardDelegate.h"
+#import "AIMagicalGuardDelegate.h"
 #import "AIEscapeDelegate.h"
 #import "AIStandByDelegate.h"
-#import "AIGuardDelegate.h"
 #import "AITreasureDelegate.h"
 #import "AITreasureParam.h"
 #import "FDEnemy.h"
@@ -96,11 +99,24 @@
 	switch (creature.data.aiType) {
 		case AIType_Aggressive:
 			if ([[creature getDefinition] isMagicalCreature]) {
-				delegate = [[AIMagicalDelegate alloc] initWithCreature:creature Layers:layers];
+				delegate = [[AIMagicalAggressiveDelegate alloc] initWithCreature:creature Layers:layers];
 			} else {
 				delegate = [[AIAggressiveDelegate alloc] initWithCreature:creature Layers:layers];
 			}
-
+			break;
+		case AIType_Defensive:
+			if ([[creature getDefinition] isMagicalCreature]) {
+				delegate = [[AIMagicalDefensiveDelegate alloc] initWithCreature:creature Layers:layers];
+			} else {
+				delegate = [[AIAggressiveDelegate alloc] initWithCreature:creature Layers:layers];
+			}
+			break;
+		case AIType_Guard:
+			if ([[creature getDefinition] isMagicalCreature]) {
+				delegate = [[AIMagicalGuardDelegate alloc] initWithCreature:creature Layers:layers];
+			} else {
+				delegate = [[AIGuardDelegate alloc] initWithCreature:creature Layers:layers];
+			}
 			break;
 		case AIType_Escape:
 			delegate = [[AIEscapeDelegate alloc] initWithCreature:creature Layers:layers];
@@ -108,9 +124,6 @@
 			break;
 		case AIType_StandBy:
 			delegate = [[AIStandByDelegate alloc] initWithCreature:creature Layers:layers];
-			break;
-		case AIType_Guard:
-			delegate = [[AIGuardDelegate alloc] initWithCreature:creature Layers:layers];
 			break;
 		case AIType_Treasure:
 			delegate = [[AITreasureDelegate alloc] initWithCreature:creature Layers:layers];

@@ -18,7 +18,12 @@
 	return self;
 }
 
--(NSMutableArray *) resolveScopeFrom:(CGPoint)pos min:(int)min max:(int)movePoint			// Array of FDPosition
+-(NSMutableArray *) resolveScopeFrom:(CGPoint)pos min:(int)min max:(int)movePoint	// Array of
+{
+    return [self resolveScopeFrom:pos min:min max:movePoint isCross:FALSE];
+}
+
+-(NSMutableArray *) resolveScopeFrom:(CGPoint)pos min:(int)min max:(int)movePoint isCross:(BOOL)isCross			// Array of FDPosition
 {
 	// Since the following reason, the movement should +1: 
 	// For movement = 5, the steps should be 
@@ -30,7 +35,9 @@
 		{
 			if ([walkedMap getX:i Y:j] > 0 && [walkedMap getX:i Y:j] <= movePoint + 1 - min && [resistanceMap getX:i Y:j] >= 0)		// resistance < 0 means it should be skipped/jumped
 			{
-				[result addObject:[FDPosition positionX:i Y:j]];
+                if (!isCross || i == pos.x || j == pos.y) {
+                    [result addObject:[FDPosition positionX:i Y:j]];
+                }
 			}
 		}
 	

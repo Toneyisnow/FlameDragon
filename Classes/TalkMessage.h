@@ -33,7 +33,9 @@ typedef enum TalkMessagePos
 	FDSprite *dato;
 	TalkMessagePos messagePos;
 	
-	NSMutableArray *shownMessage;	
+	NSMutableArray *shownMessage;
+    
+    NSTimer *timer;
 }
 
 -(id) initWithCreature:(FDCreature *)c Message:(NSString *)msg;

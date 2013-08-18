@@ -101,7 +101,7 @@
     for (int i = 118; i <= 135; i++) {
         [self setAiOfId:i withType:AIType_Guard];
     }
-    [self setAiOfId:199 withType:AIType_Guard];
+    [self setAiOfId:199 withType:AIType_Defensive];
     
     
 	// Talk

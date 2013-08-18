@@ -87,6 +87,7 @@
 
 -(FDTreasure *) getTreasureAt:(CGPoint) pos;
 -(NSMutableArray *) getCreaturesAt:(CGPoint)position Range:(int)range BadGuys:(BOOL)areGadGuys;
+-(NSMutableArray *) getCreaturesAt:(CGPoint)position ToDirection:(CGPoint)pos Range:(int)range BadGuys:(BOOL)areGadGuys;
 
 //-(void) pickUpTreasure:(FDCreature *) creature;
 

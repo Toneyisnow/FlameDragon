@@ -39,35 +39,7 @@
 {
 	
 }
-/*
--(void) initDistanceResolver:(FDCreature *)c
-{
-	BattleField *field = [[layers getFieldLayer] getField];	
-	int fieldHeight = [field mapSize].height;
-	int fieldWidth = [field mapSize].width;
-	
-    FDIntMap *map = nil;
-    
-    if ([c canFly])
-    {
-        map = [[field getGroundField] getGroundScopeMapForFly];
-    }
-    else if ([c isKnight])
-    {
-        map = [[field getGroundField] getGroundScopeMapForKnight];
-    }
-    else if ([c isKnight])
-    {
-        map = [[field getGroundField] getGroundScopeMapForMarshMonster];
-    }
-    else
-    {
-        map = [[field getGroundField] getGroundScopeMapForGround];
-    }
-    
-	disResolver = [[DistanceResolver alloc] initWithMap:map Width:fieldWidth Height:fieldHeight];
-}
-*/
+
 -(FDIntMap *) getGroundMap:(FDCreature *)c
 {
     BattleField *field = [[layers getFieldLayer] getField];
@@ -193,35 +165,41 @@
 	return finalTarget;
 }
 
+-(BOOL) needRecover
+{
+    if ([creature getCreatureType] == CreatureType_Npc && creature.data.hpCurrent < creature.data.hpMax) {
+		return TRUE;
+	}
+	if (creature.data.hpCurrent < creature.data.hpMax / 2) {
+		return TRUE;
+	}
+	return FALSE;
+}
+
 -(BOOL) needAndCanRecover
 {
-	BOOL needRecover = FALSE;
-	if (creature.data.hpCurrent < creature.data.hpMax) {
-		needRecover = TRUE;
-	}
-	
-	BOOL canRecover = FALSE;
-	for (int index = 0; index < [creature.data.itemList count]; index++) {
+	return [self needRecover] && [self canRecover];
+}
+
+-(BOOL) canRecover
+{
+    return [self getRecoverItemIndex] >= 0;
+}
+
+-(int) getRecoverItemIndex
+{
+    for (int index = 0; index < [creature.data.itemList count]; index++) {
 		int itemId = [creature getItemId:index];
-		if (itemId == 101 || itemId == 102 || itemId == 103 || itemId == 104) {
-			canRecover = TRUE;
-			break;
+		if (itemId == 101 || itemId == 102 || itemId == 103 || itemId == 104 || itemId == 122) {
+			return index;
 		}
 	}
-	
-	return needRecover && canRecover;
+    return -1;
 }
 
 -(void) selfRecover
 {
-	int itemIndex = -1;
-	for (int index = 0; index < [creature.data.itemList count]; index++) {
-		int itemId = [creature getItemId:index];
-		if (itemId == 101 || itemId == 102 || itemId == 103 || itemId == 104) {
-			itemIndex = index;
-			break;
-		}
-	}
+	int itemIndex = [self getRecoverItemIndex];
 	
 	if (itemIndex < 0) {
 		return;

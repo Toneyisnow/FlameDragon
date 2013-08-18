@@ -98,6 +98,19 @@
 	}
 	
 	[self updateMessage];
+    
+}
+
+-(void) refreshClose
+{
+    CCLOG(@"refreshClose triggerred.");
+    [self clickedOn:CGPointMake(0,0)];
+}
+
+-(void) close
+{
+    [super close];
+    [timer invalidate];
 }
 
 -(void) updateMessage
@@ -105,6 +118,9 @@
 	for (int i = 0; i < ShownCount; i++) {
 		[self showMessage:showIndex + i];
 	}
+
+    [timer invalidate];
+    timer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(refreshClose) userInfo:nil repeats:NO];
 }
 
 -(void) showMessage:(int)index
@@ -143,8 +159,12 @@
 	else {
 		[self updateMessage];
 	}
-
 }
 
+-(void) dealloc
+{
+    [timer invalidate];
+    [super dealloc];
+}
 
 @end

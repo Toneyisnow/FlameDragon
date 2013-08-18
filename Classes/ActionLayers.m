@@ -462,7 +462,13 @@
 	BOOL areBadGuys = (([creature getCreatureType] == CreatureType_Friend || [creature getCreatureType] == CreatureType_Npc) && (magic.magicType == MagicType_Attack || magic.magicType == MagicType_Offensive))
 					|| ([creature getCreatureType] == CreatureType_Enemy && (magic.magicType == MagicType_Recover || magic.magicType == MagicType_Defensive));
 	
-	NSMutableArray *targets = [field getCreaturesAt:position Range:magic.effectRange BadGuys:areBadGuys];
+	NSMutableArray *targets = nil;
+    if (magic.isCross) {
+        targets = [field getCreaturesAt:[field getObjectPos:creature] ToDirection:position Range:magic.effectScope BadGuys:areBadGuys];
+    } else {
+        targets = [field getCreaturesAt:position Range:magic.effectRange BadGuys:areBadGuys];
+    }
+    
 	CCLOG(@"Target Creature count: %d", [targets count]);
 	
 	MagicalInformation *mInfo = [GameFormula dealWithMagic:magicId From:creature Target:targets Field:field];

@@ -40,6 +40,15 @@
 	}
 }
 
+-(void) reactivateEvent:(int)eventId
+{
+	for (FDEvent *event in events) {
+		if (event.eventId == eventId) {
+			[event reactivate];
+		}
+	}
+}
+
 -(void) setEvent:(int)eventId dependentOn:(int)depId
 {
 	FDEvent *target = nil;

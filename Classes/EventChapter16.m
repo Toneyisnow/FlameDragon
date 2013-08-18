@@ -158,7 +158,7 @@
 		matchCriteria = NO;
 	}
 	
-	if ([layers getTurnNumber] > 18) {
+	if ([layers getTurnNumber] > 15) {
 		matchCriteria = NO;
 	}
 	

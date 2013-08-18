@@ -23,10 +23,7 @@
 -(id) initWithCreature:(FDCreature *)c Layers:(ActionLayers *)l
 {
 	self = [super initWithCreature:c Layers:l];
-	
-	//[self initDistanceResolver:c];
 	attackTarget = nil;
-	
 	return self;
 }
 
@@ -54,8 +51,6 @@
 -(void) searchAttackTarget
 {
 	BattleField *field = [[layers getFieldLayer] getField];
-	//FDCreature *target = [self findTarget];
-	//CGPoint targetpos = [field getObjectPos:attackTarget];
 	
 	BOOL inAttackScope = FALSE;
 	
@@ -68,19 +63,6 @@
 		inAttackScope = TRUE;
 	}
 	
-	/*
-	if ([creature isAbleToAttack:target]) {
-		NSMutableArray *scopeList = [field searchActionScope:[field getObjectPos:creature] Range:[creature attackRange]];
-		for (FDPosition *pos in scopeList) {
-			if ([FDPosition isEqual:[pos posValue] With:targetpos]) {
-				inAttackScope = TRUE;
-				break;
-			}
-		}
-	}
-	*/
-	
-	//[field setCursorTo:targetpos];
 	if (inAttackScope) {
 		[layers appendToCurrentActivityMethod:@selector(attackFrom:Target:) Param1:creature Param2:attackTarget];
 	}

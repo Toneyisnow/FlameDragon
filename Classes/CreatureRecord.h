@@ -24,9 +24,7 @@
 -(id) initWithTestData;
 +(id) friendSampleRecord:(int)friendId;
 
-- (NSComparisonResult)compareRecords:(id)inObject;
-
-//-(int) getFriendId;
+-(NSComparisonResult) compareRecords:(id)inObject;
 
 @property (nonatomic) int creatureId;
 @property (nonatomic) int definitionId;
