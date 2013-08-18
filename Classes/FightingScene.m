@@ -241,24 +241,6 @@
 	}	
 }
 
-// This should not be called
-/*
--(void) setSubjectVisible:(BOOL)val
-{
-	[subjectSprite setVisible:val];
-	
-	if (val) {
-		[subjectBar appear];
-	} else {
-		[subjectBar hide];
-	}
-	
-	if (![subject getCreatureType] == CreatureType_Enemy) {
-		[taiSprite setVisible:val];
-	}
-}
-*/
-
 -(void) setTargetVisible:(BOOL)val
 {
 	[targetSprite setVisible:val];

@@ -193,10 +193,10 @@
 		[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50204 Id:iden] autorelease] Position:CGPointMake(10, 21)];
 	}
 	
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50203 Id:27] autorelease] Position:CGPointMake(3, 9)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50203 Id:28] autorelease] Position:CGPointMake(4, 10)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50203 Id:29] autorelease] Position:CGPointMake(3, 11)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50203 Id:30] autorelease] Position:CGPointMake(2, 12)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50203 Id:27 DropItem:101] autorelease] Position:CGPointMake(3, 9)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50203 Id:28 DropItem:801] autorelease] Position:CGPointMake(4, 10)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50203 Id:29 DropItem:101] autorelease] Position:CGPointMake(3, 11)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50203 Id:30 DropItem:101] autorelease] Position:CGPointMake(2, 12)];
 	
 	[layers moveCreatureId:21 To:CGPointMake(10, 18) showMenu:FALSE];
 	

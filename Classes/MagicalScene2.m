@@ -42,6 +42,12 @@
     magicAni = [[DataDepot depot] getMagicAnimationDefinition:101 isBadGuy:([subject getCreatureType]==CreatureType_Enemy)];
 	[magicAni retain];
     
+    isRemote = FALSE;
+    
+    if (magicDefinition.identifier == 119) {
+        isRemote = TRUE;
+    }
+    
     return self;
 }
 
@@ -100,8 +106,8 @@
 	 subjectAnimation = [[FDCombinedAnimation alloc] init];
 	 targetAnimation = [[FDCombinedAnimation alloc] init];
      lasttargetAnimation = [[FDCombinedAnimation alloc] init];
-    magicAnimation = [[FDSlideAnimation alloc] initWithDefinition:magicAni Sprite:magicSprite];
-    [magicAnimation onRenderFrame:@selector(onMagicAttack:Tag:) Id:self];
+     magicAnimation = [[FDSlideAnimation alloc] initWithDefinition:magicAni Sprite:magicSprite];
+     [magicAnimation onRenderFrame:@selector(onMagicAttack:Tag:) Id:self];
 	
     targetSwitchAnimation = [[FDCombinedAnimation alloc] init];
     
@@ -118,13 +124,15 @@
     [a1 release];
     [a2 release];
     
-    [self appendIdleAnimation];
-
-    [self appendSubjectAttackAnimation];
+    if (isRemote) {
+        [self setTargetVisible:FALSE];
+    }
     
+    [self appendIdleAnimation];
+    [self appendSubjectAttackAnimation];
     [self appendLastIdleAnimation];
-	 
 }
+
 -(void) appendIdleAnimation
 {
     FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:subjectIdleAni Sprite:subjectSprite];
@@ -138,9 +146,13 @@
 
 -(void) appendLastIdleAnimation
 {
-    FDSlideAnimation *ani = [[FDSlideAnimation alloc] initWithDefinition:subjectIdleAni Sprite:subjectSprite];
-	[subjectAnimation addAnimation:ani];
-	[ani release];
+    FDSlideAnimation *ani;
+    
+    if (!isRemote) {
+        ani = [[FDSlideAnimation alloc] initWithDefinition:subjectIdleAni Sprite:subjectSprite];
+        [subjectAnimation addAnimation:ani];
+        [ani release];
+    }
     
 	ani = [[FDSlideAnimation alloc] initWithDefinition:lasttargetIdleAni Sprite:targetSprite];
 	[lasttargetAnimation addAnimation:ani];
@@ -193,6 +205,10 @@
 }
 
 -(void) tickMagic {
+    
+    if (isRemote) {
+        [self setTargetVisible:TRUE];
+    }
     
     [magicAnimation takeTick:tickCount];
     if ([magicAnimation hasFinished]) {
@@ -286,6 +302,25 @@
 		[subjectBar setHp:subject.data.hpCurrent Mp:subject.data.mpCurrent];
 	}
 	updatedMp = TRUE;
+}
+
+-(void) setTargetVisible:(BOOL)val
+{
+	[targetSprite setVisible:val];
+	
+	if (val) {
+		[targetBar appear];
+        [subjectBar hide];
+	} else {
+		[targetBar hide];
+        [subjectBar appear];
+	}
+	
+	if ([subject getCreatureType] == CreatureType_Friend) {
+		[taiSprite setVisible:!val];
+	} else {
+		[taiSprite setVisible:val];
+	}
 }
 
 -(void) dealloc

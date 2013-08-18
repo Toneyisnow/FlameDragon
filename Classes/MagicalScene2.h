@@ -48,6 +48,8 @@
     BOOL switchingTarget;
     
     int currentTargetIndex;
+    
+    BOOL isRemote;
 }
 
 -(id) initWithMagic:(int)mId Subject:(FDCreature *)sub Targets:(NSArray *)tars Information:(MagicalInformation *)info Background:(int)backgroundImageId;
@@ -57,4 +59,6 @@
 -(void) appendLastIdleAnimation;
 
 -(void) updateMp;
+-(void) setTargetVisible:(BOOL)val;
+
 @end

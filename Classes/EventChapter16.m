@@ -59,7 +59,7 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51603 Id:108] autorelease] Position:CGPointMake(30,12)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51603 Id:109] autorelease] Position:CGPointMake(31,13)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51603 Id:110] autorelease] Position:CGPointMake(33,13)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51602 Id:111] autorelease] Position:CGPointMake(16,16)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51602 Id:111 DropItem:102] autorelease] Position:CGPointMake(16,16)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51602 Id:112] autorelease] Position:CGPointMake(21,13)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51604 Id:113] autorelease] Position:CGPointMake(17,13)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51604 Id:114] autorelease] Position:CGPointMake(16,14)];
@@ -71,30 +71,30 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51604 Id:120] autorelease] Position:CGPointMake(32,14)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51605 Id:121] autorelease] Position:CGPointMake(18,16)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51605 Id:122] autorelease] Position:CGPointMake(19,15)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51605 Id:123] autorelease] Position:CGPointMake(30,10)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51605 Id:123 DropItem:904] autorelease] Position:CGPointMake(30,10)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51605 Id:124] autorelease] Position:CGPointMake(34,14)];
 	
 	
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51601 Id:125] autorelease] Position:CGPointMake(23,32)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51601 Id:125 DropItem:103] autorelease] Position:CGPointMake(23,32)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51601 Id:126] autorelease] Position:CGPointMake(30,35)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51601 Id:127] autorelease] Position:CGPointMake(35,35)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51606 Id:128] autorelease] Position:CGPointMake(31,37)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51606 Id:128 DropItem:803] autorelease] Position:CGPointMake(31,37)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51606 Id:129] autorelease] Position:CGPointMake(33,34)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51603 Id:130] autorelease] Position:CGPointMake(22,33)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51603 Id:131] autorelease] Position:CGPointMake(23,34)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51603 Id:132] autorelease] Position:CGPointMake(24,33)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51602 Id:133] autorelease] Position:CGPointMake(32,35)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51602 Id:134] autorelease] Position:CGPointMake(33,36)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51602 Id:134 DropItem:903] autorelease] Position:CGPointMake(33,36)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51604 Id:135] autorelease] Position:CGPointMake(22,31)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51604 Id:136] autorelease] Position:CGPointMake(21,32)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51604 Id:137] autorelease] Position:CGPointMake(24,31)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51604 Id:138] autorelease] Position:CGPointMake(25,32)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51604 Id:138 DropItem:108] autorelease] Position:CGPointMake(25,32)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51604 Id:139] autorelease] Position:CGPointMake(32,31)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51604 Id:140] autorelease] Position:CGPointMake(32,32)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51604 Id:141] autorelease] Position:CGPointMake(30,32)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51604 Id:142] autorelease] Position:CGPointMake(31,33)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51604 Id:143] autorelease] Position:CGPointMake(30,34)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51604 Id:144] autorelease] Position:CGPointMake(29,34)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51604 Id:143 DropItem:111] autorelease] Position:CGPointMake(30,34)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51604 Id:144 DropItem:803] autorelease] Position:CGPointMake(29,34)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51605 Id:145] autorelease] Position:CGPointMake(23,30)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51605 Id:146] autorelease] Position:CGPointMake(20,33)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51605 Id:147] autorelease] Position:CGPointMake(26,33)];

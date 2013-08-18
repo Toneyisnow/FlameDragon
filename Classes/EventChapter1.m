@@ -127,7 +127,7 @@
 	[field setCursorTo:CGPointMake(3, 3)];
 	
 	// Enemy
-	FDEnemy *enemy5 = [[FDEnemy alloc] initWithDefinition:50101 Id:15];
+	FDEnemy *enemy5 = [[FDEnemy alloc] initWithDefinition:50101 Id:1 DropItem:101];
 	[field addEnemy: enemy5 Position:CGPointMake(4, 2)];
 	[enemy5 release];
 	
@@ -225,7 +225,7 @@
 	[field addEnemy:enemy3 Position:CGPointMake(21, 21)];
 	[enemy3 release];
 	
-	FDEnemy *enemy4 = [[FDEnemy alloc] initWithDefinition:50101 Id:24];
+	FDEnemy *enemy4 = [[FDEnemy alloc] initWithDefinition:50101 Id:24 DropItem:801];
 	[field addEnemy:enemy4 Position:CGPointMake(22, 21)];
 	[enemy4 release];
 	

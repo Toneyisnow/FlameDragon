@@ -49,12 +49,12 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51202 Id:101] autorelease] Position:CGPointMake(10,1 )];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51202 Id:102 DropItem:103] autorelease] Position:CGPointMake(12,1 )];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51202 Id:103] autorelease] Position:CGPointMake(9 ,2 )];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51202 Id:104] autorelease] Position:CGPointMake(11,2 )];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51202 Id:104 DropItem:802] autorelease] Position:CGPointMake(11,2 )];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51202 Id:105] autorelease] Position:CGPointMake(13,2 )];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51202 Id:106 DropItem:103] autorelease] Position:CGPointMake(10,3 )];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51202 Id:106 DropItem:902] autorelease] Position:CGPointMake(10,3 )];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51202 Id:107] autorelease] Position:CGPointMake(12,3 )];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51202 Id:108] autorelease] Position:CGPointMake(9 ,4 )];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51202 Id:109] autorelease] Position:CGPointMake(13,4 )];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51202 Id:109 DropItem:102] autorelease] Position:CGPointMake(13,4 )];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:51201 Id:199 DropItem:217] autorelease] Position:CGPointMake(11,4 )];
 	
 	// Add Npc
@@ -73,10 +73,10 @@
 	FDEnemy *enemy1 = [[[FDEnemy alloc] initWithDefinition:51202 Id:201] autorelease];
 	[field addEnemy:enemy1 Position:CGPointMake(26,39)];
 	
-	FDEnemy *enemy2 = [[[FDEnemy alloc] initWithDefinition:51202 Id:202] autorelease];
+	FDEnemy *enemy2 = [[[FDEnemy alloc] initWithDefinition:51202 Id:202 DropItem:115] autorelease];
 	[field addEnemy:enemy2 Position:CGPointMake(26,39)];
 	
-	FDEnemy *enemy3 = [[[FDEnemy alloc] initWithDefinition:51203 Id:203] autorelease];
+	FDEnemy *enemy3 = [[[FDEnemy alloc] initWithDefinition:51203 Id:203 DropItem:103] autorelease];
 	[field addEnemy:enemy3 Position:CGPointMake(26,39)];
 	
 	FDEnemy *enemy4 = [[[FDEnemy alloc] initWithDefinition:51204 Id:204 DropItem:105] autorelease];
@@ -104,10 +104,10 @@
 	FDEnemy *enemy2 = [[[FDEnemy alloc] initWithDefinition:51202 Id:206 DropItem:901] autorelease];
 	[field addEnemy:enemy2 Position:CGPointMake(2,31)];
 	
-	FDEnemy *enemy3 = [[[FDEnemy alloc] initWithDefinition:51203 Id:207] autorelease];
+	FDEnemy *enemy3 = [[[FDEnemy alloc] initWithDefinition:51203 Id:207 DropItem:108] autorelease];
 	[field addEnemy:enemy3 Position:CGPointMake(2,31)];
 	
-	FDEnemy *enemy4 = [[[FDEnemy alloc] initWithDefinition:51204 Id:208] autorelease];
+	FDEnemy *enemy4 = [[[FDEnemy alloc] initWithDefinition:51204 Id:208 DropItem:112] autorelease];
 	[field addEnemy:enemy4 Position:CGPointMake(2,31)];
 	
 	[layers moveCreature:enemy1 To:CGPointMake(3,31) showMenu:FALSE];
@@ -130,7 +130,7 @@
 	FDEnemy *enemy1 = [[[FDEnemy alloc] initWithDefinition:51202 Id:201] autorelease];
 	[field addEnemy:enemy1 Position:CGPointMake(21,10)];
 	
-	FDEnemy *enemy2 = [[[FDEnemy alloc] initWithDefinition:51202 Id:202] autorelease];
+	FDEnemy *enemy2 = [[[FDEnemy alloc] initWithDefinition:51202 Id:202 DropItem:114] autorelease];
 	[field addEnemy:enemy2 Position:CGPointMake(21,10)];
 	
 	FDEnemy *enemy3 = [[[FDEnemy alloc] initWithDefinition:51203 Id:203 DropItem:901] autorelease];

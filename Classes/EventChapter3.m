@@ -77,7 +77,10 @@
 	for (int i = 0; i < 8; i++) {
 		[field addEnemy:[[[FDEnemy alloc] initWithDefinition:50301 Id:(21+i)] autorelease] Position:startPoints[i]];
 	}
-	
+    [(FDEnemy*)[field getCreatureById:22] setDropItem:801];
+    [(FDEnemy*)[field getCreatureById:25] setDropItem:101];
+    [(FDEnemy*)[field getCreatureById:28] setDropItem:901];
+    
 	[layers moveCreatureId:21 To:CGPointMake(startPoints[0].x, startPoints[0].y+6) showMenu:FALSE];
 	
 	for (int i = 4; i <= 14; i++) {
