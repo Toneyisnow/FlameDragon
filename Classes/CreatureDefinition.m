@@ -222,7 +222,7 @@
 }
 
 -(BOOL) isDragon {
-    return (identifier == 52509);
+    return (identifier == 52509 || identifier == 52902 || identifier == 52903 || identifier == 52904);
 }
 
 -(int) getMaximumLevel {

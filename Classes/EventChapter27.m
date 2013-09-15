@@ -44,7 +44,7 @@
 	[self settleFriend:8 At:CGPointMake(15, 56)];
 	[self settleFriend:9 At:CGPointMake(16, 56)];
 	[self settleFriend:10 At:CGPointMake(17, 56)];
-	[self settleFriend:11 At:CGPointMake(18, 57)];
+	[self settleFriend:11 At:CGPointMake(18, 56)];
 	[self settleFriend:12 At:CGPointMake(14, 57)];
 	[self settleFriend:13 At:CGPointMake(15, 57)];
 	[self settleFriend:14 At:CGPointMake(16, 57)];
@@ -201,19 +201,17 @@
 -(void) enemyClear
 {
 	if ([self teamHasItem:814]) {
-	
 		for (int i = 1; i <= 23; i++) {
 			[self showTalkMessage:27 conversation:4 sequence:i];
 		}
 	
-		[layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];
 	} else {
 		for (int i = 1; i <= 15; i++) {
 			[self showTalkMessage:27 conversation:5 sequence:i];
 		}
-	
-		[layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];
 	}
+    
+    [layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];
 }
 
 @end

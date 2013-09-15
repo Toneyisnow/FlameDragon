@@ -883,20 +883,15 @@
 {
 	CreatureType friendType1 = CreatureType_Friend;
 	CreatureType friendType2 = CreatureType_Npc;
-	// CreatureType enemyType1;
-	// CreatureType enemyType2;
 	
 	if ([creature getCreatureType] == CreatureType_Friend || [creature getCreatureType] == CreatureType_Npc)
 	{
 		friendType1 = CreatureType_Friend;
 		friendType2 = CreatureType_Npc;
-		// enemyType1 = enemyType2 = CreatureType_Enemy;
 	}
 	
 	if ([creature getCreatureType] == CreatureType_Enemy)
 	{
-		// enemyType1 = CreatureType_Friend;
-		// enemyType2 = CreatureType_Npc;
 		friendType1 = friendType2 = CreatureType_Enemy;
 	}
 	
@@ -914,44 +909,6 @@
     
     [map retain];
     
-	// Build by friends and enemies
-	/*
-	for (int i = 1; i <= fieldWidth; i++) {
-		for (int j = 1; j <= fieldHeight; j++) {
-			
-			ScopeResistanceType resistance = ScopeResistance_Gap;
-			
-			ScopeResistanceType oldresistance = [map getX:i	Y:j];
-			if (oldresistance == ScopeResistance_Gap) {
-				continue;
-			}
-			
-			FDCreature *c = [self getCreatureByPos:CGPointMake(i, j)];
-			
-			if (c == nil)
-			{
-				continue;
-			}
-			
-			if ([c getCreatureType] == friendType1 || [c getCreatureType] == friendType2)
-			{
-				if (c == creature)
-				{
-					// CCLOG(@"Got itself in search scope");
-					resistance = ScopeResistance_Plain;
-				}
-				else
-				{
-					// CCLOG(@"Got friend in search scope");
-					resistance = ScopeResistance_Skip;
-				}
-			}
-			
-			[map setX:i Y:j Value: resistance];
-		}
-	}
-	*/
-	
 	// Build ZOC
 	for (int i = 1; i <= fieldWidth; i++) {
 		for (int j = 1; j <= fieldHeight; j++) {
@@ -962,7 +919,6 @@
 			}
 			
 			FDCreature *c = [self getCreatureByPos:CGPointMake(i, j)];
-			
 			if (c == nil || [c getCreatureType] == friendType1 || [c getCreatureType] == friendType2)
 			{
 				continue;

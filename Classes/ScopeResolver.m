@@ -81,38 +81,6 @@
 	[self walk:CGPointMake(pos.x+1, pos.y) WithMovePoint:leftPoint];
 }
 
-/*
--(int) resistanceX:(int)x Y:(int)y
-{
-	if x <= 0 || x > width || y <= 0 || y > height)
-	{
-		return 0;
-	}
-	
-	return resistanceMap[(x-1) * height + y - 1];
-}
-
--(int) walkedMapX:(int)x Y:(int)y
-{
-	if (x <= 0 || x > width || y <= 0 || y > height)
-	{
-		return 0;
-	}
-
-	return walkedMap[(x-1) * height + y - 1];
-}
-
--(void) setWalkedMapX:(int)x Y:(int)y Value:(int)val
-{
-	if (x <= 0 || x > width || y <= 0 || y > height)
-	{
-		return;
-	}
-	
-	walkedMap[(x-1) * height + y - 1] = val;
-}
-*/
-
 -(void) dealloc
 {
 	[walkedMap release];

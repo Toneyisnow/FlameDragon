@@ -293,6 +293,11 @@
 		deltaDp = defendItem.dp;
 	}
 	
+	AttackItemDefinition *attackItem = [self getAttackItem];
+	if (attackItem != nil && [attackItem isAttackItem]) {
+		deltaDp = attackItem.dp;
+	}
+	
 	int total = dp + deltaDp;
 	if (statusEnhanceDp > 0) {
 		total += 0.15 * total;
@@ -310,9 +315,16 @@
 		deltaDp = item.dp;
 		return dp + deltaDp;	
 		
-	} else {
-		return [self calculatedDp];
 	}
+    
+    AttackItemDefinition *item2 = (AttackItemDefinition *)[[DataDepot depot] getItemDefinition:itemId];
+	if (item2 != nil && [item2 isAttackItem]) {
+		deltaDp = item.dp;
+		return [self calculatedDp] + deltaDp;
+		
+	}
+    
+    return [self calculatedDp];
 }
 
 -(AttackItemDefinition *) getAttackItem
@@ -399,7 +411,6 @@
 		hpCurrent -= hpMax / 10;
 		if (hpCurrent < 1) hpCurrent = 1;
 	}
-	
 	
 	if (statusEnhanceAp > 0) statusEnhanceAp --;
 	if (statusEnhanceDp > 0) statusEnhanceDp --;

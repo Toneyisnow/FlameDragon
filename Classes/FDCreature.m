@@ -361,29 +361,6 @@
 	return [data.itemList count] >= 8;
 }
 
-
-/*
--(void) removeItem:(int)index
-{
-	if (index >= [data.itemList count]) {
-		CCLOG(@"Cannot remove item, the index %d is out of range (count=%d)", index, [data.itemList count]);
-	}
-	[data.itemList removeObjectAtIndex:index];
-	
-	if (data.attackItemIndex == index) {
-		data.attackItemIndex = -1;
-	}
-	if (data.attackItemIndex > index) {
-		data.attackItemIndex --;
-	}
-	if (data.defendItemIndex == index) {
-		data.defendItemIndex = -1;
-	}
-	if (data.defendItemIndex > index) {
-		data.defendItemIndex --;
-	}
-}
-*/
 -(void) addItem:(int)itemId
 {
 	[data.itemList addObject:[NSNumber numberWithInt:itemId]];

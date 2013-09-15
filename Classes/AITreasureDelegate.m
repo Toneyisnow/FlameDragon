@@ -11,11 +11,12 @@
 
 @implementation AITreasureDelegate
 
+@synthesize escapePosition;
+
 -(id) initWithCreature:(FDCreature *)c Layers:(ActionLayers *)l
 {
 	self = [super initWithCreature:c Layers:l];
 	
-	//[self initDistanceResolver:c];
     treasurePosition = CGPointMake(0, 0);
     escapePosition = CGPointMake(0, 0);
     

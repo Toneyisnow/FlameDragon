@@ -27,6 +27,7 @@
 -(void) settleFriend:(int)friendIndex At:(CGPoint)loc;
 
 -(int) loadTurnEvent:(TurnType) turnType Turn:(int)turnNum Action:(SEL)action;
+-(int) loadTurnDelayEvent:(TurnType) turnType TurnCount:(int)turnCount Action:(SEL)action;
 -(int) loadDieEvent:(int)creatureId Action:(SEL)action;
 -(int) loadDyingEvent:(int)creatureId Action:(SEL)action;
 -(int) loadTeamEvent:(CreatureType) creatureType Action:(SEL)action;

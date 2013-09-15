@@ -29,7 +29,7 @@
 
 -(BOOL) isTriggered:(ActionLayers *)layers
 {
-	return (dependentEvent == nil || ![dependentEvent isActiveEvent])
+    return (dependentEvent == nil || ![dependentEvent isActiveEvent])
 			&& isActivated
 			&& [condition isMatch:layers];
 }
@@ -58,6 +58,11 @@
 -(void) setDependentEvent:(FDEvent *)event
 {
 	dependentEvent = event;
+}
+
+-(FDEvent *) getDependentEvent
+{
+    return dependentEvent;
 }
 
 -(void) dealloc

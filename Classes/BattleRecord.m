@@ -11,7 +11,7 @@
 
 @implementation BattleRecord
 
-@synthesize turnNo, money;
+@synthesize turnNo, money, extraInfo;
 @synthesize withAllEvents;
 
 -(id) initWithChapter:(int)l
@@ -72,6 +72,7 @@
 	
 	[coder encodeInt:chapterId forKey:@"chapterId"];
     [coder encodeInt:turnNo forKey:@"turnNo"];
+    [coder encodeInt:extraInfo forKey:@"extraInfo"];
     [coder encodeInt:money forKey:@"money"];
 	[coder encodeObject:friendRecords forKey:@"friendRecords"];
 	[coder encodeObject:enemyRecords forKey:@"enemyRecords"];
@@ -89,7 +90,7 @@
     chapterId = [coder decodeIntForKey:@"chapterId"];
     turnNo = [coder decodeIntForKey:@"turnNo"];
     money = [coder decodeIntForKey:@"money"];
-	
+	extraInfo = [coder decodeIntForKey:@"extraInfo"];
 	friendRecords = (NSMutableArray *)[[coder decodeObjectForKey:@"friendRecords"] retain];
 	enemyRecords = (NSMutableArray *)[[coder decodeObjectForKey:@"enemyRecords"] retain];
 	npcRecords = (NSMutableArray *)[[coder decodeObjectForKey:@"npcRecords"] retain];

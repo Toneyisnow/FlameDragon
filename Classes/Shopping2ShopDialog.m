@@ -47,7 +47,7 @@
         [itemList addObject:[NSNumber numberWithInt:805]];
     }
     // Fix Bug: If the user doesn't have Item 120, here will add one for Chapter 17-22
-    if (chapterRecord.chapterId >= 17
+    if (chapterRecord.chapterId >= 18
         && chapterRecord.chapterId <= 22
         && [self getShopType] == DataDepotShopType_ItemShop
         && [chapterRecord getCreatureThatCarriesItem:120] == nil)

@@ -15,7 +15,7 @@
     CGPoint treasurePosition;
 }
 
-@property (retain, nonatomic) FDPosition *escapePosition;
+@property CGPoint escapePosition;
 
 
 -(void) checkEndTurnCondition;

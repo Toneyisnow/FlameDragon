@@ -48,7 +48,8 @@ typedef enum TurnType
 	TurnType turnType;
 	
 	int money;
-	
+    int extraInfo;
+    
 	IListener *eventListener;
 	IListener *enemyAiHandler;
 	IListener *npcAiHandler;
@@ -120,6 +121,8 @@ typedef enum TurnType
 -(TurnType) getTurnType;
 -(void) showTurnInfo;
 -(void) showChapterInfo;
+-(int) getExtraInfo;
+-(void) setExtraInfo:(int)val;
 
 -(void) updateSideBarLocation:(CGPoint)loc;
 

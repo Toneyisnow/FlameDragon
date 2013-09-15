@@ -35,5 +35,6 @@
 -(BOOL) isActiveEvent;
 
 -(void) setDependentEvent:(FDEvent *)event;
+-(FDEvent *) getDependentEvent;
 
 @end

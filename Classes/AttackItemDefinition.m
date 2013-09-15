@@ -11,7 +11,7 @@
 
 @implementation AttackItemDefinition
 
-@synthesize itemCategory,ap,hit,ev;
+@synthesize itemCategory,ap,hit,ev,dp;
 @synthesize attackRange;
 
 +(id) readFromFile:(FDFileStream *)stream
@@ -20,17 +20,12 @@
 	
 	def.identifier = [stream readInt];
 	
-	//NSString *idStr = [NSString stringWithFormat:@"%03d", def.identifier];
-	//def.name = NSLocalizedStringFromTable (idStr, @"Item", @"comment");
 	def.name = [FDLocalString item:def.identifier];
-	
-	//def.name = [stream readString];
 	def.itemCategory = [stream readInt];
-	
 	def.price = [stream readInt];
 	def.sellprice = [stream readInt];
-	
 	def.ap = [stream readInt];
+    def.dp = [stream readInt];
 	def.hit = [stream readInt];
 	
 	int scope = [stream readInt];
@@ -57,9 +52,6 @@
 	//FDCreature *creature = (FDCreature *)obj;
 	
 	// Creature updates its properties
-	
-	
-	
 }
 
 -(NSString *) getAttributeString

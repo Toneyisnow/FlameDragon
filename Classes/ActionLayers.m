@@ -820,6 +820,7 @@
     //[field loadMapData:level];
 	chapterId = info.chapterId;
 	turnNo = 0;
+    extraInfo = 0;
 	money = info.money;
     selectedFriendList = ((list != nil) ? [list retain] : nil);
     
@@ -853,7 +854,8 @@
 	chapterId = info.chapterId;
 	turnNo = info.turnNo;
 	money = info.money;
-	
+	extraInfo = info.extraInfo;
+    
     // Load Creatures
 	for(CreatureRecord *record in [info friendRecords])
 	{
@@ -951,7 +953,8 @@
 	BattleRecord *info = [[BattleRecord alloc] initWithChapter:chapterId];
 	info.turnNo = turnNo;
 	info.money = money;
-	
+	info.extraInfo = extraInfo;
+    
 	for(FDCreature *creature in [field getFriendList])
 	{
 		CreatureRecord *record = [field generateCreatureRecord:creature];
@@ -1192,6 +1195,16 @@
 -(TurnType) getTurnType
 {
 	return turnType;
+}
+
+-(int) getExtraInfo
+{
+    return extraInfo;
+}
+
+-(void) setExtraInfo:(int)val
+{
+    extraInfo = val;
 }
 
 -(BOOL) isInteractiveBusy

@@ -13,7 +13,7 @@
 
 -(void) loadEvents
 {
-  [self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(initialBattle)];
+    [self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(initialBattle)];
 	[self loadTurnEvent:TurnType_Friend Turn:5 Action:@selector(round2)];
 	[self loadTurnEvent:TurnType_Friend Turn:10 Action:@selector(round3)];
 	[self loadTurnEvent:TurnType_Friend Turn:13 Action:@selector(round4)];
@@ -21,14 +21,12 @@
 	[self loadDieEvent:1 Action:@selector(gameOver)];
 	[self loadDieEvent:2 Action:@selector(gameOver)];
 	
-	int e3 = [self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(dragonAppear)];
-	int e2 = [self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(dragonTriggerred)];
-	int e1 = [self loadPositionEvent:2 AtPosition:CGPointMake(16,22) Action:@selector(onTriggerDragon)];
-	[eventHandler setEvent:e2 dependentOn:e1];
-	[eventHandler setEvent:e3 dependentOn:e2];
-	
-	[self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
-	
+	//int e1 = [self loadPositionEvent:2 AtPosition:CGPointMake(16,22) Action:@selector(onTriggerDragon)];
+	[self loadPositionEvent:1 AtPosition:CGPointMake(16,58) Action:@selector(onTriggerDragon)];
+	int e1 = [self loadTurnDelayEvent:TurnType_Friend TurnCount:5 Action:@selector(dragonAppear)];
+	int e2 = [self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
+    [eventHandler setEvent:e2 dependentOn:e1];
+    
 	NSLog(@"Chapter29 events loaded.");
 }
 
@@ -137,8 +135,8 @@
 	}
 	
 	// Talk
-	for (int i = 1; i <= 12; i++) {
-		[self showTalkMessage:10 conversation:1 sequence:i];
+	for (int i = 1; i <= 14; i++) {
+		[self showTalkMessage:29 conversation:1 sequence:i];
 	}
 }
 
@@ -167,15 +165,14 @@
 	for (int i = 1; i <= 5; i++) {
 		[self showTalkMessage:29 conversation:2 sequence:i];
 	}
-}
-
--(void) dragonTriggerred
-{
-	// Nothing to do
+    
+    [layers setExtraInfo:[layers getTurnNumber]];
 }
 
 -(void) dragonAppear
 {
+    CCLOG(@"dragonAppear Event.");
+
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52902 Id:301] autorelease] Position:CGPointMake(14,13)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52903 Id:302] autorelease] Position:CGPointMake(18,13)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52904 Id:303] autorelease] Position:CGPointMake(16,13)];
@@ -191,7 +188,7 @@
 		[self showTalkMessage:29 conversation:4 sequence:i];
 	}
 	
-	FDCreature *boss = [[FDEnemy alloc] initWithDefinition:52901 Id:999];
+	FDEnemy *boss = [[FDEnemy alloc] initWithDefinition:52901 Id:999];
 	[field addEnemy:boss Position:CGPointMake(16,1)];
 	[layers moveCreature:boss To:CGPointMake(16,5) showMenu:FALSE];
 	[boss release];

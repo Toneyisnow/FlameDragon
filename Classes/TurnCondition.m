@@ -43,7 +43,7 @@
 			break;
 	}
 	
-	if (turnNumber == 0 && [layers getTurnNumber] == turnNumber) {
+	if (turnNumber == 0) {
 		return TRUE;
 	}
 	

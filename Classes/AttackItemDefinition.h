@@ -18,12 +18,14 @@
 	int ap;
 	int hit;
 	int ev;
+    int dp;
 	//int attackScope;
 	FDRange *attackRange;
 }
 
 @property (nonatomic) int itemCategory;
 @property (nonatomic) int ap;
+@property (nonatomic) int dp;
 @property (nonatomic) int hit;
 @property (nonatomic) int ev;
 @property (nonatomic, retain) FDRange *attackRange;

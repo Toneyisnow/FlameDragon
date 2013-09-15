@@ -20,6 +20,7 @@
 	[self loadDieEvent:2 Action:@selector(gameOver)];
 	[self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
 	
+	[self loadDyingEvent:114 Action:@selector(bossDyingMessage)];
 	[self loadDyingEvent:201 Action:@selector(bossDyingMessage)];
 	[self loadDyingEvent:202 Action:@selector(bossDyingMessage)];
 	
@@ -68,7 +69,7 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52803 Id:111] autorelease] Position:CGPointMake(22,12)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52805 Id:112] autorelease] Position:CGPointMake(23,21)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52805 Id:113] autorelease] Position:CGPointMake(23,23)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52804 Id:114] autorelease] Position:CGPointMake(23,22)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52802 Id:114] autorelease] Position:CGPointMake(23,22)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52804 Id:115] autorelease] Position:CGPointMake(22,11)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52804 Id:116] autorelease] Position:CGPointMake(20,11)];
 	

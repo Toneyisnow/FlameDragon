@@ -90,6 +90,8 @@
 	for (int i = 1; i <= 20; i++) {
 		[self showTalkMessage:30 conversation:1 sequence:i];
 	}
+    
+    [layers appendToCurrentActivityMethod:@selector(initialBattle_1) Param1:nil Param2:nil Obj:self];
 }
 
 -(void) initialBattle_1
@@ -98,6 +100,8 @@
 	
 	[self showTalkMessage:30 conversation:1 sequence:21];
 	[self showTalkMessage:30 conversation:1 sequence:22];
+    
+    [layers appendToCurrentActivityMethod:@selector(initialBattle_2) Param1:nil Param2:nil Obj:self];
 }
 
 -(void) initialBattle_2
@@ -106,6 +110,8 @@
 	
 	[self showTalkMessage:30 conversation:1 sequence:23];
 	[self showTalkMessage:30 conversation:1 sequence:24];
+    
+    [layers appendToCurrentActivityMethod:@selector(initialBattle_3) Param1:nil Param2:nil Obj:self];
 }
 
 -(void) initialBattle_3
@@ -114,6 +120,8 @@
 	
 	[self showTalkMessage:30 conversation:1 sequence:25];
 	[self showTalkMessage:30 conversation:1 sequence:26];
+
+    [layers appendToCurrentActivityMethod:@selector(initialBattle_4) Param1:nil Param2:nil Obj:self];
 }
 
 -(void) initialBattle_4
@@ -124,11 +132,11 @@
 	[self showTalkMessage:30 conversation:1 sequence:28];
 	
 	// Add Enemy
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:101] autorelease] Position:CGPointMake(22,20)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:102] autorelease] Position:CGPointMake(21,20)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:103] autorelease] Position:CGPointMake(23,20)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:104] autorelease] Position:CGPointMake(20,20)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:105] autorelease] Position:CGPointMake(24,20)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:101] autorelease] Position:CGPointMake(23,20)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:102] autorelease] Position:CGPointMake(22,20)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:103] autorelease] Position:CGPointMake(24,20)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:104] autorelease] Position:CGPointMake(21,20)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:105] autorelease] Position:CGPointMake(25,20)];
 	
 }
 
@@ -158,7 +166,7 @@
 	}
     
     FDCreature *boss = [field getCreatureById:999];
-    [boss setPosition:CGPointMake(22,20)];
+    [boss setLocation:CGPointMake(22,20)];
 	
 }
 
@@ -172,11 +180,12 @@
 	}
 	
 	FDCreature *boss = [field getCreatureById:(200+num)];
-	[boss setPosition:CGPointMake(22,20)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:(101+10*num)] autorelease] Position:CGPointMake(21,20)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:(102+10*num)] autorelease] Position:CGPointMake(23,20)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:(103+10*num)] autorelease] Position:CGPointMake(20,20)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:(104+10*num)] autorelease] Position:CGPointMake(24,20)];
+	[boss setLocation:[field convertPosToLoc:CGPointMake(23,20)]];
+    
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:(101+10*num)] autorelease] Position:CGPointMake(22,20)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:(102+10*num)] autorelease] Position:CGPointMake(24,20)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:(103+10*num)] autorelease] Position:CGPointMake(21,20)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:(104+10*num)] autorelease] Position:CGPointMake(25,20)];
 
 }
 

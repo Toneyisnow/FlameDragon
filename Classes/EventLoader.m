@@ -16,6 +16,7 @@
 #import "FDDurationActivity.h"
 #import "FDTreasure.h"
 #import "TurnCondition.h"
+#import "TurnDelayCondition.h"
 #import "CreatureDeadCondition.h"
 #import "CreatureDyingCondition.h"
 #import "TeamEliminatedCondition.h"
@@ -50,6 +51,15 @@
 	TurnCondition *condition = [[TurnCondition alloc] initWithTurnType:turnType Number:turnNum];
 	int eventId = [self loadSingleEvent:condition Action:action];
 	[condition release];	
+	
+	return eventId;
+}
+
+-(int) loadTurnDelayEvent:(TurnType) turnType TurnCount:(int)turnCount Action:(SEL)action
+{
+	TurnDelayCondition *condition = [[TurnDelayCondition alloc] initWithTurnType:turnType DelayCount:turnCount];
+	int eventId = [self loadSingleEvent:condition Action:action];
+	[condition release];
 	
 	return eventId;
 }

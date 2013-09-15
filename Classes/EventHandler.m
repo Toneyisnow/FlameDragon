@@ -81,6 +81,14 @@
 	for (int i = [events count]-1; i >= 0;i--) {
 		
 		FDEvent *event = [events objectAtIndex:i];
+        /*
+        if (event.eventId == 8 || event.eventId == 9)
+        {
+            FDEvent *e = [event getDependentEvent];
+            CCLOG(@"EventId: %d. Dependent Event: %d. IsTriggerred: %d", event.eventId, e.eventId, [e isActiveEvent]);
+        }
+        */
+        
 		if ([event isTriggered:layers]) {
 			
 			NSLog(@"Event is triggered.");
