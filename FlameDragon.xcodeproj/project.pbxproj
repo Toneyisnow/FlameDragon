@@ -19,6 +19,8 @@
 		020C5A7916D9C32A00AD0F53 /* Tai-13.png in Resources */ = {isa = PBXBuildFile; fileRef = 020C5A7616D9C32A00AD0F53 /* Tai-13.png */; };
 		020C5A7A16D9C32A00AD0F53 /* Tai-14.png in Resources */ = {isa = PBXBuildFile; fileRef = 020C5A7716D9C32A00AD0F53 /* Tai-14.png */; };
 		020C5A7B16D9C32A00AD0F53 /* Tai-15.png in Resources */ = {isa = PBXBuildFile; fileRef = 020C5A7816D9C32A00AD0F53 /* Tai-15.png */; };
+		021064B5182536D2003BF337 /* EventGoodEnding1.m in Sources */ = {isa = PBXBuildFile; fileRef = 021064B4182536D1003BF337 /* EventGoodEnding1.m */; };
+		021064B8182536ED003BF337 /* EventGoodEnding2.m in Sources */ = {isa = PBXBuildFile; fileRef = 021064B7182536ED003BF337 /* EventGoodEnding2.m */; };
 		0213447216DE727000AB5D16 /* Cursor-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 0213447116DE727000AB5D16 /* Cursor-04.png */; };
 		0213447A16DE821A00AB5D16 /* CCVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0213447516DE821A00AB5D16 /* CCVideoPlayer.m */; };
 		0213447B16DE821A00AB5D16 /* CCVideoPlayerImpliOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 0213447716DE821A00AB5D16 /* CCVideoPlayerImpliOS.m */; };
@@ -4593,6 +4595,10 @@
 		020C5A7616D9C32A00AD0F53 /* Tai-13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-13.png"; path = "Tais/Tai-13.png"; sourceTree = "<group>"; };
 		020C5A7716D9C32A00AD0F53 /* Tai-14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-14.png"; path = "Tais/Tai-14.png"; sourceTree = "<group>"; };
 		020C5A7816D9C32A00AD0F53 /* Tai-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-15.png"; path = "Tais/Tai-15.png"; sourceTree = "<group>"; };
+		021064B3182536D1003BF337 /* EventGoodEnding1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventGoodEnding1.h; sourceTree = "<group>"; };
+		021064B4182536D1003BF337 /* EventGoodEnding1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventGoodEnding1.m; sourceTree = "<group>"; };
+		021064B6182536ED003BF337 /* EventGoodEnding2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventGoodEnding2.h; sourceTree = "<group>"; };
+		021064B7182536ED003BF337 /* EventGoodEnding2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventGoodEnding2.m; sourceTree = "<group>"; };
 		0213447116DE727000AB5D16 /* Cursor-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cursor-04.png"; path = "Others/Cursor-04.png"; sourceTree = "<group>"; };
 		0213447416DE821A00AB5D16 /* CCVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCVideoPlayer.h; path = CCVideoPlayer/CCVideoPlayer.h; sourceTree = "<group>"; };
 		0213447516DE821A00AB5D16 /* CCVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCVideoPlayer.m; path = CCVideoPlayer/CCVideoPlayer.m; sourceTree = "<group>"; };
@@ -10870,6 +10876,10 @@
 				022ADC6E171707FB00F15034 /* EventChapter30.m */,
 				02DBA1ED16664E340081EC45 /* EventChapter99.h */,
 				02DBA1EE16664E340081EC45 /* EventChapter99.m */,
+				021064B3182536D1003BF337 /* EventGoodEnding1.h */,
+				021064B4182536D1003BF337 /* EventGoodEnding1.m */,
+				021064B6182536ED003BF337 /* EventGoodEnding2.h */,
+				021064B7182536ED003BF337 /* EventGoodEnding2.m */,
 			);
 			name = Chapter;
 			sourceTree = "<group>";
@@ -21503,6 +21513,8 @@
 				02CB712E17BFA1B2008A20C2 /* AIMagicalGuardDelegate.m in Sources */,
 				02AF9BD217BFB32900E63F21 /* AIMagicalDelegate.m in Sources */,
 				02AF9BD517E09B4A00E63F21 /* TurnDelayCondition.m in Sources */,
+				021064B5182536D2003BF337 /* EventGoodEnding1.m in Sources */,
+				021064B8182536ED003BF337 /* EventGoodEnding2.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
