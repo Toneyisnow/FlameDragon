@@ -46,6 +46,11 @@
 	
 }
 
+-(void) noAction
+{
+
+}
+
 -(int) loadTurnEvent:(TurnType) turnType Turn:(int)turnNum Action:(SEL)action
 {
 	TurnCondition *condition = [[TurnCondition alloc] initWithTurnType:turnType Number:turnNum];

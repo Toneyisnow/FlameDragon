@@ -91,7 +91,7 @@
         
 		if ([event isTriggered:layers]) {
 			
-			NSLog(@"Event is triggered.");
+			CCLOG(@"Event is triggered.");
 			[event doAction];
 			// [events removeObject:event];
 		}
@@ -112,7 +112,7 @@
 
 -(void) loadState:(NSMutableArray *)activeEventIds
 {
-	NSLog(@"Loading Active Events.");
+	CCLOG(@"Loading Active Events.");
 	
 	for (int i = [events count]-1; i >= 0;i--) {
 		

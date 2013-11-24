@@ -129,7 +129,7 @@
 			break;
 		default:
 			
-			NSLog(@"Parameter error: cannot read Fight Animation with type %d.", aniType);
+			CCLOG(@"Parameter error: cannot read Fight Animation with type %d.", aniType);
 			break;
 	}
 	

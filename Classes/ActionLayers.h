@@ -59,6 +59,7 @@ typedef enum TurnType
     FDActivity *currentActivity;
     
     BOOL gameTernimated;
+    BOOL endOfTurn;
 }
 
 @property (retain) FDActivity *currentActivity;
@@ -156,5 +157,7 @@ typedef enum TurnType
 -(void) settleFriend:(int)friendIndex At:(CGPoint)loc;
 
 -(void) showTestData;
+
+-(BOOL) isEndOfTurn;
 
 @end

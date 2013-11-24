@@ -114,7 +114,7 @@
         
     }
     @catch (NSException *exception) {
-        NSLog(@"%@", [exception reason]);
+        CCLOG(@"%@", [exception reason]);
     }
     
 }

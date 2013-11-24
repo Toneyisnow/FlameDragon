@@ -30,8 +30,7 @@
 -(void) onClicked
 {
 	int selected = 1;
-	
-	NSLog(@"Select Friend Index %d", selected);	
+	CCLOG(@"Select Friend Index %d", selected);
 	id returnedObject = [NSNumber numberWithInt:selected];
 	[self onConfirmedExit:returnedObject];
 }

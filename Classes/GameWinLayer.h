@@ -7,10 +7,11 @@
 //
 
 #import "cocos2d.h"
+#import "CCVideoPlayer.h"
 
+@interface GameWinLayer : CCLayer<CCVideoPlayerDelegate> {
 
-@interface GameWinLayer : CCLayer {
-
+    int movieSegment;
 }
 
 -(void) onClose;

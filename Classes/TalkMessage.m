@@ -75,8 +75,7 @@
 
 -(void) show:(CCLayer *)l
 {
-	
-	NSLog(@"Show talk message");
+	CCLOG(@"Show talk message");
 	
 	showIndex = 0;
 	

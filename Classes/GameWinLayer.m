@@ -19,22 +19,31 @@
 	self = [super init];
 	
 	
-	FDSprite *bg = [[FDSprite alloc] initWithString:@"To Be Continue..." Size:20];
-	[bg setLocation:[FDWindow downRight]];
+	//FDSprite *bg = [[FDSprite alloc] initWithString:@"To Be Continue..." Size:20];
+	//[bg setLocation:[FDWindow downRight]];
 	
-	[self addChild:[bg getSprite]];
+	//[self addChild:[bg getSprite]];
 	// [bg addToLayer:self];
 	
-    [bg release];
+    //[bg release];
     
 	return self;
 }
 
--(void) ccTouchesBegan:(NSSet*)touches withEvent:(UIEvent*)event {
-	
-	[self onClose];
+-(void) onEnter {
+    
+    [CCVideoPlayer setDelegate:self];
+
+    // Start Movie
+    [CCVideoPlayer setNoSkip:TRUE];
+    [CCVideoPlayer playMovieWithFile:@"Ending_Farewell.mp4"];
+    movieSegment = 1;
 }
 
+-(void) ccTouchesBegan:(NSSet*)touches withEvent:(UIEvent*)event {
+	
+//	[self onClose];
+}
 
 -(void) onClose
 {
@@ -43,5 +52,25 @@
 	
 }
 
+
+-(void) moviePlaybackFinished {
+    CCLOG(@"moviePlaybackFinished");
+    [[CCDirector sharedDirector] stopAnimation];
+    
+    if (movieSegment == 1)
+    {
+        movieSegment = 2;
+        [CCVideoPlayer playMovieWithFile:@"Ending_Staff.mp4"];
+    }
+    else
+    {
+        [self onClose];
+    }
+}
+
+-(void) movieStartsPlaying {
+    CCLOG(@"");
+    [[CCDirector sharedDirector] startAnimation];
+}
 
 @end

@@ -138,7 +138,7 @@
 
 -(void) clickEnter
 {
-	NSLog(@"Click Enter");
+	CCLOG(@"Click Enter");
 	
 }
 
@@ -179,7 +179,7 @@
 
 -(void) pushDialog:(ShoppingDialog *)dialog
 {
-	NSLog(@"pushDialog");
+	CCLOG(@"pushDialog");
 	
 	// Close current dialog
 	if (currentDialog != nil) {
@@ -195,7 +195,7 @@
 
 -(ShoppingDialog *) popDialog
 {
-	NSLog(@"popDialog");
+	CCLOG(@"popDialog");
 	
 	// Close current dialog
 	[[currentDialog currentDialog] close];

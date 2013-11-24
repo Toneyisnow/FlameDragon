@@ -30,7 +30,7 @@
 {
 	int selected = 1;
 	
-	NSLog(@"Select Target Index %d", selected);	
+	CCLOG(@"Select Target Index %d", selected);
 	id returnedObject = [NSNumber numberWithInt:selected];
 	[self onConfirmedExit:returnedObject];
 }

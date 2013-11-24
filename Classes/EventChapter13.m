@@ -25,12 +25,12 @@
 	
 	[self loadPositionEvent:1 AtPosition:CGPointMake(25,6) Action:@selector(onHeroBadge)];
 	
-	NSLog(@"Chapter13 events loaded.");
+	CCLOG(@"Chapter13 events loaded.");
 }
 
 -(void) initialBattle
 {
-	NSLog(@"initialBattle event triggered.");
+	CCLOG(@"initialBattle event triggered.");
 	
 	// Creatures
 	[self settleFriend:1 At:CGPointMake(4, 16)];

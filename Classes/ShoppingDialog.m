@@ -47,7 +47,7 @@
 
 -(void) onExit
 {
-	NSLog(@"onExit");
+	CCLOG(@"onExit");
 	if (responder != nil) {
 		[responder performSelector:exitCallback];
 	}
@@ -55,14 +55,14 @@
 
 -(void) onCancel
 {
-	NSLog(@"onCancel");
+	CCLOG(@"onCancel");
 	
 	[self onExit];
 }
 
 -(void) onConfirmedExit:(id)returnedObject
 {
-	NSLog(@"onConfirmedExit");
+	CCLOG(@"onConfirmedExit");
 	
 	[self onExit];
 	if (selectedCallback != nil) {

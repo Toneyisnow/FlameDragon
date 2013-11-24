@@ -8,6 +8,7 @@
 
 #import "EventChapter29.h"
 #import "FDDurationActivity.h"
+#import "ArrivePositionTurnCondition.h"
 
 @implementation EventChapter29
 
@@ -22,17 +23,28 @@
 	[self loadDieEvent:2 Action:@selector(gameOver)];
 	
 	//int e1 = [self loadPositionEvent:2 AtPosition:CGPointMake(16,22) Action:@selector(onTriggerDragon)];
-	[self loadPositionEvent:1 AtPosition:CGPointMake(16,58) Action:@selector(onTriggerDragon)];
-	int e1 = [self loadTurnDelayEvent:TurnType_Friend TurnCount:5 Action:@selector(dragonAppear)];
-	int e2 = [self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
-    [eventHandler setEvent:e2 dependentOn:e1];
+	[self loadPositionEvent:2 AtPosition:CGPointMake(16,22) Action:@selector(onTriggerDragon)];
     
-	NSLog(@"Chapter29 events loaded.");
+    int e1 = [self loadPositionTurnEvent:2 AtPosition:CGPointMake(16,22) Action:@selector(onTriggerDragonTurn1)];
+    int e2 = [self loadPositionTurnEvent:2 AtPosition:CGPointMake(16,22) Action:@selector(onTriggerDragonTurn2)];
+    int e3 = [self loadPositionTurnEvent:2 AtPosition:CGPointMake(16,22) Action:@selector(onTriggerDragonTurn3)];
+    int e4 = [self loadPositionTurnEvent:2 AtPosition:CGPointMake(16,22) Action:@selector(onTriggerDragonTurn4)];
+    int e5 = [self loadPositionTurnEvent:2 AtPosition:CGPointMake(16,22) Action:@selector(dragonAppear)];
+    
+
+	int final = [self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
+    [eventHandler setEvent:e2 dependentOn:e1];
+    [eventHandler setEvent:e3 dependentOn:e2];
+    [eventHandler setEvent:e4 dependentOn:e3];
+    [eventHandler setEvent:e5 dependentOn:e4];
+    [eventHandler setEvent:final dependentOn:e5];
+    
+	CCLOG(@"Chapter29 events loaded.");
 }
 
 -(void) initialBattle
 {
-	NSLog(@"initialBattle event triggered.");
+	CCLOG(@"initialBattle event triggered.");
 	
 	// Creatures
 	[self settleFriend:1 At:CGPointMake(16,59)];
@@ -169,6 +181,30 @@
     [layers setExtraInfo:[layers getTurnNumber]];
 }
 
+-(void) onTriggerDragonTurn1
+{
+    FDCreature * youni = [field getCreatureById:2];
+    [youni endTurn];
+}
+
+-(void) onTriggerDragonTurn2
+{
+    FDCreature * youni = [field getCreatureById:2];
+    [youni endTurn];
+}
+
+-(void) onTriggerDragonTurn3
+{
+    FDCreature * youni = [field getCreatureById:2];
+    [youni endTurn];
+}
+
+-(void) onTriggerDragonTurn4
+{
+    FDCreature * youni = [field getCreatureById:2];
+    [youni endTurn];
+}
+
 -(void) dragonAppear
 {
     CCLOG(@"dragonAppear Event.");
@@ -180,6 +216,15 @@
 	for (int i = 1; i <= 11; i++) {
 		[self showTalkMessage:29 conversation:3 sequence:i];
 	}
+}
+
+-(int) loadPositionTurnEvent:(int)creatureId AtPosition:(CGPoint)pos Action:(SEL)action
+{
+	ArrivePositionTurnCondition *condition = [[ArrivePositionTurnCondition alloc] initWithCreatureId:creatureId Position:pos];
+	int eventId = [super loadSingleEvent:condition Action:action];
+	[condition release];
+	
+	return eventId;
 }
 
 -(void) enemyClear

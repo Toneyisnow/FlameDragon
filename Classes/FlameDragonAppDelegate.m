@@ -128,6 +128,7 @@
 	[[CCDirector sharedDirector] runWithScene: [TitleScene node]];
 	
     // Start Movie
+    [CCVideoPlayer setNoSkip:FALSE];
     [CCVideoPlayer playMovieWithFile:@"Openning.mp4"];
 }
 

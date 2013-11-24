@@ -21,6 +21,11 @@
 		020C5A7B16D9C32A00AD0F53 /* Tai-15.png in Resources */ = {isa = PBXBuildFile; fileRef = 020C5A7816D9C32A00AD0F53 /* Tai-15.png */; };
 		021064B5182536D2003BF337 /* EventGoodEnding1.m in Sources */ = {isa = PBXBuildFile; fileRef = 021064B4182536D1003BF337 /* EventGoodEnding1.m */; };
 		021064B8182536ED003BF337 /* EventGoodEnding2.m in Sources */ = {isa = PBXBuildFile; fileRef = 021064B7182536ED003BF337 /* EventGoodEnding2.m */; };
+		021064BB1841ADCF003BF337 /* CreatureDeadTurnCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 021064BA1841ADCF003BF337 /* CreatureDeadTurnCondition.m */; };
+		021064BE1841ADFA003BF337 /* ArrivePositionTurnCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 021064BD1841ADF9003BF337 /* ArrivePositionTurnCondition.m */; };
+		021064C11841C694003BF337 /* EndTurnEventCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 021064C01841C693003BF337 /* EndTurnEventCondition.m */; };
+		021064C41841EEF4003BF337 /* Ending_Farewell.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 021064C21841EEF4003BF337 /* Ending_Farewell.mp4 */; };
+		021064C51841EEF4003BF337 /* Ending_Staff.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 021064C31841EEF4003BF337 /* Ending_Staff.mp4 */; };
 		0213447216DE727000AB5D16 /* Cursor-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 0213447116DE727000AB5D16 /* Cursor-04.png */; };
 		0213447A16DE821A00AB5D16 /* CCVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0213447516DE821A00AB5D16 /* CCVideoPlayer.m */; };
 		0213447B16DE821A00AB5D16 /* CCVideoPlayerImpliOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 0213447716DE821A00AB5D16 /* CCVideoPlayerImpliOS.m */; };
@@ -4599,6 +4604,14 @@
 		021064B4182536D1003BF337 /* EventGoodEnding1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventGoodEnding1.m; sourceTree = "<group>"; };
 		021064B6182536ED003BF337 /* EventGoodEnding2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventGoodEnding2.h; sourceTree = "<group>"; };
 		021064B7182536ED003BF337 /* EventGoodEnding2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventGoodEnding2.m; sourceTree = "<group>"; };
+		021064B91841ADCE003BF337 /* CreatureDeadTurnCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatureDeadTurnCondition.h; sourceTree = "<group>"; };
+		021064BA1841ADCF003BF337 /* CreatureDeadTurnCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatureDeadTurnCondition.m; sourceTree = "<group>"; };
+		021064BC1841ADF9003BF337 /* ArrivePositionTurnCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrivePositionTurnCondition.h; sourceTree = "<group>"; };
+		021064BD1841ADF9003BF337 /* ArrivePositionTurnCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrivePositionTurnCondition.m; sourceTree = "<group>"; };
+		021064BF1841C692003BF337 /* EndTurnEventCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndTurnEventCondition.h; sourceTree = "<group>"; };
+		021064C01841C693003BF337 /* EndTurnEventCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndTurnEventCondition.m; sourceTree = "<group>"; };
+		021064C21841EEF4003BF337 /* Ending_Farewell.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ending_Farewell.mp4; path = Video/Ending_Farewell.mp4; sourceTree = "<group>"; };
+		021064C31841EEF4003BF337 /* Ending_Staff.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ending_Staff.mp4; path = Video/Ending_Staff.mp4; sourceTree = "<group>"; };
 		0213447116DE727000AB5D16 /* Cursor-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cursor-04.png"; path = "Others/Cursor-04.png"; sourceTree = "<group>"; };
 		0213447416DE821A00AB5D16 /* CCVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCVideoPlayer.h; path = CCVideoPlayer/CCVideoPlayer.h; sourceTree = "<group>"; };
 		0213447516DE821A00AB5D16 /* CCVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCVideoPlayer.m; path = CCVideoPlayer/CCVideoPlayer.m; sourceTree = "<group>"; };
@@ -9455,6 +9468,8 @@
 		0213447F16DE843A00AB5D16 /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				021064C21841EEF4003BF337 /* Ending_Farewell.mp4 */,
+				021064C31841EEF4003BF337 /* Ending_Staff.mp4 */,
 				0213448416DE930800AB5D16 /* Openning.mp4 */,
 			);
 			name = Video;
@@ -10761,6 +10776,8 @@
 				02AF9BD417E09B4900E63F21 /* TurnDelayCondition.m */,
 				02BA6D6314C0609C0028C9E7 /* CreatureDeadCondition.h */,
 				02BA6D6414C0609C0028C9E7 /* CreatureDeadCondition.m */,
+				021064B91841ADCE003BF337 /* CreatureDeadTurnCondition.h */,
+				021064BA1841ADCF003BF337 /* CreatureDeadTurnCondition.m */,
 				02BA6F3A14C9A60A0028C9E7 /* CreatureDyingCondition.h */,
 				02BA6F3B14C9A60A0028C9E7 /* CreatureDyingCondition.m */,
 				02BA6F5714C9A8FD0028C9E7 /* TeamEliminatedCondition.h */,
@@ -10769,6 +10786,10 @@
 				02FD84AF157DDE0F00DD705A /* GameFinishCondition.m */,
 				02DBA06A1657F5C60081EC45 /* ArrivePositionCondition.h */,
 				02DBA06B1657F5C60081EC45 /* ArrivePositionCondition.m */,
+				021064BC1841ADF9003BF337 /* ArrivePositionTurnCondition.h */,
+				021064BD1841ADF9003BF337 /* ArrivePositionTurnCondition.m */,
+				021064BF1841C692003BF337 /* EndTurnEventCondition.h */,
+				021064C01841C693003BF337 /* EndTurnEventCondition.m */,
 			);
 			name = Condition;
 			sourceTree = "<group>";
@@ -21260,6 +21281,8 @@
 				02AF9C0B17E0AA7300E63F21 /* Dato-758-1.png in Resources */,
 				02AF9C0C17E0AA7300E63F21 /* Dato-759-1.png in Resources */,
 				02AF9C0D17E0AA7300E63F21 /* Dato-760-1.png in Resources */,
+				021064C41841EEF4003BF337 /* Ending_Farewell.mp4 in Resources */,
+				021064C51841EEF4003BF337 /* Ending_Staff.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -21515,6 +21538,9 @@
 				02AF9BD517E09B4A00E63F21 /* TurnDelayCondition.m in Sources */,
 				021064B5182536D2003BF337 /* EventGoodEnding1.m in Sources */,
 				021064B8182536ED003BF337 /* EventGoodEnding2.m in Sources */,
+				021064BB1841ADCF003BF337 /* CreatureDeadTurnCondition.m in Sources */,
+				021064BE1841ADFA003BF337 /* ArrivePositionTurnCondition.m in Sources */,
+				021064C11841C694003BF337 /* EndTurnEventCondition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -21655,8 +21681,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Yi Sui";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yi Sui";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Yi Sui (74QF9MJWJZ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yi Sui (74QF9MJWJZ)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -21673,8 +21699,8 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = FlameDragon;
-				PROVISIONING_PROFILE = "147E891A-72AF-498C-A0BA-14A329A31527";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "147E891A-72AF-498C-A0BA-14A329A31527";
+				PROVISIONING_PROFILE = "05A4A3C2-EDCF-4731-806C-0E45B337E5E1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "05A4A3C2-EDCF-4731-806C-0E45B337E5E1";
 				VALID_ARCHS = "armv7 armv7s";
 				WARNING_CFLAGS = "-Wall";
 			};

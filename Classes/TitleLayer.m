@@ -15,6 +15,7 @@
 #import "LoadingScene.h"
 #import "Constants.h"
 #import "FDAudioEngine.h"
+#import "GameWinScene.h"
 
 @implementation TitleLayer
 
@@ -96,6 +97,7 @@
 	CCLOG(@"onLoadGame");
 	
 	//CCScene *scene = [self loadTestingGame];
+    //CCScene *scene = [GameWinScene node];
     LoadingScene *scene = [LoadingScene node];
     
 	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];

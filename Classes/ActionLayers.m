@@ -792,8 +792,10 @@
 	}
 	
 	// Trigger Events
-	[eventListener isNotified];
-	
+	endOfTurn = TRUE;
+    [eventListener isNotified];
+	endOfTurn = FALSE;
+    
 	// Status checking
 	for (FDCreature *c in [field getFriendList]) {
 		[c.data updateStatusInTurn];
@@ -1114,7 +1116,7 @@
 
 -(void) receiveNotificationUpdateSideBar:(NSNotification *)notification {
     
-    CGPoint cursor = [field getCursorPos];
+    // CGPoint cursor = [field getCursorPos];
     CCLOG(@"Notification Received. (%f, %f)", cursor.x, cursor.y);
     
     @try {
@@ -1155,11 +1157,23 @@
 		VillageScene *scene = [VillageScene node];
 		[scene loadWithRecord:record];
 		[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.5 scene:scene]];	
-	} else {
-		GameWinScene *scene = [GameWinScene node];
-		[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.5 scene:scene]];	
-	}
+	} else if (chapterId == 30) {
+        
+        // Good ending
+        MainGameScene *mainGame = [MainGameScene node];
+        [mainGame loadWithInfo:record];
+        
+        [[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:mainGame]];
+        
+	} else if (chapterId == 31) {
     
+        // Good ending
+        GameWinScene *scene = [GameWinScene node];
+        [[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];
+
+    
+    }
+
     [record release];
 }
 
@@ -1223,6 +1237,10 @@
 	return isLocked;
 }
 
+-(BOOL) isEndOfTurn
+{
+    return endOfTurn;
+}
 
 -(void) setEventListener:(IListener *)listener
 {

@@ -1180,7 +1180,7 @@
 {
 	for (FDBattleObject *obj in battleObjectList) {
 		
-		CGPoint pos1 = [self getObjectPos:obj];
+		// CGPoint pos1 = [self getObjectPos:obj];
 		CCLOG(@"Object Identifier: %@ (%f, %f)", [obj class], pos1.x, pos1.y);
 	}
 }

@@ -43,6 +43,8 @@
 -(BOOL) teamHasItem:(int)itemId;
 -(void) teamConsumeItem:(int)itemId;
 
+-(void) noAction;
+
 -(void) addItemToTeam:(int)itemId;
 -(void) removeCreature:(int)cId;
 -(void) removeFriend:(int) cId;

@@ -5,7 +5,7 @@
 //  Created by sui toney on 11-11-19.
 //  Copyright 2011 ms. All rights reserved.
 //
-
+#import "cocos2d.h"
 #import "ControlLayer.h"
 
 
@@ -29,9 +29,9 @@
 
 - (void) ccTouchesBegan:(NSSet*)touches withEvent:(UIEvent*)event {
 	
-	NSLog(@"Clicked");
+	CCLOG(@"Clicked");
 	
-	UITouch *touch = [touches anyObject];
+    UITouch *touch = [touches anyObject];
 	CGPoint location = [touch locationInView: [touch view]];
 	clickCenter = [[CCDirector sharedDirector] convertToGL:location];
 	

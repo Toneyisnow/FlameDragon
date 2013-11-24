@@ -83,7 +83,7 @@
 
 - (void) ccTouchesBegan:(NSSet*)touches withEvent:(UIEvent*)event {
 	
-	NSLog(@"Clicked");
+	CCLOG(@"Clicked");
 	
 	UITouch *touch = [touches anyObject];
 	CGPoint location = [touch locationInView: [touch view]];

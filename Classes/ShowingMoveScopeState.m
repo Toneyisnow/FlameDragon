@@ -32,7 +32,7 @@
 
 -(void) clickedOn:(CGPoint)location
 {
-	NSLog(@"clickedOn: ShowingMoveScopeState");
+	CCLOG(@"clickedOn: ShowingMoveScopeState");
 	
 	[layers clearCreatureInfo];
 

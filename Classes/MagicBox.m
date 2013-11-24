@@ -108,7 +108,7 @@
 		if (itemLoc.x < innerLoc.x && itemLoc.y < innerLoc.y
 			&& innerLoc.x < itemLoc.x + 100 && innerLoc.y < itemLoc.y + 22) {
 			selected = i;
-			NSLog(@"Clicked on magic %d", i);
+			CCLOG(@"Clicked on magic %d", i);
 			break;
 		}
 	}

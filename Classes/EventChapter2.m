@@ -39,12 +39,12 @@
 	[self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
 	[self loadTeamEvent:CreatureType_Npc Action:@selector(gameOver)];
 
-	NSLog(@"Chapter2 events loaded.");
+	CCLOG(@"Chapter2 events loaded.");
 }
 
 -(void) round1_test
 {
-	NSLog(@"round1 event triggered.");
+	CCLOG(@"round1 event triggered.");
 	
 	// Creatures
 	
@@ -99,7 +99,7 @@
 
 -(void) round1
 {
-	NSLog(@"round1 event triggered.");
+	CCLOG(@"round1 event triggered.");
 	
 	// Creatures
 	

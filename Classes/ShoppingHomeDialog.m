@@ -63,7 +63,7 @@
 -(void) onBuyAmor
 {
 	
-	NSLog(@"onBuyAmor");
+	CCLOG(@"onBuyAmor");
 	
 	// NSMutableArray *list = [self getProductList:chapterRecord.chapterId Type:DataDepotShopType_AmorShop];
 	ShopDefinition *shop = [[DataDepot depot] getShopDefinition:chapterRecord.chapterId Type:DataDepotShopType_AmorShop];
@@ -75,7 +75,7 @@
 	
 	
 	//NSString *msg = [NSString stringWithFormat:@"Friend Count: %d", [[chapterRecord friendRecords] count]];
-	NSLog(@"Friend Count: %d", [[chapterRecord friendRecords] count]);
+	CCLOG(@"Friend Count: %d", [[chapterRecord friendRecords] count]);
 }
 
 -(void) onBuyAmor_SelectedAmor:(NSNumber *)num
@@ -88,7 +88,7 @@
 		return;
 	} 
 	
-	NSLog(@"onBuyAmor_SelectedAmor : %d", selectedNum);
+	CCLOG(@"onBuyAmor_SelectedAmor : %d", selectedNum);
 	
 	// Confirm Message
 	NSString *message = [FDLocalString confirm:54];
@@ -165,7 +165,7 @@
 -(void) onSellAmor
 {
 	
-	NSLog(@"onSellAmor");
+	CCLOG(@"onSellAmor");
 	ShoppingShowFriendsDialog *dialog = [[ShoppingShowFriendsDialog alloc] initFrom:self];
 	[dialog setSelectedCallback:self Method:@selector(onSellAmor_SelectedFriend:)];
 	[self onPush:dialog];
@@ -173,7 +173,7 @@
 	
 	
 	//NSString *msg = [NSString stringWithFormat:@"Friend Count: %d", [[chapterRecord friendRecords] count]];
-	NSLog(@"Friend Count: %d", [[chapterRecord friendRecords] count]);
+	CCLOG(@"Friend Count: %d", [[chapterRecord friendRecords] count]);
 }
 
 -(void) onSellAmor_SelectedFriend:(NSNumber *)num
@@ -222,14 +222,11 @@
 		
 		return;
 	}
-	
-	
-	
 }
 
 -(void) onGiveItem
 {
-	NSLog(@"onGiveItem");
+	CCLOG(@"onGiveItem");
 	
 	NSString *message = [FDLocalString message:58];
 	ShoppingMessageDialog *dialog = [[ShoppingMessageDialog alloc] initWithMessage:message From:self];
@@ -324,7 +321,7 @@
 
 -(void) onEquip
 {
-	NSLog(@"onEquip");
+	CCLOG(@"onEquip");
 	ShoppingShowFriendsDialog *dialog = [[ShoppingShowFriendsDialog alloc] initFrom:self];
 	[dialog setSelectedCallback:self Method:@selector(onEquip_SelectedFriend:)];
 	[self onPush:dialog];

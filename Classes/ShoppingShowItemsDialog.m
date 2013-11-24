@@ -28,7 +28,7 @@
 {
 	int selected = 1;
 	
-	NSLog(@"Select Item Index %d", selected);	
+	CCLOG(@"Select Item Index %d", selected);
 	id returnedObject = [NSNumber numberWithInt:selected];
 	[self onConfirmedExit:returnedObject];
 }
