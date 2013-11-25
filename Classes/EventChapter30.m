@@ -236,7 +236,7 @@
 -(void) bossFinalComingout
 {
     FDCreature *boss = [field getCreatureById:999];
-    [boss setLocation:CGPointMake(23,20)];
+    [boss setLocation:[field convertPosToLoc:CGPointMake(23,20)]];
 }
 
 -(void) bossComingout:(int)num
