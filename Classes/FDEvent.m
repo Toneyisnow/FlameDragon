@@ -21,7 +21,7 @@
 	object = o;
 	method = m;
 	
-	dependentEvent = nil;
+	dependentEvents = [[NSMutableArray alloc] init];
 	isActivated = TRUE;
 	
 	return self;
@@ -29,7 +29,15 @@
 
 -(BOOL) isTriggered:(ActionLayers *)layers
 {
-    return (dependentEvent == nil || ![dependentEvent isActiveEvent])
+    BOOL dependencyDone = TRUE;
+    for (FDEvent *event in dependentEvents) {
+        if (event != nil && [event isActiveEvent]) {
+            dependencyDone = FALSE;
+            break;
+        }
+    }
+    
+    return dependencyDone
 			&& isActivated
 			&& [condition isMatch:layers];
 }
@@ -57,18 +65,21 @@
 
 -(void) setDependentEvent:(FDEvent *)event
 {
-	dependentEvent = event;
+	[dependentEvents addObject:event];
 }
 
--(FDEvent *) getDependentEvent
+/*
+ -(FDEvent *) getDependentEvent
 {
     return dependentEvent;
 }
+*/
 
 -(void) dealloc
 {
 	[condition release];
-	
+	[dependentEvents release];
+    
 	[super dealloc];
 }
 

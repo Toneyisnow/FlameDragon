@@ -19,7 +19,7 @@
 	id object;
 	SEL method;
 	
-	FDEvent *dependentEvent;
+	NSMutableArray *dependentEvents;
 }
 
 @property (assign) int eventId;
@@ -35,6 +35,6 @@
 -(BOOL) isActiveEvent;
 
 -(void) setDependentEvent:(FDEvent *)event;
--(FDEvent *) getDependentEvent;
+// -(FDEvent *) getDependentEvent;
 
 @end
