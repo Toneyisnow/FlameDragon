@@ -26,6 +26,7 @@
 		021064C11841C694003BF337 /* EndTurnEventCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 021064C01841C693003BF337 /* EndTurnEventCondition.m */; };
 		021064C41841EEF4003BF337 /* Ending_Farewell.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 021064C21841EEF4003BF337 /* Ending_Farewell.mp4 */; };
 		021064C51841EEF4003BF337 /* Ending_Staff.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 021064C31841EEF4003BF337 /* Ending_Staff.mp4 */; };
+		021064C718439697003BF337 /* Chapter-31.png in Resources */ = {isa = PBXBuildFile; fileRef = 021064C618439696003BF337 /* Chapter-31.png */; };
 		0213447216DE727000AB5D16 /* Cursor-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 0213447116DE727000AB5D16 /* Cursor-04.png */; };
 		0213447A16DE821A00AB5D16 /* CCVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0213447516DE821A00AB5D16 /* CCVideoPlayer.m */; };
 		0213447B16DE821A00AB5D16 /* CCVideoPlayerImpliOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 0213447716DE821A00AB5D16 /* CCVideoPlayerImpliOS.m */; };
@@ -4612,6 +4613,7 @@
 		021064C01841C693003BF337 /* EndTurnEventCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndTurnEventCondition.m; sourceTree = "<group>"; };
 		021064C21841EEF4003BF337 /* Ending_Farewell.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ending_Farewell.mp4; path = Video/Ending_Farewell.mp4; sourceTree = "<group>"; };
 		021064C31841EEF4003BF337 /* Ending_Staff.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ending_Staff.mp4; path = Video/Ending_Staff.mp4; sourceTree = "<group>"; };
+		021064C618439696003BF337 /* Chapter-31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Chapter-31.png"; path = "Maps/Chapter-31.png"; sourceTree = "<group>"; };
 		0213447116DE727000AB5D16 /* Cursor-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cursor-04.png"; path = "Others/Cursor-04.png"; sourceTree = "<group>"; };
 		0213447416DE821A00AB5D16 /* CCVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCVideoPlayer.h; path = CCVideoPlayer/CCVideoPlayer.h; sourceTree = "<group>"; };
 		0213447516DE821A00AB5D16 /* CCVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCVideoPlayer.m; path = CCVideoPlayer/CCVideoPlayer.m; sourceTree = "<group>"; };
@@ -9558,6 +9560,7 @@
 				02D4C6AC164E199C00B9B407 /* Chapter-28.png */,
 				02D4C6AD164E199C00B9B407 /* Chapter-29.png */,
 				02D4C6AE164E199C00B9B407 /* Chapter-30.png */,
+				021064C618439696003BF337 /* Chapter-31.png */,
 			);
 			name = Maps;
 			sourceTree = "<group>";
@@ -21283,6 +21286,7 @@
 				02AF9C0D17E0AA7300E63F21 /* Dato-760-1.png in Resources */,
 				021064C41841EEF4003BF337 /* Ending_Farewell.mp4 in Resources */,
 				021064C51841EEF4003BF337 /* Ending_Staff.mp4 in Resources */,
+				021064C718439697003BF337 /* Chapter-31.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,7 @@
 
 -(void) loadEvents
 {
-	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(round1)];
+	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(initialBattle)];
 	
 	CCLOG(@"GoodEnding1 events loaded.");
     

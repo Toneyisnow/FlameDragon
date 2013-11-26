@@ -528,10 +528,12 @@
 
 -(void) startNewTurn
 {
-	for (FDFriend *creature in friendList) {
+	/*
+     for (FDFriend *creature in friendList) {
 		[creature startTurn];
 	}
-	
+	*/
+    
 	for (FDEnemy *creature in enemyList) {
 		[creature startTurn];
 	}
@@ -817,7 +819,10 @@
 {
     int calculatedCount = 0;
     for (FDCreature *c in enemyList) {
-        if ([c getDefinition].identifier == 52001) {
+        if ([c getDefinition].identifier == 52001
+            || [c getDefinition].identifier == 52701
+            || [c getDefinition].identifier == 52801
+            || [c getDefinition].identifier == 52902) {
             continue;
         }
         calculatedCount ++;

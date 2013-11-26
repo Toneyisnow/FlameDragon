@@ -17,7 +17,8 @@
 
 	[self loadDieEvent:1 Action:@selector(gameOver)];
 	[self loadDieEvent:2 Action:@selector(gameOver)];
-
+    [self loadDyingEvent:2 Action:@selector(youniDead)];
+    
     int e11 = [self loadDieEvent:101 Action:@selector(noAction)];
 	int e12 = [self loadDieEvent:102 Action:@selector(noAction)];
 	int e13 = [self loadDieEvent:103 Action:@selector(noAction)];
@@ -88,39 +89,6 @@
     [eventHandler setEvent:e56 dependentOn:e55];
     [eventHandler setEvent:e57 dependentOn:e56];
     
-    
-    /*
-	[self loadDieEvent:101 Action:@selector(checkRound1)];
-	[self loadDieEvent:102 Action:@selector(checkRound1)];
-	[self loadDieEvent:103 Action:@selector(checkRound1)];
-	[self loadDieEvent:104 Action:@selector(checkRound1)];
-	[self loadDieEvent:105 Action:@selector(checkRound1)];
-	
-	[self loadDieEvent:201 Action:@selector(checkRound2)];
-	[self loadDieEvent:111 Action:@selector(checkRound2)];
-	[self loadDieEvent:112 Action:@selector(checkRound2)];
-	[self loadDieEvent:113 Action:@selector(checkRound2)];
-	[self loadDieEvent:114 Action:@selector(checkRound2)];
-	
-	[self loadDieEvent:202 Action:@selector(checkRound3)];
-	[self loadDieEvent:121 Action:@selector(checkRound3)];
-	[self loadDieEvent:122 Action:@selector(checkRound3)];
-	[self loadDieEvent:123 Action:@selector(checkRound3)];
-	[self loadDieEvent:124 Action:@selector(checkRound3)];
-	
-	[self loadDieEvent:293 Action:@selector(checkRound4)];
-	[self loadDieEvent:131 Action:@selector(checkRound4)];
-	[self loadDieEvent:132 Action:@selector(checkRound4)];
-	[self loadDieEvent:133 Action:@selector(checkRound4)];
-	[self loadDieEvent:134 Action:@selector(checkRound4)];
-	
-	[self loadDieEvent:204 Action:@selector(checkRound5)];
-	[self loadDieEvent:141 Action:@selector(checkRound5)];
-	[self loadDieEvent:142 Action:@selector(checkRound5)];
-	[self loadDieEvent:143 Action:@selector(checkRound5)];
-	[self loadDieEvent:144 Action:@selector(checkRound5)];
-	*/
-    
 	[self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
 	
 	[self loadDyingEvent:999 Action:@selector(bossDyingMessage)];
@@ -164,73 +132,64 @@
 		[self showTalkMessage:30 conversation:1 sequence:i];
 	}
     
+    
     [layers appendToCurrentActivityMethod:@selector(initialBattle_1) Param1:nil Param2:nil Obj:self];
 }
 
 -(void) initialBattle_1
 {
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53002 Id:201] autorelease] Position:CGPointMake(25,8)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53003 Id:202] autorelease] Position:CGPointMake(24,8)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53004 Id:203] autorelease] Position:CGPointMake(22,8)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53005 Id:204] autorelease] Position:CGPointMake(21,8)];
 	
-	[self showTalkMessage:30 conversation:1 sequence:21];
-	[self showTalkMessage:30 conversation:1 sequence:22];
+    // Talk
+	for (int i = 11; i <= 19; i++) {
+		[self showTalkMessage:30 conversation:1 sequence:i];
+	}
     
     [layers appendToCurrentActivityMethod:@selector(initialBattle_2) Param1:nil Param2:nil Obj:self];
 }
 
 -(void) initialBattle_2
 {
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53003 Id:202] autorelease] Position:CGPointMake(24,8)];
-	
-	[self showTalkMessage:30 conversation:1 sequence:23];
-	[self showTalkMessage:30 conversation:1 sequence:24];
-    
-    [layers appendToCurrentActivityMethod:@selector(initialBattle_3) Param1:nil Param2:nil Obj:self];
-}
-
--(void) initialBattle_3
-{
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53004 Id:203] autorelease] Position:CGPointMake(22,8)];
-	
-	[self showTalkMessage:30 conversation:1 sequence:25];
-	[self showTalkMessage:30 conversation:1 sequence:26];
-
-    [layers appendToCurrentActivityMethod:@selector(initialBattle_4) Param1:nil Param2:nil Obj:self];
-}
-
--(void) initialBattle_4
-{
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53005 Id:204] autorelease] Position:CGPointMake(21,8)];
-	
-	[self showTalkMessage:30 conversation:1 sequence:27];
-	[self showTalkMessage:30 conversation:1 sequence:28];
-	
-	// Add Enemy
+    // Add Enemy
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:101] autorelease] Position:CGPointMake(23,20)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:102] autorelease] Position:CGPointMake(22,20)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:103] autorelease] Position:CGPointMake(24,20)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:104] autorelease] Position:CGPointMake(21,20)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:105] autorelease] Position:CGPointMake(25,20)];
-	
+
 }
 
 -(void) boss1Comingout
 {
-    [self bossComingout:1];
+    [self showTalkMessage:30 conversation:1 sequence:21];
+	[self showTalkMessage:30 conversation:1 sequence:22];
+    
+    [layers appendToCurrentActivityMethod:@selector(bossComingout) Param1:[NSNumber numberWithInt:1] Param2:nil Obj:self];
+
 }
 
 -(void) boss2Comingout
 {
-    [self bossComingout:2];
+    [self showTalkMessage:30 conversation:1 sequence:23];
+	[self showTalkMessage:30 conversation:1 sequence:24];
+    [layers appendToCurrentActivityMethod:@selector(bossComingout) Param1:[NSNumber numberWithInt:2] Param2:nil Obj:self];
 }
 
 -(void) boss3Comingout
 {
-    [self bossComingout:3];
+    [self showTalkMessage:30 conversation:1 sequence:25];
+	[self showTalkMessage:30 conversation:1 sequence:26];
+    [layers appendToCurrentActivityMethod:@selector(bossComingout) Param1:[NSNumber numberWithInt:3] Param2:nil Obj:self];
 }
 
 -(void) boss4Comingout
 {
-    [self bossComingout:4];
+    [self showTalkMessage:30 conversation:1 sequence:27];
+	[self showTalkMessage:30 conversation:1 sequence:28];
+    [layers appendToCurrentActivityMethod:@selector(bossComingout) Param1:[NSNumber numberWithInt:4] Param2:nil Obj:self];
 }
 
 -(void) bossFinalComingout
@@ -239,8 +198,10 @@
     [boss setLocation:[field convertPosToLoc:CGPointMake(23,20)]];
 }
 
--(void) bossComingout:(int)num
+-(void) bossComingout:(NSNumber *)number
 {
+    int num = [number intValue];
+    
     FDCreature *boss = [field getCreatureById:(200+num)];
 	[boss setLocation:[field convertPosToLoc:CGPointMake(23,20)]];
     
@@ -248,7 +209,6 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:(102+10*num)] autorelease] Position:CGPointMake(24,20)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:(103+10*num)] autorelease] Position:CGPointMake(21,20)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:53006 Id:(104+10*num)] autorelease] Position:CGPointMake(25,20)];
-
 }
 
 -(void) checkRound1 {
@@ -303,6 +263,11 @@
 -(void) bossDyingMessage
 {
 	[self showTalkMessage:30 conversation:2 sequence:1];
+}
+
+-(void) youniDead
+{
+    [self showTalkMessage:30 conversation:3 sequence:1];
 }
 
 -(int) loadDieTurnEventAction:(SEL)action

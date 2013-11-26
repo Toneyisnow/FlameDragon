@@ -20,7 +20,8 @@
 	
 	[self loadDieEvent:1 Action:@selector(gameOver)];
 	[self loadDieEvent:2 Action:@selector(gameOver)];
-	[self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
+	[self loadDyingEvent:2 Action:@selector(youniDead)];
+    [self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
 	
 	[self loadDyingEvent:201 Action:@selector(bossDyingMessage)];
 	[self loadDyingEvent:202 Action:@selector(bossDyingMessage)];
@@ -196,6 +197,11 @@
 	} else {
 		[self showTalkMessage:27 conversation:3 sequence:1];
 	}
+}
+
+-(void) youniDead
+{
+    [self showTalkMessage:27 conversation:7 sequence:1];
 }
 
 -(void) enemyClear

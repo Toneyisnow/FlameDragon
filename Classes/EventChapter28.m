@@ -18,7 +18,8 @@
 	[self loadTurnEvent:TurnType_Friend Turn:8 Action:@selector(round3)];
 	
 	[self loadDieEvent:2 Action:@selector(gameOver)];
-	[self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
+	[self loadDyingEvent:2 Action:@selector(youniDead)];
+    [self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
 	
 	[self loadDyingEvent:114 Action:@selector(bossDyingMessage)];
 	[self loadDyingEvent:201 Action:@selector(bossDyingMessage)];
@@ -146,6 +147,11 @@
 	}
 	
 	[layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];
+}
+
+-(void) youniDead
+{
+    [self showTalkMessage:28 conversation:6 sequence:1];
 }
 
 @end

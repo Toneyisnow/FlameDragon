@@ -21,7 +21,8 @@
 
 	[self loadDieEvent:1 Action:@selector(gameOver)];
 	[self loadDieEvent:2 Action:@selector(gameOver)];
-	
+	[self loadDyingEvent:2 Action:@selector(youniDead)];
+    
 	//int e1 = [self loadPositionEvent:2 AtPosition:CGPointMake(16,22) Action:@selector(onTriggerDragon)];
 	[self loadPositionEvent:2 AtPosition:CGPointMake(16,22) Action:@selector(onTriggerDragon)];
     
@@ -185,24 +186,36 @@
 {
     FDCreature * youni = [field getCreatureById:2];
     [youni endTurn];
+    
+    [field addEnemy:[[[FDEnemy alloc] initWithDefinition:52907 Id:201] autorelease] Position:CGPointMake(15,33)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52907 Id:202] autorelease] Position:CGPointMake(17,33)];
 }
 
 -(void) onTriggerDragonTurn2
 {
     FDCreature * youni = [field getCreatureById:2];
     [youni endTurn];
+    
+    [field addEnemy:[[[FDEnemy alloc] initWithDefinition:52909 Id:203] autorelease] Position:CGPointMake(15,33)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52909 Id:204] autorelease] Position:CGPointMake(17,33)];
 }
 
 -(void) onTriggerDragonTurn3
 {
     FDCreature * youni = [field getCreatureById:2];
     [youni endTurn];
+    
+    [field addEnemy:[[[FDEnemy alloc] initWithDefinition:52908 Id:205] autorelease] Position:CGPointMake(15,33)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52908 Id:206] autorelease] Position:CGPointMake(17,33)];
 }
 
 -(void) onTriggerDragonTurn4
 {
     FDCreature * youni = [field getCreatureById:2];
     [youni endTurn];
+    
+    [field addEnemy:[[[FDEnemy alloc] initWithDefinition:52906 Id:207] autorelease] Position:CGPointMake(15,33)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52906 Id:208] autorelease] Position:CGPointMake(17,33)];
 }
 
 -(void) dragonAppear
@@ -246,5 +259,11 @@
 	
 	[layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];
 }
+
+-(void) youniDead
+{
+    [self showTalkMessage:29 conversation:5 sequence:1];
+}
+
 
 @end

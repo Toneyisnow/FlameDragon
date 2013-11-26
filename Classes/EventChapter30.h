@@ -14,4 +14,6 @@
 	
 }
 
+-(void) bossComingout:(NSNumber *)number;
+
 @end
