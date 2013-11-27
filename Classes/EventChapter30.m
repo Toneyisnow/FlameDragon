@@ -128,7 +128,7 @@
 	[self setAiOfId:999 withType:AIType_StandBy];
 	
 	// Talk
-	for (int i = 1; i <= 20; i++) {
+	for (int i = 1; i <= 10; i++) {
 		[self showTalkMessage:30 conversation:1 sequence:i];
 	}
     
@@ -164,32 +164,32 @@
 
 -(void) boss1Comingout
 {
+    [self showTalkMessage:30 conversation:1 sequence:20];
     [self showTalkMessage:30 conversation:1 sequence:21];
-	[self showTalkMessage:30 conversation:1 sequence:22];
     
-    [layers appendToCurrentActivityMethod:@selector(bossComingout) Param1:[NSNumber numberWithInt:1] Param2:nil Obj:self];
+    [layers appendToCurrentActivityMethod:@selector(bossComingout:) Param1:[NSNumber numberWithInt:1] Param2:nil Obj:self];
 
 }
 
 -(void) boss2Comingout
 {
+    [self showTalkMessage:30 conversation:1 sequence:22];
     [self showTalkMessage:30 conversation:1 sequence:23];
-	[self showTalkMessage:30 conversation:1 sequence:24];
-    [layers appendToCurrentActivityMethod:@selector(bossComingout) Param1:[NSNumber numberWithInt:2] Param2:nil Obj:self];
+    [layers appendToCurrentActivityMethod:@selector(bossComingout:) Param1:[NSNumber numberWithInt:2] Param2:nil Obj:self];
 }
 
 -(void) boss3Comingout
 {
+    [self showTalkMessage:30 conversation:1 sequence:24];
     [self showTalkMessage:30 conversation:1 sequence:25];
-	[self showTalkMessage:30 conversation:1 sequence:26];
-    [layers appendToCurrentActivityMethod:@selector(bossComingout) Param1:[NSNumber numberWithInt:3] Param2:nil Obj:self];
+    [layers appendToCurrentActivityMethod:@selector(bossComingout:) Param1:[NSNumber numberWithInt:3] Param2:nil Obj:self];
 }
 
 -(void) boss4Comingout
 {
+    [self showTalkMessage:30 conversation:1 sequence:26];
     [self showTalkMessage:30 conversation:1 sequence:27];
-	[self showTalkMessage:30 conversation:1 sequence:28];
-    [layers appendToCurrentActivityMethod:@selector(bossComingout) Param1:[NSNumber numberWithInt:4] Param2:nil Obj:self];
+    [layers appendToCurrentActivityMethod:@selector(bossComingout:) Param1:[NSNumber numberWithInt:4] Param2:nil Obj:self];
 }
 
 -(void) bossFinalComingout
@@ -262,7 +262,7 @@
 
 -(void) bossDyingMessage
 {
-	[self showTalkMessage:30 conversation:2 sequence:1];
+    [self showTalkMessage:30 conversation:2 sequence:1];
 }
 
 -(void) youniDead
@@ -272,20 +272,20 @@
 
 -(int) loadDieTurnEventAction:(SEL)action
 {
-	EndTurnEventCondition *condition = [[EndTurnEventCondition alloc] init];
-	int eventId = [self loadSingleEvent:condition Action:action];
-	[condition release];
-	
-	return eventId;
+    EndTurnEventCondition *condition = [[EndTurnEventCondition alloc] init];
+    int eventId = [self loadSingleEvent:condition Action:action];
+    [condition release];
+
+    return eventId;
 }
 
 -(void) enemyClear
 {
-	for (int i = 2; i <= 26; i++) {
-		[self showTalkMessage:30 conversation:2 sequence:i];
-	}
+    for (int i = 2; i <= 26; i++) {
+	[self showTalkMessage:30 conversation:2 sequence:i];
+    }
 	
-	[layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];
+    [layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];
 }
 
 @end
