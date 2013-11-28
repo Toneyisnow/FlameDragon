@@ -20,6 +20,7 @@
 	[self loadTurnEvent:TurnType_Friend Turn:6 Action:@selector(round4)];
 	[self loadTurnEvent:TurnType_Friend Turn:7 Action:@selector(round5)];
 	
+	[self loadDieEvent:1 Action:@selector(gameOver)];
 	[self loadDieEvent:2 Action:@selector(gameOver)];
 	[self loadDyingEvent:2 Action:@selector(youniDead)];
         //[self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
