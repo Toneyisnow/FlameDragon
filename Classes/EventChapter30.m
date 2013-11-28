@@ -194,6 +194,8 @@
 
 -(void) bossFinalComingout
 {
+    [self showTalkMessage:30 conversation:1 sequence:28];
+    
     FDCreature *boss = [field getCreatureById:999];
     [boss setLocation:[field convertPosToLoc:CGPointMake(23,20)]];
 }
