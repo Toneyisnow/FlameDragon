@@ -85,7 +85,7 @@
 	[self setAiOfId:202 withType:AIType_StandBy];
 	
 	// Talk
-	for (int i = 1; i <= 08; i++) {
+	for (int i = 1; i <= 8; i++) {
 		[self showTalkMessage:28 conversation:1 sequence:i];
 	}
 }
