@@ -205,6 +205,10 @@
         return YES;
     }
     
+    if (race == 9 && occupation == 999) {
+    	return YES;
+    }
+    
     return NO;
 }
 
