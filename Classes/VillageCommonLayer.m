@@ -63,7 +63,7 @@
     
     CreatureRecord *cRecord = [[record friendRecords] lastObject];
     
-    return (cRecord.creatureId > [Constants maxPickedFriendCount]);
+    return (cRecord.creatureId > [Constants maxPickedFriendCount:record.chapterId]);
 }
 
 @end
