@@ -46,9 +46,14 @@
 	return 110;
 }
 
-+(int) maxPickedFriendCount
++(int) maxPickedFriendCount:(int)chapterId
 {
-    return 16;
+	if (chapterId <= 26)
+	{
+		return 16;
+	}
+	
+	return 20;
 }
 
 @end
