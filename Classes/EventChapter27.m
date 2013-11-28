@@ -14,7 +14,7 @@
 -(void) loadEvents
 {
   [self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(initialBattle)];
-	[self loadTurnEvent:TurnType_Friend Turn:3 Action:@selector(round2)];
+	[self loadTurnEvent:TurnType_Friend Turn:2 Action:@selector(round2)];
 	[self loadTurnEvent:TurnType_Friend Turn:10 Action:@selector(round3)];
 	[self loadTurnEvent:TurnType_Friend Turn:13 Action:@selector(round4)];
 	
@@ -69,6 +69,7 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52701 Id:110] autorelease] Position:CGPointMake(17,19)];
 	
 	// Round 1
+	/*
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52704 Id:111] autorelease] Position:CGPointMake(15,47)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52704 Id:112] autorelease] Position:CGPointMake(17,47)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52704 Id:113] autorelease] Position:CGPointMake(15,48)];
@@ -76,7 +77,8 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52704 Id:115] autorelease] Position:CGPointMake(17,48)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52704 Id:116] autorelease] Position:CGPointMake(15,49)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52704 Id:117] autorelease] Position:CGPointMake(17,49)];
-	
+	*/
+	 
 	// Round 2
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52703 Id:118] autorelease] Position:CGPointMake(15,38)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52703 Id:119] autorelease] Position:CGPointMake(16,38)];
@@ -207,7 +209,29 @@
 {
 	int bossLeft = 0;
 	
-	if ([field getCreatureById:201] == nil && [field getCreatureById:202] == nil && [field getCreatureById:203] == nil) {
+	if ([field getCreatureById:201] != nil) {
+		bossLeft ++;
+	}
+	if ([field getCreatureById:202] != nil) {
+		bossLeft ++;
+	}
+	if ([field getCreatureById:203] != nil) {
+		bossLeft ++;
+	}
+	
+	if (bossLeft == 2) {
+		
+		// Add enemy
+		[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52704 Id:181] autorelease] Position:CGPointMake(15,47)];
+		[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52704 Id:182] autorelease] Position:CGPointMake(17,47)];
+		[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52704 Id:183] autorelease] Position:CGPointMake(15,48)];
+		[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52704 Id:184] autorelease] Position:CGPointMake(16,48)];
+		[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52704 Id:185] autorelease] Position:CGPointMake(17,48)];
+		[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52704 Id:186] autorelease] Position:CGPointMake(15,49)];
+		[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52704 Id:187] autorelease] Position:CGPointMake(17,49)];
+
+		
+	} else if (bossLeft == 0) {
 		[self enemyClear];
 	}
 }
