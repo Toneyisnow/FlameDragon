@@ -8,8 +8,8 @@
 
 
 "Title-27" = "第二十七章　命运的交会点"; 
-"Condition-Lose" = "索尔死亡";
-"Condition-Win" = "敌全灭";
+"Condition-Lose" = "索尔或优妮死亡";
+"Condition-Win" = "击毁机甲队长";
 
 
 "27-01-001-Id" = "1";
