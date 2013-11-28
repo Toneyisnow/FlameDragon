@@ -55,6 +55,10 @@
 	[self settleFriend:14 At:CGPointMake(16, 57)];
 	[self settleFriend:15 At:CGPointMake(17, 57)];
 	[self settleFriend:16 At:CGPointMake(18, 57)];
+	[self settleFriend:17 At:CGPointMake(13, 57)];
+	[self settleFriend:18 At:CGPointMake(19, 57)];
+	[self settleFriend:19 At:CGPointMake(13, 56)];
+	[self settleFriend:20 At:CGPointMake(19, 56)];
 	
 	// Add Enemies
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52701 Id:101] autorelease] Position:CGPointMake(15,34)];
