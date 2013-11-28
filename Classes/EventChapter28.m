@@ -18,10 +18,11 @@
 	[self loadTurnEvent:TurnType_Friend Turn:4 Action:@selector(round2)];
 	[self loadTurnEvent:TurnType_Friend Turn:5 Action:@selector(round3)];
 	[self loadTurnEvent:TurnType_Friend Turn:6 Action:@selector(round4)];
+	[self loadTurnEvent:TurnType_Friend Turn:7 Action:@selector(round5)];
 	
 	[self loadDieEvent:2 Action:@selector(gameOver)];
 	[self loadDyingEvent:2 Action:@selector(youniDead)];
-    [self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
+        //[self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
 	
 	[self loadDyingEvent:114 Action:@selector(bossDyingMessage)];
 	[self loadDyingEvent:201 Action:@selector(bossDyingMessage)];
@@ -29,12 +30,12 @@
 	[self loadDieEvent:201 Action:@selector(bossDeadCheck)];
 	[self loadDieEvent:202 Action:@selector(bossDeadCheck)];
 
-	NSLog(@"Chapter28 events loaded.");
+	CCLOG(@"Chapter28 events loaded.");
 }
 
 -(void) initialBattle
 {
-	NSLog(@"initialBattle event triggered.");
+	CCLOG(@"initialBattle event triggered.");
 	
 	// Creatures
 	[self settleFriend:1 At:CGPointMake(33,22)];
@@ -59,17 +60,12 @@
 	[self settleFriend:20 At:CGPointMake(33,19)];
 	
 	// Add Enemies
-	
-	
-	// Round 2
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52805 Id:101] autorelease] Position:CGPointMake(13,20)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52805 Id:102] autorelease] Position:CGPointMake(13,21)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52803 Id:103] autorelease] Position:CGPointMake(14,19)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52803 Id:104] autorelease] Position:CGPointMake(14,20)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52803 Id:105] autorelease] Position:CGPointMake(14,21)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52803 Id:106] autorelease] Position:CGPointMake(14,22)];
-
-	// Round 3
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52801 Id:107] autorelease] Position:CGPointMake(5,19)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52801 Id:108] autorelease] Position:CGPointMake(5,22)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52803 Id:109] autorelease] Position:CGPointMake(5,20)];
@@ -119,11 +115,11 @@
 
 -(void) round3
 {
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52803 Id:121] autorelease] Position:CGPointMake(14,12)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52803 Id:122] autorelease] Position:CGPointMake(15,12)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52803 Id:123] autorelease] Position:CGPointMake(16,12)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52803 Id:126] autorelease] Position:CGPointMake(14,12)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52803 Id:127] autorelease] Position:CGPointMake(15,12)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52803 Id:128] autorelease] Position:CGPointMake(16,12)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52805 Id:129] autorelease] Position:CGPointMake(14,11)];
-	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52805 Id:120] autorelease] Position:CGPointMake(15,11)];
+	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52805 Id:130] autorelease] Position:CGPointMake(15,11)];
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52805 Id:131] autorelease] Position:CGPointMake(16,11)];
 	[self showTalkMessage:28 conversation:1 sequence:13];
 	[self showTalkMessage:28 conversation:1 sequence:14];
@@ -146,17 +142,11 @@
 	[field addEnemy:[[[FDEnemy alloc] initWithDefinition:52801 Id:103] autorelease] Position:CGPointMake(3, 11)];
 	[self showTalkMessage:28 conversation:1 sequence:15];
 	[self showTalkMessage:28 conversation:1 sequence:16];
+}
 
-}
--(void) round2
+-(void) round5
 {
-	for (int i = 117; i <= 133; i++) {
-		[self setAiOfId:i withType:AIType_Aggressive];
-	}
-}
--(void) round3
-{
-	for (int i = 134; i <= 142; i++) {
+	for (int i = 109; i <= 112; i++) {
 		[self setAiOfId:i withType:AIType_Aggressive];
 	}
 	[self setAiOfId:201 withType:AIType_Aggressive];
