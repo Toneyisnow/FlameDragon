@@ -53,6 +53,11 @@
 		return 16;
 	}
 	
+	if (chapterId <= 28)
+	{
+		return 18;
+	}
+	
 	return 20;
 }
 
