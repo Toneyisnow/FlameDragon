@@ -21,12 +21,16 @@
 	[self loadDieEvent:1 Action:@selector(gameOver)];
 	[self loadDieEvent:2 Action:@selector(gameOver)];
 	[self loadDyingEvent:2 Action:@selector(youniDead)];
-    [self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
+        // [self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
 	
 	[self loadDyingEvent:201 Action:@selector(bossDyingMessage)];
 	[self loadDyingEvent:202 Action:@selector(bossDyingMessage)];
 	[self loadDyingEvent:203 Action:@selector(bossDyingMessage)];
 	
+	[self loadDieEvent:201 Action:@selector(bossDeadCheck)];
+	[self loadDieEvent:202 Action:@selector(bossDeadCheck)];
+	[self loadDieEvent:203 Action:@selector(bossDeadCheck)];
+
 	NSLog(@"Chapter27 events loaded.");
 }
 
@@ -196,6 +200,15 @@
 		[self showTalkMessage:27 conversation:2 sequence:1];
 	} else {
 		[self showTalkMessage:27 conversation:3 sequence:1];
+	}
+}
+
+-(void) bossDeadCheck
+{
+	int bossLeft = 0;
+	
+	if ([field getCreatureById:201] == nil && [field getCreatureById:202] == nil && [field getCreatureById:203] == nil) {
+		[self enemyClear];
 	}
 }
 
