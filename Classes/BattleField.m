@@ -822,7 +822,7 @@
         if ([c getDefinition].identifier == 52001
             || [c getDefinition].identifier == 52701
             || [c getDefinition].identifier == 52801
-            || [c getDefinition].identifier == 52902) {
+            || [c getDefinition].identifier == 52905) {
             continue;
         }
         calculatedCount ++;

@@ -34,8 +34,8 @@
 		def.attackRange = [[[FDRange alloc] initWithMin:2 Max:scope] autorelease];
 	} else {
 		// Short Distance Amor
-		def.attackRange = [[[FDRange alloc] initWithMin:1 Max:scope] autorelease];
-	}
+        def.attackRange = [[[FDRange alloc] initWithMin:MIN(1, scope) Max:scope] autorelease];
+	} 
 	
 	// Currently there is no weapon that ev > 0
 	def.ev = 0;
