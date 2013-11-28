@@ -25,6 +25,6 @@
 
 +(int) fightAnimationIntervalUnit;
 
-+(int) maxPickedFriendCount;
++(int) maxPickedFriendCount:(int)chapterId;
 
 @end
