@@ -247,7 +247,9 @@
 
 -(void) enemyClear
 {
-	if ([self teamHasItem:814]) {
+	[layers gameCleared];
+    
+    if ([self teamHasItem:814]) {
 		for (int i = 1; i <= 23; i++) {
 			[self showTalkMessage:27 conversation:4 sequence:i];
 		}

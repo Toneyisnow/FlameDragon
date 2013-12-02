@@ -27,6 +27,8 @@
 		021064C41841EEF4003BF337 /* Ending_Farewell.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 021064C21841EEF4003BF337 /* Ending_Farewell.mp4 */; };
 		021064C51841EEF4003BF337 /* Ending_Staff.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 021064C31841EEF4003BF337 /* Ending_Staff.mp4 */; };
 		021064C718439697003BF337 /* Chapter-31.png in Resources */ = {isa = PBXBuildFile; fileRef = 021064C618439696003BF337 /* Chapter-31.png */; };
+		021064CA184CD6E6003BF337 /* Chapter-31-Creature.dat  in Resources */ = {isa = PBXBuildFile; fileRef = 021064C8184CD6D9003BF337 /* Chapter-31-Creature.dat  */; };
+		021064CB184CD6E6003BF337 /* Chapter-31.dat in Resources */ = {isa = PBXBuildFile; fileRef = 021064C9184CD6E2003BF337 /* Chapter-31.dat */; };
 		0213447216DE727000AB5D16 /* Cursor-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 0213447116DE727000AB5D16 /* Cursor-04.png */; };
 		0213447A16DE821A00AB5D16 /* CCVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0213447516DE821A00AB5D16 /* CCVideoPlayer.m */; };
 		0213447B16DE821A00AB5D16 /* CCVideoPlayerImpliOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 0213447716DE821A00AB5D16 /* CCVideoPlayerImpliOS.m */; };
@@ -4614,6 +4616,8 @@
 		021064C21841EEF4003BF337 /* Ending_Farewell.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ending_Farewell.mp4; path = Video/Ending_Farewell.mp4; sourceTree = "<group>"; };
 		021064C31841EEF4003BF337 /* Ending_Staff.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ending_Staff.mp4; path = Video/Ending_Staff.mp4; sourceTree = "<group>"; };
 		021064C618439696003BF337 /* Chapter-31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Chapter-31.png"; path = "Maps/Chapter-31.png"; sourceTree = "<group>"; };
+		021064C8184CD6D9003BF337 /* Chapter-31-Creature.dat  */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-31-Creature.dat "; path = "Data/Maps/Chapter-31-Creature.dat "; sourceTree = "<group>"; };
+		021064C9184CD6E2003BF337 /* Chapter-31.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-31.dat"; path = "Data/Maps/Chapter-31.dat"; sourceTree = "<group>"; };
 		0213447116DE727000AB5D16 /* Cursor-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cursor-04.png"; path = "Others/Cursor-04.png"; sourceTree = "<group>"; };
 		0213447416DE821A00AB5D16 /* CCVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCVideoPlayer.h; path = CCVideoPlayer/CCVideoPlayer.h; sourceTree = "<group>"; };
 		0213447516DE821A00AB5D16 /* CCVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCVideoPlayer.m; path = CCVideoPlayer/CCVideoPlayer.m; sourceTree = "<group>"; };
@@ -10699,6 +10703,8 @@
 				0274626F173400F800EDBF3B /* Chapter-29-Creature.dat */,
 				02DB823B16514A6F0081EC45 /* Chapter-30.dat */,
 				02746270173400F800EDBF3B /* Chapter-30-Creature.dat */,
+				021064C9184CD6E2003BF337 /* Chapter-31.dat */,
+				021064C8184CD6D9003BF337 /* Chapter-31-Creature.dat  */,
 				02DBA1EB16664E050081EC45 /* Chapter-99.dat */,
 			);
 			name = Maps;
@@ -21287,6 +21293,8 @@
 				021064C41841EEF4003BF337 /* Ending_Farewell.mp4 in Resources */,
 				021064C51841EEF4003BF337 /* Ending_Staff.mp4 in Resources */,
 				021064C718439697003BF337 /* Chapter-31.png in Resources */,
+				021064CA184CD6E6003BF337 /* Chapter-31-Creature.dat  in Resources */,
+				021064CB184CD6E6003BF337 /* Chapter-31.dat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

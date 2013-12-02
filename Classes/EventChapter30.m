@@ -283,6 +283,8 @@
 
 -(void) enemyClear
 {
+    [layers gameCleared];
+    
     for (int i = 2; i <= 26; i++) {
 	[self showTalkMessage:30 conversation:2 sequence:i];
     }

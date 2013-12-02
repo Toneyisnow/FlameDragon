@@ -97,7 +97,7 @@
         [countSprite release];
     }
     
-    NSString *countString = [NSString stringWithFormat:[FDLocalString message:71], [self getPickedCount], [Constants maxPickedFriendCount]];
+    NSString *countString = [NSString stringWithFormat:[FDLocalString message:71], [self getPickedCount], [Constants maxPickedFriendCount:self.chapterRecord.chapterId]];
     countSprite = [[FDSprite alloc] initWithString:countString Size:18];
     [countSprite setLocation:CGPointMake(120, 300)];
     [self addChild:[countSprite getSprite]];
@@ -131,7 +131,7 @@
     // Enable or Disable the Button
     BOOL selected = [[selectedFlag objectAtIndex:menu.tag] boolValue];
     
-    if ([self getPickedCount] >= [Constants maxPickedFriendCount]
+    if ([self getPickedCount] >= [Constants maxPickedFriendCount:self.chapterRecord.chapterId]
         && !selected) {
         return;
     }
@@ -143,7 +143,7 @@
 
 -(void) clickOk :(id)sender
 {
-    if ([self getPickedCount] != [Constants maxPickedFriendCount]) {
+    if ([self getPickedCount] != [Constants maxPickedFriendCount:self.chapterRecord.chapterId]) {
         CCLOG(@"The Picked Count (%d) is not fit to MaxPickecFriendCount (%d).", [self getPickedCount], [Constants maxPickedFriendCount]);
         return;
     }

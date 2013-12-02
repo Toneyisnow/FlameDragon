@@ -274,26 +274,26 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "Classes/ActionLayers.m"
-         timestampString = "406977332.917196"
+         filePath = "Classes/EventGoodEnding1.m"
+         timestampString = "407692053.212737"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "1263"
-         endingLineNumber = "1263"
-         landmarkName = "-settleFriend:At:"
+         startingLineNumber = "47"
+         endingLineNumber = "47"
+         landmarkName = "-initialBattle"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "Classes/EventHandler.m"
-         timestampString = "400594352.175147"
+         filePath = "Classes/EventGoodEnding1.m"
+         timestampString = "407692053.212737"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "86"
-         endingLineNumber = "86"
-         landmarkName = "-isNotified"
+         startingLineNumber = "54"
+         endingLineNumber = "54"
+         landmarkName = "-initialBattle"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

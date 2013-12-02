@@ -56,7 +56,7 @@
 
 -(BOOL) needPickFriend:(ChapterRecord *) record {
     
-    return ([[record friendRecords] count] > [Constants maxPickedFriendCount]);
+    return ([[record friendRecords] count] > [Constants maxPickedFriendCount:self.chapterRecord.chapterId]);
 }
 
 -(BOOL) needAutoPickFriend:(ChapterRecord *) record {
