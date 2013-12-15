@@ -20,7 +20,7 @@
 {
 	self = [super init];
 	
-	creature = c;
+	creature = [c retain];
 	
 	MaxLineLength = 13;
 	ShownCount = 3;
@@ -163,6 +163,8 @@
 -(void) dealloc
 {
     [timer invalidate];
+    [creature release];
+     
     [super dealloc];
 }
 

@@ -20,7 +20,7 @@
 		020C5A7A16D9C32A00AD0F53 /* Tai-14.png in Resources */ = {isa = PBXBuildFile; fileRef = 020C5A7716D9C32A00AD0F53 /* Tai-14.png */; };
 		020C5A7B16D9C32A00AD0F53 /* Tai-15.png in Resources */ = {isa = PBXBuildFile; fileRef = 020C5A7816D9C32A00AD0F53 /* Tai-15.png */; };
 		021064B5182536D2003BF337 /* EventGoodEnding1.m in Sources */ = {isa = PBXBuildFile; fileRef = 021064B4182536D1003BF337 /* EventGoodEnding1.m */; };
-		021064B8182536ED003BF337 /* EventGoodEnding2.m in Sources */ = {isa = PBXBuildFile; fileRef = 021064B7182536ED003BF337 /* EventGoodEnding2.m */; };
+		021064B8182536ED003BF337 /* EventBadEnding1.m in Sources */ = {isa = PBXBuildFile; fileRef = 021064B7182536ED003BF337 /* EventBadEnding1.m */; };
 		021064BB1841ADCF003BF337 /* CreatureDeadTurnCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 021064BA1841ADCF003BF337 /* CreatureDeadTurnCondition.m */; };
 		021064BE1841ADFA003BF337 /* ArrivePositionTurnCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 021064BD1841ADF9003BF337 /* ArrivePositionTurnCondition.m */; };
 		021064C11841C694003BF337 /* EndTurnEventCondition.m in Sources */ = {isa = PBXBuildFile; fileRef = 021064C01841C693003BF337 /* EndTurnEventCondition.m */; };
@@ -29,6 +29,9 @@
 		021064C718439697003BF337 /* Chapter-31.png in Resources */ = {isa = PBXBuildFile; fileRef = 021064C618439696003BF337 /* Chapter-31.png */; };
 		021064CA184CD6E6003BF337 /* Chapter-31-Creature.dat  in Resources */ = {isa = PBXBuildFile; fileRef = 021064C8184CD6D9003BF337 /* Chapter-31-Creature.dat  */; };
 		021064CB184CD6E6003BF337 /* Chapter-31.dat in Resources */ = {isa = PBXBuildFile; fileRef = 021064C9184CD6E2003BF337 /* Chapter-31.dat */; };
+		021064CD185DDF93003BF337 /* Ending_Bad.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 021064CC185DDF92003BF337 /* Ending_Bad.mp4 */; };
+		021064D0185DE496003BF337 /* Chapter-32-Creature.dat  in Resources */ = {isa = PBXBuildFile; fileRef = 021064CE185DE487003BF337 /* Chapter-32-Creature.dat  */; };
+		021064D1185DE496003BF337 /* Chapter-32.dat in Resources */ = {isa = PBXBuildFile; fileRef = 021064CF185DE48A003BF337 /* Chapter-32.dat */; };
 		0213447216DE727000AB5D16 /* Cursor-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 0213447116DE727000AB5D16 /* Cursor-04.png */; };
 		0213447A16DE821A00AB5D16 /* CCVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0213447516DE821A00AB5D16 /* CCVideoPlayer.m */; };
 		0213447B16DE821A00AB5D16 /* CCVideoPlayerImpliOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 0213447716DE821A00AB5D16 /* CCVideoPlayerImpliOS.m */; };
@@ -4605,8 +4608,8 @@
 		020C5A7816D9C32A00AD0F53 /* Tai-15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tai-15.png"; path = "Tais/Tai-15.png"; sourceTree = "<group>"; };
 		021064B3182536D1003BF337 /* EventGoodEnding1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventGoodEnding1.h; sourceTree = "<group>"; };
 		021064B4182536D1003BF337 /* EventGoodEnding1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventGoodEnding1.m; sourceTree = "<group>"; };
-		021064B6182536ED003BF337 /* EventGoodEnding2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventGoodEnding2.h; sourceTree = "<group>"; };
-		021064B7182536ED003BF337 /* EventGoodEnding2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventGoodEnding2.m; sourceTree = "<group>"; };
+		021064B6182536ED003BF337 /* EventBadEnding1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventBadEnding1.h; sourceTree = "<group>"; };
+		021064B7182536ED003BF337 /* EventBadEnding1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventBadEnding1.m; sourceTree = "<group>"; };
 		021064B91841ADCE003BF337 /* CreatureDeadTurnCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatureDeadTurnCondition.h; sourceTree = "<group>"; };
 		021064BA1841ADCF003BF337 /* CreatureDeadTurnCondition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatureDeadTurnCondition.m; sourceTree = "<group>"; };
 		021064BC1841ADF9003BF337 /* ArrivePositionTurnCondition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrivePositionTurnCondition.h; sourceTree = "<group>"; };
@@ -4618,6 +4621,9 @@
 		021064C618439696003BF337 /* Chapter-31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Chapter-31.png"; path = "Maps/Chapter-31.png"; sourceTree = "<group>"; };
 		021064C8184CD6D9003BF337 /* Chapter-31-Creature.dat  */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-31-Creature.dat "; path = "Data/Maps/Chapter-31-Creature.dat "; sourceTree = "<group>"; };
 		021064C9184CD6E2003BF337 /* Chapter-31.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-31.dat"; path = "Data/Maps/Chapter-31.dat"; sourceTree = "<group>"; };
+		021064CC185DDF92003BF337 /* Ending_Bad.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ending_Bad.mp4; path = Video/Ending_Bad.mp4; sourceTree = "<group>"; };
+		021064CE185DE487003BF337 /* Chapter-32-Creature.dat  */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-32-Creature.dat "; path = "Data/Maps/Chapter-32-Creature.dat "; sourceTree = "<group>"; };
+		021064CF185DE48A003BF337 /* Chapter-32.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-32.dat"; path = "Data/Maps/Chapter-32.dat"; sourceTree = "<group>"; };
 		0213447116DE727000AB5D16 /* Cursor-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cursor-04.png"; path = "Others/Cursor-04.png"; sourceTree = "<group>"; };
 		0213447416DE821A00AB5D16 /* CCVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCVideoPlayer.h; path = CCVideoPlayer/CCVideoPlayer.h; sourceTree = "<group>"; };
 		0213447516DE821A00AB5D16 /* CCVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCVideoPlayer.m; path = CCVideoPlayer/CCVideoPlayer.m; sourceTree = "<group>"; };
@@ -9474,6 +9480,7 @@
 		0213447F16DE843A00AB5D16 /* Video */ = {
 			isa = PBXGroup;
 			children = (
+				021064CC185DDF92003BF337 /* Ending_Bad.mp4 */,
 				021064C21841EEF4003BF337 /* Ending_Farewell.mp4 */,
 				021064C31841EEF4003BF337 /* Ending_Staff.mp4 */,
 				0213448416DE930800AB5D16 /* Openning.mp4 */,
@@ -10705,6 +10712,8 @@
 				02746270173400F800EDBF3B /* Chapter-30-Creature.dat */,
 				021064C9184CD6E2003BF337 /* Chapter-31.dat */,
 				021064C8184CD6D9003BF337 /* Chapter-31-Creature.dat  */,
+				021064CF185DE48A003BF337 /* Chapter-32.dat */,
+				021064CE185DE487003BF337 /* Chapter-32-Creature.dat  */,
 				02DBA1EB16664E050081EC45 /* Chapter-99.dat */,
 			);
 			name = Maps;
@@ -10908,8 +10917,8 @@
 				02DBA1EE16664E340081EC45 /* EventChapter99.m */,
 				021064B3182536D1003BF337 /* EventGoodEnding1.h */,
 				021064B4182536D1003BF337 /* EventGoodEnding1.m */,
-				021064B6182536ED003BF337 /* EventGoodEnding2.h */,
-				021064B7182536ED003BF337 /* EventGoodEnding2.m */,
+				021064B6182536ED003BF337 /* EventBadEnding1.h */,
+				021064B7182536ED003BF337 /* EventBadEnding1.m */,
 			);
 			name = Chapter;
 			sourceTree = "<group>";
@@ -21295,6 +21304,9 @@
 				021064C718439697003BF337 /* Chapter-31.png in Resources */,
 				021064CA184CD6E6003BF337 /* Chapter-31-Creature.dat  in Resources */,
 				021064CB184CD6E6003BF337 /* Chapter-31.dat in Resources */,
+				021064CD185DDF93003BF337 /* Ending_Bad.mp4 in Resources */,
+				021064D0185DE496003BF337 /* Chapter-32-Creature.dat  in Resources */,
+				021064D1185DE496003BF337 /* Chapter-32.dat in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -21549,7 +21561,7 @@
 				02AF9BD217BFB32900E63F21 /* AIMagicalDelegate.m in Sources */,
 				02AF9BD517E09B4A00E63F21 /* TurnDelayCondition.m in Sources */,
 				021064B5182536D2003BF337 /* EventGoodEnding1.m in Sources */,
-				021064B8182536ED003BF337 /* EventGoodEnding2.m in Sources */,
+				021064B8182536ED003BF337 /* EventBadEnding1.m in Sources */,
 				021064BB1841ADCF003BF337 /* CreatureDeadTurnCondition.m in Sources */,
 				021064BE1841ADFA003BF337 /* ArrivePositionTurnCondition.m in Sources */,
 				021064C11841C694003BF337 /* EndTurnEventCondition.m in Sources */,

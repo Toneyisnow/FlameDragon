@@ -54,11 +54,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/BattleField.m"
-         timestampString = "398489133.474957"
+         timestampString = "408417016.187862"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "474"
-         endingLineNumber = "474"
+         startingLineNumber = "476"
+         endingLineNumber = "476"
          landmarkName = "-selectMagicTarget:MagicIndex:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -275,24 +275,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Classes/EventGoodEnding1.m"
-         timestampString = "407692053.212737"
+         timestampString = "408027380.834531"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "47"
-         endingLineNumber = "47"
-         landmarkName = "-initialBattle"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Classes/EventGoodEnding1.m"
-         timestampString = "407692053.212737"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "54"
-         endingLineNumber = "54"
+         startingLineNumber = "37"
+         endingLineNumber = "37"
          landmarkName = "-initialBattle"
          landmarkType = "5">
       </FileBreakpoint>

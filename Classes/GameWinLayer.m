@@ -26,6 +26,7 @@
 	// [bg addToLayer:self];
 	
     //[bg release];
+    isGoodEnding = FALSE;
     
 	return self;
 }
@@ -36,8 +37,21 @@
 
     // Start Movie
     [CCVideoPlayer setNoSkip:TRUE];
-    [CCVideoPlayer playMovieWithFile:@"Ending_Farewell.mp4"];
+    
+    if (isGoodEnding) {
+    
+        [CCVideoPlayer playMovieWithFile:@"Ending_Farewell.mp4"];
+    } else {
+    
+        [CCVideoPlayer playMovieWithFile:@"Ending_Bad.mp4"];
+    }
+    
     movieSegment = 1;
+}
+
+-(void) setGoodEnding:(BOOL)isGood
+{
+    isGoodEnding = isGood;
 }
 
 -(void) ccTouchesBegan:(NSSet*)touches withEvent:(UIEvent*)event {
@@ -69,7 +83,7 @@
 }
 
 -(void) movieStartsPlaying {
-    CCLOG(@"");
+    CCLOG(@"movieStartsPlaying");
     [[CCDirector sharedDirector] startAnimation];
 }
 

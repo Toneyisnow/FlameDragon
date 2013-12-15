@@ -23,4 +23,9 @@
 	return self;
 }
 
+-(void) setGoodEnding:(BOOL)isGood
+{
+    [layer setGoodEnding:isGood];
+}
+
 @end

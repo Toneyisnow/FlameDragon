@@ -12,8 +12,10 @@
 @interface GameWinLayer : CCLayer<CCVideoPlayerDelegate> {
 
     int movieSegment;
+    BOOL isGoodEnding;
 }
 
 -(void) onClose;
+-(void) setGoodEnding:(BOOL)isGood;
 
 @end

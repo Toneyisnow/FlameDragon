@@ -289,7 +289,7 @@
 	[self showTalkMessage:30 conversation:2 sequence:i];
     }
 	
-    [layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];
+    [layers appendToCurrentActivityMethod:@selector(gameEnding) Param1:nil Param2:nil];
 }
 
 @end

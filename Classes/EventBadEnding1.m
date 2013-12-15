@@ -1,40 +1,35 @@
 //
-//  EventGoodEnding1.m
+//  EventBadEnding1.m
 //  FlameDragon
 //
 //  Created by sui toney on 13-11-2.
 //
 //
 
-#import "EventGoodEnding1.h"
+#import "EventBadEnding1.h"
 
-@implementation EventGoodEnding1
+@implementation EventBadEnding1
+
 
 -(void) loadEvents
 {
 	[self loadTurnEvent:TurnType_Friend Turn:0 Action:@selector(initialBattle)];
 	
-	CCLOG(@"GoodEnding1 events loaded.");
+	CCLOG(@"BadEnding1 events loaded.");
     
 }
 -(void) initialBattle
 {
 	CCLOG(@"initialBattle event triggered.");
 	
+    /*
     for(FDCreature * c in [field getDeadCreatureList])
     {
         [[field getUnsettledCreatureList] addObject:c];
     }
+    */
     
-    
-    for(FDCreature * c in [field getUnsettledCreatureList])
-    {
-        c.data.hpCurrent = c.data.hpMax;
-    }
-    
-	// Creatures
-    
-	//[self settleFriend:1 At:CGPointMake(2,2)];
+	[self settleFriend:1  At:CGPointMake(17,8)];
 	[self settleFriend:3  At:CGPointMake(16,9)];
 	[self settleFriend:4  At:CGPointMake(17,9)];
 	[self settleFriend:5  At:CGPointMake(18,9)];
@@ -69,13 +64,12 @@
 	
     
     // Talk
-	for (int i = 1; i <= 16; i++) {
-		[self showTalkMessage:31 conversation:1 sequence:i];
+	for (int i = 1; i <= 15; i++) {
+		[self showTalkMessage:27 conversation:5 sequence:i];
 	}
     
     [layers appendToCurrentActivityMethod:@selector(gameGoodEnding) Param1:nil Param2:nil];
-
+    
 }
-
 
 @end

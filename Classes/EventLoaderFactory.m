@@ -39,6 +39,7 @@
 #import "EventChapter30.h"
 #import "EventChapter99.h"
 #import "EventGoodEnding1.h"
+#import "EventBadEnding1.h"
 
 @implementation EventLoaderFactory
 
@@ -138,6 +139,9 @@
 			break;
 		case 31:
 			loader = [[EventGoodEnding1 alloc] init];
+			break;
+		case 32:
+			loader = [[EventBadEnding1 alloc] init];
 			break;
 		case 99:
 			loader = [[EventChapter99 alloc] init];

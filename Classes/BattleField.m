@@ -108,6 +108,8 @@
 {
 	[self addObject:fri Position:pos];
 	[friendList addObject:fri];
+    
+    [fri startTurn];
 }
 
 -(void) addEnemy:(FDEnemy *)cre Position:(CGPoint)pos

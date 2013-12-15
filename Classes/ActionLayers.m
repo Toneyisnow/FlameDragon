@@ -1153,34 +1153,61 @@
 	ChapterRecord *record = [self composeChapterRecord];
 	[record retain];
     
-	if (chapterId < 30) {
-		VillageScene *scene = [VillageScene node];
-		[scene loadWithRecord:record];
-		[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.5 scene:scene]];	
-	} else if (chapterId == 30) {
+	VillageScene *scene = [VillageScene node];
+    [scene loadWithRecord:record];
+    [[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.5 scene:scene]];	
+	
+    [record release];
+}
+
+-(void) gameEnding
+{
+    [self clearAllActivity];
+	CCLOG(@"Game Ending.");
+	
+	ChapterRecord *record = [self composeChapterRecord];
+	[record retain];
+    
+	if (chapterId == 30) {
         
-        // Good ending
+        record.chapterId = 31;
         MainGameScene *mainGame = [MainGameScene node];
         [mainGame loadWithInfo:record];
         
         [[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:mainGame]];
         
-	} else if (chapterId == 31) {
-    
-        // Good ending
-        GameWinScene *scene = [GameWinScene node];
-        [[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];
-
-    
+	} else if (chapterId == 27) {
+        
+        record.chapterId = 32;
+        MainGameScene *mainGame = [MainGameScene node];
+        [mainGame loadWithInfo:record];
+        
+        [[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:mainGame]];
     }
-
+    
     [record release];
+
+}
+
+-(void) gameGoodEnding
+{
+    // Good ending
+    GameWinScene *scene = [GameWinScene node];
+    [scene setGoodEnding:TRUE];
+    [[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];
+}
+
+-(void) gameBadEnding
+{
+    // Good ending
+    GameWinScene *scene = [GameWinScene node];
+    [scene setGoodEnding:FALSE];
+    [[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];
 }
 
 -(void) gameQuit
 {
 	CCLOG(@"Game Quit.");
-	
 	[self clearAllActivity];
 	
 	TitleScene *scene = [TitleScene node];

@@ -253,14 +253,11 @@
 		for (int i = 1; i <= 23; i++) {
 			[self showTalkMessage:27 conversation:4 sequence:i];
 		}
+        [layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];
 	
 	} else {
-		for (int i = 1; i <= 15; i++) {
-			[self showTalkMessage:27 conversation:5 sequence:i];
-		}
+		[layers appendToCurrentActivityMethod:@selector(gameEnding) Param1:nil Param2:nil];
 	}
-    
-    [layers appendToCurrentActivityMethod:@selector(gameWin) Param1:nil Param2:nil];
 }
 
 @end

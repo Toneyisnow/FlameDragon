@@ -14,4 +14,6 @@
 	GameWinLayer *layer;
 }
 
+-(void) setGoodEnding:(BOOL)isGood;
+
 @end
