@@ -58,9 +58,16 @@
 	//CCLabelTTF *label = [CCLabelTTF labelWithString:str fontName:@"Marker Felt" fontSize:size];
 	CCLabelTTF *label = [CCLabelTTF labelWithString:str fontName:@"Arial" fontSize:size];
 	label.color = ccc3(200, 200, 200);
-	
 	ccsprite = [label retain];
 	
+    /*
+    CCLabelTTF *label2 = [CCLabelTTF labelWithString:str fontName:@"Arial" fontSize:size];
+	label2.color = ccc3(200, 200, 200);
+    label2.position = CGPointMake(-1,-1);
+    label2.anchorPoint = CGPointMake(-1,-1);
+	[ccsprite addChild:label2 z:1];
+	*/
+    
 	return self;
 }
 

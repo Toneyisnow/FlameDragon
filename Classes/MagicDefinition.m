@@ -14,7 +14,7 @@
 
 @synthesize name;
 @synthesize magicType;
-@synthesize identifier, effectScope, effectRange, hittingRate, mpCost, allowAfterMove, aiConsiderRate;
+@synthesize identifier, effectScope, effectRange, hittingRate, mpCost, allowAfterMove, aiConsiderRate, apInvolvedRate;
 @synthesize quantityRange;
 @synthesize isCross;
 
@@ -29,8 +29,12 @@
 	int min = [stream readInt];
 	int max = [stream readInt];
 	def.quantityRange = [[[FDRange alloc] initWithMin:min Max:max] autorelease];
-
-	def.hittingRate = [stream readInt];
+    
+    if (def.magicType == MagicType_Attack) {
+        def.apInvolvedRate = [stream readInt];
+	}
+    
+    def.hittingRate = [stream readInt];
 	def.effectScope = [stream readInt];
 	def.effectRange = [stream readInt];
 	def.mpCost = [stream readInt];

@@ -43,6 +43,7 @@
     blockSprite = nil;
     apSprite = nil;
     dpSprite = nil;
+    posSprite = nil;
     objectSprite = nil;
     creature = nil;
     
@@ -66,10 +67,12 @@
         [self clearSprite:blockSprite];
         [self clearSprite:apSprite];
         [self clearSprite:dpSprite];
+        [self clearSprite:posSprite];
         [self clearSprite:objectSprite];
         blockSprite = nil;
         apSprite = nil;
         dpSprite = nil;
+        posSprite = nil;
         objectSprite = nil;
         creature = nil;
     
@@ -81,11 +84,16 @@
     
     NSString *apString = [NSString stringWithFormat:@"A %@", [self formatNumber:[block attackPoint]]];
     NSString *dpString = [NSString stringWithFormat:@"D %@", [self formatNumber:[block defencePoint]]];
+    NSString *posString = [NSString stringWithFormat:@"(%d,%d)", (int)position.x, (int)position.y];
+        
     apSprite = [[FDSprite alloc] initWithString:apString Size:11];
     dpSprite = [[FDSprite alloc] initWithString:dpString Size:11];
     [apSprite setLocation:CGPointMake(48, 20)];
     [dpSprite setLocation:CGPointMake(48, 10)];
     
+    posSprite = [[FDSprite alloc] initWithString:posString Size:8];
+    [posSprite setLocation:CGPointMake(15, 8)];
+        
     CGPoint cursorLocation = [battleField convertPosToLoc:position];
     CGRect rect = CGRectMake(cursorLocation.x - 0.5*[Constants unitSize],
                              [battleField mapSize].height * [Constants unitSize] - cursorLocation.y - 0.5*[Constants unitSize],
@@ -97,7 +105,8 @@
 	[baseSprite addSprite:blockSprite zOrder:1];
     [baseSprite addSprite:apSprite zOrder:1];
     [baseSprite addSprite:dpSprite zOrder:1];
-    
+    [baseSprite addSprite:posSprite zOrder:2];
+        
     creature = [battleField getCreatureByPos:position];
     FDTreasure *treasure = [battleField getTreasureAt:position];
     if (creature != nil) {
@@ -173,6 +182,9 @@
     }
     if (dpSprite != nil) {
         [dpSprite release];
+    }
+    if (posSprite != nil) {
+        [posSprite release];
     }
     
     if (backgroundImage != nil)

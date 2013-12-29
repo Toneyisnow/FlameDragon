@@ -109,8 +109,6 @@
 {
 	CCLOG(@"onContinueGame");
 	
-    [FDAudioEngine stopMusic];
-    
 	//GameStartInfo *info = [[GameLoadedInfo alloc] initWithLevel:1];
 	//GameStartInfo *info = [[GameLoadedInfo alloc] readFromFile:nil];
 	
@@ -120,7 +118,9 @@
 	
 	if (info.chapterId > 0) {
 		
-		MainGameScene *mainGame = [MainGameScene node];
+		[FDAudioEngine stopMusic];
+    
+        MainGameScene *mainGame = [MainGameScene node];
 		[mainGame loadWithInfo:info];
 	
 		[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:mainGame]];
@@ -132,7 +132,7 @@
 
 -(CCScene *) loadTestingGame
 {
-	ChapterRecord *record = [ChapterRecord generateRecord:22 money:60000];
+	ChapterRecord *record = [ChapterRecord generateRecord:27 money:60000];
 	
     for (int i = 1; i <= 27; i++) {
         [[record friendRecords] addObject:[self loadTestingRecord:i level:99]];

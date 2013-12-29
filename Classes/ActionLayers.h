@@ -71,6 +71,8 @@ typedef enum TurnType
 -(MessageLayer *) getMessageLayer;
 
 -(void) prepareToMove:(FDCreature *)creature Location:(CGPoint)location;
+
+-(void) moveCreatureBySystem:(FDCreature *)creature To:(CGPoint)pos;
 -(void) moveCreature:(FDCreature *)creature To:(CGPoint)pos showMenu:(BOOL)willShowMenu;
 -(void) moveCreatureId:(int)creatureId To:(CGPoint)pos showMenu:(BOOL)willShowMenu;
 -(void) moveCreatureSimple:(FDCreature *)creature To:(CGPoint)pos;

@@ -16,6 +16,11 @@
     [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"Title.mp3"];
 }
 
++(void) playEndingMusic {
+    [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"Ending.mp3"];
+    
+}
+
 +(void) playShopMusic:(AudioShopType)type {
     
     switch (type) {
@@ -42,6 +47,10 @@
 }
 
 +(void) playBattleGroundMusic:(int)chapterId {
+    
+    if (chapterId == 31 || chapterId == 32) {
+        return;
+    }
     
     int musicId = 1;
     

@@ -26,12 +26,12 @@
 	
     [self loadTeamEvent:CreatureType_Enemy Action:@selector(enemyClear)];
 	
-	NSLog(@"Chapter25 events loaded.");
+	CCLOG(@"Chapter25 events loaded.");
 }
 
 -(void) initialBattle
 {
-	NSLog(@"initialBattle event triggered.");
+	CCLOG(@"initialBattle event triggered.");
 	
 	// Creatures
 	[self settleFriend:1 At:CGPointMake(8,44)];

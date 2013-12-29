@@ -10,6 +10,7 @@
 #import "FDSprite.h"
 #import "TitleScene.h"
 #import "FDWindow.h"
+#import "FDAudioEngine.h"
 
 @implementation GameWinLayer
 
@@ -38,6 +39,7 @@
     // Start Movie
     [CCVideoPlayer setNoSkip:TRUE];
     
+    //NSLog(@"IsGoodEnding: %d", isGoodEnding);
     if (isGoodEnding) {
     
         [CCVideoPlayer playMovieWithFile:@"Ending_Farewell.mp4"];
@@ -63,7 +65,6 @@
 {
 	CCScene *scene = [TitleScene node];
 	[[CCDirector sharedDirector] pushScene: [CCTransitionFade transitionWithDuration:1.0 scene:scene]];
-	
 }
 
 
@@ -75,6 +76,8 @@
     {
         movieSegment = 2;
         [CCVideoPlayer playMovieWithFile:@"Ending_Staff.mp4"];
+        
+        [FDAudioEngine playEndingMusic];
     }
     else
     {

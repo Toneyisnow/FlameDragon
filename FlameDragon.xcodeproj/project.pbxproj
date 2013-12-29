@@ -32,6 +32,8 @@
 		021064CD185DDF93003BF337 /* Ending_Bad.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 021064CC185DDF92003BF337 /* Ending_Bad.mp4 */; };
 		021064D0185DE496003BF337 /* Chapter-32-Creature.dat  in Resources */ = {isa = PBXBuildFile; fileRef = 021064CE185DE487003BF337 /* Chapter-32-Creature.dat  */; };
 		021064D1185DE496003BF337 /* Chapter-32.dat in Resources */ = {isa = PBXBuildFile; fileRef = 021064CF185DE48A003BF337 /* Chapter-32.dat */; };
+		021064D3185FD731003BF337 /* Chapter-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 021064D2185FD730003BF337 /* Chapter-32.png */; };
+		021064D51861D19A003BF337 /* Ending.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 021064D41861D196003BF337 /* Ending.mp3 */; };
 		0213447216DE727000AB5D16 /* Cursor-04.png in Resources */ = {isa = PBXBuildFile; fileRef = 0213447116DE727000AB5D16 /* Cursor-04.png */; };
 		0213447A16DE821A00AB5D16 /* CCVideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0213447516DE821A00AB5D16 /* CCVideoPlayer.m */; };
 		0213447B16DE821A00AB5D16 /* CCVideoPlayerImpliOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 0213447716DE821A00AB5D16 /* CCVideoPlayerImpliOS.m */; };
@@ -4624,6 +4626,8 @@
 		021064CC185DDF92003BF337 /* Ending_Bad.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ending_Bad.mp4; path = Video/Ending_Bad.mp4; sourceTree = "<group>"; };
 		021064CE185DE487003BF337 /* Chapter-32-Creature.dat  */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-32-Creature.dat "; path = "Data/Maps/Chapter-32-Creature.dat "; sourceTree = "<group>"; };
 		021064CF185DE48A003BF337 /* Chapter-32.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "Chapter-32.dat"; path = "Data/Maps/Chapter-32.dat"; sourceTree = "<group>"; };
+		021064D2185FD730003BF337 /* Chapter-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Chapter-32.png"; path = "Maps/Chapter-32.png"; sourceTree = "<group>"; };
+		021064D41861D196003BF337 /* Ending.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Ending.mp3; path = Audio/Ending.mp3; sourceTree = "<group>"; };
 		0213447116DE727000AB5D16 /* Cursor-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Cursor-04.png"; path = "Others/Cursor-04.png"; sourceTree = "<group>"; };
 		0213447416DE821A00AB5D16 /* CCVideoPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CCVideoPlayer.h; path = CCVideoPlayer/CCVideoPlayer.h; sourceTree = "<group>"; };
 		0213447516DE821A00AB5D16 /* CCVideoPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CCVideoPlayer.m; path = CCVideoPlayer/CCVideoPlayer.m; sourceTree = "<group>"; };
@@ -9496,6 +9500,7 @@
 				0262184B16E1E254009CE8DD /* Battle_3.mp3 */,
 				0262184E16E1E43D009CE8DD /* Battle_4.mp3 */,
 				0262184F16E1E43D009CE8DD /* Battle_5.mp3 */,
+				021064D41861D196003BF337 /* Ending.mp3 */,
 				0262183D16E1DAD4009CE8DD /* ShopAmor.mp3 */,
 				0262183E16E1DAD4009CE8DD /* ShopBar.mp3 */,
 				0262183F16E1DAD4009CE8DD /* ShopChurch.mp3 */,
@@ -9572,6 +9577,7 @@
 				02D4C6AD164E199C00B9B407 /* Chapter-29.png */,
 				02D4C6AE164E199C00B9B407 /* Chapter-30.png */,
 				021064C618439696003BF337 /* Chapter-31.png */,
+				021064D2185FD730003BF337 /* Chapter-32.png */,
 			);
 			name = Maps;
 			sourceTree = "<group>";
@@ -21307,6 +21313,8 @@
 				021064CD185DDF93003BF337 /* Ending_Bad.mp4 in Resources */,
 				021064D0185DE496003BF337 /* Chapter-32-Creature.dat  in Resources */,
 				021064D1185DE496003BF337 /* Chapter-32.dat in Resources */,
+				021064D3185FD731003BF337 /* Chapter-32.png in Resources */,
+				021064D51861D19A003BF337 /* Ending.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -21705,8 +21713,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yi Sui (74QF9MJWJZ)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Yi Sui (74QF9MJWJZ)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Yi Sui (3H4NQB622L)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Yi Sui (3H4NQB622L)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -21723,8 +21731,9 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = FlameDragon;
-				PROVISIONING_PROFILE = "05A4A3C2-EDCF-4731-806C-0E45B337E5E1";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "05A4A3C2-EDCF-4731-806C-0E45B337E5E1";
+				PROVISIONING_PROFILE = "1769E4E0-F2AC-45E8-8271-0F4C42CBF94C";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1769E4E0-F2AC-45E8-8271-0F4C42CBF94C";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s";
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -21771,6 +21780,7 @@
 				PRODUCT_NAME = FlameDragon;
 				PROVISIONING_PROFILE = "05A4A3C2-EDCF-4731-806C-0E45B337E5E1";
 				"PROVISIONING_PROFILE[sdk=*]" = "05A4A3C2-EDCF-4731-806C-0E45B337E5E1";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s";
 				WARNING_CFLAGS = "-Wall";
 			};
@@ -21801,6 +21811,7 @@
 				PRODUCT_NAME = FlameDragon;
 				PROVISIONING_PROFILE = "147E891A-72AF-498C-A0BA-14A329A31527";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "147E891A-72AF-498C-A0BA-14A329A31527";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "armv7 armv7s";
 				WARNING_CFLAGS = "-Wall";
 			};

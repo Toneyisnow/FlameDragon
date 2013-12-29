@@ -231,11 +231,21 @@
 	FDCreature *creature = [field getCreatureById:creatureId];
 	
 	if (creature != nil) {
-		[self moveCreature:creature To:pos showMenu:willShowMenu];
+		[self moveCreatureBySystem:creature To:pos];
 	}
 }
 
+-(void) moveCreatureBySystem:(FDCreature *)creature To:(CGPoint)pos
+{
+    [self moveCreature:creature To:pos showMenu:FALSE byPlayer:FALSE];
+}
+
 -(void) moveCreature:(FDCreature *)creature To:(CGPoint)pos showMenu:(BOOL)willShowMenu
+{
+    [self moveCreature:creature To:pos showMenu:willShowMenu byPlayer:TRUE];
+}
+
+-(void) moveCreature:(FDCreature *)creature To:(CGPoint)pos showMenu:(BOOL)willShowMenu byPlayer:(BOOL)byPlayer
 {
 	if (creature == nil) {
 		return;
@@ -251,7 +261,7 @@
 		[self moveCreatureSimple:creature To:[path getPos:i]];
 	}
 	
-	if (![FDPosition isEqual:[field getObjectPos:creature] With:pos]) {
+	if (byPlayer && ![FDPosition isEqual:[field getObjectPos:creature] With:pos]) {
 		creature.hasMoved = TRUE;
 	}
 	

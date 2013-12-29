@@ -59,7 +59,7 @@
 	[field addFriend:friend4 Position:CGPointMake(12, 23)];
 	[friend4 release];
 	
-	[layers moveCreature:friend1 To:CGPointMake(8, 15) showMenu:FALSE];
+	[layers moveCreatureBySystem:friend1 To:CGPointMake(8, 15)];
 	
 	[layers appendToCurrentActivity:[[[FDDurationActivity alloc] initWithDuration:0.8] autorelease]];
 
@@ -71,13 +71,13 @@
 	
 	// Add branch activities
 	[layers appendNewActivity:[[[FDEmptyActivity alloc] init] autorelease]];
-	[layers moveCreature:friend2 To:CGPointMake(11, 16) showMenu:FALSE];
+	[layers moveCreatureBySystem:friend2 To:CGPointMake(11, 16)];
 	
 	[layers appendNewActivity:[[[FDEmptyActivity alloc] init] autorelease]];
-	[layers moveCreature:friend3 To:CGPointMake(9, 17) showMenu:FALSE];
+	[layers moveCreatureBySystem:friend3 To:CGPointMake(9, 17)];
 	
 	[layers appendNewActivity:[[[FDEmptyActivity alloc] init] autorelease]];
-	[layers moveCreature:friend4 To:CGPointMake(12, 18) showMenu:FALSE];
+	[layers moveCreatureBySystem:friend4 To:CGPointMake(12, 18)];
 	
 	[layers appendToCurrentActivityMethod:@selector(setCursorObjTo:) Param1:[FDPosition positionX:8 Y:15] Param2:nil Obj:field];
 
@@ -102,7 +102,7 @@
 	[field addEnemy: enemy4 Position:CGPointMake(5, 23)];
 	[enemy4 release];
 	
-	[layers moveCreature:enemy3 To:CGPointMake(6, 20) showMenu:FALSE];
+	[layers moveCreatureBySystem:enemy3 To:CGPointMake(6, 20)];
 	[layers appendToCurrentActivity:[[[FDDurationActivity alloc] initWithDuration:0.2] autorelease]];
 
 	
@@ -111,13 +111,13 @@
 	
 	// Add branch activities
 	[layers appendNewActivity:[[[FDEmptyActivity alloc] init] autorelease]];
-	[layers moveCreature:enemy2 To:CGPointMake(4, 19) showMenu:FALSE];
+	[layers moveCreatureBySystem:enemy2 To:CGPointMake(4, 19)];
 	
 	[layers appendNewActivity:[[[FDEmptyActivity alloc] init] autorelease]];
-	[layers moveCreature:enemy4 To:CGPointMake(5, 20) showMenu:FALSE];
+	[layers moveCreatureBySystem:enemy4 To:CGPointMake(5, 20)];
 	
 	[layers appendNewActivity:[[[FDEmptyActivity alloc] init] autorelease]];
-	[layers moveCreature:enemy1 To:CGPointMake(3, 19) showMenu:FALSE];
+	[layers moveCreatureBySystem:enemy1 To:CGPointMake(3, 19)];
 	
 	
 }
@@ -127,7 +127,7 @@
 	[field setCursorTo:CGPointMake(3, 3)];
 	
 	// Enemy
-	FDEnemy *enemy5 = [[FDEnemy alloc] initWithDefinition:50101 Id:1 DropItem:101];
+	FDEnemy *enemy5 = [[FDEnemy alloc] initWithDefinition:50101 Id:15 DropItem:101];
 	[field addEnemy: enemy5 Position:CGPointMake(4, 2)];
 	[enemy5 release];
 	
@@ -198,8 +198,8 @@
 	[field addFriend:friend6 Position:CGPointMake(12, 12)];
 	[friend6 release];
 	
-	[layers moveCreature:friend5 To:CGPointMake(12, 14) showMenu:FALSE];
-	[layers moveCreature:friend6 To:CGPointMake(12, 13) showMenu:FALSE];
+	[layers moveCreatureBySystem:friend5 To:CGPointMake(12, 14)];
+	[layers moveCreatureBySystem:friend6 To:CGPointMake(12, 13)];
 	
 	for (int i = 1; i <= 13; i++) {
 		[self showTalkMessage:1 conversation:2 sequence:i];
@@ -316,8 +316,7 @@
 	
 	//[layers appendToCurrentActivity:[[[FDEmptyActivity alloc] init] autorelease]];
 	//[layers appendToCurrentActivity:[[[FDEmptyActivity alloc] init] autorelease]];
-	[layers moveCreature:npc1 To:CGPointMake(18, 15) showMenu:FALSE];
-	//[layers moveCreatureSimple:npc1 To:CGPointMake(18, 15)];
+	[layers moveCreatureBySystem:npc1 To:CGPointMake(18, 15)];
 	
 	[layers appendToCurrentActivity:[[[FDDurationActivity alloc] initWithDuration:0.3] autorelease]];
 	

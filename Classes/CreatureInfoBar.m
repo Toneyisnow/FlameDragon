@@ -105,7 +105,7 @@
 			hpValue = nil;
 		}
 		
-		NSString *hpString = (creature.data.hpCurrent < 1000) ? [NSString stringWithFormat:@"%03d", hp] : @"???";
+		NSString *hpString = (hp < 1000) ? [NSString stringWithFormat:@"%03d", hp] : @"???";
 		hpValue = [[FDSprite alloc] initWithString:hpString Size:10];
 		[hpValue setLocation:CGPointMake(178, 23)];
 		[baseSprite addSprite:hpValue zOrder:1];
@@ -129,7 +129,7 @@
 		}
 	
 		// Show the value
-		NSString *mpString = (creature.data.mpCurrent < 1000) ? [NSString stringWithFormat:@"%03d", mp] : @"???";
+		NSString *mpString = (mp < 1000) ? [NSString stringWithFormat:@"%03d", mp] : @"???";
 		mpValue = [[FDSprite alloc] initWithString:mpString Size:10];
 		[mpValue setLocation:CGPointMake(178, 11)];
 		[baseSprite addSprite:mpValue zOrder:1];

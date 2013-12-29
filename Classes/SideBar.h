@@ -17,6 +17,7 @@
     FDSprite *blockSprite;
     FDSprite *apSprite;
     FDSprite *dpSprite;
+    FDSprite *posSprite;
     
     FDCreature *creature;
     FDSprite *objectSprite;

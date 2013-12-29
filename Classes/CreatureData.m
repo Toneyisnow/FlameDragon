@@ -294,8 +294,8 @@
 	}
 	
 	AttackItemDefinition *attackItem = [self getAttackItem];
-	if (attackItem != nil && [attackItem isAttackItem]) {
-		deltaDp = attackItem.dp;
+	if (attackItem != nil && [attackItem isAttackItem] && attackItem.dp > 0) {
+		deltaDp += attackItem.dp;
 	}
 	
 	int total = dp + deltaDp;
@@ -319,7 +319,7 @@
     
     AttackItemDefinition *item2 = (AttackItemDefinition *)[[DataDepot depot] getItemDefinition:itemId];
 	if (item2 != nil && [item2 isAttackItem]) {
-		deltaDp = item.dp;
+		deltaDp = item2.dp;
 		return [self calculatedDp] + deltaDp;
 		
 	}

@@ -32,6 +32,7 @@ typedef enum MagicType
     int allowAfterMove;
     int aiConsiderRate;
 	FDRange *quantityRange;
+    int apInvolvedRate;
     BOOL isCross;
 }
 
@@ -61,5 +62,6 @@ typedef enum MagicType
 @property (nonatomic) int aiConsiderRate;
 
 @property (nonatomic, retain) FDRange *quantityRange;
+@property (nonatomic) int apInvolvedRate;
 
 @end

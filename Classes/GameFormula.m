@@ -184,7 +184,8 @@
 		
 		switch (magic.magicType) {
 			case MagicType_Attack:
-				reduceHp = (int)([FDRandom from:[magic.quantityRange min] to:[magic.quantityRange max]] * rate);
+                reduceHp = [FDRandom from:[magic.quantityRange min] to:[magic.quantityRange max]] + (int)(magic.apInvolvedRate * [creature.data ap] / 100);
+				reduceHp = (int)(reduceHp * rate);
 				reduceHp = (reduceHp < 0) ? 0 : reduceHp;
 				break;
 			case MagicType_Recover:

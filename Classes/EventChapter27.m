@@ -31,12 +31,12 @@
 	[self loadDieEvent:202 Action:@selector(bossDeadCheck)];
 	[self loadDieEvent:203 Action:@selector(bossDeadCheck)];
 
-	NSLog(@"Chapter27 events loaded.");
+	CCLOG(@"Chapter27 events loaded.");
 }
 
 -(void) initialBattle
 {
-	NSLog(@"initialBattle event triggered.");
+	CCLOG(@"initialBattle event triggered.");
 	
 	// Creatures
 	[self settleFriend:1 At:CGPointMake(16,54)];

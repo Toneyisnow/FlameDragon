@@ -18,6 +18,7 @@ typedef enum AudioShopType {
 @interface FDAudioEngine : NSObject
 
 +(void) playTitleMusic;
++(void) playEndingMusic;
 +(void) playShopMusic:(AudioShopType)type;
 +(void) playVillageMusic:(int)chapterId;
 +(void) playBattleGroundMusic:(int)chapterId;
